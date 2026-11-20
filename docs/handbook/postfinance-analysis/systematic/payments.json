@@ -1,0 +1,1126 @@
+{
+  "area": "payments",
+  "views": [
+    {
+      "id": "payments-hub",
+      "path": "transfer",
+      "title": "Zahlungsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Von Home über Payments erreicht; Hauptmenü mit Enter und Search/Edit geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Direkte Sucheinstiege für Zahlungen und Überträge."
+        },
+        "select": {
+          "status": "visible",
+          "note": "eBill-Checkboxen und More-Auswahl sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Empfängerfeld sichtbar; nicht ausgefüllt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify page sichtbar; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Kauf-/Erfassungs-/Freigabeeinstiege sichtbar, keine Ausführung."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aufgabenkarten und Hilfe je Karte."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Zusammenfassungen vorhandener Demodaten."
+        }
+      },
+      "patterns": [
+        "task-oriented-navigation"
+      ],
+      "unvisitedTargets": [
+        "transfer/enter-standing-order",
+        "transfer/transfers/standing-transfer",
+        "transfer/approve/payments",
+        "transfer/approve/single-transfer",
+        "transfer/approve/standing-orders",
+        "transfer/fund-orders/fundlist",
+        "transfer/crypto-list",
+        "transfer/transfers/forextrade",
+        "transfer/investigation-advanced/overview",
+        "transfer/investigation-advanced/payment-search-single",
+        "transfer/investigation-advanced/payment-bulk-search",
+        "transfer/fund-orders/search",
+        "transfer/crypto-orders/search",
+        "transfer/forex-orders/search",
+        "transfer/fund-orders/search/subscription-single",
+        "transfer/qr-bill-generator",
+        "transfer/qr-bill-generator/templates",
+        "transfer/widget-edit",
+        "assets/crypto-custody/overview",
+        "assets/selfservice-fund-custody/list",
+        "services/customer-hub/overview"
+      ]
+    },
+    {
+      "id": "payment-entry",
+      "path": "transfer/enter-payment",
+      "title": "Zahlung / Dauerauftrag erfassen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Hauptmenüziel geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Empfängerfeld beschreibt Suche nach IBAN/Konto/Name/Zahlungsinformation."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Einzelnes Empfängerfeld; keine Eingabe vorgenommen."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "QR- und Übertragseinstieg."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Informationsbutton sichtbar; Klick lieferte keinen gesichert geänderten Zustand."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "account-transfer",
+      "path": "transfer/transfers",
+      "title": "Überträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Direkte sichtbare Zielnavigation; breite Tabs und schmale Auswahlbox gesehen."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Immediately und Enter date im ungesendeten Entwurf umgeschaltet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Enter date blendet Datumsfeld und Kalender ein; Immediately blendet es aus. Kein Betrag eingegeben."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Ungesendetes Formular; Speicher-/Verwerfungssemantik nicht geprüft."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Send sichtbar, nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Auftragsart, Belastung/Gutschrift und Ausführung als Gruppen."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Validierung und Abschluss nicht ausgelöst."
+        }
+      },
+      "patterns": [
+        "conditional-fields",
+        "responsive-context-navigation"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Currency/foreign exchange",
+        "UI-Tab Load credit card",
+        "UI-Tab Retirement planning 3a inpayment",
+        "UI-Tab E-trading"
+      ]
+    },
+    {
+      "id": "qr-import",
+      "path": "transfer/invoice-scan/create",
+      "title": "QR-Rechnung importieren",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbarer QR-Link geöffnet; Cancel betätigt, späteres Rückkehrziel nicht belastbar bestätigt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Checkbox zum künftigen Ausblenden des Hinweises unverändert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Abgedunkelte Dateizone mit Format-/Grössen-/Mengenhinweisen; keine Datei gewählt."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Informationsdialog über Cancel verlassen; keine Dateidaten vorhanden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Confirm und Cancel vorhanden; nur Cancel bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dialog erklärt Erkennung und Datenverwendung."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Upload, Fortschritt, Dateifehler und Erfolg nicht geprüft."
+        }
+      },
+      "patterns": [
+        "import-entry-cancel"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "pending-payments",
+      "path": "transfer/pending-orders/search-single-orders",
+      "title": "Zahlungen bearbeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Payments/Account transfers-Ziel geöffnet."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt; Sortierung Amount descending gewählt und Label geprüft. Fachliche Reihenfolge nicht bewiesen."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Sortieroption gewählt; Konto-/Status-/Währungsauswahl nur sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums- und Betragsbereiche sichtbar, unverändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change und Copy im geöffneten Zeilenmenü sichtbar; nicht gewählt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilen-Overflow geöffnet: Change/Delete/Copy. Keine Aktion ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Suchkriterien, Status, Unterschrift und Betrag je Zeile."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandener Status Pending; keine Zustandsänderung ausgelöst."
+        }
+      },
+      "patterns": [
+        "sort-control",
+        "row-action-menu",
+        "applied-filter-context"
+      ],
+      "unvisitedTargets": [
+        "transfer/pending-orders/search-single-orders/orders-detail",
+        "transfer/pending-orders/search-single-transfers"
+      ]
+    },
+    {
+      "id": "epo-hub",
+      "path": "upload",
+      "title": "EZAG / CH-DD Übersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "EPO-Hauptmenü geöffnet: Approve, File overview, Payment orders, Single orders, Overview."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Dateizone mit XML-Formathinweis; nicht betätigt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify page sichtbar, nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Freigabeeinstieg und Dateiauswahl vorhanden; nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Karten für Dateiübersicht, Übermittlung, Freigabe und Suche."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Processing, Error und Approved/orders placed gleichzeitig als vorhandene Beispieldaten."
+        }
+      },
+      "patterns": [
+        "task-oriented-navigation",
+        "status-and-recovery"
+      ],
+      "unvisitedTargets": [
+        "upload/payment-order/individual-order-overview-epo",
+        "upload/widget-edit"
+      ]
+    },
+    {
+      "id": "epo-file-summary",
+      "path": "upload/payment-order/file-overview-epo",
+      "title": "EZAG Dateiübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Show all/File overview-Ziel geöffnet; Error-Details weiter zu Sammelauftragsübersicht."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Legende erklärt fünf mögliche Dateizustände und kündigt Aktualisierung alle 30 Sekunden an."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Processing, Error und Approved/orders placed in Tabelle; kein zeitlicher Übergang beobachtet."
+        }
+      },
+      "patterns": [
+        "status-and-recovery"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "epo-collective-orders",
+      "path": "upload/payment-order/collective-order-overview-epo",
+      "title": "EZAG Zahlungsaufträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Details einer Datei geöffnet; Back sichtbar, nicht bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Übernommener Dateikontext als aktive Suchkriterien, kein Suchformular in diesem Detailweg."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Zeilenmenü und Print sichtbar, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dateireferenz/Einreichzeit oben, Auftragstabelle und Summen unten."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Pending pro Auftrag sichtbar; Beziehung zum Error-Dateistatus nicht weiter aufgeklärt."
+        }
+      },
+      "patterns": [
+        "applied-filter-context"
+      ],
+      "unvisitedTargets": [
+        "upload/payment-order/collective-order-detail-epo"
+      ]
+    },
+    {
+      "id": "standing-orders",
+      "path": "transfer/standing-orders/search-standing-orders",
+      "title": "Daueraufträge bearbeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Hauptmenüziel geöffnet; drei Varianten als Tabs."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt; aktive Kriterien und Sortierung bleiben sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Konto/Status/Währung/Sortierung sichtbar, unverändert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Betragsbereich sichtbar, nicht eingegeben."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print sichtbar, nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Kriterien auch im Nulltrefferzustand sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "No results were found that match your search options bereits beim Einstieg; kein selbst erzeugter Nulltreffer."
+        }
+      },
+      "patterns": [
+        "applied-filter-context",
+        "empty-result-context"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Standing account transfers",
+        "UI-Tab Standing transfer orders in e-trading"
+      ]
+    },
+    {
+      "id": "payment-approval",
+      "path": "transfer/approve",
+      "title": "Freigeben",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Approve-Ziel geöffnet; Varianten als horizontale Tabs."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt, Tabelle bleibt sichtbar."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Eine Zeile markiert: sichtbares Häkchen und Approve selected aktiviert. Abwahl-API meldete fehlgeschlagen; danach Seite verlassen."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums-/Betragsbereiche vorhanden, nicht verändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Zeilenmenü sichtbar, nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve selected anfangs deaktiviert, nach Auswahl aktiv; nie betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Summen getrennt je Währung und Unterschrift je Auftrag."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Disabled→enabled der Folgeaktion durch reine Auswahl beobachtet; keine Finanzfreigabe."
+        }
+      },
+      "patterns": [
+        "batch-selection",
+        "action-availability"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Account transfers",
+        "UI-Tab Standing orders",
+        "UI-Tab Standing account transfers",
+        "UI-Tab Fund subscriptions",
+        "UI-Tab Fund redemptions",
+        "UI-Tab SIC transfer",
+        "UI-Tab Fixed-term deposit"
+      ]
+    },
+    {
+      "id": "qr-templates",
+      "path": "transfer/qr-bill-generator/templates/overview",
+      "title": "QR-Vorlagen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Vorlagenziel geöffnet; Tabs für neue Rechnung/Vorlagen."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Search options und Filter list vorhanden, nicht bedient."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kopf-/Zeilencheckboxen, nicht bedient."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Nachricht und Betrag direkt in Tabellenzeilen editierbar dargestellt; unverändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Inlinefelder sichtbar; Speichersemantik unbekannt, daher unverändert."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Generate pro Zeile und Mehrfachaktion unten; nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Name/Empfänger/Nachricht/Währung/Betrag als Vorlagenkontext."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Erzeugung, Speicherung und Fehler nicht geprüft."
+        }
+      },
+      "patterns": [
+        "inline-table-editing"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Generate new QR-bill"
+      ]
+    },
+    {
+      "id": "qr-generator",
+      "path": "transfer/qr-bill-generator/new/recipient",
+      "title": "Neue QR-Rechnung: Empfänger",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Generate QR-bill-Ziel geöffnet; erster Empfängerschritt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Empfängerkonto und optionaler Schalter für Adressanzeige."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Vorbefüllte Adresse sichtbar, nicht verändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Reset vorhanden, nicht bedient."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Next vorhanden, nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Erster Schritt verlangt Empfänger; spätere Schritte nicht belegt."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Validierung und Generierung nicht ausgelöst."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "UI-Aktion Next (Folgeschritt ungeprüft)"
+      ]
+    },
+    {
+      "id": "order-overview",
+      "path": "transfer/order-overview",
+      "title": "Auftragsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Order overview-Ziel geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Fälligkeitsdatum, Monatsende/alle offenen Aufträge, Search/Reset."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Konto und drei Fälligkeitsmodi sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datum mit Kalender vorhanden, unverändert."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print vorhanden, nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Verfügbares Guthaben, Aufträge und Saldo-Vorschau neben Typensummen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Negative Saldovorschau rot dargestellt; keine Prognosekorrektheit geprüft."
+        }
+      },
+      "patterns": [
+        "forecast-before-action"
+      ],
+      "unvisitedTargets": [
+        "transfer/pending-orders/single-orders",
+        "transfer/standing-orders/standing-orders-executions",
+        "transfer/standing-orders/standing-etrading-executions",
+        "transfer/fund-orders/subscription-single",
+        "transfer/fund-orders/subscription-plan",
+        "transfer/crypto-orders/subscription-plan",
+        "transfer/crypto-orders/single-orders",
+        "transfer/fixed-term-deposit/order-overview",
+        "transfer/forex-orders/order-overview"
+      ]
+    },
+    {
+      "id": "payment-lists",
+      "path": "transfer/payment-list/overview",
+      "title": "Zahlungslisten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Payment list-Ziel geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Details und Overflow pro Liste, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Listennamen, Auftragszahl und Betrag bzw. mehrere Währungen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "transfer/payment-list/details"
+      ]
+    },
+    {
+      "id": "epo-approval",
+      "path": "upload/payment-order-approve/epo",
+      "title": "EZAG freigeben",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Approve-Ziel unter EPO geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Suchoptionen eingeklappt und aktive Kontokriterien sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kopf-/Zeilencheckboxen nicht bedient; repräsentative Auswahlprobe in Zahlungsfreigabe."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve selected deaktiviert, Print und Zeilenaktionen; nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dateireferenz, Unterschrift, Details und Währungssummen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Deaktivierte Folgeaktion bei fehlender Auswahl."
+        }
+      },
+      "patterns": [
+        "batch-selection",
+        "action-availability"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "ebill-portal",
+      "path": "transfer/e-bill",
+      "title": "eBill Portal",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares eBill-Ziel geöffnet; eingebettetes Portal mit eigener Navigation."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Sortier-/Filtercontrols im Posteingang vorhanden, nicht bedient."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Inbox/Archive als Tabs, keine Auswahlprobe."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve/More und Batch approval sichtbar; keine Aktion ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Informationskarte, Rechnungsstatus und eigene Portalstruktur."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene Mahnungs-/Fälligkeitskennzeichnung, keine Zustandsänderung."
+        }
+      },
+      "patterns": [
+        "embedded-workspace"
+      ],
+      "unvisitedTargets": [
+        "services/e-bill-settings",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/payments",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/biller",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/standing-approvals",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/debit-standing-approvals",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/contact",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/settings/user",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/settings/sustainability-co2",
+        "UI-Tab Archive",
+        "UI-Link Batch approval"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "key": "task-oriented-navigation",
+      "title": "Nach Erfassungs- und Suchaufgaben navigieren",
+      "category": "Navigieren",
+      "tags": [
+        "navigation",
+        "dashboard"
+      ],
+      "task": "Passenden Einstieg nach Aufgabe wählen",
+      "flow": [
+        "Hauptbereich öffnen",
+        "Gruppierte Ziele Enter und Search/Edit prüfen",
+        "Aufgabenansicht öffnen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer",
+        "upload"
+      ],
+      "limits": [
+        "Nur sichtbare Ziele; keine vollständige produktive Reichweite."
+      ]
+    },
+    {
+      "key": "conditional-fields",
+      "title": "Benötigte Felder abhängig von einer Wahl zeigen",
+      "category": "Eingeben",
+      "tags": [
+        "conditional",
+        "responsive"
+      ],
+      "task": "Ausführung terminieren",
+      "flow": [
+        "Enter date wählen",
+        "Datumsfeld und Kalender erscheinen",
+        "Immediately wählen",
+        "Datumsfeld entfällt"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/transfers"
+      ],
+      "limits": [
+        "Keine Betragserfassung oder Send; Datumerhalt und Validierung offen.",
+        "Breit und 390×844 visuell geprüft; schmaler Datumszustand nach Scrollen gesehen."
+      ]
+    },
+    {
+      "key": "responsive-context-navigation",
+      "title": "Ansichtskontext an schmale Breite anpassen",
+      "category": "Navigieren",
+      "tags": [
+        "tabs",
+        "responsive"
+      ],
+      "task": "Zwischen Übertragsarten wechseln",
+      "flow": [
+        "Breit: Tabs sehen",
+        "Schmal: aktuelle Art in Auswahlbox sehen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "transfer/transfers"
+      ],
+      "limits": [
+        "Kein Wechsel in andere Übertragsart ausgeführt."
+      ]
+    },
+    {
+      "key": "import-entry-cancel",
+      "title": "Import verstehen und Einstieg abbrechen",
+      "category": "Verstehen",
+      "tags": [
+        "import",
+        "dialog"
+      ],
+      "task": "Datenverwendung vor Dateiauswahl verstehen",
+      "flow": [
+        "QR-Einstieg öffnen",
+        "Informationsdialog lesen",
+        "Cancel betätigen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/invoice-scan/create"
+      ],
+      "limits": [
+        "Rückkehrziel in diesem Lauf nicht belastbar bestätigt; keine Datei/Confirm."
+      ]
+    },
+    {
+      "key": "sort-control",
+      "title": "Listenreihenfolge explizit wählen",
+      "category": "Finden",
+      "tags": [
+        "sort",
+        "table"
+      ],
+      "task": "Aufträge in anderer Reihenfolge betrachten",
+      "flow": [
+        "Sortierung öffnen",
+        "Amount descending wählen",
+        "Gewählten Modus am Control erkennen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/pending-orders/search-single-orders"
+      ],
+      "limits": [
+        "Demodaten zeigen keinen beweisbaren fachlichen Reihenfolgewechsel."
+      ]
+    },
+    {
+      "key": "row-action-menu",
+      "title": "Seltenere Objektaktionen aufdecken",
+      "category": "Handeln",
+      "tags": [
+        "overflow",
+        "table"
+      ],
+      "task": "Aktionen einer Zeile finden",
+      "flow": [
+        "Overflow neben Details öffnen",
+        "Change/Delete/Copy ansehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/pending-orders/search-single-orders"
+      ],
+      "limits": [
+        "Keine Änderung/Kopie/Löschung oder Bestätigung ausgeführt."
+      ]
+    },
+    {
+      "key": "applied-filter-context",
+      "title": "Angewandte Kriterien neben Ergebnissen verstehen",
+      "category": "Finden",
+      "tags": [
+        "filters",
+        "context"
+      ],
+      "task": "Ergebnismenge im Kontext lesen",
+      "flow": [
+        "Suchoptionen einklappen",
+        "Aktive Suchkriterien bleiben sichtbar",
+        "Ergebnisse oder Nulltreffer lesen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/pending-orders/search-single-orders",
+        "transfer/standing-orders/search-standing-orders",
+        "upload/payment-order/collective-order-overview-epo"
+      ],
+      "limits": [
+        "Keine neue Suchkombination übernommen; Apply-/Reset-Semantik hier nicht erneut getestet."
+      ]
+    },
+    {
+      "key": "empty-result-context",
+      "title": "Nulltreffer mit Suchkontext zeigen",
+      "category": "Zustände",
+      "tags": [
+        "empty",
+        "filters"
+      ],
+      "task": "Ausbleibende Ergebnisse einordnen",
+      "flow": [
+        "Daueraufträge öffnen",
+        "Kriterien und Nulltreffermeldung lesen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "transfer/standing-orders/search-standing-orders"
+      ],
+      "limits": [
+        "Nulltreffer bereits vorhanden, nicht durch eigenen Filter erzeugt; Erholung nicht geprüft."
+      ]
+    },
+    {
+      "key": "status-and-recovery",
+      "title": "Verarbeitungsstatus erklären und Details anbieten",
+      "category": "Zustände",
+      "tags": [
+        "processing",
+        "error",
+        "table"
+      ],
+      "task": "Dateiverarbeitung einschätzen",
+      "flow": [
+        "Dateiübersicht öffnen",
+        "Text/Icon und Legende lesen",
+        "Details einer Fehlerdatei öffnen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "upload/payment-order/file-overview-epo",
+        "upload/payment-order/collective-order-overview-epo"
+      ],
+      "limits": [
+        "Keine Datei übertragen; keine zeitliche Progression beobachtet.",
+        "Fehlerdatei führte zur Pending-Auftragsübersicht; Fehlerursache damit nicht aufgeklärt."
+      ]
+    },
+    {
+      "key": "batch-selection",
+      "title": "Objekte vor einer gemeinsamen Folgeaktion markieren",
+      "category": "Auswählen",
+      "tags": [
+        "checkbox",
+        "bulk"
+      ],
+      "task": "Auftrag für Freigabe vormerken",
+      "flow": [
+        "Eine Zeile markieren",
+        "Häkchen sehen",
+        "Aktivierte Folgeaktion erkennen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/approve",
+        "upload/payment-order-approve/epo"
+      ],
+      "limits": [
+        "Nur Zahlungsfreigabe interaktiv; EZAG Variante sichtbar.",
+        "Kein Select-all-/gemischter Zustand geprüft; Abwahl-API meldete Fehler; Seite danach verlassen.",
+        "Keine Freigabe ausgeführt."
+      ]
+    },
+    {
+      "key": "action-availability",
+      "title": "Folgeaktion an Auswahl binden",
+      "category": "Zustände",
+      "tags": [
+        "disabled",
+        "selection"
+      ],
+      "task": "Erkennen wann eine Aktion möglich wird",
+      "flow": [
+        "Ohne Auswahl deaktivierte Aktion sehen",
+        "Zeile markieren",
+        "Aktive Aktion sehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "transfer/approve",
+        "upload/payment-order-approve/epo"
+      ],
+      "limits": [
+        "Kein Finanzabschluss; Rückwechsel in deaktiviert nicht verifiziert."
+      ]
+    },
+    {
+      "key": "inline-table-editing",
+      "title": "Vorlagenwerte im Tabellenkontext bearbeiten",
+      "category": "Bearbeiten",
+      "tags": [
+        "inline",
+        "template"
+      ],
+      "task": "Werte einer Vorlage am Objekt anpassen",
+      "flow": [
+        "Vorlagenliste sehen",
+        "Nachricht und Betrag in derselben Zeile vorfinden",
+        "Generate als getrennte Folgeaktion erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "transfer/qr-bill-generator/templates/overview"
+      ],
+      "limits": [
+        "Felder unverändert; Autosave/Speicherung/Validierung unbekannt."
+      ]
+    },
+    {
+      "key": "forecast-before-action",
+      "title": "Auftragssummen und Saldovorschau zusammen lesen",
+      "category": "Verstehen",
+      "tags": [
+        "forecast",
+        "summary"
+      ],
+      "task": "Künftige Kontobelastung einschätzen",
+      "flow": [
+        "Konto und Fälligkeit sehen",
+        "Guthaben/Auftragssumme/Saldo vergleichen",
+        "Nach Auftragstyp zu Details gehen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "transfer/order-overview"
+      ],
+      "limits": [
+        "Werte nicht übernommen; keine Berechnung oder Detailnavigation geprüft."
+      ]
+    },
+    {
+      "key": "embedded-workspace",
+      "title": "Eingebettetes Fachportal mit eigener Navigation verstehen",
+      "category": "Navigieren",
+      "tags": [
+        "iframe",
+        "context"
+      ],
+      "task": "In einem eingebetteten Rechnungsportal Orientierung behalten",
+      "flow": [
+        "eBill aus Banknavigation öffnen",
+        "Portalnavigation und eigene Tabs erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "transfer/e-bill"
+      ],
+      "limits": [
+        "Portal-Unterziele und Rechnungsaktionen ungeprüft."
+      ]
+    }
+  ],
+  "limits": [
+    "Stand 20.11.2026; ausschliesslich sichtbare PostFinance-Demo-Reichweite.",
+    "16 Ansichten screenshot-visuell angesehen; Screenshots nicht als Dateien gespeichert, keine personenbezogenen Demo-Werte in Artefakte übernommen.",
+    "Desktop visuell geprüft. Repräsentativ 390×844 nur Übertrag: Auswahlbox statt Tabs, vertikale Kontofelder und Datums-/Abschlussbereich nach Scrollen.",
+    "Keine Transaktion, Finanzfreigabe, Speicherung, Löschung, Upload, Vertrag oder Nachricht ausgeführt.",
+    "Keine Funktions-, Responsive- oder Accessibility-Gesamtfreigabe.",
+    "Gleichartige Untertabs, Detailseiten und alle in unvisitedTargets aufgeführten Ziele bleiben ungeprüft; Navigationssichtbarkeit ist kein Funktionsbeleg.",
+    "Ältere 16 Patterns gezielt gelesen; neue Keys haben keine UX-ID und müssen zentral dedupliziert werden."
+  ]
+}

@@ -1,0 +1,37 @@
+.motion-rework { min-width: 0; }
+.motion-rework h2 { font-size: 1.3rem; line-height: 1.4; margin: 0 0 1rem; }
+.motion-rework h3 { font-size: .95rem; margin: 0 0 .75rem; }
+.mr-comparison { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; }
+.mr-state { min-width: 0; }
+.mr-contact { padding: 1.25rem; border: 1px solid var(--border); border-radius: .65rem; background: var(--background); color: var(--foreground); overflow-wrap: anywhere; }
+.mr-state .mr-contact { min-height: 13rem; }
+.motion-rework .mr-eyebrow { margin: 0 0 .4rem; font-size: .8rem; color: var(--muted-foreground); }
+.mr-name { font-size: 1.05rem; }
+.motion-rework .mr-label { margin: .8rem 0; font-size: .9rem; }
+.motion-rework dl { margin: 1rem 0 0; border-top: 1px solid var(--border); padding-top: .8rem; }
+.motion-rework dt { font-size: .8rem; color: var(--muted-foreground); }
+.motion-rework dd { margin: .2rem 0 0; }
+.motion-rework .mr-caption { font-size: .9rem; line-height: 1.6; max-width: 72ch; margin: .75rem 0 0; }
+.mr-preview { margin: 2rem 0; padding: 1.25rem 0; border-block: 1px solid var(--border); }
+.mr-reduce { accent-color: var(--foreground); width: 1rem; height: 1rem; margin: 0 .5rem 0 0; vertical-align: middle; }
+.mr-preview label { font-size: .9rem; padding-block: .5rem; cursor: pointer; }
+.mr-demo { margin-top: 1rem; min-height: 13rem; }
+.mr-demo summary { cursor: pointer; width: fit-content; padding: .4rem .1rem; }
+.mr-demo .mr-contact { margin-top: .75rem; max-width: 30rem; }
+.mr-demo .mr-open, .mr-demo[open] .mr-closed { display: none; }
+.mr-demo[open] .mr-open { display: inline; }
+.mr-reduce:focus-visible, .mr-demo summary:focus-visible, .mr-evidence summary:focus-visible { outline: 2px solid var(--foreground); outline-offset: 4px; }
+.motion-rework .mr-stand { font-size: .8rem; line-height: 1.6; color: var(--muted-foreground); margin: .75rem 0 0; }
+.mr-evidence { margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.mr-evidence > summary { cursor: pointer; font-weight: 600; }
+.mr-evidence > p { font-size: .9rem; line-height: 1.6; }
+@media (prefers-reduced-motion: no-preference) {
+  .mr-demo[open] .mr-reveal { animation: mr-reveal 300ms ease-out; }
+  .mr-reduce:checked ~ .mr-demo .mr-reveal { animation: none; }
+}
+@keyframes mr-reveal { from { transform: translateY(-8px); } to { transform: translateY(0); } }
+@media (max-width: 600px) {
+  .mr-comparison { grid-template-columns: minmax(0,1fr); gap: 1.25rem; }
+  .mr-state .mr-contact { min-height: auto; }
+  .mr-contact { padding: 1rem; }
+}

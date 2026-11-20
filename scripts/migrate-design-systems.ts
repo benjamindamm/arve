@@ -27,16 +27,12 @@ try {
       summary: sections.find((entry) => entry.slug === slug)?.summary,
     } })
   }
-  const test = await system('beispiel', 'Beispielsystem', 'Minimales zweites Design-System zur Erprobung der Vorlage.', 'blue')
   async function addPage(data: Omit<Page, 'id' | 'createdAt' | 'updatedAt'>) {
     const { docs: [existing] } = await payload.find({ collection: 'pages', draft: true, where: { slug: { equals: data.slug } } })
     return existing ?? payload.create({ collection: 'pages', data })
   }
   const overview = await addPage({ slug: 'shadcn-uebersicht', title: 'shadcn', pageType: 'overview', designSystem: shadcn.id, _status: 'published' })
   if (!shadcn.home) await payload.update({ collection: 'design-systems', id: shadcn.id, data: { home: overview.id } })
-  const home = await addPage({ slug: 'beispiel-grundlagen', title: 'Grundlagen', summary: 'Farben, Abstände und Form für das zweite System.', pageType: 'foundation', designSystem: test.id, _status: 'published' })
-  if (!test.home) await payload.update({ collection: 'design-systems', id: test.id, data: { home: home.id } })
-  await addPage({ slug: 'beispiel-hinweis', title: 'Hinweis', component: 'hinweis', summary: 'Ein kurzer Hinweis unterstützt die aktuelle Aufgabe.', pageType: 'component', designSystem: test.id, order: 1, _status: 'published' })
   console.log('Design-Systeme und Seitenstruktur eingerichtet.')
 } finally {
   await payload.destroy()

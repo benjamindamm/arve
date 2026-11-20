@@ -224,6 +224,62 @@ export interface Page {
   content?:
     | (
         | {
+            kind: 'overview' | 'colors' | 'themes' | 'typography' | 'spacing' | 'shape' | 'icons' | 'motion';
+            title: string;
+            /**
+             * Alle wesentlichen Aussagen der Darstellung. Wird im Portal und über MCP ausgegeben.
+             */
+            explanation: string;
+            source?: string | null;
+            revision?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'study';
+          }
+        | {
+            kind: 'selection' | 'button' | 'input' | 'checkbox' | 'switch';
+            title: string;
+            /**
+             * Alle wesentlichen Aussagen der Darstellung für Portal und MCP.
+             */
+            explanation: string;
+            source?: string | null;
+            revision?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'componentStudy';
+          }
+        | {
+            title: string;
+            summary: string;
+            steps: {
+              key: string;
+              title: string;
+              description: string;
+              next?: string | null;
+              tone: 'normal' | 'attention' | 'success';
+              id?: string | null;
+            }[];
+            caption: string;
+            source: string;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'workflowStudy';
+          }
+        | {
+            title: string;
+            items: {
+              context: string;
+              before: string;
+              after: string;
+              reason: string;
+              id?: string | null;
+            }[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'messageComparison';
+          }
+        | {
             body: {
               root: {
                 type: string;
@@ -499,6 +555,64 @@ export interface PagesSelect<T extends boolean = true> {
   content?:
     | T
     | {
+        study?:
+          | T
+          | {
+              kind?: T;
+              title?: T;
+              explanation?: T;
+              source?: T;
+              revision?: T;
+              id?: T;
+              blockName?: T;
+            };
+        componentStudy?:
+          | T
+          | {
+              kind?: T;
+              title?: T;
+              explanation?: T;
+              source?: T;
+              revision?: T;
+              id?: T;
+              blockName?: T;
+            };
+        workflowStudy?:
+          | T
+          | {
+              title?: T;
+              summary?: T;
+              steps?:
+                | T
+                | {
+                    key?: T;
+                    title?: T;
+                    description?: T;
+                    next?: T;
+                    tone?: T;
+                    id?: T;
+                  };
+              caption?: T;
+              source?: T;
+              id?: T;
+              blockName?: T;
+            };
+        messageComparison?:
+          | T
+          | {
+              title?: T;
+              items?:
+                | T
+                | {
+                    context?: T;
+                    before?: T;
+                    after?: T;
+                    reason?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
         text?:
           | T
           | {

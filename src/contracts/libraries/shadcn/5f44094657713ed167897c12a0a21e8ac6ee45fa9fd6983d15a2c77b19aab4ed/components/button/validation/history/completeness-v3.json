@@ -1,0 +1,133 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:Button",
+  "componentSha256": "176ee029cd471d7fdb6d95c0da26c5a7bce37824c19af2e31bd20044a380cddb",
+  "profile": "interactive-control/1",
+  "profileSha256": "a10eafc9bd0eb4c06d798ec676145f0b65141fdbb970cb2c3ff7e8aaeb67218e",
+  "requirements": {
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "9d9395efef7d5a5fc792eec8955c48f6dec89c722e8572619389547f3c7c3087",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/modules/0/declarations/0/members/0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "9d9395efef7d5a5fc792eec8955c48f6dec89c722e8572619389547f3c7c3087",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/modules/0/declarations/0/events/0"
+          }
+        }
+      ]
+    },
+    "VIS-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "3c5db01c81a0dc810acdc9cf02ccf612bb4d912403a18608b2a8794933351e47",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/button/heightDefault"
+          }
+        }
+      ]
+    },
+    "VIS-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "128014c4df76cc9372cd5ff2a88634a539bc8def13077b944abb947f32da982d",
+          "selector": {
+            "kind": "lines",
+            "value": "1:17"
+          }
+        }
+      ]
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "b444af6e2b343d3487bcf37ea79c3127955618eb10bc6e1ed33f58f225f203c5",
+          "selector": {
+            "kind": "xpath",
+            "value": "/s:scxml/@initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "b444af6e2b343d3487bcf37ea79c3127955618eb10bc6e1ed33f58f225f203c5",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[@event=\"NATIVE_CLICK\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "b444af6e2b343d3487bcf37ea79c3127955618eb10bc6e1ed33f58f225f203c5",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "a8b64e6cae09e620f7e342c380da5f7a97ed8565ca30ca80fe068e50969e4733",
+          "selector": {
+            "kind": "xpath",
+            "value": "//button"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "open",
+      "note": "Der native Button bezieht seinen Namen aus dem Textinhalt. Das Profil erkennt bei diesem Element nur explizite ARIA-Namensbindungen. Die HTML-Quelle bleibt beim nativen Benennungsmechanismus."
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "b444af6e2b343d3487bcf37ea79c3127955618eb10bc6e1ed33f58f225f203c5",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[contains(@event,\"FOCUS_IN\")]"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "80f211f8de43bcf34e51f1973476901c0f63a2a077c48f34a5d33fd6868e5b6e",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/purpose"
+          }
+        }
+      ]
+    }
+  }
+}

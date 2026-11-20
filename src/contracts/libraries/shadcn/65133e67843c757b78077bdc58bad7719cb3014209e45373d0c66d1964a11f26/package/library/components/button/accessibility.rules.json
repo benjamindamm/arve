@@ -1,0 +1,15 @@
+{
+  "format": "ui-contract-a11y-projection-draft",
+  "labelSource": "Visible text inside the native button, from interface.label.",
+  "control": "Render <button type=\"button\">. The browser supplies the button role.",
+  "projections": {
+    "enabled": {
+      "disabled": false
+    },
+    "disabled": {
+      "disabled": true
+    }
+  },
+  "focus": "Use native tab order. Tab and Shift+Tab move focus. Enter and Space use native activation. Disabled buttons are skipped in sequential navigation. Do not synthesise an extra click on keydown.",
+  "focusIndicator": "Display the focus treatment when the enabled control matches :focus-visible."
+}

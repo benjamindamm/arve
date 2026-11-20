@@ -1,0 +1,41 @@
+.shadcn-home { max-width: 1080px; padding-block: 42px 8px; }
+.shadcn-home-intro { margin-bottom: 38px; }
+.shadcn-home h1 { margin: 0 0 10px; font-size: 32px; line-height: 1.2; letter-spacing: -.04em; }
+.shadcn-home h1 span { font-weight: 400; color: var(--muted-foreground); }
+.shadcn-home p { margin: 0; color: var(--muted-foreground); }
+.shadcn-home h2 { margin: 0 0 18px; font-size: 22px; line-height: 1.3; letter-spacing: -.025em; }
+.shadcn-home h3 { margin: 0 0 5px; font-size: 18px; line-height: 1.4; letter-spacing: -.015em; }
+.shadcn-home-tasks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.shadcn-home-task { display: flex; gap: 20px; align-items: center; justify-content: space-between; padding: 22px 24px; border: 1px solid var(--border); border-radius: 8px; }
+.shadcn-home-task > span { font-size: 22px; }
+.shadcn-home-task p, .shadcn-home-example p, .shadcn-home-topic-grid p { font-size: 14px; line-height: 1.55; }
+.shadcn-home-task:hover, .shadcn-home-example:hover { background: var(--muted); border-color: var(--muted-foreground); }
+.shadcn-home-examples, .shadcn-home-topics { margin-top: 46px; }
+.shadcn-home-example-grid, .shadcn-home-topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.shadcn-home-example { overflow: hidden; border: 1px solid var(--border); border-radius: 8px; }
+.shadcn-home-example > div:last-child { padding: 20px 24px 24px; }
+.shadcn-home-example small { display: block; font-size: 12px; line-height: 1.5; color: var(--muted-foreground); margin-bottom: 8px; }
+.shadcn-home-flow, .shadcn-home-form-preview { min-height: 146px; background: var(--muted); border-bottom: 1px solid var(--border); padding: 24px; }
+.shadcn-home-flow { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13px; }
+.shadcn-home-flow span { padding: 14px 12px; background: var(--background); border: 1px solid var(--border); border-radius: 5px; }
+.shadcn-home-flow b { font-weight: 400; }
+.shadcn-home-form-preview { display: grid; justify-content: start; align-content: center; gap: 6px; font-size: 12px; }
+.shadcn-home-form-preview div { padding: 7px 12px; min-width: 220px; border: 1px solid var(--border); border-radius: 4px; background: var(--background); }
+.shadcn-home-form-preview b { justify-self: start; padding: 5px 10px; border-radius: 4px; background: var(--primary); color: var(--primary-foreground); font-size: 11px; }
+.shadcn-home-topic-grid { gap: 0 32px; }
+.shadcn-home-topic-grid a { padding-block: 18px; border-top: 1px solid var(--border); }
+.shadcn-home-topic-grid h3 { font-size: 16px; }
+.shadcn-home-topic-grid a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.shadcn-home .shadcn-home-status { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; max-width: 76ch; }
+@media (max-width: 640px) {
+  .shadcn-home { width: calc(100% - 32px); padding-top: 28px; }
+  .shadcn-home-intro { margin-bottom: 28px; }
+  .shadcn-home h1 { font-size: 28px; }
+  .shadcn-home h2 { font-size: 20px; }
+  .shadcn-home-tasks, .shadcn-home-example-grid, .shadcn-home-topic-grid { grid-template-columns: 1fr; }
+  .shadcn-home-task { padding: 16px 18px; }
+  .shadcn-home-examples, .shadcn-home-topics { margin-top: 34px; }
+  .shadcn-home-example-grid { gap: 18px; }
+  .shadcn-home-flow { gap: 6px; padding-inline: 14px; }
+  .shadcn-home-flow span { padding-inline: 8px; }
+}

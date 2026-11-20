@@ -1,0 +1,24 @@
+.card-header-rework { min-width: 0; }
+.card-header-switch { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0 0 1rem; border: 0; }
+.card-header-switch legend { margin-bottom: .5rem; font-size: .875rem; font-weight: 600; }
+.card-header-switch button { min-height: 44px; padding: .5rem 1rem; border: 1px solid var(--border, #d4d4d4); border-radius: .5rem; background: var(--card, #fff); color: var(--foreground, #171717); font: inherit; cursor: pointer; }
+.card-header-switch button[aria-pressed="true"] { background: var(--primary, #171717); color: var(--primary-foreground, #fff); border-color: var(--primary, #171717); }
+.card-header-switch button:focus-visible, .card-header-action:focus-visible, .card-header-content:focus { outline: 3px solid var(--ring, #737373); outline-offset: 3px; }
+.card-header-example figure { margin: 0; }
+.card-header-stage { container-type: inline-size; }
+.card-header-card { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--border, #d4d4d4); border-radius: .75rem; background: var(--card, #fff); color: var(--card-foreground, #171717); }
+.card-header-head { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.card-header-text { min-width: 0; flex: 1; }
+.card-header-text h3 { margin: 0; font-size: 1.25rem; line-height: 1.35; overflow-wrap: anywhere; }
+.card-header-text p { margin: .5rem 0 0; line-height: 1.5; color: var(--muted-foreground, #666); overflow-wrap: anywhere; }
+.card-header-action { flex: none; box-sizing: border-box; max-width: 100%; display: inline-flex; align-items: center; min-height: 44px; border: 1px solid var(--border, #d4d4d4); border-radius: .5rem; padding: .5rem .75rem; color: inherit; font-size: .875rem; line-height: 1.5; text-decoration: none; overflow-wrap: anywhere; }
+.card-header-action:hover { background: var(--muted, #f5f5f5); }
+.card-header-content { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border, #d4d4d4); scroll-margin-top: 6rem; }
+.card-header-content h4 { margin: 0 0 1rem; font-size: 1rem; }
+.card-header-content ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.card-header-content li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .375rem 1rem; line-height: 1.5; overflow-wrap: anywhere; }
+.card-header-content li span:last-child { color: var(--muted-foreground, #666); font-size: .875rem; }
+.card-header-example figcaption { margin-top: .75rem; color: var(--muted-foreground, #666); font-size: .875rem; line-height: 1.5; }
+.card-header-rework > section + section, .card-header-rework > details { margin-top: 2rem; }
+.card-header-rework details summary { cursor: pointer; font-weight: 600; }
+@container (min-width: 34rem) { .card-header-head { flex-direction: row; align-items: flex-start; gap: 1.5rem; } }

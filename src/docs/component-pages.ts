@@ -34,11 +34,15 @@ export async function getComponentPage(system: string, component: string) {
     component,
     path: pagePath(system, page),
     title: page.title,
+    summary: page.summary,
     updatedAt: page.updatedAt,
     content: publicContent(page.content),
     templateSections: readTemplate(page.pageType, page.template),
     contractReference: page.contract ?? null,
     contract: contract ?? null,
+    contractArtifacts: contract ? Object.entries(contract.artifacts ?? Object.fromEntries(Object.entries(contract.files).map(([name, file]) => [name, file.sha256]))).map(([path, sha256]) => ({
+      path, sha256, url: `${pagePath(system, page)}/files?path=${encodeURIComponent(path)}`,
+    })) : [],
     demo,
     implementations: implementations.map(({ id, name, platform, releaseStatus, packageName, packageVersion, owner, contexts, contract, verification }) => ({
       id, name, platform, releaseStatus, packageName, packageVersion, owner, contexts, contract, verification,
@@ -85,7 +89,7 @@ export async function listPublishedComponents(system: string) {
 
 export function publicContent(content: Page['content']) {
   return content?.map((block) => {
-      if (block.blockType === 'text') return block
+      if (block.blockType === 'text' || block.blockType === 'study' || block.blockType === 'componentStudy' || block.blockType === 'workflowStudy' || block.blockType === 'messageComparison') return block
       const image = block.image
       return {
         ...block,

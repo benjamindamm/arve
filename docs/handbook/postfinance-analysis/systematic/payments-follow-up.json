@@ -1,0 +1,159 @@
+{
+  "area": "payments",
+  "checks": [
+    {
+      "gap": "payment-filter-reset-apply",
+      "source": "transfer/pending-orders/search-single-orders",
+      "action": "Währung EUR wählen → Search → Suchoptionen öffnen → Reset → erneut Search.",
+      "observed": "Search klappt Kriterien ein und zeigt EUR als aktive Währung. Die Tabelle bleibt bei CHF-Beispielzeilen. Reset stellt das Entwurfscontrol auf All, lässt das aktive EUR-Kriterium zunächst stehen. Erst erneutes Search entfernt das aktive Währungskriterium.",
+      "result": "closed",
+      "remaining": [
+        "Fachliche Filterwirkung nicht belegt: Demozeilen widersprechen dem gewählten Währungskriterium.",
+        "Nicht alle Filtertypen oder Kombinationen geprüft."
+      ]
+    },
+    {
+      "gap": "regular-payment-detail-return",
+      "source": "transfer/pending-orders/search-single-orders → orders-detail → Back",
+      "action": "EUR anwenden, Amount descending wählen, reguläre Details öffnen und mit dem sichtbaren Back-Button zurückkehren.",
+      "observed": "Reguläre Zahlungsdetailseite erfolgreich geöffnet. Nach Back erscheint wieder die Zahlungsübersicht. Aktive EUR-Währung bleibt erhalten; Sortiercontrol steht wieder auf Due date ascending. Kriterienpanel bleibt eingeklappt. Vorherige reine Sortierprobe ohne Währungsfilter zeigte denselben Sortierverlust.",
+      "result": "partial",
+      "remaining": [
+        "Scrollposition nicht numerisch vor/nach gemessen; visuelle Rückkehr lag am Kriterien-/Ergebnisanfang.",
+        "Keine Browser-Zurück-Probe; kein Auswahlkontext in dieser Liste vorhanden.",
+        "Detailansicht und Liste zeigen unterschiedliche Beispieldaten; fachliche Zuordnung nicht geprüft."
+      ]
+    },
+    {
+      "gap": "header-checkbox-partial-and-clear",
+      "source": "transfer/approve",
+      "action": "Eine von zwei Zeilen anklicken → Kopfcheckbox ansehen → Kopfcheckbox anklicken → erneut anklicken.",
+      "observed": "Bei einer markierten Zeile bleibt die Kopfcheckbox visuell leer, ohne Mixed-Strich. Der Snapshot benennt keinen Mixed-Zustand. Erster Kopfklick markiert beide sichtbaren Zeilen und die Kopfcheckbox. Zweiter Kopfklick leert beide Zeilen und Kopfcheckbox; Approve selected ist wieder deaktiviert.",
+      "result": "closed",
+      "remaining": [
+        "Umfang nur für die zwei dargestellten Zeilen belegt.",
+        "Keine Pagination oder Auswahl über Ergebnisseiten sichtbar/geprüft.",
+        "Semantik für Screenreader nicht geprüft; visuell leer ist kein Beweis über interne indeterminate-Eigenschaft.",
+        "Keine Freigabe ausgeführt."
+      ]
+    },
+    {
+      "gap": "selection-after-filter-apply",
+      "source": "transfer/approve",
+      "action": "Unter aktivem EUR-Filter eine Zeile per Klick markieren → Suchoptionen öffnen → Währung All wählen → Search.",
+      "observed": "Markierung aktiviert Approve selected. Search mit All erneuert den Ergebnisbereich; beide weiterhin dargestellten Demozeilen sind danach unmarkiert und Approve selected deaktiviert. Das zuvor aktive Währungskriterium entfällt.",
+      "result": "partial",
+      "remaining": [
+        "Auswahlverlust nach dieser Übernahme belegt; nicht bei allen Filterarten.",
+        "Demo zeigt unter EUR zuvor weiterhin CHF- und EUR-Zeile, daher kein fachlicher Mengeneffekt belegt.",
+        "Kein Test mit verborgenen selektierten Zeilen oder mehreren Ergebnisseiten."
+      ]
+    },
+    {
+      "gap": "conditional-date-retention-and-cancel",
+      "source": "transfer/transfers/account",
+      "action": "Enter date wählen → Datum mit erfundenem künftigem Testdatum ersetzen → Immediately → Enter date.",
+      "observed": "Datumseingabe wurde sichtbar übernommen. Immediately entfernt Datumsfeld; Enter date zeigt denselben geänderten Wert wieder. Kein Betrag eingegeben. Kein Cancel-/Reset-Control im ungesendeten Übertragsformular gefunden; nur Send als Abschlussaktion. Den geänderten Zustand zusätzlich bei 390×844 visuell angesehen.",
+      "result": "partial",
+      "remaining": [
+        "Cancel geänderter Formularwerte mangels sichtbarer Abbruchaktion nicht prüfbar.",
+        "Keine Aussage zu Neuladen/Neunavigation oder Speichersemantik.",
+        "Keine Validierungs-/Send-Aktion ausgeführt."
+      ]
+    },
+    {
+      "gap": "financial-wizard-boundary",
+      "source": "transfer/qr-bill-generator/new/recipient",
+      "action": "Bereits belegten ersten Empfängerschritt und vorhandenes Next gegen die Ausführungsgrenze eingeordnet; keinen Folgeschritt betätigt.",
+      "observed": "Im Ausgangsrundgang sichtbarer QR-Generator beginnt mit vorbefülltem Zahlungsempfänger und Next. Ein ausdrücklich sicherer, nichtfinanzieller Einführungsfolgeschritt war für diesen Bereich nicht belegt. Send/Approve/Generate und Prozessabschlüsse bleiben unbetätigt.",
+      "result": "blocked",
+      "remaining": [
+        "Wizard-Folgeschritte, Review, Validierung und Abschluss bleiben offen.",
+        "Diese Zeile ist eine dokumentierte Ausführungsgrenze, kein neuer visueller Folgeschrittbeleg."
+      ]
+    }
+  ],
+  "patternUpdates": [
+    {
+      "key": "applied-filters",
+      "evidence": "tested",
+      "flow": [
+        "Währungsentwurf wählen",
+        "Search übernimmt und zeigt aktives Kriterium",
+        "Reset leert nur Entwurf",
+        "Erneutes Search entfernt angewandtes Kriterium"
+      ],
+      "limits": [
+        "Demotabelle reagiert fachlich nicht nachvollziehbar auf EUR; nur UI-Übernahme belegt."
+      ]
+    },
+    {
+      "key": "sort-control",
+      "evidence": "tested",
+      "flow": [
+        "Amount descending wählen",
+        "Reguläre Details öffnen",
+        "Mit Back zurück",
+        "Sortierung fällt auf Due date ascending zurück"
+      ],
+      "limits": [
+        "Aktive Währung bleibt erhalten, Sortierung auf diesem Rückweg nicht.",
+        "Kein Browser-Zurück- oder allgemeiner Persistenznachweis."
+      ]
+    },
+    {
+      "key": "batch-selection",
+      "evidence": "tested",
+      "flow": [
+        "Eine Zeile markieren",
+        "Kopf bleibt visuell leer bei Teilmenge",
+        "Kopf anklicken markiert beide sichtbaren Zeilen",
+        "Erneuter Kopfklick leert beide und deaktiviert Folgeaktion",
+        "Erneute Filterübernahme leert vorherige Zeilenauswahl"
+      ],
+      "limits": [
+        "Kein sichtbarer Mixed-Strich bei 1/2 Auswahl.",
+        "Nur zwei sichtbare Demozeilen; keine fachlich korrekte Filtermenge/Pagination belegt.",
+        "Keine Freigabe ausgeführt."
+      ]
+    },
+    {
+      "key": "object-detail-navigation",
+      "evidence": "tested",
+      "flow": [
+        "Angewandte Währung und Sortierung setzen",
+        "Reguläre Zahlungsdetails öffnen",
+        "Sichtbaren Back-Button verwenden",
+        "Filter bleibt erhalten, Sortierung fällt auf Default zurück"
+      ],
+      "limits": [
+        "Scrollposition nicht numerisch verglichen.",
+        "Keine Browser-Zurück-Probe; keine fachliche Zuordnung der Demowerte nachgewiesen."
+      ]
+    },
+    {
+      "key": "conditional-fields",
+      "evidence": "tested",
+      "flow": [
+        "Enter date zeigt Datum",
+        "Geänderten Datumsentwurf eingeben",
+        "Immediately verbirgt Feld",
+        "Enter date zeigt geänderten Wert wieder"
+      ],
+      "limits": [
+        "Werterhalt innerhalb desselben ungesendeten Formulars belegt.",
+        "Keine sichtbare Cancel-/Reset-Aktion, keine Aussage über Neuaufruf oder Persistenz.",
+        "Geänderter Zustand auch 390×844 visuell gesehen."
+      ]
+    }
+  ],
+  "newPatterns": [],
+  "limits": [
+    "Stand 20. November 2026; gezielte Folgeprüfung der sichtbaren Demo, keine allgemeine Produktfreigabe.",
+    "Eigener BrowserOS-Tab, Screens screenshot-visuell angesehen; keine Screenshots als Dateien gespeichert und keine personenbezogenen Demo-Werte übernommen.",
+    "Keine Finanzübermittlung, Freigabe, Generierung, Speicherung, Löschung, Vertragsaktion oder Upload ausgeführt.",
+    "Ein fokussierter Checkbox-Space-Versuch zeigte keine verifizierte Aktivierung; Auswahlbefunde beruhen auf Klicks. Daraus folgt keine allgemeine Tastaturbewertung.",
+    "Beim Suchen wurde versehentlich die globale Suche geöffnet; über Close dialogue wieder verlassen, keine Suchanfrage gesendet.",
+    "Frühere payments-Dateien bleiben unverändert; patternUpdates sind Ergänzungen für zentrale Synthese, keine zusätzlichen IDs."
+  ]
+}

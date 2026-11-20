@@ -1,9 +1,10 @@
+import { patternCatalog } from './pattern-catalog'
+import { designResources } from './design-resources'
 import { readTemplate } from './page-templates'
 import config from '@payload-config'
 import { getPayload } from 'payload'
 import { publicContent, readPublishedSection } from './component-pages'
 import { layoutExamples } from './layout-metadata'
-import { colors, spacing } from './shadcn-foundations'
 
 import { pagePath, readSystem, relationId, sectionSlug } from './systems'
 
@@ -32,19 +33,12 @@ export async function documentationTree(system: string) {
   const entries = new Map(visible.map((page) => {
     const path = pagePath(system, page)
     const slug = page.component || sectionSlug(system, page.slug)
-    searchText.set(path, [plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
+    searchText.set(path, [JSON.stringify(designResources(system, slug) ?? ''), plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
     const entry: Entry = {
       slug, path, title: page.title, summary: page.summary ?? undefined,
       pageType: page.pageType ?? undefined,
       kind: page.component ? 'component' : 'section',
       children: [],
-    }
-    if (system === 'shadcn' && slug === 'layout') {
-      entry.children = layoutExamples.map((example) => {
-        const path = entry.path + '/' + example.id
-        searchText.set(path, JSON.stringify(example.layout))
-        return { slug: example.id, path, title: example.title, summary: example.description, kind: 'layout-example' }
-      })
     }
     return [page.id, entry] as const
   }))
@@ -75,7 +69,14 @@ function plainText(content: Parameters<typeof publicContent>[0]) {
   }
   for (const block of content ?? []) {
     if (block.blockType === 'text') visit(block.body.root)
-    else text.push(block.explanation)
+    else if (block.blockType === 'workflowStudy') {
+      text.push(block.title, block.summary, block.caption, block.source, ...block.steps.flatMap(step => [step.title, step.description, step.next ?? '']))
+    } else if (block.blockType === 'messageComparison') {
+      text.push(block.title, ...block.items.flatMap(item => [item.context, item.before, item.after, item.reason]))
+    } else {
+      text.push(block.explanation)
+      if (block.blockType === 'study' || block.blockType === 'componentStudy') text.push(block.title, block.source ?? '', block.revision ?? '')
+    }
   }
   return text.join(' ')
 }
@@ -116,9 +117,8 @@ export async function getDocumentationPage(system: string, section: string, exam
     updatedAt: page.updatedAt,
     content: publicContent(page.content),
     templateSections: readTemplate(page.pageType, page.template),
-    ...(system === 'shadcn' && section === 'farben' && { colorTokens: colors.map(([token, use]) => ({ token: '--' + token, use })) }),
-    ...(system === 'shadcn' && (section === 'layout' || section === 'abstaende') && { spacingPx: spacing }),
-    ...(system === 'shadcn' && section === 'layout' && { examples: layoutExamples }),
+    resources: designResources(system, section),
+    ...(section === 'patterns' && {patterns: patternCatalog(page.content)}),
   }
 }
 

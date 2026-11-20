@@ -1,0 +1,15 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0"
+       datamodel="ecmascript" name="Button" initial="enabled">
+  <!-- The host sets disabled on mount and on updates. Native focus and activation
+       produce the normalised events. This machine does not dispatch DOM clicks. -->
+  <state id="enabled">
+    <transition event="DISABLE" target="disabled"/>
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE"/>
+    <transition event="NATIVE_CLICK">
+      <send event="action.requested" target="#_parent"/>
+    </transition>
+  </state>
+  <state id="disabled">
+    <transition event="ENABLE" target="enabled"/>
+  </state>
+</scxml>

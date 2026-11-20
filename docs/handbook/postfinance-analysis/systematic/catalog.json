@@ -1,0 +1,1422 @@
+{
+  "format": "arve-pattern-catalog/v1",
+  "scope": "PostFinance E-Finance-Demo; reference research",
+  "date": "2026-11-20",
+  "patterns": [
+    {
+      "id": "UX-001",
+      "key": "applied-filters",
+      "title": "Filter anwenden",
+      "category": "Finden",
+      "tags": [
+        "context",
+        "filters"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "applied-filters",
+          "title": "Kriterien übernehmen",
+          "category": "Finden",
+          "tags": [],
+          "task": "Bewegungen mit mehreren Kriterien eingrenzen.",
+          "flow": [
+            "Search options öffnen",
+            "Testwort eingeben",
+            "Search",
+            "Übernommenes Stichwort ansehen",
+            "Erneut öffnen und Reset: angewandtes Stichwort bleibt"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/movements-overview"
+          ],
+          "limits": [
+            "Reset leert Entwurf, nicht sofort die angewandte Suche. Fachliche Ergebniskorrektheit der Demo nicht belegt."
+          ]
+        },
+        {
+          "area": "payments",
+          "key": "applied-filter-context",
+          "title": "Angewandte Kriterien neben Ergebnissen verstehen",
+          "category": "Finden",
+          "tags": [
+            "filters",
+            "context"
+          ],
+          "task": "Ergebnismenge im Kontext lesen",
+          "flow": [
+            "Suchoptionen einklappen",
+            "Aktive Suchkriterien bleiben sichtbar",
+            "Ergebnisse oder Nulltreffer lesen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/pending-orders/search-single-orders",
+            "transfer/standing-orders/search-standing-orders",
+            "upload/payment-order/collective-order-overview-epo"
+          ],
+          "limits": [
+            "Keine neue Suchkombination übernommen; Apply-/Reset-Semantik hier nicht erneut getestet."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "payments",
+          "key": "applied-filters",
+          "evidence": "tested",
+          "flow": [
+            "Währungsentwurf wählen",
+            "Search übernimmt und zeigt aktives Kriterium",
+            "Reset leert nur Entwurf",
+            "Erneutes Search entfernt angewandtes Kriterium"
+          ],
+          "limits": [
+            "Demotabelle reagiert fachlich nicht nachvollziehbar auf EUR; nur UI-Übernahme belegt."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "apply-and-reset-filter",
+          "evidence": "tested",
+          "flow": [
+            "Dokumentkategorie im Suchentwurf wählen",
+            "Ergebnis bleibt vor Search bestehen",
+            "Search übernimmt, zeigt aktive Kriterien und klappt Suche ein",
+            "Reset setzt nur Controls zurück",
+            "Erneutes Search übernimmt Rücksetzung"
+          ],
+          "limits": [
+            "Zusätzliche Quelle download/documents; Alias/Zuordnung im Hauptkatalog prüfen.",
+            "Datumsrange wurde angezeigt, aber Zeilen lagen weiter außerhalb; keine fachliche Korrektheitsfreigabe."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-002",
+      "key": "live-list-filter",
+      "title": "Liste sofort filtern",
+      "category": "Finden",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "live-list-filter",
+          "title": "Liste sofort filtern",
+          "category": "Finden",
+          "tags": [],
+          "task": "Angezeigte Zeilen schnell durchsuchen.",
+          "flow": [
+            "Testwort in Filter list",
+            "Nulltreffer sehen",
+            "Feld leeren",
+            "Zeilen wieder sichtbar"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/movements-overview"
+          ],
+          "limits": [
+            "Keine Persistenz oder reguläre Detailrückkehr geprüft."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "local-list-filter",
+          "title": "Liste lokal filtern und zurücksetzen",
+          "category": "Finden",
+          "tags": [],
+          "task": "Unter vorhandenen Serviceaufträgen Treffer eingrenzen.",
+          "flow": [
+            "Filter list mit synthetischem Nichttreffer füllen",
+            "No results were found",
+            "Reset",
+            "Zeilen wieder sichtbar"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "services/order-overview"
+          ],
+          "limits": [
+            "Bekannte Livefilter-Familie; keine fachliche Suchkorrektheit oder Persistenzprüfung."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+          "key": "live-list-filter",
+          "evidence": "tested",
+          "flow": [
+            "All accounts",
+            "CASH",
+            "Details-Link",
+            "Demo nicht unterstützt",
+            "Back: Kontokontext erhalten, lokales Filter leer"
+          ],
+          "limits": [
+            "Ausschliesslich Fehler-Rückweg; echte Bewegungsdetailrückkehr weiter blockiert."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-003",
+      "key": "context-selection",
+      "title": "Ansichtskontext wählen",
+      "category": "Auswählen",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "context-selection",
+          "title": "Ansichtskontext wählen",
+          "category": "Auswählen",
+          "tags": [],
+          "task": "Zeitraum der Analyse wählen.",
+          "flow": [
+            "Period öffnen",
+            "Custom wählen",
+            "Von/Bis-Dialog ansehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/analysis"
+          ],
+          "limits": [
+            "Kontenauswahl nur sichtbar. Erfolgsübernahme nach Korrektur in diesem Lauf nicht gesondert ausgewertet."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+          "key": "context-selection",
+          "evidence": "tested",
+          "flow": [
+            "Kontenliste öffnen",
+            "Nichttreffer- und passendes Währungswort eingeben",
+            "Leeren",
+            "All accounts wählen"
+          ],
+          "limits": [
+            "Suche grenzt Optionen sofort ein; Nichttrefferliste ohne sichtbare Erklärung. Keine allgemeine Such-/Barrierefreiheitsfreigabe."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-004",
+      "key": "date-range-validation",
+      "title": "Datumsbereich validieren",
+      "category": "Eingeben",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "date-range-validation",
+          "title": "Datumsbereich korrigieren",
+          "category": "Eingeben",
+          "tags": [],
+          "task": "Ungültige Beziehung zwischen Datumsfeldern verstehen.",
+          "flow": [
+            "Von nach Bis eingeben",
+            "Apply",
+            "Dialog bleibt, rote feldnahe Meldung, Eingaben erhalten",
+            "Reihenfolge korrigieren"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/analysis"
+          ],
+          "limits": [
+            "Korrigiertes Apply geklickt, danach navigiert. Kein gesonderter Erfolgsbeleg dieses Laufs; frühere Quelle beschreibt vollständigen Ablauf. Kein Tastatur-/Screenreadertest."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-005",
+      "key": "conditional-fields",
+      "title": "Bedingte Felder anzeigen",
+      "category": "Eingeben",
+      "tags": [
+        "conditional",
+        "responsive"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "conditional-fields",
+          "title": "Benötigte Felder abhängig von einer Wahl zeigen",
+          "category": "Eingeben",
+          "tags": [
+            "conditional",
+            "responsive"
+          ],
+          "task": "Ausführung terminieren",
+          "flow": [
+            "Enter date wählen",
+            "Datumsfeld und Kalender erscheinen",
+            "Immediately wählen",
+            "Datumsfeld entfällt"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/transfers"
+          ],
+          "limits": [
+            "Keine Betragserfassung oder Send; Datumerhalt und Validierung offen.",
+            "Breit und 390×844 visuell geprüft; schmaler Datumszustand nach Scrollen gesehen."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "payments",
+          "key": "conditional-fields",
+          "evidence": "tested",
+          "flow": [
+            "Enter date zeigt Datum",
+            "Geänderten Datumsentwurf eingeben",
+            "Immediately verbirgt Feld",
+            "Enter date zeigt geänderten Wert wieder"
+          ],
+          "limits": [
+            "Werterhalt innerhalb desselben ungesendeten Formulars belegt.",
+            "Keine sichtbare Cancel-/Reset-Aktion, keine Aussage über Neuaufruf oder Persistenz.",
+            "Geänderter Zustand auch 390×844 visuell gesehen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-006",
+      "key": "import-entry-cancel",
+      "title": "Import beginnen und abbrechen",
+      "category": "Verstehen",
+      "tags": [
+        "dialog",
+        "import"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "import-entry-cancel",
+          "title": "Import verstehen und Einstieg abbrechen",
+          "category": "Verstehen",
+          "tags": [
+            "import",
+            "dialog"
+          ],
+          "task": "Datenverwendung vor Dateiauswahl verstehen",
+          "flow": [
+            "QR-Einstieg öffnen",
+            "Informationsdialog lesen",
+            "Cancel betätigen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/invoice-scan/create"
+          ],
+          "limits": [
+            "Rückkehrziel in diesem Lauf nicht belastbar bestätigt; keine Datei/Confirm."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-008",
+      "key": "status-and-recovery",
+      "title": "Status und Auswege erklären",
+      "category": "Zustände",
+      "tags": [
+        "error",
+        "processing",
+        "table"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "status-and-recovery",
+          "title": "Verarbeitungsstatus erklären und Details anbieten",
+          "category": "Zustände",
+          "tags": [
+            "processing",
+            "error",
+            "table"
+          ],
+          "task": "Dateiverarbeitung einschätzen",
+          "flow": [
+            "Dateiübersicht öffnen",
+            "Text/Icon und Legende lesen",
+            "Details einer Fehlerdatei öffnen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "upload/payment-order/file-overview-epo",
+            "upload/payment-order/collective-order-overview-epo"
+          ],
+          "limits": [
+            "Keine Datei übertragen; keine zeitliche Progression beobachtet.",
+            "Fehlerdatei führte zur Pending-Auftragsübersicht; Fehlerursache damit nicht aufgeklärt."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "unavailable-state",
+          "title": "Nicht verfügbare Funktion erklären",
+          "category": "Zustände",
+          "tags": [],
+          "task": "Demo-Grenze erkennen und Rückweg finden.",
+          "flow": [
+            "Mailbox-Ziel öffnen",
+            "Explizite Nichtverfügbarkeit",
+            "Back sehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "contact/mailbox",
+            "error/overview"
+          ],
+          "limits": [
+            "Back in diesem Lauf nicht bedient; kein Recoverybeleg."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-009",
+      "key": "batch-selection",
+      "title": "Mehrere Einträge auswählen",
+      "category": "Auswählen",
+      "tags": [
+        "batch-selection",
+        "bulk",
+        "checkbox",
+        "disabled",
+        "selection"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "batch-selection",
+          "title": "Mehrere Zeilen auswählen",
+          "category": "Auswählen",
+          "tags": [],
+          "task": "Zeilen vor gemeinsamer Folgeaktion markieren.",
+          "flow": [
+            "Einzelcheckbox",
+            "Select all",
+            "Mehrere sichtbare Häkchen nach Scrollen prüfen",
+            "Abwählen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/analysis/label-overview"
+          ],
+          "limits": [
+            "Keine Folgeaktion, Filterwechsel, Pagination oder Auswahlpersistenz. Gemischter Kopfzustand nicht belegt."
+          ]
+        },
+        {
+          "area": "payments",
+          "key": "batch-selection",
+          "title": "Objekte vor einer gemeinsamen Folgeaktion markieren",
+          "category": "Auswählen",
+          "tags": [
+            "checkbox",
+            "bulk"
+          ],
+          "task": "Auftrag für Freigabe vormerken",
+          "flow": [
+            "Eine Zeile markieren",
+            "Häkchen sehen",
+            "Aktivierte Folgeaktion erkennen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/approve",
+            "upload/payment-order-approve/epo"
+          ],
+          "limits": [
+            "Nur Zahlungsfreigabe interaktiv; EZAG Variante sichtbar.",
+            "Kein Select-all-/gemischter Zustand geprüft; Abwahl-API meldete Fehler; Seite danach verlassen.",
+            "Keine Freigabe ausgeführt."
+          ]
+        },
+        {
+          "area": "payments",
+          "key": "action-availability",
+          "title": "Folgeaktion an Auswahl binden",
+          "category": "Zustände",
+          "tags": [
+            "disabled",
+            "selection"
+          ],
+          "task": "Erkennen wann eine Aktion möglich wird",
+          "flow": [
+            "Ohne Auswahl deaktivierte Aktion sehen",
+            "Zeile markieren",
+            "Aktive Aktion sehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/approve",
+            "upload/payment-order-approve/epo"
+          ],
+          "limits": [
+            "Kein Finanzabschluss; Rückwechsel in deaktiviert nicht verifiziert."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "selection-dependent-actions",
+          "title": "Gemeinsame Aktionen nach Auswahl anbieten",
+          "category": "Auswählen",
+          "tags": [
+            "batch-selection"
+          ],
+          "task": "Dokumente für eine gemeinsame Folgeaktion markieren.",
+          "flow": [
+            "Zeile auswählen",
+            "Passende Bulkaktionen werden aktiv",
+            "Zeilenmenü ansehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "download/documents"
+          ],
+          "limits": [
+            "Variante von batch-selection; kein eigener Bulkabschluss.",
+            "Nur eine ungelesene Zeile; kein gemischter oder seitenübergreifender Auswahlumfang."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+          "key": "batch-selection",
+          "evidence": "tested",
+          "flow": [
+            "Einzelwahl",
+            "Filter schliesst Zeile aus",
+            "Filter leeren erhält Wahl",
+            "Select all unter Filter",
+            "Filter leeren erhält Markierungen nur der zuvor passenden Zeilen"
+          ],
+          "limits": [
+            "Kopfcheckbox zeigt bei teilweiser Wahl kein erkennbares mixed; nach gefilterter Gesamtwahl bleibt Kopf-Häkchen trotz unmarkierter wieder sichtbarer Zeile. Keine Pagination/Bulkaktion."
+          ]
+        },
+        {
+          "area": "payments",
+          "key": "batch-selection",
+          "evidence": "tested",
+          "flow": [
+            "Eine Zeile markieren",
+            "Kopf bleibt visuell leer bei Teilmenge",
+            "Kopf anklicken markiert beide sichtbaren Zeilen",
+            "Erneuter Kopfklick leert beide und deaktiviert Folgeaktion",
+            "Erneute Filterübernahme leert vorherige Zeilenauswahl"
+          ],
+          "limits": [
+            "Kein sichtbarer Mixed-Strich bei 1/2 Auswahl.",
+            "Nur zwei sichtbare Demozeilen; keine fachlich korrekte Filtermenge/Pagination belegt.",
+            "Keine Freigabe ausgeführt."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "selection-dependent-actions",
+          "evidence": "tested",
+          "flow": [
+            "Ungelesene und gelesene Dokumentzeile markieren",
+            "Beide Statusaktionen aktiv",
+            "Select all",
+            "Eine Zeile abwählen",
+            "Filter+Search",
+            "Auswahl leer und Bulkaktionen deaktiviert"
+          ],
+          "limits": [
+            "Variante von batch-selection; keine Ausführung.",
+            "Kein sichtbarer gemischter Kopfmarker; Semantik ungeprüft.",
+            "Keine sichtbare Pagination in dieser Probe."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-010",
+      "key": "sort-control",
+      "title": "Liste sortieren",
+      "category": "Finden",
+      "tags": [
+        "sort",
+        "table"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "sort-control",
+          "title": "Listenreihenfolge explizit wählen",
+          "category": "Finden",
+          "tags": [
+            "sort",
+            "table"
+          ],
+          "task": "Aufträge in anderer Reihenfolge betrachten",
+          "flow": [
+            "Sortierung öffnen",
+            "Amount descending wählen",
+            "Gewählten Modus am Control erkennen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/pending-orders/search-single-orders"
+          ],
+          "limits": [
+            "Demodaten zeigen keinen beweisbaren fachlichen Reihenfolgewechsel."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "payments",
+          "key": "sort-control",
+          "evidence": "tested",
+          "flow": [
+            "Amount descending wählen",
+            "Reguläre Details öffnen",
+            "Mit Back zurück",
+            "Sortierung fällt auf Due date ascending zurück"
+          ],
+          "limits": [
+            "Aktive Währung bleibt erhalten, Sortierung auf diesem Rückweg nicht.",
+            "Kein Browser-Zurück- oder allgemeiner Persistenznachweis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-011",
+      "key": "row-action-menu",
+      "title": "Aktionen zu einem Eintrag öffnen",
+      "category": "Handeln",
+      "tags": [
+        "overflow",
+        "table"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "row-action-menu",
+          "title": "Zeilenaktionen einblenden",
+          "category": "Handeln",
+          "tags": [],
+          "task": "Aktionen zu einem Objekt finden.",
+          "flow": [
+            "Zeilenmenü öffnen",
+            "Objektbezogene Optionen lesen",
+            "Ohne Folgeaktion verlassen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets",
+            "assets/analysis/expense-limit-overview"
+          ],
+          "limits": [
+            "Kein Lösch-/Kündigungsdialog oder Abschluss. Kontenmenü und Budgetmenü sind Varianten."
+          ]
+        },
+        {
+          "area": "payments",
+          "key": "row-action-menu",
+          "title": "Seltenere Objektaktionen aufdecken",
+          "category": "Handeln",
+          "tags": [
+            "overflow",
+            "table"
+          ],
+          "task": "Aktionen einer Zeile finden",
+          "flow": [
+            "Overflow neben Details öffnen",
+            "Change/Delete/Copy ansehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer/pending-orders/search-single-orders"
+          ],
+          "limits": [
+            "Keine Änderung/Kopie/Löschung oder Bestätigung ausgeführt."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "row-action-menu",
+          "title": "Weitere Aktionen am Objekt finden",
+          "category": "Handeln",
+          "tags": [],
+          "task": "Dokumentspezifische Aktionen finden.",
+          "flow": [
+            "Overflow öffnen",
+            "Read/Archive im Zeilenkontext sehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "download/documents"
+          ],
+          "limits": [
+            "Keine Aktion ausgeführt; keine Bestätigung oder Rücknahme geprüft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-012",
+      "key": "contextual-help",
+      "title": "Hilfe im Arbeitskontext öffnen",
+      "category": "Verstehen",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "contextual-help",
+          "title": "Hilfe am Arbeitskontext öffnen",
+          "category": "Verstehen",
+          "tags": [],
+          "task": "Karteninhalt erklären lassen.",
+          "flow": [
+            "Schmal Help Transaction overview öffnen",
+            "Erklärungen im Hilfebereich lesen",
+            "Close"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "home"
+          ],
+          "limits": [
+            "390×844 geprüft; weiterführende Hilfe und Fokusverhalten ungeprüft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-013",
+      "key": "chart-table-view-switch",
+      "title": "Diagramm und Tabelle wechseln",
+      "category": "Verstehen",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "chart-table-view-switch",
+          "title": "Darstellung wechseln",
+          "category": "Verstehen",
+          "tags": [],
+          "task": "Analyse als Werte statt Grafik lesen.",
+          "flow": [
+            "Chart öffnen",
+            "Table wählen",
+            "Tabelle mit Datum, Einnahmen, Ausgaben und Saldo ansehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "assets/analysis"
+          ],
+          "limits": [
+            "Desktop geprüft. Keine numerische Gleichheit oder vollständige Barrierefreiheit nachgewiesen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-014",
+      "key": "show-more-disclosure",
+      "title": "Weitere Informationen aufklappen",
+      "category": "Verstehen",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "show-more-disclosure",
+          "title": "Weitere Bedingungen anzeigen",
+          "category": "Verstehen",
+          "tags": [],
+          "task": "Zunächst verkürzte Dokumentliste vollständig lesen.",
+          "flow": [
+            "Drei Bedingungen ansehen",
+            "Show all",
+            "Sechs Bedingungen sichtbar"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "services/customer-hub/profile"
+          ],
+          "limits": [
+            "Kein Show less gesehen; Dokumente nicht geöffnet.",
+            "Entspricht vorhandenem Show-more-Muster."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+          "key": "show-more-disclosure",
+          "evidence": "tested",
+          "flow": [
+            "Fondsdetails auf390px öffnen",
+            "Fund details fokussieren",
+            "Enter",
+            "Zusätzliche Angaben sichtbar und expanded"
+          ],
+          "limits": [
+            "Accordionvariante, keine neue Pattern-ID. Nicht gleichbedeutend mit Vollprüfung der Tastatur- oder Screenreaderbedienung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-016",
+      "key": "drill-down-navigation",
+      "title": "Navigationsebenen öffnen und verlassen",
+      "category": "Navigieren",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "drill-down-navigation",
+          "title": "Navigationsebene wechseln und verlassen",
+          "category": "Navigieren",
+          "tags": [],
+          "task": "In der Bereichshierarchie orientieren.",
+          "flow": [
+            "390px Menu",
+            "Assets",
+            "Back zum Hauptmenü",
+            "Close zurück zu Home"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "home"
+          ],
+          "limits": [
+            "Kein Unterziel in der schmalen Probe gewählt; keine Fokus-/Historyprüfung."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-017",
+      "key": "empty-result-context",
+      "title": "Nulltreffer erklären",
+      "category": "Zustände",
+      "tags": [
+        "empty",
+        "filters"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "empty-result-context",
+          "title": "Nulltreffer mit Suchkontext zeigen",
+          "category": "Zustände",
+          "tags": [
+            "empty",
+            "filters"
+          ],
+          "task": "Ausbleibende Ergebnisse einordnen",
+          "flow": [
+            "Daueraufträge öffnen",
+            "Kriterien und Nulltreffermeldung lesen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "transfer/standing-orders/search-standing-orders"
+          ],
+          "limits": [
+            "Nulltreffer bereits vorhanden, nicht durch eigenen Filter erzeugt; Erholung nicht geprüft."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "empty-filter-result",
+          "title": "Fehlende passende Dokumente erklären",
+          "category": "Zustände",
+          "tags": [],
+          "task": "Leeres Suchergebnis im aktiven Kontext verstehen.",
+          "flow": [
+            "Archiv öffnen",
+            "Aktive Kriterien lesen",
+            "Keine passenden Dokumente sehen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "download/bin"
+          ],
+          "limits": [
+            "Vorhandene Leere; keine Filterinteraktion oder Recovery."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "empty-filter-result",
+          "evidence": "tested",
+          "flow": [
+            "Category Mortgage wählen",
+            "Search",
+            "Keine passenden Dokumente",
+            "Suchoptionen öffnen",
+            "Reset",
+            "Search",
+            "Dokumentliste wieder sichtbar"
+          ],
+          "limits": [
+            "Nur repräsentative Kategorie; keine fachliche Filterkorrektheit über alle Kriterien."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-018",
+      "key": "task-oriented-navigation",
+      "title": "Nach Aufgaben navigieren",
+      "category": "Navigieren",
+      "tags": [
+        "dashboard",
+        "navigation"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "task-oriented-navigation",
+          "title": "Nach Erfassungs- und Suchaufgaben navigieren",
+          "category": "Navigieren",
+          "tags": [
+            "navigation",
+            "dashboard"
+          ],
+          "task": "Passenden Einstieg nach Aufgabe wählen",
+          "flow": [
+            "Hauptbereich öffnen",
+            "Gruppierte Ziele Enter und Search/Edit prüfen",
+            "Aufgabenansicht öffnen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "transfer",
+            "upload"
+          ],
+          "limits": [
+            "Nur sichtbare Ziele; keine vollständige produktive Reichweite."
+          ]
+        },
+        {
+          "area": "documents-insurance-products-services",
+          "key": "product-category-navigation",
+          "title": "Ziele nach Aufgabenbereichen finden",
+          "category": "Navigieren",
+          "tags": [],
+          "task": "Produkt- oder Einstellungsaufgabe im Hub auswählen.",
+          "flow": [
+            "Bereichshub öffnen",
+            "Beschriftete Kategorie mit Kurztext finden",
+            "Repräsentatives Ziel öffnen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "offers",
+            "services/customer-hub"
+          ],
+          "limits": [
+            "Kacheln allein sind kein neues Pattern; Kategorie-Navigation als Ablauf.",
+            "Unterziele explizit offen gelistet."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-019",
+      "key": "responsive-context-navigation",
+      "title": "Tabs durch kompakte Auswahl ersetzen",
+      "category": "Navigieren",
+      "tags": [
+        "responsive",
+        "tabs"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "responsive-context-navigation",
+          "title": "Ansichtskontext an schmale Breite anpassen",
+          "category": "Navigieren",
+          "tags": [
+            "tabs",
+            "responsive"
+          ],
+          "task": "Zwischen Übertragsarten wechseln",
+          "flow": [
+            "Breit: Tabs sehen",
+            "Schmal: aktuelle Art in Auswahlbox sehen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "transfer/transfers"
+          ],
+          "limits": [
+            "Kein Wechsel in andere Übertragsart ausgeführt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-020",
+      "key": "inline-table-editing",
+      "title": "Werte in einer Tabelle bearbeiten",
+      "category": "Bearbeiten",
+      "tags": [
+        "inline",
+        "template"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "inline-table-editing",
+          "title": "Vorlagenwerte im Tabellenkontext bearbeiten",
+          "category": "Bearbeiten",
+          "tags": [
+            "inline",
+            "template"
+          ],
+          "task": "Werte einer Vorlage am Objekt anpassen",
+          "flow": [
+            "Vorlagenliste sehen",
+            "Nachricht und Betrag in derselben Zeile vorfinden",
+            "Generate als getrennte Folgeaktion erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "transfer/qr-bill-generator/templates/overview"
+          ],
+          "limits": [
+            "Felder unverändert; Autosave/Speicherung/Validierung unbekannt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-021",
+      "key": "forecast-before-action",
+      "title": "Auswirkungen vor einer Aktion anzeigen",
+      "category": "Verstehen",
+      "tags": [
+        "forecast",
+        "summary"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "forecast-before-action",
+          "title": "Auftragssummen und Saldovorschau zusammen lesen",
+          "category": "Verstehen",
+          "tags": [
+            "forecast",
+            "summary"
+          ],
+          "task": "Künftige Kontobelastung einschätzen",
+          "flow": [
+            "Konto und Fälligkeit sehen",
+            "Guthaben/Auftragssumme/Saldo vergleichen",
+            "Nach Auftragstyp zu Details gehen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "transfer/order-overview"
+          ],
+          "limits": [
+            "Werte nicht übernommen; keine Berechnung oder Detailnavigation geprüft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-022",
+      "key": "embedded-workspace",
+      "title": "In einen eingebetteten Arbeitsbereich wechseln",
+      "category": "Navigieren",
+      "tags": [
+        "context",
+        "iframe"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "payments",
+          "key": "embedded-workspace",
+          "title": "Eingebettetes Fachportal mit eigener Navigation verstehen",
+          "category": "Navigieren",
+          "tags": [
+            "iframe",
+            "context"
+          ],
+          "task": "In einem eingebetteten Rechnungsportal Orientierung behalten",
+          "flow": [
+            "eBill aus Banknavigation öffnen",
+            "Portalnavigation und eigene Tabs erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "transfer/e-bill"
+          ],
+          "limits": [
+            "Portal-Unterziele und Rechnungsaktionen ungeprüft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-023",
+      "key": "edit-entry-and-cancel",
+      "title": "Bearbeitung öffnen und abbrechen",
+      "category": "Bearbeiten",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "edit-entry-and-cancel",
+          "title": "Änderungseinstieg unverändert verlassen",
+          "category": "Bearbeiten",
+          "tags": [],
+          "task": "Mögliche Vertragsänderung ansehen und verlassen.",
+          "flow": [
+            "Detail öffnen",
+            "Edit Investment theme",
+            "Entwurf mit bestehender Auswahl ansehen",
+            "Cancel"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "insurances/life-insurance-detail",
+            "insurances/life-insurance-detail/edit-investment-topic"
+          ],
+          "limits": [
+            "Keine Wahl geändert; kein Beleg für Verwerfen geänderter Werte oder Speichersemantik."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-024",
+      "key": "compare-before-action",
+      "title": "Alternativen vergleichen",
+      "category": "Verstehen",
+      "tags": [
+        "comparison"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "compare-before-action",
+          "title": "Alternativen vor einer Aktion vergleichen",
+          "category": "Verstehen",
+          "tags": [
+            "comparison"
+          ],
+          "task": "Angebote anhand gleicher Kriterien vergleichen.",
+          "flow": [
+            "Alternativen nebeneinander lesen",
+            "Bedingungen oder Kosten vergleichen",
+            "Informations- oder Abschlussaktion getrennt erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "offers/product-opening/credit-card",
+            "insurances/life-insurance-detail/edit-investment-topic"
+          ],
+          "limits": [
+            "Nur sichtbare Darstellung; kein Wechsel oder Abschluss.",
+            "Nur breit; keine Entscheidungsqualität oder fachliche Richtigkeit geprüft."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-025",
+      "key": "guided-feature-tour",
+      "title": "Eine Einführung durchgehen",
+      "category": "Verstehen",
+      "tags": [
+        "dialog",
+        "onboarding"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "guided-feature-tour",
+          "title": "Eine Funktionsführung durchgehen",
+          "category": "Verstehen",
+          "tags": [
+            "onboarding",
+            "dialog"
+          ],
+          "task": "Einstieg in zentrale Funktionen erhalten.",
+          "flow": [
+            "Support öffnen",
+            "E-finance in a nutshell",
+            "Slide 1 lesen",
+            "Next",
+            "Slide 2 und neuen Back-Control sehen",
+            "Close"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "contact-support"
+          ],
+          "limits": [
+            "Nur Schritte 1–2 von fünf bedient.",
+            "390×844: Dialog vertikal, Textumbruch und Close/Next sichtbar; dort kein Next-Versuch.",
+            "Fokusführung/Tastatur/Screenreader ungeprüft."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "guided-feature-tour",
+          "evidence": "tested",
+          "flow": [
+            "Support-Einführung öffnen",
+            "Next bis Slide 5",
+            "Back nach Slide 4",
+            "Direkter Sprung nach Slide 5",
+            "Close",
+            "Schmal erneut öffnen",
+            "Fokussiertes Next mit Enter",
+            "Escape",
+            "Fokus sichtbar wieder am Einstieg"
+          ],
+          "limits": [
+            "Breit fünf sichere Informationsschritte; schmal nur Schritt1–2.",
+            "Keine vollständige Tastatur-/Screenreaderprüfung; kein Finanzwizard."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-026",
+      "key": "load-more-rows",
+      "title": "Weitere Einträge laden",
+      "category": "Finden",
+      "tags": [
+        "show-more-disclosure",
+        "table"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "load-more-rows",
+          "title": "Weitere Zeilen schrittweise anzeigen",
+          "category": "Finden",
+          "tags": [
+            "show-more-disclosure",
+            "table"
+          ],
+          "task": "Eine lange Auftragsliste weiter durchsuchen.",
+          "flow": [
+            "Sechs Zeilen sehen",
+            "Show more lines",
+            "Zwölf Zeilen und weitere Show-more-Aktion sehen"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "services/order-overview"
+          ],
+          "limits": [
+            "Variante progressiver Offenlegung in einer Tabelle; kein Beleg für Serverpagination, Gesamtmenge oder Ende.",
+            "Rücksetzen des Umfangs nicht untersucht."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-027",
+      "key": "status-with-required-next-action",
+      "title": "Erforderliche nächste Handlung anzeigen",
+      "category": "Zustände",
+      "tags": [
+        "deadline",
+        "row-action"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "status-with-required-next-action",
+          "title": "Status und nächste notwendige Aufgabe verbinden",
+          "category": "Zustände",
+          "tags": [
+            "deadline",
+            "row-action"
+          ],
+          "task": "Erkennen, warum ein Auftrag noch offen ist und welcher Schritt nötig ist.",
+          "flow": [
+            "Status mit Frist lesen",
+            "Upload bzw. Details am betroffenen Auftrag erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "services/order-overview",
+            "download/enquiry"
+          ],
+          "limits": [
+            "Vorhandene Zustände; keine zeitliche Progression oder Freigabe durchgeführt.",
+            "Enquiries zeigt nur Active/Completed und Details, keine eigene Frist."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-028",
+      "key": "notification-to-task",
+      "title": "Von einer Mitteilung zur Aufgabe wechseln",
+      "category": "Navigieren",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "notification-to-task",
+          "title": "Von Neuigkeit zur zugehörigen Aufgabe gelangen",
+          "category": "Navigieren",
+          "tags": [],
+          "task": "Eine neue Information in ihrem Arbeitsbereich öffnen.",
+          "flow": [
+            "Ungelesenzähler sehen",
+            "Dokument-/Nachrichtentyp unterscheiden",
+            "Zielbereich als Link erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "services/my-notifications"
+          ],
+          "limits": [
+            "Links hier nicht direkt betätigt; kein Gelesenwechsel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-029",
+      "key": "object-detail-navigation",
+      "title": "Eintrag aus einer Übersicht öffnen",
+      "category": "Navigieren",
+      "tags": [],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "documents-insurance-products-services",
+          "key": "object-detail-navigation",
+          "title": "Von Übersicht zu Objektdetails wechseln",
+          "category": "Navigieren",
+          "tags": [],
+          "task": "Eine Versicherung vertieft ansehen.",
+          "flow": [
+            "Versicherungstabelle",
+            "Details",
+            "Thematische Detailabschnitte"
+          ],
+          "evidence": "tested",
+          "sources": [
+            "insurances/overview",
+            "insurances/life-insurance-detail"
+          ],
+          "limits": [
+            "Nur ein repräsentativer Vertrag; keine vollständige Fachprüfung."
+          ]
+        }
+      ],
+      "followUps": [
+        {
+          "area": "payments",
+          "key": "object-detail-navigation",
+          "evidence": "tested",
+          "flow": [
+            "Angewandte Währung und Sortierung setzen",
+            "Reguläre Zahlungsdetails öffnen",
+            "Sichtbaren Back-Button verwenden",
+            "Filter bleibt erhalten, Sortierung fällt auf Default zurück"
+          ],
+          "limits": [
+            "Scrollposition nicht numerisch verglichen.",
+            "Keine Browser-Zurück-Probe; keine fachliche Zuordnung der Demowerte nachgewiesen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "UX-030",
+      "key": "budget-progress-feedback",
+      "title": "Verbrauch gegenüber einem Ziel anzeigen",
+      "category": "Zustände",
+      "tags": [
+        "budget",
+        "progress",
+        "threshold"
+      ],
+      "status": "candidate",
+      "observations": [
+        {
+          "area": "Home und Vermögen / Assets",
+          "key": "budget-progress-feedback",
+          "title": "Budgetverbrauch verstehen",
+          "category": "Zustände",
+          "tags": [
+            "budget",
+            "progress",
+            "threshold"
+          ],
+          "task": "Verbrauch und Überschreitung eines Limits erkennen.",
+          "flow": [
+            "Budgetliste ansehen",
+            "Prozent, Balken und Spent/Available vergleichen",
+            "Rotes Exhausted budget erkennen"
+          ],
+          "evidence": "visible",
+          "sources": [
+            "assets/analysis/expense-limit-overview"
+          ],
+          "limits": [
+            "Nur vorhandene Zustände; kein Budget verändert und kein Übergang ausgelöst."
+          ]
+        }
+      ]
+    }
+  ]
+}

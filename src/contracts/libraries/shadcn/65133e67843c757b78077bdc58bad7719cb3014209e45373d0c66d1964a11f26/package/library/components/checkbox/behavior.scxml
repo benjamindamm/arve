@@ -1,0 +1,24 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0"
+       datamodel="ecmascript" name="Checkbox" initial="control">
+  <!-- The host applies initial and updated properties to the native control.
+       It forwards the value from the native change event. The browser owns
+       focus and Space activation. Focus and Escape leave the value intact. -->
+  <datamodel>
+    <data id="checked" expr="false"/>
+  </datamodel>
+  <state id="control" initial="enabled">
+    <transition event="SET_CHECKED" cond="_event.data &amp;&amp; typeof _event.data.checked === 'boolean'">
+      <assign location="checked" expr="_event.data.checked"/>
+    </transition>
+    <state id="enabled">
+      <transition event="DISABLE" target="disabled"/>
+      <transition event="FOCUS_IN FOCUS_OUT ESCAPE"/>
+      <transition event="NATIVE_CHANGE" cond="_event.data &amp;&amp; typeof _event.data.checked === 'boolean' &amp;&amp; checked !== _event.data.checked">
+        <assign location="checked" expr="_event.data.checked"/>
+      </transition>
+    </state>
+    <state id="disabled">
+      <transition event="ENABLE" target="enabled"/>
+    </state>
+  </state>
+</scxml>

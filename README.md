@@ -53,13 +53,31 @@ Die Übersicht verlinkt Farben und Tokens, Typografie und Form, Grid und Abstän
 
 Die [Komponentenübersicht](http://127.0.0.1:3010/systems/shadcn/komponenten) listet veröffentlichte Komponentenseiten aus Payload. Button, Input, Checkbox und Switch haben Spartan-Demos und gebundene Originalquellen. Alle vier Komponenten enthalten SCXML. Checkbox und Switch verwenden in Spartan Buttons mit ARIA-Rolle, während die Contract-Vorlagen native Checkbox-Eingabefelder verwenden.
 
-### Contract-Export
+### Handbuch auf einer neuen Datenbank aufbauen
+
+Der öffentliche shadcn-Stand ist als begrenzter Snapshot versioniert. Der Bootstrap legt 46 Seiten, Beziehungen und eine Implementierung ohne feste Datenbank-IDs an; Wiederholung verändert identische Inhalte nicht. [Anleitung, Vorschau und Schutz bestehender Inhalte](docs/handbook/bootstrap/README.md).
+
+[Editierbare Pilotvorlagen und Prüfgrenzen](docs/handbook/design-resources/README.md) · [Unabhängige Agentenprobe mit Nachprüfung](docs/handbook/independent-trial/README.md).
+
+### UI Contracts importieren
+
+UI Contracts erzeugt ein eigenständiges Exportverzeichnis mit Manifest, Bibliothek, Designartefakten, Herkunftsregister und portablen Skills. Diesen Ordner beliebig kopieren und in Arve importieren:
 
 ```sh
-node scripts/export-contract.mjs ../ui-contracts shadcn button
+node scripts/import-contract-library.mjs /pfad/zum/shadcn-export
 ```
 
-Der Befehl erstellt unter `src/contracts/exports/` einen Snapshot der lokalen Quellen. Die Export-Revision basiert auf den Prüfsummen aller exportierten Dateien und bezeichnet keinen Git-Commit. Neue Revisionen werden im Katalog `src/contracts/catalog.ts` registriert und danach in Payload ausgewählt. Alte registrierte Revisionen bleiben auflösbar.
+Arve liest ausschliesslich dieses Paket. Kein Quellcheckout, keine Umgebungsvariable mit Repositorypfad und keine Laufzeitverbindung zum Erzeuger sind erforderlich. Der Import prüft Formatversion, alle Dateihashes, die Gesamt-Revision und gebundene Contractquellen. Zusätzliche oder fehlende Dateien, Symlinks und aus der Bibliothek führende Contractbindungen werden abgelehnt. Bereits vorhandene Revisionen werden nur bei identischem Inhalt wiederverwendet, nie überschrieben.
+
+Unter `src/contracts/libraries/<bibliothek>/<revision>/package/` bleibt das vollständige Originalpaket einschliesslich `manifest.json`, `dependencies.json` und `skills/` erhalten. Die Bibliotheksdateien stehen zusätzlich an den bisherigen Arve-Artefaktpfaden bereit; `contracts.json` ist die lokale Projektion für Portal und MCP. Die Revision identifiziert das gesamte Paket einschliesslich Skills. Herkunftsverweise sind ausdrücklich keine lokal auflösbaren Dateiverweise. Historische Prüfbelege bleiben von den Prüfsummen des Exportpakets getrennt.
+
+Neue Revisionen werden im Katalog `src/contracts/catalog.ts` registriert. Bestehende Payload-Seiten behalten ihre gebundene Revision. Um eine Seite umzustellen, im CMS die Contractrevision ändern und die Seite veröffentlichen. Eine separat dokumentierte Implementierungsprüfung bleibt an ihrer bisherigen Revision gebunden. Portal und MCP lesen den Stand der veröffentlichten Komponentenseite.
+
+Der Projekt-Skill [arve-ui-contracts](.agents/skills/arve-ui-contracts/SKILL.md) nutzt die mitimportierten Anleitungen. Das portable Paket unterstützt Lesen, UX-Auswahl und die Einordnung vorhandener Nachweise. Autorenwerkzeuge und ausführbare Plattformprüfungen werden nicht durch das Kopieren eines Skills verfügbar; der Export benennt diese Grenzen und Voraussetzungen ausdrücklich.
+
+Den alten Einzelkomponenten-Exporter ersetzt der Export in UI Contracts. Bereits importierte historische Revisionen bleiben aus Gründen der Seitenversionierung unverändert erhalten.
+
+Importprüfung: `node --test scripts/import-contract-library.test.mjs`.
 
 ### MCP
 
@@ -79,11 +97,21 @@ Nach den shadcn-Seed-Skripten die bestehenden Seiten dem System und seinem Seite
 node --env-file=.env --import tsx scripts/migrate-design-systems.ts
 ```
 
-Das Skript legt shadcn und ein minimales Beispielsystem an. Bereits zugeordnete Seiten werden bei einem erneuten Lauf übersprungen. Im Payload-Admin lassen sich Name, Slug, Beschreibung, Theme und Startseite unter **Design-Systeme** bearbeiten. Unter **Seiten** steuern Design-System, Seitentyp, übergeordnete Seite und Sortierung den veröffentlichten Baum. Portal und MCP lesen denselben Baum. Seiten und Komponenten sind unter `/systems/<system>/…` erreichbar.
+Das Skript ordnet die Seiten der shadcn-Referenzimplementierung zu. Bereits zugeordnete Seiten werden bei einem erneuten Lauf übersprungen. Im Payload-Admin lassen sich Name, Slug, Beschreibung, Theme und Startseite unter **Design-Systeme** bearbeiten. Unter **Seiten** steuern Design-System, Seitentyp, übergeordnete Seite und Sortierung den veröffentlichten Baum. Portal und MCP lesen denselben Baum. Seiten und Komponenten sind unter `/systems/<system>/…` erreichbar.
 
-Für Seitenslugs gilt aktuell die globale Eindeutigkeit in Payload. Verwende etwa `mein-system-grundlagen` für die URL `/systems/mein-system/grundlagen`. Systemübergreifende Zugriffstrennung für private Daten erfordert separate Instanzen oder eigene Zugriffskontrollen. Die beiden lokalen Referenzsysteme sind öffentlich lesbar.
+Für Seitenslugs gilt aktuell die globale Eindeutigkeit in Payload. Verwende etwa `mein-system-grundlagen` für die URL `/systems/mein-system/grundlagen`. Systemübergreifende Zugriffstrennung für private Daten erfordert separate Instanzen oder eigene Zugriffskontrollen. Die shadcn-Referenzimplementierung ist öffentlich lesbar.
 
 ## Seitenvorlagen
+
+### shadcn-Handbuch ergänzen
+
+Nach den shadcn-Seeds und der Seitenmigration können die kuratierten Leitfäden eingespielt werden:
+
+```sh
+node --env-file=.env --import tsx scripts/seed-shadcn-handbook.ts
+```
+
+Das Skript legt fehlende Leitfäden unter den veröffentlichten Handbuchbereichen an. Bestehende Seiten werden übersprungen, damit redaktionelle Änderungen in Payload erhalten bleiben.
 
 Im Payload-Admin unter **Seiten** das Design-System und den **Seitentyp** auswählen. Bei **Grundlagen**, **Layout**, **UX-Pattern** und **Komponente** erscheinen unter **Seitenvorlage** die passenden leeren Felder. Bestehende freie Inhaltsblöcke bleiben separat bearbeitbar. Auf veröffentlichten Seiten erscheinen die ausgefüllten Vorlagenabschnitte und sind über MCP als `templateSections` abrufbar und durchsuchbar.
 

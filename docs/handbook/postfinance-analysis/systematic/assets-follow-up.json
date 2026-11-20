@@ -1,0 +1,130 @@
+{
+  "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+  "checks": [
+    {
+      "gap": "Suche innerhalb der Kontenauswahl",
+      "source": "assets/movements-overview → Account",
+      "action": "Desktop Kontoauswahl öffnen; erfundenes Nichttrefferwort eingeben; wieder öffnen, CHF eingeben; leeren und All accounts wählen.",
+      "observed": "Nichttrefferwort entfernt alle Optionen, ohne sichtbare Nulltreffermeldung. CHF zeigt die sechs Konten, All accounts entfällt dabei. Leeren zeigt All accounts wieder; Auswahl schliesst Liste und ändert Kontext.",
+      "result": "closed",
+      "remaining": [
+        "Keine Tastaturauswahl, Screenreadermeldung oder Persistenz der Suchzeichen geprüft. Ein fehlgeschlagener Fokusversuch erfolgte nach geschlossenem Popup; mit neuem Snapshot regulär weitergearbeitet."
+      ]
+    },
+    {
+      "gap": "Reguläre Bewegungsdetails und Rückkehrkontext",
+      "source": "assets/movements-overview → assets/movements-overview/details → error/overview",
+      "action": "All accounts wählen, lokales Filter CASH setzen, regulären Details-Link einer gefundenen Zeile anklicken; Back der Fehleransicht.",
+      "observed": "Explizite Demo-version-Seite: This function is not supported in the demo version. Nach Back ist Account weiterhin All accounts, Filter list jedoch leer. Das ist ein Fehler-Rückweg, keine echte Detailrückkehr.",
+      "result": "blocked",
+      "remaining": [
+        "Echte Bewegungsdetailansicht und Rückkehr, Auswahl-/Sortierungs-/Positionsvergleich bleiben blockiert. Kein eigener Sortiercontrol auf dieser Übersicht erhoben."
+      ]
+    },
+    {
+      "gap": "Echter Kontodetail-Rückweg mit gewähltem Kontext",
+      "source": "assets → services/account-details → assets",
+      "action": "Banks auf eine Bank begrenzen, Popup per Escape schliessen; Kontenmenü → Account information. Unteren Button Back to overview of assets anklicken; später dieselbe Konstellation erneut über oberen Back verlassen.",
+      "observed": "Kontoinformation tatsächlich geöffnet. Unterer Button bewirkte in der Probe auch nach erwartungsbezogenem Warten keinen Ansichtswechsel. Oberer Back kehrt zur Vermögensübersicht zurück; Banks bleibt 1, Customer relationships bleibt 2. Filternde Bankwahl ist in Liste und Summen sichtbar.",
+      "result": "partial",
+      "remaining": [
+        "Exakte Scrollposition vor/nach Rückkehr nicht ausreichend dokumentiert; keine Sortierung oder Zeilenauswahl hier geprüft. Unterer Button nicht allgemein als funktionsfähig einstufen. Bankfilter nach direkter neuer URL-Navigation nicht als erhalten behaupten."
+      ]
+    },
+    {
+      "gap": "Kopfcheckbox, gemischter Zustand, Filterwechsel und Auswahlumfang",
+      "source": "assets/analysis/label-overview",
+      "action": "Einzelzeile markieren; CASH eingeben, das diese Zeile ausschliesst; Filter leeren. Einzelmarkierung entfernen. CASH erneut setzen; Select all per Klick; Filter leeren.",
+      "observed": "Einzelmarkierung ist nach Ausschliessen/Zurücksetzen wieder sichtbar. Bei einer markierten Zeile bleibt Kopfcheckbox visuell leer, ohne erkennbares Minus. Unter CASH Select all markiert die passenden Zeilen. Nach Leeren bleibt die zuvor ausgeschlossene erste Zeile unmarkiert, passende Zeilen bleiben markiert; Kopfcheckbox zeigt dennoch ein Häkchen. Snapshot zählt 8 Checkboxen im gefilterten und 14 im ungefilterten Zustand inklusive Kopf.",
+      "result": "partial",
+      "remaining": [
+        "Kein belastbarer gemischter Kopfzustand; beobachtete Kopfmarkierung nach Filterwechsel entspricht nicht allen wieder sichtbaren Zeilen. Keine Bulkaktion, Pagination, Seitenwechsel oder nicht geladene Ergebnisse geprüft. Ein Space-Tastaturversuch war nicht als erfolgreicher Umschaltbeleg verwendbar; Befund beruht auf dem anschliessenden Klick."
+      ]
+    },
+    {
+      "gap": "Bisher ungeöffnete Untergruppe Geldmarkt",
+      "source": "assets → assets/money-market",
+      "action": "Regulären Details-Link des Festgeldes in der Vermögensübersicht öffnen; Ansicht visuell ansehen.",
+      "observed": "Fixed-term deposit mit Laufzeit, Fälligkeit, Zins, Betrag und Bezugskonto erreicht. Back und Print sichtbar; nicht betätigt. Direkte URL-Aufrufe zuvor hatten nur die Übersicht als Ausgangsansicht gezeigt und werden nicht als Detailbeleg verwendet.",
+      "result": "closed",
+      "remaining": [
+        "Keine Rückkehrprobe und kein Druck. Andere Geldmarktprodukte, insbesondere Medium-term note, nicht separat untersucht."
+      ]
+    },
+    {
+      "gap": "Bisher ungeöffnete Fondsposition, schmal und Tastatur",
+      "source": "assets/investment-retirement → assets/selfservice-fund-custody/position-details",
+      "action": "Regulären Positionslink öffnen; Desktop ansehen; auf 390×844 umstellen; Fund-details-Disclosure fokussieren und Enter drücken.",
+      "observed": "Fund details mit Kennzahlen, Verlauf, Zeit-/Daten-/Darstellungswahl und Subscribe/Redemption-Links erreicht. Schmal werden Kennzahlen vertikal angeordnet und Zeitraum wird zur Auswahlbox. Enter öffnet Fund details; expanded und zusätzliche Angaben visuell bestätigt. Weitere Disclosures Brief description, Fund structure by asset class und Documents sichtbar.",
+      "result": "partial",
+      "remaining": [
+        "Keine Subscribe-/Redemption-Aktion, Dokumentöffnung oder Druck. Keine vollständige Tabreihenfolge, Fokus-Rückkehr oder Screenreaderprüfung. Andere Fondspositionen/Vorsorgegruppen bleiben ungeprüft."
+      ]
+    }
+  ],
+  "patternUpdates": [
+    {
+      "key": "context-selection",
+      "evidence": "tested",
+      "flow": [
+        "Kontenliste öffnen",
+        "Nichttreffer- und passendes Währungswort eingeben",
+        "Leeren",
+        "All accounts wählen"
+      ],
+      "limits": [
+        "Suche grenzt Optionen sofort ein; Nichttrefferliste ohne sichtbare Erklärung. Keine allgemeine Such-/Barrierefreiheitsfreigabe."
+      ]
+    },
+    {
+      "key": "batch-selection",
+      "evidence": "tested",
+      "flow": [
+        "Einzelwahl",
+        "Filter schliesst Zeile aus",
+        "Filter leeren erhält Wahl",
+        "Select all unter Filter",
+        "Filter leeren erhält Markierungen nur der zuvor passenden Zeilen"
+      ],
+      "limits": [
+        "Kopfcheckbox zeigt bei teilweiser Wahl kein erkennbares mixed; nach gefilterter Gesamtwahl bleibt Kopf-Häkchen trotz unmarkierter wieder sichtbarer Zeile. Keine Pagination/Bulkaktion."
+      ]
+    },
+    {
+      "key": "live-list-filter",
+      "evidence": "tested",
+      "flow": [
+        "All accounts",
+        "CASH",
+        "Details-Link",
+        "Demo nicht unterstützt",
+        "Back: Kontokontext erhalten, lokales Filter leer"
+      ],
+      "limits": [
+        "Ausschliesslich Fehler-Rückweg; echte Bewegungsdetailrückkehr weiter blockiert."
+      ]
+    },
+    {
+      "key": "show-more-disclosure",
+      "evidence": "tested",
+      "flow": [
+        "Fondsdetails auf390px öffnen",
+        "Fund details fokussieren",
+        "Enter",
+        "Zusätzliche Angaben sichtbar und expanded"
+      ],
+      "limits": [
+        "Accordionvariante, keine neue Pattern-ID. Nicht gleichbedeutend mit Vollprüfung der Tastatur- oder Screenreaderbedienung."
+      ]
+    }
+  ],
+  "newPatterns": [],
+  "limits": [
+    "Eigener BrowserOS-neo-Tab. Screenshots visuell angesehen und nicht als Dateien gespeichert.",
+    "Desktop1440×1000 und repräsentativ Fondsdetails390×844 CSS-Pixel.",
+    "Keine Finanzaktion, Speicherung, Löschung, Nachricht, Vertragsaktion, Dateiauswahl oder Upload. Keine personenbezogenen Werte in diesen Dateien.",
+    "Sechs gezielte Prüfungen; geschlossene Lücke bedeutet nur den benannten begrenzten Nachweis. Untergruppen ausserhalb dieser sechs Prüfungen bleiben offen.",
+    "Suche/Bankfilter und Checkboxen ändern nur lokalen Ansichtskontext; keine Aussage über fachliche Korrektheit aller Demowerte.",
+    "Nur regulär geklickte und danach visuell verifizierte Inhalte als Detailbeleg; die direkten URL-Versuche zeigten teilweise Ausgangsübersichten."
+  ]
+}

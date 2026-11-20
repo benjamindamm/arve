@@ -1,0 +1,36 @@
+.figma-input {
+  box-sizing: border-box;
+  inline-size: min(100%, var(--figma-input-specimen-width));
+  block-size: var(--figma-input-height);
+  padding: var(--figma-input-padding-block) var(--figma-input-padding-inline);
+  border: var(--figma-input-border-width) solid var(--figma-border);
+  border-radius: var(--figma-input-radius);
+  background: var(--figma-background);
+  color: var(--figma-foreground);
+  font: var(--figma-input-font-weight) var(--figma-input-font-size) / var(--figma-input-line-height)
+    var(--figma-input-font), sans-serif;
+}
+
+.figma-input::placeholder {
+  color: var(--figma-muted-foreground);
+  opacity: 1;
+}
+
+.figma-input[data-rounded="true"] {
+  border-radius: var(--figma-input-round-radius);
+}
+
+.figma-input:focus {
+  border-color: var(--figma-ring);
+  box-shadow: 0 0 0 var(--figma-input-focus-spread) var(--figma-input-focus-shadow);
+}
+
+.figma-input:focus:placeholder-shown {
+  box-shadow: 0 var(--figma-input-empty-focus-offset) var(--figma-input-empty-focus-blur)
+    var(--figma-input-empty-focus-shadow);
+}
+
+.figma-input:disabled {
+  opacity: var(--figma-input-disabled-opacity);
+  background: var(--figma-input-disabled-fill);
+}

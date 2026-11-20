@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "checkbox.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Checkbox",
+          "description": "Labelled binary checkbox. The checked property holds the boolean value.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Current selection.",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Native disabled state.",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Visible text describing the option."
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "Event"
+              },
+              "description": "Native change event. Read the boolean value from the checkbox target."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

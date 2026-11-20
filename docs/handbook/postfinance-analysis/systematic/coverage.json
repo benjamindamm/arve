@@ -1,0 +1,2761 @@
+{
+  "date": "2026-11-20",
+  "views": [
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "home",
+      "path": "home",
+      "title": "Home",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Desktop Assets-Einstieg; schmal Menu → Assets → Back → Close bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Global Search und Empfängerfeld sichtbar; nicht eingegeben."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontowahl und eBill-Checkboxen sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Empfängerfeld und Dateiauswahl sichtbar, nicht benutzt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify homepage und Karteneinstellungen sichtbar."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Zahlungseinstiege und Kartenaktionen sichtbar; keine Finanzaktion."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Schmal Help Transaction overview geöffnet, Text und Close geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene EPO-Zustände Processing, Error, Approved sichtbar; kein Prozess ausgelöst."
+        }
+      },
+      "patterns": [
+        "UX-012",
+        "UX-016"
+      ],
+      "unvisitedTargets": [
+        "home/widget-edit",
+        "transfer/invoice-scan/create",
+        "transfer/transfers",
+        "transfer/order-overview",
+        "transfer/e-bill",
+        "transfer/transfers/credit-card",
+        "transfer/pending-orders/search-single-orders",
+        "transfer/pending-orders/search-single-transfers",
+        "upload/payment-order/collective-order-overview-epo",
+        "upload/payment-order/file-overview-epo",
+        "upload/payment-order/individual-order-overview-epo",
+        "transfer/investigation-advanced/overview",
+        "transfer/investigation-advanced/payment-search-single",
+        "transfer/investigation-advanced/payment-bulk-search"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "assets-overview",
+      "path": "assets (auch assets/balance-sheet verlinkt)",
+      "title": "Vermögensübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Assets geöffnet; Konten-Zeilenmenü → Account information und Rückkehr bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Banks und Customer relationships begrenzen die Ansicht."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontextauswahlen sichtbar, nicht verändert."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change the order sichtbar; wegen unbekannter Persistenz nicht benutzt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Konten-Zeilenmenü geöffnet; keine Finanz-/Kündigungsaktion gewählt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Gruppierte Konten, Summen, Zusammensetzung und Aktualitätsdatum sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Datumsangabe bei Fremdbankwerten; kein Laden/Fehler provoziert."
+        }
+      },
+      "patterns": [
+        "UX-011"
+      ],
+      "unvisitedTargets": [
+        "services/account-settings",
+        "Kontenmenü: Transactions, Order overview, Enter payment, Account transfer, Balance history, Documents, Account information, Account settings, Cancel account",
+        "assets/money-market",
+        "assets/credit-cards",
+        "insurances/life-insurance-detail",
+        "offers/multibanking-opening/thirdpartybank"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "account-information",
+      "path": "services/account-details",
+      "title": "Kontoinformation",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus Kontenmenü geöffnet, Back to overview of assets bedient."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Stamminformationen, Berechtigungen und Interest conditions; More information sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "account-settings",
+      "path": "services/account-settings",
+      "title": "Kontoeinstellungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus Kontenmenü geöffnet; danach ohne Änderung verlassen."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Optionaler Eigenname, deaktivierter Kontoauszug-Rhythmus."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Save/Cancel vorhanden; weder Eingabe noch Save ausgeführt."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Save und Verweis Account notifications sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Feldhilfen und deaktivierter Rhythmus sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "Account notifications (Zielpfad nicht erhoben)"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "analysis",
+      "path": "assets/analysis",
+      "title": "Analysen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Desktop geöffnet; schmal erneut angesehen."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Konten-/Zeitraumbegrenzung vorhanden."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Chart → Table und Period → Custom geöffnet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Custom Von nach Bis eingegeben → Apply: rote relationale Fehlermeldung; Werte erhalten. Korrekte Reihenfolge eingegeben."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "Nur Ansichtsparameter, keine fachliche Änderung geprüft."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Apply des ungültigen Zeitraums bedient; kein Finanzsubmit."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Zeitgrafik in Tabelle gewechselt; Datum/Einnahmen/Ausgaben/Saldo sichtbar."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Ungültiger Datumsbereich sichtbar geprüft; korrekter Apply angeklickt, danach navigiert, daher Erfolgsanzeige nicht gesondert belegt."
+        }
+      },
+      "patterns": [
+        "UX-013",
+        "UX-003",
+        "UX-004"
+      ],
+      "unvisitedTargets": [
+        "assets/analysis/balance-overview",
+        "assets/analysis/abo-movements-detail",
+        "assets/analysis/create-expense-limit"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "movements",
+      "path": "assets/movements-overview",
+      "title": "Bewegungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Übersicht geöffnet; Details-Ziele sichtbar."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Livefilter mit erfundenem Testwort → No results were found; leeren stellt Zeilen wieder her. Keywords → Search übernimmt; Reset im erneut geöffneten Bereich lässt übernommenes Stichwort stehen."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Account, Entry type und Zeitraumradio sichtbar."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Erfundene Suchwörter eingegeben; keine personenbezogenen Werte erfasst."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Adjust display sichtbar; nicht verändert."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print/Export nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Kriterien, ausstehende Aufträge, Tabellenspalten und Detailverweise sichtbar."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Nulltreffer und Rückkehr zur gefüllten Liste durch Leeren geprüft."
+        }
+      },
+      "patterns": [
+        "UX-001",
+        "UX-002"
+      ],
+      "unvisitedTargets": [
+        "assets/movements-overview/detail-single-order",
+        "assets/movements-overview/details"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "tags",
+      "path": "assets/analysis/label-overview",
+      "title": "Tags",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Tags geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Search options, Filter list und aktive Kriterien sichtbar."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Einzelzeile und Select all gewählt; sichtbare Häkchen bei mehreren gescrollten Zeilen geprüft, danach abgewählt."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Filter list sichtbar; nicht neu bedient."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change category, Add tag und Delete label nur angesehen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Bulkfolgeaktionen vorhanden, keine ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Tags, Kategorien und Detailverweise sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "No tag selected im Ausgangszustand; kein Bulkabschluss."
+        }
+      },
+      "patterns": [
+        "UX-009"
+      ],
+      "unvisitedTargets": [
+        "assets/credit-cards/details",
+        "assets/movements-overview/detail-single-order",
+        "assets/movements-overview/details"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "budget",
+      "path": "assets/analysis/expense-limit-overview",
+      "title": "Budget",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Budget geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Zeilenmenü mit Edit/Delete geöffnet; keine Aktion gewählt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilenmenü geöffnet; Folgeaktionen nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Monats-/Jahresgruppen, Prozent, Spent/Available und Balken sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Überzogenes Budget rot mit Exhausted budget bezeichnet."
+        }
+      },
+      "patterns": [
+        "UX-011",
+        "UX-030"
+      ],
+      "unvisitedTargets": [
+        "assets/analysis/create-expense-limit",
+        "Budget-Menü: Edit/Delete (Ziele nicht geöffnet)"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "co2",
+      "path": "assets/analysis/co2-detail",
+      "title": "CO2-Rechner",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Ziel aus inventarisierter Navigation geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Zeitraum, Konten, Search options, Filter list."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontextauswahlen und Chartwahl sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Filterfeld sichtbar."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Set consumer behaviour sichtbar; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Change category/Add tag/Delete label nur sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Eigener Fußabdruck, Durchschnitt, Ziel und Kategorienvergleich visuell angesehen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Bestehende Vergleichswerte; keine Neuermittlung geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "Set consumer behaviour (Dialog nicht geöffnet)",
+        "CO2-Kategoriebuttons (Unteransichten nicht geöffnet)",
+        "assets/credit-cards/details"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "investments",
+      "path": "assets/investment-retirement",
+      "title": "Anlagen und Vorsorge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Übersicht geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationships vorhanden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kundenbeziehungsauswahl sichtbar."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Adjust display sichtbar; nicht betätigt."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Purchase funds, Inpayment 3a und More sichtbar; keine ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Positionen, Vermögenszusammensetzung und Marktwerte sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene positive/negative Entwicklungen; kein Auftrag ausgelöst."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "assets/selfservice-fund-custody/position-details",
+        "assets/selfservice-fund-custody/list",
+        "assets/money-market",
+        "assets/vested-benefits-detail",
+        "assets/investment-retirement/market-data",
+        "transfer/transfers/retirementsavingsaccount",
+        "insurances/life-insurance-detail",
+        "download/documents",
+        "offers/product-opening/invest",
+        "More-Menüs Fund self-service, 3a, Vested benefits (nicht geöffnet)",
+        "https://www.postfinance.ch/content/pfch/en/priv/investmentsolutions/knowledge/homepubli.html",
+        "https://www.postfinance.ch/content/pfch/en/priv/investmentsolutions/knowledge/home.html"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "balance-history",
+      "path": "assets/balance-development/account",
+      "title": "Saldoverlauf",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Saldoverlauf geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationship, Accounts und Zeitraumwahl sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "YTD/1y/2y/5y/MAX/Individual, Chart/Table und Slides sichtbar."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print sowie Next sichtbar, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Hinweis erklärt Gruppierung nach Vermögenskategorie und Grenze von fünf Einzelkonten."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Back des Sliders deaktiviert; kein Lade-/Fehlerzustand geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "assets/balance-history",
+        "assets/movements-overview"
+      ]
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "home-edit",
+      "path": "home/widget-edit",
+      "title": "Startseite anpassen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "credit-cards",
+      "path": "assets/credit-cards",
+      "title": "Kreditkarten",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "money-market",
+      "path": "assets/money-market",
+      "title": "Geldmarkt",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "balance-analysis",
+      "path": "assets/analysis/balance-overview",
+      "title": "Einnahmen/Ausgaben",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "subscriptions",
+      "path": "assets/analysis/abo-movements-detail",
+      "title": "Abonnementbewegungen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "create-budget",
+      "path": "assets/analysis/create-expense-limit",
+      "title": "Budget erstellen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "value-date-history",
+      "path": "assets/balance-history",
+      "title": "Valutasaldoverlauf",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "fund-position",
+      "path": "assets/selfservice-fund-custody/position-details",
+      "title": "Fondsposition",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "Home und Vermögen / Assets",
+      "id": "movement-details",
+      "path": "assets/movements-overview/detail-single-order; assets/movements-overview/details",
+      "title": "Bewegungsdetails",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "blocked",
+          "note": "Direkter Aufruf detail-single-order versucht; die visuell folgende Ansicht war die Bewegungsübersicht. Kein belastbarer Detailinhalt oder Rückwegbeleg; details nicht geöffnet."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "payments",
+      "id": "payments-hub",
+      "path": "transfer",
+      "title": "Zahlungsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Von Home über Payments erreicht; Hauptmenü mit Enter und Search/Edit geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Direkte Sucheinstiege für Zahlungen und Überträge."
+        },
+        "select": {
+          "status": "visible",
+          "note": "eBill-Checkboxen und More-Auswahl sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Empfängerfeld sichtbar; nicht ausgefüllt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify page sichtbar; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Kauf-/Erfassungs-/Freigabeeinstiege sichtbar, keine Ausführung."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aufgabenkarten und Hilfe je Karte."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Zusammenfassungen vorhandener Demodaten."
+        }
+      },
+      "patterns": [
+        "UX-018"
+      ],
+      "unvisitedTargets": [
+        "transfer/enter-standing-order",
+        "transfer/transfers/standing-transfer",
+        "transfer/approve/payments",
+        "transfer/approve/single-transfer",
+        "transfer/approve/standing-orders",
+        "transfer/fund-orders/fundlist",
+        "transfer/crypto-list",
+        "transfer/transfers/forextrade",
+        "transfer/investigation-advanced/overview",
+        "transfer/investigation-advanced/payment-search-single",
+        "transfer/investigation-advanced/payment-bulk-search",
+        "transfer/fund-orders/search",
+        "transfer/crypto-orders/search",
+        "transfer/forex-orders/search",
+        "transfer/fund-orders/search/subscription-single",
+        "transfer/qr-bill-generator",
+        "transfer/qr-bill-generator/templates",
+        "transfer/widget-edit",
+        "assets/crypto-custody/overview",
+        "assets/selfservice-fund-custody/list",
+        "services/customer-hub/overview"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "payment-entry",
+      "path": "transfer/enter-payment",
+      "title": "Zahlung / Dauerauftrag erfassen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Hauptmenüziel geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Empfängerfeld beschreibt Suche nach IBAN/Konto/Name/Zahlungsinformation."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Einzelnes Empfängerfeld; keine Eingabe vorgenommen."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "QR- und Übertragseinstieg."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Informationsbutton sichtbar; Klick lieferte keinen gesichert geänderten Zustand."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "payments",
+      "id": "account-transfer",
+      "path": "transfer/transfers",
+      "title": "Überträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Direkte sichtbare Zielnavigation; breite Tabs und schmale Auswahlbox gesehen."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Immediately und Enter date im ungesendeten Entwurf umgeschaltet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Enter date blendet Datumsfeld und Kalender ein; Immediately blendet es aus. Kein Betrag eingegeben."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Ungesendetes Formular; Speicher-/Verwerfungssemantik nicht geprüft."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Send sichtbar, nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Auftragsart, Belastung/Gutschrift und Ausführung als Gruppen."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Validierung und Abschluss nicht ausgelöst."
+        }
+      },
+      "patterns": [
+        "UX-005",
+        "UX-019"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Currency/foreign exchange",
+        "UI-Tab Load credit card",
+        "UI-Tab Retirement planning 3a inpayment",
+        "UI-Tab E-trading"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "qr-import",
+      "path": "transfer/invoice-scan/create",
+      "title": "QR-Rechnung importieren",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbarer QR-Link geöffnet; Cancel betätigt, späteres Rückkehrziel nicht belastbar bestätigt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Checkbox zum künftigen Ausblenden des Hinweises unverändert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Abgedunkelte Dateizone mit Format-/Grössen-/Mengenhinweisen; keine Datei gewählt."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Informationsdialog über Cancel verlassen; keine Dateidaten vorhanden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Confirm und Cancel vorhanden; nur Cancel bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dialog erklärt Erkennung und Datenverwendung."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Upload, Fortschritt, Dateifehler und Erfolg nicht geprüft."
+        }
+      },
+      "patterns": [
+        "UX-006"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "payments",
+      "id": "pending-payments",
+      "path": "transfer/pending-orders/search-single-orders",
+      "title": "Zahlungen bearbeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Payments/Account transfers-Ziel geöffnet."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt; Sortierung Amount descending gewählt und Label geprüft. Fachliche Reihenfolge nicht bewiesen."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Sortieroption gewählt; Konto-/Status-/Währungsauswahl nur sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums- und Betragsbereiche sichtbar, unverändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change und Copy im geöffneten Zeilenmenü sichtbar; nicht gewählt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilen-Overflow geöffnet: Change/Delete/Copy. Keine Aktion ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Suchkriterien, Status, Unterschrift und Betrag je Zeile."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandener Status Pending; keine Zustandsänderung ausgelöst."
+        }
+      },
+      "patterns": [
+        "UX-010",
+        "UX-011",
+        "UX-001"
+      ],
+      "unvisitedTargets": [
+        "transfer/pending-orders/search-single-orders/orders-detail",
+        "transfer/pending-orders/search-single-transfers"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "epo-hub",
+      "path": "upload",
+      "title": "EZAG / CH-DD Übersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "EPO-Hauptmenü geöffnet: Approve, File overview, Payment orders, Single orders, Overview."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Dateizone mit XML-Formathinweis; nicht betätigt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify page sichtbar, nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Freigabeeinstieg und Dateiauswahl vorhanden; nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Karten für Dateiübersicht, Übermittlung, Freigabe und Suche."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Processing, Error und Approved/orders placed gleichzeitig als vorhandene Beispieldaten."
+        }
+      },
+      "patterns": [
+        "UX-018",
+        "UX-008"
+      ],
+      "unvisitedTargets": [
+        "upload/payment-order/individual-order-overview-epo",
+        "upload/widget-edit"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "epo-file-summary",
+      "path": "upload/payment-order/file-overview-epo",
+      "title": "EZAG Dateiübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus sichtbarem Show all/File overview-Ziel geöffnet; Error-Details weiter zu Sammelauftragsübersicht."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Legende erklärt fünf mögliche Dateizustände und kündigt Aktualisierung alle 30 Sekunden an."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Processing, Error und Approved/orders placed in Tabelle; kein zeitlicher Übergang beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-008"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "payments",
+      "id": "epo-collective-orders",
+      "path": "upload/payment-order/collective-order-overview-epo",
+      "title": "EZAG Zahlungsaufträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Details einer Datei geöffnet; Back sichtbar, nicht bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Übernommener Dateikontext als aktive Suchkriterien, kein Suchformular in diesem Detailweg."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Zeilenmenü und Print sichtbar, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dateireferenz/Einreichzeit oben, Auftragstabelle und Summen unten."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Pending pro Auftrag sichtbar; Beziehung zum Error-Dateistatus nicht weiter aufgeklärt."
+        }
+      },
+      "patterns": [
+        "UX-001"
+      ],
+      "unvisitedTargets": [
+        "upload/payment-order/collective-order-detail-epo"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "standing-orders",
+      "path": "transfer/standing-orders/search-standing-orders",
+      "title": "Daueraufträge bearbeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Hauptmenüziel geöffnet; drei Varianten als Tabs."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt; aktive Kriterien und Sortierung bleiben sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Konto/Status/Währung/Sortierung sichtbar, unverändert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Betragsbereich sichtbar, nicht eingegeben."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print sichtbar, nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Kriterien auch im Nulltrefferzustand sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "No results were found that match your search options bereits beim Einstieg; kein selbst erzeugter Nulltreffer."
+        }
+      },
+      "patterns": [
+        "UX-001",
+        "UX-017"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Standing account transfers",
+        "UI-Tab Standing transfer orders in e-trading"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "payment-approval",
+      "path": "transfer/approve",
+      "title": "Freigeben",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Approve-Ziel geöffnet; Varianten als horizontale Tabs."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Suchoptionen eingeklappt, Tabelle bleibt sichtbar."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Eine Zeile markiert: sichtbares Häkchen und Approve selected aktiviert. Abwahl-API meldete fehlgeschlagen; danach Seite verlassen."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums-/Betragsbereiche vorhanden, nicht verändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Zeilenmenü sichtbar, nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve selected anfangs deaktiviert, nach Auswahl aktiv; nie betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Summen getrennt je Währung und Unterschrift je Auftrag."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Disabled→enabled der Folgeaktion durch reine Auswahl beobachtet; keine Finanzfreigabe."
+        }
+      },
+      "patterns": [
+        "UX-009",
+        "UX-009"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Account transfers",
+        "UI-Tab Standing orders",
+        "UI-Tab Standing account transfers",
+        "UI-Tab Fund subscriptions",
+        "UI-Tab Fund redemptions",
+        "UI-Tab SIC transfer",
+        "UI-Tab Fixed-term deposit"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "qr-templates",
+      "path": "transfer/qr-bill-generator/templates/overview",
+      "title": "QR-Vorlagen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Vorlagenziel geöffnet; Tabs für neue Rechnung/Vorlagen."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Search options und Filter list vorhanden, nicht bedient."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kopf-/Zeilencheckboxen, nicht bedient."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Nachricht und Betrag direkt in Tabellenzeilen editierbar dargestellt; unverändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Inlinefelder sichtbar; Speichersemantik unbekannt, daher unverändert."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Generate pro Zeile und Mehrfachaktion unten; nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Name/Empfänger/Nachricht/Währung/Betrag als Vorlagenkontext."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Erzeugung, Speicherung und Fehler nicht geprüft."
+        }
+      },
+      "patterns": [
+        "UX-020"
+      ],
+      "unvisitedTargets": [
+        "UI-Tab Generate new QR-bill"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "qr-generator",
+      "path": "transfer/qr-bill-generator/new/recipient",
+      "title": "Neue QR-Rechnung: Empfänger",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Generate QR-bill-Ziel geöffnet; erster Empfängerschritt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Empfängerkonto und optionaler Schalter für Adressanzeige."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Vorbefüllte Adresse sichtbar, nicht verändert."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Reset vorhanden, nicht bedient."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Next vorhanden, nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Erster Schritt verlangt Empfänger; spätere Schritte nicht belegt."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Validierung und Generierung nicht ausgelöst."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "UI-Aktion Next (Folgeschritt ungeprüft)"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "order-overview",
+      "path": "transfer/order-overview",
+      "title": "Auftragsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Order overview-Ziel geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Fälligkeitsdatum, Monatsende/alle offenen Aufträge, Search/Reset."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Konto und drei Fälligkeitsmodi sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datum mit Kalender vorhanden, unverändert."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print vorhanden, nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Verfügbares Guthaben, Aufträge und Saldo-Vorschau neben Typensummen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Negative Saldovorschau rot dargestellt; keine Prognosekorrektheit geprüft."
+        }
+      },
+      "patterns": [
+        "UX-021"
+      ],
+      "unvisitedTargets": [
+        "transfer/pending-orders/single-orders",
+        "transfer/standing-orders/standing-orders-executions",
+        "transfer/standing-orders/standing-etrading-executions",
+        "transfer/fund-orders/subscription-single",
+        "transfer/fund-orders/subscription-plan",
+        "transfer/crypto-orders/subscription-plan",
+        "transfer/crypto-orders/single-orders",
+        "transfer/fixed-term-deposit/order-overview",
+        "transfer/forex-orders/order-overview"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "payment-lists",
+      "path": "transfer/payment-list/overview",
+      "title": "Zahlungslisten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Payment list-Ziel geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Details und Overflow pro Liste, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Listennamen, Auftragszahl und Betrag bzw. mehrere Währungen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "transfer/payment-list/details"
+      ]
+    },
+    {
+      "area": "payments",
+      "id": "epo-approval",
+      "path": "upload/payment-order-approve/epo",
+      "title": "EZAG freigeben",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares Approve-Ziel unter EPO geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Suchoptionen eingeklappt und aktive Kontokriterien sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kopf-/Zeilencheckboxen nicht bedient; repräsentative Auswahlprobe in Zahlungsfreigabe."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve selected deaktiviert, Print und Zeilenaktionen; nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Dateireferenz, Unterschrift, Details und Währungssummen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Deaktivierte Folgeaktion bei fehlender Auswahl."
+        }
+      },
+      "patterns": [
+        "UX-009",
+        "UX-009"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "payments",
+      "id": "ebill-portal",
+      "path": "transfer/e-bill",
+      "title": "eBill Portal",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Sichtbares eBill-Ziel geöffnet; eingebettetes Portal mit eigener Navigation."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Sortier-/Filtercontrols im Posteingang vorhanden, nicht bedient."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Inbox/Archive als Tabs, keine Auswahlprobe."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine entsprechende Aufgabe gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Approve/More und Batch approval sichtbar; keine Aktion ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Informationskarte, Rechnungsstatus und eigene Portalstruktur."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene Mahnungs-/Fälligkeitskennzeichnung, keine Zustandsänderung."
+        }
+      },
+      "patterns": [
+        "UX-022"
+      ],
+      "unvisitedTargets": [
+        "services/e-bill-settings",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/payments",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/biller",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/standing-approvals",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/debit-standing-approvals",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/contact",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/settings/user",
+        "https://www.postfinance.ch/ap/ga/sx/html/ebill-portal/ui/settings/sustainability-co2",
+        "UI-Tab Archive",
+        "UI-Link Batch approval"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "documents",
+      "path": "download/documents",
+      "title": "Dokumentübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Ausklappbare Suchoptionen mit Search/Reset und aktiven Kriterien."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Eine ungelesene Zeile markiert; Download, Read und Archive wurden aktiv, Unread blieb deaktiviert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Kategorie, Typ, Beziehung, Produkt, Status und Datumsfelder vorhanden; nicht geändert."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilenmenü geöffnet: Read und Archive sichtbar; keine Aktion ausgewählt, kein Download."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Gelesen/ungelesen als Zeilenzustand und unterschiedliche deaktivierte Bulkaktionen."
+        }
+      },
+      "patterns": [
+        "UX-009",
+        "UX-011"
+      ],
+      "unvisitedTargets": [
+        "download/documents/accounts",
+        "download/documents/taxes",
+        "services/customer-hub/products",
+        "Dokument öffnen/Download (XML/PDF; keine personenbezogenen Datei-URLs übernommen)"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "document-order",
+      "path": "download/document-order",
+      "title": "Dokumente bestellen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Start order vorhanden; nicht gestartet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Hinweis zu direkt verfügbaren/älteren Dokumenten, Einzelbestellung, Postkosten und digitaler Zustellung sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "occ/KUNDENDOKUMENTENNACHBESTELLUNG_ERSTELLEN"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "document-enquiries",
+      "path": "download/enquiry",
+      "title": "Nachforschungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Zweizeilige Tabelle mit Details pro Vorgang; Details nicht geöffnet."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Active/Completed sowie gelesen/ungelesen vorhanden."
+        }
+      },
+      "patterns": [
+        "UX-027"
+      ],
+      "unvisitedTargets": [
+        "download/enquiry-detail"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "document-archive",
+      "path": "download/bin",
+      "title": "Archiv",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Gleiche Suchoptionen wie Dokumentübersicht."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums- und Auswahlfelder nur angesehen."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Unter aktiven Suchkriterien ausdrücklich keine passenden Dokumente; keine eigene Suchänderung ausgelöst."
+        }
+      },
+      "patterns": [
+        "UX-017"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/products"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "insurance-overview",
+      "path": "insurances/overview",
+      "title": "Versicherungsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print/Export vorhanden; nicht betätigt."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Details einer vorhandenen Versicherung geöffnet."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-029"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "insurance-detail",
+      "path": "insurances/life-insurance-detail",
+      "title": "Versicherungsdetails",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Investment-theme Edit öffnete separaten Änderungsentwurf; unverändert mit Cancel verlassen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Transfer, weitere Edit-Aktionen und Terminlink nur gesehen."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Kennwerte, Kapitalgrafik, thematische Abschnitte, Informationsbuttons und aufklappbare Details vorhanden."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-029",
+        "UX-023"
+      ],
+      "unvisitedTargets": [
+        "weitere Edit-Aktionen: Earnings protection, 3a limit, Additional payment",
+        "Transfer (Pillar 3a)",
+        "Details disclosure",
+        "contact/appointment-planner/create/topic",
+        "download/documents"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "investment-theme-edit",
+      "path": "insurances/life-insurance-detail/edit-investment-topic",
+      "title": "Anlagethema ändern",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Drei vergleichbare Radiokarten mit bestehender Auswahl; keine Auswahl geändert."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Cancel unverändert betätigt; Rückkehr aus dem Entwurf. Verwerfen geänderter Werte nicht geprüft."
+        },
+        "act": {
+          "status": "blocked",
+          "note": "Send request wegen Auftragsgrenze nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Pro Thema Kurzbeschreibung, Fondsname, Kosten und Find out more."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-024",
+        "UX-023"
+      ],
+      "unvisitedTargets": [
+        "Externe Fondsdetails für die drei angebotenen Themen"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "products",
+      "path": "offers",
+      "title": "Produkte",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Kreditkarten-Unterziel und Services-Menü geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Bestell-, Fremdwährungs-, Loyalty- und Multibanking-Einstiege nur sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Produktgruppen und Gutscheinkarussell vorhanden; Karussell in diesem Lauf nicht bedient."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-018"
+      ],
+      "unvisitedTargets": [
+        "offers/product-opening/invest",
+        "offers/product-opening/account",
+        "offers/product-opening/pension",
+        "offers/product-opening/financing",
+        "offers/digital-goods/buy",
+        "offers/digital-goods/show",
+        "offers/travel-funds",
+        "offers/loyalty-overview/active",
+        "offers/multibanking-opening",
+        "Products-Untermenü nicht zusätzlich geöffnet"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "credit-card-comparison",
+      "path": "offers/product-opening/credit-card",
+      "title": "Kreditkarten vergleichen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "Fünf Produktgruppentabs vorhanden; andere Tabs nicht bedient."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Order now und Find out more getrennt vorhanden; nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Zwei Angebote nebeneinander mit denselben Rubriken Bonus/Extras und Bedingungen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-024"
+      ],
+      "unvisitedTargets": [
+        "offers/apo-process",
+        "https://www.postfinance.ch/content/pfch/en/priv/pay/card/pfcreditcard1"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "customer-hub",
+      "path": "services/customer-hub",
+      "title": "Profil und Einstellungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Profile und Login/security exemplarisch geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aufgabenkacheln mit erklärenden Kurztexten; Administration als weitere Gruppe."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-018"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/notifications",
+        "services/customer-hub/products",
+        "services/customer-hub/cards",
+        "services/customer-hub/payments",
+        "services/customer-hub/investments",
+        "services/admin-hub/user-admin",
+        "services/admin-hub/power-of-attorney",
+        "services/admin-hub/deliveries",
+        "services/admin-hub/reports"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "profile",
+      "path": "services/customer-hub/profile",
+      "title": "Profil",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationship Auswahl vorhanden, nicht geändert."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Kontakt-, Adress- und Datenschutzeinstellungen mit Edit; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Freigaben, neue Vollmacht, Abmeldung und Aktivierung nur gesehen."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Show all erweitert Bedingungen von drei auf sechs Einträge; Button entfällt, kein Show less gesehen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Teilnahme-/Aktivierungsstatus vorhanden; kein Statuswechsel ausgelöst."
+        }
+      },
+      "patterns": [
+        "UX-014"
+      ],
+      "unvisitedTargets": [
+        "services/contact-data",
+        "occ/ADRESSE_MUTIEREN",
+        "services/approval-address-orders",
+        "services/pending-address-orders",
+        "services/power-of-attorney/pc/authorized-person",
+        "services/power-of-attorney/pc/approve",
+        "services/power-of-attorney/pc/pending-orders",
+        "occ/PHYSISCHES_RECHT_ERSTELLEN",
+        "occ/BONUSPROGRAMM_LOESCHEN",
+        "services/data-protection",
+        "Bedingungsdokumente (sechs; nicht geöffnet)",
+        "Activate purchase voucher"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "security",
+      "path": "services/customer-hub/security",
+      "title": "Login und Sicherheit",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Edit-Einstiege für Benutzername, Passwort, Login-Karte, Logout und Bestätigungen nur gesehen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Delete username und Deactivate voice recognition nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Aktuelle Einstellungen und aktive Bestätigungen werden angezeigt."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "services/change-username",
+        "services/change-password",
+        "services/card-registration",
+        "services/change-session-timeout",
+        "services/abs-settings",
+        "services/api-gateway/overview",
+        "services/customer-hub/cards"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "news",
+      "path": "services/my-notifications",
+      "title": "Meine Neuigkeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "New account document und New message führen zu Dokumenten bzw. Mailbox."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Ungelesenzähler und zwei nach Typ unterschiedene Einträge vorhanden; kein Gelesenwechsel geprüft."
+        }
+      },
+      "patterns": [
+        "UX-028"
+      ],
+      "unvisitedTargets": [
+        "New account document Link nicht direkt betätigt",
+        "New message Link nicht direkt betätigt"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "support",
+      "path": "contact-support",
+      "title": "Kontakt und Support",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "E-finance in a nutshell öffnet Einführung; Mailbox-Ziel separat über sichtbare URL geprüft."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Kontaktkanäle, Termin, Feedback und Zugangscode nur sichtbar; keine Kontaktaufnahme."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Einführung geöffnet, eine Seite weiter und geschlossen; Support breit und 390×844 visuell geprüft."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-025"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/cards/block",
+        "contact/appointment-planner/create/topic",
+        "https://www.postfinance.ch/efinsupportetradeen",
+        "https://www.postfinance.ch/efinebillnen",
+        "https://www.postfinance.ch/efinonboardingebillen",
+        "https://www.postfinance.ch/efinfeedbacken",
+        "Telefon-/E-Mail-Links nach Supportthema (Werte nicht übernommen)",
+        "Enter access code"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "support-tour",
+      "path": "contact-support (E-finance in a nutshell Dialog)",
+      "title": "Funktionsführung",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Next von Slide 1 zu Slide 2: aktiver Indikator wechselt, Back erscheint; Close kehrt zu Support zurück."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Fünf direkte Slidebuttons vorhanden, nicht einzeln bedient."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Welcome und Personal homepage angesehen; Dialog erneut bei 390×844 geöffnet und geschlossen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "UX-025"
+      ],
+      "unvisitedTargets": [
+        "Slides 3–5",
+        "Direkte Slidenavigation und Back"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "mailbox-unavailable",
+      "path": "contact/mailbox → error/overview",
+      "title": "Mailbox in Demo nicht verfügbar",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "Back angeboten, in dieser Probe nicht betätigt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Fehlermeldung und Rückweg breit visuell gesehen."
+        },
+        "status": {
+          "status": "blocked",
+          "note": "Expliziter Hinweis: Funktion wird in der Demo nicht unterstützt."
+        }
+      },
+      "patterns": [
+        "UX-008"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "service-orders",
+      "path": "services/order-overview",
+      "title": "Serviceaufträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Filter list mit synthetischem Nulltreffer bedient; Reset stellt Zeilen wieder her."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Nur lokaler Textfilter gefüllt; keine Auftragsdaten."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Statusbezogene Upload-/Detailsaktionen vorhanden; kein Upload/Freigabe."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Show more lines erhöht sechs auf zwölf Zeilen; weitere Schaltfläche bleibt."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Vorhandene Frist-/Freigabe-/Abbruchzustände gesehen; eigener Filter zeigt No results were found."
+        }
+      },
+      "patterns": [
+        "UX-026",
+        "UX-002",
+        "UX-027"
+      ],
+      "unvisitedTargets": [
+        "services/order-overview/detail",
+        "services/power-of-attorney/pc/document-upload",
+        "Search options nicht geöffnet"
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "accounts-documents",
+      "path": "download/documents/accounts",
+      "title": "Kontodokumente",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "id": "taxes-documents",
+      "path": "download/documents/taxes",
+      "title": "Steuerdokumente",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    }
+  ],
+  "limits": [
+    {
+      "area": "Home und Vermögen / Assets",
+      "limits": [
+        "Stand 20.11.2026. Eigener BrowserOS-neo-Tab; Screenshots visuell angesehen und nicht als Dateien gespeichert.",
+        "Desktop 1440×1000 CSS-Pixel; repräsentativ schmal 390×844: Home, Hilfe, Assets-Menü und Analyse. Keine allgemeine Responsive-Freigabe.",
+        "11 Ansichten visuell untersucht, neun weitere Zielgruppen nur inventarisiert; vollständige Reichweite bezieht sich ausschließlich auf sichtbare Demo-Navigation der besuchten Ansichten. Ungeöffnete Menüs können zusätzliche Ziele enthalten.",
+        "Keine Transaktion, Speicherung, Löschung, Vertragsaktion, Nachricht, Dateiauswahl oder Upload; unbekannte Persistenz nur angesehen.",
+        "Keine personenbezogenen Demo-Werte übernommen. Keine Aussagen über technische Implementierung, Berechnungskorrektheit oder allgemeine Barrierefreiheit.",
+        "Direkter Details-Aufruf lieferte keinen belastbaren Detailbeleg. Refs nach Breitenwechsel teils von Kopfzeile verdeckt; neu erfasst oder sichere Tastaturaktivierung statt verdecktem Klick."
+      ]
+    },
+    {
+      "area": "payments",
+      "limits": [
+        "Stand 20.11.2026; ausschliesslich sichtbare PostFinance-Demo-Reichweite.",
+        "16 Ansichten screenshot-visuell angesehen; Screenshots nicht als Dateien gespeichert, keine personenbezogenen Demo-Werte in Artefakte übernommen.",
+        "Desktop visuell geprüft. Repräsentativ 390×844 nur Übertrag: Auswahlbox statt Tabs, vertikale Kontofelder und Datums-/Abschlussbereich nach Scrollen.",
+        "Keine Transaktion, Finanzfreigabe, Speicherung, Löschung, Upload, Vertrag oder Nachricht ausgeführt.",
+        "Keine Funktions-, Responsive- oder Accessibility-Gesamtfreigabe.",
+        "Gleichartige Untertabs, Detailseiten und alle in unvisitedTargets aufgeführten Ziele bleiben ungeprüft; Navigationssichtbarkeit ist kein Funktionsbeleg.",
+        "Ältere 16 Patterns gezielt gelesen; neue Keys haben keine UX-ID und müssen zentral dedupliziert werden."
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "limits": [
+        "Stand 20.11.2026. Nur sichtbare Reichweite der PostFinance E-finance-Demo; kein Vollständigkeitsanspruch für Produktion.",
+        "Eigener BrowserOS-neo-Tab; Screenshots visuell angesehen, keine Bilddateien oder personenbezogenen Werte gespeichert.",
+        "Breit 1440×1000; schmal 390×844 nur Support und Einführung. Toolbilder wurden verkleinert dargestellt.",
+        "Keine Finanzaktion, Bestellung, Vertragsänderung, Speicherung, Löschung, Upload oder Nachricht ausgeführt.",
+        "Services-Menü: My news, Profile/settings, Chat, Contact/support sowie Language, View mode, Privacy Mode und Legal/Accessibility sichtbar. Chat, Ansichtscontrols und Legal nicht bedient. Kein Persistenzbeleg.",
+        "Dokumentfilter und Kategoriekurzwege nicht bedient. Nicht geöffnete Ziele stehen pro Ansicht; außerhalb geöffneter Hubs unbekannte Ziele sind nicht inventarisiert.",
+        "Keine vollständige Responsive-, Tastatur-, Screenreader-, Funktions- oder Accessibilityprüfung."
+      ]
+    }
+  ]
+}

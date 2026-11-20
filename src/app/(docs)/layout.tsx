@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import './docs.css'
+import './handbook.css'
 
 export const metadata: Metadata = {
   title: { default: 'Arve — Design-Systeme', template: '%s | Arve' },

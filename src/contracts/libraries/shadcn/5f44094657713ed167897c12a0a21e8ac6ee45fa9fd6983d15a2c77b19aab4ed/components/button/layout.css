@@ -1,0 +1,58 @@
+.figma-button {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  height: var(--figma-height-default);
+  gap: var(--figma-gap);
+  padding: 0 var(--figma-padding);
+  border: 0;
+  border-radius: var(--figma-radius);
+  background: var(--figma-primary);
+  color: var(--figma-primary-foreground);
+  font: var(--figma-font-weight) var(--figma-font-size) / var(--figma-line-height)
+    var(--figma-font), sans-serif;
+  white-space: nowrap;
+}
+
+.figma-button[data-size="xs"] {
+  height: var(--figma-height-xs);
+  padding-inline: var(--figma-padding-xs);
+}
+
+.figma-button[data-size="sm"] {
+  height: var(--figma-height-sm);
+}
+
+.figma-button:is([data-size="xs"], [data-size="sm"]) {
+  border-radius: var(--figma-radius-sm);
+  font-size: var(--figma-font-size-small);
+  line-height: var(--figma-line-height-small);
+}
+
+.figma-button[data-size="lg"] {
+  height: var(--figma-height-lg);
+}
+
+.figma-button[data-variant="outline"] {
+  box-shadow: inset 0 0 0 var(--figma-border-width) var(--figma-border);
+  background: var(--figma-background);
+  color: var(--figma-foreground);
+}
+
+.figma-button[data-state="hover"],
+button.figma-button:not([data-variant="outline"], :disabled):hover {
+  opacity: var(--figma-hover-opacity);
+}
+
+.figma-button[data-state="focus"],
+button.figma-button:not([data-variant="outline"], :disabled):focus-visible {
+  box-shadow:
+    inset 0 0 0 var(--figma-border-width) var(--figma-ring),
+    0 0 0 var(--figma-focus-spread) var(--figma-focus-shadow);
+}
+
+.figma-button[data-state="disabled"],
+button.figma-button:disabled {
+  opacity: var(--figma-disabled-opacity);
+}

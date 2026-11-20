@@ -1,0 +1,25 @@
+.form-layout-rework { min-width: 0; }
+.form-layout-switch { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0 0 1rem; border: 0; }
+.form-layout-switch legend { margin-bottom: .5rem; font-size: .875rem; font-weight: 600; }
+.form-layout-switch button { min-height: 44px; padding: .5rem 1rem; border: 1px solid var(--border, #d4d4d4); border-radius: .5rem; background: var(--card, #fff); color: var(--foreground, #171717); font: inherit; cursor: pointer; }
+.form-layout-switch button[aria-pressed="true"] { background: var(--primary, #171717); color: var(--primary-foreground, #fff); border-color: var(--primary, #171717); }
+.form-layout-switch button:focus-visible, .form-layout-field input:focus-visible { outline: 3px solid var(--ring, #737373); outline-offset: 3px; }
+.form-layout-example figure { margin: 0; }
+.form-layout-stage { container-type: inline-size; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--border, #d4d4d4); border-radius: .75rem; background: var(--card, #fff); color: var(--card-foreground, #171717); }
+.form-layout-form { max-width: 640px; }
+.form-layout-form h2 { margin: 0 0 1.5rem; }
+.form-layout-field { display: flex; flex-direction: column; gap: .5rem; }
+.form-layout-field label { font-weight: 600; }
+.form-layout-field input { width: 100%; box-sizing: border-box; min-width: 0; min-height: 44px; padding: .625rem .75rem; border: 1px solid var(--border, #a3a3a3); border-radius: .5rem; background: var(--background, #fff); color: inherit; font: inherit; }
+.form-layout-field input[aria-invalid="true"] { border: 2px solid var(--destructive, #b91c1c); }
+.form-layout-field p { margin: 0; font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+.form-layout-help { color: var(--muted-foreground, #666); }
+.form-layout-error { color: var(--destructive, #b91c1c); font-weight: 500; }
+.form-layout-actions { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; margin-top: 1.5rem; }
+.form-layout-actions span { display: block; padding: .625rem 1rem; border: 1px solid var(--border, #d4d4d4); border-radius: .5rem; font-weight: 500; text-align: center; line-height: 1.5; overflow-wrap: anywhere; }
+.form-layout-primary { background: var(--primary, #171717); color: var(--primary-foreground, #fff); }
+.form-layout-secondary { background: var(--card, #fff); }
+.form-layout-example figcaption { margin-top: .75rem; color: var(--muted-foreground, #666); font-size: .875rem; line-height: 1.5; }
+.form-layout-rework > section + section, .form-layout-rework > details { margin-top: 2rem; }
+.form-layout-rework details summary { cursor: pointer; font-weight: 600; }
+@container (min-width: 640px) { .form-layout-actions { flex-direction: row; align-items: flex-start; } }

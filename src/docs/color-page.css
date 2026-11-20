@@ -1,0 +1,40 @@
+.article:has(> .color-page) > h1 { font-size:36px; letter-spacing:-.04em; }
+.article:has(> .color-page) > .lead { font-size:17px; max-width:58ch; margin-bottom:22px; }
+.color-page { max-width:1040px; }
+.color-page .cp-caption { font-size:12px; color:var(--muted-foreground); margin:0 0 16px; line-height:1.6; }
+.cp-pair { padding:22px 0; border-top:1px solid var(--border); }
+.cp-use { display:grid;grid-template-columns:190px 1fr; gap:20px; margin-bottom:15px; }
+.article .cp-use h2 { font-size:18px; line-height:1.4; margin:0; letter-spacing:-.02em; }
+.article .cp-use p { margin:0; font-size:14px; line-height:1.6;max-width:60ch; }
+.cp-variants { display:grid;grid-template-columns:1fr 1fr;gap:20px; }
+.cp-variant { min-width:0; }
+.cp-theme-label { display:block;font-size:12px;font-weight:600;margin-bottom:7px; }
+.cp-sample { min-height:86px;display:flex;align-items:center;padding:20px 24px;border:1px solid var(--border);border-radius:6px;font-size:17px;line-height:1.5; }
+.cp-sample-0 { font-weight:600; }
+.cp-sample-1 { justify-content:center;font-size:14px;font-weight:600; }
+.cp-sample-2 { font-size:14px; }
+.cp-values { display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font-size:12px; }
+.cp-values code,.cp-role code { font-size:11px;background:transparent;padding:0; }
+.color-page .cp-role { margin:10px 0 0; font-size:12px; }
+.cp-rules { margin-top:32px;max-width:72ch; }
+.cp-rules .handbook-block { margin-block:30px; }
+.cp-rules .rich-text h2 { font-size:23px;letter-spacing:-.02em;margin:0 0 15px; }
+.cp-rules .rich-text p { font-size:15px;line-height:1.75; }
+.article .cp-next { display:inline-block;margin:0 0 30px;font-size:14px; }
+.cp-evidence { border-top:1px solid var(--border);padding-block:18px;font-size:14px;max-width:76ch; }
+.cp-evidence summary { cursor:pointer;font-weight:500; }
+.cp-evidence .rich-text h2 { font-size:20px; }
+.cp-evidence .rich-text p { font-size:14px;line-height:1.7; }
+.cp-revision { overflow-wrap:anywhere; }
+@media(max-width:640px) {
+ .article:has(> .color-page) > h1 {font-size:30px;}
+ .article:has(> .color-page) > .lead {font-size:16px;margin-bottom:16px;}
+ .cp-use { display:block; }
+ .article .cp-use h2 {margin-bottom:5px;}
+ .cp-variants {gap:12px;}
+ .cp-sample {min-height:100px;padding:13px 12px;font-size:15px;}
+ .cp-sample-1,.cp-sample-2 {font-size:13px;}
+ .cp-values {font-size:12px;}
+ .cp-values code {font-size:12px;line-height:1.6;}
+ .cp-pair {padding:18px 0;}
+}

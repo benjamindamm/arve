@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Button",
+          "description": "Contract for a labelled native action button. The component has no stored value.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Nonempty visible label that names the requested action."
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Disables the native button and suppresses activation.",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"outline\""
+              },
+              "description": "Visual emphasis.",
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"xs\" | \"sm\" | \"default\" | \"lg\""
+              },
+              "description": "Visual size. The current Outline proof covers default size.",
+              "default": "\"default\""
+            }
+          ],
+          "events": [
+            {
+              "name": "click",
+              "type": {
+                "text": "MouseEvent"
+              },
+              "description": "Native click from pointer, keyboard or assistive activation. The component adds no application payload."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.lle-rework{--lle-line:var(--border,#d8dde3);color:var(--foreground,#18212c)}
+.lle-rework>section{margin-bottom:2.25rem}.lle-rework h2{margin-top:0}.lle-rework p{line-height:1.55}
+.lle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.25rem}
+.lle-card{min-width:0;border:1px solid var(--lle-line);border-radius:12px;overflow:hidden;background:var(--background,#fff)}
+.lle-card header{display:flex;align-items:center;gap:.65rem;padding:.9rem 1rem;border-bottom:1px solid var(--lle-line)}
+.lle-card header h3{margin:0;font-size:1rem;line-height:1.4}.lle-number{font-size:.8rem;font-variant-numeric:tabular-nums;color:var(--muted-foreground,#526071)}
+.lle-message{padding:1.15rem;min-height:15rem}.lle-message strong{display:block;font-size:1.05rem}.lle-message p{margin:.7rem 0 0}
+.lle-action{display:flex;flex-direction:column;gap:.3rem;padding-top:.6rem}.lle-action small,.lle-card footer small{font-size:.75rem;color:var(--muted-foreground,#526071)}
+.lle-action>span{font-weight:600}.lle-error .lle-message{border-inline-start:4px solid #a32a2a}.lle-unknown .lle-message{border-inline-start:4px solid #916017}.lle-unavailable .lle-message{border-inline-start:4px solid #64748b}
+.lle-card footer{border-top:1px dashed var(--lle-line);padding:.85rem 1rem;background:var(--muted,#f4f6f8)}.lle-card footer p{margin:.3rem 0 0;font-size:.875rem}
+.lle-skeleton{display:flex;gap:.4rem;margin-bottom:.85rem}.lle-skeleton span{width:28%;height:.45rem;border-radius:3px;background:var(--lle-line)}
+.lle-boundary{font-size:.875rem;color:var(--muted-foreground,#526071)}
+.lle-compare{margin:0;border-top:1px solid var(--lle-line)}.lle-compare>div{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1rem;border-bottom:1px solid var(--lle-line);padding:.85rem 0}.lle-compare dt{font-weight:600}.lle-compare dd{margin:0;line-height:1.5}.lle-compare dd span{display:block;color:var(--muted-foreground,#526071);font-size:.875rem}
+.lle-rework details{border-top:1px solid var(--lle-line);padding:1rem 0}.lle-rework summary{cursor:pointer;font-weight:600}.lle-rework details>.payload-richtext{padding-top:1rem}
+@media(max-width:650px){.lle-grid{grid-template-columns:minmax(0,1fr)}.lle-message{min-height:0}.lle-compare>div{grid-template-columns:minmax(0,1fr);gap:.3rem}.lle-message,.lle-card header{padding:1rem}.lle-card{overflow-wrap:anywhere}}

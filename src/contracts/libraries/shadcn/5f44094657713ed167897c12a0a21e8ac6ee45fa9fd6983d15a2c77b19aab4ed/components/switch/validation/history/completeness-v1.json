@@ -1,0 +1,141 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:Switch",
+  "componentSha256": "8a7e9c68e0279684e230bd7ecf21cb69f99e308fc2c3f3f785040e49239d3d85",
+  "profile": "interactive-control/1",
+  "profileSha256": "a10eafc9bd0eb4c06d798ec676145f0b65141fdbb970cb2c3ff7e8aaeb67218e",
+  "requirements": {
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "6bbc5dcb7b22fe6452ab9cea3541dd3e2489b004f98d2fc4187b864326cb5f08",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/modules/0/declarations/0/members/0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "6bbc5dcb7b22fe6452ab9cea3541dd3e2489b004f98d2fc4187b864326cb5f08",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/modules/0/declarations/0/events/0"
+          }
+        }
+      ]
+    },
+    "VIS-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "0784b7065fc477e5376d4a8d7440d18985f0aaf4e64d9bd5a1bf1d89656ec3a1",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/switch/width"
+          }
+        }
+      ]
+    },
+    "VIS-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "461fc920ebc4bd918894810400e96e73bcb9c2b915d9f5f185fb3c8d32c4d37e",
+          "selector": {
+            "kind": "lines",
+            "value": "25:56"
+          }
+        }
+      ]
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "cee3042b00cd295b8d55acb1b06a5d72ff3c6b58bc5258e6c4c1d44995ebd851",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:state[@id=\"switchControl\"]/@initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "cee3042b00cd295b8d55acb1b06a5d72ff3c6b58bc5258e6c4c1d44995ebd851",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[@event=\"NATIVE_CHANGE\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "cee3042b00cd295b8d55acb1b06a5d72ff3c6b58bc5258e6c4c1d44995ebd851",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "60e8589ca1de05ac1b194bdde0832812d4fafdc6dc6f4d5bd49c613e743d6254",
+          "selector": {
+            "kind": "xpath",
+            "value": "//input[@role=\"switch\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "60e8589ca1de05ac1b194bdde0832812d4fafdc6dc6f4d5bd49c613e743d6254",
+          "selector": {
+            "kind": "xpath",
+            "value": "//label[@for=\"switch-setting\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "cee3042b00cd295b8d55acb1b06a5d72ff3c6b58bc5258e6c4c1d44995ebd851",
+          "selector": {
+            "kind": "xpath",
+            "value": "//s:transition[contains(@event,\"FOCUS_IN\")]"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "42bdf9d1139b821627b7a204006cf98384060b3b7caf7008a391ef2065200237",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "/purpose"
+          }
+        }
+      ]
+    }
+  }
+}

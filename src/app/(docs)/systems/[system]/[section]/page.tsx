@@ -1,15 +1,18 @@
+import { loadPageRework } from '../../../../../docs/page-reworks/registry'
+import { ColorPage } from '../../../../../docs/color-page'
+import { FoundationsOverview } from '../../../../../docs/foundations-overview'
+import { ContentOutline } from '../../../../../docs/content-outline'
+import { ContentLayoutExample } from '../../../../../docs/content-layout-example'
+import { DesignResourceLinks } from '../../../../../docs/design-resource-links'
 import { readTemplate } from '../../../../../docs/page-templates'
 import { TemplateContent } from '../../../../../docs/template-content'
-import type { CSSProperties } from 'react'
 import Link from 'next/link'
-import { LayoutExamples } from '../../../../../docs/layout-examples'
 import { notFound } from 'next/navigation'
 import { readSystem } from '../../../../../docs/systems'
 import { Content } from '../../../../../docs/content'
 import { readPublishedSection } from '../../../../../docs/component-pages'
 import { DocumentationNav } from '../../../../../docs/documentation-nav'
 import { documentationTree } from '../../../../../docs/published-documentation'
-import { colors, spacing } from '../../../../../docs/shadcn-foundations'
 
 const related: Record<string, { title: string; href: string }[]> = {
   grundlagen: [
@@ -45,6 +48,14 @@ export default async function SectionPage({ params }: { params: Promise<{ system
   const [page, documentation, designSystem] = await Promise.all([readPublishedSection(system, section), documentationTree(system), readSystem(system)])
   if (!page || !documentation || !designSystem) notFound()
   const path = '/systems/' + system + '/' + section
+  const linkedPaths = new Set<string>()
+  const collectLinks = (node: unknown) => {
+    if (!node || typeof node !== 'object') return
+    const value = node as { type?: string; fields?: { url?: string }; children?: unknown[] }
+    if (value.type === 'link' && value.fields?.url) linkedPaths.add(value.fields.url)
+    value.children?.forEach(collectLinks)
+  }
+  page.content?.forEach((block) => { if (block.blockType === 'text') collectLinks(block.body.root) })
   const find = (entries: typeof documentation.tree): (typeof documentation.tree)[number] | undefined => {
     for (const entry of entries) {
       if (entry.path === path) return entry
@@ -52,49 +63,41 @@ export default async function SectionPage({ params }: { params: Promise<{ system
       if (child) return child
     }
   }
-  const children = find(documentation.tree)?.children?.filter(({ kind }) => kind !== 'layout-example') ?? []
+  const children = find(documentation.tree)?.children?.filter(({ kind, path }) => kind !== 'layout-example' && !linkedPaths.has(path)) ?? []
   const shadcn = system === 'shadcn'
+  const relatedEntries = shadcn ? (related[section] ?? []).filter(({ href }) => !linkedPaths.has(href)) : []
+
+  const foundationsOverview = shadcn && section === 'grundlagen'
+  const colorPage = shadcn && section === 'farben'
+  const ReworkedPage = shadcn ? await loadPageRework(section) : undefined
 
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={path} />
       <article className="article">
         <h1>{page.title}</h1>
-        {page.summary && <p>{page.summary}</p>}
-        {shadcn && section === 'farben' && (
-          <ul className="token-grid" aria-label="Farb-Tokens der Referenz">
-            {colors.map(([token, use]) => (
-              <li key={token}>
-                <span className="token-swatch" style={{ backgroundColor: 'var(--' + token + ')' }} />
-                <code>--{token}</code><small>{use}</small>
-              </li>
-            ))}
-          </ul>
-        )}
-        {shadcn && section === 'layout' && (
-          <>
-            <div className="grid-example" role="img" aria-label="Responsives Raster mit vier, acht oder zwölf Spalten">
-              {Array.from({ length: 12 }, (_, index) => <span key={index} aria-hidden="true" />)}
-            </div>
-            <ul className="spacing-scale" aria-label="Abstandsskala">
-              {spacing.map((size) => <li key={size}><span style={{ '--size': size + 'px' } as CSSProperties} />{size} px</li>)}
-            </ul>
-          </>
-        )}
+        {page.summary && <p className="lead">{page.summary}</p>}
+        {ReworkedPage ? <ReworkedPage content={page.content} /> : foundationsOverview ? <FoundationsOverview content={page.content} /> : colorPage ? <ColorPage content={page.content} /> : <>
+        <ContentOutline content={page.content} />
         <TemplateContent sections={readTemplate(page.pageType, page.template)} />
-        <Content blocks={page?.content} />
-        {children.length > 0 && (
+        <DesignResourceLinks system={system} section={section} />
+        {shadcn && <ContentLayoutExample section={section} />}
+        {shadcn && section.startsWith('content-layout-') ? <>
+          <Content blocks={page.content?.slice(0, -1)} />
+          <details><summary>Quelle und Stand</summary><Content blocks={page.content?.slice(-1)} /></details>
+        </> : <Content blocks={page?.content} />}
+        </>}
+        {!foundationsOverview && children.length > 0 && (
           <ul className="component-index">
             {children.map((child) => (
               <li key={child.slug}><Link href={child.path}><strong>{child.title}</strong>{child.summary && ' · ' + child.summary}</Link></li>
             ))}
           </ul>
         )}
-        {shadcn && section === 'layout' && <LayoutExamples />}
-        {shadcn && related[section] && (
+        {!foundationsOverview && relatedEntries.length > 0 && (
           <section className="component-section" aria-labelledby="weiterlesen">
             <h2 id="weiterlesen">Weiterlesen</h2>
-            <ul>{related[section].map(({ title, href }) => <li key={href}><Link href={href}>{title}</Link></li>)}</ul>
+            <ul>{relatedEntries.map(({ title, href }) => <li key={href}><Link href={href}>{title}</Link></li>)}</ul>
           </section>
         )}
       </article>

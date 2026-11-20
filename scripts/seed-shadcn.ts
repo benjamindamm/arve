@@ -1,6 +1,9 @@
 import { getPayload } from 'payload'
 import config from '../src/payload.config'
-import button from '../src/contracts/exports/shadcn/button/fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d.json'
+import { getShadcnContract } from '../src/contracts/catalog'
+
+const button = getShadcnContract('button')
+if (!button) throw new Error('Missing Button contract')
 
 const payload = await getPayload({ config })
 try {

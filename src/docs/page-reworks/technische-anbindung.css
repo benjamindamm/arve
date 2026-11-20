@@ -1,0 +1,17 @@
+.technical-rework{min-width:0;display:grid;gap:1.5rem;line-height:1.65}
+.technical-rework h2{font-size:1.3rem;line-height:1.35;margin:0 0 .8rem}
+.technical-rework h3{font-size:1.05rem;line-height:1.4;margin:.6rem 0}
+.technical-rework p{margin:.6rem 0 0}
+.technical-rework .handbook-block{margin:0}
+.ta-example{border:1px solid var(--border,#d6dbe1);border-radius:.75rem;padding:1.3rem;background:var(--muted,#f3f5f7)}
+.ta-example blockquote{margin:0;padding:.4rem 0 .4rem 1rem;border-left:3px solid currentColor;font-size:1.1rem}
+.ta-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.ta-flow li{min-width:0;padding:1rem;border:1px solid var(--border,#d6dbe1);border-radius:.65rem}
+.ta-number{display:inline-grid;place-items:center;width:1.8rem;height:1.8rem;border:1px solid currentColor;border-radius:50%;font-weight:600}
+.ta-flow code{display:block;font-size:.82rem;overflow-wrap:anywhere;white-space:pre-wrap}
+.ta-details{min-width:0;border-top:1px solid var(--border,#d6dbe1);padding-top:1rem}
+.ta-details summary{cursor:pointer;font-weight:600;line-height:1.5}
+.ta-details[open] summary{margin-bottom:1rem}
+.ta-details pre{max-width:100%;overflow:auto;background:var(--muted,#f3f5f7);padding:1rem;border:1px solid var(--border,#d6dbe1);border-radius:.5rem;font-size:.82rem;line-height:1.6;tab-size:2}
+.ta-details p{overflow-wrap:anywhere}
+@media(max-width:760px){.ta-flow{grid-template-columns:1fr}.ta-example{padding:1rem}.ta-flow li{padding:1rem}.technical-rework{gap:1.25rem}}

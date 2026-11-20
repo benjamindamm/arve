@@ -1,0 +1,1247 @@
+{
+  "area": "documents-insurance-products-services",
+  "views": [
+    {
+      "id": "documents",
+      "path": "download/documents",
+      "title": "Dokumentübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Ausklappbare Suchoptionen mit Search/Reset und aktiven Kriterien."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Eine ungelesene Zeile markiert; Download, Read und Archive wurden aktiv, Unread blieb deaktiviert."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Kategorie, Typ, Beziehung, Produkt, Status und Datumsfelder vorhanden; nicht geändert."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilenmenü geöffnet: Read und Archive sichtbar; keine Aktion ausgewählt, kein Download."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Gelesen/ungelesen als Zeilenzustand und unterschiedliche deaktivierte Bulkaktionen."
+        }
+      },
+      "patterns": [
+        "selection-dependent-actions",
+        "row-action-menu"
+      ],
+      "unvisitedTargets": [
+        "download/documents/accounts",
+        "download/documents/taxes",
+        "services/customer-hub/products",
+        "Dokument öffnen/Download (XML/PDF; keine personenbezogenen Datei-URLs übernommen)"
+      ]
+    },
+    {
+      "id": "document-order",
+      "path": "download/document-order",
+      "title": "Dokumente bestellen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Start order vorhanden; nicht gestartet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Hinweis zu direkt verfügbaren/älteren Dokumenten, Einzelbestellung, Postkosten und digitaler Zustellung sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "occ/KUNDENDOKUMENTENNACHBESTELLUNG_ERSTELLEN"
+      ]
+    },
+    {
+      "id": "document-enquiries",
+      "path": "download/enquiry",
+      "title": "Nachforschungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Zweizeilige Tabelle mit Details pro Vorgang; Details nicht geöffnet."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Active/Completed sowie gelesen/ungelesen vorhanden."
+        }
+      },
+      "patterns": [
+        "status-with-required-next-action"
+      ],
+      "unvisitedTargets": [
+        "download/enquiry-detail"
+      ]
+    },
+    {
+      "id": "document-archive",
+      "path": "download/bin",
+      "title": "Archiv",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Gleiche Suchoptionen wie Dokumentübersicht."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Datums- und Auswahlfelder nur angesehen."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Unter aktiven Suchkriterien ausdrücklich keine passenden Dokumente; keine eigene Suchänderung ausgelöst."
+        }
+      },
+      "patterns": [
+        "empty-filter-result"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/products"
+      ]
+    },
+    {
+      "id": "insurance-overview",
+      "path": "insurances/overview",
+      "title": "Versicherungsübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print/Export vorhanden; nicht betätigt."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Details einer vorhandenen Versicherung geöffnet."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "object-detail-navigation"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "insurance-detail",
+      "path": "insurances/life-insurance-detail",
+      "title": "Versicherungsdetails",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Investment-theme Edit öffnete separaten Änderungsentwurf; unverändert mit Cancel verlassen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Transfer, weitere Edit-Aktionen und Terminlink nur gesehen."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Kennwerte, Kapitalgrafik, thematische Abschnitte, Informationsbuttons und aufklappbare Details vorhanden."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "object-detail-navigation",
+        "edit-entry-and-cancel"
+      ],
+      "unvisitedTargets": [
+        "weitere Edit-Aktionen: Earnings protection, 3a limit, Additional payment",
+        "Transfer (Pillar 3a)",
+        "Details disclosure",
+        "contact/appointment-planner/create/topic",
+        "download/documents"
+      ]
+    },
+    {
+      "id": "investment-theme-edit",
+      "path": "insurances/life-insurance-detail/edit-investment-topic",
+      "title": "Anlagethema ändern",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Drei vergleichbare Radiokarten mit bestehender Auswahl; keine Auswahl geändert."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "tested",
+          "note": "Cancel unverändert betätigt; Rückkehr aus dem Entwurf. Verwerfen geänderter Werte nicht geprüft."
+        },
+        "act": {
+          "status": "blocked",
+          "note": "Send request wegen Auftragsgrenze nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Pro Thema Kurzbeschreibung, Fondsname, Kosten und Find out more."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "compare-before-action",
+        "edit-entry-and-cancel"
+      ],
+      "unvisitedTargets": [
+        "Externe Fondsdetails für die drei angebotenen Themen"
+      ]
+    },
+    {
+      "id": "products",
+      "path": "offers",
+      "title": "Produkte",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Kreditkarten-Unterziel und Services-Menü geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Bestell-, Fremdwährungs-, Loyalty- und Multibanking-Einstiege nur sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Produktgruppen und Gutscheinkarussell vorhanden; Karussell in diesem Lauf nicht bedient."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "product-category-navigation"
+      ],
+      "unvisitedTargets": [
+        "offers/product-opening/invest",
+        "offers/product-opening/account",
+        "offers/product-opening/pension",
+        "offers/product-opening/financing",
+        "offers/digital-goods/buy",
+        "offers/digital-goods/show",
+        "offers/travel-funds",
+        "offers/loyalty-overview/active",
+        "offers/multibanking-opening",
+        "Products-Untermenü nicht zusätzlich geöffnet"
+      ]
+    },
+    {
+      "id": "credit-card-comparison",
+      "path": "offers/product-opening/credit-card",
+      "title": "Kreditkarten vergleichen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "Fünf Produktgruppentabs vorhanden; andere Tabs nicht bedient."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Order now und Find out more getrennt vorhanden; nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Zwei Angebote nebeneinander mit denselben Rubriken Bonus/Extras und Bedingungen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "compare-before-action"
+      ],
+      "unvisitedTargets": [
+        "offers/apo-process",
+        "https://www.postfinance.ch/content/pfch/en/priv/pay/card/pfcreditcard1"
+      ]
+    },
+    {
+      "id": "customer-hub",
+      "path": "services/customer-hub",
+      "title": "Profil und Einstellungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Profile und Login/security exemplarisch geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aufgabenkacheln mit erklärenden Kurztexten; Administration als weitere Gruppe."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "product-category-navigation"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/notifications",
+        "services/customer-hub/products",
+        "services/customer-hub/cards",
+        "services/customer-hub/payments",
+        "services/customer-hub/investments",
+        "services/admin-hub/user-admin",
+        "services/admin-hub/power-of-attorney",
+        "services/admin-hub/deliveries",
+        "services/admin-hub/reports"
+      ]
+    },
+    {
+      "id": "profile",
+      "path": "services/customer-hub/profile",
+      "title": "Profil",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationship Auswahl vorhanden, nicht geändert."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Kontakt-, Adress- und Datenschutzeinstellungen mit Edit; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Freigaben, neue Vollmacht, Abmeldung und Aktivierung nur gesehen."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Show all erweitert Bedingungen von drei auf sechs Einträge; Button entfällt, kein Show less gesehen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Teilnahme-/Aktivierungsstatus vorhanden; kein Statuswechsel ausgelöst."
+        }
+      },
+      "patterns": [
+        "show-more-disclosure"
+      ],
+      "unvisitedTargets": [
+        "services/contact-data",
+        "occ/ADRESSE_MUTIEREN",
+        "services/approval-address-orders",
+        "services/pending-address-orders",
+        "services/power-of-attorney/pc/authorized-person",
+        "services/power-of-attorney/pc/approve",
+        "services/power-of-attorney/pc/pending-orders",
+        "occ/PHYSISCHES_RECHT_ERSTELLEN",
+        "occ/BONUSPROGRAMM_LOESCHEN",
+        "services/data-protection",
+        "Bedingungsdokumente (sechs; nicht geöffnet)",
+        "Activate purchase voucher"
+      ]
+    },
+    {
+      "id": "security",
+      "path": "services/customer-hub/security",
+      "title": "Login und Sicherheit",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Edit-Einstiege für Benutzername, Passwort, Login-Karte, Logout und Bestätigungen nur gesehen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Delete username und Deactivate voice recognition nicht betätigt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Aktuelle Einstellungen und aktive Bestätigungen werden angezeigt."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "services/change-username",
+        "services/change-password",
+        "services/card-registration",
+        "services/change-session-timeout",
+        "services/abs-settings",
+        "services/api-gateway/overview",
+        "services/customer-hub/cards"
+      ]
+    },
+    {
+      "id": "news",
+      "path": "services/my-notifications",
+      "title": "Meine Neuigkeiten",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "New account document und New message führen zu Dokumenten bzw. Mailbox."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Inhalt und Anordnung visuell angesehen; fachliche Richtigkeit nicht geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Ungelesenzähler und zwei nach Typ unterschiedene Einträge vorhanden; kein Gelesenwechsel geprüft."
+        }
+      },
+      "patterns": [
+        "notification-to-task"
+      ],
+      "unvisitedTargets": [
+        "New account document Link nicht direkt betätigt",
+        "New message Link nicht direkt betätigt"
+      ]
+    },
+    {
+      "id": "support",
+      "path": "contact-support",
+      "title": "Kontakt und Support",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "E-finance in a nutshell öffnet Einführung; Mailbox-Ziel separat über sichtbare URL geprüft."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Kontaktkanäle, Termin, Feedback und Zugangscode nur sichtbar; keine Kontaktaufnahme."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Einführung geöffnet, eine Seite weiter und geschlossen; Support breit und 390×844 visuell geprüft."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "guided-feature-tour"
+      ],
+      "unvisitedTargets": [
+        "services/customer-hub/cards/block",
+        "contact/appointment-planner/create/topic",
+        "https://www.postfinance.ch/efinsupportetradeen",
+        "https://www.postfinance.ch/efinebillnen",
+        "https://www.postfinance.ch/efinonboardingebillen",
+        "https://www.postfinance.ch/efinfeedbacken",
+        "Telefon-/E-Mail-Links nach Supportthema (Werte nicht übernommen)",
+        "Enter access code"
+      ]
+    },
+    {
+      "id": "support-tour",
+      "path": "contact-support (E-finance in a nutshell Dialog)",
+      "title": "Funktionsführung",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Next von Slide 1 zu Slide 2: aktiver Indikator wechselt, Back erscheint; Close kehrt zu Support zurück."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Fünf direkte Slidebuttons vorhanden, nicht einzeln bedient."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Welcome und Personal homepage angesehen; Dialog erneut bei 390×844 geöffnet und geschlossen."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        }
+      },
+      "patterns": [
+        "guided-feature-tour"
+      ],
+      "unvisitedTargets": [
+        "Slides 3–5",
+        "Direkte Slidenavigation und Back"
+      ]
+    },
+    {
+      "id": "mailbox-unavailable",
+      "path": "contact/mailbox → error/overview",
+      "title": "Mailbox in Demo nicht verfügbar",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "visible",
+          "note": "Back angeboten, in dieser Probe nicht betätigt."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Fehlermeldung und Rückweg breit visuell gesehen."
+        },
+        "status": {
+          "status": "blocked",
+          "note": "Expliziter Hinweis: Funktion wird in der Demo nicht unterstützt."
+        }
+      },
+      "patterns": [
+        "unavailable-state"
+      ],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "service-orders",
+      "path": "services/order-overview",
+      "title": "Serviceaufträge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Über sichtbaren Einstieg oder dessen belegte URL geöffnet."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Filter list mit synthetischem Nulltreffer bedient; Reset stellt Zeilen wieder her."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Nur lokaler Textfilter gefüllt; keine Auftragsdaten."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In dieser Ansicht keine entsprechende Funktion beobachtet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Statusbezogene Upload-/Detailsaktionen vorhanden; kein Upload/Freigabe."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Show more lines erhöht sechs auf zwölf Zeilen; weitere Schaltfläche bleibt."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Vorhandene Frist-/Freigabe-/Abbruchzustände gesehen; eigener Filter zeigt No results were found."
+        }
+      },
+      "patterns": [
+        "load-more-rows",
+        "local-list-filter",
+        "status-with-required-next-action"
+      ],
+      "unvisitedTargets": [
+        "services/order-overview/detail",
+        "services/power-of-attorney/pc/document-upload",
+        "Search options nicht geöffnet"
+      ]
+    },
+    {
+      "id": "accounts-documents",
+      "path": "download/documents/accounts",
+      "title": "Kontodokumente",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "taxes-documents",
+      "path": "download/documents/taxes",
+      "title": "Steuerdokumente",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als Navigationsziel erfasst; Zielansicht nicht geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    }
+  ],
+  "patterns": [
+    {
+      "key": "selection-dependent-actions",
+      "title": "Gemeinsame Aktionen nach Auswahl anbieten",
+      "category": "Auswählen",
+      "tags": [
+        "batch-selection"
+      ],
+      "task": "Dokumente für eine gemeinsame Folgeaktion markieren.",
+      "flow": [
+        "Zeile auswählen",
+        "Passende Bulkaktionen werden aktiv",
+        "Zeilenmenü ansehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "download/documents"
+      ],
+      "limits": [
+        "Variante von batch-selection; kein eigener Bulkabschluss.",
+        "Nur eine ungelesene Zeile; kein gemischter oder seitenübergreifender Auswahlumfang."
+      ]
+    },
+    {
+      "key": "row-action-menu",
+      "title": "Weitere Aktionen am Objekt finden",
+      "category": "Handeln",
+      "tags": [],
+      "task": "Dokumentspezifische Aktionen finden.",
+      "flow": [
+        "Overflow öffnen",
+        "Read/Archive im Zeilenkontext sehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "download/documents"
+      ],
+      "limits": [
+        "Keine Aktion ausgeführt; keine Bestätigung oder Rücknahme geprüft."
+      ]
+    },
+    {
+      "key": "edit-entry-and-cancel",
+      "title": "Änderungseinstieg unverändert verlassen",
+      "category": "Bearbeiten",
+      "tags": [],
+      "task": "Mögliche Vertragsänderung ansehen und verlassen.",
+      "flow": [
+        "Detail öffnen",
+        "Edit Investment theme",
+        "Entwurf mit bestehender Auswahl ansehen",
+        "Cancel"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "insurances/life-insurance-detail",
+        "insurances/life-insurance-detail/edit-investment-topic"
+      ],
+      "limits": [
+        "Keine Wahl geändert; kein Beleg für Verwerfen geänderter Werte oder Speichersemantik."
+      ]
+    },
+    {
+      "key": "compare-before-action",
+      "title": "Alternativen vor einer Aktion vergleichen",
+      "category": "Verstehen",
+      "tags": [
+        "comparison"
+      ],
+      "task": "Angebote anhand gleicher Kriterien vergleichen.",
+      "flow": [
+        "Alternativen nebeneinander lesen",
+        "Bedingungen oder Kosten vergleichen",
+        "Informations- oder Abschlussaktion getrennt erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "offers/product-opening/credit-card",
+        "insurances/life-insurance-detail/edit-investment-topic"
+      ],
+      "limits": [
+        "Nur sichtbare Darstellung; kein Wechsel oder Abschluss.",
+        "Nur breit; keine Entscheidungsqualität oder fachliche Richtigkeit geprüft."
+      ]
+    },
+    {
+      "key": "show-more-disclosure",
+      "title": "Weitere Bedingungen anzeigen",
+      "category": "Verstehen",
+      "tags": [],
+      "task": "Zunächst verkürzte Dokumentliste vollständig lesen.",
+      "flow": [
+        "Drei Bedingungen ansehen",
+        "Show all",
+        "Sechs Bedingungen sichtbar"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "services/customer-hub/profile"
+      ],
+      "limits": [
+        "Kein Show less gesehen; Dokumente nicht geöffnet.",
+        "Entspricht vorhandenem Show-more-Muster."
+      ]
+    },
+    {
+      "key": "guided-feature-tour",
+      "title": "Eine Funktionsführung durchgehen",
+      "category": "Verstehen",
+      "tags": [
+        "onboarding",
+        "dialog"
+      ],
+      "task": "Einstieg in zentrale Funktionen erhalten.",
+      "flow": [
+        "Support öffnen",
+        "E-finance in a nutshell",
+        "Slide 1 lesen",
+        "Next",
+        "Slide 2 und neuen Back-Control sehen",
+        "Close"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "contact-support"
+      ],
+      "limits": [
+        "Nur Schritte 1–2 von fünf bedient.",
+        "390×844: Dialog vertikal, Textumbruch und Close/Next sichtbar; dort kein Next-Versuch.",
+        "Fokusführung/Tastatur/Screenreader ungeprüft."
+      ]
+    },
+    {
+      "key": "load-more-rows",
+      "title": "Weitere Zeilen schrittweise anzeigen",
+      "category": "Finden",
+      "tags": [
+        "show-more-disclosure",
+        "table"
+      ],
+      "task": "Eine lange Auftragsliste weiter durchsuchen.",
+      "flow": [
+        "Sechs Zeilen sehen",
+        "Show more lines",
+        "Zwölf Zeilen und weitere Show-more-Aktion sehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "services/order-overview"
+      ],
+      "limits": [
+        "Variante progressiver Offenlegung in einer Tabelle; kein Beleg für Serverpagination, Gesamtmenge oder Ende.",
+        "Rücksetzen des Umfangs nicht untersucht."
+      ]
+    },
+    {
+      "key": "local-list-filter",
+      "title": "Liste lokal filtern und zurücksetzen",
+      "category": "Finden",
+      "tags": [],
+      "task": "Unter vorhandenen Serviceaufträgen Treffer eingrenzen.",
+      "flow": [
+        "Filter list mit synthetischem Nichttreffer füllen",
+        "No results were found",
+        "Reset",
+        "Zeilen wieder sichtbar"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "services/order-overview"
+      ],
+      "limits": [
+        "Bekannte Livefilter-Familie; keine fachliche Suchkorrektheit oder Persistenzprüfung."
+      ]
+    },
+    {
+      "key": "status-with-required-next-action",
+      "title": "Status und nächste notwendige Aufgabe verbinden",
+      "category": "Zustände",
+      "tags": [
+        "deadline",
+        "row-action"
+      ],
+      "task": "Erkennen, warum ein Auftrag noch offen ist und welcher Schritt nötig ist.",
+      "flow": [
+        "Status mit Frist lesen",
+        "Upload bzw. Details am betroffenen Auftrag erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "services/order-overview",
+        "download/enquiry"
+      ],
+      "limits": [
+        "Vorhandene Zustände; keine zeitliche Progression oder Freigabe durchgeführt.",
+        "Enquiries zeigt nur Active/Completed und Details, keine eigene Frist."
+      ]
+    },
+    {
+      "key": "unavailable-state",
+      "title": "Nicht verfügbare Funktion erklären",
+      "category": "Zustände",
+      "tags": [],
+      "task": "Demo-Grenze erkennen und Rückweg finden.",
+      "flow": [
+        "Mailbox-Ziel öffnen",
+        "Explizite Nichtverfügbarkeit",
+        "Back sehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "contact/mailbox",
+        "error/overview"
+      ],
+      "limits": [
+        "Back in diesem Lauf nicht bedient; kein Recoverybeleg."
+      ]
+    },
+    {
+      "key": "empty-filter-result",
+      "title": "Fehlende passende Dokumente erklären",
+      "category": "Zustände",
+      "tags": [],
+      "task": "Leeres Suchergebnis im aktiven Kontext verstehen.",
+      "flow": [
+        "Archiv öffnen",
+        "Aktive Kriterien lesen",
+        "Keine passenden Dokumente sehen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "download/bin"
+      ],
+      "limits": [
+        "Vorhandene Leere; keine Filterinteraktion oder Recovery."
+      ]
+    },
+    {
+      "key": "notification-to-task",
+      "title": "Von Neuigkeit zur zugehörigen Aufgabe gelangen",
+      "category": "Navigieren",
+      "tags": [],
+      "task": "Eine neue Information in ihrem Arbeitsbereich öffnen.",
+      "flow": [
+        "Ungelesenzähler sehen",
+        "Dokument-/Nachrichtentyp unterscheiden",
+        "Zielbereich als Link erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "services/my-notifications"
+      ],
+      "limits": [
+        "Links hier nicht direkt betätigt; kein Gelesenwechsel."
+      ]
+    },
+    {
+      "key": "object-detail-navigation",
+      "title": "Von Übersicht zu Objektdetails wechseln",
+      "category": "Navigieren",
+      "tags": [],
+      "task": "Eine Versicherung vertieft ansehen.",
+      "flow": [
+        "Versicherungstabelle",
+        "Details",
+        "Thematische Detailabschnitte"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "insurances/overview",
+        "insurances/life-insurance-detail"
+      ],
+      "limits": [
+        "Nur ein repräsentativer Vertrag; keine vollständige Fachprüfung."
+      ]
+    },
+    {
+      "key": "product-category-navigation",
+      "title": "Ziele nach Aufgabenbereichen finden",
+      "category": "Navigieren",
+      "tags": [],
+      "task": "Produkt- oder Einstellungsaufgabe im Hub auswählen.",
+      "flow": [
+        "Bereichshub öffnen",
+        "Beschriftete Kategorie mit Kurztext finden",
+        "Repräsentatives Ziel öffnen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "offers",
+        "services/customer-hub"
+      ],
+      "limits": [
+        "Kacheln allein sind kein neues Pattern; Kategorie-Navigation als Ablauf.",
+        "Unterziele explizit offen gelistet."
+      ]
+    }
+  ],
+  "limits": [
+    "Stand 20.11.2026. Nur sichtbare Reichweite der PostFinance E-finance-Demo; kein Vollständigkeitsanspruch für Produktion.",
+    "Eigener BrowserOS-neo-Tab; Screenshots visuell angesehen, keine Bilddateien oder personenbezogenen Werte gespeichert.",
+    "Breit 1440×1000; schmal 390×844 nur Support und Einführung. Toolbilder wurden verkleinert dargestellt.",
+    "Keine Finanzaktion, Bestellung, Vertragsänderung, Speicherung, Löschung, Upload oder Nachricht ausgeführt.",
+    "Services-Menü: My news, Profile/settings, Chat, Contact/support sowie Language, View mode, Privacy Mode und Legal/Accessibility sichtbar. Chat, Ansichtscontrols und Legal nicht bedient. Kein Persistenzbeleg.",
+    "Dokumentfilter und Kategoriekurzwege nicht bedient. Nicht geöffnete Ziele stehen pro Ansicht; außerhalb geöffneter Hubs unbekannte Ziele sind nicht inventarisiert.",
+    "Keine vollständige Responsive-, Tastatur-, Screenreader-, Funktions- oder Accessibilityprüfung."
+  ]
+}

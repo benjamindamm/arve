@@ -44,7 +44,7 @@ export function McpDemo({ system, component }: { system: string; component: stri
     <section className="catalog mcp-demo" id="mcp-demo" aria-labelledby="mcp-demo-title">
       <div>
         <h2 id="mcp-demo-title">Was bekommt ein Agent über MCP?</h2>
-        <p>Auftrag: Einen Button für den Rechnungsdownload auswählen. Der Live-Abruf zeigt, welche veröffentlichte Regel, welcher Contract und welcher Plattformstand dem Agenten zur Verfügung stehen.</p>
+        <p>Ruf die Einsatzregel, den UI Contract und den Plattformstand für den Button «Rechnung herunterladen» ab.</p>
         <button type="button" className="system-button" aria-disabled={status === 'loading'} onClick={() => { if (status !== 'loading') void run() }}>
           {status === 'loading' ? 'MCP wird abgefragt …' : status === 'success' ? 'Erneut über MCP abrufen' : 'Button über MCP abrufen'}
         </button>

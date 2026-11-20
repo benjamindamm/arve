@@ -1,3 +1,6 @@
+import { loadPageRework } from '../../../../../../docs/page-reworks/registry'
+import type { Page } from '../../../../../../payload-types'
+import { ContentOutline } from '../../../../../../docs/content-outline'
 import { TemplateContent } from '../../../../../../docs/template-content'
 import hljs from 'highlight.js/lib/core'
 import Link from 'next/link'
@@ -23,6 +26,8 @@ const domains = [
   ['behavior', 'Verhalten (SCXML)', 'xml'],
   ['accessibility', 'Semantik (HTML/ARIA)', 'xml'],
   ['accessibilityRules', 'Accessibility-Regeln', 'json'],
+  ['ux', 'UX-Eignung', 'json'],
+  ['stories', 'Stories', 'json'],
 ] as const
 
 export default async function ComponentPage({ params }: {
@@ -33,6 +38,7 @@ export default async function ComponentPage({ params }: {
   if (!page || !documentation || !designSystem) notFound()
 
   const contract = page.contract
+  const ReworkedPage = system === 'shadcn' ? await loadPageRework(component) : undefined
 
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
@@ -40,9 +46,27 @@ export default async function ComponentPage({ params }: {
       <article className="article">
         {system === 'shadcn' && <p><Link href="/systems/shadcn/komponenten">← Komponenten</Link></p>}
         <h1>{page.title}</h1>
+        {page.summary && <p className="lead">{page.summary}</p>}
+        <nav aria-label="Auf dieser Komponentenseite" className="component-jumps">
+          {page.demo && <a href="#live-beispiel">Live-Beispiel</a>}
+          <a href="#plattformstand">Plattformstand</a>
+          <a href="#contract">Contract</a>
+        </nav>
+        {ReworkedPage ? <ReworkedPage content={page.content as unknown as Page['content']} demo={page.demo ?? undefined} /> : <>
+        <ContentOutline content={page.content} />
         <TemplateContent sections={page.templateSections} />
         <Content blocks={page.content} />
-        <section className="component-section">
+        </>}
+        {page.demo && !ReworkedPage && (
+          <section className="component-section" id="live-beispiel">
+            <h2>Spartan-Beispiel ausprobieren</h2>
+            {(component === 'checkbox' || component === 'switch') && (
+              <p>Spartan verwendet hier einen Button mit ARIA-Rolle. Die gebundene Contract-Vorlage verwendet ein natives Checkbox-Eingabefeld.</p>
+            )}
+            <ComponentDemo demoKey={page.demo.key ?? undefined} label={page.demo.label ?? undefined} initialVariant={page.demo.variant ?? undefined} />
+          </section>
+        )}
+        <section className="component-section" id="plattformstand">
           <h2>Plattformen und Implementierungen</h2>
           <div className="architecture-grid">
             {([['web', 'Web'], ['ios', 'iOS'], ['android', 'Android']] as const).map(([platform, label]) => {
@@ -64,26 +88,24 @@ export default async function ComponentPage({ params }: {
             })}
           </div>
         </section>
-        {page.demo && (
-          <section className="component-section" id="live-beispiel">
-            <h2>Spartan-Beispiel ausprobieren</h2>
-            {(component === 'checkbox' || component === 'switch') && (
-              <p>Spartan verwendet hier einen Button mit ARIA-Rolle. Die gebundene Contract-Vorlage verwendet ein natives Checkbox-Eingabefeld.</p>
-            )}
-            <ComponentDemo demoKey={page.demo.key ?? undefined} label={page.demo.label ?? undefined} initialVariant={page.demo.variant ?? undefined} />
-          </section>
-        )}
-        <section className="component-section">
+        <section className="component-section" id="contract">
           <h2>Technischer Contract</h2>
           {contract ? (
             <>
-              <p>Bibliothek {contract.library} · Status {contract.status} · Lokaler Arbeitsstand</p>
+              <p>Bibliothek {contract.library} · Status {contract.status}</p>
               <p className="contract-revision">Export-Revision <code>{contract.revision}</code></p>
+              {contract.artifacts && (
+                <details>
+                  <summary>Dateien im Bibliotheksimport</summary>
+                  <ul>{page.contractArtifacts.map((file) => <li key={file.path}><a href={file.url} download><code>{file.path}</code></a></li>)}</ul>
+                </details>
+              )}
               {domains.map(([domain, title, language]) => {
                 const source = contract.files[contract.sources[domain]]
+                if (!source && (domain === 'ux' || domain === 'stories')) return null
                 if (!source) return <p key={domain}>{title} · Im Export fehlt eine Bindung.</p>
                 return (
-                  <details key={domain} open={domain === 'behavior'}>
+                  <details key={domain}>
                     <summary>{title} · {source.path}</summary>
                     <pre className="contract-code"><code dangerouslySetInnerHTML={{
                       __html: hljs.highlight(source.content, { language }).value,

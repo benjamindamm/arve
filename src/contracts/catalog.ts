@@ -1,3 +1,5 @@
+import shadcnPortable from './libraries/shadcn/65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26/contracts.json'
+import shadcnSnapshot from './libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed/contracts.json'
 import switchContract from './exports/shadcn/switch/3994eb962797b7f48a25939c595dc9e9aac98e3423ff8865e313b3305d0cbb29.json'
 import checkboxPrevious from './exports/shadcn/checkbox/8b7fe52b9495071663062267997935f6f223628f0b012c867b4aa3665d77b5d8.json'
 import checkboxContract from './exports/shadcn/checkbox/638e6f954f0c03f4efe5c682e0c90f757db9e1259daec3591d9ba4b494a6a072.json'
@@ -10,12 +12,13 @@ type ContractExport = {
   component: string
   revision: string
   origin: string
+  artifacts?: Record<string, string>
   status: string
   sources: Record<string, string>
   files: Record<string, { path: string; sha256: string; content: string }>
 }
 
-const catalog: ContractExport[] = [button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious]
+const catalog: ContractExport[] = [...shadcnPortable, ...shadcnSnapshot, button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious]
 
 export function getContract(reference: { library?: string | null; component?: string | null; revision?: string | null } | null | undefined) {
   return catalog.find((item) =>

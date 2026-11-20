@@ -1,0 +1,1151 @@
+{
+  "area": "Home und Vermögen / Assets",
+  "views": [
+    {
+      "id": "home",
+      "path": "home",
+      "title": "Home",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Desktop Assets-Einstieg; schmal Menu → Assets → Back → Close bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Global Search und Empfängerfeld sichtbar; nicht eingegeben."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontowahl und eBill-Checkboxen sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Empfängerfeld und Dateiauswahl sichtbar, nicht benutzt."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Modify homepage und Karteneinstellungen sichtbar."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Zahlungseinstiege und Kartenaktionen sichtbar; keine Finanzaktion."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Schmal Help Transaction overview geöffnet, Text und Close geprüft."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene EPO-Zustände Processing, Error, Approved sichtbar; kein Prozess ausgelöst."
+        }
+      },
+      "patterns": [
+        "contextual-help",
+        "drill-down-navigation"
+      ],
+      "unvisitedTargets": [
+        "home/widget-edit",
+        "transfer/invoice-scan/create",
+        "transfer/transfers",
+        "transfer/order-overview",
+        "transfer/e-bill",
+        "transfer/transfers/credit-card",
+        "transfer/pending-orders/search-single-orders",
+        "transfer/pending-orders/search-single-transfers",
+        "upload/payment-order/collective-order-overview-epo",
+        "upload/payment-order/file-overview-epo",
+        "upload/payment-order/individual-order-overview-epo",
+        "transfer/investigation-advanced/overview",
+        "transfer/investigation-advanced/payment-search-single",
+        "transfer/investigation-advanced/payment-bulk-search"
+      ]
+    },
+    {
+      "id": "assets-overview",
+      "path": "assets (auch assets/balance-sheet verlinkt)",
+      "title": "Vermögensübersicht",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Assets geöffnet; Konten-Zeilenmenü → Account information und Rückkehr bedient."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Banks und Customer relationships begrenzen die Ansicht."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontextauswahlen sichtbar, nicht verändert."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change the order sichtbar; wegen unbekannter Persistenz nicht benutzt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Konten-Zeilenmenü geöffnet; keine Finanz-/Kündigungsaktion gewählt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Gruppierte Konten, Summen, Zusammensetzung und Aktualitätsdatum sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Datumsangabe bei Fremdbankwerten; kein Laden/Fehler provoziert."
+        }
+      },
+      "patterns": [
+        "row-action-menu"
+      ],
+      "unvisitedTargets": [
+        "services/account-settings",
+        "Kontenmenü: Transactions, Order overview, Enter payment, Account transfer, Balance history, Documents, Account information, Account settings, Cancel account",
+        "assets/money-market",
+        "assets/credit-cards",
+        "insurances/life-insurance-detail",
+        "offers/multibanking-opening/thirdpartybank"
+      ]
+    },
+    {
+      "id": "account-information",
+      "path": "services/account-details",
+      "title": "Kontoinformation",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus Kontenmenü geöffnet, Back to overview of assets bedient."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "act": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Stamminformationen, Berechtigungen und Interest conditions; More information sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "account-settings",
+      "path": "services/account-settings",
+      "title": "Kontoeinstellungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Aus Kontenmenü geöffnet; danach ohne Änderung verlassen."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Optionaler Eigenname, deaktivierter Kontoauszug-Rhythmus."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Save/Cancel vorhanden; weder Eingabe noch Save ausgeführt."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Save und Verweis Account notifications sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Feldhilfen und deaktivierter Rhythmus sichtbar."
+        },
+        "status": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "Account notifications (Zielpfad nicht erhoben)"
+      ]
+    },
+    {
+      "id": "analysis",
+      "path": "assets/analysis",
+      "title": "Analysen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Desktop geöffnet; schmal erneut angesehen."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Konten-/Zeitraumbegrenzung vorhanden."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Chart → Table und Period → Custom geöffnet."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Custom Von nach Bis eingegeben → Apply: rote relationale Fehlermeldung; Werte erhalten. Korrekte Reihenfolge eingegeben."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "Nur Ansichtsparameter, keine fachliche Änderung geprüft."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Apply des ungültigen Zeitraums bedient; kein Finanzsubmit."
+        },
+        "understand": {
+          "status": "tested",
+          "note": "Zeitgrafik in Tabelle gewechselt; Datum/Einnahmen/Ausgaben/Saldo sichtbar."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Ungültiger Datumsbereich sichtbar geprüft; korrekter Apply angeklickt, danach navigiert, daher Erfolgsanzeige nicht gesondert belegt."
+        }
+      },
+      "patterns": [
+        "chart-table-view-switch",
+        "context-selection",
+        "date-range-validation"
+      ],
+      "unvisitedTargets": [
+        "assets/analysis/balance-overview",
+        "assets/analysis/abo-movements-detail",
+        "assets/analysis/create-expense-limit"
+      ]
+    },
+    {
+      "id": "movements",
+      "path": "assets/movements-overview",
+      "title": "Bewegungen",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Übersicht geöffnet; Details-Ziele sichtbar."
+        },
+        "find": {
+          "status": "tested",
+          "note": "Livefilter mit erfundenem Testwort → No results were found; leeren stellt Zeilen wieder her. Keywords → Search übernimmt; Reset im erneut geöffneten Bereich lässt übernommenes Stichwort stehen."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Account, Entry type und Zeitraumradio sichtbar."
+        },
+        "input": {
+          "status": "tested",
+          "note": "Erfundene Suchwörter eingegeben; keine personenbezogenen Werte erfasst."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Adjust display sichtbar; nicht verändert."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print/Export nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Aktive Kriterien, ausstehende Aufträge, Tabellenspalten und Detailverweise sichtbar."
+        },
+        "status": {
+          "status": "tested",
+          "note": "Nulltreffer und Rückkehr zur gefüllten Liste durch Leeren geprüft."
+        }
+      },
+      "patterns": [
+        "applied-filters",
+        "live-list-filter"
+      ],
+      "unvisitedTargets": [
+        "assets/movements-overview/detail-single-order",
+        "assets/movements-overview/details"
+      ]
+    },
+    {
+      "id": "tags",
+      "path": "assets/analysis/label-overview",
+      "title": "Tags",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Tags geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Search options, Filter list und aktive Kriterien sichtbar."
+        },
+        "select": {
+          "status": "tested",
+          "note": "Einzelzeile und Select all gewählt; sichtbare Häkchen bei mehreren gescrollten Zeilen geprüft, danach abgewählt."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Filter list sichtbar; nicht neu bedient."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Change category, Add tag und Delete label nur angesehen."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Bulkfolgeaktionen vorhanden, keine ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Tags, Kategorien und Detailverweise sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "No tag selected im Ausgangszustand; kein Bulkabschluss."
+        }
+      },
+      "patterns": [
+        "batch-selection"
+      ],
+      "unvisitedTargets": [
+        "assets/credit-cards/details",
+        "assets/movements-overview/detail-single-order",
+        "assets/movements-overview/details"
+      ]
+    },
+    {
+      "id": "budget",
+      "path": "assets/analysis/expense-limit-overview",
+      "title": "Budget",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Budget geöffnet."
+        },
+        "find": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "select": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Zeilenmenü mit Edit/Delete geöffnet; keine Aktion gewählt."
+        },
+        "act": {
+          "status": "tested",
+          "note": "Zeilenmenü geöffnet; Folgeaktionen nicht ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Monats-/Jahresgruppen, Prozent, Spent/Available und Balken sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Überzogenes Budget rot mit Exhausted budget bezeichnet."
+        }
+      },
+      "patterns": [
+        "row-action-menu",
+        "budget-progress-feedback"
+      ],
+      "unvisitedTargets": [
+        "assets/analysis/create-expense-limit",
+        "Budget-Menü: Edit/Delete (Ziele nicht geöffnet)"
+      ]
+    },
+    {
+      "id": "co2",
+      "path": "assets/analysis/co2-detail",
+      "title": "CO2-Rechner",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Ziel aus inventarisierter Navigation geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Zeitraum, Konten, Search options, Filter list."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kontextauswahlen und Chartwahl sichtbar."
+        },
+        "input": {
+          "status": "visible",
+          "note": "Filterfeld sichtbar."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Set consumer behaviour sichtbar; nicht geöffnet."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Change category/Add tag/Delete label nur sichtbar."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Eigener Fußabdruck, Durchschnitt, Ziel und Kategorienvergleich visuell angesehen."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Bestehende Vergleichswerte; keine Neuermittlung geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "Set consumer behaviour (Dialog nicht geöffnet)",
+        "CO2-Kategoriebuttons (Unteransichten nicht geöffnet)",
+        "assets/credit-cards/details"
+      ]
+    },
+    {
+      "id": "investments",
+      "path": "assets/investment-retirement",
+      "title": "Anlagen und Vorsorge",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Übersicht geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationships vorhanden."
+        },
+        "select": {
+          "status": "visible",
+          "note": "Kundenbeziehungsauswahl sichtbar."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "visible",
+          "note": "Adjust display sichtbar; nicht betätigt."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Purchase funds, Inpayment 3a und More sichtbar; keine ausgeführt."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Positionen, Vermögenszusammensetzung und Marktwerte sichtbar."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Vorhandene positive/negative Entwicklungen; kein Auftrag ausgelöst."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "assets/selfservice-fund-custody/position-details",
+        "assets/selfservice-fund-custody/list",
+        "assets/money-market",
+        "assets/vested-benefits-detail",
+        "assets/investment-retirement/market-data",
+        "transfer/transfers/retirementsavingsaccount",
+        "insurances/life-insurance-detail",
+        "download/documents",
+        "offers/product-opening/invest",
+        "More-Menüs Fund self-service, 3a, Vested benefits (nicht geöffnet)",
+        "https://www.postfinance.ch/content/pfch/en/priv/investmentsolutions/knowledge/homepubli.html",
+        "https://www.postfinance.ch/content/pfch/en/priv/investmentsolutions/knowledge/home.html"
+      ]
+    },
+    {
+      "id": "balance-history",
+      "path": "assets/balance-development/account",
+      "title": "Saldoverlauf",
+      "visited": true,
+      "evidence": "visual",
+      "tasks": {
+        "navigate": {
+          "status": "tested",
+          "note": "Saldoverlauf geöffnet."
+        },
+        "find": {
+          "status": "visible",
+          "note": "Customer relationship, Accounts und Zeitraumwahl sichtbar."
+        },
+        "select": {
+          "status": "visible",
+          "note": "YTD/1y/2y/5y/MAX/Individual, Chart/Table und Slides sichtbar."
+        },
+        "input": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "edit": {
+          "status": "absent",
+          "note": "In der untersuchten Ansicht keine eigene Funktion gefunden."
+        },
+        "act": {
+          "status": "visible",
+          "note": "Print sowie Next sichtbar, nicht bedient."
+        },
+        "understand": {
+          "status": "visible",
+          "note": "Hinweis erklärt Gruppierung nach Vermögenskategorie und Grenze von fünf Einzelkonten."
+        },
+        "status": {
+          "status": "visible",
+          "note": "Back des Sliders deaktiviert; kein Lade-/Fehlerzustand geprüft."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": [
+        "assets/balance-history",
+        "assets/movements-overview"
+      ]
+    },
+    {
+      "id": "home-edit",
+      "path": "home/widget-edit",
+      "title": "Startseite anpassen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "credit-cards",
+      "path": "assets/credit-cards",
+      "title": "Kreditkarten",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "money-market",
+      "path": "assets/money-market",
+      "title": "Geldmarkt",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "balance-analysis",
+      "path": "assets/analysis/balance-overview",
+      "title": "Einnahmen/Ausgaben",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "subscriptions",
+      "path": "assets/analysis/abo-movements-detail",
+      "title": "Abonnementbewegungen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "create-budget",
+      "path": "assets/analysis/create-expense-limit",
+      "title": "Budget erstellen",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "value-date-history",
+      "path": "assets/balance-history",
+      "title": "Valutasaldoverlauf",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "fund-position",
+      "path": "assets/selfservice-fund-custody/position-details",
+      "title": "Fondsposition",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    },
+    {
+      "id": "movement-details",
+      "path": "assets/movements-overview/detail-single-order; assets/movements-overview/details",
+      "title": "Bewegungsdetails",
+      "visited": false,
+      "evidence": "navigation-only",
+      "tasks": {
+        "navigate": {
+          "status": "blocked",
+          "note": "Direkter Aufruf detail-single-order versucht; die visuell folgende Ansicht war die Bewegungsübersicht. Kein belastbarer Detailinhalt oder Rückwegbeleg; details nicht geöffnet."
+        },
+        "find": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "select": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "input": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "edit": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "act": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "understand": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        },
+        "status": {
+          "status": "unreviewed",
+          "note": "Nur als verlinktes Ziel inventarisiert; Zielinhalt nicht untersucht."
+        }
+      },
+      "patterns": [],
+      "unvisitedTargets": []
+    }
+  ],
+  "patterns": [
+    {
+      "key": "applied-filters",
+      "title": "Kriterien übernehmen",
+      "category": "Finden",
+      "tags": [],
+      "task": "Bewegungen mit mehreren Kriterien eingrenzen.",
+      "flow": [
+        "Search options öffnen",
+        "Testwort eingeben",
+        "Search",
+        "Übernommenes Stichwort ansehen",
+        "Erneut öffnen und Reset: angewandtes Stichwort bleibt"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/movements-overview"
+      ],
+      "limits": [
+        "Reset leert Entwurf, nicht sofort die angewandte Suche. Fachliche Ergebniskorrektheit der Demo nicht belegt."
+      ]
+    },
+    {
+      "key": "live-list-filter",
+      "title": "Liste sofort filtern",
+      "category": "Finden",
+      "tags": [],
+      "task": "Angezeigte Zeilen schnell durchsuchen.",
+      "flow": [
+        "Testwort in Filter list",
+        "Nulltreffer sehen",
+        "Feld leeren",
+        "Zeilen wieder sichtbar"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/movements-overview"
+      ],
+      "limits": [
+        "Keine Persistenz oder reguläre Detailrückkehr geprüft."
+      ]
+    },
+    {
+      "key": "context-selection",
+      "title": "Ansichtskontext wählen",
+      "category": "Auswählen",
+      "tags": [],
+      "task": "Zeitraum der Analyse wählen.",
+      "flow": [
+        "Period öffnen",
+        "Custom wählen",
+        "Von/Bis-Dialog ansehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/analysis"
+      ],
+      "limits": [
+        "Kontenauswahl nur sichtbar. Erfolgsübernahme nach Korrektur in diesem Lauf nicht gesondert ausgewertet."
+      ]
+    },
+    {
+      "key": "date-range-validation",
+      "title": "Datumsbereich korrigieren",
+      "category": "Eingeben",
+      "tags": [],
+      "task": "Ungültige Beziehung zwischen Datumsfeldern verstehen.",
+      "flow": [
+        "Von nach Bis eingeben",
+        "Apply",
+        "Dialog bleibt, rote feldnahe Meldung, Eingaben erhalten",
+        "Reihenfolge korrigieren"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/analysis"
+      ],
+      "limits": [
+        "Korrigiertes Apply geklickt, danach navigiert. Kein gesonderter Erfolgsbeleg dieses Laufs; frühere Quelle beschreibt vollständigen Ablauf. Kein Tastatur-/Screenreadertest."
+      ]
+    },
+    {
+      "key": "batch-selection",
+      "title": "Mehrere Zeilen auswählen",
+      "category": "Auswählen",
+      "tags": [],
+      "task": "Zeilen vor gemeinsamer Folgeaktion markieren.",
+      "flow": [
+        "Einzelcheckbox",
+        "Select all",
+        "Mehrere sichtbare Häkchen nach Scrollen prüfen",
+        "Abwählen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/analysis/label-overview"
+      ],
+      "limits": [
+        "Keine Folgeaktion, Filterwechsel, Pagination oder Auswahlpersistenz. Gemischter Kopfzustand nicht belegt."
+      ]
+    },
+    {
+      "key": "row-action-menu",
+      "title": "Zeilenaktionen einblenden",
+      "category": "Handeln",
+      "tags": [],
+      "task": "Aktionen zu einem Objekt finden.",
+      "flow": [
+        "Zeilenmenü öffnen",
+        "Objektbezogene Optionen lesen",
+        "Ohne Folgeaktion verlassen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets",
+        "assets/analysis/expense-limit-overview"
+      ],
+      "limits": [
+        "Kein Lösch-/Kündigungsdialog oder Abschluss. Kontenmenü und Budgetmenü sind Varianten."
+      ]
+    },
+    {
+      "key": "contextual-help",
+      "title": "Hilfe am Arbeitskontext öffnen",
+      "category": "Verstehen",
+      "tags": [],
+      "task": "Karteninhalt erklären lassen.",
+      "flow": [
+        "Schmal Help Transaction overview öffnen",
+        "Erklärungen im Hilfebereich lesen",
+        "Close"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "home"
+      ],
+      "limits": [
+        "390×844 geprüft; weiterführende Hilfe und Fokusverhalten ungeprüft."
+      ]
+    },
+    {
+      "key": "chart-table-view-switch",
+      "title": "Darstellung wechseln",
+      "category": "Verstehen",
+      "tags": [],
+      "task": "Analyse als Werte statt Grafik lesen.",
+      "flow": [
+        "Chart öffnen",
+        "Table wählen",
+        "Tabelle mit Datum, Einnahmen, Ausgaben und Saldo ansehen"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "assets/analysis"
+      ],
+      "limits": [
+        "Desktop geprüft. Keine numerische Gleichheit oder vollständige Barrierefreiheit nachgewiesen."
+      ]
+    },
+    {
+      "key": "drill-down-navigation",
+      "title": "Navigationsebene wechseln und verlassen",
+      "category": "Navigieren",
+      "tags": [],
+      "task": "In der Bereichshierarchie orientieren.",
+      "flow": [
+        "390px Menu",
+        "Assets",
+        "Back zum Hauptmenü",
+        "Close zurück zu Home"
+      ],
+      "evidence": "tested",
+      "sources": [
+        "home"
+      ],
+      "limits": [
+        "Kein Unterziel in der schmalen Probe gewählt; keine Fokus-/Historyprüfung."
+      ]
+    },
+    {
+      "key": "budget-progress-feedback",
+      "title": "Budgetverbrauch verstehen",
+      "category": "Zustände",
+      "tags": [
+        "budget",
+        "progress",
+        "threshold"
+      ],
+      "task": "Verbrauch und Überschreitung eines Limits erkennen.",
+      "flow": [
+        "Budgetliste ansehen",
+        "Prozent, Balken und Spent/Available vergleichen",
+        "Rotes Exhausted budget erkennen"
+      ],
+      "evidence": "visible",
+      "sources": [
+        "assets/analysis/expense-limit-overview"
+      ],
+      "limits": [
+        "Nur vorhandene Zustände; kein Budget verändert und kein Übergang ausgelöst."
+      ]
+    }
+  ],
+  "limits": [
+    "Stand 20.11.2026. Eigener BrowserOS-neo-Tab; Screenshots visuell angesehen und nicht als Dateien gespeichert.",
+    "Desktop 1440×1000 CSS-Pixel; repräsentativ schmal 390×844: Home, Hilfe, Assets-Menü und Analyse. Keine allgemeine Responsive-Freigabe.",
+    "11 Ansichten visuell untersucht, neun weitere Zielgruppen nur inventarisiert; vollständige Reichweite bezieht sich ausschließlich auf sichtbare Demo-Navigation der besuchten Ansichten. Ungeöffnete Menüs können zusätzliche Ziele enthalten.",
+    "Keine Transaktion, Speicherung, Löschung, Vertragsaktion, Nachricht, Dateiauswahl oder Upload; unbekannte Persistenz nur angesehen.",
+    "Keine personenbezogenen Demo-Werte übernommen. Keine Aussagen über technische Implementierung, Berechnungskorrektheit oder allgemeine Barrierefreiheit.",
+    "Direkter Details-Aufruf lieferte keinen belastbaren Detailbeleg. Refs nach Breitenwechsel teils von Kopfzeile verdeckt; neu erfasst oder sichere Tastaturaktivierung statt verdecktem Klick."
+  ]
+}

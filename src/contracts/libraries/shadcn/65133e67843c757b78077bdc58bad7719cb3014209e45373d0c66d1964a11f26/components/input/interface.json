@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "input.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Input",
+          "description": "Single-line text entry with a visible label.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Current text.",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "description": "Visible name of the field."
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "description": "Optional example text shown while the field is empty.",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Native disabled state.",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "rounded",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Use the pill-shaped frame.",
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "input",
+              "type": {
+                "text": "InputEvent"
+              },
+              "description": "Native text-edit event. Read the current text from the input target."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

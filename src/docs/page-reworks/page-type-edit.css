@@ -1,0 +1,31 @@
+.edit-rework { container-type: inline-size; }
+.edit-rework > section, .edit-rework > details { margin-block: 0 48px; }
+.edit-rework p { max-width: 65ch; overflow-wrap: anywhere; }
+.edit-rework .edit-hero { margin: 24px 0; border: 1px solid #d4d4d4; border-radius: 12px; overflow: hidden; background: #fff; color: #171717; }
+.edit-rework .edit-hero figcaption { padding: 12px 24px; background: #f5f5f5; border-bottom: 1px solid #d4d4d4; font-size: 14px; line-height: 20px; }
+.edit-rework .edit-canvas { max-width: 704px; padding: 32px; }
+.edit-rework .edit-canvas h3 { margin: 0 0 12px; font-size: 32px; line-height: 40px; font-weight: 600; }
+.edit-rework .edit-context { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 32px; }
+.edit-rework .edit-status { background: #f5f5f5; border: 1px solid #d4d4d4; border-radius: 8px; padding: 4px 8px; font-size: 14px; }
+.edit-rework .edit-field { display: grid; gap: 8px; }
+.edit-rework .edit-field label { font-size: 14px; line-height: 20px; font-weight: 600; }
+.edit-rework .edit-field input { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; height: auto; padding: 10px 12px; background: #fff; color: #171717; border: 1px solid #737373; border-radius: 8px; font: inherit; }
+.edit-rework .edit-field input:focus-visible { outline: 2px solid #171717; outline-offset: 2px; }
+.edit-rework .edit-help, .edit-rework .edit-error { margin: 0; font-size: 14px; line-height: 20px; }
+.edit-rework .edit-error { color: #b91c1c; }
+.edit-rework .edit-error input { border-color: #b91c1c; }
+.edit-rework .edit-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.edit-rework .edit-action { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 10px 16px; border: 1px solid #737373; border-radius: 8px; font-size: 14px; line-height: 20px; font-weight: 600; overflow-wrap: anywhere; text-align: center; }
+.edit-rework .edit-primary { background: #171717; color: #fafafa; border-color: #171717; }
+.edit-rework .edit-state-canvas { background: #fff; color: #171717; padding: 24px; border-left: 3px solid #d4d4d4; max-width: 640px; box-sizing: border-box; }
+.edit-rework .edit-notice { background: #f5f5f5; padding: 12px; margin: 24px 0 0; }
+.edit-rework .edit-prompt { border: 1px solid #d4d4d4; border-radius: 8px; padding: 24px; margin-top: 16px; }
+.edit-rework .edit-prompt h3 { margin: 0; font-size: 20px; line-height: 28px; }
+.edit-rework details { border-top: 1px solid #d4d4d4; padding-top: 16px; }
+.edit-rework summary { cursor: pointer; font-weight: 600; }
+@container (max-width: 639px) {
+  .edit-rework .edit-actions { flex-direction: column; }
+  .edit-rework .edit-canvas, .edit-rework .edit-state-canvas { padding: 24px 16px; }
+  .edit-rework .edit-hero figcaption { padding-inline: 16px; }
+  .edit-rework .edit-prompt { padding: 16px; }
+}

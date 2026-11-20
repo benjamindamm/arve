@@ -64,7 +64,7 @@ export async function POST(request: Request) {
   }, async ({ system, section, example }) => {
     const page = await getDocumentationPage(system, section, example)
     if (!page) return notFound('No published documentation page found.')
-    return success(withUrl(page))
+    return success({ ...withUrl(page), ...('resources' in page && page.resources ? { resources: { ...page.resources, templates: page.resources.templates.map(resource => ({ ...resource, url: new URL(resource.url, request.url).href })) } } : {}) })
   })
 
   server.registerTool('get_component_page', {
@@ -78,6 +78,7 @@ export async function POST(request: Request) {
     const result = {
       ...page,
       pageUrl: new URL(page.path, request.url).href,
+      contractArtifacts: page.contractArtifacts.map(file => ({ ...file, url: new URL(file.url, request.url).href })),
       demo: page.demo ? { ...page.demo, url: new URL(page.path + '#live-beispiel', request.url).href } : null,
     }
     return success(result)

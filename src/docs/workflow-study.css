@@ -1,0 +1,29 @@
+.workflow-study { margin: 56px 0; padding-block: 40px; border-block: 1px solid var(--border); container-type: inline-size; }
+.workflow-study figcaption { max-width: 62ch; margin-bottom: 40px; }
+.workflow-study h2 { margin: 12px 0 20px; font-size: clamp(24px, 3vw, 32px); line-height: 1.25; letter-spacing: -.025em; }
+.workflow-study p { line-height: 1.8; }
+.workflow-kicker, .workflow-step-type { font-size: .8rem; letter-spacing: .04em; font-weight: 650; }
+.workflow-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.workflow-step { min-width: 0; padding: 28px; border: 1px solid var(--border); border-top: 3px solid #8d9792; }
+.workflow-step h3 { font-size: 21px; line-height: 1.35; margin: 12px 0 20px; }
+.workflow-step p { margin: 0 0 20px; }
+.workflow-step > :last-child { margin-bottom: 0; }
+.workflow-attention { border-top-style: dashed; border-top-color: #8a642b; }
+.workflow-success { border-top-color: #285d49; }
+.workflow-step-type { color: var(--muted-foreground); }
+.workflow-next { padding-top: 20px; border-top: 1px solid var(--border); }
+.workflow-caption { max-width: 65ch; margin-block: 32px 24px; }
+.workflow-source { color: var(--muted-foreground); font-size: .875rem; line-height: 1.65; overflow-wrap: anywhere; }
+@container(max-width: 640px) { .workflow-steps { grid-template-columns: 1fr; gap: 24px; } .workflow-step { padding: 24px; } }
+@media(max-width:520px) { .workflow-study { margin-block: 40px; padding-block: 32px; } }
+@media(forced-colors:active) { .workflow-step { border-color: CanvasText; } }
+.message-comparison { margin-block: 56px; container-type: inline-size; }
+.message-comparison > h2 { font-size: clamp(24px, 3vw, 28px); line-height: 1.3; margin: 0 0 32px; }
+.message-case { padding-block: 28px; border-top: 1px solid var(--border); }
+.message-case h3 { margin: 0 0 24px; font-size: 21px; line-height: 1.4; }
+.message-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin: 0; }
+.message-pair > div { padding: 24px; background: #f8faf8; }
+.message-pair dt { font-size: .875rem; color: var(--muted-foreground); margin-bottom: 16px; }
+.message-pair dd { margin: 0; font-weight: 600; line-height: 1.75; }
+.message-reason { max-width: 65ch; line-height: 1.8; margin: 24px 0 0; }
+@container(max-width:640px) { .message-pair { grid-template-columns: 1fr; gap: 16px; } }

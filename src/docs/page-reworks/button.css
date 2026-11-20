@@ -1,0 +1,17 @@
+.button-rework { display: grid; gap: 1.5rem; min-width: 0; }
+.button-rework > section, .button-rework > details { min-width: 0; }
+.button-rework-example { border: 1px solid var(--border, #d9dee4); border-radius: 1rem; padding: clamp(1rem, 3vw, 1.5rem); }
+.button-rework-example h2 { margin-top: 0; }
+.button-rework-example .demo { margin-block: 1rem; }
+.button-rework-example .demo-controls { flex-wrap: wrap; gap: .75rem; }
+.button-rework-example .demo-stage { min-width: 0; }
+.button-rework-example .system-button { max-width: 100%; white-space: normal; overflow-wrap: anywhere; height: auto; min-height: 2rem; }
+.button-rework-rules { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; padding: 0; list-style-position: inside; }
+.button-rework-rules li { border-top: 2px solid var(--border, #d9dee4); padding-top: 1rem; overflow-wrap: anywhere; }
+.button-rework > details { border-top: 1px solid var(--border, #d9dee4); padding-top: 1rem; }
+.button-rework summary { cursor: pointer; font-weight: 600; }
+.button-rework details .handbook-block { margin-top: 1rem; }
+@media (max-width: 48rem) {
+  .button-rework-rules { grid-template-columns: 1fr; }
+  .button-rework-example { padding: 1rem; }
+}

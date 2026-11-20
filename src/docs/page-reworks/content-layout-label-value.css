@@ -1,0 +1,20 @@
+.label-value-rework { min-width: 0; }
+.label-value-example figure { margin: 1rem 0 0; }
+.label-value-stage { container-type: inline-size; border: 1px solid var(--border, #dedede); border-radius: .75rem; padding: clamp(1rem, 3vw, 2rem); background: var(--card, #fff); color: var(--card-foreground, #171717); }
+.label-value-pairs { margin: 0; }
+.label-value-pairs > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: .25rem; padding: 1rem 0; }
+.label-value-pairs > div:first-child { padding-top: 0; }
+.label-value-pairs > div:last-child { padding-bottom: 0; }
+.label-value-pairs > div + div { border-top: 1px solid var(--border, #dedede); }
+.label-value-pairs dt, .label-value-pairs dd { margin: 0; text-align: left; line-height: 1.55; overflow-wrap: anywhere; }
+.label-value-pairs dt { font-size: .9375rem; font-weight: 600; }
+.label-value-pairs dd { min-width: 0; white-space: pre-line; }
+.label-value-example figcaption { margin-top: .75rem; color: var(--muted-foreground, #666); font-size: .875rem; line-height: 1.5; }
+.label-value-example figcaption p { margin: .25rem 0; }
+.label-value-legend { font-size: .8125rem; }
+.label-value-rework > section + section { margin-top: 2rem; }
+.label-value-rework > details { margin-top: 2rem; }
+.label-value-rework > details summary { cursor: pointer; font-weight: 600; }
+@container (min-width: 34rem) {
+  .label-value-pairs > div { grid-template-columns: minmax(0, 10rem) minmax(0, 1fr); column-gap: 2rem; }
+}

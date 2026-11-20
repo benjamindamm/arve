@@ -1,0 +1,39 @@
+.type-page-rework { color: var(--foreground); min-width: 0; }
+.type-page-rework > section { margin-block: 2rem; }
+.type-page-rework h2 { font-size: 1.25rem; line-height: 1.35; margin-block: 0 1rem; }
+.type-page-rework p { line-height: 1.6; max-width: 68ch; }
+.type-page-rework .type-example-label { font-size: .875rem; margin-block: 0 .5rem; font-weight: 600; }
+.type-specimen { padding: clamp(1rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: .75rem; overflow-wrap: anywhere; font-size: 1rem; }
+.type-specimen h2 { font-size: 1.75em; line-height: 1.25; max-width: 27ch; margin-block: 0 .6em; }
+.type-specimen h3 { font-size: 1.125em; line-height: 1.4; margin-block: 1.75em .65em; }
+.type-specimen p { font-size: 1em; line-height: 1.6; margin-block: 0 1em; }
+.type-specimen dl { margin: 0; }
+.type-specimen dt { font-weight: 600; margin-block-end: .3em; }
+.type-specimen dd { margin: 0; }
+.type-specimen .type-specimen-help { margin-block: .4em 0; font-size: 1em; }
+.type-specimen[data-large="true"] { font-size: 2rem; }
+.type-specimen[data-system="true"] { font-family: system-ui, sans-serif; }
+.type-specimen[data-spacing="true"] { letter-spacing: .12em; word-spacing: .16em; }
+.type-specimen[data-spacing="true"] :is(h2,h3,p,dt,dd) { line-height: 1.5; }
+.type-specimen[data-spacing="true"] p { margin-block-end: 2em; }
+.type-probes { margin: 1rem 0 2rem; padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; min-width: 0; }
+.type-probes legend { padding-inline: .3rem; font-weight: 600; }
+.type-probes label { display: flex; align-items: center; gap: .5rem; min-height: 2rem; cursor: pointer; }
+.type-probes input { width: 1.125rem; height: 1.125rem; flex-shrink: 0; accent-color: currentColor; }
+.type-probes p { flex-basis: 100%; font-size: .875rem; margin: 0; }
+.type-role-list { margin: 0; }
+.type-role-list > div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; padding-block: .85rem; border-bottom: 1px solid var(--border); }
+.type-role-list dt { font-weight: 600; }
+.type-role-list dd { margin: 0; line-height: 1.6; }
+.type-rule-list { padding-inline-start: 1.3rem; max-width: 68ch; }
+.type-rule-list li { padding-inline-start: .35rem; margin-block: .85rem; line-height: 1.6; }
+.type-amounts { max-width: 27rem; padding: 1rem; border: 1px solid var(--border); border-radius: .5rem; }
+.type-amounts > div { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 1rem; padding-block: .4rem; }
+.type-amounts > div:last-child { border-top: 1px solid var(--border); font-weight: 700; margin-block-start: .4rem; padding-block-start: .8rem; }
+.type-amounts dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.type-status { border-top: 1px solid var(--border); padding-block-start: 1rem; font-size: .875rem; }
+.type-reference { margin-block: 1rem; border: 1px solid var(--border); border-radius: .5rem; padding: 1rem; }
+.type-reference summary { cursor: pointer; font-weight: 600; line-height: 1.5; }
+.type-reference[open] summary { margin-block-end: 1rem; }
+.type-reference h2 { margin-block: 1.5rem .6rem; }
+@media (max-width: 42rem) { .type-role-list > div { grid-template-columns: minmax(0,1fr); gap: .25rem; } .type-probes label { flex-basis: 100%; } }

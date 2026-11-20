@@ -1,0 +1,434 @@
+{
+  "date": "2026-11-20",
+  "areas": [
+    {
+      "area": "Home und Vermögen / Assets · Follow-up 20.11.2026",
+      "checks": [
+        {
+          "gap": "Suche innerhalb der Kontenauswahl",
+          "source": "assets/movements-overview → Account",
+          "action": "Desktop Kontoauswahl öffnen; erfundenes Nichttrefferwort eingeben; wieder öffnen, CHF eingeben; leeren und All accounts wählen.",
+          "observed": "Nichttrefferwort entfernt alle Optionen, ohne sichtbare Nulltreffermeldung. CHF zeigt die sechs Konten, All accounts entfällt dabei. Leeren zeigt All accounts wieder; Auswahl schliesst Liste und ändert Kontext.",
+          "result": "closed",
+          "remaining": [
+            "Keine Tastaturauswahl, Screenreadermeldung oder Persistenz der Suchzeichen geprüft. Ein fehlgeschlagener Fokusversuch erfolgte nach geschlossenem Popup; mit neuem Snapshot regulär weitergearbeitet."
+          ]
+        },
+        {
+          "gap": "Reguläre Bewegungsdetails und Rückkehrkontext",
+          "source": "assets/movements-overview → assets/movements-overview/details → error/overview",
+          "action": "All accounts wählen, lokales Filter CASH setzen, regulären Details-Link einer gefundenen Zeile anklicken; Back der Fehleransicht.",
+          "observed": "Explizite Demo-version-Seite: This function is not supported in the demo version. Nach Back ist Account weiterhin All accounts, Filter list jedoch leer. Das ist ein Fehler-Rückweg, keine echte Detailrückkehr.",
+          "result": "blocked",
+          "remaining": [
+            "Echte Bewegungsdetailansicht und Rückkehr, Auswahl-/Sortierungs-/Positionsvergleich bleiben blockiert. Kein eigener Sortiercontrol auf dieser Übersicht erhoben."
+          ]
+        },
+        {
+          "gap": "Echter Kontodetail-Rückweg mit gewähltem Kontext",
+          "source": "assets → services/account-details → assets",
+          "action": "Banks auf eine Bank begrenzen, Popup per Escape schliessen; Kontenmenü → Account information. Unteren Button Back to overview of assets anklicken; später dieselbe Konstellation erneut über oberen Back verlassen.",
+          "observed": "Kontoinformation tatsächlich geöffnet. Unterer Button bewirkte in der Probe auch nach erwartungsbezogenem Warten keinen Ansichtswechsel. Oberer Back kehrt zur Vermögensübersicht zurück; Banks bleibt 1, Customer relationships bleibt 2. Filternde Bankwahl ist in Liste und Summen sichtbar.",
+          "result": "partial",
+          "remaining": [
+            "Exakte Scrollposition vor/nach Rückkehr nicht ausreichend dokumentiert; keine Sortierung oder Zeilenauswahl hier geprüft. Unterer Button nicht allgemein als funktionsfähig einstufen. Bankfilter nach direkter neuer URL-Navigation nicht als erhalten behaupten."
+          ]
+        },
+        {
+          "gap": "Kopfcheckbox, gemischter Zustand, Filterwechsel und Auswahlumfang",
+          "source": "assets/analysis/label-overview",
+          "action": "Einzelzeile markieren; CASH eingeben, das diese Zeile ausschliesst; Filter leeren. Einzelmarkierung entfernen. CASH erneut setzen; Select all per Klick; Filter leeren.",
+          "observed": "Einzelmarkierung ist nach Ausschliessen/Zurücksetzen wieder sichtbar. Bei einer markierten Zeile bleibt Kopfcheckbox visuell leer, ohne erkennbares Minus. Unter CASH Select all markiert die passenden Zeilen. Nach Leeren bleibt die zuvor ausgeschlossene erste Zeile unmarkiert, passende Zeilen bleiben markiert; Kopfcheckbox zeigt dennoch ein Häkchen. Snapshot zählt 8 Checkboxen im gefilterten und 14 im ungefilterten Zustand inklusive Kopf.",
+          "result": "partial",
+          "remaining": [
+            "Kein belastbarer gemischter Kopfzustand; beobachtete Kopfmarkierung nach Filterwechsel entspricht nicht allen wieder sichtbaren Zeilen. Keine Bulkaktion, Pagination, Seitenwechsel oder nicht geladene Ergebnisse geprüft. Ein Space-Tastaturversuch war nicht als erfolgreicher Umschaltbeleg verwendbar; Befund beruht auf dem anschliessenden Klick."
+          ]
+        },
+        {
+          "gap": "Bisher ungeöffnete Untergruppe Geldmarkt",
+          "source": "assets → assets/money-market",
+          "action": "Regulären Details-Link des Festgeldes in der Vermögensübersicht öffnen; Ansicht visuell ansehen.",
+          "observed": "Fixed-term deposit mit Laufzeit, Fälligkeit, Zins, Betrag und Bezugskonto erreicht. Back und Print sichtbar; nicht betätigt. Direkte URL-Aufrufe zuvor hatten nur die Übersicht als Ausgangsansicht gezeigt und werden nicht als Detailbeleg verwendet.",
+          "result": "closed",
+          "remaining": [
+            "Keine Rückkehrprobe und kein Druck. Andere Geldmarktprodukte, insbesondere Medium-term note, nicht separat untersucht."
+          ]
+        },
+        {
+          "gap": "Bisher ungeöffnete Fondsposition, schmal und Tastatur",
+          "source": "assets/investment-retirement → assets/selfservice-fund-custody/position-details",
+          "action": "Regulären Positionslink öffnen; Desktop ansehen; auf 390×844 umstellen; Fund-details-Disclosure fokussieren und Enter drücken.",
+          "observed": "Fund details mit Kennzahlen, Verlauf, Zeit-/Daten-/Darstellungswahl und Subscribe/Redemption-Links erreicht. Schmal werden Kennzahlen vertikal angeordnet und Zeitraum wird zur Auswahlbox. Enter öffnet Fund details; expanded und zusätzliche Angaben visuell bestätigt. Weitere Disclosures Brief description, Fund structure by asset class und Documents sichtbar.",
+          "result": "partial",
+          "remaining": [
+            "Keine Subscribe-/Redemption-Aktion, Dokumentöffnung oder Druck. Keine vollständige Tabreihenfolge, Fokus-Rückkehr oder Screenreaderprüfung. Andere Fondspositionen/Vorsorgegruppen bleiben ungeprüft."
+          ]
+        }
+      ],
+      "patternUpdates": [
+        {
+          "key": "context-selection",
+          "evidence": "tested",
+          "flow": [
+            "Kontenliste öffnen",
+            "Nichttreffer- und passendes Währungswort eingeben",
+            "Leeren",
+            "All accounts wählen"
+          ],
+          "limits": [
+            "Suche grenzt Optionen sofort ein; Nichttrefferliste ohne sichtbare Erklärung. Keine allgemeine Such-/Barrierefreiheitsfreigabe."
+          ]
+        },
+        {
+          "key": "batch-selection",
+          "evidence": "tested",
+          "flow": [
+            "Einzelwahl",
+            "Filter schliesst Zeile aus",
+            "Filter leeren erhält Wahl",
+            "Select all unter Filter",
+            "Filter leeren erhält Markierungen nur der zuvor passenden Zeilen"
+          ],
+          "limits": [
+            "Kopfcheckbox zeigt bei teilweiser Wahl kein erkennbares mixed; nach gefilterter Gesamtwahl bleibt Kopf-Häkchen trotz unmarkierter wieder sichtbarer Zeile. Keine Pagination/Bulkaktion."
+          ]
+        },
+        {
+          "key": "live-list-filter",
+          "evidence": "tested",
+          "flow": [
+            "All accounts",
+            "CASH",
+            "Details-Link",
+            "Demo nicht unterstützt",
+            "Back: Kontokontext erhalten, lokales Filter leer"
+          ],
+          "limits": [
+            "Ausschliesslich Fehler-Rückweg; echte Bewegungsdetailrückkehr weiter blockiert."
+          ]
+        },
+        {
+          "key": "show-more-disclosure",
+          "evidence": "tested",
+          "flow": [
+            "Fondsdetails auf390px öffnen",
+            "Fund details fokussieren",
+            "Enter",
+            "Zusätzliche Angaben sichtbar und expanded"
+          ],
+          "limits": [
+            "Accordionvariante, keine neue Pattern-ID. Nicht gleichbedeutend mit Vollprüfung der Tastatur- oder Screenreaderbedienung."
+          ]
+        }
+      ],
+      "newPatterns": [],
+      "limits": [
+        "Eigener BrowserOS-neo-Tab. Screenshots visuell angesehen und nicht als Dateien gespeichert.",
+        "Desktop1440×1000 und repräsentativ Fondsdetails390×844 CSS-Pixel.",
+        "Keine Finanzaktion, Speicherung, Löschung, Nachricht, Vertragsaktion, Dateiauswahl oder Upload. Keine personenbezogenen Werte in diesen Dateien.",
+        "Sechs gezielte Prüfungen; geschlossene Lücke bedeutet nur den benannten begrenzten Nachweis. Untergruppen ausserhalb dieser sechs Prüfungen bleiben offen.",
+        "Suche/Bankfilter und Checkboxen ändern nur lokalen Ansichtskontext; keine Aussage über fachliche Korrektheit aller Demowerte.",
+        "Nur regulär geklickte und danach visuell verifizierte Inhalte als Detailbeleg; die direkten URL-Versuche zeigten teilweise Ausgangsübersichten."
+      ]
+    },
+    {
+      "area": "payments",
+      "checks": [
+        {
+          "gap": "payment-filter-reset-apply",
+          "source": "transfer/pending-orders/search-single-orders",
+          "action": "Währung EUR wählen → Search → Suchoptionen öffnen → Reset → erneut Search.",
+          "observed": "Search klappt Kriterien ein und zeigt EUR als aktive Währung. Die Tabelle bleibt bei CHF-Beispielzeilen. Reset stellt das Entwurfscontrol auf All, lässt das aktive EUR-Kriterium zunächst stehen. Erst erneutes Search entfernt das aktive Währungskriterium.",
+          "result": "closed",
+          "remaining": [
+            "Fachliche Filterwirkung nicht belegt: Demozeilen widersprechen dem gewählten Währungskriterium.",
+            "Nicht alle Filtertypen oder Kombinationen geprüft."
+          ]
+        },
+        {
+          "gap": "regular-payment-detail-return",
+          "source": "transfer/pending-orders/search-single-orders → orders-detail → Back",
+          "action": "EUR anwenden, Amount descending wählen, reguläre Details öffnen und mit dem sichtbaren Back-Button zurückkehren.",
+          "observed": "Reguläre Zahlungsdetailseite erfolgreich geöffnet. Nach Back erscheint wieder die Zahlungsübersicht. Aktive EUR-Währung bleibt erhalten; Sortiercontrol steht wieder auf Due date ascending. Kriterienpanel bleibt eingeklappt. Vorherige reine Sortierprobe ohne Währungsfilter zeigte denselben Sortierverlust.",
+          "result": "partial",
+          "remaining": [
+            "Scrollposition nicht numerisch vor/nach gemessen; visuelle Rückkehr lag am Kriterien-/Ergebnisanfang.",
+            "Keine Browser-Zurück-Probe; kein Auswahlkontext in dieser Liste vorhanden.",
+            "Detailansicht und Liste zeigen unterschiedliche Beispieldaten; fachliche Zuordnung nicht geprüft."
+          ]
+        },
+        {
+          "gap": "header-checkbox-partial-and-clear",
+          "source": "transfer/approve",
+          "action": "Eine von zwei Zeilen anklicken → Kopfcheckbox ansehen → Kopfcheckbox anklicken → erneut anklicken.",
+          "observed": "Bei einer markierten Zeile bleibt die Kopfcheckbox visuell leer, ohne Mixed-Strich. Der Snapshot benennt keinen Mixed-Zustand. Erster Kopfklick markiert beide sichtbaren Zeilen und die Kopfcheckbox. Zweiter Kopfklick leert beide Zeilen und Kopfcheckbox; Approve selected ist wieder deaktiviert.",
+          "result": "closed",
+          "remaining": [
+            "Umfang nur für die zwei dargestellten Zeilen belegt.",
+            "Keine Pagination oder Auswahl über Ergebnisseiten sichtbar/geprüft.",
+            "Semantik für Screenreader nicht geprüft; visuell leer ist kein Beweis über interne indeterminate-Eigenschaft.",
+            "Keine Freigabe ausgeführt."
+          ]
+        },
+        {
+          "gap": "selection-after-filter-apply",
+          "source": "transfer/approve",
+          "action": "Unter aktivem EUR-Filter eine Zeile per Klick markieren → Suchoptionen öffnen → Währung All wählen → Search.",
+          "observed": "Markierung aktiviert Approve selected. Search mit All erneuert den Ergebnisbereich; beide weiterhin dargestellten Demozeilen sind danach unmarkiert und Approve selected deaktiviert. Das zuvor aktive Währungskriterium entfällt.",
+          "result": "partial",
+          "remaining": [
+            "Auswahlverlust nach dieser Übernahme belegt; nicht bei allen Filterarten.",
+            "Demo zeigt unter EUR zuvor weiterhin CHF- und EUR-Zeile, daher kein fachlicher Mengeneffekt belegt.",
+            "Kein Test mit verborgenen selektierten Zeilen oder mehreren Ergebnisseiten."
+          ]
+        },
+        {
+          "gap": "conditional-date-retention-and-cancel",
+          "source": "transfer/transfers/account",
+          "action": "Enter date wählen → Datum mit erfundenem künftigem Testdatum ersetzen → Immediately → Enter date.",
+          "observed": "Datumseingabe wurde sichtbar übernommen. Immediately entfernt Datumsfeld; Enter date zeigt denselben geänderten Wert wieder. Kein Betrag eingegeben. Kein Cancel-/Reset-Control im ungesendeten Übertragsformular gefunden; nur Send als Abschlussaktion. Den geänderten Zustand zusätzlich bei 390×844 visuell angesehen.",
+          "result": "partial",
+          "remaining": [
+            "Cancel geänderter Formularwerte mangels sichtbarer Abbruchaktion nicht prüfbar.",
+            "Keine Aussage zu Neuladen/Neunavigation oder Speichersemantik.",
+            "Keine Validierungs-/Send-Aktion ausgeführt."
+          ]
+        },
+        {
+          "gap": "financial-wizard-boundary",
+          "source": "transfer/qr-bill-generator/new/recipient",
+          "action": "Bereits belegten ersten Empfängerschritt und vorhandenes Next gegen die Ausführungsgrenze eingeordnet; keinen Folgeschritt betätigt.",
+          "observed": "Im Ausgangsrundgang sichtbarer QR-Generator beginnt mit vorbefülltem Zahlungsempfänger und Next. Ein ausdrücklich sicherer, nichtfinanzieller Einführungsfolgeschritt war für diesen Bereich nicht belegt. Send/Approve/Generate und Prozessabschlüsse bleiben unbetätigt.",
+          "result": "blocked",
+          "remaining": [
+            "Wizard-Folgeschritte, Review, Validierung und Abschluss bleiben offen.",
+            "Diese Zeile ist eine dokumentierte Ausführungsgrenze, kein neuer visueller Folgeschrittbeleg."
+          ]
+        }
+      ],
+      "patternUpdates": [
+        {
+          "key": "applied-filters",
+          "evidence": "tested",
+          "flow": [
+            "Währungsentwurf wählen",
+            "Search übernimmt und zeigt aktives Kriterium",
+            "Reset leert nur Entwurf",
+            "Erneutes Search entfernt angewandtes Kriterium"
+          ],
+          "limits": [
+            "Demotabelle reagiert fachlich nicht nachvollziehbar auf EUR; nur UI-Übernahme belegt."
+          ]
+        },
+        {
+          "key": "sort-control",
+          "evidence": "tested",
+          "flow": [
+            "Amount descending wählen",
+            "Reguläre Details öffnen",
+            "Mit Back zurück",
+            "Sortierung fällt auf Due date ascending zurück"
+          ],
+          "limits": [
+            "Aktive Währung bleibt erhalten, Sortierung auf diesem Rückweg nicht.",
+            "Kein Browser-Zurück- oder allgemeiner Persistenznachweis."
+          ]
+        },
+        {
+          "key": "batch-selection",
+          "evidence": "tested",
+          "flow": [
+            "Eine Zeile markieren",
+            "Kopf bleibt visuell leer bei Teilmenge",
+            "Kopf anklicken markiert beide sichtbaren Zeilen",
+            "Erneuter Kopfklick leert beide und deaktiviert Folgeaktion",
+            "Erneute Filterübernahme leert vorherige Zeilenauswahl"
+          ],
+          "limits": [
+            "Kein sichtbarer Mixed-Strich bei 1/2 Auswahl.",
+            "Nur zwei sichtbare Demozeilen; keine fachlich korrekte Filtermenge/Pagination belegt.",
+            "Keine Freigabe ausgeführt."
+          ]
+        },
+        {
+          "key": "object-detail-navigation",
+          "evidence": "tested",
+          "flow": [
+            "Angewandte Währung und Sortierung setzen",
+            "Reguläre Zahlungsdetails öffnen",
+            "Sichtbaren Back-Button verwenden",
+            "Filter bleibt erhalten, Sortierung fällt auf Default zurück"
+          ],
+          "limits": [
+            "Scrollposition nicht numerisch verglichen.",
+            "Keine Browser-Zurück-Probe; keine fachliche Zuordnung der Demowerte nachgewiesen."
+          ]
+        },
+        {
+          "key": "conditional-fields",
+          "evidence": "tested",
+          "flow": [
+            "Enter date zeigt Datum",
+            "Geänderten Datumsentwurf eingeben",
+            "Immediately verbirgt Feld",
+            "Enter date zeigt geänderten Wert wieder"
+          ],
+          "limits": [
+            "Werterhalt innerhalb desselben ungesendeten Formulars belegt.",
+            "Keine sichtbare Cancel-/Reset-Aktion, keine Aussage über Neuaufruf oder Persistenz.",
+            "Geänderter Zustand auch 390×844 visuell gesehen."
+          ]
+        }
+      ],
+      "newPatterns": [],
+      "limits": [
+        "Stand 20. November 2026; gezielte Folgeprüfung der sichtbaren Demo, keine allgemeine Produktfreigabe.",
+        "Eigener BrowserOS-Tab, Screens screenshot-visuell angesehen; keine Screenshots als Dateien gespeichert und keine personenbezogenen Demo-Werte übernommen.",
+        "Keine Finanzübermittlung, Freigabe, Generierung, Speicherung, Löschung, Vertragsaktion oder Upload ausgeführt.",
+        "Ein fokussierter Checkbox-Space-Versuch zeigte keine verifizierte Aktivierung; Auswahlbefunde beruhen auf Klicks. Daraus folgt keine allgemeine Tastaturbewertung.",
+        "Beim Suchen wurde versehentlich die globale Suche geöffnet; über Close dialogue wieder verlassen, keine Suchanfrage gesendet.",
+        "Frühere payments-Dateien bleiben unverändert; patternUpdates sind Ergänzungen für zentrale Synthese, keine zusätzlichen IDs."
+      ]
+    },
+    {
+      "area": "documents-insurance-products-services",
+      "checks": [
+        {
+          "gap": "Dokumentfilter: Entwurf, Übernahme, Reset und selbst erzeugter Nulltreffer",
+          "source": "download/documents",
+          "action": "Category Taxes wählen, vor Search Ergebnis ansehen, Search; Suchoptionen öffnen und Reset; Search; Datumsrange 01.02.2025–02.02.2025 übernehmen; Category Mortgage und Search. Danach Reset und Search.",
+          "observed": "Vor Übernahme bleiben neun Dokumentzeilen; Search reduziert Taxes auf eine Zeile, zeigt Category/Type als aktive Kriterien und klappt Suche ein. Reset setzt Formular auf All zurück, aktive Taxes-Kriterien und eine Ergebniszeile bleiben zunächst bestehen. Erst erneutes Search stellt neun Zeilen wieder her. Datumsrange wird als aktives Kriterium angezeigt, trotzdem bleiben alle neun außerhalb der Range datierten Zeilen sichtbar. Mortgage+Search erzeugt ausdrücklich keine passenden Dokumente. Reset+Search stellt Liste wieder her.",
+          "result": "closed",
+          "remaining": [
+            "Geschlossen ist die Frage nach sichtbarer Übernahmelogik und Nulltreffer-Rückweg, keine Bestätigung korrekter Filterergebnisse.",
+            "Datumsfilterwirkung in dieser Demo widerspricht der angezeigten Range; fachliche Suchkorrektheit bleibt offen.",
+            "Andere Kategorien, Produkt-/Beziehungs-/Statusfilter und Invalid-Datum nicht geprüft."
+          ]
+        },
+        {
+          "gap": "Auswahlumfang: gemischte Objektzustände, Abwahl, Filterwechsel und Pagination",
+          "source": "download/documents",
+          "action": "Eine ungelesene und eine gelesene Zeile wählen; Select all, einzelne erste Zeile abwählen; Kategorie Taxes anwenden. Keine Bulk- oder Zeilenaktion ausführen.",
+          "observed": "Bei nur ungelesener Auswahl ist Read aktiv, Unread deaktiviert. Bei gemischter Auswahl sind Read und Unread sowie Archive/Download aktiv. Nach Select all und Abwahl der ersten Zeile bleiben die übrigen Zeilen markiert. Die Kopfcheckbox zeigt visuell weder Häkchen noch gemischten Strich. Nach Filterwechsel+Search ist die eine passende Zeile unmarkiert und alle Bulkaktionen sind deaktiviert. In der neun Zeilen umfassenden Dokumentliste wurde keine Pagination gefunden.",
+          "result": "partial",
+          "remaining": [
+            "Visueller gemischter Kopfzustand nicht belegt; Checked-/Indeterminate-Semantik und Screenreader nicht geprüft.",
+            "Auswahl über mehrere Ergebnisseiten mangels sichtbarer Pagination nicht prüfbar.",
+            "Keine Aktion ausgeführt; genaue Download-/Read-/Archive-Semantik offen."
+          ]
+        },
+        {
+          "gap": "Geänderten sicheren lokalen Formulardraft abbrechen und erneut öffnen",
+          "source": "services.json: edit-entry-and-cancel; insurances/life-insurance-detail/edit-investment-topic",
+          "action": "Sicherheitsgrenze anhand des vorhandenen Befunds bewertet; keinen Vertrags-/Einstellungswert geändert. Dokumentfilterentwurf geändert und zurückgesetzt, aber nicht als Cancel-Test umgedeutet.",
+          "observed": "Der zuvor geöffnete Änderungsentwurf betrifft einen Versicherungsvertrag. Sicher fehlendes Autosave für diesen oder andere Einstellungsformulare ist nicht belegt. Der lokale Suchentwurf bietet Reset und Einklappen, keinen Cancel-Abbruch. Ein belastbarer geänderter Cancel-/Wiederöffnen-Test lässt sich damit nicht innerhalb der erteilten Grenze nachweisen.",
+          "result": "blocked",
+          "remaining": [
+            "Rein lokalen sicheren Demoentwurf mit explizitem Cancel und bekannter Speichersemantik bereitstellen oder gesonderte Testumgebung verwenden.",
+            "Bisher nur unverändertes Cancel für Investment theme belegt."
+          ]
+        },
+        {
+          "gap": "Vollständige sichere fünfteilige Einführung mit Rückwegen",
+          "source": "contact-support → E-finance in a nutshell",
+          "action": "Slides 1–5 mit Next besuchen; Back von 5 auf 4; direkte Auswahl Slide 5; Close am letzten Schritt.",
+          "observed": "Fünf Inhalte: Welcome to e-finance, Your personal homepage, Payment assistant, Documents, The Services menu. Aktiver Indikator folgt dem Schritt; ab Schritt 2 Back vorhanden. Schritt 5 ersetzt Next durch Close. Back zeigt wieder Documents/Slide 4. Direkter Slide-5-Button führt erneut zum letzten Inhalt. Close verlässt Dialog und Support ist wieder zugänglich. Screenshots der neuen Schritte und Rückschritt visuell angesehen.",
+          "result": "closed",
+          "remaining": [
+            "Keine Aussage über fachliche Richtigkeit der Einführung oder vollständige Barrierefreiheit.",
+            "Kein Geschäftsprozess oder Vertragswizard geprüft."
+          ]
+        },
+        {
+          "gap": "Repräsentative schmale Ansicht und Tastaturbedienung",
+          "source": "contact-support → Einführung bei 390×844 CSS-Pixeln",
+          "action": "Einführung öffnen; Next gezielt fokussieren und Enter drücken; Close-Control fokussieren und Tab drücken; Escape.",
+          "observed": "Next+Enter wechselt von Welcome zu Your personal homepage, aktiver Indikator 2 und Back sichtbar. Schmaler Dialog zeigt umgebrochenen Titel/Text und untere Navigationscontrols. Tab nach fokussiertem Close erreicht den Inhaltsbereich mit sichtbarer Umrandung; Enter dort ändert keinen Schritt. Escape schließt den Dialog. Screenshot zeigt danach sichtbaren Fokusrahmen wieder auf E-finance in a nutshell im Support.",
+          "result": "partial",
+          "remaining": [
+            "Next wurde gezielt fokussiert; keine vollständige Tab-Reihenfolge von Seitenbeginn geprüft.",
+            "Fokusfalle, sämtliche Controls, Vergrößerung, Screenreader und alle fünf Schritte schmal nicht geprüft.",
+            "Der sichtbare Fokusrückweg gilt für diesen Escape-Versuch."
+          ]
+        }
+      ],
+      "patternUpdates": [
+        {
+          "key": "apply-and-reset-filter",
+          "evidence": "tested",
+          "flow": [
+            "Dokumentkategorie im Suchentwurf wählen",
+            "Ergebnis bleibt vor Search bestehen",
+            "Search übernimmt, zeigt aktive Kriterien und klappt Suche ein",
+            "Reset setzt nur Controls zurück",
+            "Erneutes Search übernimmt Rücksetzung"
+          ],
+          "limits": [
+            "Zusätzliche Quelle download/documents; Alias/Zuordnung im Hauptkatalog prüfen.",
+            "Datumsrange wurde angezeigt, aber Zeilen lagen weiter außerhalb; keine fachliche Korrektheitsfreigabe."
+          ]
+        },
+        {
+          "key": "empty-filter-result",
+          "evidence": "tested",
+          "flow": [
+            "Category Mortgage wählen",
+            "Search",
+            "Keine passenden Dokumente",
+            "Suchoptionen öffnen",
+            "Reset",
+            "Search",
+            "Dokumentliste wieder sichtbar"
+          ],
+          "limits": [
+            "Nur repräsentative Kategorie; keine fachliche Filterkorrektheit über alle Kriterien."
+          ]
+        },
+        {
+          "key": "selection-dependent-actions",
+          "evidence": "tested",
+          "flow": [
+            "Ungelesene und gelesene Dokumentzeile markieren",
+            "Beide Statusaktionen aktiv",
+            "Select all",
+            "Eine Zeile abwählen",
+            "Filter+Search",
+            "Auswahl leer und Bulkaktionen deaktiviert"
+          ],
+          "limits": [
+            "Variante von batch-selection; keine Ausführung.",
+            "Kein sichtbarer gemischter Kopfmarker; Semantik ungeprüft.",
+            "Keine sichtbare Pagination in dieser Probe."
+          ]
+        },
+        {
+          "key": "guided-feature-tour",
+          "evidence": "tested",
+          "flow": [
+            "Support-Einführung öffnen",
+            "Next bis Slide 5",
+            "Back nach Slide 4",
+            "Direkter Sprung nach Slide 5",
+            "Close",
+            "Schmal erneut öffnen",
+            "Fokussiertes Next mit Enter",
+            "Escape",
+            "Fokus sichtbar wieder am Einstieg"
+          ],
+          "limits": [
+            "Breit fünf sichere Informationsschritte; schmal nur Schritt1–2.",
+            "Keine vollständige Tastatur-/Screenreaderprüfung; kein Finanzwizard."
+          ]
+        }
+      ],
+      "newPatterns": [],
+      "limits": [
+        "Stand 20.11.2026. Fünf gezielte Folgeprüfungen; closed bedeutet konkrete Beweisfrage im beschriebenen Umfang beantwortet, keine Produktfreigabe.",
+        "BrowserOS neo, eigener Tab. 1440×1000 breit, 390×844 repräsentativ schmal. Screenshots visuell angesehen, keine Screenshotdateien gespeichert.",
+        "Keine personenbezogenen Werte in Bericht übernommen; nur künstliche Suchdaten und öffentliche UI-Bezeichnungen.",
+        "Keine Bestellung, Vertragsänderung, Speicherung, Löschung, Dateiaktion, Nachricht oder Kontaktaufnahme ausgeführt.",
+        "Vorherige Berichte unverändert; Hauptkatalog dedupliziert Patternupdates."
+      ]
+    }
+  ]
+}

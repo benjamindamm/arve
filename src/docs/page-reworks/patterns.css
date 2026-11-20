@@ -1,0 +1,38 @@
+.patterns-rework { --pattern-border: var(--border, #d9dde2); --pattern-muted: var(--muted-foreground, #536174); }
+.patterns-rework > section, .patterns-rework > details { margin-block: 1.5rem; }
+.patterns-rework .pattern-controls { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: .8rem; }
+.patterns-rework label { display: grid; gap: .35rem; font-size: .875rem; font-weight: 600; min-width: 0; }
+.patterns-rework input, .patterns-rework select { width: 100%; min-width: 0; border: 1px solid var(--pattern-border); background: var(--background, #fff); color: inherit; border-radius: .4rem; padding: .65rem; font: inherit; }
+.patterns-rework button { font: inherit; color: inherit; }
+.patterns-rework :is(button, input, select, summary):focus-visible { outline: 3px solid var(--ring, #2756b7); outline-offset: 3px; }
+.patterns-rework .pattern-result-line { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; margin-block: .7rem; font-size: .875rem; }
+.patterns-rework .pattern-result-line p { margin: 0; }
+.patterns-rework .pattern-result-line button { background: transparent; border: 0; text-decoration: underline; cursor: pointer; padding: .4rem; }
+.patterns-rework .pattern-workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: start; gap: 1.2rem; }
+.patterns-rework .pattern-results { max-height: 43rem; overflow-y: auto; padding: .25rem; border: 1px solid var(--pattern-border); border-radius: .6rem; }
+.patterns-rework .pattern-results ul { list-style: none; margin: 0; padding: 0; }
+.patterns-rework .pattern-results li { margin: 0; padding: 0; }
+.patterns-rework .pattern-results button { display: grid; gap: .3rem; width: 100%; text-align: left; background: transparent; border: 0; border-bottom: 1px solid var(--pattern-border); padding: .85rem; cursor: pointer; border-radius: .3rem; overflow-wrap: anywhere; }
+.patterns-rework .pattern-results button[aria-pressed='true'] { background: var(--muted, #edf1f6); box-shadow: inset 3px 0 currentColor; }
+.patterns-rework .pattern-results button:hover { background: var(--muted, #edf1f6); }
+.patterns-rework .pattern-row-meta { display: flex; gap: .6rem; justify-content: space-between; font-size: .75rem; color: var(--pattern-muted); }
+.patterns-rework .pattern-task { font-size: .875rem; line-height: 1.45; }
+.patterns-rework .pattern-taxonomy { font-size: .75rem; color: var(--pattern-muted); line-height: 1.55; overflow-wrap: anywhere; }
+.patterns-rework .pattern-detail { border: 1px solid var(--pattern-border); border-radius: .6rem; padding: 1.25rem; min-width: 0; }
+.patterns-rework .pattern-detail-meta { font-size: .8rem; color: var(--pattern-muted); margin: 0; }
+.patterns-rework .pattern-detail h2 { font-size: 1.3rem; margin-top: .6rem; }
+.patterns-rework .pattern-detail h3 { font-size: 1rem; margin-block: 1.4rem .8rem; }
+.patterns-rework .pattern-detail ol { padding-left: 1.6rem; }
+.patterns-rework .pattern-detail li { padding-left: .25rem; margin-block: 1rem; }
+.patterns-rework .pattern-detail li p { margin-block: .3rem; font-size: .875rem; }
+.patterns-rework details { border-top: 1px solid var(--pattern-border); padding-top: .9rem; font-size: .875rem; }
+.patterns-rework summary { cursor: pointer; font-weight: 600; }
+.patterns-rework summary > div { display: inline; }
+.patterns-rework summary h2 { display: inline; font-size: 1rem; }
+@media (max-width: 720px) {
+  .patterns-rework .pattern-controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .patterns-rework .pattern-controls label:first-child { grid-column: 1 / -1; }
+  .patterns-rework .pattern-workspace { grid-template-columns: minmax(0, 1fr); }
+  .patterns-rework .pattern-results { max-height: 24rem; }
+  .patterns-rework .pattern-detail { padding: 1rem; }
+}

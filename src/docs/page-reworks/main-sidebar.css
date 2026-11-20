@@ -1,0 +1,39 @@
+.main-sidebar-rework { display: grid; gap: 2rem; min-width: 0; }
+.main-sidebar-rework > section { min-width: 0; }
+.main-sidebar-rework h2 { margin: 0 0 1rem; }
+.main-sidebar-rework p { line-height: 1.65; }
+.main-sidebar-rework .ms-example { margin: 0 0 1.5rem; min-width: 0; }
+.main-sidebar-rework figcaption { margin-bottom: .65rem; font-weight: 600; font-size: .85rem; }
+.main-sidebar-rework .ms-container { container-type: inline-size; min-width: 0; }
+.main-sidebar-rework .ms-shell { border: 1px solid var(--border, #d9dce1); border-radius: .6rem; padding: 1rem; background: var(--background, #fff); overflow-wrap: anywhere; }
+.main-sidebar-rework .ms-header { display: grid; gap: .3rem; padding-bottom: 1rem; }
+.main-sidebar-rework .ms-header strong { font-size: 1.15rem; }
+.main-sidebar-rework .ms-label { display: block; font-size: .72rem; font-weight: 600; color: var(--muted-foreground, #606874); line-height: 1.5; }
+.main-sidebar-rework .ms-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding: .75rem 0; border-block: 1px solid var(--border, #d9dce1); margin-bottom: 1rem; font-size: .85rem; }
+.main-sidebar-rework .ms-nav .ms-label { flex-basis: 100%; }
+.main-sidebar-rework a { text-underline-offset: .2em; }
+.main-sidebar-rework a:focus-visible, .main-sidebar-rework summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.main-sidebar-rework .ms-columns { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; align-items: start; }
+.main-sidebar-rework .ms-main, .main-sidebar-rework .ms-aside { min-width: 0; padding: 1rem; border: 1px solid var(--border, #d9dce1); border-radius: .4rem; }
+.main-sidebar-rework .ms-main h3 { margin: .5rem 0 .8rem; font-size: 1.25rem; }
+.main-sidebar-rework .ms-main h4, .main-sidebar-rework .ms-aside h4 { margin: 1rem 0 .5rem; font-size: 1rem; }
+.main-sidebar-rework .ms-main p { margin: .65rem 0; font-size: .9rem; }
+.main-sidebar-rework .ms-aside { background: var(--muted, #f5f6f8); }
+.main-sidebar-rework .ms-aside dl { margin: 0; font-size: .85rem; }
+.main-sidebar-rework .ms-aside dl > div { display: flex; flex-wrap: wrap; gap: .25rem .8rem; justify-content: space-between; margin: .45rem 0; }
+.main-sidebar-rework .ms-aside dd { margin: 0; font-weight: 600; }
+.main-sidebar-rework .ms-aside ul { padding-left: 1.1rem; font-size: .85rem; }
+.main-sidebar-rework .ms-aside li + li { margin-top: .55rem; }
+.main-sidebar-rework .ms-long { margin-top: 1rem; font-size: .9rem; }
+.main-sidebar-rework summary { cursor: pointer; line-height: 1.5; }
+.main-sidebar-rework .ms-narrow { max-width: 22rem; }
+.main-sidebar-rework .ms-note { color: var(--muted-foreground, #606874); font-size: .9rem; }
+.main-sidebar-rework .ms-sources { border-top: 1px solid var(--border, #d9dce1); padding-top: 1rem; }
+.main-sidebar-rework .ms-sources > summary { font-weight: 600; }
+.main-sidebar-rework [id] { scroll-margin-top: 6rem; }
+@container (min-width: 42rem) {
+  .main-sidebar-rework .ms-columns { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+  @media (min-height: 50rem) {
+    .main-sidebar-rework .ms-aside { position: sticky; top: 5rem; }
+  }
+}

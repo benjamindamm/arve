@@ -14,8 +14,8 @@ export default async function Home() {
         <div className="shell platform-intro">
           <div className="platform-intro-copy">
             <p className="platform-eyebrow">Die Plattform für eure Design-Systeme</p>
-            <h1 id="arve-title">Gemeinsam gestalten.<br />Konsistent umsetzen.</h1>
-            <p className="platform-lead">Arve verbindet Designwissen, UI Contracts und eure Komponentenbibliotheken. Damit Teams und KI-Agenten auf derselben Grundlage arbeiten.</p>
+            <h1 id="arve-title">UX für Teams und Agenten</h1>
+            <p className="platform-lead">Arve verbindet Design-Richtlinien und definierte Bedienregeln zu einer Wissensdatenbank für UI, UX und Technik.</p>
             <div className="platform-actions">
               <Link className="platform-primary-link" href="#workflows">Arbeitswege entdecken <span aria-hidden="true">↓</span></Link>
               <Link className="platform-text-link" href="#systeme">Design-Systeme öffnen <span aria-hidden="true">↗</span></Link>
@@ -29,7 +29,7 @@ export default async function Home() {
               <div><strong>UI Contracts</strong><span>Versionierte Vorgaben</span></div>
             </div>
             <div className="platform-map-connector" aria-hidden="true">↓</div>
-            <div className="platform-map-center"><span aria-hidden="true" className="arve-mark" /><strong>Arve</strong><span>Ein veröffentlichter Stand</span></div>
+            <div className="platform-map-center"><span aria-hidden="true" className="arve-mark" /><strong>Arve</strong><span>Eine Quelle, ein Handbuch</span></div>
             <div className="platform-map-branches" aria-hidden="true"><span>↓</span><span>↓</span></div>
             <div className="platform-map-readers">
               <div><strong>Teams</strong><span>Im Portal nachschlagen</span></div>
@@ -45,8 +45,8 @@ export default async function Home() {
         <div className="shell platform-mcp-grid">
           <div className="platform-mcp-copy">
             <p className="platform-eyebrow">Mit KI arbeiten</p>
-            <h2 id="mcp-title">Euer Agent kennt<br />eure Regeln.</h2>
-            <p>Über MCP verbindet ihr euer KI-Werkzeug mit Arve. Der Agent findet die veröffentlichten Seiten, liest die verknüpften Contracts und kennt den Stand der Umsetzung.</p>
+            <h2 id="mcp-title">Der Agent kennt die Regeln</h2>
+            <p>Der Agent verbindet sich über MCP zum Design-System. Er fragt die Bibliothek an Komponenten ab und entscheidet nach festgelegten UX-Regeln deren Einsatz.</p>
             <dl className="platform-responsibilities">
               <div><dt>MCP liefert Wissen.</dt><dd>Direkt aus eurem Design-System.</dd></div>
               <div><dt>Der Skill führt die Arbeit.</dt><dd>Auswählen, umsetzen, prüfen – mit UI Contracts.</dd></div>
@@ -75,7 +75,6 @@ export default async function Home() {
           <p className="platform-eyebrow">Einsteigen</p>
           <h2 id="systeme-title">Eure Systeme.<br />Ein gemeinsamer Ort.</h2>
           <p>Jedes Design-System hat eigene Grundlagen, Komponenten, Layouts und UX-Patterns. Der Umsetzungsstand bleibt je Plattform sichtbar.</p>
-          <ul className="platform-targets" aria-label="Abbildbare Zielplattformen"><li>Web · Mobile & Desktop</li><li>iOS</li><li>Android</li></ul>
         </div>
         <div className="platform-directory-list">
           <p className="platform-eyebrow">Design-System auswählen</p>
@@ -86,7 +85,6 @@ export default async function Home() {
               </li>
             ))}
           </ul> : <p>Noch kein Design-System angelegt. <Link className="platform-text-link" href="/admin/collections/design-systems/create">Im CMS anlegen ↗</Link></p>}
-          <p className="platform-directory-note">Im System findet ihr die Dokumentation und verfügbare Live-Beispiele.</p>
         </div>
       </section>
     </main>
