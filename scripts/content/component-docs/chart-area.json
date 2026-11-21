@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-area",
+  "title": "Chart Area",
+  "summary": "Zeigt den Verlauf einer Menge über die Zeit als gefüllte Fläche. Zusammenfassung und vollständige Datentabelle machen die Aussage auch ohne Zeigen auf einzelne Punkte verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Menge im Zeitverlauf zeigen",
+      "paragraphs": [
+        "Chart Area zeigt eine geordnete Zeitreihe mit gefüllter Fläche unter der Linie. Setze das Flächendiagramm ein, wenn neben dem Verlauf auch die Grössenordnung auffallen soll, etwa die monatliche Besucherzahl am Desktop. Halte für diese Zähldaten die Nullbasis sichtbar, damit die Füllhöhe die Menge nicht überzeichnet.",
+        "Wähle Chart Line, wenn kleine Veränderungen oder mehrere Verläufe im Vordergrund stehen; überlagerte Flächen können einander verdecken. Für den direkten Vergleich einzelner Monate eignet sich Chart Bar. Wenn du hauptsächlich genaue Zahlen zeigen möchtest, reicht eine Tabelle."
+      ],
+      "links": [
+        {
+          "text": "Chart Line",
+          "href": "/systems/shadcn/components/chart-line",
+          "paragraph": 1
+        },
+        {
+          "text": "Chart Bar",
+          "href": "/systems/shadcn/components/chart-bar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Sechs Monate, ein deutlicher Einbruch",
+      "paragraphs": [
+        "Der Entwurf zeigt die gebundenen Beispieldaten für Januar bis Juni 2024: Januar 186, Februar 305, März 237, April 73, Mai 209 und Juni 214 Besucher am Desktop. Die Aussage lautet: «Nach dem Tief im April steigt die Zahl bis Juni auf 214.» Das beschreibt den beobachteten Verlauf, ohne eine Ursache zu behaupten.",
+        "Die Fläche beginnt bei null, die Tabelle bleibt unmittelbar darunter. Geradlinige Verbindungen dienen hier der statischen Illustration. Das ursprüngliche Laufzeitbeispiel verwendet eine natürlich geglättete Kurve; deren Zwischenpunkte sind keine zusätzlich erhobenen Werte. Die Fläche stellt auch keine aufaddierte Halbjahreszahl dar."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-area.svg",
+        "alt": "Flächendiagramm mit sechs Monatswerten für Desktop-Besucher, Nullbasis, Zusammenfassung und vollständiger Wertetabelle. Februar erreicht 305, April fällt auf 73.",
+        "caption": "Statische Illustration · gebundene Beispieldaten, geradlinige Verbindung statt Laufzeitglättung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Diagramm und Zahlen zusammenhalten",
+      "paragraphs": [
+        "Eine gemeinsame Abbildung umfasst Titel, kurze Interpretation, Diagramm, Legende und vollständige Datentabelle. Die Monatsachse erhält die zeitliche Reihenfolge; die senkrechte Skala macht die Anzahl ablesbar. Die Füllung verbindet den Verlauf optisch mit seiner Basis.",
+        "Platziere «Desktop» nahe beim Diagramm als Serienbezeichnung. Ein zusätzlicher Hinweis beim Zeigen auf einen Monat kann dessen Namen und Wert wiederholen. Er ersetzt weder die Tabelle noch die dauerhaft sichtbare Aussage. Bei wenig Platz darf die Tabelle seitlich scrollen; ihre Zeilen- und Spaltenüberschriften müssen erhalten bleiben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Wahlmöglichkeiten beim ergänzenden Hinweis",
+      "paragraphs": [
+        "Die Referenz beschreibt eine einzelne Desktop-Serie als Flächendiagramm; eigene Grössen- oder gestapelte Flächenvarianten sind hier nicht festgelegt. Helle und dunkle Serienfarben lassen sich über die Diagrammkonfiguration bestimmen.",
+        "Der Tooltip bietet einen Punkt, eine Linie oder eine gestrichelte Markierung; der Punkt ist die Voreinstellung. Wähle eine Markierung, die zur Serienkennzeichnung passt. Titel und Markierung können ausgeblendet und Werte formatiert werden. Behalte dabei alle Informationen bei, die zum Verständnis von Monat, Serie und Einheit benötigt werden."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Aktualisieren ohne widersprüchliche Werte",
+      "paragraphs": [
+        "Mit vorhandenen Daten erscheinen Diagramm, Tabelle und Zusammenfassung. Beim Datenwechsel aktualisiert die umgebende Anwendung alle drei aus demselben Datensatz und entfernt einen alten Tooltip. Beim Zeigen auf einen gültigen Monat kann ein ergänzender Hinweis erscheinen.",
+        "Ohne Daten braucht es eine klare Meldung wie «Für diesen Zeitraum liegen keine Besucherzahlen vor». Bei einem Fehler passt «Besucherzahlen konnten nicht geladen werden». Beide Fälle ersetzen die bisherige Darstellung; eine leere oder fehlerhafte Antwort darf nicht als sechs Monate mit null Besuchern erscheinen. Laden und erneutes Abrufen gestaltet die Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zeitraum und Einheit ausdrücklich nennen",
+      "paragraphs": [
+        "«Besucher am Desktop · Januar bis Juni 2024» sagt mehr als «Statistik». Nenne die Einheit als Anzahl, nicht als Prozent oder Umsatz. Verwende im Diagramm kurze Monatsnamen und in der Tabelle eindeutige Monatsangaben.",
+        "Eine gute Zusammenfassung benennt den Einbruch im April und die anschliessende Erholung. «Stetiges Wachstum» wäre bei diesen Werten falsch. Auch der Anstieg von Mai 209 auf Juni 214 begründet allein keine Aussage über künftiges Wachstum. Prüfe Wachstumsangaben, bevor du sie übernimmst: Von 209 auf 214 sind es rund 2,4 Prozent, obwohl der ursprüngliche Beispielfooter 5,2 Prozent nennt. Ergänze in echten Auswertungen die fachliche Definition der gezählten Besucher."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Alle Werte ohne Zeiger erreichbar",
+      "paragraphs": [
+        "In dieser Referenz ist die Grafik eine ergänzende, für assistive Technik ausgeblendete Darstellung. Sie erhält keinen eigenen Fokus und keine erfundene Pfeiltastenbedienung. Die vollständige native Tabelle bietet sämtliche Werte mit Zeilen- und Spaltenüberschriften; Titel und Zusammenfassung benennen die Abbildung.",
+        "Der ergänzende Tooltip ist kein separat fokussierbares Bedienelement. Escape blendet ihn an der aktuellen Diagrammposition aus, bis sich die Quellkoordinate ändert. Die Daten bleiben sichtbar. Zusätzliche Zeitraumfilter oder Schaltflächen brauchen ihre eigene Tastaturbedienung und erkennbare Fokusmarkierung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine bewusste Zusammenstellung",
+      "paragraphs": [
+        "Chart Area ist eine festgelegte Zusammenstellung aus den Base-UI-Chart-Bausteinen und einem Recharts-Flächendiagramm, kein eigener zusätzlicher Export von shadcn. Der Container stellt Kontext und Grössenanpassung bereit; die Anwendung liefert Daten, Serienkonfiguration und ausreichend Platz.",
+        "Die HTML-Referenz verbindet die Abbildung mit ihrer sichtbaren Beschriftung und Zusammenfassung. Die Tabelle ist die vollständige Textalternative. Legende und Tooltip berechnen keine Summen und erstellen diese Alternative nicht automatisch. Eine klickbare Legende zum Filtern wäre zusätzliche Bedienung und braucht einen passenden Auswahlvertrag."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz tatsächlich belegt",
+      "paragraphs": [
+        "Abgeglichen sind Komponentenbeschreibung, UX-Regeln, Schnittstelle, CSS, Zustandsmodell, HTML/ARIA und Zustandsbeispiele. Die gebundenen Originalquellen unterscheiden den Base-UI-Wrapper vom offiziellen Flächenbeispiel mit sechs Monatswerten.",
+        "Die Quellen beschreiben eine begrenzte React-Referenz. Diese redaktionelle Illustration belegt weder die Laufzeitglättung noch Pixelgleichheit oder die Zugänglichkeit einer späteren Anwendung. Die Bedeutung «Besucher» und das Jahr 2024 sind angegeben; eine fachliche Zählmethode fehlt. Die pauschale Wachstumsangabe des Originalfooters wurde anhand der Werte korrigiert."
+      ]
+    }
+  ]
+}

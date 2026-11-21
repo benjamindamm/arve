@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-radial",
+  "title": "Chart Radial",
+  "summary": "Mit radialen Balken vergleichst du wenige Zählwerte. Eine gemeinsame Skala und die vollständige Datentabelle machen die Mengen verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Wenige Mengen im Kreis vergleichen",
+      "paragraphs": [
+        "Mit Chart Radial vergleichst du Zählwerte weniger Kategorien als konzentrische Balken. Wähle die Darstellung, wenn die runde Anordnung in deiner Übersicht hilfreich ist und genaue Werte daneben stehen. Sie beschreibt hier weder Zielerreichung noch Prozentanteile.",
+        "Wenn du eine Rangfolge oder kleine Unterschiede schnell erkennen musst, ist Chart Bar meist leichter lesbar: Die Balken beginnen auf einer gemeinsamen geraden Grundlinie. Für einen erreichten Anteil an einem festgelegten Ziel passt Progress. Leite ein solches Ziel niemals allein aus einem Kreis ab."
+      ],
+      "links": [
+        {
+          "text": "Chart Bar",
+          "href": "/systems/shadcn/components/chart-bar",
+          "paragraph": 1
+        },
+        {
+          "text": "Progress",
+          "href": "/systems/shadcn/components/progress",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Anfragen nach Eingangskanal",
+      "paragraphs": [
+        "Der Entwurf zeigt fünf Eingangskanäle: Portal 275, E-Mail 200, Telefon 187, Schalter 173 und Brief 90 Anfragen. Diese redaktionellen Beispieldaten beschreiben einen frei gewählten Berichtsmonat. Die Tabelle folgt den Ringen von aussen nach innen.",
+        "Alle Ringe beginnen oben und verwenden dieselbe Winkelskala von 0 bis 300 Anfragen. 90 belegt deshalb genau 30 Prozent eines Vollkreises, 275 rund 91,7 Prozent. Das sind Anteile am Skalenmaximum 300, keine Anteile an allen Anfragen. Vergleiche die Winkel und Zahlen: Ein äusserer Ring hat bei gleichem Wert einen längeren Bogen als ein innerer."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-radial.svg",
+        "alt": "Fünf radiale Balken für Eingangskanäle mit 275, 200, 187, 173 und 90 Anfragen; daneben die exakten Werte. Voller Kreis entspricht 300 Anfragen.",
+        "caption": "Statische Illustration · Redaktionelles Zahlenbeispiel mit gemeinsamer Winkelskala, keine Laufzeitvorschau."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Grafik, Erklärung und Werte zusammenhalten",
+      "paragraphs": [
+        "Ein Titel benennt die Auswertung; eine kurze Zusammenfassung erklärt Einheit und wichtigste Aussage. Darunter stehen die radialen Balken mit ihrer Zuordnung sowie die vollständige Datentabelle. Halte diese Teile räumlich zusammen, damit du die Grafik ohne Suche nach einer entfernten Legende lesen kannst.",
+        "Die Tabelle braucht Kategorien als Zeilenüberschriften und eine beschriftete Wertespalte. Ein zusätzlicher Hinweis beim Überfahren darf einzelne Werte wiederholen. Er ersetzt weder Tabelle noch Zusammenfassung. Bei wenig Platz kann die Tabelle innerhalb ihres Bereichs horizontal scrollen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Hinweise gestalten, Skala bewusst festlegen",
+      "paragraphs": [
+        "Eine eigene Auswahl an Grössen oder radialen Diagrammtypen ist für diese Referenz nicht festgelegt. Die konkrete Darstellung entsteht aus Chart-Bausteinen und einem Recharts-Diagramm. Skalenmaximum und Ringanordnung im Beispiel sind redaktionelle Entscheidungen.",
+        "Belegt sind Punkt, Linie oder gestrichelte Linie als Indikator im ergänzenden Tooltip. Wähle eine Form, die zu deiner Serienkennzeichnung passt. Beschriftung und Indikator lassen sich dort ausblenden; erhalte die Zuordnung dann über den übrigen Inhalt. Helle und dunkle Serienfarben kannst du konfigurieren, ohne damit eine zusätzliche Datenbedeutung zu erzeugen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Datenwechsel und fehlende Werte erklären",
+      "paragraphs": [
+        "Bei verfügbaren Daten zeigt die Referenz Grafik, Tabelle und Zusammenfassung. Bei einem Datenwechsel aktualisierst du alle drei aus demselben Datenbestand und entfernst einen alten Hinweis. So bleibt kein Tooltip mit einem Wert der vorherigen Auswahl stehen.",
+        "Für eine leere Ergebnismenge zeigst du eine klare Meldung wie «Keine Anfragen in diesem Zeitraum». Bei einem Ladefehler benennst du das Problem und bietest gegebenenfalls einen erneuten Versuch an. Ein leerer oder fehlgeschlagener Abruf darf nicht wie fünf gemessene Nullwerte aussehen. Diese Rückmeldungen verantwortet die umgebende Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Einheit und Bezugsgrösse sichtbar nennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Anfragen nach Eingangskanal · Oktober» und «Anzahl Anfragen». «Auswertung» allein lässt offen, was du zählst. Nutze kurze, unterscheidbare Kategorien und dieselben Bezeichnungen in Grafik, Legende und Tabelle.",
+        "Nenne eine verwendete Skala ausdrücklich: «Voller Kreis = 300 Anfragen» verhindert die Verwechslung mit 100 Prozent Zielerreichung. Schreibe «75 % erledigt» nur, wenn Grundgesamtheit und erledigter Anteil tatsächlich vorliegen. Vermeide eine dekorative Prozentzahl in der Kreismitte, wenn deine Daten lediglich Mengen vergleichen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Werte lesen, statt Ringe fokussieren",
+      "paragraphs": [
+        "Die gewählte Referenz macht die Grafik für assistierende Technik redundant und bietet alle Werte ständig in einer nativen Tabelle an. Du brauchst weder Pfeiltasten am Ring noch einen eigenen Fokuspunkt für jeden Datenwert. Titel und Zusammenfassung benennen die gesamte Abbildung.",
+        "Der ergänzende Tooltip hat keinen eigenen Tastaturfokus. Escape blendet ihn an der aktuellen Zeigerposition aus; die Daten bleiben lesbar. Erst eine veränderte Quellkoordinate kann dort wieder einen Hinweis auslösen. Zusätzliche Filter oder Schaltflächen brauchen ihre eigene Beschriftung und Tastaturbedienung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine informative Abbildung einbetten",
+      "paragraphs": [
+        "Ordne Titel und Zusammenfassung der gemeinsamen Abbildung zu und erhalte die Tabellenüberschriften. Die Referenz verbirgt das SVG vor Screenreadern und deaktiviert dessen zusätzliche Bedienebene, weil die vollständige Textalternative bereits vorhanden ist. Weise den Ringen keine Rolle als Schieberegler oder Fortschrittsanzeige zu.",
+        "ChartContainer liefert den Rahmen, nicht die Datenberechnung oder automatisch eine vollständige Textalternative. Stelle einen Bereich mit tatsächlicher Breite und Höhe bereit. Du verantwortest Daten, Skalierung, Beschriftungen und gegebenenfalls Filter; eine Legende wird durch ihre Darstellung nicht automatisch zum Auswahlfeld."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf den ausgewählten shadcn-Export: Schnittstelle, Gestaltungsregeln, Zustandsmodell sowie HTML- und ARIA-Referenz. Der Base-UI-Chart-Rahmen bleibt die Grundlage; ein gebundenes offizielles Recharts-Beispiel liefert die radiale Diagrammform und Browser-Zählwerte.",
+        "Das hier gezeigte Kanalbeispiel überträgt den Zählvergleich redaktionell. Seine Skala ist keine Vorgabe des Exports. Die Quellenbeschreibung und statische Illustration belegen keine eingebundene Arve-Implementierung oder allgemeine Freigabe für andere Plattformen."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "breadcrumb",
+  "title": "Breadcrumb",
+  "summary": "Zeigt den aktuellen Ort innerhalb der Inhaltsstruktur und verlinkt die übergeordneten Seiten.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Den Ort in einer Hierarchie zeigen",
+      "paragraphs": [
+        "Verwende Breadcrumbs auf tiefer liegenden Inhaltsseiten, etwa bei einem Bauprojekt innerhalb der Projektübersicht. Sie zeigen, wo die aktuelle Seite eingeordnet ist, und bieten direkte Links zu den übergeordneten Seiten. Das hilft besonders nach dem Einstieg über eine Suche oder einen gespeicherten Link.",
+        "Für den zuletzt besuchten Bildschirm passt ein Zurück-Link besser: Der Besuchsverlauf ist keine Inhaltshierarchie. Für den Wechsel zwischen gleichrangigen Hauptbereichen eignet sich eine Hauptnavigation oder Sidebar. Bei einer flachen Website ohne sinnvolle übergeordnete Ebenen empfehlen wir, auf Breadcrumbs zu verzichten."
+      ],
+      "links": [
+        {
+          "text": "Sidebar",
+          "href": "/systems/shadcn/components/sidebar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Vom Schulhaus zur Projektübersicht",
+      "paragraphs": [
+        "Der Entwurf zeigt den Pfad «Start › Bauprojekte › Schulhaus Nord» oberhalb des Seitentitels. Start und Bauprojekte führen zu echten übergeordneten Seiten. Schulhaus Nord ist als aktueller Ort stärker hervorgehoben und nicht erneut anwählbar.",
+        "Die Projektbeschreibung gehört zum Seiteninhalt. Die schmale Pfadzeile bleibt davon getrennt und lässt sich schnell überblicken. Der vollständige kurze Pfad braucht weder Auslassung noch zusätzliches Menü."
+      ],
+      "illustration": {
+        "src": "/component-examples/breadcrumb.svg",
+        "alt": "Projektseite Schulhaus Nord mit dem Pfad Start, Bauprojekte und Schulhaus Nord oberhalb der Überschrift.",
+        "caption": "Statische Illustration · Vollständiger Pfad auf einer Projektseite."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Pfad vor dem Seiteninhalt",
+      "paragraphs": [
+        "Der Navigationsbereich enthält eine geordnete Liste. Jeder inhaltliche Eintrag steht für eine Ebene: zuerst übergeordnete Ziele als Links, am Ende die aktuelle Seite. Dazwischen stehen dekorative Trennzeichen. Wir empfehlen eine Platzierung oberhalb des Seitentitels, damit Pfad und Inhalt zusammen wahrgenommen werden.",
+        "Die Referenz lässt die Liste bei wenig Platz umbrechen und erlaubt auch Textumbrüche in langen Einträgen. Plane genug Abstand zum folgenden Inhalt ein und prüfe lange echte Seitennamen. Eine Auslassung ist ein optionales sichtbares Zeichen für übersprungene Ebenen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Vollständig oder bewusst gekürzt",
+      "paragraphs": [
+        "Es gibt keine eigenen benannten Grössen- oder Farbvarianten. Die belegten Wahlmöglichkeiten entstehen durch die Zusammensetzung: vollständiger Pfad, ein eigenes dekoratives Trennzeichen und eine Auslassung für ausgelassene Ebenen. Bei einer Schreibrichtung von rechts nach links spiegelt die Referenz die Pfeile, wenn RTL ausdrücklich gesetzt ist.",
+        "Bevorzuge den vollständigen Pfad, solange er gut lesbar bleibt. Die Auslassung allein öffnet nichts und stellt versteckte Ziele nicht bereit. Die Referenz ergänzt deshalb vollständige alternative Links. Ein aufklappbares Menü muss als eigene, bedienbare Menükomponente zusammengesetzt werden."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Ein Link führt zur übergeordneten Seite",
+      "paragraphs": [
+        "Beim Darüberfahren wird ein übergeordneter Link dunkler und unterstrichen. Bei Tastaturfokus erhält er eine sichtbare Kontur. Die aktuelle Seite bleibt hervorgehoben und ohne eigene Aktivierung. Das ist die Ortsangabe, kein vorübergehend gesperrtes Navigationsziel.",
+        "Nach dem Aktivieren folgt die Navigation dem Linkziel. Übernimmt die Anwendung den Seitenwechsel selbst, muss sie diesen durchführen und anschliessend Vorfahren und aktuelle Seite aktualisieren. Breadcrumb speichert keinen eigenen Pfad. Ladeanzeigen oder Fehlermeldungen für einen misslungenen Seitenwechsel sind Aufgabe der Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Seitennamen statt Handlungsaufforderungen",
+      "paragraphs": [
+        "Gute Einträge nennen das Ziel: «Bauprojekte» und «Schulhaus Nord». «Hier klicken», «Zurück» oder interne Kennungen wie «PRJ-042» erklären den Ort schlecht. Verwende möglichst dieselben Namen wie in Navigation und Seitentiteln; eine verständliche Kurzform ist besser als ein abgeschnittener, mehrdeutiger Name.",
+        "Wir empfehlen kurze, unterscheidbare Bezeichnungen. Kürze lange Pfade nicht so, dass wesentliche Ziele unerreichbar werden. Benenne den Navigationsbereich auf Deutsch, etwa «Seitenpfad»; der voreingestellte Name lautet «breadcrumb»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab zu den echten Links",
+      "paragraphs": [
+        "Tab erreicht die übergeordneten Links in ihrer Dokumentreihenfolge, Umschalt+Tab führt zurück. Enter folgt dem jeweiligen Linkziel. Der sichtbare Linktext liefert den zugänglichen Namen. Erhalte die sichtbare Fokuskontur.",
+        "Die aktuelle Seite, Trennzeichen und Auslassung sind keine Tabstopps. Es gibt keine eigene Pfeiltastensteuerung oder Fokusbewegung mit Pos1 und Ende. Auch Escape klappt hier nichts zu. Wird ein echtes Menü ergänzt, gelten dessen zusätzliche Bedien- und Fokusregeln."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Navigation mit klarer Zuständigkeit",
+      "paragraphs": [
+        "Der benannte Navigationsbereich enthält eine geordnete Liste aus Listeneinträgen. Übergeordnete Ziele sind echte Links mit Zieladresse. Die aktuelle Seite verwendet im gebundenen Quellstand ein nicht fokussierbares Textelement mit Linkrolle, aria-disabled und aria-current=\"page\". Bewahre diese Ortskennzeichnung bei der Einbindung.",
+        "Trennzeichen und Auslassung sind für assistive Technik ausgeblendet. Auch der darin versteckte Text «More» macht die Auslassung nicht zum zugänglichen Schalter. Die Anwendung liefert Hierarchie, Beschriftungen und Ziele. Bei mehreren Navigationsbereichen sollten deren Namen klar unterscheidbar sein."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz trägt",
+      "paragraphs": [
+        "Abgeglichen wurden Zweckbeschreibung und Anatomie, CEM-Schnittstelle, CSS-Gestaltung, SCXML-Navigationsablauf sowie HTML/ARIA-Regeln und Zustandsbeispiele. Die gebundene React-Quelle und ihre Dokumentation klären eigene Trennzeichen, Linkeinbindung und die Grenze der Auslassung.",
+        "Die Beispiele im Export beschreiben einen vollständigen Pfad, eine Auslassung mit vollständiger Alternative, Hover, Fokus und RTL. Diese statische Illustration belegt keine Laufzeitbedienung. Die abgeschlossene Quellenbeschreibung ist keine allgemeine Freigabe für Anwendungen, Frameworks oder assistive Technik."
+      ]
+    }
+  ]
+}

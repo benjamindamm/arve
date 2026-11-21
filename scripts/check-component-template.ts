@@ -27,6 +27,9 @@ for(const section of coverage) {
 assert(!release.content.some((block:{blockName?:string})=>block.blockName?.startsWith('original-')),'Historical studies are not current documentation')
 const sources=new Map<string,Buffer>()
 const applicationSources=new Set([
+  'src/docs/component-comparison-data.ts',
+  'src/docs/component-comparisons.tsx',
+  'src/docs/component-comparisons-contract.css',
   `src/demos/${alignment.library}/${alignment.component}.ts`,
   `src/docs/page-reworks/${alignment.component}.tsx`,
   `src/docs/page-reworks/${alignment.component}.css`,

@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "dropdown-menu",
+  "title": "Dropdown Menu",
+  "summary": "Mit Dropdown Menu bündelst du Aktionen und kompakte Einstellungen hinter einem klar benannten Auslöser. Befehle, Checkboxen und Radiooptionen behalten dabei unterschiedliche Aufgaben.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Aktionen am richtigen Ort bündeln",
+      "paragraphs": [
+        "Mit Dropdown Menu bietest du mehrere Befehle oder kompakte Menüeinstellungen über einen benannten Auslöser an. Das passt beispielsweise zu einem Bericht mit Aktionen wie Speichern, Exportieren und Löschen. Häufig benötigte Hauptaktionen lässt du besser als sichtbaren Button stehen.",
+        "Für einen Formularwert wie die Rechnungswährung wählst du Select. Für dauerhafte Ziele wie Übersicht, Projekte und Einstellungen verwendest du eine Navigation, beispielsweise Navigation Menu. Eine aufklappbare Fläche allein macht diese Aufgaben noch nicht zu einem Aktionsmenü."
+      ],
+      "links": [
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 0
+        },
+        {
+          "text": "Select",
+          "href": "/systems/shadcn/components/select",
+          "paragraph": 1
+        },
+        {
+          "text": "Navigation Menu",
+          "href": "/systems/shadcn/components/navigation-menu",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht mit Aktionen und Ansicht",
+      "paragraphs": [
+        "Im Entwurf öffnet «Berichtaktionen» ein Menü für den Monatsbericht. Oben stehen Befehle, darunter «Raster anzeigen» als unabhängige Einstellung und die Gruppe «Ansicht» mit «Kompakt» und «Komfortabel». Der Haken zeigt die aktive Einstellung; die graue Hinterlegung von «Speichern» zeigt nur den hervorgehobenen Eintrag.",
+        "«Bericht löschen» steht getrennt am Schluss und benennt seine Folge ausdrücklich. Der Pfeil bei «Exportieren» kündigt weitere Formate in einem Untermenü an. So kannst du Befehle und Einstellungen unterscheiden, ohne jedes Detail sofort anzuzeigen."
+      ],
+      "illustration": {
+        "src": "/component-examples/dropdown-menu.svg",
+        "alt": "Geöffnetes Menü Berichtaktionen mit Speichern, Export-Untermenü, aktiviertem Raster, kompakter Ansicht und getrenntem Löschbefehl.",
+        "caption": "Statische Illustration · Berichtaktionen mit Checkbox und Radiogruppe."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Vom Auslöser zum Untermenü",
+      "paragraphs": [
+        "Ein beschrifteter Auslöser bleibt der erkennbare Einstieg. Die Menüfläche erscheint standardmässig darunter, am Anfang des Auslösers ausgerichtet, mit kleinem Abstand. Ihre Position berücksichtigt den verfügbaren Platz. Plane deshalb keine feste Bildschirmposition für das Menü ein.",
+        "Gruppenüberschriften ordnen zusammengehörige Einträge; Trennlinien gliedern unterschiedliche Aufgaben. Links bleibt bei Checkbox- und Radioeinträgen Platz für den Auswahlindikator. Ein Untermenü erhält einen eigenen Auslöser mit Richtungspfeil und eine eigene Menüfläche."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Befehle, Schalter und exklusive Auswahl",
+      "paragraphs": [
+        "Für normale Befehle gibt es die Standarddarstellung und die Variante destructive für eine destruktive Aktion. Verwende die auffällige Darstellung gezielt für «Bericht löschen» und behalte den eindeutigen Text bei. Die Einrückung inset richtet Einträge und Überschriften an Zeilen mit Indikatoren aus.",
+        "Checkbox-Einträge passen zu unabhängig ein- und ausschaltbaren Einstellungen wie «Raster anzeigen». Eine Radiogruppe bietet eine gemeinsame Auswahl wie «Kompakt» oder «Komfortabel». Untermenüs helfen bei zusammengehörigen Zusatzbefehlen wie Exportformaten; vermeide sie für einen einzelnen zusätzlichen Eintrag."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Hervorheben ist noch kein Ausführen",
+      "paragraphs": [
+        "Nach dem Öffnen kannst du Einträge hervorheben und erst anschliessend aktivieren. Ein normaler Befehl schliesst das Menü standardmässig. Checkbox- und Radioeinträge lassen es in dieser Base-UI-Variante standardmässig offen, damit du Einstellungen weiter bearbeiten kannst. Das Schliessverhalten ist gezielt anpassbar.",
+        "Ein deaktivierter Eintrag bleibt erkennbar, lässt sich aber nicht ausführen. Deine Anwendung führt den eigentlichen Befehl aus, speichert Einstellungen und meldet Erfolg oder Fehler im passenden Kontext. Bei von der Anwendung gesteuerten Werten muss sie Änderungen übernehmen; abgebrochene Änderungsanfragen lassen den bisherigen Zustand bestehen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Handlung und ihren Bezug nennen",
+      "paragraphs": [
+        "«Berichtaktionen» erklärt den Einstieg besser als «Mehr». In einer Liste mit mehreren Berichten gibst du einem reinen Symbolauslöser einen zugänglichen Namen mit Bezug zum jeweiligen Bericht. «Bericht löschen» ist klarer als «Entfernen», wenn damit tatsächlich der Bericht gelöscht wird.",
+        "Halte Einträge kurz und unterscheidbar. Verwende für Einstellungen stabile Bezeichnungen wie «Raster anzeigen», statt den Text bei jedem Umschalten zu wechseln. Angezeigte Tastenkürzel sind nur Hinweise: Deine Anwendung muss das Kürzel tatsächlich bereitstellen. Die Shortcut-Komponente registriert es nicht."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tasten durch die Aktionen",
+      "paragraphs": [
+        "Am Auslöser öffnen Enter oder Leertaste das Menü; die unterstützten Öffnungspfeile führen ebenfalls hinein. Im vertikalen Menü bewegen Pfeil hoch und runter die Hervorhebung, Home und End erreichen die Enden. Die Suche über eingegebene Buchstaben nutzt die Beschriftungen. Enter oder Leertaste aktiviert den hervorgehobenen verfügbaren Eintrag.",
+        "Deaktivierte Einträge können dabei Fokus erhalten, bleiben aber ohne Aktion. Bei links-nach-rechts laufendem Text öffnet Pfeil rechts das passende Untermenü; Pfeil links führt zurück. Escape schliesst normalerweise die aktuelle Menüebene und führt zum zugehörigen Auslöser zurück. Tab folgt dem Schliess- und Fokusverhalten des Menüs; plane keine Dialog-Fokusfalle ein."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein Menü braucht eigene Zuständigkeiten",
+      "paragraphs": [
+        "Der Auslöser ist standardmässig ein Button und vermittelt geöffneten Zustand und Menübezug. Die Fläche besitzt Menüsemantik; Befehle, Checkboxen und Radiooptionen haben die entsprechenden Menüeintragsrollen. Benenne auch Radiogruppen und ordne Gruppenüberschriften ihren Gruppen zu.",
+        "Das Menü ist kein Formularfeld mit einem gemeinsamen ausgewählten Wert. Ein Befehl, eine Checkboxänderung und eine Radioauswahl sind getrennte Vorgänge. Wenn du aus dem Menü einen Dialog öffnest, stimme dessen Fokusübernahme mit dem Schliessen ab. Nach einem Klick ausserhalb hängt das Fokusziel vom tatsächlichen Schliessgrund und der Fokuskonfiguration ab; es springt nicht zwingend zum Auslöser."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Worauf diese Empfehlung beruht",
+      "paragraphs": [
+        "Die Seite gleicht die exportierte Schnittstelle, CSS-Gestaltung, Zustandsbeschreibung und HTML/ARIA-Regeln mit den gebundenen shadcn- und Base-UI-Quellen ab. Die Menü-Fixtures zeigen unter anderem Hervorhebung, Auswahl, Untermenü und deaktivierte Einträge.",
+        "Die Illustration ist ein redaktioneller Entwurf. Der Quellenumfang belegt keine allgemeine Freigabe für deine Anwendung oder für andere Plattformen. Prüfe insbesondere Fokuswechsel, lange deutsche Beschriftungen und die Rückmeldung deiner tatsächlichen Befehle im Einsatz."
+      ]
+    }
+  ]
+}

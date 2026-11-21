@@ -1,0 +1,219 @@
+{
+  "component": "message",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.html",
+      "sha256": "de3326eacc37e262fec647ce2ebb3b62fad64b0a738692e99f18161d446827c9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.rules.json",
+      "sha256": "0a394523ec6a92d2b19f62eed05c17b8026e1aaeda41697c6a39be2373f15171"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/behavior.scxml",
+      "sha256": "b8b72bb08a72251e42f0cfcb9897d8a43cf7cd42ceb7505cc0b58ef0be558a65"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/component.json",
+      "sha256": "d08473a8e94b88f632726217a04b3c79b2846ca6ff6e4a61095f270e5717957a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/interface.json",
+      "sha256": "97a755dc862bb88755e7c19ac90a17ae442a0c42440bdc245886cb9544ec912d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/stories.json",
+      "sha256": "94a3405102a79cb9d9611d1550f63a48b74f65b1d0858fea6345acc22136050f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/ux.json",
+      "sha256": "a9f4b773be6d26112bec9fc808135332fbd38f91f1909f3a80f6408eeedace77"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/message.mdx.source",
+      "sha256": "e89794ca20b01689aae4cc0028a77ae8e96782846e54993c78f8ac5eee2d4848"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/message-example.tsx.source",
+      "sha256": "2b653b3ae6de3b1dcbdb74743a4b94faf4dbc42f325e9957dfdcfc28fa529212"
+    }
+  ],
+  "claims": [
+    {
+      "id": "purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Message präsentiert einen Gesprächsbeitrag mit Metadaten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-composition",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Anhänge und Nachrichtenaktionen sind eingefügte Komposition; die Originaldokumentation zeigt beides.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/message.mdx.source",
+          "snippet": "Place message-level actions in `MessageFooter`, such as copy, retry, or feedback buttons."
+        }
+      ]
+    },
+    {
+      "id": "example-attachment",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der gebundene Originalcode setzt Attachment als Kind von MessageContent ein.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/message-example.tsx.source",
+          "snippet": "<AttachmentTitle>sales-dashboard.pdf</AttachmentTitle>"
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Anatomie enthält Gruppe, Nachricht, optionalen Avatar, Inhalt, Kopf und Fuss.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "align",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die belegten Ausrichtungen sind start und end.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/component.json",
+          "pointer": "/visualContract/variants/align/values"
+        }
+      ]
+    },
+    {
+      "id": "align-default",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "start ist die Voreinstellung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2/default"
+        }
+      ]
+    },
+    {
+      "id": "no-delivery-state",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Zustelltexte und Ankündigungen sind expliziter Inhalt der aufrufenden Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Zustandsmodell behandelt Darstellung, Inhaltsänderung, Entfernen und erneutes Einhängen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "speaker-text",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Absender, Zeit und Nachricht stehen als Text; Avatar oder Ausrichtung reichen nicht als Absenderidentität.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "no-own-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Wrapper besitzt keine Tastaturlistener oder roving focus; Kinder behalten ihre Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "native-button-keys",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Die beschriebenen Tasten beziehen sich auf eingefügte native Buttons, nicht auf Message.",
+      "evidence": []
+    },
+    {
+      "id": "native-semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Teile sind div-Wrapper; Speichern, Antworten, Streams und Scrollen übernimmt der Kontext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "reference-time",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Referenz verwendet ein time-Element und einen ausgeblendeten ergänzenden Avatar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/accessibility.html",
+          "snippet": "<div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div>"
+        }
+      ]
+    },
+    {
+      "id": "fixtures",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Stories enthalten start, end, rtl und long-message.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Ein einzelner Supportbeitrag verdeutlicht Zuordnung und Komposition ohne einen vollständigen Chat vorzutäuschen.",
+    "Bubble, Attachment und Buttons als eingefügte Inhalte von den Fähigkeiten des Message-Wrappers getrennt.",
+    "Bei uneinheitlicher Avatar-/Header-Beschreibung in Originaldokumentation und Layout folgt der Seitentext der veröffentlichten Contractanatomie und CSS; keine pixelgenaue Platzierungsbehauptung.",
+    "Alternative Toast und konkrete deutsche Beschriftungen sind redaktionelle Empfehlungen."
+  ],
+  "limits": [
+    "Kein lokaler Message-Demo-Eintrag vorhanden.",
+    "Kein eingebauter Versand-, Zustell-, Stream- oder Scrollablauf; solche Funktionen sind Anwendungsverantwortung.",
+    "SVG ist eine statische redaktionelle Illustration, kein Rendernachweis."
+  ]
+}

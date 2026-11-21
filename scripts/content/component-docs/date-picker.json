@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "date-picker",
+  "title": "Date Picker",
+  "summary": "Wähle einen Tag in einem aufklappbaren Kalender. Der Button zeigt anschliessend das gewählte Datum.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ein Datum im Monatskontext wählen",
+      "paragraphs": [
+        "Nutze den Date Picker, wenn du einen konkreten Kalendertag wählen lässt und Wochentage oder benachbarte Termine dabei helfen, etwa für eine Lieferung. Der Kalender erscheint erst nach dem Öffnen; das spart Platz im Formular.",
+        "Zeige stattdessen Calendar direkt, wenn mehrere Termine dauerhaft sichtbar sein sollen. Für ein bekanntes Geburtsdatum kann eine passende Datumseingabe schneller sein als viele Monatswechsel. Diese Texteingabe gehört nicht zur hier beschriebenen Komposition."
+      ],
+      "links": [
+        {
+          "text": "Calendar",
+          "href": "/systems/shadcn/components/calendar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Lieferdatum mit einer Sperre",
+      "paragraphs": [
+        "Im Entwurf ist der 12. November 2026 als Lieferdatum gewählt. Der 13. November ist nicht verfügbar und bleibt erkennbar gesperrt. Der Hinweis dazu steht dauerhaft beim Auslöser. Nach der Auswahl bleibt der Kalender offen.",
+        "Die deutschen Texte sind eine redaktionelle Gestaltung. Die gebundene Referenz verwendet Englisch und en-US. Richte Sprache, Wochenbeginn und Datumsformat ausdrücklich für dein Angebot ein; leite sie nicht aus diesem Bild ab."
+      ],
+      "illustration": {
+        "src": "/component-examples/date-picker.svg",
+        "alt": "Geöffnete Lieferdatum-Auswahl für November 2026: Der 12. ist ausgewählt, der 13. gesperrt; ein Hinweis erklärt die Sperre.",
+        "caption": "Statische Illustration · Lieferdatum mit gewähltem und gesperrtem Tag."
+      },
+      "notice": {
+        "title": "Vor dem Einsatz: Tastaturbedienung prüfen",
+        "text": "Die eingebundene Kalenderquelle dieser Referenz hat einen Fokusfehler. Übernimm die dokumentierte Korrektur und prüfe die Einbindung, bevor du den Date Picker einsetzt.",
+        "link": {
+          "label": "Zur Fokuskorrektur",
+          "href": "#abschnitt-mit-fokus-navigieren-mit-auswahl-bestatigen"
+        }
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Auslöser und Kalender gehören zusammen",
+      "paragraphs": [
+        "Der Button zeigt die Aufgabe und das gewählte Datum; ohne Auswahl fordert er zur Wahl auf. Darunter öffnet sich ein verankerter Popover mit Monatsüberschrift, Navigation und Tagesraster. Auswahl, heutiger Tag und Tastaturfokus haben unterschiedliche Bedeutungen.",
+        "Halte Hinweise nahe am Auslöser und lass lange Datumsangaben umbrechen. Der Kalender übernimmt seine Innenabstände; zusätzliche Abstände im Popup würden die Fläche unnötig vergrössern."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Auswahlart bewusst festlegen",
+      "paragraphs": [
+        "Die einfache Komposition wählt einen einzelnen Tag. Bei optionaler Einzelwahl kann erneutes Wählen desselben Tages die Auswahl löschen; eine erforderliche Einzelwahl verhindert das.",
+        "Calendar unterstützt auch mehrere Tage und Zeiträume. Das sind ausdrücklich konfigurierte Kalender-Kompositionen mit anderen Wertformen, keine zusätzlichen Date-Picker-Grössen. Bei einem Zeitraum kann der Ausschluss gesperrter Tage einen darüber verlaufenden Bereich auf einen neuen Start zurücksetzen. Lege diese Regeln vor dem Entwurf fest."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen, wählen und schliessen",
+      "paragraphs": [
+        "Leer, gewählt und deaktivierter Auslöser sind belegte Darstellungen. Öffnen und gewähltes Datum werden unabhängig verwaltet: Ein Monatswechsel ändert die Auswahl nicht, eine Auswahl schliesst das Popup nicht automatisch. Escape schliesst über den Popover und führt den Fokus zum Auslöser zurück.",
+        "Sperre nicht verfügbare Tage ausdrücklich; Navigationsgrenzen allein verhindern deren Auswahl nicht. Wenn du Verfügbarkeit nachlädst, Fehler meldest oder eine Buchung speicherst, übernimmt das deine Anwendung. Zeige entscheidende Einschränkungen dauerhaft, auch wenn du zusätzlich einen Status im Kalender verwendest."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aufgabe im Datum sichtbar machen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Lieferdatum wählen» und nach der Auswahl «Lieferdatum: 12. November 2026». «Auswählen» allein erklärt die Aufgabe zu wenig. Ein blosses Kalendersymbol braucht ebenfalls einen zugänglichen Namen.",
+        "Vermeide mehrdeutige Angaben wie «11/12/26». Stimme sichtbares Format, Monatsnamen und gesprochene Tagesnamen auf dieselbe Sprache ab. Formuliere eine Sperre konkret, etwa «Am 13. November ist keine Lieferung möglich»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Fokus navigieren, mit Auswahl bestätigen",
+      "paragraphs": [
+        "Den nativen Button öffnest du mit Enter oder Leertaste. Im Kalender liegt ein Tag in der Tab-Reihenfolge. Links/Rechts bewegen den Fokus um einen Tag, Oben/Unten um eine Woche; gesperrte oder verborgene Tage werden übersprungen. Enter oder Leertaste wählen den fokussierten Tag.",
+        "Bild auf/ab wechseln den Monat, mit Umschalt das Jahr. Pos1/Ende führen zum Wochenanfang beziehungsweise Wochenende. Umschalt mit Links/Rechts bewegt um einen Monat, mit Oben/Unten um ein Jahr.",
+        "Die unveränderte gebundene Kalenderquelle hat einen bekannten Fokusfehler. Die Referenz korrigiert die Verbindung zum Tagesbutton ausdrücklich. Übernimm und prüfe diese Korrektur; fortschreitende interne Fokuswerte allein belegen keine bedienbare Tastaturnavigation."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Formular und Popup getrennt verantworten",
+      "paragraphs": [
+        "Date Picker ist ein Zusammenspiel aus Button, Popover und Calendar, kein eigener exportierter Root. Der Auslöser benennt den nichtmodalen Dialog und zeigt seinen Öffnungszustand. Das Monatsraster und seine Tagesbuttons behalten ihre zugänglichen Namen. Der Kalender allein bietet weder Escape-Schliessen noch eine Fokusfalle.",
+        "Die Auswahl liefert Kalenderdaten, keine automatisch übermittelte Formulareingabe. Deine Anwendung verantwortet Pflichtprüfung, Fehlermeldungen, Speicherung und Datumsdarstellung. Texteingabe, Freitext-Erkennung und Uhrzeit sind zusätzliche Aufgaben. Behandle lokale Kalendertage bewusst; eine unbedachte Umwandlung über UTC kann den dargestellten Tag verschieben."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene Schnittstelle, Gestaltung, Zustandsbeschreibung, HTML-/ARIA-Projektion und UX-Regeln. Belegt sind die dokumentierte Komposition und ihre begrenzten Referenzfälle.",
+        "Einzelwahl und Zeitraum wurden im Referenzumfang untersucht; erforderliche und mehrfache Auswahl sind quellenbeschriebene Möglichkeiten. Die deutsche Illustration ist kein Laufzeitnachweis. Prüfe Lokalisierung, Fokuskorrektur und Formulareinbindung in deiner Umsetzung."
+      ]
+    }
+  ]
+}

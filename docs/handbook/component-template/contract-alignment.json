@@ -76,11 +76,11 @@
     },
     {
       "path": "src/docs/page-reworks/button.tsx",
-      "sha256": "ca24dec9eb37a56dfa3994781faf75751452a6ae0131cb311b83209cef468bd0"
+      "sha256": "cc9babbbd4b1d0239dab06ea9e0e389de220974b9624c151c845fd4402eb2a7b"
     },
     {
       "path": "src/docs/page-reworks/button.css",
-      "sha256": "ebc961fdf5476540bfc0f65a5ea7ad576bf890cd5c2d5cc4027f108d8aaac0b2"
+      "sha256": "ce46f97b1ad0073285cd97fc74b37c5393625befe68a0b3ece4e73d8b6eea839"
     },
     {
       "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button/README.md",
@@ -93,6 +93,18 @@
     {
       "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/fonts.css",
       "sha256": "c6392ef3b3bbee85b301d0cb4f6aaa9f3417ce4fb17a481a9d63ed8ae0c3df46"
+    },
+    {
+      "path": "src/docs/component-comparison-data.ts",
+      "sha256": "553f6dfa032468872e9657d490d8dee9341211814824a6a82254ef9514cf9a73"
+    },
+    {
+      "path": "src/docs/component-comparisons.tsx",
+      "sha256": "cea4476788c81721a76ba9b0b0bf1b74b130cda9e2934e83dbeb1753f4fea537"
+    },
+    {
+      "path": "src/docs/component-comparisons-contract.css",
+      "sha256": "5fb74ba2b102bffa009ddf27042ef5a8f41b5166d5e7d3395789d52e2376d4c8"
     }
   ],
   "claims": [
@@ -414,7 +426,7 @@
       "id": "illustration-limit",
       "blockName": "sources",
       "kind": "editorial",
-      "statement": "Redaktionelle Illustrationen sind statisch und nicht aus Contracttokens erzeugt.",
+      "statement": "Aktionsgruppe und Beschriftungsbeispiele sind statische redaktionelle Illustrationen. Varianten- und Zustandsvergleiche sind separat an die aktuelle Contractrevision gebundene HTML/CSS-Darstellungen; sie belegen keine Laufzeitimplementierung.",
       "evidence": [
         {
           "path": "src/docs/page-reworks/button.tsx",
@@ -423,6 +435,18 @@
         {
           "path": "src/docs/page-reworks/button.css",
           "snippet": ".button-specimen {"
+        },
+        {
+          "path": "src/docs/component-comparison-data.ts",
+          "snippet": "contract.revision !== '30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90'"
+        },
+        {
+          "path": "src/docs/component-comparisons.tsx",
+          "snippet": "Statische Beispiele · nicht bedienbar"
+        },
+        {
+          "path": "src/docs/component-comparisons-contract.css",
+          "snippet": ".contract-comparison {"
         }
       ]
     },

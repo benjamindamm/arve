@@ -81,7 +81,7 @@ const original=[
   }
 ] as Block[]
 export const release={
- expectedUpdatedAt:'2026-11-20T14:30:18.333Z',
+ expectedUpdatedAt:'2026-11-20T17:16:20.383Z',
  summary:'Wähle eine passende Darstellung für vorgegebene Werte: direkt sichtbar, kompakt oder durchsuchbar.',
  content:[
   copy('selection-intro','Eine Aufgabe, drei Auswahlformen','In diesem Beispiel wird genau ein Standort gewählt. Die drei Vorschauen funktionieren unabhängig voneinander und verwenden dieselben Beispieldaten. Die drei Einträge dienen dem Vergleich; ihre Anzahl ist kein Grenzwert für die Wahl einer Komponente.'),
@@ -98,6 +98,10 @@ export const release={
    'Ist der bisherige Wert nicht mehr verfügbar? Zeige ihn weiterhin erkennbar an und erkläre die Ursache, soweit sie bekannt ist. Verlange eine neue Wahl, wenn die Aufgabe das erfordert. Setze nicht stillschweigend den ersten Eintrag ein. Prüfe am tatsächlichen Produkt auch die Rückkehr zur Auswahl und den Fall, dass sich Berechtigungen geändert haben.',
    'Prüfe die Bedienung mit der Tastatur: das Feld erreichen, Optionen durchgehen und wählen, gegebenenfalls schliessen oder abbrechen und bestätigen. Eine Option kann den Fokus haben, ohne ausgewählt zu sein. Das Verhalten von Enter und Escape sowie beim Verlassen muss zum gewählten Steuerelement passen. Die Vorschau bildet keine Combobox-Tastatursteuerung ab.'),
   links('selection-next',[
+   ['Eine Option direkt vergleichen → Radio Group','/systems/shadcn/components/radio-group'],
+   ['Vorgegebene Werte kompakt anbieten → Select','/systems/shadcn/components/select'],
+   ['Systemeigene Auswahlliste verwenden → Native Select','/systems/shadcn/components/native-select'],
+   ['Optionen durch Eingabe eingrenzen → Combobox','/systems/shadcn/components/combobox'],
    ['Inhalte suchen und Ergebnislisten filtern → Suchen und Filtern','/systems/shadcn/suchen-filtern'],
    ['Auswahl mit weiteren Angaben übermitteln → Formulare und Validierung','/systems/shadcn/formulare-validierung'],
    ['Mehrere unabhängige Werte → Checkbox','/systems/shadcn/components/checkbox'],
@@ -106,8 +110,8 @@ export const release={
   ]),
   copy('selection-evidence','Quellen, Grenzen und bisheriger Stand',
    'Die Suche auf dieser Seite hilft, einen vorgegebenen Feldwert auszuwählen. Die Seite Suchen und Filtern behandelt die Suche in Inhalten und das Filtern von Ergebnislisten. Die drei hier gezeigten Formen dienen als Gestaltungshilfe; feste Mengengrenzen lassen sich daraus nicht ableiten.',
-   'WAI APG unterscheidet zwischen zulässigen und vorgeschlagenen Werten und beschreibt das Verhalten bei Auswahl und Autovervollständigung. Die zusätzliche Bestätigung wurde für diese lokale Vorschau gewählt; sie legt keine allgemeine Regel für die Übernahme einer Auswahl fest. In der Bibliothek shadcn sind hier Button, Input, Checkbox und Switch vorhanden. Daraus folgt kein Contract für Select oder Combobox.',
-   'Die vorhandenen Komponentenreferenzen bleiben unverändert. Diese HTML-Vorschau ersetzt weder deren Implementierungen noch eine Prüfung mit assistiver Technik. Die bisherigen drei CMS-Blöcke folgen unverändert als historische Vertiefung.'),
+   'WAI APG unterscheidet zwischen zulässigen und vorgeschlagenen Werten und beschreibt das Verhalten bei Auswahl und Autovervollständigung. Die zusätzliche Bestätigung wurde für diese lokale Vorschau gewählt; sie legt keine allgemeine Regel für die Übernahme einer Auswahl fest. Der damalige Seitenstand bezog sich auf Button, Input, Checkbox und Switch. Inzwischen sind auch die Quellencontracts für Radio Group, Select, Native Select und Combobox importiert; die passenden Beschreibungen sind oben verlinkt. Das belegt keine Prüfung deiner Implementierung.',
+   'Die vorhandenen Komponentenreferenzen bleiben unverändert. Diese HTML-Vorschau ersetzt weder deren Implementierungen noch eine Prüfung mit assistiver Technik. Die bisherigen drei CMS-Blöcke folgen unverändert als historische Vertiefung; sie beschreiben den damaligen Stand und erweitern den heutigen Prüfungsumfang nicht.'),
   links('selection-sources',[
    ['Patternkatalog · UX-003 Zeitraum oder Konten auswählen und UX-009 Mehrere Einträge auswählen; dortige Beobachtungsgrenzen beachten','/systems/shadcn/patterns'],
    ['WAI APG · Combobox, gelesen am 20.11.2026','https://www.w3.org/WAI/ARIA/apg/patterns/combobox/'],

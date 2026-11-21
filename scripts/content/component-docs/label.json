@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "label",
+  "title": "Label",
+  "summary": "Mit Label benennst du ein Bedienelement sichtbar und dauerhaft. Die echte Verbindung zur Eingabe stellst du ausdrücklich her.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ein Feld eindeutig benennen",
+      "paragraphs": [
+        "Mit Label gibst du einem einzelnen Bedienelement eine sichtbare, dauerhafte Beschriftung. Verwende es etwa für ein einfaches Eingabefeld, dessen Zuordnung du selbst herstellst. Die räumliche Nähe zum Feld allein reicht dafür nicht.",
+        "Wenn du Beschriftung, Hilfetext und Fehlermeldung als zusammenhängendes Formularfeld brauchst, wähle Field mit den zugehörigen Teilen. Die Originaldokumentation empfiehlt diesen Aufbau für Formularfelder. Ein Platzhalter hilft allenfalls mit einem Beispielwert; er ersetzt die sichtbare Beschriftung nicht."
+      ],
+      "links": [
+        {
+          "text": "Field",
+          "href": "/systems/shadcn/components/field",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Kontaktangaben mit klaren Erwartungen",
+      "paragraphs": [
+        "Der Entwurf zeigt «E-Mail (Pflichtfeld)» und «Telefon (optional)» über ihren jeweiligen Eingaben. So erkennst du vor dem Ausfüllen, welche Angabe nötig ist. Der ergänzende Satz zur Bestätigung steht als Hilfetext unter dem E-Mail-Feld.",
+        "Halte diese Aufgaben getrennt: Die Beschriftung benennt die Eingabe, der Hilfetext erklärt ihren Zweck. Die Pflichtangabe im Text muss zur tatsächlichen Prüfung des Formulars passen. Die Illustration zeigt diese redaktionelle Aufteilung; sie prüft keine Formularfunktion."
+      ],
+      "illustration": {
+        "src": "/component-examples/label.svg",
+        "alt": "Kontaktformular mit E-Mail als Pflichtfeld, zugehörigem Hilfetext und einem optionalen Telefonfeld. Beide Eingaben haben dauerhaft sichtbare Beschriftungen.",
+        "caption": "Statische Illustration · Beschriftung, Pflichtangabe und Hilfetext im Zusammenhang."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Beschriftung und Eingabe zusammenhalten",
+      "paragraphs": [
+        "Label selbst ist der sichtbare Beschriftungstext in einem nativen Label-Element. Die Eingabe daneben oder darunter ist eine eigene Komponente. Ein umgebender Feldbereich kann Abstand und Anordnung übernehmen; er gehört zur Zusammenstellung durch deine Anwendung.",
+        "Setze die Beschriftung nahe an das zugehörige Feld und halte die Zuordnung auch bei Zeilenumbrüchen eindeutig. Im Beispiel steht sie oberhalb der Eingabe. Der Export sieht einen gemeinsamen Abstand für solche Anordnungen vor, aber keine feste Breite der Beschriftung."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Keine eigene Grössen- oder Farbauswahl",
+      "paragraphs": [
+        "Label hat keine benannten Grössen- oder Farbvarianten. Der Contract zeigt die normale Darstellung sowie einen deaktivierten Feldkontext und eine Anordnung für Schrift von rechts nach links. Wähle die Schreibrichtung passend zur Sprache.",
+        "Die abgeschwächte Darstellung im deaktivierten Kontext kommt aus der Umgebung. Sie ist keine eigene disabled-Eigenschaft von Label. Deaktiviere das zugehörige Bedienelement separat, wenn es tatsächlich nicht bedienbar sein soll."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Die Beschriftung bleibt beim Feld",
+      "paragraphs": [
+        "Label besitzt keinen eigenen Auswahl-, Lade- oder Bestätigungsablauf. Es bleibt sichtbar, während du das zugehörige Feld fokussierst und bearbeitest. Ändert deine Anwendung den Text oder das Ziel der Zuordnung, wird die Beschriftung entsprechend neu ausgegeben.",
+        "Fehler, Pflichtprüfung und Erfolgsmeldungen übernimmt die umgebende Anwendung beziehungsweise das Formularfeld. Benenne bei einem Fehler weiterhin die erwartete Angabe und ergänze die Korrekturhilfe separat. Ein abgeschwächtes Label allein sperrt keine Eingabe."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Kurz sagen, welche Angabe du erwartest",
+      "paragraphs": [
+        "Schreibe möglichst einen kurzen, konkreten Begriff wie «E-Mail» oder «Telefon». «Eingabe» ist zu unbestimmt; «Bitte gib hier deine E-Mail-Adresse ein» macht die Beschriftung unnötig lang. Zusätzliche Erläuterungen gehören in den Hilfetext.",
+        "Empfehlung: Kennzeichne optionale Angaben mit «(optional)» und erkläre Pflichtangaben im Formular konsistent. Wenn du ein Sternchen nutzt, erläutere seine Bedeutung sichtbar. Label erzeugt weder diese Kennzeichnung noch eine Pflichtprüfung automatisch. Vermeide leere Beschriftungen und kontrolliere längere Texte im schmalen Layout."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Der Fokus gehört zur Eingabe",
+      "paragraphs": [
+        "Label erhält keinen eigenen Tastaturstopp und führt keine eigene Tastaturbedienung ein. Mit Tab erreichst du das zugehörige Bedienelement gemäss dessen Regeln. Dort muss der sichtbare Fokus erkennbar sein.",
+        "Bei korrekter nativer Zuordnung überträgt ein Klick auf die Beschriftung den Fokus an das zugehörige Feld. Der nicht leere sichtbare Text benennt dieses Feld auch für assistive Technik. Prüfe deshalb die tatsächliche Verbindung und nicht nur die Position im Entwurf."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Sichtbare Nähe braucht eine echte Verbindung",
+      "paragraphs": [
+        "Verbinde htmlFor am Label mit der eindeutigen ID eines tatsächlich beschriftbaren nativen Bedienelements. Für eigene oder zusammengesetzte Controls nutze die passende Beschriftungsintegration der jeweiligen Komponente. Label erzeugt diese Verbindung nicht selbst.",
+        "Ein einzelnes Label beschriftet in der Referenz genau ein Feld. Für eine gemeinsame Gruppenüberschrift brauchst du die passende Gruppensemantik. Label ersetzt weder diese noch die Struktur von Field. Hilfe und Fehler müssen zusätzlich dem richtigen Feld zugeordnet werden."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung absichert",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene React-Quelle, die Originaldokumentation sowie die getrennten Verträge für Schnittstelle, Darstellung, Verhalten und HTML-Semantik. Die Beispiele im Export zeigen ein benanntes Eingabefeld, einen deaktivierten Feldkontext und die Schreibrichtung.",
+        "Der Nachweis bleibt auf diese Referenz begrenzt. Die statische Illustration ist ein redaktioneller Entwurf; sie belegt weder die Verbindung deiner konkreten Felder noch deren Prüfung mit assistiver Technik."
+      ]
+    }
+  ]
+}

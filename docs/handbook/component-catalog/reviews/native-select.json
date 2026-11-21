@@ -1,0 +1,235 @@
+{
+  "component": "native-select",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/README.md",
+      "sha256": "0481b8ebf6657adea497d7060c4726f3b839982a940e1ade1996bf92e7f7a9eb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/accessibility.html",
+      "sha256": "aeafd02afca4b9ab0118db518b8bce938c9f6a148186e9b9d40c013d4ed90c7c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/accessibility.rules.json",
+      "sha256": "fd79ff2bf5b980559420082b5a03ea0170db5273d640bc46c7eac15f860cff84"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/behavior.scxml",
+      "sha256": "1838c95126022e066454d6c99fc2412cbd42bb16dffdc82a3b9b56a5e2507ce8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/component.json",
+      "sha256": "fa9f84bb54d4c5083fefded30d9c6f6772d9152c598bd46aae406321d57524cc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/layout.css",
+      "sha256": "2c5b79064a8224992d7b4c13f54d9471354e641b5f09256f1b965dd0f2b7ff05"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/stories.json",
+      "sha256": "6305dca08307d7b96003a6958c90b0a1d11de3abec49b58d04deaba7568e860c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/ux.json",
+      "sha256": "4f68d9b9703498974c4cd5eee33c85d28da84ee4da6bb662e1d08a646ef3d555"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/native-select-example.tsx.source",
+      "sha256": "67366f6c3785982b683b2541bc68b7e7a4562a227850fdb798dc79ba147ea453"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/interface.json",
+      "sha256": "5ae3b115578a82e2bfa4e13f1f834fb0d7d94a6f2253c6288f50664cec8f791f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source",
+      "sha256": "a96068a0bf403eac169f8b1e605f314dd268dde7ee2841ed72ff2b41cd944875"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/native-select.mdx.source",
+      "sha256": "8a802399bb9b6de9a663caad3d505acb280d1490774c631f7a60c54767914948"
+    }
+  ],
+  "claims": [
+    {
+      "id": "native-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Native Select dient nativer Einzel- oder Mehrfachauswahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "selection-guidance",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Combobox für suchbare lange Listen und Radio Group für unmittelbar vergleichbare wenige Optionen sind redaktionelle Alternativen."
+    },
+    {
+      "id": "example-values",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Regionsfixture wählt Schweiz vor; Europa enthält ch, at und deaktiviertes de, us steht ausserhalb.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/stories.json",
+          "pointer": "/stories/0/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Hülle, natives Feld, verstecktes Symbol, Optionen und Gruppen sind tatsächliche Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "sizes-multiple",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Grössen sind default und sm; multiple ist nativ.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "multiple-chevron",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Bei multiple ist das Symbol ausgeblendet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/layout.css",
+          "snippet": "[data-slot=\"native-select\"][multiple]+[data-slot=\"native-select-icon\"] {\n  display: none;\n}"
+        }
+      ]
+    },
+    {
+      "id": "change-controlled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Nur tatsächliche native Änderungen senden onChange; kontrollierte Werte bleiben durch Vorgaben bestimmt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/behavior.scxml",
+          "snippet": "<transition event=\"NATIVE_CHANGE\" cond=\"!disabled &amp;&amp; !!_event.data.event\">\n      <send event=\"onChange\" target=\"#_parent\">\n        <param name=\"event\" expr=\"_event.data.event\" />\n      </send>\n      <if cond=\"!controlled\">\n        <assign location=\"value\" expr=\"_event.data.value\" />\n      </if>\n    </transition>"
+        }
+      ]
+    },
+    {
+      "id": "invalid-help",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Fehlerfixture verbindet aria-invalid mit Hilfs- und Fehlertext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/stories.json",
+          "pointer": "/stories/3/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "empty-option",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der vermeintliche Platzhalter ist eine tatsächliche Option mit leerem Wert im Originalbeispiel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/native-select-example.tsx.source",
+          "snippet": "<NativeSelectOption value=\"\">Select a fruit</NativeSelectOption>"
+        }
+      ]
+    },
+    {
+      "id": "label-writing",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Dauerhaftes Label und unterscheidbare Optionsbegriffe sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "platform-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Browser und Betriebssystem bestimmen Pfeiltasten, Anfangsbuchstaben, Modifikatortasten und Escape; nicht jeder Pfeil ist eine bestätigte Änderung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "native-label",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Das Beispiel verknüpft Label und natives Feld, das Symbol ist aria-hidden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/accessibility.html",
+          "snippet": "<label for=\"region\">Region</label>"
+        }
+      ]
+    },
+    {
+      "id": "native-props",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Natives select erhält name und weitere native Props; className gestaltet die Hülle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "scope-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der begrenzte Referenzumfang bleibt release:false und ist kein allgemeines AT-, Pixel- oder Framework-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    },
+    {
+      "id": "native-event-shape",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die API liefert einen nativen React-Änderungshandler für HTMLSelectElement, keine Base-UI-Werttransaktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/native-select/interface.json",
+          "pointer": "/modules/0/declarations/0/events/0"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Geschlossene Regionsauswahl illustriert; keine plattformspezifische offene Liste als universelle Darstellung erfunden.",
+    "Schweiz als in der Referenz belegte Vorbelegung gezeigt; fachliche Eignung der Vorbelegung ausdrücklich empfohlen zu prüfen.",
+    "Leeroption aus gebundener Originalquelle separat erklärt, ohne sie der Regionsfixture zuzuschreiben.",
+    "Auswahlalternativen und Beschriftungsempfehlungen ausdrücklich redaktionell; keine Suchfunktion oder gestaltete Mehrfachchips zugesichert."
+  ],
+  "limits": [
+    "Keine eigene Laufzeitprüfung auf Mobilgeräten oder mit unterstützenden Technologien durchgeführt.",
+    "Die SVG ist eine statische redaktionelle Illustration ohne Pixelkonformitätsanspruch."
+  ]
+}

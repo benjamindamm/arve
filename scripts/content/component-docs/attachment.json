@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "attachment",
+  "title": "Attachment",
+  "summary": "Zeigt angehängte Dateien mit Namen, Metadaten und passenden Aktionen. Der Übertragungsstand bleibt direkt an der betroffenen Datei sichtbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Dateien im Zusammenhang zeigen",
+      "paragraphs": [
+        "Attachment zeigt eine angehängte Datei mit ihrem Namen, ergänzenden Angaben und passenden Aktionen. Verwende es etwa für Belege zu einem Spesenantrag oder Unterlagen in einer Nachricht. Die Datei bleibt als eigener Gegenstand erkennbar.",
+        "Für die Auswahl einer neuen Datei braucht es ein separates Dateieingabefeld. Attachment öffnet keinen Dateidialog und lädt nichts hoch. Für einen einzelnen Download ohne Metadaten reicht meist ein klar beschrifteter Link; für viele Dateien mit Sortierung und mehreren Angaben eignet sich eher eine Tabelle."
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Zwei Belege zu einem Spesenantrag",
+      "paragraphs": [
+        "Der Entwurf zeigt einen gespeicherten Bahnbeleg und eine Hotelrechnung, deren Übertragung fehlgeschlagen ist. Name und Status stehen direkt an der betroffenen Datei. Das Wiederholen gehört nur zur fehlerhaften Rechnung; die bereits gespeicherte Datei erhält keine unnötige Fehleraktion.",
+        "Die Illustration verwendet horizontale Zeilen mit Dateisymbolen. Die Symbole helfen beim Erkennen der Dateikategorie, ersetzen aber weder den Namen noch die Rückmeldung. Die Anwendung muss Speichern und Wiederholen tatsächlich ausführen."
+      ],
+      "illustration": {
+        "src": "/component-examples/attachment.svg",
+        "alt": "Belege zu einem Spesenantrag: Bahnbeleg.pdf ist gespeichert; Hotelrechnung.pdf zeigt einen Übertragungsfehler mit einer Aktion zum Wiederholen.",
+        "caption": "Statische Illustration · Dateibezogene Rückmeldung und getrennte Aktionen."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Name, Angaben und Aktionen zusammenhalten",
+      "paragraphs": [
+        "In der umrahmten Fläche steht ein Symbol oder Vorschaubild neben dem Textbereich. Der Dateiname bildet die erste Zeile, darunter folgen etwa Format, Dateigrösse oder eine kurze Fehlermeldung. Zusätzliche Aktionen stehen in einem eigenen Bereich.",
+        "Eine optionale Hauptaktion kann die ganze Fläche zum Öffnen nutzbar machen. Sie bleibt neben den zusätzlichen Aktionen angeordnet, damit etwa Entfernen oder Wiederholen unabhängig erreichbar bleibt. Eine Gruppe reiht mehrere Anhänge horizontal mit Überlauf aneinander; sie macht daraus keine auswählbare Liste."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zeile für Angaben, Kachel für Bilder",
+      "paragraphs": [
+        "Belegt sind die Grössen default, sm und xs sowie horizontale und vertikale Anordnung. Die Standardgrösse bietet mehr Raum für lesbare Angaben; die kompakten Grössen passen in dichte Zusammenhänge. Prüfe dabei besonders längere Dateinamen.",
+        "Horizontal eignet sich für Dokumente mit Metadaten. Vertikal kann eine Bildvorschau stärker gewichten. Der Medienbereich unterstützt Symbol und Bild; eine Vorschau muss von der Anwendung geliefert werden. Sie wird nicht automatisch aus der Datei erzeugt."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Den wirklichen Übertragungsstand nennen",
+      "paragraphs": [
+        "Die Fläche kann bereit, beim Hochladen, in Verarbeitung, fehlerhaft oder fertig dargestellt werden. Diese Angaben steuern die Darstellung. Sie lösen keine Übertragung aus und wechseln nicht selbstständig weiter. Ohne explizite Angabe gilt die Darstellung als fertig; daraus darf die Anwendung keinen erfolgreichen Upload ableiten.",
+        "Setze den Zustand aus dem tatsächlichen Vorgang. Bei einem Fehler hilft eine konkrete Meldung wie «Übertragung fehlgeschlagen. Erneut versuchen.» Eine Statusmeldung für assistive Technik und eine funktionierende Wiederholen-Aktion ergänzt die Anwendung. Nach dem Entfernen eines Anhangs muss sie den Fokus an einen sinnvollen verbleibenden Ort setzen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Dateiname und nächster Schritt statt «Fehler»",
+      "paragraphs": [
+        "Zeige den vollständigen Dateinamen als Text und ergänze Format oder Grösse, wenn das die Entscheidung unterstützt. «Hotelrechnung.pdf» mit «Übertragung fehlgeschlagen» ist verständlicher als «Dokument» mit «Fehler». Halte die zweite Zeile knapp: Beide Textzeilen werden bei Platzmangel visuell gekürzt, der vollständige Text bleibt im Dokument.",
+        "Benenne Symbolaktionen mit Handlung und Datei, etwa «Hotelrechnung.pdf erneut hochladen» statt «Wiederholen». Ein rein dekoratives Dateisymbol bleibt für assistive Technik verborgen. Ein Bild mit zusätzlicher inhaltlicher Aussage braucht einen hilfreichen Alternativtext."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Nur die tatsächlichen Aktionen erhalten Fokus",
+      "paragraphs": [
+        "Die Dateifläche und ihre Texte haben keine eigene Tastaturbedienung. Mit Tab und Umschalt+Tab erreicht man die eingebauten Aktionen. Ein als Button ausgeführter Öffnen-Auslöser wird mit Eingabe oder Leertaste aktiviert; ein ausdrücklich als Link ausgeführter Auslöser mit Eingabe.",
+        "Gib dem Öffnen-Auslöser einen zugänglichen Namen wie «Bahnbeleg.pdf öffnen». Sein Tastaturfokus markiert die gesamte Fläche. Zusätzliche Aktionen brauchen eigene Namen und erreichbaren Fokus. Es gibt keine besondere Pfeiltasten-Auswahl für eine Gruppe von Anhängen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Anzeige und Dateiverarbeitung verbinden",
+      "paragraphs": [
+        "Attachment ist eine Inhaltsfläche ohne eigenen Formularwert. Ein Dateieingabefeld, die Übertragung, Berechtigungen und das Verhalten der Aktionen gehören zur umgebenden Anwendung. Der Öffnen-Auslöser ist standardmässig ein Button mit type=button und sendet dadurch kein Formular ab.",
+        "Verschachtele die Fläche mit ihren Buttons oder Links nicht in einem weiteren interaktiven Element. Zusätzliche Aktionen dürfen nicht vom Auslöser für die ganze Fläche verdeckt werden. Soll eine Aktion vorübergehend nicht verfügbar sein, wird das an dieser Aktion geregelt; Attachment hat keinen eigenen allgemeinen Deaktiviert-Zustand."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz absichert",
+      "paragraphs": [
+        "Die Seite gleicht die exportierte React-Schnittstelle, Gestaltungsregeln, Zustandsbeschreibung und HTML-/ARIA-Verwendung mit den gebundenen Originalquellen ab. Die Beispiele im Export zeigen insbesondere Fehler, Grössen, Bildkacheln und Fokus.",
+        "Diese Referenz beschreibt die Darstellung eines Anhangs und die Einbindung nativer Aktionen. Sie belegt keinen vollständigen Upload-Ablauf und keine allgemeine Freigabe für andere Plattformen. Die Illustration ist ein redaktioneller Entwurf; ihre Inhalte sind keine übertragenen Dateien."
+      ]
+    }
+  ]
+}

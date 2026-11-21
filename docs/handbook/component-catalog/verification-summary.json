@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-21",
+  "status": "PASS_LIMITED",
+  "scope": "Complete editorial component handbook and local Portal/MCP/static integration",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "baselineCommit": "0c16bdc543b96f75cb2c6422a21053692e4b7e55",
+  "publication": "68 new pages locally published in Payload; Arve worktree not committed or pushed",
+  "componentPages": 69,
+  "newlyAuthoredPages": 68,
+  "preservedButtonTemplate": true,
+  "sectionsPerPage": 9,
+  "newStaticIllustrations": 68,
+  "sourceReferences": 660,
+  "reviewedClaims": 1049,
+  "snapshotSha256": "c5942ad8005856e2726743e5b227d04370a956878476ff23d845830370547bf4",
+  "database": {
+    "pages": 116,
+    "preservedNonComponentPages": 47,
+    "buttonContentUnchanged": true,
+    "contractPinsUnchanged": 69,
+    "implementationRecordsUnchanged": true,
+    "secondApplyUpdates": 0
+  },
+  "checks": [
+    "All 68 original editorial references: nine sections, exact source hashes and pointers/snippets, XML-safe SVGs and unique section anchors",
+    "Button template source references and current snapshot parity",
+    "All 69 published Portal/MCP component contents equal reviewed handoff text",
+    "All 69 component pages at 390px: document width, nine section anchors, no broken loaded images",
+    "All 68 new SVG illustrations visually read in BrowserOS gallery and statically exported byte-exact",
+    "TypeScript, normal production build, database-free static production build",
+    "Published structure CI permits later CMS wording edits; strict parity recorded separately for this handoff",
+    "Static existing demos: Input typing/disabled; Checkbox click and disabled; Switch click/disabled; Button activation feedback"
+  ],
+  "static": {
+    "status": "PASS",
+    "html": 198,
+    "handbookPages": 116,
+    "components": 69,
+    "internalLinks": 57609,
+    "verifiedContractAssets": 2955,
+    "additionalVerifiedSvgAssets": 68,
+    "basePath": "/arve",
+    "backend": false
+  },
+  "limits": [
+    "Editorial completion does not establish implementation conformance for every component or platform.",
+    "Illustrations are static editorial designs; the existing live Angular demos retain their own bounded scope.",
+    "Independent reader reviewed all 68 summaries/headings and nine full pages; this is not a blanket accessibility acceptance."
+  ]
+}

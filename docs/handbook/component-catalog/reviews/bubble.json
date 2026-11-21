@@ -1,0 +1,200 @@
+{
+  "component": "bubble",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/component.json",
+      "sha256": "bf05b7601ae419e679c94f79f20e72945d1ca0f8e576bf08dbf953e73ba0c639"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/ux.json",
+      "sha256": "b171b706c2b687416dd0801d2da8cbf55a2c9b00a1f3831d72253685c77801f3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/interface.json",
+      "sha256": "732a5220bb8a738d4e1e4e8143dc313551e69c668e95e02a761595ed9bd191ba"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/stories.json",
+      "sha256": "482ab5cd3ebc08a21ee23251ef6c6e58455fb3b638518e1bde13df0912a5ae12"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/behavior.scxml",
+      "sha256": "b0f5f5a241c2b7fa3a4ce51de436da2ce8eb40a472ae3717092fc33eccdf9a94"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/layout.css",
+      "sha256": "0a99e5d0b970c1525117ee182d8e53c243c7a5ba209fdc8736e7c199104fe0b1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/accessibility.html",
+      "sha256": "913237d71c138f1dcb7c0c232b14e26ecf3c375fc9cbd9da4738139f750b247f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/accessibility.rules.json",
+      "sha256": "a4c876a750d8323573caa74a43bd153014a419f43dd8a26647613a9bbcbdc44f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/README.md",
+      "sha256": "0e552a311abf0865b9a7a0821e98806beca4b3744e7f80a2ad4e4ed923e51e5e"
+    }
+  ],
+  "claims": [
+    {
+      "id": "speaker-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Bubble gruppiert Gesprächsinhalte nach Absender; Farbe und Position reichen als Zuordnung nicht aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "example-choice",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Gespräch zum Bericht und die sichtbare Reaktion sind redaktionelle Beispielinhalte, keine Produktdemo."
+    },
+    {
+      "id": "anatomy-overhang",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Gruppe hält Platz für Reaktionen frei; Reaktionen sind von der Anwendung gelieferte Inhalte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "variants-seven",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die sieben genannten Varianten und keine Variante primary sind deklariert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/component.json",
+          "pointer": "/visualContract/variants/variant/values"
+        }
+      ]
+    },
+    {
+      "id": "variant-tint",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die hellblaue Tönung und dunkle Schrift bleiben als festes Paar über Modi erhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "alignments",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Blasen unterstützen start/end; Reaktionen zusätzlich top/bottom.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "rendered-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Zustandsautomat modelliert Anzeige, Eigenschaftsänderung, Entfernung und erneute Einbindung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "reaction-owned",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Bubble bietet keinen eingebauten Reaktionszustand, keine Speicherung und keinen Callback.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "labels-readable",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Absender und Inhalt sind lesbarer Text; Tönung und Ausrichtung ergänzen die Bedeutung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "no-key-listener",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Standardwrapper installiert keinen Tastaturhandler und keinen wandernden Fokus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "native-key-recommendation",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Für native Aktions- und Linkausgaben gelten ihre normalen Tasten; sichtbare Fokusmarkierung und verständliche Namen werden erhalten."
+    },
+    {
+      "id": "native-content",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Bubble ist eine div-Komposition; BubbleContent kann einen nativen Link oder eine native Aktion rendern.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "complete bezeichnet den begrenzten Referenzumfang, keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/bubble/README.md",
+          "snippet": "Status der neuen Domänenmigration: **complete** im begrenzten Referenzumfang."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Alert und Card sind redaktionelle Alternativen nach Inhaltszweck; deren Fähigkeiten werden hier nicht als Bubble-Regeln ausgegeben.",
+    "Die Illustration zeigt sichtbare Namen an beiden Blasen und eine rein statische Reaktion.",
+    "Die fehlerhaft mitkopierte Label-Passage in der Tastaturquelle wird nicht auf Bubble übertragen.",
+    "Empfehlungen zur Variantenwahl sind redaktionell; die Quelle definiert keine Zuordnung von Farben zu Absendern."
+  ],
+  "limits": [
+    "Keine lokale Bubble-Demo vorhanden; Illustration ist kein Laufzeitnachweis.",
+    "Die Quelle definiert keine automatische Live-Region, Sendestatuslogik oder Verwaltung von Reaktionen.",
+    "Keine allgemeine Freigabe für assistive Technik, Frameworks oder native Plattformen."
+  ]
+}

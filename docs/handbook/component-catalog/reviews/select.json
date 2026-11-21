@@ -1,0 +1,231 @@
+{
+  "component": "select",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/component.json",
+      "sha256": "7e83ddaa8aa2e5be00bf09b4ddec44548399ff2aefae6df61fdc2d3d3b1f4483"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/ux.json",
+      "sha256": "8479493d7f1aa4392b6ca8c782925fee42110f03cd183752322a16b3466f3ba1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/interface.json",
+      "sha256": "825058bdf98273c81efc2e30bdbbcf5fbab17b64e6e9ad944fe252a0a2d7e880"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/stories.json",
+      "sha256": "b52e98cc851e584593844aa82cec9345f5b5f997dbd76f3097ee7388edb3b3d1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/behavior.scxml",
+      "sha256": "2dd72d4e77bd429890ae4ae862934b7aad50d6aece481cfc4c3df21f8c0c6791"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/layout.css",
+      "sha256": "2a3db26e915015ae4d7bf906c5ff0cbd34a413c63806483bdeb43fd877106b91"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/accessibility.html",
+      "sha256": "f7b6d83937fec6cbbbeb7608c778ce2ccd2c277e6533e26a482707336c73c936"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/accessibility.rules.json",
+      "sha256": "f1830d68bba9a4d6cbd547f8d56a5df5c033395f8bed74e6ba50e7aa2ace3c4b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/README.md",
+      "sha256": "52c3559bad39d65fa1b5d6f7362d99074ece133f1de5577df5367ea499c108d1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/select.md.source",
+      "sha256": "179b99243529af0ac9151994f4c1d37565ecae28ecd4652a04488b81a124356a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "fixed-values",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Select bietet nicht editierbare Einfach- oder Mehrfachwahl; keine Filtereingabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Native Select bei genügender Systemauswahl und Radio Group bei wenigen vergleichbaren Optionen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "example-distinction",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Illustration trennt Markierung Express von ausgewähltem Standard.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-group-label",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Gruppenüberschrift ist keine Feldbeschriftung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/component.json",
+          "pointer": "/anatomy/label"
+        }
+      ]
+    },
+    {
+      "id": "positioning",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Gewählter Eintrag wird standardmässig am Auslöser ausgerichtet; Überlagerung möglich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/select.md.source",
+          "snippet": "The select popup by default overlaps its trigger so the selected item's text is aligned with the trigger's value text."
+        }
+      ]
+    },
+    {
+      "id": "variants-size",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Auslöser hat sm und default; multiple verarbeitet Arrays.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "states-independent",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Einfachwahl fordert separat Schliessen an; readOnly erlaubt Durchsehen; deaktivierte Optionen bleiben fokussierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "state-machine",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Wert- und Öffnungsänderungen besitzen getrennte abbrechbare Transaktionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/behavior.scxml",
+          "snippet": "<transition event=\"SOURCE_OPEN_CHANGE\" cond=\"!!_event.data.eventDetails &amp;&amp; (!_event.data.open || !disabled)\">"
+        }
+      ]
+    },
+    {
+      "id": "placeholder-no-clear",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Platzhalter allein erlaubt kein Zurücksetzen; explizites null-Item erlaubt Löschen in der Liste.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/select.md.source",
+          "snippet": "With placeholders, users cannot clear selected values using the select itself. If the select value should be clearable from the popup (instead of an external \"reset\" button), use a `null` item rendered in the list itself:"
+        }
+      ]
+    },
+    {
+      "id": "labels-writing",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Versandart und unterscheidbare Optionsnamen werden redaktionell empfohlen."
+    },
+    {
+      "id": "labels-overflow",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Wert hat Überlaufbegrenzung; Optionstext darf umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/layout.css",
+          "snippet": ".cn-select-item-text {\n  min-inline-size: 0;\n  overflow-wrap: anywhere;\n}"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-specific",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeile/Home/End und Buchstaben bewegen offene Markierung; Enter/Space wählen; Escape verwirft nur Markierung. Geschlossen kann Buchstabennavigation Einzelwert übernehmen, ausser readOnly und multiple.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-form",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Root verwendet versteckten Formularkontrollwert und Objektserialisierung; multiple besitzt benannte wiederholte versteckte Werte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "semantics-multiple",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Mehrfachwerte sind wiederholte versteckte Formularwerte statt benanntem Validierungsproxy.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/component.json",
+          "pointer": "/anatomy/form-values"
+        }
+      ]
+    },
+    {
+      "id": "sources-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische Fixtures ersetzen keine tatsächlichen Keyboard- und Callbackprüfungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/select/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Versandart als überschaubare feste Auswahl gewählt; SVG trennt Häkchen und Markierung sichtbar.",
+    "Native Select und Radio Group als redaktionelle Alternativen markiert.",
+    "Leerwert anhand gebundener Base-UI-Unterlagen präzisiert; kein automatisches Löschen durch Platzhalter versprochen.",
+    "Keine Live-Demo und kein neuer Implementierungsnachweis behauptet."
+  ],
+  "limits": [
+    "Statische redaktionelle Illustration belegt weder Laufzeitverhalten noch Pixelkonformität.",
+    "Formularintegration und Hilfstechnologien müssen im konkreten Produkt geprüft werden."
+  ]
+}

@@ -18,7 +18,7 @@ export function HandbookOutline({ initiallyCollapsed = false, scopeSelector }: {
     const seen = new Set<string>()
     const entries = Array.from(scope.querySelectorAll<HTMLElement>('[id^="abschnitt-"], article > section.component-section[id]')).flatMap(section => {
       if (section.closest('figure, .handbook-preview')) return []
-      const heading = section.querySelector('h2')
+      const heading = section.matches('h2') ? section : section.querySelector('h2')
       const title = section.tagName === 'DETAILS' ? section.querySelector(':scope > summary')?.textContent : heading?.textContent
       if (!title || !section.id || seen.has(section.id)) return []
       seen.add(section.id)

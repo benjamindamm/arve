@@ -1,0 +1,299 @@
+{
+  "component": "toggle-group",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/component.json",
+      "sha256": "523c9410386d22f429bd43a83d6bc08f55ca867516332ba0beaa20114adbaf7d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/ux.json",
+      "sha256": "b640988f41cd9aa4e04840e55989e5751d430cd1c4f18c22b9965ff0a0e0c741"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/interface.json",
+      "sha256": "6ec5f7e0eda59f6b09a12577790de455be038593f6360d0f9d5715e738237338"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/stories.json",
+      "sha256": "db15e674876d9adf53106db60d2367efe14ae4d66537c4ed8366fc65c4f5ea05"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/behavior.scxml",
+      "sha256": "5ab81ea3bf29f9d7885c7f419f78aa911d813395dea656c0722195a4d0f2d11c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/layout.css",
+      "sha256": "2974d01a1ae9d97de6c256c8f8ca3b79b9ed3a4262c5243e678018fd6f769211"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.html",
+      "sha256": "0c2fa63b40e8f7d3a2ef51a3a4d9a376bab7da004408436cc300b2b9493c4011"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.rules.json",
+      "sha256": "5a3acf379991dab822f197d8cb3284a62dc0095c23084f0353c6fd7d744f24c1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/README.md",
+      "sha256": "0d09c56329babdf7f09a579f6eb39abf7f8cdbb134deca1672775b37b5f06ce5"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/toggle-group/ToggleGroup.mjs.source",
+      "sha256": "f10e7c39dc1651ae3a027b9d7cfab8c71e1fc799b17860726c724728b6cf8277"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/toggle/Toggle.mjs.source",
+      "sha256": "2be0b4009e51a1712f31b1b0565078beb6a46ded73950a6a40e3be5054e298ff"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-selection",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Einfachwahl kann durch erneutes Drücken leer werden; Mehrfachwahl schaltet Einträge unabhängig.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Button für einmalige Aktionen, Radio Group für verbindliche Formularauswahl und Tabs für Inhaltsbereiche empfohlen."
+    },
+    {
+      "id": "example-design",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Berichtseditor mit zwei aktiven Formatierungen und einem unabhängigen Toggle ist eine statische redaktionelle Komposition."
+    },
+    {
+      "id": "example-multiple",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Export enthält Fixture für zwei gleichzeitig aktive Formatierungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/stories.json",
+          "pointer": "/stories/2/inputs"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die drei Teile sind Gruppe, Gruppeneintrag und unabhängiger Toggle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-focus",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Auswahl und Fokus sind unterschiedliche Zustände; Fokusbewegung drückt nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "variants-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "default/outline, sm/default/lg, numerische Abstände und horizontaler Referenzumfang sind deklariert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "variants-context",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Gruppenvariante und Gruppengrösse gehen vor; Abstand null verbindet outline-Flächen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "states-selection",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Einfachwahl ersetzt den Wert oder leert die Liste; Mehrfachwahl ergänzt oder entfernt nur einen Wert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/toggle-group/ToggleGroup.mjs.source",
+          "snippet": "newGroupValue = nextPressed ? [newValue] : [];"
+        }
+      ]
+    },
+    {
+      "id": "states-controlled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierter Zustand wird extern gesetzt; abgebrochene Änderungsanfragen verändern ihn nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/behavior.scxml",
+          "snippet": "<if cond=\"!controlled &amp;&amp; !_event.data.eventDetails.isCanceled\">"
+        }
+      ]
+    },
+    {
+      "id": "states-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Gruppen- und Eintragssperren unterdrücken Änderungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "labels-recommendation",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze stabile Funktionsnamen und ein eigener zugänglicher Name bei Symbolen werden empfohlen."
+    },
+    {
+      "id": "labels-group",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die Referenz benennt die Gruppe ausdrücklich per aria-label.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.html",
+          "snippet": "role=\"group\" aria-label=\"Text formatting\""
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Enter/Leertaste aktivieren; horizontal Pfeile, Home/End, umlaufender Fokus; Fokus allein wählt nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-disabled",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Deaktivierte native Toggles können keinen roving focus halten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/toggle/Toggle.mjs.source",
+          "snippet": "// A disabled toggle is natively disabled and cannot hold roving focus."
+        }
+      ]
+    },
+    {
+      "id": "keyboard-orientation",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Vertikale Orientierung wird nicht an das Primitive weitergegeben; keine vertikale Tastaturparität.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-buttons",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Referenz zeigt role=group und native Buttons mit aria-pressed und type=button.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"toggle-group-item\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-values",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Gruppenwerte sind Listen; eigenständiger Toggle liefert boolean.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "semantics-rtl",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "RTL-Tastaturverhalten braucht DirectionProvider zusätzlich zu HTML dir; Toolbar-Rolle wird nicht hinzugefügt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "sources-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Exportierte Referenz bleibt release:false und stellt kein allgemeines Framework- oder AT-Zertifikat dar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    },
+    {
+      "id": "sources-stories",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Fixtures dokumentieren single, pressed, multiple und outline-connected.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toggle-group/stories.json",
+          "pointer": "/stories/0/id"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Einzelnen Toggle und Gruppe auf einer Seite erklären, aber Wahrheitswert, Gruppenlisten und Tastaturführung ausdrücklich trennen.",
+    "Einfachwahl als optional beschreiben und den Leerzustand bei der Komponentenwahl hervorheben.",
+    "Ausschliesslich horizontale Gruppe illustrieren, weil die veröffentlichte Hülle vertikale Tastaturorientierung nicht weitergibt.",
+    "Stabile Beschriftungen und Komponentenalternativen als redaktionelle Empfehlungen ausweisen."
+  ],
+  "limits": [
+    "Die statische Illustration ist kein Render- oder Implementierungsnachweis.",
+    "Keine lokale Toggle-Demo unter src/demos/shadcn vorhanden.",
+    "Vertikale Tastaturorientierung wird von der gebundenen shadcn-Hülle nicht weitergegeben.",
+    "Keine Browser- oder Assistenztechnikprüfung dieser neu verfassten Seite durchgeführt."
+  ]
+}

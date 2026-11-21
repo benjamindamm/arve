@@ -1,0 +1,297 @@
+{
+  "component": "drawer",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/README.md",
+      "sha256": "606a953a1cf8472b7056c67d9396831d7aee717777bb304dfc9cc90f4f783894"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.html",
+      "sha256": "a139cf59e372c487d883a646503ac9774c6b986312b1732b31f4d1fe9fb20ee2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.rules.json",
+      "sha256": "6f7527f0743c3207155d39a03a466ca20d85feff42d61e07e0d4fa5045eb104d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/behavior.scxml",
+      "sha256": "cf1b60ffa0fa2f3ae00dbf41330b15b9689c46d567255503c0631cd35261b7e1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/component.json",
+      "sha256": "84f6c2f777b5a7401bf17ad1b11b50318a6d1b532e57aed83dc63c85a75259ed"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/interface.json",
+      "sha256": "eb19930d31b6801cc1ad41683b838d5be8519c834b2d4d94db29866aa650297f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/layout.css",
+      "sha256": "f76e4834d86e94115bab02d61efb4e54ddba1f9a79493f5dc6d9d025cf0bfe25"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+      "sha256": "91998b1d995ad224c905a34ea3fd5ed51b9cbe4db69a9f999ae4afdad6e53de4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/ux.json",
+      "sha256": "0307545dc1614c37fa6fa58f330ca38743ed2d27c22cb4b3d510800a036b2d5a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/drawer/root/DrawerRoot.d.ts.source",
+      "sha256": "1c1ce0a9ab06f70f55ea435d943fa68001242c630e6d47ebad6c380115ca68b3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+      "sha256": "7180299dff3cc1659ab75130f0521ba485e18b38625b904e1da4049f23479060"
+    }
+  ],
+  "claims": [
+    {
+      "id": "edge-task",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Drawer bietet eine Randfläche mit optionalen Wisch- und Snap-Point-Funktionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternative-choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Sheet ohne Gestenbedarf, Dialog für eine zentrale kurze Frage und eigene Seite für längere Abläufe sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "filter-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Filterinhalt, Ergebniszahl und Übernehmen/Verwerfen sind redaktionell entworfene Anwendungslogik."
+    },
+    {
+      "id": "handle-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der Griff hat keine unabhängige Buttonfunktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/component.json",
+          "pointer": "/anatomy/swipe-handle"
+        }
+      ]
+    },
+    {
+      "id": "defaults",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Standardwerte sind modal=true, swipeDirection=down und showSwipeHandle=false.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die physische Randposition folgt down/unten, up/oben, left/links und right/rechts.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+          "snippet": "data-[swipe-direction=down]:bottom-0"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+          "snippet": "data-[swipe-direction=up]:top-0"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+          "snippet": "data-[swipe-direction=left]:left-0"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+          "snippet": "data-[swipe-direction=right]:right-0"
+        }
+      ]
+    },
+    {
+      "id": "directions-four",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Alle vier Richtungen sind als konkrete Story-Eingaben vorhanden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+          "pointer": "/stories/4/inputs/swipeDirection"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+          "pointer": "/stories/5/inputs/swipeDirection"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+          "pointer": "/stories/6/inputs/swipeDirection"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+          "pointer": "/stories/7/inputs/swipeDirection"
+        }
+      ]
+    },
+    {
+      "id": "snap-units",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Snap-Points unterstützen Viewporthöhenanteile, Pixelzahlen und px-/rem-Strings.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/drawer/root/DrawerRoot.d.ts.source",
+          "snippet": "Use numbers between 0 and 1 to represent fractions of the viewport height,"
+        }
+      ]
+    },
+    {
+      "id": "snap-not-close",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Snap-Point-Wechsel ist von Schliessen getrennt; nur eine geeignete Wischgeste fordert Schliessen an.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "controlled-close",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierter Zustand oder abgebrochene Änderung bewirken im Akteur keinen automatischen Schliesswechsel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/behavior.scxml",
+          "snippet": "(controlled || _event.data.eventDetails.isCanceled)"
+        }
+      ]
+    },
+    {
+      "id": "outside-dismiss",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "disablePointerDismissal verhindert das Schliessen bei Druck ausserhalb.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/drawer/root/DrawerRoot.d.ts.source",
+          "snippet": "Whether to prevent the drawer from closing on outside presses."
+        }
+      ]
+    },
+    {
+      "id": "action-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Titel, Auslöser, Bestätigung und Ausstieg erhalten konkrete Aufgabenbeschriftungen."
+    },
+    {
+      "id": "keyboard-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Modaler Standardbetrieb hält Fokus innerhalb, unterstützt Escape/Schliessen und stellt Auslöserfokus wieder her.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die HTML-Projektion verwendet native Buttons für Auslöser und Schliessen sowie einen benannten Dialog.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"drawer-trigger\""
+        }
+      ]
+    },
+    {
+      "id": "tab-cycle",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab und Umschalt+Tab halten Fokus bei Modalität ungleich false innerhalb.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/behavior.scxml",
+          "snippet": "<transition event=\"TAB SHIFT_TAB\" cond=\"modal !== false\">"
+        }
+      ]
+    },
+    {
+      "id": "modal-options",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "true sperrt Fokus, Seitenscroll und Zeiger ausserhalb; false erlaubt Aussenbedienung; trap-focus hält nur Fokus innerhalb.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/drawer/root/DrawerRoot.d.ts.source",
+          "snippet": "- `'trap-focus'`: focus is trapped inside the drawer, but document page scroll is not locked and pointer interactions outside of it remain enabled."
+        }
+      ]
+    },
+    {
+      "id": "modal-backdrop",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der Wrapper rendert den Hintergrund nur bei modal=true.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+          "snippet": "{modal === true && ("
+        }
+      ]
+    },
+    {
+      "id": "no-aria-modal",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die gebundene Implementierung setzt standardmässig kein aria-modal.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/accessibility.rules.json",
+          "pointer": "/actualModalityProjection"
+        }
+      ]
+    },
+    {
+      "id": "fixture-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische Story-Fixtures belegen keine vollständige tatsächliche Interaktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/drawer/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Filter als begrenzte mobile Aufgabe gewählt; kein Speichern oder Zurücksetzen als eingebaute Drawer-Fähigkeit dargestellt.",
+    "Sheet-/Dialog-Abgrenzung als redaktionelle Auswahlhilfe gekennzeichnet.",
+    "Einrasthöhen und sichtbarer Griff als Optionen beschrieben, ohne sie als Standard zu zeigen.",
+    "Kein neuer Implementierungsnachweis und keine fremde Framework-/Plattformverfügbarkeit behauptet."
+  ],
+  "limits": [
+    "Keine lokale Drawer-Demo in der veröffentlichten Seite gebunden.",
+    "Statische Illustration prüft weder Gesten noch Fokus, Scrollen oder Bildschirmtastatur der Zielanwendung."
+  ]
+}

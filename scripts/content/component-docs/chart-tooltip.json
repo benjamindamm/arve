@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-tooltip",
+  "title": "Chart Tooltip",
+  "summary": "Zeige die Werte eines Diagrammpunkts direkt an der Grafik. Eine vollständige Tabelle hält dieselben Daten dauerhaft lesbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Werte direkt am Diagramm nachlesen",
+      "paragraphs": [
+        "Setze Chart Tooltip ein, wenn du beim Betrachten eines Diagramms die Werte einer bestimmten Kategorie kurz einblenden möchtest. Die ausgewählte Referenz zeigt Laufen und Schwimmen pro Datum in gestapelten Balken. Der Hinweis ergänzt die vollständige Datentabelle und die sichtbare Zusammenfassung.",
+        "Für eine kurze Erklärung zu einem Bedienelement passt der allgemeine Tooltip. Wenn du Werte systematisch vergleichen, kopieren oder ohne Zeiger lesen möchtest, ist eine dauerhaft sichtbare Tabelle die passende Grundlage. Verstecke entscheidende Daten deshalb nie ausschliesslich im schwebenden Hinweis."
+      ],
+      "links": [
+        {
+          "text": "Tooltip",
+          "href": "/systems/shadcn/components/tooltip",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Datum, zwei Aktivitätswerte",
+      "paragraphs": [
+        "Der Entwurf zeigt die sechs Tage des Quellenbeispiels. Beim 15. Juli 2024 stehen im Hinweis «Laufen 450» und «Schwimmen 300». Die deutschen Namen sind redaktionelle Übersetzungen der beiden Reihen; Zahlen und Reihenfolge bleiben erhalten.",
+        "Die Einheit ist in der Quelle unbekannt. Darum steht das sichtbar beim Diagramm, statt Minuten oder Kalorien zu erfinden. Unter der Grafik findest du alle sechs Tage in einer Tabelle. Der eingeblendete Hinweis erleichtert das Nachlesen am Balken; die Tabelle trägt die vollständige Information."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-tooltip.svg",
+        "alt": "Gestapelte Balken für sechs Julitage mit Werthinweis zum 15. Juli: Laufen 450, Schwimmen 300. Darunter steht die vollständige Datentabelle; die Einheit ist als unbekannt bezeichnet.",
+        "caption": "Statische Illustration · Originalwerte mit deutschen Reihenbezeichnungen und dauerhaft sichtbarer Tabelle."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Datum und Reihen zusammenhalten",
+      "paragraphs": [
+        "Ein Titel benennt das Diagramm, eine Zusammenfassung erklärt Inhalt und Einheit. In der Grafik verbindet der Hinweis ein Datum mit den zugehörigen Reihen. Jede Zeile führt Reihenname, Wert und optional einen Indikator zusammen. Die Legende ordnet die Reihen auch ausserhalb des Hinweises zu.",
+        "Plane für den Hinweis Platz in der Diagrammumgebung ein. Die vollständige Tabelle gehört zur gleichen Abbildung und erhält eine eigene Beschriftung sowie Spalten- und Zeilenüberschriften. Bei schmalem Platz darf ihr Bereich horizontal scrollen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Indikatoren bewusst wählen",
+      "paragraphs": [
+        "Für den Indikator sind Punkt, Linie und gestrichelte Linie belegt; der Punkt ist die Voreinstellung. Wähle eine Darstellung, die zur Kennzeichnung deiner Reihen passt. Namen und Werte müssen auch ohne Farbe verständlich bleiben.",
+        "Du kannst Überschrift oder Indikator ausblenden und die Ausgabe von Beschriftungen und Werten formatieren. Blende das Datum nur aus, wenn der Zusammenhang weiterhin eindeutig ist. Bei einer einzelnen Reihe mit Linienindikator rückt die Beschriftung in die Wertezeile. Eine eigene Formatierung dieser Zeile muss auch diese Beschriftung übernehmen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Hinweis wechseln, Daten konsistent halten",
+      "paragraphs": [
+        "Der Hinweis erscheint nur bei aktiven, vorhandenen Daten. Wenn der Quellhinweis inaktiv wird, verschwindet er. Escape blendet ihn an der aktuellen Diagrammkoordinate aus; erst eine andere Koordinate kann ihn wieder anzeigen. Die Tabelle bleibt dabei unverändert lesbar.",
+        "Wenn du die Daten austauschst, aktualisiere Grafik, Tabelle und Zusammenfassung gemeinsam und entferne den alten Hinweis. Bei fehlenden Daten oder einem Fehler braucht es eine eigene Rückmeldung der Anwendung. «Keine Daten für diesen Zeitraum» ist etwas anderes als durchgehend gemessene Nullwerte."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zahl, Reihe und Einheit verständlich machen",
+      "paragraphs": [
+        "Schreibe kurze, unterscheidbare Reihennamen wie «Laufen» und «Schwimmen». «Wert 1» und «Wert 2» helfen beim Zuordnen nicht. Formatiere ein Datum lesbar und eindeutig, etwa «15. Juli 2024», und halte Zahlenformate zwischen Hinweis und Tabelle konsistent.",
+        "Gib eine bekannte Einheit an einer klaren Stelle an. Bei diesem Quellenbeispiel bleibt sie ausdrücklich unbekannt. Verwende den Hinweis für knappe Datenzeilen; längere Erläuterungen gehören in die sichtbare Zusammenfassung."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Alle Werte ohne Diagrammfokus erreichen",
+      "paragraphs": [
+        "In dieser Referenz ist die Grafik für assistive Technik ausgeblendet und bekommt keinen eigenen Tastaturfokus. Der ergänzende Werthinweis ist ein gewöhnlicher Inhaltsbereich ohne separate Fokusstation. Er ist kein eigenständig bedienbares ARIA-Tooltip-Widget.",
+        "Du liest die Daten über die native Tabelle und ihre Überschriften. Die Abbildung erhält ihren zugänglichen Namen über den sichtbaren Titel und ihre Beschreibung über die Zusammenfassung. Escape schliesst den ergänzenden Hinweis, löscht aber keine Daten. Übertrage mögliche Recharts-Tastaturfunktionen nicht ungeprüft auf diese bewusst anders zusammengesetzte Referenz."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Anwendung liefert die vollständige Abbildung",
+      "paragraphs": [
+        "Chart Tooltip ist hier eine konkrete Diagrammzusammenstellung auf Basis der Chart- und Recharts-Bausteine. Die Anwendung liefert Daten, Reihenkonfiguration und eine messbar grosse Diagrammfläche. Der Hinweis berechnet keine Summen und erzeugt keine vollständige Textalternative.",
+        "Halte Grafik, Tabelle und Zusammenfassung an derselben Datenbasis. Wenn du Filter oder eine anklickbare Legende ergänzt, brauchen diese Bedienelemente ihre eigene Beschriftung und Tastaturbedienung. Der Werthinweis übernimmt diese Aufgaben nicht."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die exportierte Schnittstelle, die CSS- und Gestaltungsbindungen, das Zustandsmodell sowie HTML und Zugänglichkeitsregeln. Die Beispieldaten und die drei Indikatorformen sind dort konkret gebunden.",
+        "Die vollständige Tabelle und die ausgeblendete Grafik sind bewusste Entscheidungen dieser Referenz. Statische Beispiele und historische Quellprüfungen belegen keine allgemeine Freigabe für deine Anwendung oder für alle assistiven Technologien. Prüfe die tatsächliche Einbindung mit deinen Daten."
+      ]
+    }
+  ]
+}

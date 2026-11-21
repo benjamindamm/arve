@@ -1,0 +1,202 @@
+{
+  "component": "field",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/component.json",
+      "sha256": "e4c1ebfe9175297fdefae4a02302a6ec5963ac1be9287a37102be3453d6307c6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/ux.json",
+      "sha256": "1795fad95eff8188dbd161eccd9cb403a7e21c2e395bcef45edd726836ba29d9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/interface.json",
+      "sha256": "f74a802b6119da16301bbea937d05a91fc5e29c120bae0fd336f07721afbad04"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/stories.json",
+      "sha256": "01d955533fb1e533abe570c3772309a2ab966f107f37bec2faf191fdb1cf3c5c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/behavior.scxml",
+      "sha256": "c49d2f90e8a64f695d0598b608d4e56e9638c1e0492f7b36f62fe0a428fbb9c7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/layout.css",
+      "sha256": "271b5f27c5a698593e4afbb34856e009875da6fb8acffe2d46fab5ced2b4c4d1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.html",
+      "sha256": "4eb6d6d88cb38da7dae4cbfb3723618edb7091f65b583ace7ca704ad552bbe90"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.rules.json",
+      "sha256": "6ae61aca0c0bea1e93f81aaf975c8dc447d1639f2e8978a5386cf84a2d9f3a8b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/README.md",
+      "sha256": "9a86ada71846739a2fc77d10d5fe7f58adccb77d6b965c035b92348f337619d1"
+    }
+  ],
+  "claims": [
+    {
+      "id": "field-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Field ordnet Steuerelement, Label, Erklärung und Fehler zusammen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "field-example-editorial",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Kontaktbeispiel illustriert dauerhaft sichtbare Hilfe und eine konkrete Korrekturmeldung.",
+      "evidence": []
+    },
+    {
+      "id": "field-native-label",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "FieldTitle ist ein div; nur FieldLabel ist ein natives Label.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/component.json",
+          "pointer": "/partBindings/title"
+        }
+      ]
+    },
+    {
+      "id": "field-orientations",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die drei Ausrichtungen sind vertical, horizontal und responsive; vertical ist die Standardwahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        }
+      ]
+    },
+    {
+      "id": "field-container-threshold",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Responsive wechselt in der CSS-Referenz bei 28rem des FieldGroup-Containers.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/layout.css",
+          "snippet": "@container field-group (min-width:28rem)"
+        }
+      ]
+    },
+    {
+      "id": "field-legend-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Legendenvarianten legend und label erhalten native Legenden-Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.rules.json",
+          "pointer": "/semanticParts/legend"
+        }
+      ]
+    },
+    {
+      "id": "field-errors",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "FieldError rendert ohne Inhalt nichts, priorisiert children, dedupliziert Meldungen und zeigt eine Meldung oder eine Liste; Validierung bleibt extern.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "field-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Verhaltensmodell enthält Darstellung, Property-Änderung und Entfernen, keine Eingabevalidierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "field-label-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze konkrete Labels und handlungsorientierte Fehler sind redaktionelle Empfehlungen.",
+      "evidence": []
+    },
+    {
+      "id": "field-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Field installiert weder Tastatursteuerung noch roving focus; enthaltene Steuerelemente behalten ihr Verhalten, Label delegiert Fokus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "field-ids",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Anwendung muss Label-/Hilfe-/Fehlerzuordnung und Validierung bereitstellen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "field-alert",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Referenz setzt aria-invalid, aria-describedby und role=alert ausdrücklich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/accessibility.html",
+          "snippet": "aria-invalid=\"true\" aria-describedby=\"field-help field-error\""
+        }
+      ]
+    },
+    {
+      "id": "field-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Export ist eine begrenzte Quellenreferenz, keine allgemeine Anwendungs- oder AT-Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/field/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Input und Label als getrennte Aufgaben erläutert; Field bleibt die umgebende Struktur.",
+    "Den Kontaktentwurf auf ein fehlerhaftes Feld begrenzt, damit Beschriftung, Hilfe und Fehler lesbar bleiben.",
+    "28rem ausdrücklich als Referenzentscheidung für den Container bezeichnet.",
+    "FieldTitle bewusst gegenüber dem echten FieldLabel abgegrenzt."
+  ],
+  "limits": [
+    "Die Illustration ist statisch und belegt kein Laufzeitverhalten.",
+    "Validierung, konkrete ID-Zuordnungen, invalid/disabled und der Prüfzeitpunkt müssen in der Anwendung umgesetzt und geprüft werden.",
+    "Keine allgemeine Freigabe für konkrete Framework-, Plattform- oder AT-Implementierungen."
+  ]
+}

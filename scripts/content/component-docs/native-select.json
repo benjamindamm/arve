@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "native-select",
+  "title": "Native Select",
+  "summary": "Mit Native Select wählst du einen oder mehrere Formularwerte über die vertraute Auswahl des Browsers oder Mobilgeräts. Du lieferst Optionen, Beschriftung und Formularlogik.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine bekannte Auswahl mit vertrauter Bedienung",
+      "paragraphs": [
+        "Nutze Native Select, wenn du einen oder mehrere Formularwerte aus einer vorgegebenen Liste wählen lässt und die gewohnte Auswahl des Browsers oder Mobilgeräts erhalten möchtest. Für eine kurze Länderliste oder eine Region brauchst du keine eigens gestaltete Auswahlliste.",
+        "Wähle Select, wenn du die geöffnete Liste gezielt gestalten oder animieren musst. Prüfe eine Combobox, wenn Menschen eine lange Liste durch Eingabe durchsuchen sollen: Native Select bietet kein eigenes Suchfeld. Für wenige Optionen, die jederzeit vergleichbar bleiben sollen, empfiehlt sich eine Radio Group."
+      ],
+      "links": [
+        {
+          "text": "Select",
+          "href": "/systems/shadcn/components/select",
+          "paragraph": 1
+        },
+        {
+          "text": "Combobox",
+          "href": "/systems/shadcn/components/combobox",
+          "paragraph": 1
+        },
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Region für das Formular wählen",
+      "paragraphs": [
+        "Im Beispiel steht «Region» über dem geschlossenen Feld. «Schweiz» ist bereits ausgewählt; der Hinweis «Wähle eine verfügbare Region.» bleibt darunter sichtbar. Damit erkennst du sowohl den Zweck als auch den aktuellen Wert.",
+        "Der Entwurf übersetzt das Regionsbeispiel der Referenz: Zur Gruppe «Europa» gehören Schweiz, Österreich und das deaktivierte Deutschland; die Vereinigten Staaten stehen ausserhalb der Gruppe. Die Illustration zeigt bewusst nur das geschlossene Feld, denn die geöffnete Auswahl sieht je nach Plattform anders aus. Eine Vorbelegung empfiehlt sich nur, wenn sie fachlich begründet ist."
+      ],
+      "illustration": {
+        "src": "/component-examples/native-select.svg",
+        "alt": "Formularfeld Region mit ausgewähltem Wert Schweiz, Pfeil und Hinweis Wähle eine verfügbare Region.",
+        "caption": "Statische Illustration · Geschlossene Einzelauswahl mit sichtbarem Label und Hinweis."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Label, Wert und Auswahl gehören zusammen",
+      "paragraphs": [
+        "Das sichtbare Feld besteht aus einer umgebenden Hülle, dem nativen Auswahlfeld und einem ergänzenden Pfeilsymbol. Im geschlossenen Zustand liest du den ausgewählten Optionstext. Das Label steht ausserhalb der Komponente und wird mit dem Feld verknüpft; einen Hinweis platzierst du darunter.",
+        "Du lieferst die tatsächlichen Optionen und bei Bedarf benannte Optionsgruppen. Eine Gruppenüberschrift ordnet Einträge, ist aber selbst kein auswählbarer Wert. Das Pfeilsymbol ergänzt die Form und erhält keinen eigenen Fokus. Plane die Breite für deine längsten verständlichen Bezeichnungen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Kompakt oder mit mehreren Werten",
+      "paragraphs": [
+        "Die belegten Grössen sind default und sm. Nutze die Standardgrösse für gewöhnliche Formulare und die kompakte Grösse nur, wenn sie zur Dichte der Umgebung passt. Die Grössenwahl bestimmt die Gestaltung, nicht die Anzahl sichtbarer Optionen.",
+        "Mit multiple erhältst du eine echte native Mehrfachauswahl. Die Referenz blendet dabei den Pfeil der Einzelauswahl aus und überlässt die Höhe der Plattform. Plane diesen Modus separat; er ist keine Liste mit frei gestalteten Auswahlchips. Optionsgruppen helfen, zusammengehörige Einträge zu ordnen. Eigene Farbvarianten sind nicht festgelegt."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Auswahl, Sperre und Fehler verständlich machen",
+      "paragraphs": [
+        "Beim Fokussieren erscheint eine sichtbare Fokusmarkierung. Nach einer nativen Auswahländerung erhält die Anwendung die Änderungsmeldung. Wenn sie den Wert selbst vorgibt, muss sie den bestätigten Wert zurückgeben; sonst bleibt ihre Vorgabe massgebend.",
+        "Du kannst das ganze Feld oder einzelne Optionen deaktivieren. Deaktivierte Einträge sind nicht auswählbar. Erkläre in der Umgebung, weshalb eine benötigte Auswahl gesperrt ist. Für einen Fehler setzt die Anwendung den ungültigen Zustand und verknüpft einen hilfreichen Fehlertext, etwa «Wähle eine verfügbare Region.» Die farbige Umrandung allein erklärt den Fehler nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Der Leerwert ersetzt kein Label",
+      "paragraphs": [
+        "«Region» benennt die Frage klarer als «Auswahl». Schreibe Optionen als kurze, unterscheidbare Begriffe wie «Schweiz» und «Österreich», statt mehrere Einträge nur «Standard» zu nennen. Halte Zusätze knapp; «Deutschland (nicht verfügbar)» erklärt eine gesperrte Option.",
+        "Ein Text wie «Region wählen» ist eine echte Option mit leerem Wert, kein separater Platzhalter. Das gebundene Originalbeispiel verwendet solche Leeroptionen; das Regionsbeispiel startet dagegen mit der Schweiz. Entscheide bewusst, ob ein Leerwert erlaubt ist und wie ein Pflichtfeld ihn prüft. Auch mit Leeroption bleibt ein dauerhaftes sichtbares Label nötig."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Die Plattform steuert die Tasten",
+      "paragraphs": [
+        "Mit Tab erreichst du das native Feld; das verknüpfte Label liefert seinen zugänglichen Namen. Pfeiltasten, die Suche durch Anfangsbuchstaben, das Öffnen der Auswahl und Tastenkombinationen für die Mehrfachwahl folgen dem Browser und Betriebssystem. Prüfe die Bedienung auf deinen Zielgeräten, insbesondere bei Mehrfachauswahl.",
+        "Escape kann die native Auswahl schliessen. Daraus folgt weder automatisch eine Wertänderung noch ein zusätzliches Zurücksetzen. Behandle auch nicht jeden Pfeiltastendruck als bestätigte Auswahl: Massgebend ist die tatsächliche native Änderungsmeldung. Entferne die Fokusmarkierung nicht."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein echtes Formularfeld einbinden",
+      "paragraphs": [
+        "Native Select verwendet ein echtes select mit option und bei Bedarf optgroup. Du verbindest Label und Feld über passende Kennungen und verknüpfst Hinweise oder Fehlertexte mit dem Feld. Für die Formularübermittlung gibst du dem Feld einen Namen; die Anwendung definiert die erlaubten Werte und ihre Prüfung.",
+        "Baue daneben keine zweite, künstliche ARIA-Auswahlliste. Die native Semantik bleibt auch im Dialog erhalten. Die Komponente gestaltet das Feld, ersetzt aber weder deine Formularlogik noch die mobile Auswahloberfläche. Falls du Klassen zur Breitenanpassung nutzt, beachte: className wirkt auf die umgebende Hülle."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Worauf sich diese Beschreibung stützt",
+      "paragraphs": [
+        "Abgeglichen sind Schnittstelle, Gestaltungsregeln, Verhaltensmodell, HTML-Beispiel und Zugänglichkeitsregeln des veröffentlichten Exports sowie die gebundenen React-Originalquellen. Die Empfehlungen zur Komponentenwahl und Textgestaltung sind redaktionelle Entscheidungen.",
+        "Der Referenzstatus beschreibt den begrenzten Quellenumfang. Er ist keine allgemeine Freigabe für deine Anwendung, alle Mobilgeräte oder unterstützende Technologien. Insbesondere die geöffnete native Auswahl und ihre Bedienung musst du in deiner Zielumgebung prüfen."
+      ]
+    }
+  ]
+}

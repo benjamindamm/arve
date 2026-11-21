@@ -1,0 +1,186 @@
+{
+  "component": "input-otp",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/README.md",
+      "sha256": "332b106ff2b9e96a30a408ae8697a69f3ff5903a8b22c23eeb5af0c22ad87760"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.html",
+      "sha256": "8e0375d4d6e0232dfadcb22102372fa49097964703a0e4469c8103d29b4516df"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.rules.json",
+      "sha256": "9def2ee82f3119e16d863acb37b7ceb249cb4a95f828e6077b600d959972b949"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/behavior.scxml",
+      "sha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/component.json",
+      "sha256": "6ce8918b146e64a193acc3529140e91355611db744f5bd09d0f28b1c8ea3323b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/interface.json",
+      "sha256": "058c4b9bc8aaf7f0a1a0e856766911cd618aa0f220ce6cc3bfa2985e7a6cc2df"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/ux.json",
+      "sha256": "1970c2738033c1aaf87ec720556dd8d7641bae1c2c0a84d8c95e495f5005dbd6"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-short-code",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Ein beschriftetes natives Feld dient einem kurzen Bestätigungscode mit visuellen Zeichenplätzen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-no-submit",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Das vollständige Füllen ist keine Verifikation und keine automatische Übermittlung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/interface.json",
+          "pointer": "/modules/0/declarations/0/events/1/description"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-one-input",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Ein echtes natives Input trägt Wert, Fokus und Einfügen; Slots sind visuell.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/component.json",
+          "pointer": "/anatomy/input"
+        }
+      ]
+    },
+    {
+      "id": "variants-policy",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Referenz wählt sechs Ziffern, entfernt Leerzeichen/Bindestriche beim Einfügen und verwirft Kandidaten mit Musterfehlern vollständig.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "variants-no-style-enum",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die ausgewiesenen Varianten betreffen Code-Policy und aktive, deaktivierte oder ungültige Darstellung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "states-completion",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Vollständigkeit wird nur nach zuvor beobachtetem kürzerem Wert gemeldet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/behavior.scxml",
+          "snippet": "_event.data.previousObserved === true"
+        }
+      ]
+    },
+    {
+      "id": "states-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Deaktivierung verhindert native Nutzereingaben; die Anwendung verantwortet Verifikationsfehler und Serverantwort.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "labels-concrete",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze Beschriftung, Herkunft und handlungsbezogene Fehlertexte werden als redaktionelle Empfehlung formuliert."
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab erreicht ein Feld; Pfeile, Auswahl, Löschen und Einfügen sind native Funktionen. Escape leert nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-mobile",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Referenz wählt text, numeric und one-time-code bei maximal sechs Zeichen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.html",
+          "snippet": "type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-hidden-slots",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die dekorativen Gruppen und der Trenner sind verborgen, das echte Feld trägt Label und Hilfetext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "sources-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Quellenumfang ist begrenzt und kein allgemeines Pixel-, Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-otp/README.md",
+          "snippet": "kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Ein einziges Feld konsequent von visuellen Plätzen getrennt; keine erfundene Navigation zwischen sechs Inputs.",
+    "Sechs Ziffern und Paste-Normalisierung als Wahl der Referenz erklärt, nicht als universeller OTP-Standard.",
+    "Formularaktion im SVG ausdrücklich ergänzender Entwurf; kein automatisches Absenden behauptet.",
+    "Beschriftung, Alternativwahl und Fehlermeldungsbeispiele als redaktionelle Empfehlungen formuliert."
+  ],
+  "limits": [
+    "Keine lokale Input-OTP-Demo in src/demos/shadcn gefunden.",
+    "SVG ist statische Illustration, kein Laufzeit- oder Pixelnachweis.",
+    "Autovervollständigung auf konkreten Mobilgeräten und assistive Technologien wurden in diesem redaktionellen Auftrag nicht geprüft."
+  ]
+}

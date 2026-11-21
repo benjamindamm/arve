@@ -1,0 +1,243 @@
+{
+  "component": "date-picker",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/component.json",
+      "sha256": "87474875a3c54e57f3afe5d953949ff57531439f63b3adbfb1ece58b2040ba46"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/ux.json",
+      "sha256": "584cfa377aa10215176f822cda3a4c4902fd0c7e26c3135e72bd752b03985c02"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/interface.json",
+      "sha256": "597fd51a6d251ef07dda596271a8c0091509f5c5379bdc74a301bb51e086ffaa"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/stories.json",
+      "sha256": "345bda357ad0d92402d439ce44d1abd2853ba487ea13102b72b26b762dc45e57"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/behavior.scxml",
+      "sha256": "3f8320fdaa19a300f7e70ad3b7538e63b26aff58fac259e174e9127944217a35"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/layout.css",
+      "sha256": "daf2e7f30094eec08eca4f3e196f4d2769f7b586bd5873b2efda0495a7899f2b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.html",
+      "sha256": "c9272ba35574733a488b2edff4653a50e5cc534f3b5770c35c6b9d846df1d2d7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.rules.json",
+      "sha256": "f876da55acc4c2e0b074cc3f3b1fd2d23e7b0a7a7726bc1659db7d54d2e40cd9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/README.md",
+      "sha256": "fec3b097768eccf9eff5c9b7c8df23432dfb8455ef497d27bef4eb8e6168e3be"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-local-dates",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Komposition wählt lokale Kalendertage in einem unabhängig gesteuerten Popover.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Dauerhaft sichtbarer Calendar beziehungsweise separate Datumseingabe werden nach Aufgabe empfohlen.",
+      "evidence": []
+    },
+    {
+      "id": "example-delivery",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Referenzwerte: 12. November gewählt, 13. November gesperrt; Englisch/en-US ist bewusst gewählt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-composition",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Auslöser, Popup und Kalender sind getrennte Teile der dokumentierten Komposition.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-layout",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der Auslöser darf umbrechen, die Popup-Hülle erhält kein zusätzliches Padding.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/layout.css",
+          "snippet": "white-space: normal;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/layout.css",
+          "snippet": "padding: 0;"
+        }
+      ]
+    },
+    {
+      "id": "variants-calendar",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Optionale Einzelwahl kann löschen, erforderliche nicht; Mehrfach- und Bereichsauswahl bleiben Calendar-Varianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "states-select-open",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datumswahl schliesst das Popup nicht implizit.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/interface.json",
+          "pointer": "/modules/0/declarations/0/events/0/description"
+        }
+      ]
+    },
+    {
+      "id": "states-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Geschlossen mit Auswahl, leer und deaktivierter Auslöser sind vorhandene Fixtures.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/stories.json",
+          "pointer": "/stories/3/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "states-independent",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Zustandsaktor verwaltet Öffnungszustand und Auswahl getrennt; SOURCE_SELECT weist open nicht neu zu.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/behavior.scxml",
+          "snippet": "<transition event=\"HOST_OPEN\">"
+        }
+      ]
+    },
+    {
+      "id": "labels-editorial",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Aufgabentexte und ausgeschriebene Monatsnamen reduzieren Mehrdeutigkeit.",
+      "evidence": []
+    },
+    {
+      "id": "labels-trigger",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der Referenzauslöser benennt Aufgabe und ausgewähltes Datum.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.html",
+          "snippet": "Delivery date: November 12th, 2026</button>"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-keys-repair",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Navigation und Auswahl folgen den dokumentierten Tasten; die explizite Referenzkorrektur ist für tatsächlichen Fokus erforderlich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-application",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Texteingabe, Uhrzeit, Remote-Verfügbarkeit und Speicherung sind optionale separate Anwendungskompositionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "semantics-dialog",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Das Popup ist ein durch den Auslöser benannter Dialog.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.html",
+          "snippet": "role=\"dialog\" id=\"date-popup\" aria-labelledby=\"date-trigger\""
+        }
+      ]
+    },
+    {
+      "id": "sources-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Quellenreferenz ist begrenzt und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    },
+    {
+      "id": "example-focus-prerequisite",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der frühe Hinweis benennt die dokumentierte Fokusvoraussetzung des eingebundenen Kalenders; er behauptet keine bereits reparierte Implementierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/date-picker/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Deutsches Lieferdatum-Beispiel als redaktionelle Lokalisierung kennzeichnen; Referenz en-US nicht als automatische Locale-Erkennung auslegen.",
+    "Date Picker von Texteingabe, Formularübermittlung und eigenem Root klar abgrenzen.",
+    "Bekannten Fokusfehler und explizite Referenzkorrektur im Bedienabschnitt sichtbar benennen.",
+    "Keine willkürlichen Farb- oder Grössenvarianten ergänzen."
+  ],
+  "limits": [
+    "Keine lokale Date-Picker-Demo vorhanden.",
+    "Deutsche Lokalisierung und Formulareinbindung werden durch die statische Illustration nicht nachgewiesen.",
+    "Erforderliche und mehrfache Auswahl sind quellenbeschrieben; Einzelwahl und Zeitraum sind die untersuchten Referenzfälle.",
+    "Unveränderter gebundener Calendar-Wrapper hat eine bekannte fehlende Fokus-Ref-Verbindung."
+  ]
+}

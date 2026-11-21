@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "message",
+  "title": "Message",
+  "summary": "Mit Message ordnest du einen Gesprächsbeitrag mit lesbarem Absender, Inhalt und ergänzenden Angaben. Anhänge und Aktionen setzt du als eigene Inhalte zusammen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ein Beitrag mit erkennbarem Absender",
+      "paragraphs": [
+        "Mit Message ordnest du einen einzelnen Gesprächsbeitrag mit Absender, Inhalt und ergänzenden Angaben. Nutze ihn etwa für eine Supportantwort mit Dokument oder für einen Beitrag eines Assistenten. Der Wrapper hält diese Teile zusammen; die Daten und die Bedeutung der Absenderrolle liefert deine Anwendung.",
+        "Brauchst du nur die sichtbare Nachrichtenfläche, wähle Bubble. Für das Scrollen eines ganzen Verlaufs ist Message Scroller die passende Ergänzung. Eine allgemeine Rückmeldung wie «Änderungen gespeichert» gehört eher in einen Toast als in einen künstlichen Gesprächsbeitrag."
+      ],
+      "links": [
+        {
+          "text": "Bubble",
+          "href": "/systems/shadcn/components/bubble",
+          "paragraph": 1
+        },
+        {
+          "text": "Message Scroller",
+          "href": "/systems/shadcn/components/message-scroller",
+          "paragraph": 1
+        },
+        {
+          "text": "Toast",
+          "href": "/systems/shadcn/components/toast",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Antwort mit Dokument",
+      "paragraphs": [
+        "Lea aus dem Support bestätigt die Prüfung einer Abrechnung. Name, Rolle und Uhrzeit stehen über dem Text; darunter folgen ein klar benannter PDF-Anhang und die Aktion «Kopieren». So kannst du Inhalt und Folgehandlung dem richtigen Beitrag zuordnen.",
+        "Die Nachrichtenfläche, der Anhang und der Button sind zusammengesetzte Inhalte mit eigenen Aufgaben. Message ordnet sie an. Die Illustration zeigt einen redaktionellen Entwurf, keine eingebundene Laufzeitansicht."
+      ],
+      "illustration": {
+        "src": "/component-examples/message.svg",
+        "alt": "Gesprächsbeitrag von Lea, Support, um 10:24 mit der Antwort zur Abrechnung, dem Anhang Abrechnung.pdf und der Aktion Kopieren.",
+        "caption": "Statische Illustration · Gesprächsbeitrag mit ergänzten Inhalten und Aktion."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Absender, Beitrag und Ergänzungen ordnen",
+      "paragraphs": [
+        "Neben dem Inhaltsbereich kann ein Avatar stehen. Er ergänzt den ausgeschriebenen Absender, ersetzt ihn aber nicht. Im Kopfbereich platzierst du Name und Zeit. Darunter stehen Nachrichtentext beziehungsweise eine Bubble und bei Bedarf weitere Inhalte wie ein Attachment.",
+        "Der Fussbereich nimmt Metadaten oder Aktionen für diesen Beitrag auf. Er wächst bei längeren Beschriftungen und kann umbrechen. MessageGroup stapelt aufeinanderfolgende Beiträge desselben Absenders. Auch bei einer kompakten Gruppierung muss erkennbar bleiben, wer spricht."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Anfang oder Ende des Verlaufs",
+      "paragraphs": [
+        "Du kannst die Zeile am Anfang oder am Ende ausrichten; die Voreinstellung ist start. Mit end kehrt sich die visuelle Reihenfolge von Avatar und Inhalt um. Ordne beispielsweise eigene Beiträge einer Seite zu und eingehende der anderen. Die Ausrichtung ist keine automatisch erkannte Absenderrolle.",
+        "Orientiere dich an der Schreibrichtung statt an festen Seiten wie links und rechts. Eigene Farb- oder Grössenvarianten hat Message nicht. Eine anders gestaltete Nachrichtenfläche ist eine Wahl der eingefügten Bubble. Avatar, Kopf- und Fussbereich kannst du je nach Informationsbedarf ergänzen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Status kommt aus deiner Anwendung",
+      "paragraphs": [
+        "Message zeigt den gelieferten Beitrag an und übernimmt Änderungen an seinen Inhalten. Es gibt keinen eingebauten Ablauf für Senden, Zugestellt, Gelesen oder Fehlgeschlagen. Solche Angaben im Fussbereich sind Texte deiner Anwendung. Zeige sie nur, wenn du den jeweiligen Zustand zuverlässig kennst.",
+        "Für einen fehlgeschlagenen Versand kannst du eine konkrete Meldung und einen Button «Erneut senden» ergänzen. Deine Anwendung führt den Versuch aus und aktualisiert die Rückmeldung. Für laufende Arbeit beschreibt die Originaldokumentation einen eingefügten Marker mit Statussemantik. Automatische Ankündigungen und das Nachführen des Verlaufs gehören zum umgebenden Kontext."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Identität und Handlung ausschreiben",
+      "paragraphs": [
+        "Schreibe zum Beispiel «Lea · Support» statt nur «LS». Ein Avatar oder die Seite im Verlauf reicht als Absenderangabe nicht aus. Trenne Text, Zeitpunkt und Zustellinformation so, dass du sie rasch unterscheiden kannst. Halte den Beitrag bei einem Thema; längere Erklärungen brauchen lesbare Absätze.",
+        "Benenne einen Anhang konkret, etwa «Abrechnung.pdf · PDF · 240 KB», statt «Datei». Für eine reine Symbolaktion ist «Nachricht kopieren» ein hilfreicher zugänglicher Name; «Aktion» erklärt die Wirkung nicht. Diese Formulierungen sind redaktionelle Empfehlungen für deine eingefügten Inhalte."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Bedienbar sind die eingefügten Aktionen",
+      "paragraphs": [
+        "Der Nachrichtencontainer selbst hat keine Tastatursteuerung und keine eigene Fokusfolge. Reiner Text braucht keinen zusätzlichen Tabstopp. Tab und Umschalt+Tab führen durch eingefügte Links und Buttons; einen nativen Button aktivierst du mit Enter oder der Leertaste.",
+        "Gib Symbolbuttons einen zugänglichen Namen und einen erkennbaren Fokus. Die jeweiligen Kindkomponenten bestimmen ihre Bedienung. Message liefert weder Pfeiltastennavigation zwischen Beiträgen noch eine eigene Senden-Taste."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Verlauf und Nachricht getrennt verantworten",
+      "paragraphs": [
+        "Die Teile von Message sind gewöhnliche Inhaltscontainer. Sie speichern keine Nachrichten und senden keine Antworten. Lege lesbare Absender- und Zeitangaben selbst an; die HTML-Referenz verwendet dafür Text und ein time-Element. Ein ergänzender Avatar kann für Hilfstechnologien ausgeblendet bleiben, wenn er dieselbe Identität wiederholt.",
+        "Eine Gruppe erhält nicht automatisch die Rolle eines live aktualisierten Protokolls. Entscheide im Verlauf, welche neuen Inhalte angekündigt werden und wie Scrollen funktioniert. Auch ein Anhang wird durch Message nicht automatisch heruntergeladen. Prüfe die eingefügten Aktionen und den Verlauf zusammen im Anwendungskontext."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Belegter Umfang dieser Seite",
+      "paragraphs": [
+        "Die Seite stützt sich auf Schnittstelle, Layout, Zustandsmodell, HTML-/ARIA-Regeln und die gebundenen Originalbeispiele. Diese zeigen auch zusammengesetzte Anhänge und Aktionen. Die Zustandsbeispiele decken beide Ausrichtungen, Rechts-nach-links-Darstellung und lange Texte ab. Der dokumentierte Referenzumfang belegt keine vollständige Chat-Anwendung oder allgemeine Freigabe für Hilfstechnologien."
+      ]
+    }
+  ]
+}

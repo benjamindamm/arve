@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "collapsible",
+  "title": "Collapsible",
+  "summary": "Mit Collapsible zeigst du ergänzende Inhalte bei Bedarf. Ein zugehöriger Button öffnet und schliesst genau einen Bereich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Zusatzdetails bei Bedarf öffnen",
+      "paragraphs": [
+        "Mit Collapsible blendest du einen einzelnen ergänzenden Inhaltsbereich ein und aus. Nutze ihn etwa für zusätzliche Projektangaben unter einer kurzen Zusammenfassung oder für eine ausführlichere Erklärung neben einer bereits verständlichen Einstellung. Der sichtbare Teil muss reichen, um die Hauptaufgabe ohne Öffnen fortzusetzen.",
+        "Wähle ein Accordion, wenn du mehrere gleichrangige Themen als zusammengehörige aufklappbare Abschnitte ordnen möchtest. Lass Pflichtangaben, Fristen, Warnungen und entscheidende Handlungsanweisungen dauerhaft sichtbar. Wenn du sie erst hinter «Details» versteckst, fehlt die Grundlage für eine informierte Entscheidung."
+      ],
+      "links": [
+        {
+          "text": "Accordion",
+          "href": "/systems/shadcn/components/accordion",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Projekt mit ergänzenden Angaben",
+      "paragraphs": [
+        "Die Illustration zeigt das Projekt «Quartiergarten». Titel und Status bleiben sichtbar. Über «Projektdetails» öffnest du ergänzende Angaben zu Standort und Ansprechperson. Die Zusammenfassung funktioniert auch, wenn diese Angaben geschlossen sind.",
+        "Platziere den Auslöser direkt bei seinem Inhalt. Im geöffneten Beispiel steht der Detailbereich unmittelbar darunter; eine separate Fläche fasst die Projektübersicht zusammen. Dieser Rahmen ist eine redaktionelle Gestaltung des Beispiels und keine vorgegebene Collapsible-Variante."
+      ],
+      "illustration": {
+        "src": "/component-examples/collapsible.svg",
+        "alt": "Projekt Quartiergarten mit Status In Planung und geöffnetem Bereich Projektdetails: Standort Nordhof und Ansprechperson Mara Keller.",
+        "caption": "Statische Illustration · Ein einzelner geöffneter Zusatzbereich in einer Projektübersicht."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Auslöser und Inhalt gehören zusammen",
+      "paragraphs": [
+        "Der gemeinsame Container hält einen Auslöser und den zugehörigen Detailbereich zusammen. Der Auslöser ist ein echter Button und bleibt auch im geschlossenen Zustand sichtbar. Sein Text erklärt, welcher Inhalt dahinterliegt. Der Detailbereich kann Text und weitere passende Bedienelemente enthalten.",
+        "Halte die räumliche Verbindung klar: Der Inhalt folgt dem Auslöser im Lesefluss. Die Referenz sieht einen kompakten Auslöser mit 32 Pixeln Mindesthöhe, 16 Pixeln seitlichem Innenabstand und 8 Pixeln Abstand zwischen den Teilen vor. Die Inhaltsmenge bestimmt die Höhe; eine feste Breite ist nicht vorgegeben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Startzustand und Inhaltserhalt wählen",
+      "paragraphs": [
+        "Collapsible hat keine eigenen Farb- oder Grössenvarianten. Ein Pfeilsymbol, ein Kartenrahmen und eine Animation gehören ebenfalls nicht zur zugesicherten Grundgestaltung. Du kannst den Auslöser mit einem Button zusammensetzen; dessen Gestaltung entsteht dann durch diese Kombination.",
+        "Wähle einen anfangs geschlossenen Bereich für selten benötigte Details. Mit defaultOpen kannst du ihn anfangs öffnen; mit open steuert deine Anwendung den aktuellen Zustand. keepMounted erhält den geschlossenen Inhalt im Dokument, etwa wenn du dessen erneuten Aufbau vermeiden möchtest. hiddenUntilFound macht ihn in unterstützenden Browsern über die Seitensuche auffindbar und öffnet ihn bei einem Treffer; ältere Browser überspringen den verborgenen Inhalt bei der Suche."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen, schliessen und sperren",
+      "paragraphs": [
+        "Eine Betätigung öffnet den geschlossenen Bereich; eine weitere schliesst ihn wieder. Der Auslöser vermittelt den geöffneten Zustand auch für assistierende Technik. Beim Darüberfahren erhält er eine Hintergrundrückmeldung, bei Tastaturfokus eine sichtbare Markierung. Deaktiviert lässt er sich nicht umschalten und erscheint abgeschwächt.",
+        "Im Normalfall wird geschlossener Inhalt aus dem Dokument entfernt. Bei ausdrücklich gewähltem keepMounted bleibt er verborgen und nicht bedienbar. Prüfe deshalb bei Formularinhalten, ob Eingaben beim erneuten Öffnen erhalten bleiben sollen. Bei gesteuertem Zustand muss deine Anwendung die Öffnungsanforderung übernehmen; der Callback kann auch abgebrochen werden."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das Thema nennen",
+      "paragraphs": [
+        "«Projektdetails» oder «Hinweise zur Datenübernahme» kündigen den Inhalt konkret an. «Mehr», «Hier klicken» oder ein unbeschriftetes Symbol sind zu unbestimmt. Halte den Text möglichst auf einer kurzen Zeile, ohne ihn bei längeren Übersetzungen abzuschneiden.",
+        "Ein stabiler Themenname funktioniert in beiden Zuständen. Falls du eine Handlung beschriftest, passe «Zusatzangaben anzeigen» beim Öffnen zu «Zusatzangaben ausblenden» an. Schreibe keine entscheidende Warnung ausschliesslich in den verborgenen Bereich. Kennzeichne eine dauerhafte Nichtverfügbarkeit im sichtbaren Umfeld, statt nur einen gesperrten Auslöser stehen zu lassen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab zum Auslöser",
+      "paragraphs": [
+        "Mit Tab erreichst du den nativen Auslöser in der normalen Reihenfolge; Enter oder Leertaste öffnen und schliessen den Bereich. Danach erreichst du vorhandene Links und Eingabefelder im geöffneten Inhalt über die normale Tab-Reihenfolge. Der sichtbare Buttontext liefert den zugänglichen Namen.",
+        "Escape und ein Klick ausserhalb schliessen einen einfachen Collapsible nicht. Es gibt keine Fokusfalle und keine zugesicherte automatische Fokusrückgabe. Wenn deine Anwendung einen Bereich programmgesteuert schliesst, während der Fokus darin liegt, musst du den Fokus vorher an eine sinnvolle sichtbare Stelle setzen, beispielsweise auf den Auslöser."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein Bereich im normalen Dokument",
+      "paragraphs": [
+        "Die HTML/ARIA-Referenz verbindet den Button über aria-controls mit dem vorhandenen Inhaltsbereich und meldet den Zustand über aria-expanded. Verwende für jede Instanz eigene passende Zuordnungen. Der Auslöser hat type=\"button\" und soll in einem Formular kein Absenden auslösen.",
+        "Der Bereich ist kein Dialog und keine Navigation. Innerhalb eines Dialogs ergänzt er dessen Inhalt; die Verantwortung für dessen Fokusführung bleibt beim Dialog. Wenn verborgene Formularfelder Fehler enthalten, sorge dafür, dass deine Anwendung die betroffene Stelle sichtbar und erreichbar macht. Das Ein- und Ausblenden allein übernimmt keine Formularprüfung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz belegt",
+      "paragraphs": [
+        "Die Seite gleicht die exportierte Schnittstelle, UX-Regeln, CSS-Gestaltung, Zustandsbeschreibung und HTML/ARIA-Regeln mit den Zustandsbeispielen und der gebundenen Base-UI-Dokumentation ab. Die Illustration ist ein redaktioneller Entwurf.",
+        "Der Contract ist im begrenzten Quellenumfang vollständig beschrieben; daraus folgt keine allgemeine Freigabe deiner Anwendung. Prüfe die konkrete Kombination mit eigenen Inhalten, Formularzuständen und Fokuswechseln in deiner Umsetzung."
+      ]
+    }
+  ]
+}

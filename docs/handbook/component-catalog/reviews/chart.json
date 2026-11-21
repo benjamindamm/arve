@@ -1,0 +1,236 @@
+{
+  "component": "chart",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/component.json",
+      "sha256": "f6dafb3b4a541e6f297344a39cdf2724c986df17561f084b5546ad71dfab72ec"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/ux.json",
+      "sha256": "b77b1be2a72420f9ea5c379c9bec8dc7996d27a5bb4c98ecdae05ce53dd69335"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/interface.json",
+      "sha256": "ff0aac1cdaa45f887f26d6590a2f5facb7878a3932e4d1d2bdf686b5a1a9b0b1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/stories.json",
+      "sha256": "727964a4304cf2b28b0faf4dd91adfd351d5c7d77ff45a3b7865ac09394a5e12"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/behavior.scxml",
+      "sha256": "8c9e65113d9c9066e5d0e5600d023958d5c4643ef1180f3d627a5e1a9c39772a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/layout.css",
+      "sha256": "6e0d8cfc53f13a0c24e2d54789408052cb8d7c306f5b68fadd23b431d98e2e50"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/accessibility.html",
+      "sha256": "37afae55222c7e13ce79fcb45121e068c7ad9892e793a108f48157f42a7b47f2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/accessibility.rules.json",
+      "sha256": "b6cfc5e62646423f4ca3baa7f02ef311b68dc99d6efb774bcb89026f4868db72"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/README.md",
+      "sha256": "ed1d3cc752f9fe7c8f1a02042a9bd4c0619aef8ce1f902e05b604cb192745e7a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "foundation",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Chart wählt selbst keinen Diagrammtyp und setzt Recharts-Diagramme mit Serienkonfiguration zusammen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Chart Bar für Monatsvergleiche, Chart Line für Verläufe und Table für genaue Nachschlageaufgaben sind redaktionelle Auswahlhinweise."
+    },
+    {
+      "id": "sample",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration verwendet alle sechs Desktop-Werte 186, 305, 237, 73, 209, 214 in der gebundenen Monatsreihenfolge.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/ux.json",
+          "pointer": "/exampleSource/dataset"
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Rahmen, Titel, Zusammenfassung, Grafik und Datentabelle sind gebundene Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "table-scroll",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Datentabelle hat einen horizontal rollbaren Bereich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/layout.css",
+          "snippet": "[data-part=\"chart-table-scroll\"] {\n  max-inline-size: 100%;\n  overflow-x: auto;\n}"
+        }
+      ]
+    },
+    {
+      "id": "series-config",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Konfiguration trennt Daten von Namen, Symbolen und festen Farben oder vollständigen hellen/dunklen Farbwerten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Markierungen dot, line und dashed sowie hideLabel und hideIndicator sind belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1"
+        }
+      ]
+    },
+    {
+      "id": "legend-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Legende unterstützt hideIcon.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/interface.json",
+          "pointer": "/modules/0/declarations/2/members/1"
+        }
+      ]
+    },
+    {
+      "id": "updates",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datenwechsel aktualisieren Grafik, Tabelle und Zusammenfassung gemeinsam; Leer- und Fehlerfälle dürfen keine Nullwerte vortäuschen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "escape",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Escape schliesst den Tooltip und merkt sich dessen aktuelle Koordinate.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/behavior.scxml",
+          "snippet": "<transition event=\"ESCAPE\">\n      <assign location=\"tooltipVisible\" expr=\"false\" />\n      <assign location=\"dismissedCoordinate\" expr=\"coordinateKey\" />\n    </transition>"
+        }
+      ]
+    },
+    {
+      "id": "labels-recommendation",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Titel mit Zeitraum und Einheit sowie eine sachliche Einordnung erleichtern den Vergleich; aus dem Beispieldatenset wird keine Ursache abgeleitet."
+    },
+    {
+      "id": "no-color-only",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Alle Kategorien und Serien müssen ohne Farbe und flüchtige Tooltips lesbar bleiben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-reference",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Referenz verbirgt die redundante Grafik, schaltet accessibilityLayer aus und hält alle Daten über die native Tabelle zugänglich; Tooltip ohne eigenes Fokusziel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Tabelle und Textalternative sind ausdrücklich ergänzte Referenzentscheidungen und werden nicht durch Chart automatisch geliefert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "source-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Base-UI-Grundlage bleibt massgeblich; das ergänzende Beispiel liefert Diagrammform und Zahlen, keine allgemeine Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "release-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Quelle erklärt release:false und verneint ein allgemeines Pixel-, Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Chart als gemeinsame Grundlage von konkreten Diagrammzusammenstellungen getrennt.",
+    "Gebundenes Sechsmonatsdatenset unverändert übernommen, Beschriftungen ins Deutsche übertragen.",
+    "Vollständige Tabelle in der Illustration dauerhaft gezeigt; keinen Tooltip als einzigen Datenzugang dargestellt.",
+    "Diagrammwahl und konkrete Beschriftungen als redaktionelle Empfehlungen behandelt."
+  ],
+  "limits": [
+    "Keine lokale Chart-Demo unter src/demos/shadcn vorhanden.",
+    "Keine Browser- oder Laufzeitprüfung dieser redaktionellen Illustration; Root übernimmt die Integration.",
+    "Der exportierte Referenznachweis ist keine allgemeine Anwendungs- oder Plattformfreigabe."
+  ]
+}

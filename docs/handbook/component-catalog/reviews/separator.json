@@ -1,0 +1,199 @@
+{
+  "component": "separator",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/component.json",
+      "sha256": "2d392fc029bff93942566f5e847583c4637f7ab8be9838ee5f2738e8353d9e7a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/ux.json",
+      "sha256": "5ec2d7db36cd05a51169f7ce7dceeb6a10bddb79d8166c51dcaae1883ca34eeb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/interface.json",
+      "sha256": "732e0840b6a9543fd539f3c2032967dcfbc68c03bb6c732d063c053c56fbce2b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/stories.json",
+      "sha256": "ba1651009949c08b1691b4a57b52ed61b174b81ecb25547a1062f8807f1f3784"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/behavior.scxml",
+      "sha256": "1693c60315f7e393fc9ed92187ea0ab26aecf4720c1d29eb2841964c3cf7ab4a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/layout.css",
+      "sha256": "e00e2c5ee064cb310a48265d31d09e4eb36cac77b71097409a86ce9a88d1268c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/accessibility.html",
+      "sha256": "7ccdf2787b3898460b8b82185df3468c2a79104f432943a77d4ca8485067f0cd"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/accessibility.rules.json",
+      "sha256": "c8cf22c4b3ec8032b3640451787cfc4442fe6764b39b7ecdd6e117e18f3ab51c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/README.md",
+      "sha256": "b3f9e1b997113388209d8969b435bc09580b5574cf270b7f5925854e989eb517"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-boundary",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Separator trennt Inhaltsbereiche visuell; er bietet kein verstellbares Splitter-Verhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "example-context",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Kontakt und Versand bilden zwei benannte Bereiche; die Illustration zeigt eine redaktionell gewählte bedeutungstragende Grenze.",
+      "evidence": []
+    },
+    {
+      "id": "anatomy-line",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die horizontale Linie füllt die Breite, die vertikale streckt sich an ihrer Umgebung; die Länge ist kein festes Komponentenmass.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/layout.css",
+          "snippet": "inline-size: 100%;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/layout.css",
+          "snippet": "align-self: stretch;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "variants-orientation",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die belegten Ausrichtungen sind horizontal und vertikal; horizontal ist der Schnittstellenstandard. Keine eigenen Farb- oder Grössenvarianten sind definiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "states-passive",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Modell behandelt Einfügen, Entfernen und Eigenschaftsänderungen, ohne interaktive Zustände zu definieren.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "labels-context",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der nicht fokussierbare Separator verlangt keinen fiktiven Namen; angrenzende Überschriften und Texte liefern den Kontext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-none",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Separator ist nicht fokussierbar und hat keine Tastaturaktion; dekoratives Verbergen wird bewusst im Kontext entschieden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "semantics-orientation",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz nutzt role=separator mit Orientierung; die Orientierung entscheidet nicht, ob eine Linie bedeutungstragend ist.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/accessibility.html",
+          "snippet": "<div role=\"separator\" aria-orientation=\"horizontal\" data-orientation=\"horizontal\" data-slot=\"separator\"></div>"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "sources-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Orientierung wird im semantischen Adapter gebunden. Der begrenzte Referenzabschluss ist keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/separator/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Abstand genügt bei bereits klarer Gliederung; eine Überschrift benennt einen Bereich, ein bedienbarer Splitter verändert Bereichsgrössen.",
+      "evidence": []
+    },
+    {
+      "id": "semantics-composition",
+      "blockName": "semantics",
+      "kind": "editorial",
+      "statement": "Linien ersetzen keine benannte Feldgruppe, Dialogbenennung oder Navigationsziele.",
+      "evidence": []
+    }
+  ],
+  "decisions": [
+    "Dekorative und bedeutungstragende Trennung getrennt von der Orientierung erklärt; kein unbelegtes decorative-Prop angeboten.",
+    "Passive Zustände knapp behandelt; keine Hover-, Lade- oder Auswahlzustände erfunden.",
+    "Die Illustration zeigt nur den horizontalen Einsatz, die belegte vertikale Option ist im Text erläutert."
+  ],
+  "limits": [
+    "Keine lokale Separator-Demo vorhanden.",
+    "Die statische Illustration belegt weder Rendering noch Tastatur- oder Assistenztechnikverhalten einer Anwendung."
+  ]
+}

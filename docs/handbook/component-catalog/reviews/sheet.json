@@ -1,0 +1,295 @@
+{
+  "component": "sheet",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/component.json",
+      "sha256": "f1651dbb9f74be13f9feb051b8bccfa9f79b673926e4f87ccc3ebc285faa1ed8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/ux.json",
+      "sha256": "023c9fcf2e88bf14a08f75808cce8e573d510a4a045e41028fab2db55daa86f4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/interface.json",
+      "sha256": "0b82e2de1aed04d0b335681e26a19368a445538e92e76e3f99c7371d6535b333"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/stories.json",
+      "sha256": "ce655d1d5055e653e201cf16be73cc8bfe6858addceed077339fe3baea62c67f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/behavior.scxml",
+      "sha256": "5924092553962fe5b8aa717c7f963a4f5aa461a673639848f952df84a3e39013"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/layout.css",
+      "sha256": "92b21de36016178b2989586612427bacfb9646ea2338409847d339515950fbc0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.html",
+      "sha256": "868fd707b8109371dd150af9f6d60e070379ec02c6602dd7ec88dc96947d1a8d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.rules.json",
+      "sha256": "c58cd4b9341106fbb53ff067632029bf5228042d1c938abd5fa4cea8e7a18fd4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/README.md",
+      "sha256": "703b810f3a77d5ebdfcee164eeb55ed9ce81bfc4ec013817b442c397034e0f19"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source",
+      "sha256": "5816119da5f3468b0b91d2c65bcf6befe1d769b7867e236b9f18db83908581cb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+      "sha256": "6f4b0d7c60d529ca36fa07b90db17b18e17bfe7c9ca45020aaa4c23458838fb1"
+    }
+  ],
+  "claims": [
+    {
+      "id": "sheet-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Sheet zeigt eine Dialogaufgabe von einem gewählten Fensterrand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "sheet-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Projektname und Speichern/Abbrechen sind redaktioneller Anwendungsinhalt, keine Sheet-eigene Speicherlogik.",
+      "evidence": []
+    },
+    {
+      "id": "sheet-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf, Fuss, Titel, Beschreibung und Schliessen sind gebundene Teile; Root besitzt keinen eigenen DOM-Knoten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "sheet-scroll",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Fläche kann Inhalte scrollen; linke/rechte Flächen begrenzen die Breite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/layout.css",
+          "snippet": "inline-size: min(100vw,var(--ui-sheet-max-width));"
+        }
+      ]
+    },
+    {
+      "id": "sheet-sides",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "SheetContent bietet top/right/bottom/left und showCloseButton; Standard right/true.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/interface.json",
+          "pointer": "/modules/0/declarations/3/members/0"
+        }
+      ]
+    },
+    {
+      "id": "sheet-icon-exit",
+      "blockName": "variants",
+      "kind": "editorial",
+      "statement": "Beim Ausblenden des Symbols empfiehlt die Seite eine sichtbare Alternative.",
+      "evidence": []
+    },
+    {
+      "id": "sheet-close-not-commit",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Schliessen, Escape und Aussenklick erzeugen keinen fachlichen Abschluss.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sheet-controlled-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Gesteuerter oder abgebrochener Escape-Schliesswunsch sendet onOpenChange ohne eigenen Zustandswechsel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/behavior.scxml",
+          "snippet": "<transition event=\"ESCAPE\" cond=\"(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)\">"
+        }
+      ]
+    },
+    {
+      "id": "sheet-pointer-default",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Aussenklick fordert standardmässig Schliessen an; Pointer-Dismissal ist abschaltbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/behavior.scxml",
+          "snippet": "<data id=\"disablePointerDismissal\" expr=\"false\" />"
+        }
+      ]
+    },
+    {
+      "id": "sheet-drafts",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Entwurferhalt, Verwerfen, Speicherrückmeldung und Fehler sind Aufgaben der umgebenden Anwendung.",
+      "evidence": []
+    },
+    {
+      "id": "sheet-close-language",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Das interne Schliesssymbol hat den Quelltext Close als versteckten Namen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source",
+          "snippet": "<span className=\"sr-only\">Close</span>"
+        }
+      ]
+    },
+    {
+      "id": "sheet-label-advice",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Titel und Aktionen sowie kurze Beschreibungen sind redaktionelle Empfehlungen.",
+      "evidence": []
+    },
+    {
+      "id": "sheet-keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Auslöser und Schliessaktion sind native Buttons; Enter/Leertaste folgt ihrer nativen Bedienung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"sheet-trigger\""
+        }
+      ]
+    },
+    {
+      "id": "sheet-focus-policy",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Fokusbegrenzung, Escape, Rückkehr und modaler Standard gehören zur Dialog-Grundlage.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "sheet-initial-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Initialer Standardfokus: erstes tabbable Element, bei Touch die Fläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+          "snippet": "By default, focus moves to the first tabbable element inside the popup, except when the dialog"
+        }
+      ]
+    },
+    {
+      "id": "sheet-final-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der finale Standardfokus kehrt zu Trigger oder zuvor fokussiertem Element zurück.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+          "snippet": "Move focus based on the default behavior (trigger or previously focused element)."
+        }
+      ]
+    },
+    {
+      "id": "sheet-aria-modal",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Base UI emittiert standardmässig kein aria-modal; modal steuert Fokus und Hintergrundabschirmung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.rules.json",
+          "pointer": "/actualModalityProjection"
+        }
+      ]
+    },
+    {
+      "id": "sheet-instance",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Relationen und Namen gehören zur jeweiligen Instanz.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/accessibility.rules.json",
+          "pointer": "/ownership"
+        }
+      ]
+    },
+    {
+      "id": "sheet-modality-options",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "modal erlaubt true, false und trap-focus unabhängig von side.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+          "snippet": "Determines if the dialog enters a modal state when open."
+        }
+      ]
+    },
+    {
+      "id": "sheet-fixtures",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Stories enthalten offene, geschlossene, vier Kanten- und ohne-Symbol-Fixtures, keine Anwendungsspeicherlogik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    },
+    {
+      "id": "sheet-source-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Complete bezeichnet die begrenzte Referenz und keine vollständige Anwendungs-/Plattformzertifizierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sheet/ux.json",
+          "pointer": "/referenceDecisions"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Projektbearbeitung als konkretes Beispiel mit genau einem Feld; Speicherlogik ausdrücklich als Anwendungssache formuliert.",
+    "Drawer als Alternative für ziehbare Flächen nur als Auswahlhinweis; keine Drawer-API auf Sheet übertragen.",
+    "CSS führt den Platzbedarf und Scrollhinweis; keine pauschale Pixelkonformität der Illustration behauptet.",
+    "Sichtbarer Ausstieg auch bei ausgeschaltetem internen Symbol empfohlen; Close ist im Original englisch."
+  ],
+  "limits": [
+    "Keine lokale Sheet-Demo vorhanden.",
+    "Keine Prüfung einer implementierten Sheet-Anwendung oder ihres Speicher-/Entwurfsschutzes; Illustration ist statisch."
+  ]
+}

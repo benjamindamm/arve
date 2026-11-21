@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "alert-dialog",
+  "title": "Alert Dialog",
+  "summary": "Holt vor einer folgenreichen Handlung eine ausdrückliche Entscheidung ein. Ein sicherer Ausstieg und klar benannte Folgen helfen, versehentliche Bestätigungen zu vermeiden.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Vor einer folgenreichen Handlung innehalten",
+      "paragraphs": [
+        "Ein Alert Dialog verlangt eine ausdrückliche Entscheidung, bevor eine Handlung mit erheblichen Folgen ausgeführt wird. Setze ihn etwa vor dem endgültigen Löschen eines Projekts ein, wenn ein versehentlicher Klick Daten unwiederbringlich entfernen würde. Abbrechen und Schliessen dürfen diese Handlung niemals auslösen.",
+        "Für eine gewöhnliche Information ohne Entscheidung passt ein Alert im Seiteninhalt besser. Für das Bearbeiten mehrerer Angaben oder einen längeren Arbeitsablauf ist ein Dialog geeigneter. Prüfe bei leicht rückgängig zu machenden Handlungen zuerst, ob eine direkte Ausführung mit Rückgängig-Funktion die Unterbrechung erspart."
+      ],
+      "links": [
+        {
+          "text": "Alert",
+          "href": "/systems/shadcn/components/alert",
+          "paragraph": 1
+        },
+        {
+          "text": "Dialog",
+          "href": "/systems/shadcn/components/dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Projekt endgültig löschen",
+      "paragraphs": [
+        "Im Beispiel wurde das Löschen des Projekts «Sommerfest» angefordert. Der Titel benennt die Handlung; der kurze Folgetext erklärt den endgültigen Verlust. «Abbrechen» erhält das Projekt, «Projekt löschen» bestätigt genau diese Handlung. Die hervorgehobene Löschaktion bleibt von der sicheren Ausstiegsmöglichkeit unterscheidbar.",
+        "Der Dialog startet in dieser Referenz mit Fokus auf Abbrechen. Das verhindert, dass ein weiterer Tastendruck vorschnell die Löschaktion ausführt. Die Anwendung schliesst erst nach ihrer ausdrücklich festgelegten Verarbeitung; ein Klick auf die Löschaktion allein schliesst die Komponente nicht."
+      ],
+      "illustration": {
+        "src": "/component-examples/alert-dialog.svg",
+        "alt": "Geöffnete Löschbestätigung für das Projekt Sommerfest mit Erklärung des endgültigen Verlusts sowie den Aktionen Abbrechen und Projekt löschen.",
+        "caption": "Statische Illustration · Eine konkrete Löschentscheidung mit sicherem Ausstieg."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Frage, Konsequenz und zwei klare Wege",
+      "paragraphs": [
+        "Eine zentrierte Fläche liegt über dem abgedunkelten Arbeitsbereich. Im Kopf stehen Titel und Beschreibung zusammen; darunter folgen die Aktionen. Ein optionales Medienfeld kann ein Symbol aufnehmen, ersetzt aber keine Erklärung.",
+        "Die Referenz begrenzt die Standardbreite auf 424 Pixel und hält Abstand zum Fensterrand. Lange Inhalte können innerhalb der Fläche scrollen. Die Fusszeile behält die vorgegebene Reihenfolge der Aktionen und bricht bei Platzmangel um. Prüfe deshalb auch lange deutsche Beschriftungen in schmalen Ansichten."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Standard oder kompakte Bestätigung",
+      "paragraphs": [
+        "Für den Inhalt sind die Grössen default und sm belegt. Die kompakte Form begrenzt die Breite auf 320 Pixel. Wähle sie für eine kurze Frage mit knapper Erklärung; die Standardform lässt mehr Raum für relevante Folgen. Keine der beiden rechtfertigt überflüssigen Text.",
+        "Die Aktionsdarstellung verwendet die Button-Komponente. Die semantische Referenz zeigt Abbrechen mit Kontur und Löschen in der destruktiven Darstellung. Eine eigene Farbvariantenreihe des Alert Dialogs ist daraus nicht abzuleiten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Bestätigen und Schliessen getrennt behandeln",
+      "paragraphs": [
+        "Aus dem geschlossenen Zustand öffnet ein aktiver Auslöser die Bestätigung. Ein deaktivierter Auslöser öffnet sie nicht. Nach Öffnungs- und Schliessübergängen steht jeweils der entsprechende Zustand fest; während des offenen Dialogs bleibt ein Klick auf den Hintergrund ohne Wirkung.",
+        "Abbrechen oder Escape schliessen ohne Bestätigung. Die Bestätigungsaktion ruft hingegen die Anwendungslogik auf und lässt den Dialog zunächst offen. Lege für länger dauernde Arbeit eine verständliche Rückmeldung und Schutz vor Mehrfachauslösung fest. Bei einem Fehler empfiehlt sich eine konkrete Erklärung im Dialog; nach erfolgreicher Ausführung schliesst die Anwendung ausdrücklich. Lade-, Erfolgs- und Fehleranzeigen sind keine eingebauten Dialogzustände."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Folge statt einer Floskel benennen",
+      "paragraphs": [
+        "«Projekt Sommerfest löschen?» und «Das Projekt und seine Dateien werden endgültig gelöscht.» nennen Gegenstand und Konsequenz. «Sind Sie sicher?» lässt beides offen. Verwende für die Bestätigung «Projekt löschen» statt «OK» oder «Ja».",
+        "Halte den Titel kurz und die Beschreibung auf entscheidungsrelevante Folgen begrenzt. Empfohlen sind ein bis zwei klare Sätze. Verstecke eine unwiderrufliche Folge weder hinter einem Symbol noch hinter einer unbestimmten Formulierung wie «Änderung übernehmen»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Den sicheren Ausstieg zuerst fokussieren",
+      "paragraphs": [
+        "Der Auslöser und beide Aktionen sind Buttons und lassen sich mit Enter oder Leertaste aktivieren. Beim Öffnen setzt diese Referenz den Anfangsfokus ausdrücklich auf Abbrechen; dies ist eine gewählte Konfiguration und kein pauschales Versprechen für jede Einbindung.",
+        "Tab und Umschalt+Tab bewegen den Fokus innerhalb des modalen Dialogs. Escape verwirft die Entscheidung, ebenso Abbrechen. Nach dem Schliessen kehrt der Fokus zum Auslöser oder einem ausdrücklich bestimmten Ziel zurück. Wird das auslösende Projekt gelöscht, muss die Anwendung ein sinnvolles verbleibendes Ziel bestimmen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine Entscheidung pro Dialoginstanz",
+      "paragraphs": [
+        "Die Inhaltsfläche hat die Rolle alertdialog. Ihr zugänglicher Name stammt vom zugeordneten Titel, ihre Beschreibung vom Erklärungstext. Halte diese Verknüpfungen und die Zuordnung zum Auslöser pro Instanz eindeutig. Die Beispielaktionen sind Buttons ohne Formular-Submit; eine Löschbestätigung darf kein unbeabsichtigtes Absenden eines umgebenden Formulars auslösen.",
+        "Die Base-UI-Grundlage übernimmt die modale Fokusführung und Abschirmung des Hintergrunds. Sie gibt in dieser Fassung standardmässig kein aria-modal aus. Beurteile das tatsächliche Zusammenspiel in der Zielanwendung; ein einzelnes Attribut oder die dunkle Hintergrundfläche belegt die zugängliche Bedienung nicht."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Abgeglichen wurden die gebundene Schnittstelle, UX-Regeln, CSS, Zustandsbeschreibung, HTML/ARIA und die statischen Szenarien der veröffentlichten shadcn-Referenz. Besonders relevant ist die belegte Trennung zwischen bestätigendem Button und schliessender Abbrechen-Aktion.",
+        "Die Szenarien zeigen unter anderem offen, geschlossen, kompakt und einen deaktivierten Auslöser. Sie und die redaktionelle Illustration ersetzen keinen Bediennachweis. Der Abschluss der Quellenreferenz ist keine allgemeine Freigabe einer Anwendung oder ihrer Unterstützung durch assistive Technologien."
+      ]
+    }
+  ]
+}

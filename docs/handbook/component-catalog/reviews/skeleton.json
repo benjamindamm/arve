@@ -1,0 +1,198 @@
+{
+  "component": "skeleton",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/ux.json",
+      "sha256": "d09d68837686e1837968b0d8e8f1a6d397b4532902b4924aaf28fb440c990504"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/component.json",
+      "sha256": "3081f125ae0056434c2ceeac8429870947e993e272cd2423a6fcbc324e5c04f9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/interface.json",
+      "sha256": "a9e12030ac68c6098abc3a082222b537fb3e67e8678e8264796c9824409d8b7c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/behavior.scxml",
+      "sha256": "60e4c2fb59ad694a6738b49db1e554fe64d8f1d62f3d1632069a8707647d96dc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/layout.css",
+      "sha256": "d2c893fb1b07504c381b7cd668f00128b23f5117f92dfb4d76eeff5f14070ba3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/accessibility.rules.json",
+      "sha256": "2ccc04916c60f8cd80feacb8829cba33fd04198d81c0f97ec7d747ac1662e210"
+    }
+  ],
+  "claims": [
+    {
+      "id": "purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Skeleton reserviert Layoutplatz während des Ladens und darf keinen endlosen Fehler verdecken.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Spinner, Fortschrittsanzeige und Leermeldung werden nach Situation als redaktionelle Alternativen empfohlen."
+    },
+    {
+      "id": "contact-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Kontaktbeispiel kombiniert belegte Avatar- und Textformen; seine Zusammenstellung und deutschen Inhalte sind redaktionell."
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die sichtbare Geometrie ist dekorativ; die Anwendung verantwortet sinnvollen Status.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/component.json",
+          "pointer": "/anatomy/placeholder"
+        }
+      ]
+    },
+    {
+      "id": "dimensions",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Referenz beschreibt 16px Text, 40px Avatar und 125px Karte sowie verfügbare Breite für Text und Karte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "caller-shapes",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Text, Avatar und Karte sind explizite Caller-Klassen und keine öffentliche Form-Prop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/component.json",
+          "pointer": "/visualContract/variants/shape"
+        }
+      ]
+    },
+    {
+      "id": "native-props",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die veröffentlichte API übernimmt React.ComponentProps<\"div\">.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/interface.json",
+          "pointer": "/modules/0/declarations/0/members/1/type/text"
+        }
+      ]
+    },
+    {
+      "id": "host-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Anwendung besitzt loading/data/error und aria-busy und ersetzt die Formen nach Abschluss.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "actor-limit",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Actor beschreibt Rendern, Eigenschaftsänderung, Entfernen und erneutes Einsetzen, keine Ladesteuerung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state><state id=\"removed\"><transition event=\"MOUNT\" target=\"rendered\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "reduced-motion",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die exportierte CSS-Regel schaltet Animation bei prefers-reduced-motion:reduce aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/layout.css",
+          "snippet": "@media (prefers-reduced-motion:reduce) {\n  [data-slot=\"skeleton\"] {\n    animation: none;\n  }\n\n}"
+        }
+      ]
+    },
+    {
+      "id": "wording",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurzer inhaltsspezifischer Statustext statt erfundener Daten oder einer vorzeitigen Leermeldung wird empfohlen."
+    },
+    {
+      "id": "keyboard-none",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Standardwrapper installiert keinen Tastaturlistener und keine eigene Fokussteuerung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "busy-status",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz kombiniert benannten beschäftigten Bereich, role=status und aria-hidden an der Ladefläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "source-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Beschäftigter Bereich, Statustext, aria-hidden und Bewegungsregel sind Referenzentscheidungen, kein eingebautes Wrapper-Verhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/skeleton/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Kontaktliste als statisches Beispiel gewählt; Avatar- und Textgeometrie nach den belegten Formen kombiniert.",
+    "Spinner, Fortschritt sowie Leer- und Fehlerzustand als redaktionelle Abgrenzung beschrieben, ohne deren API zu behaupten.",
+    "Keine Dauer der Animation im sichtbaren Text genannt; ihr Stoppen bei reduzierter Bewegung ist direkt im CSS belegt.",
+    "Die generische, für Skeleton unpassende Label-Fokus-Aussage in accessibility.rules.json nicht übernommen."
+  ],
+  "limits": [
+    "Keine lokale Skeleton-Demo unter src/demos/shadcn vorhanden.",
+    "Keine neue Browser- oder Assistenztechnikprüfung durchgeführt; SVG ist eine statische redaktionelle Illustration.",
+    "Keine Lade-/Daten-/Fehlersteuerung im Skeleton-Wrapper; diese muss die Anwendung umsetzen."
+  ]
+}

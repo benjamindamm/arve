@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-bar",
+  "title": "Chart Bar",
+  "summary": "Monatliche Mengen mit unabhängigen Balken vergleichen. Eine gemeinsame Nullbasis und die vollständige Datentabelle halten Grössenverhältnisse und genaue Werte nachvollziehbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Monate auf derselben Skala vergleichen",
+      "paragraphs": [
+        "Chart Bar eignet sich, wenn einzelne Mengen nebeneinander beurteilt werden sollen: etwa wie viele Besuche pro Monat auf Desktop-Geräten erfasst wurden. Die Referenz zeigt unabhängige Balken auf einer quantitativen Achse mit Nullbasis.",
+        "Wähle Balken, wenn der Grössenvergleich zwischen Monaten zählt. Für den Verlauf einer kontinuierlichen Entwicklung ist ein Liniendiagramm geeigneter; zum Nachschlagen einzelner Zahlen genügt oft eine Tabelle. Empfohlen: Behalte bei mehreren vergleichbaren Diagrammen dieselbe Skala bei und erkläre abweichende Zeiträume."
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Desktop-Besuche im ersten Halbjahr",
+      "paragraphs": [
+        "Der Entwurf übernimmt die sechs gebundenen Beispielwerte in ihrer Reihenfolge: Januar 186, Februar 305, März 237, April 73, Mai 209 und Juni 214 Besuche. Februar hat den höchsten, April den niedrigsten Wert. Daraus lässt sich weder eine Ursache noch eine Entwicklung ausserhalb dieser sechs Monate ableiten.",
+        "Alle Balken beginnen bei null; ihre Höhe entspricht der Anzahl. Die vollständige Tabelle bleibt daneben oder darunter lesbar. Die Zahl 73 verschwindet dadurch auch bei einem kurzen Balken nicht. Ein Jahr wird nicht ergänzt, weil die Beispieldaten keines nennen."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-bar.svg",
+        "alt": "Desktop-Besuche von Januar bis Juni: sechs Balken mit Nullbasis und exakten Werten, darunter dieselben Zahlen als vollständige Tabelle. Februar erreicht 305, April 73 Besuche.",
+        "caption": "Statische Illustration · Gebundene Beispielwerte mit proportionalen Balken ab null und vollständiger Datentabelle."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Aussage, Grafik und Zahlen zusammenhalten",
+      "paragraphs": [
+        "Ein gemeinsamer Rahmen verbindet Titel, kurze Zusammenfassung, Diagramm und Datentabelle. Der Titel nennt Gegenstand und Zeitraum; die Zusammenfassung erklärt die Einheit und die wichtigste beobachtbare Beziehung. Monatsnamen stehen direkt an der Achse, die quantitative Skala bleibt erkennbar.",
+        "Die Tabellenüberschriften benennen Monat und Datenreihe, die Zeilen erhalten eindeutige Monatsnamen. Eine Legende erklärt die Reihe Desktop. Ein zusätzlicher Hinweis am Zeiger darf einen Wert hervorheben, ersetzt aber weder Tabelle noch Zusammenfassung."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Hinweise gestalten, Aussage beibehalten",
+      "paragraphs": [
+        "Diese Referenz belegt eine einzelne Desktop-Datenreihe als Balkendiagramm. Gruppierte, gestapelte oder horizontale Darstellungen sind hier keine dokumentierten Wahlmöglichkeiten.",
+        "Für den ergänzenden Tooltip sind Punkt, Linie und gestrichelte Linie als Indikator belegt; Punkt ist die Vorgabe. Diese Wahl betrifft den Hinweis, nicht die Balkenform. Beschriftung und Indikator lassen sich ausblenden. Empfohlen: Behalte den Reihennamen sichtbar, wenn ein Wert sonst mehrdeutig wird. Helle und dunkle Farbzuordnungen sind über die Diagrammkonfiguration möglich; Farbe darf die Zahleninformation nicht allein tragen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Neue Daten gemeinsam aktualisieren",
+      "paragraphs": [
+        "Bei vorhandenen Daten bleiben Grafik, Tabelle und Zusammenfassung auf demselben Datenstand. Ändert die Anwendung den Datensatz, aktualisiert sie diese drei Teile gemeinsam und schliesst einen veralteten Tooltip.",
+        "Für eine leere Ergebnismenge und für einen Fehler sind eigene Rückmeldungen vorgesehen. Empfohlen sind konkrete Texte wie «Für diesen Zeitraum liegen keine Besuche vor» und «Besuche konnten nicht geladen werden». Ein fehlgeschlagener Abruf darf nicht als sechs Nullwerte erscheinen. Ein Wiederholen-Button wäre eine zusätzliche Aufgabe der Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Einheit und Bezug vor Wertung",
+      "paragraphs": [
+        "«Desktop-Besuche · Januar bis Juni» ist aussagekräftiger als «Statistik». «Anzahl Besuche» erklärt die Skala; «Desktop» allein erklärt keine Einheit. Verwende in Tabelle, Legende und Hinweis dieselben Reihennamen.",
+        "Halte Achsentexte kurz, lasse die vollständigen Monatsnamen in der Tabelle stehen und kürze keine Werte unbemerkt. Empfohlen: Benenne Beobachtungen sachlich. «Februar: 305 Besuche» ist durch die Daten gedeckt; «Erfolgreicher Februar» benötigt ein zusätzliches Ziel oder Vergleichskriterium."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Zahlen ohne Diagrammfokus lesen",
+      "paragraphs": [
+        "Die gewählte Referenz bietet alle Werte über die native Tabelle und den sichtbaren Text an. Die ergänzende Grafik ist für assistive Technik ausgeblendet und erhält keinen eigenen Tastaturfokus. Eine Navigation mit Pfeiltasten durch Balken gehört deshalb nicht zu dieser Verwendung.",
+        "Der Tooltip hat kein eigenes Fokusziel. Escape schliesst ihn an der aktuellen Zeigerposition; erst eine geänderte Quellkoordinate kann ihn dort wieder erscheinen lassen. Die Daten bleiben erhalten. Zusätzlich eingebaute Filter oder Schaltflächen brauchen ihre eigene Tastaturbedienung und sichtbaren Fokus."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Anwendung trägt den Datenkontext",
+      "paragraphs": [
+        "Die Abbildung erhält ihren zugänglichen Namen vom sichtbaren Titel und ihre Beschreibung von der Zusammenfassung. Die native Tabelle benötigt eine eigene Beschriftung sowie Spalten- und Zeilenüberschriften. Sie ist die vollständige Textalternative, kein versteckter Notbehelf.",
+        "Chart Bar ist eine ausdrücklich zusammengestellte Recharts-Verwendung auf Basis der Base-UI-Chart-Hülle, kein zusätzlicher exportierter shadcn-Baustein. Die Anwendung liefert Daten, Konfiguration und einen begrenzten Diagrammbereich mit tatsächlicher Grösse. Tooltip und Legende berechnen keine fehlenden Werte oder Zusammenfassungen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Belegte Referenz und ihre Grenzen",
+      "paragraphs": [
+        "Abgeglichen wurden UX-Vorgaben, Schnittstelle, CSS-Bindung, Zustandsmodell, HTML/ARIA-Regeln und statische Zustandsbeispiele. Das gebundene offizielle Balkenbeispiel liefert die konkrete Datenreihe; Nullbasis, vollständige Tabelle und redundante Grafik sind ausdrückliche Entscheidungen dieser Referenz.",
+        "Der dokumentierte Abschluss gilt für diesen begrenzten Quellenumfang. Die Illustration ist ein redaktioneller Entwurf. Sie belegt weder eine produktive Implementierung in Arve noch eine allgemeine Freigabe für weitere Plattformen oder assistive Technik."
+      ]
+    }
+  ]
+}

@@ -65,6 +65,8 @@ Der öffentliche shadcn-Stand ist als begrenzter Snapshot versioniert. Der Boots
 
 [Editierbare Pilotvorlagen und Prüfgrenzen](docs/handbook/design-resources/README.md) · [Unabhängige Agentenprobe mit Nachprüfung](docs/handbook/independent-trial/README.md).
 
+Alle 69 Komponentenseiten sind inhaltlich ausgearbeitet. Die 68 neuen Seiten enthalten eigene statische Gestaltungsbeispiele und Quellenreviews; der Button bleibt die Referenzvorlage. [Umfang und Prüfungen](docs/handbook/component-catalog/README.md). Die neuen Seiten werden als editierbare Payload-Inhalte veröffentlicht und über MCP bereitgestellt.
+
 ### UI Contracts importieren
 
 UI Contracts erzeugt ein eigenständiges Exportverzeichnis mit Manifest, Bibliothek, Designartefakten, Herkunftsregister und portablen Skills. Diesen Ordner beliebig kopieren und in Arve importieren:

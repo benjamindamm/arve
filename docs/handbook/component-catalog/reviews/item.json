@@ -1,0 +1,259 @@
+{
+  "component": "item",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+      "sha256": "77b31ad82e26843b488e595fcc13331f241e858e91419f34473282e3e3db1dd9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/ux.json",
+      "sha256": "b00c42d32f974168556c6cd3617c63cdcb284d3baf9bbdb961669498668b488c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/interface.json",
+      "sha256": "90a94e2a2f304b655052aa50e42948c7a9780cc5a81527ac53744110b18d6970"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/stories.json",
+      "sha256": "4262f4f57e0e50d62026ea5831477e9837de5f2e696cae25db6eb70769a6f49d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/behavior.scxml",
+      "sha256": "5be735a9a5f439124c1b4afeee6fe3bd6d672001674ff7f7c2bf94a5e3b56e64"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/layout.css",
+      "sha256": "c58fa725791327936af632d7f08677b5b92ce6da591aefaa6a8a6fcf8f5b9097"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/accessibility.html",
+      "sha256": "86c309b790050543e93a0fbe7b9ed7eec6d71f2316c28a618f7710714990c6af"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/accessibility.rules.json",
+      "sha256": "a05edd8bc5facf37c835cf04a7d54bc9962a5bedac6bb9dc8f454027d1e8956d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/README.md",
+      "sha256": "ae6f9e79344c5a94209f61ab3e02916eede971d8cacdd821da0e9be0075e237d"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Item stellt strukturierten Inhalt mit ergänzenden Angaben und Aktionen dar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Card für ausführliche Einzeldarstellung und Table für spaltenweisen Vergleich sind redaktionelle Auswahlhilfen."
+    },
+    {
+      "id": "example-separate-target",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Passive Zeilen enthalten unabhängige Aktionen; ein Gesamtzeilen-Link enthält keine weiteren Aktionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+          "pointer": "/anatomy/actions"
+        }
+      ]
+    },
+    {
+      "id": "example-content",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Jahresbericht, Geschäftsjahr und Seitenzahl übertragen die belegte Berichtsstruktur auf deutsche Beispielinhalte."
+    },
+    {
+      "id": "anatomy-layout",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf- und Fussbereiche nutzen die volle Zeilenbreite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/layout.css",
+          "snippet": "flex-basis: 100%;"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-content",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Titel/Beschreibung bilden den flexiblen Inhaltsbereich neben Medien und Aktionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "variants-values",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Item besitzt default, outline, muted sowie die Grössen default, sm, xs.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/accessibility.rules.json",
+          "pointer": "/visualStateMapping"
+        }
+      ]
+    },
+    {
+      "id": "variants-sm-limit",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die sm-Abstände sind eine ausdrückliche Referenzentscheidung ohne behauptetes vermessenes natives Master.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "states-no-own-state",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Item besitzt keinen eigenen Auswahl-, Lade- oder Befehlszustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "states-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Verhaltensaktor beschreibt Darstellung, Propänderungen, Entfernen und erneutes Einbinden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "states-focus",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "CSS beschreibt Hover-Hintergrund und focus-visible für die Item-Fläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/layout.css",
+          "snippet": "[data-slot=\"item\"]:focus-visible {"
+        }
+      ]
+    },
+    {
+      "id": "labels-content",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Titel, Metadaten und Aktion identifizieren den Inhalt unabhängig vom Symbol.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "labels-examples",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete deutsche Titel und eindeutig benannte Aktionen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Standardcontainer installiert weder Tastaturhandler noch roving focus; native Kinder behalten ihre Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-keys",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Tabfolgen sowie Enter beim Link und Enter/Leertaste beim Button beschreiben die native Bedienung, keine zusätzliche Item-Tastensteuerung."
+    },
+    {
+      "id": "semantics-list",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Gruppe besitzt role=list, passive Zeilen erhalten listitem durch die Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+          "pointer": "/partBindings/group/description"
+        }
+      ]
+    },
+    {
+      "id": "semantics-nesting",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Gesamtzeilen und Sekundäraktionen dürfen keine ungültig verschachtelten Buttons oder Links bilden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "semantics-heading",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Eine echte Überschrift wird im Titelcontainer ausdrücklich ergänzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/component.json",
+          "pointer": "/anatomy/title"
+        }
+      ]
+    },
+    {
+      "id": "sources-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der README begrenzt den Referenzstand und enthält keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/item/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Ein passiver Jahresberichtseintrag mit eigenem Öffnen-Link zeigt die Trennung von Inhalt und Interaktion.",
+    "Card und Table werden als redaktionelle Alternativen nach Lesetask eingeordnet.",
+    "sm wird mit seiner dokumentierten Referenzentscheidung erklärt.",
+    "Keine lokale Item-Demo vorhanden; keine Live-Implementierung behauptet."
+  ],
+  "limits": [
+    "Das Gesamtzeilen-Linkfixture steht ausserhalb der Liste; eine verlinkte Listenstruktur muss die Anwendung ergänzen.",
+    "Keine allgemeine Laufzeit-, Plattform- oder Assistenztechnikfreigabe aus dem Export abgeleitet."
+  ]
+}

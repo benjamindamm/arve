@@ -1,0 +1,259 @@
+{
+  "component": "message-scroller",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/component.json",
+      "sha256": "a5d76006cac4ba8e6bf3fd9a8fb0cf0d2f6bdedae764625fb97cc386e550b5c6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+      "sha256": "e7ef2ed89ad3ca9a1d7e68d8a59da94393660b4d74141790aa65b03283f249e2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/interface.json",
+      "sha256": "0c1e576ff289af6f326b3788e2aefb1d6cbc5e3d819a6cf5fbad60e6a5939528"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/stories.json",
+      "sha256": "41c5e3bf991ae5f41fca55e8bf8c53daa1ea24d04638bc5aa01ca146458cafc1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/behavior.scxml",
+      "sha256": "4e7e34e66d22ade398d8ea74be1cb3c8f00b10326caa66384040dca73c74d924"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/layout.css",
+      "sha256": "e42c781cbcce0c51e01049396ed59be15d92c2e51c015f5298ce7214c966e800"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.html",
+      "sha256": "ad899e552bccdd927af3beb623cab5b9809e19483694bc4e0d46527df5da22be"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+      "sha256": "e7c00a28140b39223eecf8a551dcaf96610c55883d45b731d8bd86e7d8fc764c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/README.md",
+      "sha256": "6bbc253e37bae8400aaf38e7b897d0134b0e75cce1b1d174303c23276ac02b98"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-position",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Wachsende Gespräche sollen lesbar bleiben; ältere Inhalte dürfen nicht unerwartet verdrängt werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Scroll Area für allgemeine Inhalte und normale Nachrichtenfolge für kurze abgeschlossene Gespräche sind redaktionelle Auswahlhilfen.",
+      "evidence": []
+    },
+    {
+      "id": "example-reading",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Freigabegespräch illustriert bewusstes Nachlesen; Namen und Kontext sind redaktionelle Beispielinhalte.",
+      "evidence": []
+    },
+    {
+      "id": "anatomy-placement",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Sprungtasten liegen mittig an den oberen und unteren Rändern; Abstandhalter ist verborgen und quellengesteuert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/layout.css",
+          "snippet": "inset-inline-start: 50%;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/layout.css",
+          "snippet": "top: var(--ui-message-scroller-button-inset);"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/layout.css",
+          "snippet": "bottom: var(--ui-message-scroller-button-inset);"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/component.json",
+          "pointer": "/anatomy/spacer"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-identities",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Direkte Inhaltszeilen inklusive Trenner und Ladezeilen brauchen stabile Item-IDs.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "variants-opening",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Erstposition start/end/last-anchor wird einmal beim ersten nicht leeren Inhalt angewendet; Default end. Sprungtaste default end/smooth.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "variants-geometry",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Referenzgeometrie ist eine explizite Entscheidung und kein universeller Grössenstandard.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "states-follow",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "autoScroll ist standardmässig false; aktiviertes Folgen gilt nur beim Folgen des Endes. Rad/Touch/Scrolltasten lösen Folgeabsicht, Voranstellen bewahrt standardmässig Position.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/behavior.scxml",
+          "snippet": "follow-only-when-following-preserve-prepend-and-anchor"
+        }
+      ]
+    },
+    {
+      "id": "states-hidden",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Initial wartender Ausschnitt ist verborgen; inaktive Taste ist nicht bedienbar. Fehler und Laden sind Anwendungsfeedback.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/layout.css",
+          "snippet": "[data-slot=\"message-scroller-viewport\"][data-pending-scroll] {\n  visibility: hidden;\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "labels-names",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Deutsche Kontextnamen, konkrete Sprungnamen und kurze Absätze sind Empfehlungen; keine ungelesene Anzahl wird als eingebaute Fähigkeit gezeigt.",
+      "evidence": []
+    },
+    {
+      "id": "keyboard-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Scrolltasten lösen Folgeabsicht; Enter/Space aktivieren aktive Sprungtasten. Angenommene Sprünge blurren die Taste, ohne Fokus auf Nachricht oder automatische Rückkehr. Escape bleibt passiv.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/behavior.scxml",
+          "snippet": "_effect.sourceBlurThenScroll"
+        }
+      ]
+    },
+    {
+      "id": "semantics-log",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Benannte fokussierbare Region enthält log/additions. Fokus, Sichtbarkeit und Auswahl bleiben getrennt; kein Ansageversprechen je Token.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.html",
+          "snippet": "role=\"log\" aria-relevant=\"additions\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/accessibility.html",
+          "snippet": "role=\"region\" aria-label=\"Report discussion messages\" tabindex=\"0\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-command",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Stabile IDs bestimmen Sprungziele; Befehle können bei fehlendem Viewport oder Ziel false liefern.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/interface.json",
+          "pointer": "/modules/0/declarations/6/members/0/type/text"
+        }
+      ]
+    },
+    {
+      "id": "sources-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische Fixtures ersetzen Laufzeitverhalten nicht; die Referenz ist keine allgemeine Anwendungsfreigabe oder Backendzusage.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/stories.json",
+          "pointer": "/stories/0/expectation"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/message-scroller/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Illustration zeigt eigenes Nachlesen mit Sprung zum Ende, ohne unbelegten Ungelesen-Zähler.",
+    "Erstposition, aktiviertes Folgen, Tastaturfokus und Nachrichtenauswahl werden ausdrücklich getrennt.",
+    "Keine Button-Farb-/Grössengalerie: relevante Wahlmöglichkeiten sind Richtung, Anfangsposition und Folgeabsicht."
+  ],
+  "limits": [
+    "Keine lokale eingebundene Demo auf der vorhandenen Seite.",
+    "Statische Illustration und Quellenauswertung prüfen keine konkrete Anwendung mit Browser oder Hilfsmitteln."
+  ]
+}

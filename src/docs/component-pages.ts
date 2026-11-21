@@ -4,6 +4,9 @@ import { contractFileUrl, contractAssetUrl } from './site-path'
 import { pagePath, readSystem } from './systems'
 import type { Page } from '../payload-types'
 import { getContract } from '../contracts/catalog'
+import { catalogueMeta } from './component-catalogue-data'
+import { getComponentComparisons } from './component-comparison-data'
+import { componentNextSteps } from './component-next-steps-data'
 import { frameworkReferences } from './framework-references'
 
 export async function getComponentPage(system: string, component: string) {
@@ -16,6 +19,8 @@ export async function getComponentPage(system: string, component: string) {
   const contract = getContract(page.contract)
   const demo = system === 'shadcn' && page.demo?.key === 'spartan-' + component ? page.demo : null
   const references = frameworkReferences((await readPublishedSection(system, 'frameworks'))?.content)
+  const published = await data.pages(designSystem)
+  const nextSteps = componentNextSteps({system,component,pagePath:pagePath(system,page),contract,implementations,referenceFrameworks:references,documentation:published.map(entry=>({slug:entry.slug,path:pagePath(system,entry),title:entry.title}))})
   const previewPath = `components/${component}/preview.png`
   const previewHash = contract?.artifacts?.[previewPath]
 
@@ -26,8 +31,15 @@ export async function getComponentPage(system: string, component: string) {
     title: page.title,
     summary: page.summary,
     updatedAt: page.updatedAt,
+    nextSteps,
     content: publicContent(page.content),
     templateSections: readTemplate(page.pageType, page.template),
+    catalogue: catalogueMeta({slug:component,path:pagePath(system,page),summary:page.summary ?? undefined}),
+    visualComparisons: {
+      kind: 'static-editorial' as const,
+      variants: getComponentComparisons(component, contract, 'variants'),
+      states: getComponentComparisons(component, contract, 'states'),
+    },
     contractReference: page.contract ?? null,
     contract: contract ?? null,
     contractArtifacts: contract ? Object.entries(contract.artifacts ?? Object.fromEntries(Object.entries(contract.files).map(([name, file]) => [name, file.sha256]))).map(([path, sha256]) => ({

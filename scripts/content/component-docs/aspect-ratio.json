@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "aspect-ratio",
+  "title": "Aspect Ratio",
+  "summary": "Bilder und andere Inhalte erhalten eine planbare Fläche mit festem Seitenverhältnis. So lassen sich Medien in Karten und Rastern ruhig anordnen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Medienflächen verlässlich planen",
+      "paragraphs": [
+        "Aspect Ratio hält die Fläche eines Bildes oder anderen Inhalts in einem festgelegten Verhältnis von Breite zu Höhe. Das hilft bei einer Reihe von Beitragskarten: Unterschiedliche Originalbilder erhalten gleich hohe Vorschauen, wenn die Karten gleich breit sind.",
+        "Wähle einen festen Bildrahmen, wenn die ruhige Anordnung wichtiger ist als die vollständige Ansicht jedes Originals. Soll eine technische Zeichnung oder ein Dokument vollständig sichtbar bleiben, ist ein Bild mit seiner natürlichen Höhe oft geeigneter. Für eine Profilidentität ist Avatar die passendere Komponente; Aspect Ratio ergänzt keine Personenkennzeichnung."
+      ],
+      "links": [
+        {
+          "text": "Avatar",
+          "href": "/systems/shadcn/components/avatar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Vorschau für einen Ausflug",
+      "paragraphs": [
+        "Die Beitragsvorschau «Rund um den Bergsee» zeigt eine Landschaft im Verhältnis 16:9. Der Titel und die Angabe «Wanderung · 2 Stunden» stehen unterhalb des Bildes. So bleiben die Texte auch bei schmalen Karten vollständig lesbar.",
+        "Der Rahmen bestimmt die Bildfläche. Das Bild füllt sie aus; bei abweichenden Originalmassen werden Ränder beschnitten. Prüfe deshalb den Ausschnitt mit dem tatsächlichen Motiv: See und Weg sollen erkennbar bleiben. Die Zeichnung veranschaulicht diese redaktionelle Entscheidung."
+      ],
+      "illustration": {
+        "src": "/component-examples/aspect-ratio.svg",
+        "alt": "Beitragsvorschau mit einer Bergsee-Illustration im Format 16:9, darunter Rund um den Bergsee und Wanderung · 2 Stunden.",
+        "caption": "Statische Illustration · Bildrahmen im Verhältnis 16:9 mit Text ausserhalb der Medienfläche."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Rahmen und Inhalt getrennt gestalten",
+      "paragraphs": [
+        "Der äussere Rahmen legt die Proportion fest; seine Breite kommt aus der umgebenden Gestaltung. Aus ihr und dem gewählten Verhältnis ergibt sich die Höhe. 16:9 bezeichnet deshalb keine feste Bildgrösse.",
+        "Im Rahmen liegt das vom aufrufenden Kontext bereitgestellte Medium. Die Referenz zeigt ein Bild, das die Fläche vollständig ausfüllt, und schneidet überstehende Bildteile an den abgerundeten Ecken ab. Bildunterschriften gehören als eigener Inhalt neben oder unter die Fläche."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Das Verhältnis nach dem Motiv wählen",
+      "paragraphs": [
+        "Die eigentliche Wahl ist das Zahlenverhältnis. Die Quellen zeigen 16:9 für Querformat, 1:1 für ein Quadrat und 9:16 für Hochformat. Ein gebundenes Originalbeispiel zeigt zusätzlich 21:9. Das sind Beispiele, keine geschlossene Auswahl vorgegebener Varianten.",
+        "Für Landschaftsvorschauen bietet sich 16:9 an, für gleichmässige Kacheln 1:1 und für hochformatige Motive 9:16. Entscheide nach Bildinhalt und verfügbarem Platz. Der Wert muss endlich und grösser als null sein; es gibt keinen voreingestellten Wert und keine automatische Prüfung ungültiger Angaben. Eigene Grössen- oder Farbvarianten sind nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Ein stabiler Rahmen, wechselnder Inhalt",
+      "paragraphs": [
+        "Die Komponente stellt ihren Inhalt dar und übernimmt Änderungen des Verhältnisses oder der übergebenen Inhalte. Sie hat keinen eigenen ausgewählten, gedrückten oder deaktivierten Zustand.",
+        "Bildladen, Ladefehler und Rückmeldungen an assistierende Technik organisiert die Anwendung. Plane bei Bedarf einen Platzhalter und eine verständliche Ersatzinformation für ein nicht verfügbares Bild. Ein festgelegtes Verhältnis allein lädt kein Bild und meldet weder Erfolg noch Fehler."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das Motiv verständlich benennen",
+      "paragraphs": [
+        "Für das Beispiel wäre «Bergsee zwischen Felsgipfeln, ein Wanderweg führt am Ufer entlang» ein konkreter Alternativtext. «Bild» oder «Foto» erklärt den Inhalt nicht. Beschreibe die für die Aufgabe wichtigen Bildinformationen knapp; wiederhole nicht einfach den danebenstehenden Beitragstitel.",
+        "Ist das Bild im jeweiligen Zusammenhang rein dekorativ, erhält es einen leeren Alternativtext. Ein langer Beschreibungstext gehört als sichtbare Bildlegende ausserhalb des Rahmens. Aspect Ratio erzeugt weder diese Texte noch einen zugänglichen Namen für das Medium."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Keine eigene Tastaturbedienung",
+      "paragraphs": [
+        "Ein reiner Bildrahmen benötigt keinen Tastaturfokus und keine Bedienung über Enter oder Pfeiltasten. Die Komponente installiert keine eigenen Tastaturregeln. Das Bild bleibt mit seinem Alternativtext zugänglich.",
+        "Enthält die Fläche einen Link oder einen Button, gelten dessen eigene Bedienung, Fokusdarstellung und Benennung. Empfohlen ist ein konkretes Linkziel wie «Wanderung Rund um den Bergsee ansehen». Prüfe, dass der beschnittene Rahmen die Fokusmarkierung eines solchen Elements nicht verdeckt."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Der Kontext trägt Bedeutung und Aktionen",
+      "paragraphs": [
+        "Die veröffentlichte React-Schnittstelle ist ein div-Container mit verpflichtendem numerischem Verhältnis und übergebenem Inhalt. Sie erzeugt keine zusätzliche Bild-, Formular- oder Navigationsfunktion. Die Bildsemantik stammt vom enthaltenen Bild; Aktionen müssen als passende Links oder Buttons gestaltet werden.",
+        "Die CSS-Referenz füllt den Rahmen mit dem Bild und verwendet einen beschnittenen Ausschnitt. Der ursprüngliche Wrapper allein übernimmt diese Bildgestaltung nicht automatisch. Bei Video oder anderen Inhalten müssen Einbettung, Beschriftung und Bedienung gesondert festgelegt werden."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Abgleich und Grenzen",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte Schnittstelle, UX-Regeln, CSS-Gestaltung, Zustandsbeschreibung, HTML/ARIA-Regeln und Beispiel-Fixtures sowie die gebundenen React-Originalquellen. Sie unterscheiden den einfachen Verhältnisrahmen von der Bildgestaltung der Referenz.",
+        "Die Illustration ist ein redaktioneller Entwurf. Sie belegt weder das Laufzeitverhalten einer eingebundenen Anwendung noch deren vollständige Zugänglichkeit. Der vollständige Referenzstatus ersetzt diese Prüfung im konkreten Einsatz nicht."
+      ]
+    }
+  ]
+}

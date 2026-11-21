@@ -1,0 +1,228 @@
+{
+  "component": "card",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/component.json",
+      "sha256": "a272b45b48b79731606838dba1e9f81e420fc948c09c02312b77068b367f7657"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/ux.json",
+      "sha256": "9a2e0f0a9c888c7b63947142a95b8e72f6e9849942e074035708831193aec7a4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/interface.json",
+      "sha256": "02a9bd3e022a08740db7478fcc055e8c1b9e4e6067b899da5a6f7f17b26141ac"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/stories.json",
+      "sha256": "d90da6e50d4958052f53b71df77bb7f8a9ff6b4092ceb309db828a45ff2eca8c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/behavior.scxml",
+      "sha256": "fd37a5cd995cde3130ed30bd99b4cdc7f5721ba35c1ed1105069dd56e45f4e6c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/layout.css",
+      "sha256": "33fec60db44fffba95f9020d6eda83d1d009f463e995b7dd184b98975aa5adc6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/accessibility.html",
+      "sha256": "08490f59e8a334b4ebcc0535ac9a1c8817c0388574019dd7875c7aa5eae75c1f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/accessibility.rules.json",
+      "sha256": "da0236ec6a6d22fffc5bf508b441e4126db6d6291af424f331a146518ce65321"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/README.md",
+      "sha256": "d4e9ac3c67721887681d95bb2a4d8fdc078ca7cdc794f3975024a76815da4c1e"
+    }
+  ],
+  "claims": [
+    {
+      "id": "card-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Card gruppiert zusammengehörige Überschrift, Inhalt und optionale Aktionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "card-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für den Vergleich vieler gleicher Werte wird eine Table empfohlen; diese Auswahl ist redaktionell."
+    },
+    {
+      "id": "card-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Projektinhalt und Link im Fuss sind ein redaktioneller Entwurf, keine zusätzliche Komponentenfähigkeit."
+    },
+    {
+      "id": "card-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Card hat sieben Teile; die Kopfaktion ist optional, der Fuss enthält eigene Aktionen oder Text.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "card-sizing",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Breite bleibt fliessend, Höhe folgt dem Inhalt, Fussaktionen können umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "card-sizes",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die öffentliche size-Schnittstelle kennt default und sm, mit default als Voreinstellung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        }
+      ]
+    },
+    {
+      "id": "card-compact-limit",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die kompakte Gestaltung ist eine explizite Referenzentscheidung ohne belegtes natives sm-Master.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "card-direction",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Referenz beschreibt ltr und rtl als Leserichtungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/component.json",
+          "pointer": "/visualContract/variants/direction"
+        }
+      ]
+    },
+    {
+      "id": "card-states",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Zustandsautomat beschreibt Anzeigen, Props-Aktualisierung, Entfernen und erneutes Anzeigen ohne Card-Aktivierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state><state id=\"removed\"><transition event=\"MOUNT\" target=\"rendered\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "card-text",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Überschrift, Beschreibung und Inhalt tragen die Bedeutung; Farbe oder Bilder allein genügen nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "card-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Card installiert keinen Tastaturlistener und keinen roving focus; enthaltene Links, Buttons und Inputs behalten ihre Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "card-native-keys",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Die genannten Tasten für native Links und die Empfehlung zu sichtbarem Fokus beschreiben die Einbettung; sie sind kein eigenes Card-Verhalten."
+    },
+    {
+      "id": "card-heading",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Alle Card-Teile sind div-Wrapper, CardTitle wird nicht automatisch zur Überschrift und die Card ist nicht inhärent klickbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "card-heading-level",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Anwendung wählt die Überschriftenebene passend zur Dokumenthierarchie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "card-fixtures",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Stories enthalten default-with-action, compact, without-action und rtl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    },
+    {
+      "id": "card-source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Komponentenreferenz beansprucht keine allgemeine Anwendungsfreigabe oder ein allgemeines Framework-/AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/card/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Eine Projektübersicht veranschaulicht inhaltliche Gruppierung; der eigenständige Link im Fuss vermeidet eine klickbare Gesamtfläche.",
+    "Table und einfache Textabschnitte als redaktionelle Alternativen benannt.",
+    "Die sm-Grenze ausdrücklich erklärt, ohne die kompakte Gestaltung als natives Designmuster auszugeben."
+  ],
+  "limits": [
+    "Keine lokale Card-Demo vorhanden; die SVG ist eine statische redaktionelle Illustration.",
+    "Die exportierte Bibliothek bleibt als Ganzes draft; der begrenzte Komponentenstatus complete ist keine allgemeine Produktfreigabe."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "component": "dialog",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/component.json",
+      "sha256": "ecd431b4f2bc87937df2fa6983cebce8c977de96427617c670e702a059d3274d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/ux.json",
+      "sha256": "77203c1aa81359f36bd754fd4e322ed886a52bf00e9e96c68594139f88dbe45e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/interface.json",
+      "sha256": "28f93606144ae0737aee8afe18cf6b9f1bb6f24b24dcdfca0e153c86d993bc19"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/stories.json",
+      "sha256": "cc0bba2fa6d47c406791ac7d8548fa3600f8bd487fce669d3bb972dadaf87265"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/behavior.scxml",
+      "sha256": "674f5054fce6baee987ff95b0dc4221947ec6d633f89a5ec3bb16bb8f39ec543"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/layout.css",
+      "sha256": "26e16ad2c2752e67403aa7f822c3f739a41dd716fe03491ffa3cafeebf1c2692"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.html",
+      "sha256": "7c3c4b6559aabdff7e0ef14d62cc336355f44b691d3968d8c4f8e3a07c43800f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.rules.json",
+      "sha256": "c34fee40fd9cbcdbb8564849d270c58492bb1b68038ef3c31955e3833dd00a79"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/README.md",
+      "sha256": "30b29c81c0a5f7d89790bd283d30fe767121a50d200e0dd7f1190499e171aee7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+      "sha256": "6f4b0d7c60d529ca36fa07b90db17b18e17bfe7c9ca45020aaa4c23458838fb1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source",
+      "sha256": "aba6df6cbf51a1edcc22e415a3a46a666fc8cb66729e47b3ed2ecd97f166adff"
+    }
+  ],
+  "claims": [
+    {
+      "id": "dialog-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Dialog dient einer fokussierten Aufgabe; verschachtelte Modals brauchen eine ausdrückliche Fokusstrategie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "dialog-choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für lange Abläufe wird eine eigene Seite, für folgenschwere Bestätigungen Alert Dialog empfohlen."
+    },
+    {
+      "id": "dialog-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Projekt umbenennen ist ein redaktioneller Entwurf; Validierung, Speichern und Entwurfsverwaltung gehören zur Anwendung."
+    },
+    {
+      "id": "dialog-layout",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Fläche ist zentriert und scrollbar, der Fussbereich behält die Inhaltsreihenfolge und kann umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/layout.css",
+          "snippet": "max-block-size: calc(100dvh - 32px);\n  overflow: auto;"
+        }
+      ]
+    },
+    {
+      "id": "dialog-footer",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der Fussbereich des Referenzlayouts läuft in Zeilenrichtung und bricht um.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/layout.css",
+          "snippet": "flex-direction: row;\n  flex-wrap: wrap;"
+        }
+      ]
+    },
+    {
+      "id": "dialog-modality",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "modal=true sperrt äussere Zeigerbedienung und Seitenscrollen; false erlaubt Seitenbedienung; trap-focus enthält Fokus ohne volle Modalsperre.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "dialog-close-choice",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "DialogContent zeigt sein optionales Schliesskreuz standardmässig.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/interface.json",
+          "pointer": "/modules/0/declarations/5/members/0/description"
+        }
+      ]
+    },
+    {
+      "id": "dialog-footer-choice",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "DialogFooter hat eine optionale Schliessaktion und fügt sie standardmässig nicht hinzu.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/interface.json",
+          "pointer": "/modules/0/declarations/7/members/0/description"
+        }
+      ]
+    },
+    {
+      "id": "dialog-close-required",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Bei modal=true oder trap-focus soll eine Dialog.Close-Aktion innerhalb der Fläche stehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+          "snippet": "When `modal` is `true` or `'trap-focus'`, render `<Dialog.Close>` inside `<Dialog.Popup>` so&#xA;touch screen readers can escape the popup."
+        }
+      ]
+    },
+    {
+      "id": "dialog-dismissal",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "disablePointerDismissal verhindert äusseren Druck und nichtmodalen Fokusverlust als Schliessauslöser, aber nicht explizites Close.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "dialog-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Eine Schliessanforderung mit Abbruch oder kontrolliertem Zustand sendet onOpenChange ohne selbständigen Wechsel nach closing.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/behavior.scxml",
+          "snippet": "<transition event=\"CLOSE_PRESS\" cond=\"(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)\">"
+        }
+      ]
+    },
+    {
+      "id": "dialog-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Aufgabenbezogene Titel und ausdrückliche Aktionsnamen werden statt Bearbeiten und OK empfohlen."
+    },
+    {
+      "id": "dialog-localization",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die gebundene interne Schliessaktion besitzt den englischen versteckten Text Close.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source",
+          "snippet": "<span className=\"sr-only\">Close</span>"
+        }
+      ]
+    },
+    {
+      "id": "dialog-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Modaler Dialog enthält Tab/Shift+Tab, unterstützt Escape und Fokuswiederherstellung mit möglichen Überschreibungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "dialog-initial-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Standard-Anfangsfokus ist erstes Tabziel; bei Touch wird die Fläche fokussiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/dialog.md.source",
+          "snippet": "By default, focus moves to the first tabbable element inside the popup, except when the dialog&#xA;is opened by touch — then the popup itself is focused to avoid opening the virtual keyboard."
+        }
+      ]
+    },
+    {
+      "id": "dialog-role",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Projektion hat dialog-Rolle und Titel-/Beschreibungsbeziehungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.html",
+          "snippet": "role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\""
+        }
+      ]
+    },
+    {
+      "id": "dialog-aria-modal",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Diese Base-UI-Variante gibt standardmässig kein aria-modal aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/accessibility.rules.json",
+          "pointer": "/actualModalityProjection"
+        }
+      ]
+    },
+    {
+      "id": "dialog-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Fixtures sind statisch; Verhalten und Fokus müssen im tatsächlichen Ziel geprüft werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dialog/stories.json",
+          "pointer": "/stories/0/expectation"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Beispiel Projekt umbenennen zeigt eine konkrete kleine Bearbeitungsaufgabe mit selbst gesetzten deutschen Aktionen.",
+    "Alert Dialog als redaktionelle Alternative für folgenschwere Entscheidungen benannt, ohne fremde Escape-/Fokusregeln auf Dialog zu übertragen.",
+    "Anfangsfokus nach Eingabeart erklärt; kein pauschales Versprechen, dass immer das erste Feld fokussiert wird.",
+    "Anwendungsaufgaben für Abbrechen, Speichern, Fehler und ungespeicherte Daten ausdrücklich vom Dialogverhalten getrennt.",
+    "Englische Schliessbeschriftung der Originalvorlage als Lokalisierungsaufgabe benannt."
+  ],
+  "limits": [
+    "Kein veröffentlichter Implementierungsnachweis für Dialog in Arve; die statischen Fixtures und das SVG belegen keinen laufenden Formularablauf.",
+    "Speicherlogik, Entwurfsverlust und Fehlerbehandlung sind im Dialogcontract nicht als fertiger Anwendungsablauf definiert."
+  ]
+}

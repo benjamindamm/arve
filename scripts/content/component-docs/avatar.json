@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "avatar",
+  "title": "Avatar",
+  "summary": "Avatare helfen, Personen oder Organisationen in Listen und Teams wiederzuerkennen. Namen und wichtige Statusangaben bleiben als Text lesbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Personen rasch wiedererkennen",
+      "paragraphs": [
+        "Setze Avatar neben Namen ein, wenn Personen in Aufgabenlisten, Kommentaren oder Projektteams wiederkehren. Bild oder Initialen erleichtern das Wiedererkennen; der lesbare Name bleibt die verlässliche Identifikation. Auch eine Organisation kann so gekennzeichnet werden.",
+        "Für die Auswahl einer verantwortlichen Person braucht es zusätzlich ein echtes Auswahlfeld. Für den Weg zum Profil eignet sich ein Link mit klarem Ziel. Ein Avatar allein bietet weder Auswahl noch Navigation. Wenn ein Bild keinen Orientierungsgewinn bringt, genügt der Name."
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Ansprechperson für den Projektbericht",
+      "paragraphs": [
+        "Im Entwurf steht «Nora Keller» als Verantwortliche neben dem Ersatzbild «NK». «Heute erreichbar» nennt den Status ausdrücklich; der kleine Punkt am Bild ergänzt diese Information. Ein fehlendes Porträt verhindert damit weder die Zuordnung noch das Verständnis des Status.",
+        "Darunter fasst eine überlappende Gruppe die Mitarbeit zusammen. «+3» bedeutet drei weitere Personen und ist keine Schaltfläche. «5 Personen im Team» macht die Gesamtzahl lesbar. Diese Inhalte und Zahlen liefert die Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/avatar.svg",
+        "alt": "Projektbericht mit Nora Keller, Initialen NK und dem Text Heute erreichbar; darunter zwei überlappende Avatare und +3 für ein Team aus fünf Personen.",
+        "caption": "Statische Illustration · Ansprechperson mit Ersatzbild und kompakte Teamübersicht."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Bild, Ersatz und ergänzende Hinweise",
+      "paragraphs": [
+        "Der runde Rahmen enthält entweder das geladene Bild oder den Ersatzinhalt. Das Bild füllt den Kreis aus und wird passend zugeschnitten. Wähle deshalb einen Ausschnitt, in dem das Gesicht auch klein erkennbar bleibt.",
+        "Ein optionales Abzeichen sitzt unten rechts und darf über den Rand hinausragen. Plane dafür Platz ein. Gruppen lassen die Kreise leicht überlappen; ein abgesetzter Ring trennt sie. Eine zusätzliche Zählfläche zeigt weitere Personen an. Name und Status stehen ausserhalb des Bildkreises."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Drei Grössen für unterschiedliche Dichte",
+      "paragraphs": [
+        "Belegt sind sm mit 24 px, default mit 32 px und lg mit 40 px Durchmesser. Empfehlenswert ist die kleine Grösse für dichte Listen, die Standardgrösse für gewöhnliche Einträge und die grosse für stärker hervorgehobene Personen. Halte innerhalb derselben Liste die Grösse gleich.",
+        "Bild und Ersatzinhalt sind Darstellungsformen, keine eigene Typauswahl. Abzeichen und Gruppe ergänzen den Aufbau. Bei sm wird das Symbol im Abzeichen ausgeblendet. Die Zählfläche besitzt keine eigene Grösseneinstellung; die Referenz zeigt sie mit 32 px."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Auch ohne geladenes Porträt verständlich",
+      "paragraphs": [
+        "Beim Laden kann zunächst der Ersatz sichtbar sein; nach erfolgreichem Laden übernimmt das Bild. Fehlt die Bildquelle oder schlägt sie fehl, bleibt der Ersatz die sinnvolle Darstellung. Eine optionale Verzögerung des Ersatzes kann kurzes Aufblitzen vermeiden; ohne Vorgabe beträgt sie null Millisekunden.",
+        "Änderungen der Bildquelle können einen neuen Ladeversuch auslösen. Der Bildbaustein meldet den Ladestatus an die Anwendung. Diese organisiert bei Bedarf weitere Rückmeldungen und liefert Initialen, Personenanzahl und Verfügbarkeitsstatus. Der Ladestatus des Bildes sagt nichts über die Erreichbarkeit der Person aus."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Vollständiger Name statt rätselhafter Kürzel",
+      "paragraphs": [
+        "«Nora Keller» ist eine klare Identifikation; «NK» allein ist mehrdeutig. Verwende als Ersatz vorzugsweise wenige gut lesbare Zeichen. Lange Namen gehören neben den Kreis und nicht als verkleinerter Text hinein.",
+        "Wenn das Bild selbst Information trägt, braucht es einen passenden Alternativtext wie «Nora Keller». Der Ersatz kann als benanntes Bild denselben vollständigen Namen erhalten. Identifiziert benachbarter Text die Person bereits vollständig, kann der Avatar bewusst dekorativ sein. Wesentliche Zustände immer als Text nennen: «Heute erreichbar» hilft, ein unbeschrifteter farbiger Punkt genügt nicht."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Kein eigener Tastaturstopp",
+      "paragraphs": [
+        "Der Avatar wird angezeigt und hat keine eigene Aktivierung, Auswahl oder Tastaturbedienung. Er braucht deshalb keinen zusätzlichen Tabulatorstopp. Initialen erhalten ihren zugänglichen Namen durch die bewusste Einbindung; der Rahmen ergänzt ihn nicht automatisch.",
+        "Wird ein Profil verlinkt oder ein Kontomenü geöffnet, übernimmt der umgebende Link beziehungsweise die Schaltfläche Tastaturbedienung, Fokusdarstellung und eine verständliche Beschriftung. Eine passive Zählfläche darf dabei nicht wie eine bedienbare Aktion gestaltet werden."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Identität und Status gehören zur Anwendung",
+      "paragraphs": [
+        "Avatar ist kein Formularfeld und übermittelt keinen ausgewählten Personenwert. In einer Navigation oder einem Dialog ergänzt er den jeweiligen Eintrag. Die umgebende Anwendung legt die Bedeutung, Namen und Beziehungen fest.",
+        "Die Gruppe ordnet ihre Inhalte nur an: Sie berechnet weder Teamgrösse noch Überlauf. Stelle zusätzliche Personen auch textlich nachvollziehbar dar. Das Abzeichen bleibt in dieser Referenz auch bei einer Schreibrichtung von rechts nach links unten rechts; prüfe seine Platzierung im jeweiligen Layout."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Aussagegrenzen",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte Schnittstelle, Gestaltungsregeln, der Bildladeablauf sowie HTML-/ARIA-Regeln und Zustandsbeispiele der Base-UI-basierten shadcn-Referenz. Die gebundenen Originalquellen bestätigen Grössenwahl, Ersatzverzögerung und passive Gruppenbausteine.",
+        "Die Illustration ist ein redaktioneller Entwurf. Die Quellenbeschreibung und ihre statischen Beispiele belegen keine vollständige Bedienung oder allgemeine Barrierefreiheit einer fertigen Anwendung; Namen, Status und zusammengesetzte Aktionen müssen dort passend umgesetzt werden."
+      ]
+    }
+  ]
+}

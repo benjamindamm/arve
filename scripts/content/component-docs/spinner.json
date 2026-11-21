@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "spinner",
+  "title": "Spinner",
+  "summary": "Der Spinner zeigt eine laufende Aufgabe an, deren Fortschritt noch unbestimmt ist. Ein konkreter Text erklärt, worauf du wartest.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Warten ohne Prozentangabe",
+      "paragraphs": [
+        "Nutze den Spinner, wenn gerade eine Aufgabe läuft, deren Fortschritt du nicht verlässlich beziffern kannst: etwa beim Laden einer Kontaktliste oder beim Prüfen einer Eingabe. Er zeigt Aktivität an. Wie lange es noch dauert, lässt sich daraus nicht ablesen.",
+        "Kannst du den erledigten Anteil messen, wähle Progress mit einem echten Wert. Erwartest du vor allem Inhalte in einer bereits bekannten Anordnung, kann Skeleton den Platz dafür sichtbar halten. Setze den Spinner nicht als dauerhaften Schmuck ein: Ohne laufende Aufgabe fehlt ihm eine verständliche Aussage."
+      ],
+      "links": [
+        {
+          "text": "Progress",
+          "href": "/systems/shadcn/components/progress",
+          "paragraph": 1
+        },
+        {
+          "text": "Skeleton",
+          "href": "/systems/shadcn/components/skeleton",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Kontakte werden geladen",
+      "paragraphs": [
+        "Du öffnest die Kontaktübersicht. Unter dem Titel steht ein kleiner Spinner neben «Kontakte werden geladen». Die Meldung benennt den betroffenen Inhalt; eine Prozentzahl oder Restzeit wird nicht versprochen. Für assistive Technik erhält der Spinner einen dazu passenden deutschen Namen.",
+        "Der ruhige Entwurf hält die Warteanzeige im Inhaltsbereich. Sobald die Anfrage endet, ersetzt die Anwendung sie durch Kontakte oder eine passende Rückmeldung. Die Illustration zeigt nur die Wartephase und stellt keine Animation dar."
+      ],
+      "illustration": {
+        "src": "/component-examples/spinner.svg",
+        "alt": "Kontaktübersicht mit einem kleinen Kreisbogen neben der Meldung Kontakte werden geladen.",
+        "caption": "Statische Illustration · Eine benannte Wartephase ohne Prozentwert."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Indikator und erklärender Text",
+      "paragraphs": [
+        "Der eigentliche Spinner besteht aus einem SVG-Indikator. Der sichtbare Begleittext gehört zur umgebenden Gestaltung; er ist kein eingebauter Textbereich des Spinners. Platziere beides nahe bei der betroffenen Aufgabe, damit du nicht rätseln musst, welcher Bereich gerade arbeitet.",
+        "In einem Button kann das Symbol vor oder nach der Beschriftung stehen. Die Originaldokumentation sieht dafür eine Position am Textanfang oder Textende vor. Ein Button, Badge oder Eingabefeld bleibt eine eigene Komponente mit eigenen Regeln."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Grösse am Einsatzort wählen",
+      "paragraphs": [
+        "Die Referenz beschreibt 16 Pixel als Standard sowie 12, 20 und 24 Pixel als Grössen über zusätzliche Klassen. Es gibt dafür keinen eigenen size-Parameter. Wähle eine Grösse, die zur benachbarten Schrift und zum verfügbaren Platz passt; ein grösseres Symbol bedeutet keine längere Wartezeit.",
+        "Eigene Farb-, Erfolgs- oder Fehlervarianten sind nicht definiert. Auch die Symbolauswahl der Quellwebsite ist keine öffentliche Spinner-Option. Der gezeichnete Kreisbogen dieser Seite ist eine redaktionelle Illustration, keine Zusage für die genaue Form jedes Symbolanbieters."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Die Anwendung beendet das Warten",
+      "paragraphs": [
+        "Du blendest den Spinner ein, während die Aufgabe läuft, und entfernst oder ersetzt ihn danach. Er startet selbst keine Anfrage, berechnet keinen Fortschritt und erkennt weder Abschluss noch Fehlschlag. Lege deshalb auch fest, was bei einer fehlgeschlagenen Anfrage oder anhaltender Wartezeit zu sehen ist.",
+        "Das gebundene Referenz-CSS dreht den Indikator fortlaufend und stoppt die Bewegung bei aktivierter Einstellung für reduzierte Bewegung. Der benannte Status bleibt dabei erhalten. Diese Regel ist eine ausdrückliche Referenzentscheidung; der Originalwrapper versieht das Symbol mit einer Animationsklasse. Prüfe die Umsetzung im Zielprodukt."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Benenne die laufende Aufgabe",
+      "paragraphs": [
+        "«Kontakte werden geladen» oder «Adresse wird geprüft» erklärt den Anlass besser als «Bitte warten». Halte die Meldung kurz und konkret. «Fast fertig» oder «Noch 5 Sekunden» passt nur, wenn die Anwendung diese Aussage tatsächlich belegen kann.",
+        "Der Originalwrapper verwendet standardmässig den englischen zugänglichen Namen «Loading». Überschreibe ihn passend zu Sprache und Aufgabe, beispielsweise mit «Kontakte werden geladen». Stimme sichtbaren Text und zugänglichen Namen aufeinander ab und prüfe, dass dieselbe Meldung nicht unnötig mehrfach angesagt wird."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Status ohne eigenen Fokus",
+      "paragraphs": [
+        "Der Spinner ist eine Statusanzeige und hat keine eigene Tastaturbedienung. Er erhält keinen zusätzlichen Tabstopp; du aktivierst ihn weder mit Enter noch mit der Leertaste. Sein zugänglicher Name erklärt die laufende Aufgabe auch ohne erkennbare Bewegung.",
+        "Wenn du ihn in einen Button einsetzt, bleibt dessen Tastatur- und Fokusverhalten beim Button. Der Spinner sperrt die Aktion nicht automatisch. Ob eine erneute Ausführung möglich sein soll, entscheidet die Anwendung am Bedienelement."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Rückmeldung in den Ablauf einbetten",
+      "paragraphs": [
+        "Die Quelle gibt dem SVG die Rolle status und einen zugänglichen Namen. Behandle es als Rückmeldung über eine laufende Aufgabe. Der Spinner ist kein Fortschrittsbalken und liefert weder einen Zahlenwert noch eine Validierungsmeldung.",
+        "In Formularen und Dialogen musst du die Rückmeldung mit dem betroffenen Vorgang verständlich verbinden. Eine Sperre des Formulars, ein Abbruch, der Fokus nach einem Fehler oder das Anzeigen des Ergebnisses entstehen nicht durch den Spinner. Plane diese Schritte in der umgebenden Anwendung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz abdeckt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene React-Quelle, ihre Originalbeispiele sowie die getrennten Beschreibungen von Schnittstelle, CSS, Verhalten und HTML/ARIA. Die Zustandsbeschreibung deckt das Anzeigen, Ändern und Entfernen des Elements ab; sie modelliert keinen Arbeitsprozess.",
+        "Grössen und reduzierte Bewegung sind im begrenzten Referenzumfang beschrieben. Daraus folgt keine allgemeine Freigabe für ein Zielprodukt oder dessen Screenreader-Ausgabe. Prüfe insbesondere die Benennung, das Ende der Wartephase und die Bewegung in deiner konkreten Einbindung."
+      ]
+    }
+  ]
+}

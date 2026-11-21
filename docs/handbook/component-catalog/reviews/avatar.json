@@ -1,0 +1,235 @@
+{
+  "component": "avatar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/component.json",
+      "sha256": "c1cbfb4dea8ed8eef9a095734ad9c792aee6db57a68a98d64c803040fd2c62fe"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/ux.json",
+      "sha256": "f8b3ea77121e1e2f62edba8fbb2d2e52abc98c408976719d83ca52e5accf1feb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/interface.json",
+      "sha256": "c7bea734cbfc3cfb50bf9eb2995e952f35636461625f6849d4d70f5bc6f7ffc6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/stories.json",
+      "sha256": "a4aff6a7e29752fe9767f1903e669eb4e9c0496debf2019695ca09ab6a81dced"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/behavior.scxml",
+      "sha256": "9650c3c8511e2ff537a052091a553c94337a4443d2bec3c938f902188c83c065"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/layout.css",
+      "sha256": "9ff12b2df8bacf34e7af0f5b75f035eee4b44f20906dd12ab8966189e4d0ba77"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/accessibility.html",
+      "sha256": "3e4d397b9bcf4119dba9b29d109a23ef97ffb7584081ac91210e275cba576ff2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/accessibility.rules.json",
+      "sha256": "a3a0001aa6c4850a0a38022241c646a05e645fc05d011e8a6841c984fcebcea3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/README.md",
+      "sha256": "2b3ebcfadf0b0b634e3c5a03b4ef82f5e37f275829a63fc1adaf809856df67b4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/avatar.tsx.source",
+      "sha256": "d9850dc6f9aaccf9f7aab3c730c3aef62b42ef8cd9404b2d7133f771e14a6cbd"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/avatar/fallback/AvatarFallback.d.ts.source",
+      "sha256": "0318e1a72fd758db1097f82e9f8aa8077bbab4081bb0c5464f1f89dd79ea2872"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/avatar/image/AvatarImage.d.ts.source",
+      "sha256": "600d466b158b387484c1557ae39a14d52c9bf3fe172c6ffce559e651ec89c4d6"
+    }
+  ],
+  "claims": [
+    {
+      "id": "identity-with-name",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Avatar stellt eine Person oder Entität dar und darf nicht als einzige Identitätsbeschriftung dienen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "example-identity-status",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Projektbeispiel ergänzt die Initialen NK mit vollständigem Namen und lesbarem Status; die Gesamtzahl erläutert die passive +3-Fläche."
+    },
+    {
+      "id": "anatomy-badge-group",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Abzeichen, Gruppe, Status und passive Überlaufanzahl sind getrennte Teile; Status ist Anwendungsinhalt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-position",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Das Abzeichen ist physisch rechts unten positioniert, Bilder füllen den Kreis mit object-fit cover.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/layout.css",
+          "snippet": "[data-slot=\"avatar-image\"] {\n  object-fit: cover;\n}"
+        }
+      ]
+    },
+    {
+      "id": "actual-sizes",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Nur sm/default/lg sind öffentliche Grössen; sie entsprechen 24/32/40 px. Count hat keine eigene size-API.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "small-badge",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Das SVG im Abzeichen wird bei sm ausgeblendet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/layout.css",
+          "snippet": "[data-slot=\"avatar\"][data-size=\"sm\"] [data-slot=\"avatar-badge\"]>svg {\n  display: none;\n}"
+        }
+      ]
+    },
+    {
+      "id": "image-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Bildzustände sind idle/loading/loaded/error; Ersatzverzögerung standardmässig 0, Quellenänderungen können Laden erneut auslösen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "image-status-callback",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "onLoadingStatusChange ist ein Callback am Bildbaustein.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/interface.json",
+          "pointer": "/modules/0/declarations/1/events/0"
+        }
+      ]
+    },
+    {
+      "id": "full-name-alternative",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Initialen und Abzeichenfarbe allein reichen nicht; meaningful alt und explizit benannter Ersatz werden in der Referenz vorgesehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "decorative-option",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Bei vollständig identifizierendem benachbartem Text ist eine bewusst dekorative Bildverwendung mit leerem alt vorgesehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "passive-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Root hat keine Aktivierungs- oder Auswahl-API; die Gruppe positioniert lediglich Inhalte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "composed-actions",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Bei zusammengesetzten Profilaktionen sollen Link oder Schaltfläche Fokus und Tastaturbedienung übernehmen."
+    },
+    {
+      "id": "caller-semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Gruppenanzahl und Status werden nicht berechnet; der Aufrufer liefert die Bedeutung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "rtl-badge",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Das Abzeichen bleibt auch in RTL physisch rechts unten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "bounded-reference",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz ist keine allgemeine Anwendungsfreigabe und kein allgemeines Pixel-/Framework-/AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/avatar/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Die Variante sm wird als Dichteentscheidung empfohlen, nicht als vorgeschriebene Verwendung.",
+    "Das Beispiel verwendet bewusst Initialen statt eines externen Porträts; Name und Status stehen separat.",
+    "+3 wird als passive Ergänzung mit ausgeschriebener Gesamtzahl gezeigt.",
+    "Die nicht interaktive Natur wird in Tastatur- und Auswahlentscheidungen erklärt."
+  ],
+  "limits": [
+    "Keine lokale Avatar-Demo vorhanden; Illustration ist keine Laufzeitprüfung.",
+    "Die Darstellung zusammengesetzter Profilaktionen wurde nicht in einer Anwendung geprüft."
+  ]
+}

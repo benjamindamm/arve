@@ -1,0 +1,212 @@
+{
+  "component": "data-table",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/component.json",
+      "sha256": "b4e245e84206bd39fa7f91c0958285c570ec3b010819763aab7fbf132db69be8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/ux.json",
+      "sha256": "194cc20d93d0e65eb108324ac73a4e34840ecb2be9d85b7d10d0250532f51cd7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/interface.json",
+      "sha256": "8b051f129a2c98a1c9ac71fe5940f10af9d1ebddc9f607bb46e5f468e8f0c113"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/stories.json",
+      "sha256": "4cad309a3fc16b056e94dfad69c6640f90ff6c1c2598fcf383ee37dcc8ada1af"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/behavior.scxml",
+      "sha256": "53abe96288469985a93c0f124cf70930152d1c27782c97069c2d419cd0481a22"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/layout.css",
+      "sha256": "d91052ba21e3a82d01ebecffa4759ed186f71a59bb07e37617be3c69ff726ed4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/accessibility.html",
+      "sha256": "e9d4b64cb18b66251906140e38f53e9c882d12d659b455acf18b9064fd65c34c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/accessibility.rules.json",
+      "sha256": "9f3e63f190f796e2a01acb6398053f2160e79aae50240acd6d6e33f4c4b9b92b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/README.md",
+      "sha256": "4d7f4617eb56002165815dbe09bdb0fc1c3fa0f0648d6565dba9a44b911eaed1"
+    }
+  ],
+  "claims": [
+    {
+      "id": "data-table-usage-1",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für statische Vergleiche Table und für längere Einzelbeschreibungen Item erwägen; kein Tabellenkalkulationsmuster versprechen."
+    },
+    {
+      "id": "data-table-usage-2",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die native Tabelle verspricht weder ARIA-Grid noch zellenweises Bearbeiten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "data-table-example-3",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der Entwurf übersetzt den E-Mail-Filter und die Statussichtbarkeit der Referenz und verwendet ausdrücklich redaktionelle Beispieldaten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/accessibility.html",
+          "snippet": "<label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label>"
+        }
+      ]
+    },
+    {
+      "id": "data-table-anatomy-4",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Filter und Sichtbarkeit stehen oberhalb, benannte Seitenaktionen und Trefferstatus unterhalb der nativen Tabelle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/stories.json",
+          "pointer": "/stories/0/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "data-table-variants-5",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Der Contract definiert funktionale Zustandsabbildungen; keine eigenen Farb-/Grössenvarianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "data-table-variants-6",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "DashboardDataTableBlock ist eine gesonderte konkrete Komposition.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/interface.json",
+          "pointer": "/modules/0/declarations/1/description"
+        }
+      ]
+    },
+    {
+      "id": "data-table-states-7",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Filter, Sortierung, Sichtbarkeit, Auswahl und Pagination sind unabhängige Zustände; Auswahl bleibt an stabilen IDs.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "data-table-states-8",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Seitenwechsel werden nur innerhalb der tatsächlichen Seitengrenzen ausgelöst.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/behavior.scxml",
+          "snippet": "<transition event=\"NEXT_PAGE\" cond=\"canNext\">"
+        }
+      ]
+    },
+    {
+      "id": "data-table-labels-9",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze konkrete Aktionsnamen, eindeutige Zeilennamen, ausgeschriebene Statuswerte und einheitliche Währung empfehlen."
+    },
+    {
+      "id": "data-table-labels-10",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die Referenz benennt Checkboxen mit einer stabilen Zahlungs-ID.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/accessibility.html",
+          "snippet": "aria-label=\"Select payment 728ed52f\""
+        }
+      ]
+    },
+    {
+      "id": "data-table-keyboard-11",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Tasten bedienen Controls; Sortieren verschiebt Fokus nicht zur Zeile; kein erfundenes Pfeiltasten-/Escape-Verhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "data-table-semantics-12",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Daten und Spalten sind Eingaben des Bauplans; die Featurezustände sind getrennte TanStack-Zustände.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/interface.json",
+          "pointer": "/modules/0/declarations/0/members"
+        }
+      ]
+    },
+    {
+      "id": "data-table-semantics-13",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Native Tabelle, echte Beschriftung und Spaltenköpfe, benannte Seitennavigation und Statusmeldung sind vorhanden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/accessibility.html",
+          "snippet": "<caption data-slot=\"table-caption\">Recent payment records in US dollars</caption>"
+        }
+      ]
+    },
+    {
+      "id": "data-table-sources-14",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische Fixtures beschreiben erwartete Zustände und ersetzen keine Prüfung der eigenen Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/data-table/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Zahlungen mit US-Dollar als nahes fachliches Beispiel beibehalten, deutsche E-Mail-Adressen und Statuswörter redaktionell gewählt.",
+    "Breite Illustration mit expliziter Mindestbreite statt verkleinerter unlesbarer Tabelle.",
+    "Keine globale Suche, allgemeine Grid-Navigation oder Dashboard-Funktionen dem Bauplan zugeschrieben.",
+    "Seitenweite und gefilterte Gesamtauswahl in der Redaktion ausdrücklich unterschieden."
+  ],
+  "limits": [
+    "Keine lokale Data-Table-Demo in src/demos/shadcn gefunden.",
+    "Statische SVG ist eine redaktionelle Illustration und kein Rendernachweis.",
+    "Kein aktueller Browser- oder Screenreader-Nachweis für eine integrierte Data Table erbracht."
+  ]
+}

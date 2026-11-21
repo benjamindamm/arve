@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "data-table",
+  "title": "Data Table",
+  "summary": "Mit Data Table vergleichst du Datensätze und grenzt sie über gezielt eingebundene Tabellenfunktionen ein. Filter, Sortierung, Auswahl und Seitenwechsel erfüllen dabei unterschiedliche Aufgaben.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Datensätze vergleichen und eingrenzen",
+      "paragraphs": [
+        "Nutze Data Table, wenn du gleichartige Datensätze über mehrere Spalten vergleichen und anschliessend gezielt eingrenzen möchtest. Bei Zahlungen helfen etwa E-Mail-Adresse, Status und Betrag, einen Eintrag zu finden und mit anderen abzugleichen.",
+        "Für wenige Werte ohne Filter oder Auswahl genügt Table. Wenn du einzelne Einträge mit längeren Beschreibungen präsentieren möchtest, passt eine Liste aus Item besser. Für zellenweises Bearbeiten wie in einer Tabellenkalkulation bietet dieser Bauplan keine passende Bedienung."
+      ],
+      "links": [
+        {
+          "text": "Table",
+          "href": "/systems/shadcn/components/table",
+          "paragraph": 1
+        },
+        {
+          "text": "Item",
+          "href": "/systems/shadcn/components/item",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Zahlungen nach E-Mail filtern",
+      "paragraphs": [
+        "Du siehst zwei von drei passenden Zahlungen, nach E-Mail aufsteigend sortiert. Die erste ist ausgewählt. Der beschriftete Filter bezieht sich nur auf die E-Mail-Spalte; er ist keine Suche über alle Inhalte. «Status anzeigen» verändert die sichtbaren Spalten.",
+        "Beträge sind im Beispiel einheitlich in US-Dollar angegeben. Die geringe Seitengrösse macht die Navigation sichtbar; sie ist eine Entscheidung dieses Entwurfs. Die Illustration zeigt keine ausführbare Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/data-table.svg",
+        "alt": "Zahlungstabelle mit E-Mail-Filter, sichtbarer Statusspalte, zwei Zeilen, einer Auswahl und Seitenaktionen.",
+        "caption": "Statische Illustration · Zahlungsübersicht mit getrenntem Filter, Sortierzustand und Zeilenauswahl.",
+        "minWidth": 640
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Werkzeuge oberhalb, Seitenwechsel unterhalb",
+      "paragraphs": [
+        "Platziere den E-Mail-Filter und die Steuerung der Spaltensichtbarkeit oberhalb der Tabelle. Halte die Spaltenköpfe nah an den zugehörigen Werten. Die Sortieraktion sitzt im betreffenden Spaltenkopf, die Auswahl als Checkbox in der jeweiligen Zeile.",
+        "Eine Tabellenbeschriftung erklärt Inhalt und Einheit. Unter der Tabelle folgen die Seitenaktionen und die Anzahl passender Datensätze. Reserviere im Tabellenkörper Platz für eine verständliche Leermeldung, die sich über alle aktuell sichtbaren Spalten erstreckt."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Funktionen gezielt zusammenstellen",
+      "paragraphs": [
+        "Data Table hat keine eigene Auswahl an Farb- oder Grössenvarianten. Der Export beschreibt einen Bauplan aus Table und TanStack Table mit ausdrücklich eingebundenen Funktionen für Sortierung, Spaltenfilter, Spaltensichtbarkeit, Zeilenauswahl und Pagination.",
+        "Schalte Sortierung nur dort frei, wo eine Reihenfolge fachlich hilft. Blende verzichtbare Spalten aus, wenn du den Vergleich vereinfachen möchtest; die Datensätze bleiben dabei erhalten. Der separat dokumentierte Dashboard-Block besitzt eigene Abläufe. Sein Verschieben und seine Detailansichten gehören nicht automatisch zu jeder Data Table."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Treffer, Reihenfolge und Auswahl getrennt halten",
+      "paragraphs": [
+        "Ein Filter verändert die passenden Zeilen; die Pagination verteilt diese Treffer auf Seiten. Sortieren verändert ihre Reihenfolge. Die Auswahl hängt dagegen an stabilen Datensatz-IDs und kann bestehen bleiben, wenn eine Zeile ausgefiltert wird oder auf einer anderen Seite liegt.",
+        "Mache deshalb bei Sammelaktionen deutlich, welche Auswahl gilt. «Alle auf dieser Seite auswählen» und «Alle gefilterten auswählen» haben unterschiedliche Reichweiten.",
+        "Bei null Treffern zeigst du eine Leermeldung und die Trefferzahl null. Am Anfang beziehungsweise Ende sind die entsprechenden Seitenaktionen deaktiviert. Datenfehler brauchen eine eigene Rückmeldung. Laden, Datenabruf und Wiederholen organisiert deine Anwendung; ein Fehler darf nicht bloss als «Keine Treffer» erscheinen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Spalten und Aktionen eindeutig benennen",
+      "paragraphs": [
+        "Verwende «E-Mail filtern» statt des ungenauen «Suchen», solange nur diese Spalte gefiltert wird. «E-Mail sortieren» benennt die Aktion, «Status anzeigen» die Wirkung des Schalters. Ergänze bei jeder Auswahl einen eindeutigen Bezug, etwa «Zahlung Z-104 auswählen».",
+        "Halte Spaltenüberschriften kurz und Werte einheitlich formatiert. Kennzeichne Beträge mit ihrer Währung und Statuswerte mit verständlichen Wörtern wie «Ausstehend». Vermeide wechselnde Einheiten und alleinige Farbcodes. Eine Meldung wie «3 passende Zahlungen» beschreibt die Treffermenge, nicht die Zahl ausgewählter Zeilen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Die einzelnen Bedienelemente erreichen",
+      "paragraphs": [
+        "Mit Tab und Umschalt+Tab erreichst du die tatsächlichen Eingaben, Sortierschaltflächen, Checkboxen und Seitenaktionen. Im Filter gelten die üblichen Tasten zum Bearbeiten von Text. Schaltflächen aktivierst du mit Enter oder Leertaste, Checkboxen schaltest du mit der Leertaste um.",
+        "Nach dem Sortieren bleibt der Fokus auf der Sortieraktion. Der aktuelle Sortierzustand gehört zum Spaltenkopf. Gib jeder Checkbox einen zugänglichen Namen mit Datensatzbezug. Die Tabelle hat keine zusätzliche Pfeiltastensteuerung zwischen Zellen und keine durch Escape ausgelöste Zeilenaktion."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Deine Anwendung verantwortet die Daten",
+      "paragraphs": [
+        "Die Grundlage bleibt eine native HTML-Tabelle mit Beschriftung und zugeordneten Spaltenköpfen. Die Seitennavigation erhält einen eigenen Namen; Änderungen der Trefferzahl können über eine Statusmeldung angekündigt werden. Eine ausgewählte Zeile wird dadurch nicht selbst zur Schaltfläche.",
+        "Du legst Daten, Spalten, stabile IDs und die eingebundenen Funktionen fest. Die Zustände für Filter, Sortierung, Sichtbarkeit, Auswahl und Pagination lassen sich getrennt steuern. Eine globale Suche, Serveranbindung oder ein vollständiges fachliches Datenschema liefert dieser Bauplan nicht."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Grundlage sind die gebundene Schnittstelle, CSS-Regeln, Zustandsbeschreibung, HTML-/ARIA-Vorgaben und statischen Zustandsbeispiele des veröffentlichten Exports. Sie unterscheiden den allgemeinen Tabellenbauplan vom konkreten Dashboard-Block.",
+        "Der dort beschriebene Referenzumfang ist begrenzt. Statische Beispiele und historische Prüfverweise belegen keine vollständige Bedienbarkeit deiner eigenen Anwendung; prüfe deren Datenumfang, Fokusführung und Rückmeldungen im tatsächlichen Einsatz."
+      ]
+    }
+  ]
+}

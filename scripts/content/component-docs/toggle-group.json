@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "toggle-group",
+  "title": "Toggle & Toggle Group",
+  "summary": "Schalte einzelne Werkzeuge ein und aus oder fasse verwandte Werkzeuge zu einer Einfach- oder Mehrfachwahl zusammen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Werkzeuge mit bleibendem Zustand",
+      "paragraphs": [
+        "Mit einem einzelnen Toggle schaltest du ein Werkzeug ein und wieder aus, etwa «Bericht anheften». Eine Toggle Group bündelt verwandte Werkzeuge: Bei Textformatierungen können mehrere aktiv sein, bei einer optionalen Darstellungswahl höchstens eines.",
+        "Nutze einen Button für eine einmalige Aktion wie «Bericht exportieren». Wenn du eine verbindliche Auswahl aus mehreren Formularantworten brauchst, empfiehlt sich eine Radio Group. Die Einfachwahl der Toggle Group lässt sich durch erneutes Aktivieren vollständig aufheben. Für den Wechsel zwischen Inhaltsbereichen passen Tabs besser."
+      ],
+      "links": [
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 1
+        },
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        },
+        {
+          "text": "Tabs",
+          "href": "/systems/shadcn/components/tabs",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Formatierungen beim Schreiben",
+      "paragraphs": [
+        "Im Entwurf sind «Fett» und «Kursiv» gleichzeitig eingeschaltet. Die Gruppe «Textformatierung» arbeitet mit Mehrfachwahl; jedes Werkzeug lässt sich unabhängig zurücknehmen. Darunter steht der einzelne Toggle «Bericht anheften» mit eigenem Zustand.",
+        "Der Textausschnitt zeigt die Wirkung der aktiven Formatierungen. Plane diese Verbindung zwischen Werkzeug und Ergebnis in deiner Anwendung bewusst: Die Komponente formatiert selbst keinen Text und speichert keinen Bericht."
+      ],
+      "illustration": {
+        "src": "/component-examples/toggle-group.svg",
+        "alt": "Textformatierung mit aktivem Fett und Kursiv, einem formatierten Berichtstitel und einem separat ausgeschalteten Toggle Bericht anheften.",
+        "caption": "Statische Illustration · Mehrfachwahl und unabhängiger Toggle in einem Berichtseditor."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Gruppe und Einzelwerkzeug zusammenstellen",
+      "paragraphs": [
+        "Eine Gruppe besteht aus einem benannten Bereich und den zugehörigen Toggle-Schaltflächen. Jede Fläche trägt Text, ein Symbol oder beides. Der gedrückte Zustand und der sichtbare Tastaturfokus haben unterschiedliche Aufgaben: Auswahl zeigt die Wirkung, Fokus das nächste bedienbare Werkzeug.",
+        "Platziere zusammengehörige Werkzeuge nahe beim bearbeiteten Inhalt. Halte einen unabhängigen Toggle räumlich erkennbar von der Gruppe getrennt. Die Breite richtet sich nach dem Inhalt; kurze Beschriftungen halten die Reihe überschaubar."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Auswahlmodus und Erscheinung wählen",
+      "paragraphs": [
+        "Die Gruppe erlaubt standardmässig höchstens einen gedrückten Eintrag. Mit Mehrfachwahl kannst du mehrere kombinieren. Ein einzelner Toggle kennt dagegen nur ein- und ausgeschaltet.",
+        "Für Gruppe und Einzelwerkzeug stehen default und outline sowie die Grössen sm, default und lg zur Verfügung. Nutze outline, wenn die einzelnen Flächen deutlicher begrenzt sein sollen. Der Gruppenabstand beträgt standardmässig zwei Abstandseinheiten; mit Abstand null verbinden sich die outline-Flächen. Auf Gruppenebene gesetzte Grösse und Variante haben Vorrang vor den Angaben einzelner Einträge."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Auch keine Auswahl ist ein Ergebnis",
+      "paragraphs": [
+        "In der Einfachwahl ersetzt ein anderes Werkzeug die bisherige Auswahl. Aktivierst du das bereits gedrückte Werkzeug nochmals, bleibt kein Eintrag ausgewählt. In der Mehrfachwahl entfernt dieselbe Handlung nur dieses Werkzeug; auch hier kann die Gruppe leer werden. Lege fest, was dieser Leerzustand im Inhalt bedeutet.",
+        "Einzelne Einträge oder die ganze Gruppe können deaktiviert sein und lassen sich dann nicht umschalten. Erkläre einen unklaren Grund im Umfeld. Führt deine Anwendung den Zustand selbst, muss sie Änderungen übernehmen; sie kann eine angefragte Änderung auch ablehnen. Rückmeldungen zu Speicherung oder Fehlern gehören zur Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das Werkzeug klar benennen",
+      "paragraphs": [
+        "«Fett», «Kursiv» und «Bericht anheften» benennen konkrete Funktionen. «Option 1» oder «Aktiv» sagen zu wenig. Behalte den Namen eines Toggles beim Umschalten bei; der gedrückte Zustand vermittelt, ob die Funktion eingeschaltet ist.",
+        "Empfohlen sind kurze Wörter oder Wortgruppen. Gib einem reinen Symbol einen zugänglichen Namen wie «Fett» und der gesamten Gruppe einen Namen wie «Textformatierung». Ein Tooltip allein ersetzt diesen Namen nicht. Vermeide lange Erklärungssätze innerhalb der Schaltflächen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus bewegen, dann umschalten",
+      "paragraphs": [
+        "Den einzelnen Toggle erreichst du mit Tab; Enter oder Leertaste schalten ihn um. In der horizontalen Gruppe bewegst du den Fokus mit Pfeil links und rechts. Home und End führen zum ersten beziehungsweise letzten verfügbaren Eintrag. Standardmässig läuft der Fokus am Ende zum anderen Ende weiter. Erst Enter oder Leertaste ändern die Auswahl; die Fokusbewegung allein tut das nicht.",
+        "Deaktivierte native Schaltflächen können keinen Fokus halten. Plane diese Referenz horizontal: Die veröffentlichte shadcn-Hülle reicht eine vertikale Orientierung nicht an die zugrunde liegende Tastatursteuerung weiter. Eine vertikale Darstellung belegt deshalb keine Bedienung mit Pfeil hoch und runter."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Gedrückte Buttons sind keine Radiofelder",
+      "paragraphs": [
+        "Die Einträge sind native Buttons mit aria-pressed; der gemeinsame Bereich hat die Rolle group. Auch die Einfachwahl bleibt eine Gruppe gedrückter Buttons und wird dadurch nicht zur Radio Group oder Toolbar.",
+        "Technisch bleiben Gruppenwerte auch bei Einfachwahl Listen; ein einzelner Toggle liefert einen Wahrheitswert. Verbinde diese Zustände ausdrücklich mit deinem Editor oder Formularmodell. Die gezeigten Buttons lösen keine Formularübermittlung aus. Für rechts-nach-links ausgerichtete Tastaturbedienung braucht die Base-UI-Quelle zusätzlich zur HTML-Schreibrichtung ihren DirectionProvider."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Abgeglichen sind Schnittstelle, visuelle Regeln, Zustandsmodell, HTML/ARIA und die gebundenen React- und Base-UI-Quellen. Die Beispiele im Export zeigen unter anderem leere Einfachwahl, Mehrfachwahl und verbundene outline-Flächen. Sie ersetzen keine Prüfung deiner Anwendung mit Tastatur und assistiven Technologien. Die vertikale Tastaturführung bleibt die oben beschriebene konkrete Grenze."
+      ]
+    }
+  ]
+}

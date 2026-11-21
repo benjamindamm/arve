@@ -1,0 +1,241 @@
+{
+  "component": "chart-radial",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/component.json",
+      "sha256": "3c761e9a3b84b1a821acdf2cd9e8a4015f863c2cd5a9b3d16c49c2f52107c9b9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/ux.json",
+      "sha256": "97a0ab216ab0a474193d2a6056a1250d4ae6b593962d4fd5b2974a0e25325d84"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/interface.json",
+      "sha256": "ec4bb5f28c064c1e5242f06ab573a4c6dbbccb02b3f1b30de050439d580f1e88"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/stories.json",
+      "sha256": "ae74947bec6a6584b16c489d98a932f82e6ad1544fa7adb6b141ed8c58230c20"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/behavior.scxml",
+      "sha256": "a764404d2d9b065ae8fb6b9b982ea9f004f5841931ba4246bbae120924b68d43"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/layout.css",
+      "sha256": "6795b1774bac92ca2fd4ddbe9d4963f15260bf3dcad6e7551d2c6d3d4928607f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/accessibility.html",
+      "sha256": "9166a470eaff51ce2845c62f6d82f6e773852a5d2b63eff246924dc24448d622"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/accessibility.rules.json",
+      "sha256": "d5119f1231718130953daaad56e0a82ed959e7569eec62ee4f5d9e18032d2315"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/README.md",
+      "sha256": "aad10de176a740c72f4b2fc806b47ada785062247f8d98e3e006fbbcd453f2d5"
+    }
+  ],
+  "claims": [
+    {
+      "id": "purpose-count",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Referenz vergleicht Zählwerte als radiale Balken und ist nicht automatisch eine Fortschrittsanzeige.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "choose-bar",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für präzise Rangfolgen wird Chart Bar, für belegte Zielerreichung Progress empfohlen."
+    },
+    {
+      "id": "scale-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Kanalnamen, Berichtsmonat und Skalenmaximum 300 sind redaktionell; alle Winkel sind proportional zum Wert und keine Anteile an der Summe."
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Abbildung, Titel, Zusammenfassung, Plot, Tabelle und Legende sind definierte Teile der Referenz.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-shapes",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Indikatoren sind dot, line oder dashed; keine eigene Grössenreihe ist festgelegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Props erlauben hideLabel und hideIndicator; Konfiguration erlaubt Farbe oder vollständiges helles/dunkles Thema.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1/type/text"
+        }
+      ]
+    },
+    {
+      "id": "theme-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "ChartConfig trennt Daten von Labels und unterstützt Farbe oder helles/dunkles Thema.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        }
+      ]
+    },
+    {
+      "id": "replace-data",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Ein gültiger Datenwechsel ersetzt die Zeilen, entfernt Tooltip und aktive Auswahl und unterscheidet vorhandene von leeren Daten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/behavior.scxml",
+          "snippet": "<transition event=\"DATA_PROPS_CHANGED\" cond=\"Array.isArray(_event.data.rows)\">\n      <assign location=\"rows\" expr=\"_event.data.rows\" />\n      <assign location=\"tooltipVisible\" expr=\"false\" />\n      <assign location=\"activeIndex\" expr=\"null\" />\n      <assign location=\"loadStatus\" expr=\"rows.length ? 'ready' : 'empty'\" />"
+        }
+      ]
+    },
+    {
+      "id": "caller-feedback",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Leere Daten und Fehler sind ausdrückliche Rückmeldungen der Anwendung und keine erfundenen Nullwerte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "label-unit",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Sichtbare Zusammenfassung und vollständige Tabelle nennen Einheit sowie genaue Werte und Kategorien.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "label-example",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Titel, kurze Kategorien und ausgeschriebene Bezugsgrösse im Kanalbeispiel sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "keyboard-redundant",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "SVG ist redundant verborgen und accessibilityLayer deaktiviert; native Tabelle bleibt zugänglich, Tooltip hat keinen unabhängigen Fokus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "escape-coordinate",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Escape verbirgt den Tooltip und merkt die aktuelle Koordinate als verworfen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/behavior.scxml",
+          "snippet": "<transition event=\"ESCAPE\">\n      <assign location=\"tooltipVisible\" expr=\"false\" />\n      <assign location=\"dismissedCoordinate\" expr=\"coordinateKey\" />"
+        }
+      ]
+    },
+    {
+      "id": "figure-semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Abbildung wird mit sichtbarem Titel und Zusammenfassung verknüpft; das redundante SVG ist aria-hidden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/accessibility.html",
+          "snippet": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-radial\" aria-labelledby=\"chart-radial-title\" aria-describedby=\"chart-radial-summary\">"
+        }
+      ]
+    },
+    {
+      "id": "wrapper-responsibility",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "ChartContainer benötigt Konfiguration, ein Recharts-kompatibles Kind und eine vom Aufrufer begrenzte Grösse; er erzeugt keine vollständige Textalternative.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "source-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Base-UI-Wrapper bleiben Grundlage; offizielles new-york-v4-Beispiel liefert Diagramm und Daten, nicht einen neuen Upstream-Export.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "release-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Begrenzte Referenzvollständigkeit ist keine allgemeine Anwendungs- oder Plattformfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radial/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Neutrale Eingangskanäle statt Browsermarken; Zahlen sind ausdrücklich redaktionelle Beispieldaten.",
+    "Skalenmaximum 300 ist sichtbar benannt. Alle Ringe beginnen bei 12 Uhr und codieren ausschliesslich den gleichen Winkelmassstab; keine gerundeten Endkappen verzerren die Winkel.",
+    "Exakte Werte und Ringreihenfolge stehen dauerhaft rechts. Bogenlängen und Ringflächen werden nicht als vergleichbare Mengen bezeichnet.",
+    "Keine eigene Grösse, Ringvariante oder ausführbare Demo behauptet."
+  ],
+  "limits": [
+    "Kein veröffentlichter Arve-Implementierungsnachweis für Chart Radial; kein Browser- oder Screenreader-Test ausgeführt.",
+    "Die redaktionelle Illustration bildet keine Recharts-Pixelgeometrie und keine Figma-Messung ab."
+  ]
+}

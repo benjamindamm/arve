@@ -1,0 +1,242 @@
+{
+  "component": "breadcrumb",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/component.json",
+      "sha256": "2995b2d9c001d714a177717a53541f5f7713c9ff22627ee791d5bfa6ba6526a6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/ux.json",
+      "sha256": "28d65517f9a759f3561c1a07b5c689adca25d7dfb2e5f3d96e9e6de2e69a3fbf"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/interface.json",
+      "sha256": "99aee41b4b04d52485e41f5c33fd92ec81b241f68ca4b520f00634708f20a518"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/stories.json",
+      "sha256": "cbdf7b137b1a3d68268dfe62f2ea2bc810393991f27433b2bb9b095341effaae"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/behavior.scxml",
+      "sha256": "6c87eb84f4f65a186644b6c59905dfc093b9a1484ec2ca11463528a9430fd51d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/layout.css",
+      "sha256": "04f859d59cdf5143d2676730312022402f812be95d65abdad26f100f6ff02dcc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/accessibility.html",
+      "sha256": "2c29497ac02b6869b0cabebd56cb7b52ec8438a12f725b8eccef22ad0e27f268"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/accessibility.rules.json",
+      "sha256": "0c8e302093b4279c429b4045fea1d8f6ff9ca0ddc4b88d51d12e46bbfe1be891"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/README.md",
+      "sha256": "6fcca1bbcfebfa61d8ec49424f76d1eb89acd907f501d55b483ce58d8628cbda"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source",
+      "sha256": "006bb74f110ce68ff5a0bc4846616561aada5f1df8dac042a2c8aef80d55ab73"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/breadcrumb.mdx.source",
+      "sha256": "1a2c9d53bb192c9cee5ac9e6544a8f464d61f58ef4e0913be41bb0fce7aa7bf1"
+    }
+  ],
+  "claims": [
+    {
+      "id": "hierarchy-not-history",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Breadcrumb zeigt eine Inhaltshierarchie mit echten Links zu Vorfahren, keinen Besuchsverlauf.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/ux.json",
+          "pointer": "/avoid"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-path",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Der Entwurf verwendet einen vollständigen Pfad mit zwei Vorfahren und aktueller Seite; Namen und Platzierung sind redaktionell."
+    },
+    {
+      "id": "anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Navigation, Liste, Eintrag, Vorfahrenlink, aktuelle Seite, Trenner und Auslassung sind die sieben gebundenen Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "wrapping",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Liste darf umbrechen; lange Wörter können umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/layout.css",
+          "snippet": "flex-wrap: wrap;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/layout.css",
+          "snippet": "overflow-wrap: anywhere;"
+        }
+      ]
+    },
+    {
+      "id": "no-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Der visuelle Contract definiert keine benannten Varianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "custom-separator",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Ein eigenes dekoratives Trennzeichen ist als children möglich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source",
+          "snippet": "{children ?? ("
+        }
+      ]
+    },
+    {
+      "id": "ellipsis-boundary",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Eine Auslassung ist kein Disclosure; die Referenz stellt vollständige alternative Links bereit.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "hover-focus",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Hover färbt und unterstreicht Vorfahrenlinks; focus-visible zeichnet eine Kontur.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/layout.css",
+          "snippet": "[data-slot=\"breadcrumb-link\"]:hover {\n  color: var(--ui-color-foreground);\n  text-decoration: underline;\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/layout.css",
+          "snippet": "[data-slot=\"breadcrumb-link\"]:focus-visible {\n  outline: var(--ui-focus-width) solid var(--ui-color-ring);\n  outline-offset: var(--ui-focus-width);\n}"
+        }
+      ]
+    },
+    {
+      "id": "navigation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Native Navigation erfolgt nach LINK_CLICK, sofern das ursprüngliche Ereignis nicht verhindert wurde.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/behavior.scxml",
+          "snippet": "<if cond=\"!_event.data.event.defaultPrevented\">"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Seitennamen und kurze verständliche Texte sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "navigation-label",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der Standardname des nav ist breadcrumb und kann durch Props lokalisiert werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab besucht Vorfahrenlinks, Enter folgt ihnen; keine eigene Pfeilsteuerung oder roving focus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "current-page",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die aktuelle Seite ist ein nicht fokussierbarer span mit Linkrolle, aria-disabled und aria-current; Trenner und Auslassung sind ausgeblendet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "evidence-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die statischen Fixtures sind kein ausführbarer Verhaltensnachweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "release-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Quellenreferenz ist kein allgemeines Pixel-, Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/breadcrumb/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Vollständigen kurzen Projektpfad illustriert, um Auslassung nicht als automatisches Menü erscheinen zu lassen.",
+    "Alternativen für Besuchsverlauf und Hauptbereiche als redaktionelle Auswahlhilfe benannt.",
+    "Quellstand der nicht fokussierbaren aktuellen Seite mit Linkrolle ausdrücklich bewahrt."
+  ],
+  "limits": [
+    "Keine lokale Breadcrumb-Demo im Verzeichnis src/demos/shadcn gefunden.",
+    "Die Illustration ist redaktionell und statisch; die Prüfung in der integrierten Anwendung bleibt offen."
+  ]
+}

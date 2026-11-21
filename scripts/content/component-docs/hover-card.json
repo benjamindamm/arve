@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "hover-card",
+  "title": "Hover Card",
+  "summary": "Mit Hover Card gibst du einen kurzen Einblick in das Ziel eines Links. Der vollständige Inhalt bleibt über den Link erreichbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Einen Link vorab einordnen",
+      "paragraphs": [
+        "Nutze Hover Card, wenn du zu einem echten Link einen kurzen zusätzlichen Einblick anbieten möchtest: etwa die Zuständigkeit einer Person hinter ihrem Namen oder eine Zusammenfassung eines verlinkten Projekts. Die Vorschau hilft bei der Orientierung, während der Link sein gewohntes Ziel behält.",
+        "Für einen knappen Hinweis zur Bedeutung eines Bedienelements eignet sich eher Tooltip. Soll jemand bewusst einen Bereich öffnen und darin Einstellungen ändern, wähle eher Popover. Informationen, die du für eine Entscheidung zwingend brauchst, gehören sichtbar auf die Seite oder ins verlinkte Ziel."
+      ],
+      "links": [
+        {
+          "text": "Tooltip",
+          "href": "/systems/shadcn/components/tooltip",
+          "paragraph": 1
+        },
+        {
+          "text": "Popover",
+          "href": "/systems/shadcn/components/popover",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Profil vor dem Öffnen ansehen",
+      "paragraphs": [
+        "In einer Projektübersicht steht «Verantwortlich: Nora Keller». Der Name führt zum vollständigen Profil. Die geöffnete Vorschau zeigt zusätzlich «Projektleitung» und einen Satz zum Aufgabenbereich. So kannst du die Person einordnen, ohne die Übersicht sofort zu verlassen.",
+        "Halte das vollständige Profil auch über den normalen Link erreichbar. Damit bleibt derselbe Inhalt auf einem Touchgerät zugänglich, ohne dass du eine Hover-Geste voraussetzt. Die Illustration zeigt nur den geöffneten Entwurf."
+      ],
+      "illustration": {
+        "src": "/component-examples/hover-card.svg",
+        "alt": "Projektübersicht mit dem Link Nora Keller und einer geöffneten Vorschau zu ihrer Rolle als Projektleiterin.",
+        "caption": "Statische Illustration · Ergänzende Profilvorschau an einem regulären Link."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Link und zugehörige Vorschau",
+      "paragraphs": [
+        "Der sichtbare Auslöser ist ein Link mit aussagekräftigem Namen. Ihm ist eine schwebende Inhaltsfläche zugeordnet. Der gemeinsame Controller verwaltet den Öffnungszustand, erzeugt aber keinen eigenen sichtbaren Rahmen.",
+        "Die Vorschau erscheint standardmässig unterhalb des Links und zentriert dazu. Die Positionierung berücksichtigt den verfügbaren Platz. Der Export begrenzt die Inhaltsbreite auf 272 px sowie auf die Fensterbreite mit Randabstand; lange Wörter können umbrechen. Plane deshalb kurze Textzeilen statt einer kleinen Detailseite."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Platzierung statt Stilvarianten",
+      "paragraphs": [
+        "Es gibt keine eigenen Farb- oder Grössenvarianten. Du kannst die Vorschau oben, rechts, unten oder links platzieren und ihre Ausrichtung sowie Abstände anpassen. Unterhalb ist die Voreinstellung; eine andere Seite kann helfen, wenn wichtige benachbarte Inhalte sonst verdeckt würden.",
+        "Die Voreinstellung verwendet 4 px Seitenabstand und 4 px Ausrichtungsversatz. Lege die gewünschte Platzierung fest und prüfe das Ergebnis auch nahe am Fensterrand, wo die tatsächliche Position abweichen kann."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Mit Ruhe öffnen und schliessen",
+      "paragraphs": [
+        "Die Karte beginnt geschlossen. Zeigerkontakt oder Fokus auf dem Link startet eine Wartezeit; standardmässig öffnet sie nach 600 ms. Verlässt du den Auslöser vor dem Öffnen mit dem Zeiger oder Fokus, wird die wartende Vorschau abgebrochen. Auch Escape bricht sie ab.",
+        "Für das Schliessen ist eine Verzögerung von standardmässig 300 ms vorgesehen. Escape und ein Druck ausserhalb können die offene Karte schliessen; ebenso das Verlassen des Hover-Bereichs oder des Fokus. Prüfe besonders den Weg vom Link zur Inhaltsfläche. Wenn deine Anwendung den Öffnungszustand selbst steuert, muss sie die Änderungsanfrage übernehmen, damit die Karte tatsächlich reagiert."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Inhalt knapp und entbehrlich halten",
+      "paragraphs": [
+        "«Nora Keller» ist als Linktext in der Zeile «Verantwortlich» verständlich. «Mehr» oder ein unbeschriftetes Profilbild lassen das Ziel offen. Gib einem alleinstehenden Bildlink einen vollständigen zugänglichen Namen.",
+        "Halte die Vorschau knapp: Name, Rolle und ein bis zwei kurze Sätze genügen meist. «Nora Keller · Projektleitung · Koordiniert die Einführung des Kundenportals» ist konkret. Verstecke dort keine Pflichtangaben, Fehlermeldungen oder Anweisungen, die du zum Abschliessen einer Aufgabe brauchst."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Der Link bleibt ein Link",
+      "paragraphs": [
+        "Mit Tab erreichst du den Link; sein Fokus kann die verzögerte Vorschau auslösen. Enter folgt weiterhin dem Linkziel. Es bestätigt keine Auswahl in der Karte. Escape fordert das Schliessen an. Beim Weitergehen mit Tab bleibt die normale Navigation erhalten; die Vorschau hat keinen modalen Fokusfang.",
+        "Sorge für einen sichtbaren Fokus am Link und prüfe den zugänglichen Namen im Kontext. Die Karte darf den Weg zum vollständigen Inhalt weder ersetzen noch blockieren."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine Ergänzung zur Navigation",
+      "paragraphs": [
+        "Diese Variante baut auf Base UI PreviewCard auf. Der Trigger ist ein echtes Ankerelement; die Inhaltsfläche ist ein gewöhnlicher div-Bereich und erhält keine erfundene Dialog- oder Tooltip-Rolle. Überschriften und weitere Inhalte stellst du selbst zusammen; eigene Title- oder Description-Bausteine sind hier nicht exportiert.",
+        "In einer Navigation oder einem Dialog ordnest du jede Vorschau eindeutig ihrem eigenen Link zu. Sie ist kein Formularfeld und übernimmt keine Validierung. Für Touch planst du das reguläre Linkziel als vollständigen Zugang ein; ein zusätzliches Öffnen per Tippen ist durch diese Referenz nicht zugesichert."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung trägt",
+      "paragraphs": [
+        "Grundlage sind die veröffentlichte Schnittstelle, die Gestaltungsregeln, das Zustandsmodell und die HTML-/ARIA-Regeln dieser Hover Card. Die enthaltenen Beispiele zeigen unter anderem offene und geschlossene Karten sowie die vier Platzierungen.",
+        "Diese statischen Beispiele belegen keine vollständige Bedienung. Die Referenz beschreibt eine konkrete React-Variante; Fokus, Platzierung und Erreichbarkeit des vollständigen Inhalts prüfst du in deiner Anwendung."
+      ]
+    }
+  ]
+}

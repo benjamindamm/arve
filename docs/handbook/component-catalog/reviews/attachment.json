@@ -1,0 +1,234 @@
+{
+  "component": "attachment",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/component.json",
+      "sha256": "73e0a0cc62a6a823a4a2fbc433beefbad75022957667cfc788d08e03b84705cf"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/ux.json",
+      "sha256": "e262c2a5f1518bbc482eadac0234640ae9efffcf69e6d6e526c60429a227ddd7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/interface.json",
+      "sha256": "b7eabcbc08520a9d25b20dd1f107e978d60b136f709e2acaaab9b43d5d202541"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/stories.json",
+      "sha256": "c5fc846dde4d3f89ea20d4ab763b9bdbc6f62e5909f81df9e2c46ec532177d98"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/behavior.scxml",
+      "sha256": "f7131c88badf9e31f80c6be20c7f8db2f683d76b20dc95515a7e689237c3d022"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/layout.css",
+      "sha256": "a921a7f206c214c5a70a7c2d20f609c52cc96407d61991dd90698ea72ddae092"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.html",
+      "sha256": "3c38452d48f66a6f569c6794dd69189ada4fbc4ccd1006b46030a1acd8f00e8f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+      "sha256": "addd5375f2cebc6cd764214a075ab854e826273c9b0298b1f9775cd46241031b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/README.md",
+      "sha256": "048c016135befdf81c40162d7892feb16ca6be212ef473d3e9d2a617dc1a3832"
+    }
+  ],
+  "claims": [
+    {
+      "id": "file-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Attachment zeigt eine angehängte Datei und deren Metadaten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Separates Dateieingabefeld für Auswahl, Link für einfachen Download und Tabelle für umfangreiche Dateiverwaltung empfohlen."
+    },
+    {
+      "id": "example-error",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Fehlertext, Status und Wiederholen sind ausdrücklich von der Anwendung zusammengesetzte Inhalte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-independent",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Zusätzliche Aktionen sind unabhängig und liegen über dem ganzflächigen Auslöser.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/component.json",
+          "pointer": "/partBindings/actions"
+        }
+      ]
+    },
+    {
+      "id": "variants-real",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Grössen default/sm/xs, horizontal/vertical und Medien icon/image sind belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "state-owned",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Zustand ist eine Darstellungsangabe der Anwendung, standardmässig done, ohne automatische Übertragung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "state-machine",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Zustandsaktor übernimmt nur explizit gesetzte gültige Zustandsangaben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/behavior.scxml",
+          "snippet": "<transition event=\"SET_STATE\" cond=\"['idle','uploading','processing','error','done'].includes(_event.data.state)\">"
+        }
+      ]
+    },
+    {
+      "id": "labels-content",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Dateiname und Zustand sind Text; Aktionen nennen die Datei und inhaltliche Vorschaubilder brauchen Alternativtext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "labels-truncation",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Visuelle Kürzung entfernt den vollständigen zugänglichen Dateinamen nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+          "pointer": "/semanticParts/title/description"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Öffnen nutzt einen nativen Button oder expliziten Link; Gruppe hat keine Auswahlsemantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-guidance",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Für die nativen Buttons und Links werden übliche Tab-, Eingabe- und Leertastenbedienung beschrieben; kein eigenes Attachment-Tastenprotokoll wird eingeführt."
+    },
+    {
+      "id": "keyboard-ring",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der sichtbare Tastaturfokus des Hauptauslösers markiert die Fläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/layout.css",
+          "snippet": "[data-slot=\"attachment\"]:has(>[data-slot=\"attachment-trigger\"]:focus-visible)"
+        }
+      ]
+    },
+    {
+      "id": "semantics-button",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der Auslöser ist standardmässig Button mit type=button; es gibt keine allgemeine Attachment-disabled-API.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/README.md",
+          "snippet": "disabled belongs to each native action, never a fabricated Attachment disabled API."
+        }
+      ]
+    },
+    {
+      "id": "semantics-native-type",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der Standardauslöser ist ein nativer Button mit type=button.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "source-fixtures",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische HTML-Fixtures beschreiben Anatomie und Zustände; Verhalten wird im Export davon getrennt betrachtet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "source-release",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der begrenzte Referenzumfang ist keine allgemeine Plattform- oder Barrierefreiheitsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/attachment/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Spesenbelege als vertrauter Dokumentenkontext; gespeicherte und fehlgeschlagene Datei unterscheiden sich durch Text und dateibezogene Aktionen.",
+    "Keine Fortschrittsanzeige oder Upload-Automatik erfunden.",
+    "Native Tastaturkonventionen als redaktionelle Bedienhinweise eingeordnet; Contract bindet das native Element."
+  ],
+  "limits": [
+    "Keine lokale Attachment-Demo in src/demos/shadcn vorhanden.",
+    "Die statische Illustration belegt weder funktionierende Dateiübertragung noch Browser- oder Plattformkonformität."
+  ]
+}

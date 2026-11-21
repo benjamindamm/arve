@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-line",
+  "title": "Chart Line",
+  "summary": "Zeigt beobachtete Werte als zeitlichen Verlauf. Eine vollständige Tabelle hält die genauen Zahlen unabhängig von Kurve und Zeigerhinweis verfügbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Verläufe über geordnete Zeitpunkte zeigen",
+      "paragraphs": [
+        "Ein Liniendiagramm hilft, Veränderungen zwischen zeitlich geordneten Beobachtungen zu erkennen: etwa Besucherzahlen von Januar bis Juni. Setze es ein, wenn Richtung, Schwankungen und zeitliche Zusammenhänge im Vordergrund stehen.",
+        "Für einen Vergleich unabhängiger Kategorien wie Beratungsstandorte empfiehlt sich Chart Bar. Wenn vor allem einzelne exakte Werte gesucht werden, reicht eine Tabelle. Verbinde keine Kategorien ohne sachliche Reihenfolge; die Linie würde einen Zusammenhang nahelegen."
+      ],
+      "links": [
+        {
+          "text": "Chart Bar",
+          "href": "/systems/shadcn/components/chart-bar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Besucherzahlen mit erkennbarem Rückgang",
+      "paragraphs": [
+        "Der Entwurf zeigt Desktop-Besucher von Januar bis Juni: 186, 305, 237, 73, 209 und 214. Im Februar liegt der höchste, im April der tiefste Monatswert. Im Juni liegt der Wert um fünf über dem Mai; daraus folgt kein durchgehend steigender Verlauf.",
+        "Alle Werte stehen zusätzlich in der Tabelle. Die gleichmässige Skala von 0 bis 400 macht Grössenunterschiede nachvollziehbar. Gerade Verbindungen dienen hier der Orientierung zwischen Monatswerten. Sie belegen weder Zwischenwerte noch einen kontinuierlich gemessenen Verlauf."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-line.svg",
+        "alt": "Desktop-Besucher von Januar bis Juni als Liniendiagramm mit Skala 0 bis 400 und vollständiger Tabelle: 186, 305, 237, 73, 209 und 214.",
+        "caption": "Statische Illustration · Exakte Beispieldaten mit geraden Verbindungen; keine Nachbildung der Laufzeitinterpolation."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Aussage, Kurve und Tabelle zusammenhalten",
+      "paragraphs": [
+        "Oberhalb der Zeichenfläche benennen Titel und Zusammenfassung Kennzahl, Zeitraum und Einheit. Die horizontale Achse ordnet die Monate, die vertikale Skala erklärt die Anzahl. Eine beschriftete Legende stellt den Bezug zur Datenreihe her.",
+        "Die vollständige Tabelle gehört unmittelbar zum Diagramm. Zeilenüberschriften ordnen die Monate, Spaltenüberschriften die Reihe zu. Bei wenig Platz darf der Tabellenbereich scrollen; Werte und Überschriften müssen dabei zusammen verständlich bleiben. Ein eingeblendeter Werthinweis ergänzt diese Angaben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Darstellung gezielt konfigurieren",
+      "paragraphs": [
+        "Diese Referenz ist eine konkrete Linienkomposition mit einer Desktop-Reihe, keine Sammlung eigener Grössen- oder Stilvarianten. Die Reihenbeschriftung und Farbe werden konfiguriert; für helle und dunkle Darstellung sind passende Farbzuordnungen möglich.",
+        "Der Werthinweis unterstützt Punkt, Linie oder gestrichelten Indikator sowie ausgeblendete Beschriftung beziehungsweise Markierung. Wähle diese Darstellung passend zur Lesbarkeit des Hinweises. Diese Optionen ändern weder Daten noch Diagrammtyp und ersetzen keine vollständige Tabelle."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Datenwechsel ohne widersprüchliche Hinweise",
+      "paragraphs": [
+        "Bei vorhandenen Daten bleiben Zusammenfassung und Tabelle zugänglich. Ein Zeigerhinweis kann den aktuellen Datenpunkt erläutern. Escape schliesst ihn an der aktuellen Position; erst eine andere Quellkoordinate kann ihn wieder erscheinen lassen.",
+        "Ändern sich die Daten, muss die Anwendung Grafik, Tabelle und Zusammenfassung gemeinsam aktualisieren und den alten Hinweis entfernen. Eine leere Antwort braucht eine ausdrückliche Meldung wie «Keine Besucherzahlen für diesen Zeitraum». Ein Abruffehler braucht eine eigene Fehlermeldung. Beides darf nicht als Nulllinie erscheinen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Kennzahl und Beobachtung präzise benennen",
+      "paragraphs": [
+        "«Desktop-Besucher · Januar bis Juni» ist aussagekräftiger als «Statistik». Ergänze die Einheit «Anzahl» und benenne die Datenreihe auch als Text. Kurze Monatsnamen passen an die Achse; in der Tabelle dürfen sie ausgeschrieben sein.",
+        "Formuliere die Zusammenfassung aus den gezeigten Zahlen. «Tiefster Wert im April: 73» ist überprüfbar; «Starkes Wachstum» verschweigt hier den Rückgang. Fehlende Monatswerte müssen als fehlend erkennbar bleiben und dürfen nicht stillschweigend durch null ersetzt werden."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Werte ohne Zeiger erreichen",
+      "paragraphs": [
+        "Die gewählte Referenz bietet alle Werte über eine native Tabelle und eine sichtbare Zusammenfassung an. Die zusätzliche Grafik ist für assistive Technik verborgen und erhält keinen eigenen Fokus. Es gibt deshalb in dieser Komposition keine erforderliche Pfeiltastensteuerung des Diagramms.",
+        "Der ergänzende Zeigerhinweis ist kein separat fokussierbares Tooltip-Bedienelement; Escape blendet ihn aus, ohne Daten zu entfernen. Die Figure erhält ihren zugänglichen Namen aus dem sichtbaren Titel und ihre Beschreibung aus der Zusammenfassung. Zusätzliche Filter oder Schaltflächen brauchen eigene Namen und Tastaturbedienung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine Datenansicht als gemeinsame Einheit",
+      "paragraphs": [
+        "Chart Line bezeichnet hier eine ausdrücklich zusammengesetzte Recharts-Datenansicht auf Basis der gewählten Base-UI-Chart-Wrapper. Sie ist kein zusätzlicher gleichnamiger Upstream-Export. Der Container liefert den Rahmen; die Anwendung liefert Diagramm, Datensatz, Beschriftungen und eine tatsächlich nutzbare Fläche.",
+        "Die Figure verbindet Titel, Zusammenfassung, Grafik und Tabelle. Farbe und vorübergehende Hinweise dürfen nie der einzige Zugang zu Werten sein. Eine später interaktiv gemachte Legende oder ein Zeitraumfilter ist eine zusätzliche Bedienfunktion mit eigenem Contract; die vorhandene Legende verspricht keine solche Auswahl."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Aussagegrenzen",
+      "paragraphs": [
+        "Abgeglichen wurden Zweckbeschreibung, Schnittstelle, Gestaltungsbindung, Zustandsmodell, HTML-/ARIA-Regeln und Zustandsbeispiele des veröffentlichten Exports. Das gebundene Originalbeispiel liefert die Monatswerte und eine natürlich interpolierte Laufzeitlinie; die Illustration verwendet bewusst gerade Verbindungen.",
+        "Der Contract beschreibt eine begrenzte Referenzkomposition. Er ist kein allgemeiner Nachweis für jede Diagrammkonfiguration oder assistive Technik. Eine eingebundene Chart-Line-Live-Demo liegt hier nicht vor."
+      ]
+    }
+  ]
+}

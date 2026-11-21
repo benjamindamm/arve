@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "textarea",
+  "title": "Textarea",
+  "summary": "Mit Textarea erfasst du frei formulierten Text über mehrere Zeilen. Beschriftung, Hilfe und eine eigene Abschlussaktion machen die Aufgabe verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Wenn eine Antwort mehrere Zeilen braucht",
+      "paragraphs": [
+        "Verwende Textarea für frei formulierte Notizen, Rückmeldungen oder Beschreibungen mit Absätzen. Du gibst damit Raum für zusammenhängenden Klartext. Für einen Namen, eine kurze Kennung oder eine andere einzeilige Angabe passt Input besser.",
+        "Wenn du eine Antwort aus bekannten Möglichkeiten brauchst, wähle ein Auswahlfeld statt eines offenen Textfelds. Textarea bietet keine Formatierungswerkzeuge für Überschriften, Listen oder andere Rich-Text-Inhalte. Entscheide zuerst, ob freie Formulierungen für die Aufgabe sinnvoll sind."
+      ],
+      "links": [
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 0
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Rückmeldung verständlich erfassen",
+      "paragraphs": [
+        "Im Entwurf steht über dem Feld «Was sollen wir verbessern?». Die Hilfe «Beschreibe die Situation und deinen Vorschlag.» erklärt, welche Angaben weiterhelfen. Der eingetragene Text enthält zwei Absätze: eine Beobachtung und einen Vorschlag.",
+        "Das Feld lässt genug Raum, um den Gedanken beim Schreiben zu überblicken. Die separate Aktion «Rückmeldung senden» macht den Abschluss sichtbar. Enter bleibt für neue Zeilen verfügbar. Beschriftung, Hilfetext und Aktion sind Entscheidungen dieses Entwurfs."
+      ],
+      "illustration": {
+        "src": "/component-examples/textarea.svg",
+        "alt": "Mehrzeiliges Feld mit der Beschriftung Was sollen wir verbessern, einer ausgefüllten Rückmeldung in zwei Absätzen, Hilfetext und der Aktion Rückmeldung senden.",
+        "caption": "Statische Illustration · Rückmeldung mit zwei Absätzen und eigener Sendeaktion."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Beschriftung, Schreibfläche und Hilfe",
+      "paragraphs": [
+        "Die Schreibfläche ist ein natives mehrzeiliges Textfeld. Setze eine sichtbare Beschriftung darüber und ergänze bei Bedarf einen kurzen Hilfetext darunter. Label und Hilfe gehören zur umgebenden Feldanordnung; Textarea liefert sie nicht automatisch.",
+        "Das Feld nutzt die verfügbare Breite. Die Gestaltung sieht eine Mindesthöhe von 64 Pixeln und eine Höhe nach Inhalt vor. Wo der Browser diese Inhaltsanpassung nicht unterstützt, bleibt die Mindesthöhe als Grundlage. Vertikales Vergrössern ist vorgesehen. Eine Höhe aus einem Muster ist keine feste Obergrenze."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eine Schreibfläche, mehrere Einsatzweisen",
+      "paragraphs": [
+        "Es gibt keine eigenen benannten Grössen- oder Farbvarianten. Du kannst das Feld mit den nativen Eigenschaften etwa als Pflichtfeld oder nur lesbar einsetzen. Eine Zeilenzahl ist ebenfalls übergebbar; beurteile die tatsächliche Höhe zusammen mit der Inhaltsanpassung.",
+        "Nur lesbar eignet sich, wenn der Text erreichbar und kopierbar bleiben soll. Deaktiviert verhindert die Bearbeitung und nimmt das Feld aus der Tab-Reihenfolge. Verwende diese beiden Zustände gezielt: Sie unterscheiden sich auch bei der Formularübermittlung."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Vom Schreiben zur Rückmeldung",
+      "paragraphs": [
+        "Ein leeres Feld kann einen ergänzenden Platzhalter zeigen. Beim Schreiben bleibt der Text als mehrzeiliger Wert erhalten; bei Tastaturfokus macht ein sichtbarer Ring die Position erkennbar. Die Komponente speichert den Inhalt nicht selbst.",
+        "Die Anwendung entscheidet, wann eine Eingabe ungültig ist. Verbinde den Fehlerzustand mit einer lesbaren, konkreten Fehlermeldung am Feld. Eine rote Umrandung allein erklärt nicht, was zu korrigieren ist. Behalte den eingegebenen Text bei einer Korrektur möglichst bei. Fachliche Prüfungen und ihre Rückmeldungen musst du im jeweiligen Formular festlegen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Frage nach dem konkreten Inhalt",
+      "paragraphs": [
+        "«Was sollen wir verbessern?» sagt mehr als «Text» oder «Hier eingeben». Formuliere kurz genug, dass die Beschriftung gut überblickbar bleibt. Hinweise zum gewünschten Inhalt gehören in die Hilfe; ein Platzhalter ersetzt weder Label noch dauerhaft nötige Anweisungen.",
+        "Plane die sichtbare Höhe passend zur erwarteten Antwort. Erfinde aus der Feldhöhe oder einem Beispieltext keine maximale Zeichenanzahl. Falls deine Aufgabe eine echte Längenbegrenzung verlangt, erkläre sie vor der Eingabe und stimme sie mit der Prüfung ab."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Enter schreibt weiter",
+      "paragraphs": [
+        "Mit Tab erreichst du das bearbeitbare Feld und wechselst wieder zum nächsten Element. Enter fügt einen Zeilenumbruch ein. Die native Textbearbeitung einschliesslich Auswahl und Texteingabemethoden bleibt erhalten. Escape setzt den Text nicht zurück.",
+        "Verknüpfe die sichtbare Beschriftung mit dem Feld, damit es einen zugänglichen Namen erhält. Verbinde Hilfe und Fehlermeldung über ihre IDs mit dem Textfeld. Ein nur lesbares Feld bleibt fokussierbar und kopierbar; ein deaktiviertes Feld wird beim Wechsel mit Tab übersprungen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Formular und Textwert zusammen planen",
+      "paragraphs": [
+        "Textarea ist ein echtes HTML-Textfeld für mehrzeiligen Klartext. Du ergänzt im Formular den Feldnamen, die Beschriftung und gegebenenfalls die Pflichtangabe. Ein deaktiviertes Feld wird nicht mit dem nativen Formular übermittelt; der Wert eines nur lesbaren Felds bleibt dabei enthalten.",
+        "Plane eine ausdrückliche Aktion zum Absenden. Die Komponente bringt weder automatisches Speichern noch eine Sendeaktion auf Enter mit. Verwechsle einen sichtbaren Zeilenwechsel durch die verfügbare Breite nicht mit einem bewusst eingefügten Absatz. Prüfe Höhe und Umbruch mit längeren Antworten in deiner Einbindung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz trägt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene React-Quelle, die Schnittstellenbeschreibung, CSS, das Verhaltensmodell sowie HTML/ARIA-Regeln und Zustandsbeispiele des Exports. Die Illustration ist ein redaktioneller Entwurf.",
+        "Der Quellenstatus beschreibt einen begrenzten Referenzumfang. Er ersetzt keine Prüfung deines Formulars, seiner Fehlermeldungen oder des Verhaltens im Zielbrowser. Die Beispieltexte der Originalquelle legen keine fachlichen Eingaberegeln fest."
+      ]
+    }
+  ]
+}

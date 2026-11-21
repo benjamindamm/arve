@@ -1,0 +1,202 @@
+{
+  "component": "alert",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/component.json",
+      "sha256": "8ac3c45f549d4db1d729d2b9665f8ce1343465f32e55b6574927d8755737c0d6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/ux.json",
+      "sha256": "dead2b20824e2aa58d0f0c45ed519a9e24a7ec335ef2c7458e65b38085f5d8d3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/interface.json",
+      "sha256": "694386ab3d92c627adaf85c3b93a1aae2ebd940a09306df422d9781e7fe129a2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/stories.json",
+      "sha256": "ea92d6ee93e99571893591a9ddccbea10b9ad68e10b8a13dc33e4209110158b2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/behavior.scxml",
+      "sha256": "13b523fc9c6b82e2466aadfb150bcf1f092cd0c296b7b633649d7cc749e2ca7a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/layout.css",
+      "sha256": "4de3771d7490590f28bf456036d5ae8327f7bd10af0ce94ce735de66b727bc5c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/accessibility.html",
+      "sha256": "7bdedf7e0bb44a4bc6d9cbcaca9bd5233f035c9e201dd7b90b4f8119f58dfe72"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/accessibility.rules.json",
+      "sha256": "c93afcd04e3753e999eef912b403a89537d74a362e92a6c0231a15f81aa76a4b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/README.md",
+      "sha256": "1754b97a8b8814188419d2fdb6ad4e32b14249b3d879b978bfb8c2b85e746e48"
+    }
+  ],
+  "claims": [
+    {
+      "id": "urgent-context",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Dynamisches Einfügen ist für dringende Rückmeldungen vorgesehen; identische Ankündigungen und erzwungener Fokus sind zu vermeiden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "save-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die deutsche Speicherfehlermeldung und ihr Aktionswortlaut sind redaktionelle Beispiele, keine zusätzliche Alert-Fähigkeit.",
+      "evidence": []
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Titel, Beschreibung und optionale Aktion/Symbol bilden die Anatomie; der Titel hat keine automatische Überschriftensemantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "responsive-action",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Referenz verschiebt den Aktionsbereich bis 28rem Ansichtsbreite unter die Textzeilen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/layout.css",
+          "snippet": "@media (max-width:28rem) {\n  [data-slot=\"alert-action\"],\n  .ui-alert-with-icon [data-slot=\"alert-action\"] {\n    grid-column: 1/-1;\n    grid-row: auto;"
+        }
+      ]
+    },
+    {
+      "id": "two-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Das öffentliche variant-Feld kennt default und destructive; default ist voreingestellt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        }
+      ]
+    },
+    {
+      "id": "same-role",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die HTML-Fixtures für default und destructive setzen jeweils role=alert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das SCXML beschreibt Anzeige, Inhaltsänderung, Entfernen und erneutes Einfügen; keine Retry-, Lade- oder Dismiss-Transition.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state><state id=\"removed\"><transition event=\"MOUNT\" target=\"rendered\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "text-alternative",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Problem und Korrekturhinweis stehen vollständig im Text; Farbe und Symbol ergänzen ihn.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "no-wrapper-keys",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Inhaltscontainer installiert weder eigene Tastatur-Listener noch roving focus. Interaktive Kinder behalten ihre eigene Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "native-button",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Referenz setzt einen nativen Button mit type=button und sichtbarer Aktionsbeschriftung ein; das SVG ist aria-hidden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/accessibility.html",
+          "snippet": "<svg aria-hidden=\"true\""
+        }
+      ]
+    },
+    {
+      "id": "native-key-advice",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Für den vorgeschlagenen nativen Button werden Enter/Leertaste und sein sichtbarer Text als Name erläutert.",
+      "evidence": []
+    },
+    {
+      "id": "semantics-container",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "AlertTitle und AlertAction sind Text-/Aktionscontainer; die native Aktion ist optionaler Inhalt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "source-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die README begrenzt complete auf den Referenzumfang und gibt keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert/README.md",
+          "snippet": "Status der neuen Domänenmigration: **complete** im begrenzten Referenzumfang."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Speicherfehler statt allgemeiner Informationsmeldung gewählt, da die exportierte Wurzel role=alert liefert.",
+    "Alternativen als redaktionelle Einsatzentscheidungen formuliert; keine fremden Komponentenfähigkeiten beschrieben.",
+    "destructive im Beispiel neutral illustriert: Farbe ergänzt die explizite Fehlermeldung, die Grafik behauptet keine Pixelkonformität.",
+    "Kein eigener Schliessen-Button erfunden; die Anwendung verantwortet Behebung und Entfernen."
+  ],
+  "limits": [
+    "Keine lokale Alert-Live-Demo im Demoordner vorhanden.",
+    "Statische Illustration belegt weder Laufzeitverhalten noch Ankündigungen assistiver Technik.",
+    "Die optionale Speicheraktion ist Anwendungskomposition und wird durch Alert nicht implementiert."
+  ]
+}

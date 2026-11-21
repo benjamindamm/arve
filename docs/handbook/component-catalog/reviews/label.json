@@ -1,0 +1,198 @@
+{
+  "component": "label",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/README.md",
+      "sha256": "08726821db079b6cd9846d1446089fd24720210a3cb309f3de3958b4bc773ea1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/accessibility.rules.json",
+      "sha256": "1928dd3d2cc9454a63293281b8223f6f0f7ae43da177cdf45f32ff5f28314d51"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/behavior.scxml",
+      "sha256": "ad69057857756b6f60d9e80b6655f79ac796dfcb6900e08e9675be80480239ed"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/component.json",
+      "sha256": "97c6699f51066f2bd7e3cc1de6bf75367512f15715feee5f1f3c15b2c8fb0ef6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/interface.json",
+      "sha256": "d43b63c0ac544ba2ca657adeffdb97b40d6807d94f896d9f32b7f718cae78414"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/stories.json",
+      "sha256": "bd4fce950e7ec5519f0aabdbcba8b3d9efcb0fe5205950168454a13ac9b3c470"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/ux.json",
+      "sha256": "826524e64c54d2a4e6824f3ff922386b7ae0ff93c7ddfa326b58ee8377292da7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/label.mdx.source",
+      "sha256": "7e84849ed5c8f4101e12b79de7567c07c77871f7c59f173b4ea471b3b35d04f0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/layout.css",
+      "sha256": "d6848c476d1a5c4cfe2bba11af327995d97dacb4236ce3f8411c31e7ac8ad033"
+    }
+  ],
+  "claims": [
+    {
+      "id": "label-usage",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Sichtbare Nähe stellt keine Zuordnung her; Platzhalter ersetzen die nicht leere Beschriftung nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "label-field-choice",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Originaldokumentation empfiehlt Field mit Label, Beschreibung und Fehlerbehandlung für Formularfelder.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/label.mdx.source",
+          "snippet": "For form fields, use the [Field](/docs/components/base/field) component which\nincludes built-in `FieldLabel`, `FieldDescription`, and `FieldError` components."
+        }
+      ]
+    },
+    {
+      "id": "label-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Kontaktangaben illustrieren die Trennung von Feldname, Pflichtangabe und Hilfetext; keine Funktionsbehauptung."
+    },
+    {
+      "id": "label-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Label ist das native Label; Feldanordnung und deaktivierter Kontext gehören zur Zusammenstellung durch die Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "label-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Ein deaktivierter Kontext ist ein Caller-Attribut und keine öffentliche disabled-Prop von Label.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/component.json",
+          "pointer": "/visualContract/variants/disabledContext"
+        }
+      ]
+    },
+    {
+      "id": "label-api",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die öffentliche Schnittstelle übernimmt native Label-Props und htmlFor; benannte Grössen-/Farbvarianten sind nicht deklariert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/interface.json",
+          "pointer": "/modules/0/declarations/0/members"
+        }
+      ]
+    },
+    {
+      "id": "label-direction",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Ein RTL-Fixture ist vorhanden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/stories.json",
+          "pointer": "/stories/2"
+        }
+      ]
+    },
+    {
+      "id": "label-states",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Verhaltensmodell beschreibt Darstellung, Prop-Änderung und Entfernen; keinen Auswahl-/Ladeablauf.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "label-wording",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze Feldnamen, explizite optionale Angaben und eine sichtbare Erklärung von Pflichtmarkierungen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "label-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Label installiert keine eigene Tastatursteuerung; native Fokusweitergabe erfolgt über das zugeordnete Control.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "label-semantic",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz verwendet eine explizite for/id-Beziehung zu einem echten nativen Control; eigene Controls benötigen ihre passende Integration.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "label-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der dokumentierte Referenzumfang ist keine allgemeine Freigabe für Frameworks, Pixel oder assistive Technik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    },
+    {
+      "id": "label-field-spacing",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der optionale Feldbereich verwendet den gemeinsamen Control-Label-Abstand und keine feste Breite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/label/layout.css",
+          "snippet": "[data-part=\"label-field\"] {\n  display: grid;\n  gap: var(--ui-control-label-gap);\n  min-inline-size: 0;\n}"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Der allgemeine Zwecktext nennt auch Gruppen; die Seite begrenzt das tatsächliche native for/id-Muster auf ein einzelnes Control und verweist bei Gruppen auf passende Semantik.",
+    "Pflicht-/Optionaltexte sind redaktionelle Empfehlungen und keine erfundene Label-API.",
+    "Die passive Komponente erhält keine künstlichen Lade-, Auswahl- oder Tastaturzustände."
+  ],
+  "limits": [
+    "Die Illustration führt keine Feldzuordnung, Validierung oder Interaktion aus.",
+    "Keine Prüfung der konkreten Anwendung mit assistiver Technik."
+  ]
+}

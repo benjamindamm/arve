@@ -1,0 +1,232 @@
+{
+  "component": "button-group",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/component.json",
+      "sha256": "dda8c3955ccd6894b438fe5ce7d73c65aad7d05a70ff82721f2ba1896cf07df2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/ux.json",
+      "sha256": "24e4e806ae41ac039c9c4e59bc4c451d6c9074293a800918c69200767a1f6f07"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/interface.json",
+      "sha256": "50d900b9db89691e3b0c13af075862a474f87fc9da0f375fa1af72a4be479921"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/stories.json",
+      "sha256": "af15e289d46bf9bc4ccdd638f7bbb0ceac50932adc02cca710abe9aa1e5f7cab"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/behavior.scxml",
+      "sha256": "ef0bab0d4bf531654a89aa84045146206e7d4cddae32ba036675899a7ffd753e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/layout.css",
+      "sha256": "4f4e6f2358249fa33d50af96779d49225f8832a67574e6b848d442d439c89217"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.html",
+      "sha256": "75a3c391e38d89a4500ba0d29a7d092910d4254d930417a281535f3a588b2e45"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.rules.json",
+      "sha256": "7e5b39f87bd5b30b7d03ea12d015ff6a9f7b94f72f22ec2bb2b48b15ecbf516f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/README.md",
+      "sha256": "bc3ae22927c9c95ce2fbd9f74c6354fa3c7c794c1e77796f709fb9533b676f26"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/button-group.tsx.source",
+      "sha256": "23c66d61df078fb1604fa7ba3ad8d16550adbb2243af36584bb94d62f014914f"
+    }
+  ],
+  "claims": [
+    {
+      "id": "related-independent",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Gruppe verbindet verwandte, unabhängig bedienbare Controls.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für einzelne Aktionen getrennte Buttons, für eine dauerhafte Einzelauswahl Radio Group und für schaltbare Optionen Toggle Group empfehlen."
+    },
+    {
+      "id": "report-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Der Berichtsentwurf übersetzt die Quellenkomposition in einen deutschen Arbeitskontext; Erfolgsmeldungen sind eine Empfehlung an die Anwendung."
+    },
+    {
+      "id": "connected-edges",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Horizontale und vertikale Gruppen verbinden die inneren Kanten und erhalten äussere Rundungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/layout.css",
+          "snippet": ".cn-button-group-orientation-horizontal>:not(:last-child) {\n  border-start-end-radius: 0;\n  border-end-end-radius: 0;\n}"
+        }
+      ]
+    },
+    {
+      "id": "text-and-separator",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Textzusatz ist standardmässig div; Separator hat eine eigene Ausrichtung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "group-orientation",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Horizontal ist Standard, vertikal stapelt; Separator ist unabhängig und standardmässig vertikal.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "no-size",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Keine eigene Gruppengrösse; Buttons behalten ihre Grössen und Zustände.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "vertical-separator",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Das vertikale Szenario verwendet einen horizontalen Separator.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/stories.json",
+          "pointer": "/stories/2/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "individual-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Gruppe besitzt keinen gemeinsamen Disabled- oder Auswahlzustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "state-scope",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Fokus und Kindaktionen erzeugen keinen eigenen Lade- oder Ergebnisablauf der Gruppe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/behavior.scxml",
+          "snippet": "<transition event=\"CHILD_ACTION PROPS_CHANGED ARROW_LEFT ARROW_RIGHT\" />"
+        }
+      ]
+    },
+    {
+      "id": "meaningful-labels",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Text und Ziele tragen Bedeutung; Icons, Rahmen und Position ergänzen sie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Controls behalten ihre nativen Tastaturregeln; Tab folgt DOM-Reihenfolge, Gruppenorientierung fängt keine Pfeiltasten ab.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "button-activation",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Die üblichen nativen Button-Aktivierungstasten werden als Bedienhinweis erläutert, ohne einen eigenen Gruppenhandler zu behaupten."
+    },
+    {
+      "id": "group-not-toolbar",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die tatsächliche Gruppenrolle implementiert keinen Toolbar- oder Auswahlcontroller.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/interface.json",
+          "pointer": "/modules/0/declarations/0/cssParts/0/description"
+        }
+      ]
+    },
+    {
+      "id": "button-type",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Referenz setzt für die enthaltenen Aktionen type=\"button\".",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"button\""
+        }
+      ]
+    },
+    {
+      "id": "source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Quelle beschreibt begrenzten Referenzumfang und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/button-group/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Berichtsaktionen als konkrete deutsche Illustration gewählt; gleiche Gewichtung dient der Orientierung und ist keine zusätzliche Contractvariante.",
+    "Keine Radio-, Toggle- oder Toolbar-Interaktion aus der verbundenen Optik abgeleitet.",
+    "Erfolg, Fehler und Textlängen als redaktionelle Empfehlungen formuliert."
+  ],
+  "limits": [
+    "Kein veröffentlichter Implementierungsnachweis dieser Komponente im Handbuch; exportierte Quellen und statische Szenarien belegen keine konkrete Zielanwendung.",
+    "Die Zustandsquelle modelliert keinen gruppeneigenen Lade-, Erfolgs- oder Fehlerablauf."
+  ]
+}

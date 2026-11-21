@@ -13,6 +13,10 @@ import { readSystem } from '../../../../../../docs/systems'
 import { getComponentPage } from '../../../../../../docs/component-pages'
 import { Content } from '../../../../../../docs/content'
 import { ComponentDemo } from '../../../../../../docs/demo'
+import { ComponentHashLinks } from '../../../../../../docs/component-hash-links'
+import { ComponentNextSteps } from '../../../../../../docs/component-next-steps'
+import { ComponentHandbook } from '../../../../../../docs/component-handbook'
+import { blockAnchor } from '../../../../../../docs/content-outline'
 import { componentTemplateCoverage } from '../../../../../../docs/component-standard'
 
 
@@ -39,36 +43,29 @@ export default async function ComponentPage({ params }: {
   const editorialContent = page.content.filter(block => block !== scopeNote)
   const usesComponentStandard = componentTemplateCoverage(editorialContent as unknown as Page['content']).every(section=>section.blocks.length===1)
   const platformLabels = { web: 'Web', ios: 'iOS', android: 'Android' } as const
-  const ReworkedPage = system === 'shadcn' ? await loadPageRework(component) : undefined
+  const useSharedHandbook = usesComponentStandard && component !== 'button'
+  const ReworkedPage = system === 'shadcn' && !useSharedHandbook ? await loadPageRework(component) : undefined
 
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={page.path} />
       <article className="article component-documentation">
+        <ComponentHashLinks pagePath={page.path}/>
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={page.path} />
         <h1>{page.title}</h1>
         {page.summary && <p className="lead">{page.summary}</p>}
-        <div className="component-availability" aria-label="Verfügbarer Stand">
-          <span>Contract <strong>{contract?.status === 'complete' ? 'Quellenreferenz vollständig' : contract?.status === 'draft' ? 'Entwurf' : contract?.status ?? 'nicht verknüpft'}</strong></span>
-          <span>{page.implementations.length ? page.implementations.map(entry => `${platformLabels[entry.platform]} · ${entry.releaseStatus}`).join(' / ') : 'Keine Implementierung veröffentlicht'}</span>
-          {page.demo && <span>Angular-Beispiel · Spartan</span>}
-        </div>
+        <p className="component-reference-label">Gestaltungsreferenz{page.demo ? ' · mit lokalem Beispiel zum Ausprobieren' : usesComponentStandard ? ' · mit statischem Beispiel' : ''}</p>
         <nav aria-label="Auf dieser Komponentenseite" className="component-jumps">
-          {page.demo && <SiteAnchor href="#live-beispiel">Live-Beispiel</SiteAnchor>}
-          {!page.demo && page.designPreview && <SiteAnchor href="#design-vorschau">Designvorschau</SiteAnchor>}
-          <SiteAnchor href="#plattformstand">Plattformstand</SiteAnchor>
-          <SiteAnchor href="#contract">Contract</SiteAnchor>
+          {usesComponentStandard ? <SiteAnchor href={useSharedHandbook ? '#komponenten-beispiel' : '#live-beispiel'}>Beispiel</SiteAnchor> : page.demo ? <SiteAnchor href="#live-beispiel">Beispiel</SiteAnchor> : page.designPreview ? <SiteAnchor href="#design-vorschau">Designvorschau</SiteAnchor> : null}
+          {editorialContent.filter(block => block.blockName === 'variants' || block.blockName === 'states').map(block => <SiteAnchor key={block.blockName} href={'#' + blockAnchor(block as unknown as NonNullable<Page['content']>[number])}>{block.blockName === 'variants' ? 'Varianten' : 'Zustände'}</SiteAnchor>)}
+          <SiteAnchor href="#weiterarbeiten">Weiterarbeiten</SiteAnchor>
+          <SiteAnchor href="#nachweise">Nachweise</SiteAnchor>
         </nav>
-        {page.demo && !usesComponentStandard && <p className="component-demo-note">{page.implementations.length ? (page.implementations.every(entry => entry.releaseStatus === 'preview') ? 'Der veröffentlichte Stand ist eine Preview. Prüfumfang und Contractbezug stehen im Plattformstand.' : 'Das lokale Beispiel ist bedienbar. Veröffentlichte Implementierungen und ihre Prüfgrenzen stehen im Plattformstand.') : 'Das Live-Beispiel dient dem Ausprobieren; es ist kein veröffentlichter Implementierungsnachweis.'}</p>}
-        {scopeNote && <details className="component-reference-scope"><summary>Referenz und Prüfstand einordnen</summary><Content blocks={[scopeNote]} /></details>}
-        {page.designPreview && <details className="component-design-preview" open={!page.demo}>
-          <summary>Designvorschau der Quellenreferenz</summary><figure id="design-vorschau"><div className="component-preview-image" tabIndex={0} role="region" aria-label="Quellenvorschau, bei Bedarf scrollbar"><img src={page.designPreview.url} alt={`Statische Designvorschau: ${page.title}`}/></div><figcaption>Statische Vorschau aus dem gewählten Export. <SiteAnchor href={page.designPreview.url} target="_blank" rel="noreferrer">In Originalgrösse öffnen ↗</SiteAnchor></figcaption></figure>
-        </details>}
-        {ReworkedPage ? <>{!usesComponentStandard && <p className="component-study-scope">Spartan · Angular-Referenz und vorhandene Gestaltungsstudie</p>}<ReworkedPage content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} contract={contract ?? undefined} /></> : <>
+        {useSharedHandbook ? <ComponentHandbook component={component} contract={contract ?? undefined} content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} /> : ReworkedPage ? <>{!usesComponentStandard && <p className="component-study-scope">Spartan · Angular-Referenz und vorhandene Gestaltungsstudie</p>}<ReworkedPage content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} contract={contract ?? undefined} /></> : <>
         <TemplateContent sections={page.templateSections} />
         <Content blocks={editorialContent} />
         </>}
-        {page.demo && !ReworkedPage && (
+        {page.demo && !ReworkedPage && !useSharedHandbook && (
           <section className="component-section" id="live-beispiel">
             <h2>Spartan-Beispiel ausprobieren</h2>
             {(component === 'checkbox' || component === 'switch') && (
@@ -77,6 +74,21 @@ export default async function ComponentPage({ params }: {
             <ComponentDemo demoKey={page.demo.key ?? undefined} label={page.demo.label ?? undefined} initialVariant={page.demo.variant ?? undefined} />
           </section>
         )}
+        <ComponentNextSteps data={page.nextSteps}/>
+        <section className="component-section component-reference-details" id="nachweise">
+          <h2>Referenz und Nachweise</h2>
+          <div className="component-availability" aria-label="Verfügbarer Stand">
+            <span>Contract <strong>{contract?.status === 'complete' ? 'Quellenreferenz vollständig' : contract?.status === 'draft' ? 'Entwurf' : contract?.status ?? 'nicht verknüpft'}</strong></span>
+            <span>{page.implementations.length ? page.implementations.map(entry => `${platformLabels[entry.platform]} · ${entry.releaseStatus}`).join(' / ') : 'Keine Implementierung veröffentlicht'}</span>
+            {page.demo && <span>Angular-Beispiel · Spartan</span>}
+          </div>
+          {page.demo && !usesComponentStandard && <p className="component-demo-note">{page.implementations.length ? (page.implementations.every(entry => entry.releaseStatus === 'preview') ? 'Der veröffentlichte Stand ist eine Preview. Prüfumfang und Contractbezug stehen im Plattformstand.' : 'Das lokale Beispiel ist bedienbar. Veröffentlichte Implementierungen und ihre Prüfgrenzen stehen im Plattformstand.') : 'Das Live-Beispiel dient dem Ausprobieren; es ist kein veröffentlichter Implementierungsnachweis.'}</p>}
+          {scopeNote && <details className="component-reference-scope"><summary>Referenz und Prüfstand einordnen</summary><Content blocks={[scopeNote]} /></details>}
+          {page.designPreview && <details className="component-design-preview">
+            <summary>Designvorschau der Quellenreferenz</summary><figure id="design-vorschau"><div className="component-preview-image" tabIndex={0} role="region" aria-label="Quellenvorschau, bei Bedarf scrollbar"><img src={page.designPreview.url} alt={`Statische Designvorschau: ${page.title}`}/></div><figcaption>Statische Vorschau aus dem gewählten Export. <SiteAnchor href={page.designPreview.url} target="_blank" rel="noreferrer">In Originalgrösse öffnen ↗</SiteAnchor></figcaption></figure>
+          </details>}
+          <nav className="component-evidence-jumps" aria-label="Nachweise dieser Komponente"><SiteAnchor href="#plattformstand">Plattformstand</SiteAnchor><SiteAnchor href="#contract">Technischer Contract</SiteAnchor></nav>
+        </section>
         <section className="component-section" id="plattformstand">
           <h2>Plattformen und Implementierungen</h2>
           <table className="component-platforms">

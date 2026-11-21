@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "dialog",
+  "title": "Dialog",
+  "summary": "Mit Dialog lässt du eine kurze Aufgabe im Kontext der aktuellen Seite bearbeiten. Du legst fest, wie sie abgeschlossen oder abgebrochen wird.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine kleine Aufgabe im aktuellen Kontext lösen",
+      "paragraphs": [
+        "Verwende Dialog, wenn du eine klar begrenzte Aufgabe über der aktuellen Seite bearbeiten lässt, etwa einen Projektnamen ändern. Die Seite bleibt als Kontext erhalten, während der Dialog den Arbeitsbereich bildet. Für einen langen Ablauf mit mehreren Schritten und vielen Feldern empfiehlt sich eine eigene Seite.",
+        "Geht es um eine folgenschwere Entscheidung wie «Projekt endgültig löschen», wähle als Alternative Alert Dialog. Ein gewöhnlicher Dialog dient auch der Bearbeitung und schliesst standardmässig bei Druck auf Escape oder ausserhalb der Fläche. Vermeide verschachtelte Dialoge ohne bewusst geplante Fokusführung."
+      ],
+      "links": [
+        {
+          "text": "Alert Dialog",
+          "href": "/systems/shadcn/components/alert-dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Beispiel: ein Projekt umbenennen",
+      "paragraphs": [
+        "Du öffnest über «Projekt umbenennen» einen Dialog mit dem aktuellen Projektnamen «Sommerausstellung». Ein einziges beschriftetes Feld hält die Aufgabe überschaubar. «Abbrechen» und «Speichern» machen die beiden Wege sichtbar; das Kreuz bietet einen weiteren Ausgang.",
+        "Plane für diesen Entwurf: Die Anwendung prüft den neuen Namen, zeigt Fehler beim Feld und schliesst erst nach erfolgreichem Speichern. Bei «Abbrechen» legt sie fest, was mit dem Entwurf geschieht. Diese Abläufe sind Gestaltungsentscheidungen für die Anwendung, keine eingebauten Speicherfunktionen des Dialogs."
+      ],
+      "illustration": {
+        "src": "/component-examples/dialog.svg",
+        "alt": "Dialog «Projekt umbenennen» mit dem Feld Projektname, dem Wert Sommerausstellung sowie Abbrechen, Speichern und einem Schliesskreuz.",
+        "caption": "Statische Illustration · Entwurf für eine kurze Bearbeitungsaufgabe."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Titel, Arbeitsbereich und Abschluss verbinden",
+      "paragraphs": [
+        "Die zentrierte Fläche liegt über einem abgedunkelten Hintergrund. Oben benennen Titel und kurze Beschreibung die Aufgabe, darunter stehen deine Inhalte. Die Aktionen folgen im Fussbereich; das optionale Schliesskreuz sitzt oben rechts. Halte daneben genügend Platz für den Titel frei.",
+        "Die Referenz begrenzt die Breite und lässt bei kleinen Fenstern Abstand zum Rand. Lange Inhalte können innerhalb der Fläche scrollen. Die Aktionen behalten im Referenzlayout ihre Reihenfolge und dürfen umbrechen. Plane trotzdem kurze Inhalte, damit der Abschluss auffindbar bleibt."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Bewusst über Modalität und Ausgänge entscheiden",
+      "paragraphs": [
+        "Standardmässig ist der Dialog modal: Er hält den Fokus innen, sperrt die Bedienung dahinter und verhindert das Scrollen der Seite. Nichtmodal lässt er die übrige Seite bedienbar. Die weitere Option trap-focus hält den Tastaturfokus innen, lässt aber Zeigerbedienung ausserhalb und Seitenscrollen zu. Wähle diese Kombination nur mit einem klaren Bedienkonzept.",
+        "Das Schliesskreuz im Inhalt ist standardmässig sichtbar und kann ausgeblendet werden. Der Fussbereich kann zusätzlich eine Schliessaktion erhalten; standardmässig fügt er keine hinzu. Biete bei modaler Fokusführung immer eine Schliessaktion innerhalb des Dialogs an. Eigene Grössen- oder Farbvarianten sind hier nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen, bearbeiten und kontrolliert schliessen",
+      "paragraphs": [
+        "Ein aktiver Auslöser öffnet den Dialog; ein deaktivierter Auslöser tut dies nicht. Beim Öffnen wechselt der Fokus hinein. Escape, eine Schliessaktion oder standardmässig ein Druck ausserhalb fordern das Schliessen an. Die Anwendung kann diese Anforderung zurückweisen oder den offenen Zustand selbst steuern.",
+        "Du kannst das Schliessen durch Druck ausserhalb gezielt verhindern; das deaktiviert weder Escape noch die ausdrückliche Schliessaktion. Ein nichtmodaler Dialog schliesst normalerweise auch beim Fokuswechsel nach aussen. Ungespeicherte Eingaben erkennt der Dialog nicht selbst. Plane bei Bedarf eine eigene Rückfrage und lege fest, wann Eingaben erhalten bleiben, verworfen oder gespeichert werden."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aufgabe und ihre Folgen benennen",
+      "paragraphs": [
+        "«Projekt umbenennen» sagt mehr als «Bearbeiten». Verwende «Speichern» für den tatsächlichen Abschluss und «Abbrechen» nur, wenn deine Anwendung den Vorgang entsprechend beendet. «OK» lässt offen, was geschieht. Eine Beschreibung wie «Ändere den Namen für dieses Projekt» genügt; ausführliche Hilfetexte gehören näher zum betroffenen Feld.",
+        "Gib dem Schliesskreuz einen zugänglichen Namen. Die gebundene Vorlage liefert dafür «Close» und auch die automatische Fussaktion ist englisch beschriftet. Prüfe für deine deutsche Oberfläche die Übersetzung; die Illustration mit deutschen Aktionen ist ein redaktioneller Entwurf."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Den Fokus passend zur Aufgabe führen",
+      "paragraphs": [
+        "Den nativen Auslöser bedienst du mit Enter oder Leertaste. Bei modaler Fokusführung bewegen Tab und Umschalt+Tab den Fokus innerhalb der Fläche. Escape fordert das Schliessen an, sofern die Anwendung es nicht verhindert.",
+        "Der Anfangsfokus liegt standardmässig auf dem ersten per Tab erreichbaren Element; beim Öffnen per Touch erhält dagegen die Dialogfläche den Fokus, damit nicht sofort die Bildschirmtastatur erscheint. Du kannst Anfangs- und Rückkehrziel ausdrücklich festlegen. Nach dem Schliessen kehrt der Fokus normalerweise zum Auslöser zurück. Prüfe diese Wege auch dann, wenn der Auslöser inzwischen entfernt wurde."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Dialog und Formular haben getrennte Aufgaben",
+      "paragraphs": [
+        "Der Inhalt hat die Rolle dialog. Der Titel liefert seinen zugänglichen Namen, die Beschreibung den zugeordneten Erklärungstext. Auslöser und Dialog brauchen die Beziehungen ihrer jeweiligen Instanz. Die gebundene Base-UI-Variante setzt standardmässig kein aria-modal; aus dem abgedunkelten Hintergrund allein lässt sich Modalität nicht ableiten.",
+        "Ein Formular im Dialog braucht weiterhin Feldbeschriftungen, Validierung und einen tatsächlichen Absendevorgang. Eine Schliessaktion speichert nichts. Unterscheide im Entwurf deshalb Abbrechen, Absenden und erfolgreiches Speichern; bei Fehlern muss die Anwendung Inhalt und Fokus sinnvoll erhalten."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Abgeglichen sind Schnittstelle und Bauteile, CSS-Layout, Zustandsmodell sowie HTML-/ARIA-Regeln des veröffentlichten Exports und die darin gebundenen Base-UI-Quellen. Die statischen Fixtures zeigen unter anderem offene, geschlossene und kreuzlose Darstellungen. Sie belegen keinen vollständigen Formularablauf.",
+        "Die Referenz beschreibt diese React-/Base-UI-Variante. Für die konkrete Anwendung musst du insbesondere Speicherfehler, Entwurfsverlust, Übersetzung und Fokusziele prüfen. Die Illustration ist keine Prüfung einer laufenden Implementierung."
+      ]
+    }
+  ]
+}

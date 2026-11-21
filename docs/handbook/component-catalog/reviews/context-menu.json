@@ -1,0 +1,199 @@
+{
+  "component": "context-menu",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/component.json",
+      "sha256": "13493ed0e6a01229ae9a77feeda4d7fb6757134af97a4f4afca2d5bf579548c9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/ux.json",
+      "sha256": "7006aba5494a237ebb3776577e3df619f36a73874d809a578c4cb999e541ce85"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/interface.json",
+      "sha256": "3ed04a9bfa1bd5963f312ded868a0cf62bceef50795162062c251e7855d61ec8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/stories.json",
+      "sha256": "3cb6b6c44cce9f2dc38216b850415e8467a679023ed263f9013a0d51fb359ee1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/behavior.scxml",
+      "sha256": "72cc03afee39d0a236777538e8d7f5f44253bc8c5b6cdcbd03c6ff3c7ed571d4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/layout.css",
+      "sha256": "9e1b17f568ea9d0f02915ec3457fb7dc57c21cb24d627f61206e858c14e00e12"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.html",
+      "sha256": "1dc34937123fb472f4a207c780c7bc9d5fb70c49e5974b62b51176fdc0d58ea6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+      "sha256": "bc4ddca31c126edad85e1a664902d38726b8368cfed223bde1da3fd2cd86469e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/README.md",
+      "sha256": "f7d701792a3308c091cef7b85caac65a91edef74740987df638c0d79db2e4b56"
+    }
+  ],
+  "claims": [
+    {
+      "id": "visible-equivalent",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Context Menu ergänzt kontextbezogene Aktionen um einen gleichwertigen sichtbaren Zugang.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-choice",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration wählt Speichern, Checkbox und Löschen aus den belegten Menürollen; der sichtbare Dropdown-Zugang bietet die Einstellungen unabhängig an.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "parts-placement",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Gruppen, Beschriftungen, Auswahlindikatoren und Untermenüs sind tatsächliche Menüteile; die Positionierung gehört zum Primitive.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "item-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Befehle unterstützen default/destructive und inset; Checkbox, Radio und Untermenü sind eigenständige belegte Menüteile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/interface.json",
+          "pointer": "/modules/0/declarations/6/members/0/type/text"
+        }
+      ]
+    },
+    {
+      "id": "checkbox-radio-types",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Checkbox-Einträge verwenden boolean checked; Radioeinträge gehören zu einer RadioGroup.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/interface.json",
+          "pointer": "/modules/0/declarations/10/members"
+        }
+      ]
+    },
+    {
+      "id": "open-trigger",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Öffnung erfolgt über Kontextmenüereignis oder 500 ms langes Berühren, ohne Linksklick-Befehl; Auswahl- und Befehlsschliessung unterscheiden sich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "canceled-state",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Abgebrochene oder kontrollierte Checkbox-Änderungen überschreiben nicht selbstständig den Zustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/behavior.scxml",
+          "snippet": "!checkedControlled &amp;&amp; !_event.data.eventDetails.isCanceled"
+        }
+      ]
+    },
+    {
+      "id": "shortcut-display",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Shortcut ist nur angezeigter Text und registriert keine Tastenkombination.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-access",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Kontextfläche bekommt weder Tabstopp noch eigenen Tastaturhandler; sichtbarer Dropdown ist der Tastaturalternativzugang, Umschalt+F10 wird nicht zugesichert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "menu-navigation",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeiltasten, Home/End, Typeahead und Aktivierung folgen Menüregeln; deaktivierte Einträge dürfen Fokus erhalten; Dismissal und finalFocus sind kontextabhängig.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "independent-protocol",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Jeder Menü-/Untermenü-Root besitzt eigene Zustandsautorität; es wird keine Dialog-Fokusfalle erfunden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/accessibility.rules.json",
+          "pointer": "/protocol"
+        }
+      ]
+    },
+    {
+      "id": "reference-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz ist complete im begrenzten Referenzumfang, kein allgemeines Pixel-/Framework-/AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/context-menu/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Sichtbarer Alternativzugang wird als Teil des Entwurfs gezeigt; Einstellungen ausdrücklich eingeschlossen.",
+    "Kontextflächen-Öffnung und Tastaturöffnung des separaten Dropdowns werden sprachlich getrennt.",
+    "Fokus nach Escape oder Ausseninteraktion bleibt vom konkreten Einbau abhängig; keine universelle Rückkehr zur passiven Fläche behauptet.",
+    "Beschriftungen und begrenzte flache Menüstruktur sind redaktionelle Empfehlungen, keine neuen Quellfähigkeiten."
+  ],
+  "limits": [
+    "Keine lokale Context-Menu-Demo in src/demos/shadcn vorhanden.",
+    "Statische Illustration und exportierte Quellen ersetzen keine Laufzeitprüfung des konkreten Einbaus."
+  ]
+}

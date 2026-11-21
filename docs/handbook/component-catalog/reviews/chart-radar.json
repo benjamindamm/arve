@@ -1,0 +1,242 @@
+{
+  "component": "chart-radar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/component.json",
+      "sha256": "1eb532ce0af4704ab303171c10e452a2b9ae5ca3740dbc8427688a153ad4d4bd"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/ux.json",
+      "sha256": "75cc61775db3d84d762fd0bf52e2799336351af5775d56c4c018ff18eaf896c0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/interface.json",
+      "sha256": "651db234f145feb081686fbdded3dfe05efd272a5bc5ce59b0b04c11a141d32e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/stories.json",
+      "sha256": "ad1333ac9189b27768e7a29bc676d94facfea736c3fe25dbc8263dd4380be384"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/behavior.scxml",
+      "sha256": "2da775041a708b064e8b3d7d576e7e98540a1f3476c1d72d2ebdfd510d46dd86"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/layout.css",
+      "sha256": "3f3fabf17a5a80acb6ee5309957e16ea441d93d01ba9b9cf3895c53fbf4bb519"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.html",
+      "sha256": "959396398a2eb765a847b77cb30c7e378d73cb15478de1cf9df4e34eb87e0b7a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+      "sha256": "b735602bef4a803f62fa340edeb9d8ca5bb9569a6adef415214867f5c1922c15"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/README.md",
+      "sha256": "ae922245a70d805a71833dbebb306f75d6a99defc99f58de2d976e08710a610e"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Radar vergleicht Monatswerte auf gemeinsamer radialer Skala; die Polygonfläche ist keine unabhängige Kennzahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Linie für Zeitverlauf, Balken für genaue Monatsvergleiche bevorzugen."
+    },
+    {
+      "id": "example-values",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Monatswerte 186,305,237,273,209,214 stammen aus dem ausgewählten Radar-Beispiel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/ux.json",
+          "pointer": "/exampleSource/dataset"
+        }
+      ]
+    },
+    {
+      "id": "example-scale",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "0 bis 320 ist nur der explizit gekennzeichnete redaktionelle Illustrationsmassstab."
+    },
+    {
+      "id": "anatomy-space",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Referenz verwendet 70 Prozent äusseren Radius zugunsten von Abstand zwischen April und Legende.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-table",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die vollständige Tabelle enthält genaue Werte und Kategorieordnung samt Überschriften.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "variants-marker",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Indikatoren dot,line,dashed sind belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/component.json",
+          "pointer": "/visualContract/variants/indicator"
+        }
+      ]
+    },
+    {
+      "id": "variants-configuration",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip hideLabel/hideIndicator und Legend hideIcon sind konfigurierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "states-update",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Aktualisierungen ersetzen Grafik,Tabelle,Zusammenfassung gemeinsam; Leere und Fehler sind Verantwortung des Aufrufers.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+          "pointer": "/protocol"
+        }
+      ]
+    },
+    {
+      "id": "states-hide",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Ein inaktiver Tooltip wird ausgeblendet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/behavior.scxml",
+          "snippet": "<transition event=\"SOURCE_TOOLTIP_INACTIVE\">\n      <assign location=\"tooltipVisible\" expr=\"false\" />"
+        }
+      ]
+    },
+    {
+      "id": "labels-guidance",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Reihenfolge und Skala konstant halten; Polygonfläche nicht als Gesamtleistung deuten."
+    },
+    {
+      "id": "keyboard-reference",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Redundanter Graph ist aria-hidden, accessibilityLayer false; Tooltip hat kein eigenes Fokusziel und Escape schliesst an der Quellkoordinate.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-dismiss",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Escape hält den Tooltip bis zur veränderten Quellkoordinate ausgeblendet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "semantics-ownership",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "ChartContainer erzeugt keine vollständige Textalternative; Zusatzfilter benötigen eigene Contracts.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "semantics-name",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Figure ist mit figcaption und Zusammenfassung über aria-labelledby und aria-describedby verbunden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/accessibility.html",
+          "snippet": "aria-labelledby=\"chart-radar-title\" aria-describedby=\"chart-radar-summary\""
+        }
+      ]
+    },
+    {
+      "id": "sources-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Radar ist eine explizite Recharts-Komposition; Base-UI-Wrapper bleiben Grundlage, offizielles Zusatzbeispiel liefert Form und Daten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "sources-limited",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "README beschreibt abgeschlossenen begrenzten Referenzumfang und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-radar/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Originale sechs Radarwerte erhalten, Monatsnamen ins Deutsche übertragen; April ist 273.",
+    "Monatsdaten bewusst als Anlass zur Diagrammwahl behandelt, nicht als universelle Radar-Empfehlung.",
+    "Skala 0 bis 320 und ungestapelte Einreihe nur in der statischen Illustration redaktionell gewählt.",
+    "Gefüllte Polygonfläche nicht als Gesamtscore interpretiert; Kategorieordnung und Skalengleichheit ausdrücklich erklärt."
+  ],
+  "limits": [
+    "Keine lokale Radar-Demo in src/demos/shadcn vorhanden.",
+    "Illustration ist kein Recharts-Rendering und kein Pixelnachweis.",
+    "Keine allgemeine Anwendungs- oder Barrierefreiheitsfreigabe aus dem Referenzstatus ableitbar."
+  ]
+}

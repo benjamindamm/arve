@@ -1,0 +1,252 @@
+{
+  "component": "code-block",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/component.json",
+      "sha256": "9b0638dfe4de5a066a750588dee542d4fba04cc598d866a02401d3f70b0af05d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/ux.json",
+      "sha256": "c2951a9df6f068bd709e875f7991b53d7c8f58b99313bb9788524b95872ee174"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/interface.json",
+      "sha256": "e47331cc93a45c4326ea469e0b15cb05c10b79dc9fce8f3b4d5fa86e421b34d8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/stories.json",
+      "sha256": "8fcf4bf97aba764c916afb0f7629961dbd6de17a79cc03da41ee6c6204694326"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/behavior.scxml",
+      "sha256": "afb88265bcc382d20fff55f7c3a9823e241c2e0b07ef5ca9595d8c3b9e59d506"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/layout.css",
+      "sha256": "f16122890e0b265aedfb8c7500f96ddabdc296e5a1c54cf4cfd9e87ba2e16e32"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/accessibility.html",
+      "sha256": "7cbc4078dcc07d5e44a673ccbf737964d91bb322245d727b89de70a8862c93dc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/accessibility.rules.json",
+      "sha256": "66ed546c8b0b9192bd4599af4f0911af762789bbb68b430da5df9fb75fa134e0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/README.md",
+      "sha256": "020f4d96ac2ca2d9117a8687b4182769a3193032a1d8500c5b32ca79c4297130"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source",
+      "sha256": "66ae50e6a08ca54a0ffd8be7f71cb4f60002a0e0cb592910d85e8e2d839cca0a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Auswählbarer Code mit unabhängiger Kopieraktion; kein eingebauter Editor oder Highlighter.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Textarea für Bearbeitung und kurze Codeauszeichnung für einzelne Namen sind redaktionelle Auswahlhilfen."
+    },
+    {
+      "id": "example-copy-value",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der Kopiertext wird separat und exakt übergeben, nicht aus der nummerierten Anzeige gewonnen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/interface.json",
+          "pointer": "/modules/0/declarations/4/members/0"
+        }
+      ]
+    },
+    {
+      "id": "example-editorial",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die deutschsprachige JSON-Konfiguration ist ein eigener statischer Entwurf, keine behauptete Demo."
+    },
+    {
+      "id": "anatomy-parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf, Titel, Aktionen, Inhalt und Fuss sind belegte Teile; der Titel ist keine automatische Überschrift.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-floating",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Direkt unter der Wurzel platzierte Aktionen erscheinen bei Hover, Fokus innerhalb und grober Zeigereingabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/layout.css",
+          "snippet": "@media (pointer:coarse)"
+        }
+      ]
+    },
+    {
+      "id": "variants-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Root kennt default/destructive und default/sm; Inhalt kennt Umbruch, Nummerierung und Startzeile; Zeilen kennen vier Varianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "variants-scroll",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Codebereich scrollt, hat maximal 28rem Höhe; kleine Grösse verwendet 12/16.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/layout.css",
+          "snippet": "max-block-size: 28rem;"
+        }
+      ]
+    },
+    {
+      "id": "variants-compact",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Kleine Darstellung verwendet 12px Schrift und 16px Zeilenhöhe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/layout.css",
+          "snippet": "font-size: 12px;\n  line-height: 16px;"
+        }
+      ]
+    },
+    {
+      "id": "states-copy",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Erfolg bestätigt zwei Sekunden; weiterer Erfolg während copied startet Timer nicht neu, Ablehnung lässt copied bestehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "states-machine",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Timer wird nur beim Wechsel von nicht kopiert zu kopiert eingerichtet.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/behavior.scxml",
+          "snippet": "<if cond=\"!copied\">"
+        }
+      ]
+    },
+    {
+      "id": "labels-truncate",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Dateititel wird einzeilig mit Ellipse gekürzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/layout.css",
+          "snippet": "text-overflow: ellipsis;\n  white-space: nowrap;"
+        }
+      ]
+    },
+    {
+      "id": "labels-default-language",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Aktionsname und separate Live-Meldung sind im Original englisch; ein aria-label übersetzt die Live-Meldung nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source",
+          "snippet": "{copied ? \"Copied\" : \"\"}"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Enter/Space betätigen Copy, Fokus bleibt erhalten, Tab verlässt pre und Escape bricht angefragtes Kopieren nicht ab.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-heading",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Einbindung liefert eine Überschrift und verbindet sie über aria-labelledby mit dem fokussierbaren pre.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/accessibility.html",
+          "snippet": "tabindex=\"0\" aria-labelledby=\"code-heading\" aria-describedby=\"code-help\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-copy-button",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz setzt die Kopieraktion als button type=button um.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"code-block-copy-button\""
+        }
+      ]
+    },
+    {
+      "id": "sources-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "README begrenzt complete auf die Referenz und nennt release:false sowie fehlende allgemeine Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/code-block/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "JSON-Konfiguration statt ausführbarem Befehl als überschaubares, fachlich verständliches Beispiel.",
+    "Englische eingebaute Rückmeldungen ausdrücklich benannt, keine automatische deutsche Übersetzung behauptet.",
+    "Keine Diffzeichen im Bild; Varianten werden mit der Verantwortung für Zeichen und Kopiertext erklärt.",
+    "Alternative Textarea und Einbettung kurzer Codewörter als redaktionelle Entscheidung kenntlich gemacht."
+  ],
+  "limits": [
+    "Keine lokale Code-Block-Demo unter src/demos/shadcn gefunden; statische Illustration ist kein Laufzeitnachweis.",
+    "Ablehnung der Zwischenablage hat keine eingebaute Fehlermeldung; manuelle Auswahl bleibt erforderlich.",
+    "Die eingebauten englischen Live-Texte benötigen bei deutscher Produkteinbindung eine gesonderte Lösung."
+  ]
+}

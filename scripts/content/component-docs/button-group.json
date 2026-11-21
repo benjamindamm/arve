@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "button-group",
+  "title": "Button Group",
+  "summary": "Verbindet Aktionen für denselben Inhalt zu einer kompakten Gruppe. Jedes Bedienelement bleibt einzeln bedienbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Verwandte Aktionen beieinander halten",
+      "paragraphs": [
+        "Button Group verbindet einzeln ausführbare Aktionen zu einer sichtbaren und semantischen Einheit. Verwende sie etwa für «Speichern» und «Exportieren» eines Berichts: Beide beziehen sich auf dasselbe Dokument und bleiben unabhängig bedienbar. Für eine einzelne Aktion genügt ein Button; ohne gemeinsamen Gegenstand sind getrennte Buttons übersichtlicher.",
+        "Soll eine dauerhafte Einstellung gewählt werden, etwa genau eine Versandart, empfiehlt sich eine Radio Group. Für ein- und ausschaltbare Optionen ist eine Toggle Group die passendere Wahl. Die verbundenen Kanten einer Button Group erzeugen selbst keinen Auswahlzustand."
+      ],
+      "links": [
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 0
+        },
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        },
+        {
+          "text": "Toggle Group",
+          "href": "/systems/shadcn/components/toggle-group",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Zwei Aktionen am Monatsbericht",
+      "paragraphs": [
+        "Der Entwurf zeigt die Aktionen unter dem Titel «Monatsbericht Oktober». «Speichern» und «Exportieren» stehen gleichwertig nebeneinander. Die gemeinsame Umrandung macht ihre Beziehung zum Bericht sichtbar; der schmale Trenner hält die Ziele auseinander.",
+        "Die Gruppe erhält den zugänglichen Namen «Aktionen für den Monatsbericht». Dieser Name ergänzt die einzelnen Buttontexte. Eine spätere Erfolgsmeldung gehört in den umgebenden Arbeitsbereich, zum Beispiel «Monatsbericht gespeichert». Sie ist eine Aufgabe der Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/button-group.svg",
+        "alt": "Monatsbericht Oktober mit zwei verbundenen Schaltflächen Speichern und Exportieren unter einer Dokumentzusammenfassung.",
+        "caption": "Statische Illustration · unabhängige Aktionen für denselben Bericht."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Aussen verbunden, innen eigenständig",
+      "paragraphs": [
+        "Die Gruppe bildet den gemeinsamen Rahmen für die enthaltenen Controls. Aneinanderliegende Kanten verlieren ihre Rundung, die äusseren Enden bleiben abgerundet. Platziere die Gruppe nahe am Inhalt, auf den sich ihre Aktionen beziehen.",
+        "Optional kann ein Textzusatz den Kontext direkt in der Gruppe zeigen, etwa «Bericht». Er ist standardmässig ein Textcontainer und kein weiterer Button. Ein Separator trennt benachbarte Aktionen; er besitzt eine eigene Ausrichtung. Der sichtbare Textzusatz ersetzt nicht automatisch den zugänglichen Gruppennamen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Nebeneinander oder untereinander",
+      "paragraphs": [
+        "Die belegte Gruppenvariante ist die Ausrichtung: horizontal ist der Standard, vertikal ordnet die Controls untereinander an. Horizontal eignet sich für wenige kurze Aktionen. Vertikal kann bei einem schmalen Arbeitsbereich helfen; prüfe dabei die längste Beschriftung.",
+        "Die Gruppe hat keine eigene Grössen- oder Farbvariantenauswahl. Grösse und Erscheinungsbild stammen von den enthaltenen Buttons. Für eine ruhige Einheit empfehlen sich zusammenpassende Grössen. Der Separator steht standardmässig senkrecht; für eine vertikale Gruppe zeigt die Referenz einen waagrechten Trenner."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Rückmeldung bleibt bei der Aktion",
+      "paragraphs": [
+        "Ein Button kann den Tastaturfokus tragen oder einzeln deaktiviert sein. Die Gruppe selbst hat weder einen gemeinsamen deaktivierten Zustand noch einen gemeinsamen Wert. Soll eine Aktion vorübergehend gesperrt werden, muss die Anwendung das betreffende Control deaktivieren.",
+        "Nach «Speichern» sollte die Anwendung den Abschluss oder einen Fehler verständlich zurückmelden. Ein Export kann unabhängig davon verfügbar bleiben. Die Zustandsbeschreibung der Gruppe führt Fokus und Kindaktionen mit, definiert jedoch keinen eigenen Lade-, Erfolgs- oder Fehlerablauf. Eine Layoutänderung erzeugt ebenfalls keine Auswahl."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Jedes Ziel muss allein verständlich sein",
+      "paragraphs": [
+        "Verwende kurze Tätigkeiten wie «Speichern», «Exportieren» oder «Drucken». «Aktion 1» und «Aktion 2» erklären das Ergebnis nicht. «Links» und «Rechts» sind ungeeignet, wenn eigentlich zwei Dokumentaktionen gemeint sind.",
+        "Empfohlen sind ein bis zwei Wörter pro Button. Falls sich die Bedeutung nur mit einem langen Satz erklären lässt, prüfe eine andere Anordnung mit zusätzlichem Hilfetext. Icons können die Texte ergänzen. Rahmen, Position und Symbole allein tragen die Bedeutung nicht."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab zu jedem Control",
+      "paragraphs": [
+        "Tab durchläuft die bedienbaren Controls in ihrer Reihenfolge im Dokument. Der Fokus bleibt beim jeweiligen Button, Link oder Eingabefeld; dessen eigene Tastaturregeln gelten weiter. Für Buttons sind dies die üblichen Aktivierungstasten Eingabetaste und Leertaste.",
+        "Die Gruppe übernimmt keine Pfeiltastennavigation und verwaltet keinen gemeinsamen Tabstopp. Auch eine vertikale Anordnung ändert das nicht. Benenne den Zusammenhang zugänglich, etwa über aria-label oder einen zugeordneten sichtbaren Titel. Sorge dafür, dass der Fokus am Rand der verbundenen Buttons sichtbar bleibt."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Gruppe in den Arbeitsablauf einbetten",
+      "paragraphs": [
+        "Button Group verwendet die Rolle group. Sie liefert damit einen Zusammenhang für enthaltene Controls, aber keine Toolbar- oder Radio-Group-Semantik. Links behalten ihr Navigationsziel, Buttons ihre Aktion und Eingabefelder ihren eigenen Wert.",
+        "Im Formular muss die Anwendung festlegen, welcher Button tatsächlich absendet; die Referenz zeigt Aktionsbuttons mit type=\"button\". In einem Dialog ist die Gruppe nur ein Teil des Dialoginhalts und übernimmt dessen Fokusführung nicht. Der Textzusatz ist ohne ausdrückliche Zuordnung auch kein Formularlabel."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte Komponenten- und Schnittstellenbeschreibung, UX-Regeln, CSS, Zustandsmodell sowie HTML-/ARIA-Referenz und Szenarien. Die gebundene Base-UI-Quelldatei bestätigt die drei Bausteine Gruppe, Textzusatz und Separator.",
+        "Die Szenarien zeigen unter anderem beide Ausrichtungen, einzelne deaktivierte Buttons und Tastaturfokus. Sie und die redaktionelle Illustration ersetzen keine Prüfung der konkreten Anwendung. Für diese Komponente liegt hier kein veröffentlichter Implementierungsnachweis vor; insbesondere bleiben Fokusdarstellung, lange Texte und Rückmeldungen im Zielkontext zu prüfen."
+      ]
+    }
+  ]
+}

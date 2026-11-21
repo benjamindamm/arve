@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "slider",
+  "title": "Slider",
+  "summary": "Mit dem Slider stellst du einen Zahlenwert oder einen Bereich innerhalb einer Skala ein. Er eignet sich zum Erkunden und schrittweisen Anpassen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Werte durch Verschieben wählen",
+      "paragraphs": [
+        "Nutze den Slider, wenn du einen begrenzten Zahlenwert erkunden oder einen Wertebereich einstellen möchtest: etwa die Wiedergabelautstärke oder einen Preisfilter mit Unter- und Obergrenze. Die Position macht das Verhältnis zur gesamten Skala sichtbar.",
+        "Wenn du eine genaue Zahl bereits kennst, ist ein Input für die Zahleneingabe oft geeigneter. Biete bei hoher Genauigkeit eine solche Alternative an. Für den Fortschritt eines laufenden Vorgangs verwendest du Progress; dort wählst du keinen Wert."
+      ],
+      "links": [
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        },
+        {
+          "text": "Progress",
+          "href": "/systems/shadcn/components/progress",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Lautstärke mit verständlicher Skala",
+      "paragraphs": [
+        "Du stellst die Wiedergabelautstärke auf 40 %. Die Beschriftung nennt den Zweck, die Zahl zeigt den aktuellen Wert, und die Endpunkte erklären den Bereich von 0 bis 100 %. Ein kurzer Hinweis nennt die Schritte von 5 Prozentpunkten.",
+        "Die zusätzliche Wertanzeige im Entwurf ist eine Aufgabe deiner Anwendung. Halte sie mit dem Regler synchron. Die Referenz verwendet für diesen einzelnen Regler ausdrücklich eine Werteliste mit einem Eintrag und formatiert den zugänglichen Wert als Prozent."
+      ],
+      "illustration": {
+        "src": "/component-examples/slider.svg",
+        "alt": "Lautstärkeregler bei 40 Prozent auf einer Skala von 0 bis 100 Prozent mit Schritten von 5 Prozentpunkten.",
+        "caption": "Statische Illustration · Wiedergabelautstärke mit einem Regler und ergänzender Wertanzeige."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Schiene, Füllung und Griff lesen",
+      "paragraphs": [
+        "Die Schiene zeigt den verfügbaren Bereich. Die dunkle Füllung kennzeichnet den gewählten Anteil; bei zwei Griffen zeigt sie den Bereich zwischen den Werten. Der runde Griff macht die veränderbare Position erkennbar. Platziere Beschriftung, Wert und Einheit so, dass du sie beim Verschieben weiter lesen kannst.",
+        "Der sichtbare Griff enthält das eigentliche, visuell verborgene Range-Eingabefeld. Dieses erhält den Tastaturfokus; der Fokusring erscheint am umgebenden Griff. Ergänze dort keine zweite Slider-Rolle."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Ein Wert oder ein Bereich",
+      "paragraphs": [
+        "Du kannst einen einzelnen Wert oder mehrere Werte sowie eine horizontale oder vertikale Ausrichtung wählen. Horizontal passt zu üblichen Formularen; vertikal kann eine räumlich passende Einstellung wie Lautstärke unterstützen. Eigene Farb- oder Grössenvarianten sind hier nicht ausgewiesen.",
+        "Lege Minimum, Maximum und positive Schrittweite passend zur Aufgabe fest; die Skala soll sinnvoll aufgehen. Für einen Griff verwendest du eine Werteliste mit einem Eintrag. Eine einzelne Zahl erzeugt in diesem Wrapper dennoch zwei Griffe. Bei Bereichen kannst du Mindestabstände und das Verhalten beim Zusammentreffen wählen: gegenseitiges Schieben, Tauschen oder Anhalten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Änderung und Abschluss unterscheiden",
+      "paragraphs": [
+        "Durch Ziehen, Drücken auf die Schiene oder Tastatureingaben änderst du den Wert innerhalb der Grenzen und Schritte. Nutze die laufende Änderungsmeldung für eine unmittelbare Vorschau. Eine separate Abschlussmeldung kommt nur bei einer geänderten, nicht abgebrochenen Änderung; sie bestätigt keine Speicherung.",
+        "Deine Anwendung kann eine angefragte Änderung zurückweisen. Bei extern gesteuerten Werten muss sie den angenommenen Wert zurückgeben. Escape stellt keinen früheren Wert wieder her. Deaktiviert lässt sich der Slider nicht bedienen und seine Eingaben verlassen die Tab-Reihenfolge. Erkläre fachliche Fehler mit einer konkreten Korrekturmöglichkeit."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zweck, Zahl und Einheit nennen",
+      "paragraphs": [
+        "«Wiedergabelautstärke» und «40 %» sind verständlicher als «Wert» und «40». Halte den Namen kurz; erkläre Einheit, Grenzen und besondere Schritte daneben. Verwende die Position oder die Füllfarbe nie als einzige Wertinformation.",
+        "Bei einem Bereich musst du Anfang und Ende unterscheiden können. Die Referenz liefert formatierte Werte mit Anfang-/Ende-Zusätzen, aber keine frei konfigurierbare Beschriftung pro Griff über diesen Wrapper. Prüfe, ob der gemeinsame Name und diese Zusätze für deine Aufgabe ausreichen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Jeden Griff mit der Tastatur erreichen",
+      "paragraphs": [
+        "Mit Tab erreichst du die aktiven Eingabefelder der Griffe. Pfeiltasten ändern den Wert um einen Schritt; Page Up, Page Down und Umschalt plus Pfeiltaste verwenden den grösseren Schritt. Home und End wählen die jeweiligen Grenzen. Sichtbarer Fokus und ein zugeordneter zugänglicher Name bleiben erforderlich.",
+        "Die horizontale Richtung berücksichtigt die Leserichtung; vertikal erhöht Pfeil nach oben den Wert. Für Rechts-nach-links brauchst du sowohl die Dokumentrichtung als auch den passenden DirectionProvider. Bei mehreren Griffen bleibt die Reihenfolge der Eingaben im Dokument erhalten."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "In ein Formular einbetten",
+      "paragraphs": [
+        "Verknüpfe den gemeinsamen Namen mit den internen Eingaben. Für Hilfetexte und Fehler nutzt die Referenz echten Base-UI-Field-Kontext: Field.Root, Label, Description und Error. aria-describedby allein am äusseren Slider erreicht die internen Eingaben nicht. Der gleichnamige shadcn-Field-Wrapper liefert diesen Kontext nicht automatisch.",
+        "Für Formularübermittlung stehen name und form zur Verfügung. Deine Anwendung verantwortet Validierung und Rückmeldungen; eine ungültige Gestaltung erzeugt noch keine Fehlermeldung. Ein Abschluss der Reglerbewegung ersetzt weder Absenden noch eine Erfolgsbestätigung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung trägt",
+      "paragraphs": [
+        "Geprüft sind die exportierte Schnittstelle, CSS-Gestaltung, das Verhaltensmodell und die HTML-/ARIA-Regeln samt gebundenen React- und Base-UI-Quellen. Die Beispiele decken einzelne Werte, Bereiche, Ausrichtung, Fokus, Deaktivierung und Fehlerkontext ab.",
+        "Die Illustration ist ein redaktioneller Entwurf. Der abgeschlossene Quellenumfang ist keine allgemeine Freigabe für deine Anwendung oder für assistive Technologien. Prüfe insbesondere die Verständlichkeit mehrerer Griffe und die Formularrückmeldungen im vorgesehenen Einsatz."
+      ]
+    }
+  ]
+}

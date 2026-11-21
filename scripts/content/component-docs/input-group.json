@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "input-group",
+  "title": "Input Group",
+  "summary": "Verbinde ein Eingabefeld mit einer festen Einheit, ergänzendem Text oder einer zugehörigen Aktion. Ein echtes Label hält die erwartete Angabe klar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Wenn die Eingabe einen Zusatz braucht",
+      "paragraphs": [
+        "Mit Input Group verbindest du ein beschriftetes Eingabefeld mit ergänzendem Text oder einer eigenen Aktion. Nutze sie etwa für einen Betrag mit fester Währung oder für eine Berichtsuche mit einer Schaltfläche zum Leeren. Zusatz, eingegebener Wert und Aktion bleiben unterschiedliche Dinge.",
+        "Brauchst du weder Einheit noch Aktion, reicht Input. Für längere freie Texte passt Textarea; kombiniere sie erst dann als Input Group, wenn du tatsächlich einen zugehörigen Zusatz benötigst. Mehrere fachlich unabhängige Angaben wie Vorname und Nachname gehören in eigene beschriftete Felder."
+      ],
+      "links": [
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        },
+        {
+          "text": "Textarea",
+          "href": "/systems/shadcn/components/textarea",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Bericht suchen und Betrag erfassen",
+      "paragraphs": [
+        "Im Entwurf steht «Bericht suchen» über dem Feld. Das Lupensymbol unterstützt die Orientierung, «Jahresbericht» ist der bearbeitbare Wert und «Leeren» eine eigenständige Aktion. Der Hinweis unter dem Feld erklärt, wonach gesucht wird.",
+        "Beim Betrag gibst du nur die Zahl ein; «CHF» bleibt als feste Ergänzung sichtbar. Die Währung steht zusätzlich in der Beschriftung. So bleibt die Bedeutung auch dann klar, wenn der Zusatz nicht als Beschreibung mit dem Feld verknüpft wurde. Beide Beispiele sind redaktionelle Entwürfe, keine mitgelieferten Such- oder Berechnungsfunktionen."
+      ],
+      "illustration": {
+        "src": "/component-examples/input-group.svg",
+        "alt": "Zwei beschriftete Eingabegruppen: Bericht suchen mit dem Wert Jahresbericht und der Aktion Leeren; Betrag in CHF mit dem Zahlenwert 1250 und dem festen Zusatz CHF.",
+        "caption": "Statische Illustration · Beschriftung, Wert, Zusatz und Aktion bleiben unterscheidbar."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Ein Rahmen, klar getrennte Aufgaben",
+      "paragraphs": [
+        "Der gemeinsame Rahmen fasst das Eingabefeld und seine Zusätze visuell zusammen. In einem Zusatzbereich kannst du Text, ein Symbol oder einen Button platzieren. Das eigentliche Label steht ausserhalb des Rahmens und ist ausdrücklich mit dem Eingabefeld verbunden.",
+        "Platziere eine Einheit direkt beim Wert und eine Aktion dort, wo ihre Wirkung verständlich bleibt. Hilfe und Fehlermeldung stehen beim Feld, ohne den Platz für die Eingabe zu verkleinern. Ergänzender Text ist für sich weder Label noch automatisch eine zugängliche Beschreibung."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zusätze neben oder über dem Feld",
+      "paragraphs": [
+        "Du kannst Zusätze am Zeilenanfang oder Zeilenende sowie oberhalb oder unterhalb des Feldes anordnen. Die vier belegten Ausrichtungen heissen inline-start, inline-end, block-start und block-end; der Standard ist inline-start. Eine Einheit passt meist ans Zeilenende, eine zusätzliche Aktionszeile bei mehrzeiligem Text eher darunter.",
+        "Als Kontrolle stehen Input und Textarea zur Verfügung. Für Gruppenbuttons sind xs, sm, icon-xs und icon-sm vorgesehen. Der Standard ist ein dezenter Button mit ghost und xs. Wähle einen Textbutton, wenn die Aktion durch ein Symbol allein schwer erkennbar wäre."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Fokus, Fehler und Verfügbarkeit abstimmen",
+      "paragraphs": [
+        "Sobald ein enthaltenes Bedienelement Fokus erhält, hebt sich der gemeinsame Rahmen hervor. Ein als ungültig markiertes Eingabefeld färbt den Rahmen entsprechend; deine Anwendung muss den Fehler feststellen und eine hilfreiche Meldung bereitstellen. Ein roter Rahmen allein erklärt keine Korrektur.",
+        "Ein deaktiviertes Eingabefeld schwächt die Gruppe optisch ab. Dadurch wird ein enthaltener Aktionsbutton nicht automatisch deaktiviert: Sperre auch die Aktion ausdrücklich, wenn die ganze Gruppe nicht verfügbar sein soll. Deine Anwendung legt fest, was «Leeren» bewirkt und wo danach der Fokus bleibt."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Einheit ersetzt die Frage nicht",
+      "paragraphs": [
+        "«Betrag in CHF» benennt die erwartete Angabe; ein alleinstehendes «CHF» genügt dafür nicht. Ebenso ist «Bericht suchen» klarer als «Eingabe». Verwende Platzhalter höchstens als zusätzliches Beispiel, damit die Beschriftung beim Tippen erhalten bleibt.",
+        "Halte Zusätze kurz. Lange Anleitungen gehören unter das Feld. Beschrifte Aktionen konkret, etwa «Suche leeren» statt «Aktion». Bei einem reinen Symbolbutton brauchst du einen gleichwertigen zugänglichen Namen; das Lupensymbol allein benennt das Eingabefeld nicht."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Eingabe und Aktion einzeln erreichen",
+      "paragraphs": [
+        "Mit Tab und Umschalt+Tab wechselst du zwischen Eingabefeld, enthaltenen Buttons und den übrigen Bedienelementen. Im Feld gelten die üblichen Tasten zum Bearbeiten von Text; Buttons aktivierst du mit Enter oder Leertaste. Zusatztext erhält keinen eigenen Tastaturfokus.",
+        "Ein Klick auf einen Zusatz fokussiert standardmässig das erste Input in der Gruppe. Ein darin angeklickter Button bleibt von dieser Fokusweiterleitung ausgenommen. Für Textarea ist diese Weiterleitung nicht zugesichert; ein eigener Klickhandler kann das Standardverhalten ersetzen. Stelle daher eine echte Feldbeschriftung bereit und verlasse dich nicht auf den klickbaren Zusatz."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Formularbeziehungen ausdrücklich herstellen",
+      "paragraphs": [
+        "Die Hülle hat Gruppen-Semantik, während Input oder Textarea das eigentliche Formularfeld bleiben. Benenne die Gruppe passend und verknüpfe das sichtbare Label mit dem Feld. Hilfe und Fehler bindest du ausdrücklich über aria-describedby an; Zusatztext baut diese Beziehung nicht selbst auf.",
+        "Ein Gruppenbutton ist standardmässig type=button und sendet deshalb durch seine Aktivierung kein Formular ab. Wenn du eine Sendeaktion entwirfst, wähle submit bewusst. Werteverarbeitung, Suchergebnisse, Validierung und Rückmeldungen gehören zur umgebenden Anwendung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz trägt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die exportierte Schnittstelle, die UX-Regeln, CSS, das Verhaltensmodell und die HTML/ARIA-Komposition. Die gebundene React-Quelle klärt insbesondere die Fokusweiterleitung und die Button-Standards.",
+        "Die Zustandsbeispiele beschreiben konkrete Kompositionen. Sie belegen keine fertige Suche und keine allgemeine Prüfung deiner Formularabläufe oder Hilfstechnologien. Prüfe Beschriftung, Fokusfolge und Rückmeldungen in deiner tatsächlichen Anwendung."
+      ]
+    }
+  ]
+}

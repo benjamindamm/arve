@@ -1,0 +1,209 @@
+{
+  "component": "input-group",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/component.json",
+      "sha256": "5e578bad20952f229feca1ca15a0362d5d6ea4bb68f06de726705db91d6446cd"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/ux.json",
+      "sha256": "422a68ca94017ccfa2e021552706936c07ad7e2563b84f337cf619f7a4c83f03"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/interface.json",
+      "sha256": "74553106f06f0eeb8fbb90d840b92ecea7f98d4bd427d5023b52a7c8b1f829af"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/stories.json",
+      "sha256": "d83768b24c89dd8927995a500b11658b5eec5a17c645fc95803a7e7ddb0a71a8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/behavior.scxml",
+      "sha256": "0780d6fcfcb50ad7759a19a4feb188f720f20124dbafd8883561731a2d6b0706"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/layout.css",
+      "sha256": "c958857b4f1a29c64ed6d4b830a4b0d5d68c21b617ffd16718b28042502ee1ad"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/accessibility.html",
+      "sha256": "5ce2160e780dafe6cb31fb13c2755998b537bc6a686d644b3cf95da78fbea8a9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/accessibility.rules.json",
+      "sha256": "eddfbf014b8a0c5313389ac252c20360223ecb536edcfcbd43cff176c231dbab"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/README.md",
+      "sha256": "234f689d7c70653034155d4c7517fd411b771159e32ca720cca2ef300c0df98d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source",
+      "sha256": "b1ed344e05b4161c240fff21b6e224fcc61cbe35d5a3aaa997de02c8fb25e1fe"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-composition",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Input Group kombiniert beschriftetes Input oder Textarea mit ergänzendem Text und unabhängigen Buttons.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-intent",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Berichtsuche und Betrag sind redaktionelle Einsatzentwürfe; CHF steht zusätzlich im Label, damit die Einheit nicht von einer automatischen Zusatzbeziehung abhängt."
+    },
+    {
+      "id": "anatomy-label",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Das Label wird ausdrücklich durch die Anwendung beigesteuert; InputGroupText ist kein automatisches Label.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/component.json",
+          "pointer": "/anatomy/label"
+        }
+      ]
+    },
+    {
+      "id": "variants-align",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Vier Addon-Ausrichtungen sind vorgesehen: inline-start, inline-end, block-start und block-end.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/component.json",
+          "pointer": "/visualContract/variants/align/values"
+        }
+      ]
+    },
+    {
+      "id": "variants-defaults",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Gruppenbuttons verwenden standardmässig type button, variant ghost und size xs; vier Gruppenbutton-Grössen sind vorgesehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "states-frame",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Der Gruppenrahmen reagiert auf Fokus innerhalb der Gruppe, aria-invalid am direkten Kontrollelement und dessen disabled-Zustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/layout.css",
+          "snippet": "[data-slot=\"input-group\"]:focus-within {\n  border-color: var(--ui-color-ring);\n  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);\n}"
+        }
+      ]
+    },
+    {
+      "id": "states-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Anwendung deaktiviert Kontrolle und Aktion ausdrücklich, wenn die ganze Gruppe nicht verfügbar ist.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "labels-not-addons",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Zusätze dürfen das Label nicht ersetzen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Textbearbeitung und Buttonaktivierung bleiben bei den komponierten Komponenten; das Addon ist nicht tastaturfokussierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-addon",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Fokusweiterleitung gilt für das erste Input, überspringt verschachtelte Buttons und wird durch einen eigenen Klickhandler ersetzt; Textarea wird nicht gesucht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source",
+          "snippet": "onClick={(e) => {\n        if ((e.target as HTMLElement).closest(\"button\")) {\n          return\n        }\n        e.currentTarget.parentElement?.querySelector(\"input\")?.focus()\n      }}\n      {...props}"
+        }
+      ]
+    },
+    {
+      "id": "semantics-relations",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz setzt ein natives Label, eine benannte Gruppe sowie ausdrücklich beschriebene Hilfe und Fehler ein.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "semantics-button",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "InputGroupButton erlaubt button, submit und reset und hat button als Standard.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/interface.json",
+          "pointer": "/modules/0/declarations/2/members/0"
+        }
+      ]
+    },
+    {
+      "id": "sources-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Referenzabschluss ist begrenzt und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input-group/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Zwei kurze Entwürfe trennen Wert, feste Einheit und Aktion sichtbar.",
+    "Einheit im sichtbaren Label wiederholt, da InputGroupText keine automatische Beschreibung herstellt.",
+    "Keine automatischen Such-, Leer- oder Validierungsfunktionen behauptet.",
+    "Addon-Klick auf Input begrenzt und Abweichung bei Textarea ausdrücklich benannt."
+  ],
+  "limits": [
+    "Statische redaktionelle Illustration ohne Implementierungs- oder Pixelnachweis.",
+    "Die konkreten Such-, Leer-, Validierungs- und Fokusabläufe der Anwendung sind hier nicht implementiert oder geprüft."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "command",
+  "title": "Command",
+  "summary": "Mit Command suchst du Anwendungsbefehle und führst sie gezielt aus. Suchtext, aktive Markierung und Aktionsaufruf bleiben getrennt.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Befehle finden und ausführen",
+      "paragraphs": [
+        "Mit Command bietest du einen durchsuchbaren Zugang zu Anwendungsaktionen, etwa zum Speichern oder Exportieren eines Berichts. Es eignet sich besonders, wenn erfahrene Personen viele Befehle rasch erreichen sollen. Die Eingabe grenzt Befehle ein; erst ihre Aktivierung löst die Aktion aus.",
+        "Wenn du einen Formularwert wie eine zuständige Person auswählen möchtest, prüfe stattdessen Combobox. Für wenige unmittelbar sichtbare Aktionen reichen Buttons; für eine kompakte Liste ohne Suche ist Dropdown Menu oft verständlicher. Verwende für eine umfangreiche Dokumentensuche ein Suchfeld mit eigener Ergebnisansicht, wenn Vorschauen und Trefferinformationen wichtiger sind als das direkte Ausführen von Befehlen."
+      ],
+      "links": [
+        {
+          "text": "Combobox",
+          "href": "/systems/shadcn/components/combobox",
+          "paragraph": 1
+        },
+        {
+          "text": "Dropdown Menu",
+          "href": "/systems/shadcn/components/dropdown-menu",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Aktionen für einen Bericht",
+      "paragraphs": [
+        "Im Beispiel suchst du nach einem Befehl für einen Bericht. «Bericht speichern» ist hervorgehoben, aber noch nicht ausgeführt. «Bericht exportieren» bleibt als weitere Aktion sichtbar. Die gedämpfte Freigabe ist nicht verfügbar.",
+        "Die Gruppenüberschrift erklärt den gemeinsamen Kontext. Der Kurzbefehl neben «Bericht speichern» ist ein Hinweis auf eine separat eingerichtete Tastenkombination. Plane für die deaktivierte Freigabe bei Bedarf eine zusätzliche Erklärung ein, etwa dass zuerst eine Prüfung abgeschlossen werden muss."
+      ],
+      "illustration": {
+        "src": "/component-examples/command.svg",
+        "alt": "Befehlsliste für einen Bericht mit Suchfeld, hervorgehobenem Speichern, Exportieren und gedämpfter Freigabe. Neben Speichern steht der Hinweis ⌘S.",
+        "caption": "Statische Illustration · Die Hervorhebung zeigt den aktiven Befehl, keine erfolgreiche Ausführung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Suche oben, Aktionen darunter",
+      "paragraphs": [
+        "Der Rahmen bündelt Suchfeld und scrollbare Ergebnisliste. Gruppenüberschriften gliedern verwandte Befehle; Trennlinien helfen zwischen unterschiedlichen Aufgabenbereichen. Halte die Aktionsnamen links gut lesbar und ergänzende Tastaturhinweise rechts.",
+        "Die aktive Zeile erhält eine Hintergrundfläche. Ein optionales Häkchen ist davon unabhängig und wird von der Anwendung gesetzt. Es bedeutet weder automatisch «aktiv» noch «ausgeführt». Enthält die Zeile einen Tastaturhinweis, blendet die Quelle dieses Häkchen aus."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eingebettet oder als Palette",
+      "paragraphs": [
+        "Du kannst Command direkt in einen Arbeitsbereich einbetten oder mit CommandDialog als modale Palette öffnen. Wähle die eingebettete Form für dauerhaft benötigte Aktionen und die Palette für einen vorübergehenden Zugriff. Eigene Farb- oder Grössenvarianten sind nicht ausgewiesen.",
+        "Standardmässig filtert und sortiert die Komponente nach unscharfer Textübereinstimmung. Übernimmst du die Filterung selbst, musst du auch die passenden Einträge bereitstellen. Für zyklische Navigation lässt sich loop einschalten; standardmässig stoppt die Navigation am Listenende."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Markieren ist noch kein Ausführen",
+      "paragraphs": [
+        "Beim Tippen ändern sich Treffer und möglicherweise die aktive Markierung. Pfeiltasten oder Zeiger können einen anderen Eintrag hervorheben. Erst Enter oder die Aktivierung eines verfügbaren Eintrags ruft dessen Aktion auf. Deaktivierte Einträge werden bei Navigation und Aufruf übersprungen.",
+        "Für eine leere Trefferliste ergänzt du eine verständliche Statusmeldung, etwa «Kein passender Befehl. Versuche einen anderen Suchbegriff.» Die Anwendung übernimmt die Aktion sowie Erfolgs- oder Fehlerrückmeldung. Eine Palette schliesst nach dem Aufruf nicht automatisch; entscheide das passend zum Ergebnis. Einen gemeinsamen deaktivierten Zustand für die gesamte Komponente gibt es nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Aktion und Gegenstand benennen",
+      "paragraphs": [
+        "Schreibe «Bericht exportieren» statt «Ausführen» oder «Export». Verwende kurze, eindeutig unterscheidbare Aktionsnamen und aussagekräftige Gruppen wie «Bericht» und «Ansicht». Ergänze Suchbegriffe bei Bedarf über keywords, statt alle Synonyme sichtbar in eine Zeile zu packen.",
+        "Gib jedem Eintrag einen stabilen, eindeutigen Wert; leite ihn nicht aus veränderlichem Anzeigetext ab. Benenne die Suche zugänglich, beispielsweise «Berichtsbefehle suchen». Ein Platzhalter allein ersetzt diesen Namen nicht. Passe auch Titel und Beschreibung der Dialogpalette an deine Aufgabe und Sprache an."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Im Suchfeld bleiben und navigieren",
+      "paragraphs": [
+        "Mit Tab erreichst du das eingebettete Suchfeld. Pfeil auf und ab ändern den aktiven Eintrag, Home und End springen zum ersten beziehungsweise letzten verfügbaren Eintrag. Enter ruft den aktiven Befehl auf. Der Eingabefokus bleibt im Suchfeld; die aktive Option wird darüber für Hilfstechnologien referenziert.",
+        "Bei standardmässig eingeschaltetem vimBindings stehen zusätzlich Ctrl+n/j für vorwärts und Ctrl+p/k für rückwärts zur Verfügung. Escape schliesst oder leert ein eingebettetes Command nicht. In CommandDialog übernimmt Dialog die Fokusführung, Rückgabe des Fokus und Escape-Behandlung. Biete einen erreichbaren Öffner und eine Schliessen-Schaltfläche an; diese ist standardmässig ausgeschaltet. Weder ein angezeigtes Kürzel noch CommandDialog richtet automatisch einen globalen Kurzbefehl ein."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Befehlszugang mit eigener Verantwortung",
+      "paragraphs": [
+        "Die Quelle nutzt cmdk: Das Suchfeld hat Combobox-Semantik, die Liste ist eine Listbox mit Optionen. Das ist trotz der auslösbaren Aktionen keine Menüstruktur und kein Formularfeld für einen ausgewählten Fachwert. Gruppenüberschriften benennen zusammengehörige Optionen.",
+        "Halte Suchtext, aktive Markierung, Aktionsaufruf und Dialogöffnung getrennt. Der Wert von Command beschreibt die Markierung; onSelect am Eintrag löst die Aktion aus. Bei kontrollierter Markierung übernimmst du den gemeldeten Wert. Das Ignorieren der Meldung ist kein zugesicherter Weg, eine Markierungsänderung zu verhindern."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Grundlage und Reichweite",
+      "paragraphs": [
+        "Die Seite gleicht Schnittstelle, Zustandsmodell, CSS, HTML/ARIA-Regeln und statische Zustandsbeispiele des veröffentlichten Exports ab. Der Contract ist im begrenzten Referenzumfang vollständig beschrieben; daraus folgt keine allgemeine Freigabe für deine Anwendung. Prüfe insbesondere eigene Befehle, Rückmeldungen und die zusammengesetzte Dialogbedienung im tatsächlichen Einsatz."
+      ]
+    }
+  ]
+}

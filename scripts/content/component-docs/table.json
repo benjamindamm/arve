@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "table",
+  "title": "Table",
+  "summary": "Mit Table vergleichst du gleichartige Daten zeilenweise. Klare Spaltenüberschriften und Einheiten machen die Werte auch ohne Farbe verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Gleichartige Daten vergleichen",
+      "paragraphs": [
+        "Setze Table ein, wenn jede Zeile dieselben Merkmale beschreibt und du Werte über mehrere Einträge hinweg vergleichen möchtest: etwa Räume nach Nutzungsdauer und Kosten oder Dokumente nach Umfang. Die gemeinsame Spaltenstruktur hilft dir, Unterschiede schnell zu erkennen.",
+        "Für einzelne Angaben ohne Vergleichsaufgabe genügt meist eine Liste; für eigenständige Inhalte mit längeren Beschreibungen passt eine Card. Brauchst du Sortierung, Filter oder eine Auswahl von Datensätzen, prüfe Data Table. Solche Funktionen gehören nicht zur einfachen Table und müssen separat zusammengesetzt werden. Verwende Tabellen nicht bloss zur Anordnung einer Seite."
+      ],
+      "links": [
+        {
+          "text": "Card",
+          "href": "/systems/shadcn/components/card",
+          "paragraph": 1
+        },
+        {
+          "text": "Data Table",
+          "href": "/systems/shadcn/components/data-table",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Raumnutzung auf einen Blick",
+      "paragraphs": [
+        "Der Entwurf vergleicht drei Räume im gleichen Monat. Raumname, Nutzungsstunden und Kosten bilden jeweils eine vollständige Zeile. Die Einheiten stehen in den Spaltenüberschriften, die Zahlen sind für diesen Entwurf rechts ausgerichtet. So erkennst du auch die unterschiedlichen Grössenordnungen.",
+        "Die hervorgehobene Fusszeile fasst beide Zahlenkolonnen zusammen. Die Beschriftung unter der Tabelle nennt Zeitraum und Datenumfang. Sie erklärt den Datensatz, statt nur das Wort «Tabelle» zu wiederholen."
+      ],
+      "illustration": {
+        "src": "/component-examples/table.svg",
+        "alt": "Tabelle zur Raumnutzung: Atelier 10 Stunden und 450 Franken, Seminarraum 8 Stunden und 360 Franken, Werkraum 6 Stunden und 270 Franken; total 24 Stunden und 1080 Franken.",
+        "caption": "Statische Illustration · Vergleich von Nutzungsstunden und Raumkosten mit gemeinsamer Summenzeile.",
+        "minWidth": 560
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Kopf, Daten und Zusammenfassung",
+      "paragraphs": [
+        "Der Tabellenkopf benennt die Spalten. Darunter folgen die Datenzeilen mit Überschriftszellen und Datenzellen. Eine Zeilenüberschrift wie «Atelier» macht deutlich, zu welchem Eintrag die Werte gehören. Eine optionale Fusszeile eignet sich für Summen, sofern diese fachlich sinnvoll sind.",
+        "Die Tabellenbeschriftung steht in dieser Referenz mit Abstand unter den Daten. Der umgebende Container begrenzt die Breite. Texte dürfen umbrechen; reicht der Platz trotzdem nicht aus, ermöglicht er Scrollen. Plane auf schmalen Bildschirmen genügend Raum für verständliche Überschriften ein und prüfe die Tabelle mit ihren tatsächlichen Inhalten."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Inhalt wählen, Hervorhebung begrenzen",
+      "paragraphs": [
+        "Table bietet keine eigene Auswahl an Grössen oder Farbvarianten. Du stellst Kopf, Körper, Fusszeile und Beschriftung passend zum Datensatz zusammen. Lass die Fusszeile weg, wenn eine Zusammenfassung keine hilfreiche Aussage ergibt.",
+        "Eine Anwendung kann eine Zeile als ausgewählt darstellen lassen. Diese Hinterlegung ist nur eine Darstellung eines von aussen gesetzten Zustands. Table stellt dafür weder eine Auswahlbedienung noch eine gespeicherte Auswahl bereit."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Daten ändern sich durch die Anwendung",
+      "paragraphs": [
+        "Die Tabelle zeigt die gelieferten Zeilen. Aktualisiert die Anwendung den Datensatz, ersetzt sie die Inhalte; Table verschiebt den Fokus dabei nicht automatisch. Eine Zeile erhält beim Darüberfahren mit der Maus eine dezente Hinterlegung. Daraus entsteht keine Klickaktion.",
+        "Plane Ladephase, fehlende Einträge und Abruffehler in der umgebenden Ansicht. Zeige eine klare Meldung wie «Für Oktober liegen noch keine Buchungen vor», statt eine leere Tabelle als fertiges Ergebnis stehen zu lassen. Ein Fehler beim Laden ist eine andere Situation als ein erfolgreich geladener, leerer Datensatz."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Überschriften, Zahlen und Einheiten",
+      "paragraphs": [
+        "Schreibe «Kosten (CHF)» statt «Wert» und «Nutzung (Std.)» statt «Info». Halte Überschriften kurz, aber eindeutig. Lange Erläuterungen passen besser in einen begleitenden Text als in jede Zelle.",
+        "Verwende innerhalb einer Spalte dieselbe Einheit, Zahlenschreibweise und Genauigkeit. Rechts ausgerichtete Zahlen erleichtern den direkten Vergleich. Unterscheide fehlende Werte von null und erkläre verwendete Zeichen wie einen Gedankenstrich. Kürze wichtige Raumnamen nicht so stark, dass du die Einträge verwechseln kannst."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Lesen ohne eigene Tabellensteuerung",
+      "paragraphs": [
+        "Die gewöhnliche Tabelle besitzt keine eigene Tastatursteuerung und keine wandernde Zellfokussierung. Ihre Textzellen sind keine zusätzlichen Tabstopps. Screenreader nutzen die native Tabellenstruktur und die Beziehungen zu den Überschriften.",
+        "Enthalten Zellen Links, Buttons oder Eingaben, behalten diese ihre eigene Bedienung und benötigen verständliche Namen. Benenne eine Aktion beispielsweise mit Bezug auf den Raum. Die Table selbst liefert diese Aktionen nicht. Prüfe bei breiten Tabellen auch, ob der Scrollbereich in deiner Anwendung mit der Tastatur erreichbar und bedienbar ist."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Native Beziehungen erhalten",
+      "paragraphs": [
+        "Die Bausteine verwenden native Tabellenelemente. Du verantwortest die Beschriftung und die Zuordnung der Überschriften: einfache Spalten- und Zeilenüberschriften über scope, komplexere Beziehungen bei Bedarf über IDs und headers. Sichtbare Texte müssen die Daten auch ohne Hover oder Farbhervorhebung vermitteln.",
+        "Ergänze für die gewöhnliche Tabelle keine ARIA-Grid-Rolle. Eine tabellarische Ansicht in einem Formular oder Dialog braucht weiterhin die passende Tabellenstruktur; enthaltene Eingaben und Aktionen müssen zusätzlich die Regeln ihres jeweiligen Elements erfüllen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Grundlage sind der veröffentlichte Table-Contract mit React-Schnittstelle, CSS, Zustandsmodell, HTML-Semantik und statischen Beispielen. Diese Quellen belegen die einfache native Tabelle und ihre Darstellungsregeln. Empfehlungen zur Zahlenausrichtung, Inhaltswahl und zu Meldungen sind redaktionelle Gestaltungsentscheidungen.",
+        "Die Illustration ist ein redaktioneller Entwurf. Sie belegt weder eine laufende Implementierung noch eine allgemeine Freigabe für assistive Technologien oder andere Plattformen."
+      ]
+    }
+  ]
+}

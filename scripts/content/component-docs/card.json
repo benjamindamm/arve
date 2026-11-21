@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "card",
+  "title": "Card",
+  "summary": "Eine Card fasst einen Gegenstand mit Überschrift, Inhalt und optionalen Aktionen zusammen. Sie hilft, eigenständige Gruppen in einer Übersicht zu erkennen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine eigenständige Inhaltsgruppe",
+      "paragraphs": [
+        "Verwende eine Card für einen überschaubaren Gegenstand mit eigener Überschrift, etwa ein Projekt mit Status, nächstem Termin und einem Zugang zu den Details. Der gemeinsame Rahmen macht deutlich, welche Angaben zusammengehören.",
+        "Für viele gleichartige Datensätze, deren Werte spaltenweise verglichen werden sollen, empfehlen wir eine Table. Für einen kurzen Abschnitt innerhalb eines fortlaufenden Textes genügt häufig eine Überschrift mit Abstand. Setze keine Card in eine weitere Card, wenn dadurch unklar wird, welche Fläche zu welcher Aktion gehört."
+      ],
+      "links": [
+        {
+          "text": "Table",
+          "href": "/systems/shadcn/components/table",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Projektstand mit klarem nächsten Schritt",
+      "paragraphs": [
+        "Das Beispiel zeigt das Projekt «Bibliotheksumbau». Unter der Einordnung «Stand der Vorbereitung» folgen die verbleibenden Aufgaben und der nächste Besprechungstermin. Der Link «Projekt öffnen» im Fuss führt zu den Details.",
+        "Überschrift, Einordnung und konkrete Angaben sind auch ohne Farbe verständlich. Der Fuss setzt den nächsten Schritt vom Lesebereich ab. Nur der Link öffnet das Projekt; Rahmen und Leerfläche erhalten keine zusätzliche Klickfunktion. So bleibt die Handlung eindeutig, auch wenn später eine weitere Aktion hinzukommt."
+      ],
+      "illustration": {
+        "src": "/component-examples/card.svg",
+        "alt": "Projektkarte Bibliotheksumbau mit Stand der Vorbereitung, drei offenen Aufgaben, dem nächsten Termin und einem Link Projekt öffnen.",
+        "caption": "Statische Illustration · Projektübersicht mit eigenständigem Link im Fuss."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Kopf, Inhalt und Abschluss ordnen",
+      "paragraphs": [
+        "Der Rahmen hält die Gruppe zusammen. Im Kopf stehen Titel und ergänzende Beschreibung untereinander. Eine optionale Aktion steht seitlich daneben; sie braucht ein eigenes bedienbares Element. Lass diese Aktion weg, wenn sie keinen zusätzlichen Nutzen bietet.",
+        "Der Inhaltsbereich trägt die eigentliche Information. Im Fuss stehen abschliessende Angaben oder Aktionen; mehrere Aktionen können umbrechen. Die Referenz passt die Höhe dem Inhalt an und nutzt eine fliessende Breite. Plane daher Platz für mehrzeilige Titel und längere Inhalte ein, statt die Card auf eine feste Beispielhöhe zu begrenzen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Normale oder kompakte Darstellung",
+      "paragraphs": [
+        "Die belegten Grössen sind default und sm. default ist die Voreinstellung. Wir empfehlen sie für einzelne Übersichten und Inhalte mit mehreren Absätzen. sm bietet geringere Abschnittsabstände und einen kleineren Titel und kann für kurze, wiederkehrende Zusammenfassungen sinnvoll sein.",
+        "Die kompakte Gestaltung folgt der CSS-Referenz; ein entsprechendes Figma-Muster ist nicht dokumentiert. Beide Grössen unterstützen die Leserichtung von links nach rechts oder von rechts nach links. Eigene Farb- oder Auswahlvarianten sind nicht beschrieben."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Inhalte aktualisieren, Aktionen separat führen",
+      "paragraphs": [
+        "Die Card zeigt ihren Inhalt an und kann neue Inhalte aus der Anwendung erhalten. Sie besitzt keinen eigenen Auswahl-, Öffnungs- oder Ladezustand. Das Verhaltensmodell beschreibt das Anzeigen, Entfernen und erneute Anzeigen der Fläche.",
+        "Ändert sich beispielsweise die Zahl offener Aufgaben, liefert die Anwendung den neuen Text. Lädt ein Projekt erst noch oder scheitert eine Aktion, muss die umgebende Anwendung eine passende Rückmeldung vorsehen. Ein Button innerhalb der Card behält seine eigenen Zustände; die gesamte Card wird dadurch nicht zu einem Button."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Gegenstand konkret benennen",
+      "paragraphs": [
+        "«Bibliotheksumbau» benennt die Gruppe besser als «Informationen». «3 Aufgaben offen» vermittelt mehr als «Aktuell». Verwende die Beschreibung für eine zusätzliche Einordnung und wiederhole dort nicht bloss den Titel.",
+        "Wir empfehlen einen kurzen Titel und wenige gut erfassbare Angaben. Lange Erläuterungen gehören in den Inhaltsbereich oder auf eine Detailseite. Beschrifte Aktionen mit ihrem Ziel: «Projekt öffnen» ist klarer als «Mehr». Bei mehreren Projektkarten muss auch der zugängliche Linkname das jeweilige Projekt unterscheidbar machen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Nur enthaltene Bedienelemente fokussieren",
+      "paragraphs": [
+        "Die Card selbst hat keine Tastaturbedienung und richtet weder einen eigenen Fokus noch eine Navigation mit Pfeiltasten ein. Füge keinen Tabstopp hinzu, nur um die Umrandung erreichbar zu machen.",
+        "Tab und Umschalt+Tab erreichen enthaltene Links, Buttons oder Eingabefelder nach deren eigener Reihenfolge. Ein nativer Link wird mit Enter geöffnet; für einen Button gelten dessen eigene Bedienregeln. Sorge für sichtbaren Fokus und aussagekräftige Namen an diesen Elementen. Der Projekttitel bleibt als echte Überschrift beim Lesen und bei der Überschriftennavigation erreichbar."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine Überschrift bewusst einsetzen",
+      "paragraphs": [
+        "Card und ihre Teile sind im beschriebenen React-Aufbau div-Elemente. Auch CardTitle erzeugt keine echte Überschrift. Füge ein Überschriftenelement ein und wähle dessen Ebene passend zur Seite. Das h2 der Referenz ist ein Beispiel und keine Vorgabe für jede Einbettung.",
+        "Der Rahmen erzeugt weder automatisch eine Landmarke noch einen Link. In einem Formular bleiben Feldbeschriftung, Fehlermeldung und Absenden Aufgaben der enthaltenen Formularelemente. In einer Übersicht bleiben die Ziele einzelner Links eigenständig. Vermeide eine klickbare Gesamtfläche, die weitere bedienbare Elemente verschachtelt oder deren Handlung überlagert."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz für Card belegt",
+      "paragraphs": [
+        "Die Seite gleicht Zweck und Aufbau mit den UX-Angaben und der Schnittstellenbeschreibung ab. CSS beschreibt die Anordnung, SCXML den einfachen Anzeigeablauf und HTML/ARIA die Verantwortung für Überschriften und enthaltene Aktionen. Die Beispielszenarien umfassen normale und kompakte Cards sowie eine Darstellung ohne Kopfaktion und eine mit umgekehrter Leserichtung.",
+        "Die Illustration ist ein redaktioneller Entwurf. Die Quellen beschreiben eine begrenzte React-Referenz und belegen keine allgemeine Freigabe für Anwendungen, andere Frameworks oder native Plattformen."
+      ]
+    }
+  ]
+}

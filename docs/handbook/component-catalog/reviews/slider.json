@@ -1,0 +1,221 @@
+{
+  "component": "slider",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/ux.json",
+      "sha256": "15d78d32c4ec811f7623e19f825e02138f105e2c19a5b8717eb139f13dab56c1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/stories.json",
+      "sha256": "93fe48193658f80e8e1bd4d1816cee36fec3b943209f5d48f52ff7689cb33a4e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.rules.json",
+      "sha256": "1e2bd44b192b6b8353aaaf8303079c976b6b1d56146013c76c34798996f21e24"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/component.json",
+      "sha256": "9bcefe9319ab56e9b1502ffa2b27c6437785a81941bdc46889da5e6d6045f27e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/slider/root/SliderRoot.d.ts.source",
+      "sha256": "42d6f9073547c04e135778dbae2f57e758b1506572ecbc84cbd9105376cb3b68"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/interface.json",
+      "sha256": "ce0cd3575bf7b71e10b2c2abc4e320c494f2eb8d67cf64ed62865a8a56ed506a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/README.md",
+      "sha256": "8ee139734895e26c86831b75b7fc8d5b22b1a4ab9a318760d07686457fca0a8f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/behavior.scxml",
+      "sha256": "17d090a2f4ddbbedfbc3e0045446a18d27cd1669bc7a35b4b386831c5040e158"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/layout.css",
+      "sha256": "b19370f2a0af75451da06829b19706803399e03f1c6f1a0c4619f34d2e72e61a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.html",
+      "sha256": "143ee6b7d3093f2d173b98182884207ece0bfea4ad2ddef1db7caaa9f1d7e067"
+    }
+  ],
+  "claims": [
+    {
+      "id": "bounded-values",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Begrenzten Zahlenwert oder geordneten Wertebereich einstellen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Input für bekannte exakte Zahlen, Progress für einen angezeigten Ablauf; redaktionelle Abgrenzung."
+    },
+    {
+      "id": "single-percent-example",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Einzelwert-Fixture verwendet [40], step 5 und Prozentformat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/stories.json",
+          "pointer": "/stories/0/inputs"
+        }
+      ]
+    },
+    {
+      "id": "thumb-focus",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Das native Range-Input im Griff ist das tatsächliche Fokus-/Tastaturelement.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.rules.json",
+          "pointer": "/semanticParts/input"
+        }
+      ]
+    },
+    {
+      "id": "variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Horizontal und vertikal sowie explizite Wertearrays sind ausgewiesen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "scalar-cardinality",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Skalare Props führen zu zwei Griffen; explizite Arrays bestimmen die Anzahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "collisions",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Bei Zeigerinteraktionen können Griffe schieben, tauschen oder anhalten; Mindestabstand ist konfigurierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/slider/root/SliderRoot.d.ts.source",
+          "snippet": "thumbCollisionBehavior?: 'push' | 'swap' | 'none' | undefined;"
+        }
+      ]
+    },
+    {
+      "id": "change-commit",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Getrennte abbrechbare Änderung und allgemeiner Abschluss nur bei geänderter, nicht abgebrochener Interaktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/interface.json",
+          "pointer": "/modules/0/declarations/0/events"
+        }
+      ]
+    },
+    {
+      "id": "escape-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Escape stellt keinen früheren Wert wieder her; deaktivierte Eingaben verlassen die Tab-Reihenfolge.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "range-naming",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Prozentformat liefert Werttext und Anfang-/Ende-Zusätze; Wrapper exponiert keine Benennung je Griff.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/README.md",
+          "snippet": "It uses Root format unit=percent so single/range native value text conveys units and source start/end range suffixes."
+        }
+      ]
+    },
+    {
+      "id": "keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeile, Page Up/Down, Umschalt-Pfeile, Home/End, Leserichtung und DOM-Reihenfolge sind geprüft.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "field-context",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Beschreibungen und Fehler über echten Base-UI-Field-Kontext; Root aria-describedby allein propagiert nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "form-name",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "name und form werden zur Formularzuordnung angeboten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/slider/root/SliderRoot.d.ts.source",
+          "snippet": "form?: string | undefined;"
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Quellenabschluss ist begrenzt; keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/slider/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Beispiel bleibt bei der belegten Einzelwert-Prozentskala; zusätzliche sichtbare Wertanzeige ausdrücklich als Anwendungsaufgabe beschrieben.",
+    "Exakte Werteingabe und reine Fortschrittsanzeige durch Input beziehungsweise Progress abgegrenzt.",
+    "Array-Kardinalität und echter Base-UI-Field-Kontext wegen wesentlicher Integrationsfolgen sichtbar erklärt."
+  ],
+  "limits": [
+    "Keine eigene Live-Demo auf der bestehenden Slider-Seite.",
+    "Wrapper stellt keine frei konfigurierbare Benennung je Griff bereit.",
+    "Statische Illustration belegt weder Laufzeitbedienung noch Pixelkonformität."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "item",
+  "title": "Item",
+  "summary": "Mit Item fasst du einen Listeneintrag aus Titel, ergänzenden Angaben und optionalen Aktionen zusammen. Du entscheidest ausdrücklich, ob die Fläche passiv bleibt oder selbst ein Ziel bildet.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Einträge mit Kontext erfassbar machen",
+      "paragraphs": [
+        "Verwende Item für wiederkehrende Listeneinträge, bei denen ein Titel allein nicht reicht: etwa Berichte mit Zeitraum, Dateiumfang und einer passenden Aktion. Du hältst diese Angaben räumlich zusammen, damit du einen Eintrag rasch erkennen und beurteilen kannst.",
+        "Wähle Card, wenn ein einzelner Inhalt mehr Raum, eine ausführliche Beschreibung oder mehrere eigenständige Bereiche braucht. Wähle Table, wenn du dieselben Merkmale vieler Einträge spaltenweise vergleichen willst. Item eignet sich für das Lesen einzelner Einträge; es bringt keine Auswahl- oder Sortierfunktion mit."
+      ],
+      "links": [
+        {
+          "text": "Card",
+          "href": "/systems/shadcn/components/card",
+          "paragraph": 1
+        },
+        {
+          "text": "Table",
+          "href": "/systems/shadcn/components/table",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht mit eigener Aktion",
+      "paragraphs": [
+        "Im Beispiel zeigt ein Eintrag den Jahresbericht mit Geschäftsjahr und Seitenzahl. Das Dokumentensymbol unterstützt die Orientierung; Titel und Metadaten bleiben auch ohne Symbol verständlich. Die ruhige Umrandung fasst alles zusammen.",
+        "Der Eintrag selbst ist eine passive Fläche. Nur «Öffnen» führt zur Detailansicht; sein zugänglicher Name sollte den Jahresbericht eindeutig nennen. Soll stattdessen die ganze Fläche zum Bericht führen, gestaltest du sie als einen Link und lässt die zusätzliche Aktion darin weg."
+      ],
+      "illustration": {
+        "src": "/component-examples/item.svg",
+        "alt": "Umrandeter Eintrag zum Jahresbericht 2025 mit Dokumentensymbol, Geschäftsjahr, 24 Seiten und separater Aktion Öffnen.",
+        "caption": "Statische Illustration · Passiver Berichtseintrag mit separatem Link zur Detailansicht."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Titel, Metadaten und Aktion ordnen",
+      "paragraphs": [
+        "Ein optionales Symbol oder Bild steht neben dem Inhaltsbereich. Dort folgen auf den Titel eine kurze Beschreibung oder Metadaten. Separate Aktionen stehen daneben; bei wenig Platz darf der Aufbau umbrechen. Optionale Kopf- und Fussbereiche nehmen die volle Breite ein, etwa für eine Kategorie oder zusätzliche Angaben.",
+        "Mehrere Einträge kannst du in ItemGroup zusammenfassen. Ein dekorativer ItemSeparator trennt sie optisch. Nutze Abstände und wiederkehrende Positionen so, dass Titel, Kontext und Aktionen über die Liste hinweg leicht auffindbar bleiben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Rahmen und Dichte bewusst wählen",
+      "paragraphs": [
+        "Belegt sind default ohne sichtbaren Rahmen, outline mit Umrandung und muted mit gedämpftem Hintergrund. Verwende den Rahmen zum klaren Abgrenzen und die gedämpfte Fläche für eine ruhig hervorgehobene Gruppe. Diese Varianten kennzeichnen keinen ausgewählten oder deaktivierten Eintrag.",
+        "Die Grössen default, sm und xs verändern die Abstände. Wähle eine kompaktere Grösse für kurze, dichte Listen und prüfe, ob Aktionen weiterhin gut bedienbar bleiben. Für Medien gibt es default, icon und image. Die Abstände von sm sind eine ausdrückliche Referenzentscheidung; dafür wird kein eigenes vermessenes natives Muster behauptet."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Inhalt und Rückmeldung auseinanderhalten",
+      "paragraphs": [
+        "Item stellt Inhalt dar und wird von der Anwendung aktualisiert oder entfernt. Es verwaltet selbst keinen Lade-, Auswahl- oder Befehlszustand. Wenn du einen Bericht öffnest, übernimmt die Anwendung Navigation und allfällige Rückmeldungen.",
+        "Die Gestaltung beschreibt eine Hintergrundänderung beim Darüberfahren und einen sichtbaren Tastaturfokus für fokussierbare Einträge. Eine solche Darstellung macht die passive Standardfläche noch nicht bedienbar. Ladefehler oder eine laufende Aktion musst du bei den zuständigen Inhalten oder Bedienelementen verständlich anzeigen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Eintrag eindeutig benennen",
+      "paragraphs": [
+        "Schreibe «Jahresbericht 2025» statt «Dokument» und ergänze «Geschäftsjahr 2025 · 24 Seiten» statt «Weitere Informationen». Halte den Titel möglichst kurz und nutze die Beschreibung für den unterscheidenden Kontext. Wiederhole den Titel dort nicht wortgleich.",
+        "Empfehlung: Benenne wiederkehrende Aktionen im zugänglichen Namen eindeutig, beispielsweise «Jahresbericht 2025 öffnen». Ein Symbol allein darf den Inhalt nicht identifizieren. Prüfe lange Titel und Übersetzungen im konkreten Aufbau, damit wesentliche Angaben erreichbar bleiben."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus nur für echte Ziele",
+      "paragraphs": [
+        "Die passive Standardfläche braucht keinen Tabstopp und hat keine eigene Tastenbedienung. Item installiert weder Tastatursteuerung noch eine Navigation mit Pfeiltasten. Mit Tab und Umschalt+Tab erreichst du die enthaltenen Links und Buttons in ihrer normalen Reihenfolge.",
+        "Ein nativer Link mit Ziel wird mit Enter geöffnet. Ein nativer Button wird mit Enter oder Leertaste ausgelöst. Bei einer als Link oder Button gerenderten Gesamtfläche gelten deren native Regeln; sorge für sichtbaren Fokus und einen verständlichen Namen. Die Art des Ziels entscheidet über das Element."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Listenstruktur und Interaktion ergänzen",
+      "paragraphs": [
+        "ItemGroup liefert eine Listenrolle. Den passiven Item-Zeilen musst du selbst die Rolle eines Listeneintrags geben. ItemTitle ist ein Titelcontainer; eine zur Seite passende Überschrift ergänzt du ausdrücklich. Rein dekorative Symbole und Trennlinien bleiben für assistive Technik verborgen.",
+        "Item ist standardmässig ein div und kann ausdrücklich als nativer Link oder Button gerendert werden. Verschachtle darin keine weiteren Links oder Buttons. Brauchst du mehrere unabhängige Aktionen, behältst du den passiven Container und setzt echte Bedienelemente hinein. Für eine verlinkte Zeile innerhalb einer Liste musst du auch die Listenstruktur passend zusammensetzen; das belegte Gesamtzeilen-Linkbeispiel steht ausserhalb der Liste."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Grundlage und Prüfgrenze",
+      "paragraphs": [
+        "Die Beschreibung stützt sich auf Schnittstelle, CSS, Verhaltensmodell, HTML/ARIA-Regeln und statische Beispiele des veröffentlichten shadcn-Exports. Diese trennen passive Inhalte von nativen Zielen und enthaltenen Aktionen. Der referenzierte Prüfstand ist begrenzt; daraus folgt keine allgemeine Freigabe deiner Anwendung. Prüfe insbesondere Namen, Listenstruktur und Fokus in deiner konkreten Zusammensetzung."
+      ]
+    }
+  ]
+}

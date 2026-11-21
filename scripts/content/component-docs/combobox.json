@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "combobox",
+  "title": "Combobox",
+  "summary": "Mit der Combobox suchst du in vorgegebenen Optionen und bestätigst einen oder mehrere Werte. Getippter Suchtext wird dabei nicht automatisch zur Auswahl.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Aus einer längeren Liste wählen",
+      "paragraphs": [
+        "Setze die Combobox ein, wenn du einen vorgegebenen Wert auswählen lässt und Tippen die Suche in einer längeren Liste erleichtert, etwa bei Standorten oder zuständigen Personen. Suchtext, gerade markierter Treffer und bestätigte Auswahl bleiben dabei getrennt.",
+        "Für wenige überschaubare Optionen ohne Suchfeld passt Select besser. Soll ein beliebiger Text als Ergebnis gelten, wähle Input; eine Suche mit Vorschlägen braucht ein passendes Autocomplete-Muster. Die Combobox übernimmt frei getippten Text nicht als Auswahl."
+      ],
+      "links": [
+        {
+          "text": "Select",
+          "href": "/systems/shadcn/components/select",
+          "paragraph": 1
+        },
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Einen Abholort eingrenzen",
+      "paragraphs": [
+        "Im Entwurf sucht du einen Abholort mit «Bern». Zwei vorhandene Standorte passen dazu. «Bern · Bahnhof» ist zur Auswahl markiert, aber noch nicht bestätigt: Deshalb fehlt das Auswahlhäkchen. Erst das Anklicken oder Bestätigen mit Enter übernimmt diesen Standort.",
+        "Der Hinweis vor dem Feld erklärt die Auswahlpflicht. Beide Treffer beginnen mit dem Ortsnamen und unterscheiden sich durch einen kurzen Zusatz. So kannst du auch nach dem Filtern eindeutig entscheiden."
+      ],
+      "illustration": {
+        "src": "/component-examples/combobox.svg",
+        "alt": "Combobox Abholort mit Suchtext Bern und zwei Treffern: Bern · Bahnhof ist markiert, Bern · Altstadt ist der zweite Treffer. Noch kein Standort ist ausgewählt.",
+        "caption": "Statische Illustration · Suchtext und markierter Treffer vor der Bestätigung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Feld und Treffer gehören zusammen",
+      "paragraphs": [
+        "Platziere die sichtbare Feldbeschriftung über dem Eingaberahmen. Das Textfeld nimmt die Suche auf; eine benannte Öffnen-Aktion macht die Liste zusätzlich erreichbar. Das Popup erscheint standardmässig darunter und am Feldanfang ausgerichtet. Halte diese räumliche Zuordnung auch bei wenig Platz erkennbar.",
+        "In der Liste kennzeichnet eine hinterlegte Zeile die aktuelle Markierung, ein Häkchen die bestätigte Auswahl. Gruppenüberschriften gliedern umfangreiche Inhalte. Sie ersetzen die Feldbeschriftung nicht. Bei Mehrfachauswahl stehen bestätigte Werte als Chips zusammen mit dem weiteren Eingabefeld im Rahmen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eine oder mehrere Auswahlen",
+      "paragraphs": [
+        "Wähle die Einfachauswahl für genau einen Standort. Für mehrere zuständige Personen ist die belegte Mehrfachauswahl mit Chips passend; jeder Chip repräsentiert einen gewählten Wert und kann entfernt werden. Plane dafür Platz zum Umbrechen ein.",
+        "Öffnen- und Leeren-Aktionen sowie die Entfernen-Aktion an Chips sind konfigurierbar. Die Referenz setzt bewusst benannte Aktionen zusammen. Eigene Farb- oder Grössenvarianten sind hier nicht ausgewiesen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Suchen ist noch kein Übernehmen",
+      "paragraphs": [
+        "Beim Tippen wird die Liste gefiltert. Standardmässig wird kein Treffer automatisch markiert. Eine Markierung durch Navigation ändert den Auswahlwert noch nicht. Zeige «Kein Abholort gefunden», wenn die Suche keine Optionen liefert; daraus entsteht kein neuer Standort.",
+        "Bei Mehrfachauswahl bleibt die Liste nach einer ungefilterten Auswahl offen. Nach einer gefilterten Auswahl mit Eingabefeld ausserhalb des Popups schliesst sie. Ein schreibgeschütztes Feld erlaubt weiterhin das Durchsehen, aber keine Wertänderung; ein deaktiviertes Feld blockiert Änderungen.",
+        "Die Anwendung verantwortet Pflichtprüfung, Fehlermeldungen und allfälliges Nachladen. Verbinde einen Fehler wie «Wähle einen Abholort aus der Liste» mit dem Feld. Sperre bei deaktivierter Verwendung sowohl die Wurzel als auch das Eingabefeld."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das gesuchte Objekt benennen",
+      "paragraphs": [
+        "«Abholort» beschreibt den erwarteten Wert klarer als «Suchen» oder «Bitte wählen». Ergänze bei Bedarf «Tippe einen Ort und wähle einen Standort». Ein Platzhalter allein genügt nicht als Beschriftung.",
+        "Halte Optionen kurz und unterscheidbar: «Bern · Bahnhof» hilft mehr als zweimal «Bern». Verwende vollständige verständliche Namen statt interner Kennungen. Benenne zusätzliche Aktionen konkret, etwa «Abholorte anzeigen», «Auswahl leeren» oder «Anna Keller entfernen»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Im Feld bleiben und gezielt bestätigen",
+      "paragraphs": [
+        "Mit den Pfeiltasten navigierst du durch Treffer, während der Tastaturfokus im Textfeld bleibt. Enter bestätigt den markierten Treffer; deaktivierte Optionen lassen sich nicht übernehmen. Normales Bearbeiten und die Texteingabe mit Eingabemethoden bleiben erhalten.",
+        "Escape schliesst ein geöffnetes Popup ohne Bestätigung. Wenn der geschlossene Popup-Inhalt nicht mehr im Dokument vorhanden ist, fordert Escape zusätzlich das Leeren von Suchtext und Auswahl an, sofern das Feld bearbeitbar ist. Berücksichtige diesen Unterschied besonders im Dialog.",
+        "Bei Mehrfachauswahl unterstützt die Quelle Pfeiltasten sowie Rücktaste und Delete für die Chip-Navigation und das Entfernen. Die benannten Zusatzaktionen der Referenz sind ausdrücklich per Tab erreichbar. Sorge für einen sichtbaren Fokus und einen zugänglichen Namen des tatsächlichen Eingabefelds."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Auswahlwert und Formular sauber verbinden",
+      "paragraphs": [
+        "Das Eingabefeld trägt die Combobox-Semantik, die Trefferliste ist eine Listbox und jeder Treffer eine Option. Die aktive Option wird über aria-activedescendant vermittelt. Verknüpfe die echte Feldbeschriftung ausdrücklich mit dem Input; ein Name am umgebenden Rahmen genügt nicht.",
+        "Verarbeite im Formular den bestätigten Auswahlwert getrennt vom Suchtext. Bei Mehrfachauswahl ist der Wert eine Liste. Stelle die Optionen an der Wurzel bereit, damit Filterung und die zugänglich angekündigte Leermeldung zusammenarbeiten. Wenn die Anwendung Werte oder Öffnung steuert, muss sie die jeweiligen Änderungsanfragen selbst übernehmen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Grundlage und Reichweite",
+      "paragraphs": [
+        "Die Seite beruht auf dem aktuellen Base-UI-Contract: Schnittstelle, Gestaltungsregeln, Zustandsmodell und HTML/ARIA-Referenz sowie den gebundenen Originalhinweisen zur Auswahl aus festen Optionen. Die statischen Zustandsbeispiele umfassen unter anderem leere Treffer, Chips, Fehler und deaktivierte Felder.",
+        "Der Quellenabschluss belegt keine allgemeine Freigabe deiner Anwendung. Prüfe insbesondere das Zusammenspiel mit Formular oder Dialog, die benannten Zusatzaktionen und das Escape-Verhalten in deiner konkreten Umsetzung."
+      ]
+    }
+  ]
+}

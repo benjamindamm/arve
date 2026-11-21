@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "popover",
+  "title": "Popover",
+  "summary": "Öffne kurze Zusatzinhalte oder wenige Einstellungen direkt bei ihrem Auslöser. So kannst du eine kleine Aufgabe erledigen, während der Zusammenhang auf der Seite sichtbar bleibt.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine kleine Aufgabe am richtigen Ort",
+      "paragraphs": [
+        "Wähle ein Popover, wenn du bewusst einen Zusatzbereich öffnen möchtest: etwa um einen Projektnamen zu ändern oder wenige Ansichtseinstellungen anzupassen. Der Bezug zum auslösenden Button soll dabei klar bleiben.",
+        "Für eine kurze Erklärung ohne Bedienelemente passt ein Tooltip. Für eine ergänzende Vorschau zu einem Link kommt eine Hover Card infrage. Brauchst du mehrere Arbeitsschritte, viel Inhalt oder eine Entscheidung, die volle Aufmerksamkeit verlangt, wähle einen Dialog. Verstecke unverzichtbare Informationen nicht im Popover."
+      ],
+      "links": [
+        {
+          "text": "Tooltip",
+          "href": "/systems/shadcn/components/tooltip",
+          "paragraph": 1
+        },
+        {
+          "text": "Hover Card",
+          "href": "/systems/shadcn/components/hover-card",
+          "paragraph": 1
+        },
+        {
+          "text": "Dialog",
+          "href": "/systems/shadcn/components/dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Einen Projektnamen ändern",
+      "paragraphs": [
+        "Der Button «Projektname ändern» öffnet einen kleinen Bereich mit Titel, Erklärung und beschriftetem Eingabefeld. «Speichern» und «Schliessen» machen zwei verschiedene Absichten erkennbar.",
+        "Für diesen Entwurf empfehlen wir: Speichere erst nach erfolgreicher Prüfung, zeige Fehler am Feld und schliesse nach erfolgreichem Speichern. «Schliessen» verwirft hier ungespeicherte Eingaben. Diese Regeln muss deine Anwendung umsetzen; das Popover selbst speichert und verwirft keine Daten."
+      ],
+      "illustration": {
+        "src": "/component-examples/popover.svg",
+        "alt": "Unter dem Button Projektname ändern ist ein Popover mit dem Titel Projektname, dem Feld Name mit Wochenbericht und den Buttons Schliessen und Speichern geöffnet.",
+        "caption": "Statische Illustration · Ein kurzes Formular mit getrennten Aktionen zum Schliessen und Speichern."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Auslöser und Inhalt gehören zusammen",
+      "paragraphs": [
+        "Der Auslöser bleibt auf der Seite. Die darüberliegende Fläche enthält einen Kopf mit Titel und kurzer Beschreibung sowie den eigentlichen Inhalt. Eingabefelder und Aktionsbuttons ergänzt du passend zur Aufgabe.",
+        "Die Referenz begrenzt die Breite auf höchstens 288 Pixel und lässt lange Wörter umbrechen. Plane deshalb kurze Inhalte. Die Positionierung und das Ausweichen an Bildschirmrändern übernimmt das zugrunde liegende Primitive; feste Bildschirmkoordinaten gehören nicht in deinen Entwurf."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Platzierung wählen, Modalität bewusst entscheiden",
+      "paragraphs": [
+        "Es gibt keine eigenen Farb- oder Grössenvarianten. Du kannst Seite, Ausrichtung und Abstände wählen. Standardmässig erscheint der Inhalt mittig unter dem Auslöser mit 4 Pixel Abstand. Eine Ausrichtung am Anfang hilft, wenn die linke Inhaltskante zum Button passen soll.",
+        "Normalerweise bleibt die Umgebung bedienbar. Die zusätzlichen Einstellungen modal=true und trap-focus verändern dieses Verhalten. Plane sie erst mit der passenden Schliessmöglichkeit: Bei modal=true aktiviert Base UI den Fokusfang nur mit seinem Close-Primitive innerhalb des Popups; bei trap-focus verlangt die Quelle dieses Element für Touch-Screenreader. Der shadcn-Wrapper exportiert dafür kein eigenes PopoverClose."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen und Schliessen sind keine Speicherung",
+      "paragraphs": [
+        "Nach dem Aktivieren wird der Inhalt eingeblendet und erhält Fokus. Escape oder ein Druck ausserhalb schliessen ihn im Standardverhalten; ohne Modalität kann auch das Verlassen mit dem Fokus schliessen. Nach der Schliessphase geht der Fokus normalerweise zum Auslöser zurück.",
+        "Eine Anwendung kann den offenen Zustand selbst steuern und Änderungen ablehnen. Lege bei Formularen ausdrücklich fest, was bei jedem Schliessweg mit Eingaben geschieht. Ladezustand, Validierungsfehler und Speicherbestätigung sind Aufgaben deiner Anwendung. Eine geschlossene Fläche bestätigt keinen erfolgreichen Speichervorgang."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aufgabe schon am Button benennen",
+      "paragraphs": [
+        "«Projektname ändern» erklärt den Zweck besser als «Öffnen» oder ein unbeschriftetes Zahnrad. Verwende im Bereich einen passenden Titel wie «Projektname» und beschrifte das Feld mit «Name»; ein Platzhalter ersetzt dieses Label nicht.",
+        "Halte die Erklärung auf einen kurzen Satz beschränkt. Beschrifte eine Aktion nur mit «Speichern», wenn sie wirklich Daten übernimmt. Für eine reine Schliessaktion passt «Schliessen» besser als das unklare «Fertig»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus in den Zusatzbereich führen",
+      "paragraphs": [
+        "Du erreichst den auslösenden Button mit Tab und aktivierst ihn mit Enter oder Leertaste. Beim Öffnen erhält normalerweise das erste mit Tab erreichbare Element Fokus. Bei Touch fokussiert Base UI stattdessen die Fläche, damit nicht sofort die Bildschirmtastatur aufgeht.",
+        "Mit Tab und Umschalt+Tab bewegst du dich durch die Bedienelemente. Im Standardmodus bleibt der Fokus nicht eingeschlossen. Escape fordert das Schliessen an. Der zugängliche Name des Bereichs kommt vom zugeordneten Titel, seine Beschreibung vom Beschreibungstext. Prüfe angepasste Anfangs- und Rückkehrziele im konkreten Ablauf."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Auch ein kleines Popup braucht klare Zuständigkeiten",
+      "paragraphs": [
+        "Die Referenz verwendet einen Button als Auslöser und eine Fläche mit der Rolle dialog. Der Button teilt den geöffneten Zustand mit und verweist auf genau diese Fläche. Titel, Beschreibung und Kennungen müssen zu dieser Instanz gehören. Die Rolle dialog macht den Bereich allein noch nicht modal; die gebundene Implementierung setzt standardmässig auch kein aria-modal.",
+        "Innerhalb eines Dialogs musst du die Fokusfolge und das Schliessen beider Ebenen prüfen. Ein Formular im Popover braucht eigene Feldlabels und eine bewusste Formularzuordnung. Ein sichtbarer Schliessbutton wird von dir zusammengesetzt und angebunden, etwa über die Schliessaktion des Primitives."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Grundlage sind die exportierte Schnittstelle, die Gestaltungsregeln, der Zustandsablauf und die HTML-/ARIA-Referenz sowie die gebundenen shadcn- und Base-UI-Quellen. Die Quellen zeigen auch Formulare und ein Popover innerhalb eines Dialogs.",
+        "Die Illustration erklärt einen redaktionellen Entwurf. Sie belegt weder Speicherlogik noch Fokusverhalten. Der vollständige Referenzumfang ist keine allgemeine Freigabe für deine Anwendung oder alle Hilfstechnologien; prüfe insbesondere modale Anpassungen und den Umgang mit ungespeicherten Eingaben."
+      ]
+    }
+  ]
+}

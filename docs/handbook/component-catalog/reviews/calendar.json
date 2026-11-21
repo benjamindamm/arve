@@ -1,0 +1,271 @@
+{
+  "component": "calendar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/component.json",
+      "sha256": "976392d425788547a1e9be260b56139c7642af5740034eed3b589ff2f1e0ef0b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/ux.json",
+      "sha256": "093ff1c948a2b9c0a7d517bd2640ce35db4af9f657ffe612a6f65f0a92cbb280"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/interface.json",
+      "sha256": "f426f40d6116df8584ea83bdad8dd86bc3b92db9e5f696e6bcc3bed9a423b8a5"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/stories.json",
+      "sha256": "19d670a4fc0fe27157d453c40e966218eb988fdf5d148ad10f702457e9405e6c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/behavior.scxml",
+      "sha256": "ceb825e03c615f30157f6ac6ccaf1707eec477966461a54f9a321cad123e4902"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/layout.css",
+      "sha256": "487a5ea3fa3fb7a8ee01b5a526a0934f675f4f82a3286b019f43f9b921a41aad"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.html",
+      "sha256": "ee1e0ae6dc914a7e0cc286e680067cb13085ff55120b4be46cd02520f8299812"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+      "sha256": "227f746ae7efd2524c0d4d229318ac1a5e328222244ff1691eb29aea87f442be"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/README.md",
+      "sha256": "6f6fdd83991e742f6d4867d54435c688f2cfb8a6ab91e7e8e99291a4897ead99"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-local-dates",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Calendar wählt lokale Daten; Texteingabe und Uhrzeit gehören nicht zum Export.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "usage-birth-date",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für bekannte weit zurückliegende Daten wird eine direkte Datumseingabe empfohlen."
+    },
+    {
+      "id": "example-locale",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Technischer Referenzfall verwendet en-US, November 2026, Auswahl 12. und Sperre 13.; deutsche Lokalisierung ist Entwurfsentscheidung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-grid",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Monatskopf, Navigation, Wochentagszeile, Tageszellen und Statuszeile sind getrennte Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-frame",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Calendar ist standardmässig ungerahmt, Card oder Popover verantwortet den Rahmen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "variants-mode",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Quelle unterscheidet single, multiple, range sowie Modus ohne Auswahl; required single kann nicht leergeklickt werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "variants-density",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "28/38/48-Pixel-Zellen und explizite data-calendar-size-Attribute sind Referenzgestaltung, kein neues Upstream-size-Prop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/README.md",
+          "snippet": "compact 28px is an explicit data-calendar-size caller attribute, not a new upstream size prop."
+        }
+      ]
+    },
+    {
+      "id": "variants-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Optional sind Monatsauswahlfelder, Kalenderwochen und nicht interaktive Darstellung belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/README.md",
+          "snippet": "Optional dropdowns/week numbers and noninteractive mode retain actual source DOM."
+        }
+      ]
+    },
+    {
+      "id": "states-independent",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Auswahl, Fokus und Monat sind getrennt; Monatsgrenzen allein beschränken nicht die Auswahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "states-range",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "excludeDisabled setzt einen Bereich über ein gesperrtes Datum auf den neuen Anfang zurück.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "labels-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Zweck, vollständige Datumsbestätigung und dauerhafte Einschränkungen werden konkret empfohlen."
+    },
+    {
+      "id": "keyboard-repair",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Rohwrapper hat einen Fokusfehler; die Referenz ergänzt einen angeschlossenen ref.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-keys",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeile, Umschalt-Kombinationen, Bildtasten, Pos1/Ende und Enter/Space sowie kein Escape/Fokusfang sind explizit belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "semantics-grid",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Benanntes Monatsgrid, native Tagesbuttons und höflicher Status entsprechen der konkreten HTML-Projektion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.html",
+          "snippet": "role=\"grid\" aria-label=\"November 2026\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-controlled",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "onSelect macht selected massgebend; data-day ist sprachabhängig und kein stabiler ISO-Schlüssel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "semantics-behavior",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Das Modell übermittelt onSelect und behandelt Monatswechsel separat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/behavior.scxml",
+          "snippet": "<transition event=\"SOURCE_MONTH_CHANGE\">"
+        }
+      ]
+    },
+    {
+      "id": "sources-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Single und range sind ausgeübt; required/multiple bleiben quellenbeschriebene API-Varianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "sources-no-release",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Kein allgemeines Pixel-, Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    },
+    {
+      "id": "example-focus-prerequisite",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der frühe Einsatzhinweis benennt den dokumentierten Fokusfehler des unveränderten React-Wrappers und fordert die Caller-Korrektur samt Einbindungsprüfung; er behauptet keine bereits reparierte Implementierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/calendar/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Deutscher Liefertermin als Entwurf; Sprache und Montagbeginn ausdrücklich von en-US-Referenz abgegrenzt.",
+    "Quellenfehler und Referenzreparatur im Tastaturabschnitt sichtbar gemacht.",
+    "Keine lokale Calendar-Demo vorhanden; Illustration wird ausschliesslich statisch beschrieben."
+  ],
+  "limits": [
+    "Fokuskorrektur ist explizite Caller-Komposition; unveränderter Wrapper hat belegten Fokusfehler.",
+    "Required und multiple sind quellenbeschrieben, im genannten Referenzfall nicht ausgeübt.",
+    "Illustration und Quellenbeschreibung begründen keine allgemeine Laufzeit- oder AT-Freigabe."
+  ]
+}

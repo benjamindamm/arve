@@ -1,0 +1,225 @@
+{
+  "component": "command",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/README.md",
+      "sha256": "38d5e07fb179f30bf63140c96dbd35fb4ad8ccb9456b993bf7efee7e0af71406"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+      "sha256": "f45904351520c02203f632470f8dbdca5fbf61a968240db626d43f6c1cb7f5d9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/behavior.scxml",
+      "sha256": "ed43c459e6f32c9036b5eba2932df549724be80e5bd388d54580d4501bf60c3d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/component.json",
+      "sha256": "e7af65d735ec201f686d6c027fc9993b28d0c6e7cc9fe15d510b34120ba7013d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/layout.css",
+      "sha256": "7f35050d5978c3379e4787e8a15e256209800667123c6c99c926dd5a0f648e28"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/stories.json",
+      "sha256": "8dd8e4406e8377dbc9e5355850fbd0e49224939bc845695b86bb4fba16dac801"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/ux.json",
+      "sha256": "2c818fa67cd712c82cdffa48dd4026f6e234282f9c2436a7ab5e786d252a85f6"
+    }
+  ],
+  "claims": [
+    {
+      "id": "purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Command filtert und ruft Anwendungsbefehle auf; die Auswahl eines Fachwerts ist nicht sein Zweck.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Combobox für Formularwerte, Buttons für wenige Aktionen und eine eigene Ergebnisansicht für Dokumentensuche sind redaktionelle Auswahlhilfen."
+    },
+    {
+      "id": "example-highlight",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration trennt aktive Markierung und Ausführung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/stories.json",
+          "pointer": "/stories/1/expectation"
+        }
+      ]
+    },
+    {
+      "id": "example-reason",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die zusätzliche Erklärung einer gesperrten Freigabe ist eine redaktionelle Empfehlung."
+    },
+    {
+      "id": "anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Suchfeld und Liste sind getrennte Teile; Tastaturhinweis und optionales Häkchen sind eigenständige Elemente.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "indicator-hide",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Ein Tastaturhinweis blendet das optionale Häkchen aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/layout.css",
+          "snippet": "[data-slot=\"command-item\"]:has([data-slot=\"command-shortcut\"]) .cn-command-item-indicator {\n  display: none;\n}"
+        }
+      ]
+    },
+    {
+      "id": "variants-inline-dialog",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Eingebettete Form und Dialogpalette sind durch statische Fixtures belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/stories.json",
+          "pointer": "/stories/4/id"
+        }
+      ]
+    },
+    {
+      "id": "variants-filter-loop",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Unscharfe Filterung ist Standard, eigene Filterung ist möglich, loop ist standardmässig false.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "state-invoke",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Nur der Aufruf eines nicht deaktivierten Eintrags sendet onSelect; die Maschine schliesst die Palette dabei nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/behavior.scxml",
+          "snippet": "<transition event=\"SOURCE_ITEM_SELECT\" cond=\"typeof _event.data.value === 'string' &amp;&amp; !disabledItems.includes(_event.data.value)\">\n      <send event=\"onSelect\" target=\"#_parent\">\n        <param name=\"value\" expr=\"_event.data.value\" />\n      </send>\n    </transition>"
+        }
+      ]
+    },
+    {
+      "id": "state-empty",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Referenz ergänzt eine explizite Statusmeldung für keine Treffer; kein ganzer Root-disabled-Schalter ist vorgesehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "labels-values",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Stabile eindeutige Werte und keywords sind vorgesehen; der Root liefert den zugänglichen Eingabenamen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/component.json",
+          "pointer": "/anatomy/input-label"
+        }
+      ]
+    },
+    {
+      "id": "labels-action",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze Aktionsnamen mit Gegenstand, deutsche Suchbeschriftung und hilfreicher leerer Zustand sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeile, Home/End, Enter, zusätzliche Ctrl-Bindings, Fokus im Eingabefeld und unterschiedliche Escape-Verantwortung sind beschrieben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-close-shortcuts",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "showCloseButton ist standardmässig false; angezeigte Shortcuts und CommandDialog registrieren keine globalen Kürzel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Combobox, Listbox und Optionen unterscheiden sich von Menüsemantik; kontrollierte Highlight-Werte sind zu spiegeln und kein Veto.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sources-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Export beschreibt eine begrenzte Referenz und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/command/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Die Seite erklärt die Befehlsentscheidung gegenüber Combobox und Dokumentensuche konkret.",
+    "Die Illustration zeigt eine eingebettete Befehlsliste mit aktiver, nicht ausgeführter Zeile; der Hinweis ⌘S setzt eine separat eingerichtete Anwendungstaste voraus.",
+    "Keine eigenen Farb- oder Grössenvarianten erfunden; Dialog und Filter-/Navigationsoptionen getrennt erläutert.",
+    "Keine lokale Command-Demo gefunden; statische Illustration wird als solche bezeichnet."
+  ],
+  "limits": [
+    "Statische Fixtures belegen keine allgemeine Laufzeit-, Plattform- oder Hilfstechnologie-Freigabe.",
+    "Anwendungsaktionen, Rückmeldungen und globale Kurzbefehle liegen ausserhalb der Komponente."
+  ]
+}

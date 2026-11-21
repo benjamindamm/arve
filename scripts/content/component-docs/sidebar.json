@@ -1,0 +1,98 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "sidebar",
+  "title": "Sidebar",
+  "summary": "Mit der Sidebar wechselst du zwischen dauerhaften Anwendungsbereichen. Du planst Navigation und Arbeitsfläche gemeinsam für die aufgeklappte, eingeklappte und mobile Darstellung.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Wiederkehrende Ziele erreichbar halten",
+      "paragraphs": [
+        "Verwende die Sidebar, wenn du zwischen dauerhaften Bereichen einer Anwendung wechselst, etwa Übersicht, Berichte und Einstellungen. Sie hält diese Ziele neben dem Arbeitsbereich sichtbar. Plane schon im Entwurf, wie du wesentliche Ziele auch nach dem Einklappen erreichst.",
+        "Für wenige gleichrangige Ansichten innerhalb derselben Aufgabe passen Tabs besser. Für den Standort in einer Hierarchie ergänzt ein Breadcrumb die Orientierung; er ersetzt keine Navigation zu anderen Arbeitsbereichen. Eine Sidebar lohnt sich, wenn du diese Bereiche regelmässig brauchst."
+      ],
+      "links": [
+        {
+          "text": "Tabs",
+          "href": "/systems/shadcn/components/tabs",
+          "paragraph": 1
+        },
+        {
+          "text": "Breadcrumb",
+          "href": "/systems/shadcn/components/breadcrumb",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Berichte neben der Übersicht",
+      "paragraphs": [
+        "Der Entwurf zeigt eine aufgeklappte Desktop-Navigation für eine Berichtsverwaltung. «Übersicht» ist als aktuelle Seite hervorgehoben und stimmt mit der Überschrift im Arbeitsbereich überein. «Monatsberichte» und «Einstellungen» bleiben als weitere Ziele sichtbar.",
+        "Der Schalter oben im Arbeitsbereich verändert die Breite der Navigation. Er öffnet keine andere Seite. Diese Trennung hilft dir, den aktuellen Standort auch bei eingeklappter Sidebar beizubehalten."
+      ],
+      "illustration": {
+        "src": "/component-examples/sidebar.svg",
+        "alt": "Desktop-Entwurf mit Berichtsnavigation links, hervorgehobener Übersicht und gleichnamigem Arbeitsbereich rechts.",
+        "caption": "Statische Illustration · aufgeklappte Desktop-Navigation mit aktueller Seite."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Navigation und Arbeitsbereich zusammen planen",
+      "paragraphs": [
+        "Im Kopf kannst du den Bereich benennen oder eine Suche platzieren. Darunter ordnest du Ziele in beschrifteten Gruppen; Untereinträge machen eine zweite Ebene sichtbar. Der mittlere Inhaltsbereich kann scrollen, während der Fuss etwa Kontofunktionen aufnimmt.",
+        "Der Umschalter bleibt erreichbar neben der Navigation. Eine zusätzliche schmale Griffzone am Rand kann die Mausbedienung ergänzen. Nutze sie nicht als einzigen Zugang zum Ein- und Ausklappen. Badges und Zusatzaktionen brauchen genug Abstand zum eigentlichen Navigationsziel."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Breite, Seite und Einbettung wählen",
+      "paragraphs": [
+        "Du kannst die Sidebar links oder rechts sowie als sidebar, floating oder inset einsetzen. Entscheide die Einbettung zusammen mit dem Arbeitsbereich. Für das Einklappen sind offcanvas, icon und none vorgesehen: vollständig seitlich ausblenden, auf Symbole reduzieren oder dauerhaft offen darstellen.",
+        "Wähle die Symbolleiste nur, wenn die Ziele weiterhin verständlich und erreichbar sind. Bei none wird auch die responsive Sheet-Darstellung übersprungen; eine mobile Überlagerung steht damit nicht automatisch bereit. Für Menüeinträge sind sm, default und lg sowie eine Outline-Darstellung belegt. Wähle ihre Dichte passend zu Text und Bedienfläche."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Einklappen verändert nicht die aktuelle Seite",
+      "paragraphs": [
+        "Der Desktop-Zustand startet standardmässig offen. Die mobile Überlagerung besitzt einen eigenen, anfangs geschlossenen Zustand. Nach der initialen Darstellung erkennt die Quelle Ansichten unter 768 Pixeln als mobil; beim Wechsel der Breite werden beide Zustände weder synchronisiert noch zurückgesetzt.",
+        "Die aktive Seite setzt deine Anwendung unabhängig davon. Auch das dauerhafte Wiederherstellen der Breite musst du planen: Desktop-Anfragen schreiben ein Cookie für sieben Tage, der Provider liest es aber nicht automatisch ein. Selbst eine ignorierte gesteuerte Anfrage kann den angefragten Wert speichern. Mobile Änderungen schreiben dieses Desktop-Cookie nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Ziele statt Sammelbegriffe benennen",
+      "paragraphs": [
+        "Wähle kurze, unterscheidbare Ziele wie «Monatsberichte» und «Einstellungen». «Mehr» oder «Bereich 2» sagen wenig über den nächsten Schritt. Lange Namen werden gekürzt; prüfe deshalb deine echten Inhalte in der vorgesehenen Breite.",
+        "Gib Symbolzielen auch im eingeklappten Zustand einen vollständigen zugänglichen Namen. Ein Tooltip darf den Namen ergänzen, ihn aber nicht ersetzen. Benenne den Umschalter etwa «Berichtsnavigation umschalten» und zusätzliche Aktionen konkret, etwa «Bericht hinzufügen»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Tastatur und Fokus bewusst prüfen",
+      "paragraphs": [
+        "Mit Tab und Umschalt+Tab bewegst du dich durch die nativen Links und Schaltflächen. Enter folgt einem Link; Enter oder Leertaste betätigt den Umschalter. Ctrl+B beziehungsweise Meta+B schaltet ebenfalls um. Dieses globale Kürzel greift auch in Eingabefeldern und lässt sich über keine eigene Option abschalten.",
+        "Am Desktop entsteht beim Einklappen kein Dialog und keine Fokusfalle. Seitliches Ausblenden allein garantiert nicht, dass verborgene Ziele aus der Fokusreihenfolge verschwinden. Prüfe das in deiner Umsetzung. Mobil übernimmt Sheet die Fokusführung, Escape und Fokusrückgabe; ergänze einen sichtbaren Schliessen-Schalter, da der direkte Standardschalter hier verborgen ist."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Navigation entsteht durch deine Einbindung",
+      "paragraphs": [
+        "Fasse Seitenziele in einer benannten Navigation zusammen und verwende echte Links. Der normale Menübutton ist zunächst eine Schaltfläche. Die aktive Darstellung über isActive setzt kein aria-current; kennzeichne die aktuelle Seite zusätzlich mit aria-current=\"page\".",
+        "SidebarInset ist bereits ein main-Element. Vermeide deshalb einen weiteren verschachtelten Hauptbereich. Setze passende Überschriften für Gruppen und verknüpfe den Umschalter mit der gesteuerten Navigation. Mobil muss seine Aufgeklappt-Angabe den mobilen Zustand wiedergeben. Eine Suche braucht eine eigene Beschriftung und Anwendungslogik."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und verbleibende Grenzen",
+      "paragraphs": [
+        "Die Aussagen folgen der exportierten Schnittstelle, den Gestaltungsregeln, dem Zustandsmodell und der HTML/ARIA-Referenz. Die Illustration ist ein redaktioneller Entwurf. Der begrenzte Quellenreferenzumfang belegt keine allgemeine Freigabe deiner Anwendung; prüfe insbesondere Fokus beim Ausblenden, mobile Schliesswege, Namen und die Wiederherstellung des Zustands in deiner Einbindung."
+      ]
+    }
+  ]
+}

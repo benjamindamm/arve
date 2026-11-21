@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "trace",
+  "title": "Trace",
+  "summary": "Zeige einzelne Arbeitsschritte mit ihrem Stand und verständlichen Ergebnissen. Bei Bedarf kannst du zusätzliche Details aufklappen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Arbeitsschritte nachvollziehbar machen",
+      "paragraphs": [
+        "Mit Trace zeigst du, welche Ausführungs- oder Aktivitätsschritte eine Aufgabe umfasst. Setze die Komponente etwa bei der Berichtserstellung ein, wenn einzelne Schritte und ihre Ergebnisse für die Person relevant sind. Die Anwendung liefert Inhalt, Reihenfolge und Status. Einrückung allein belegt weder zeitliche Reihenfolge noch Bearbeitungsstand.",
+        "Brauchst du nur einen messbaren Gesamtfortschritt, passt Progress besser. Soll jemand Eingaben für den nächsten Schritt machen, ist ein Formular mit klarer Weiter-Aktion geeigneter. Trace stellt Arbeit dar; es führt niemanden automatisch durch einen Eingabeprozess."
+      ],
+      "links": [
+        {
+          "text": "Progress",
+          "href": "/systems/shadcn/components/progress",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht wartet auf die Verbindung",
+      "paragraphs": [
+        "Du siehst drei Schritte einer Berichtserstellung: Die Daten wurden eingelesen, die Berechnung ist fehlgeschlagen, der Export wartet. Der aufgeklappte Fehler erklärt die fehlende Verbindung und nennt die nächste Handlung. Die Formulierungen stammen aus der Beispielanwendung; Trace erzeugt diese Meldungen nicht.",
+        "Der abgeschlossene Schritt hat einen gewöhnlichen Titel. Er nutzt keinen erfundenen Erfolgsstatus. Eine erneute Berechnung würdest du über eine eigenständige Aktion der Anwendung anbieten. Das Öffnen der Fehlerdetails startet keinen neuen Versuch."
+      ],
+      "illustration": {
+        "src": "/component-examples/trace.svg",
+        "alt": "Berichtserstellung mit eingelesenen Daten, aufgeklapptem Berechnungsfehler wegen fehlender Verbindung und wartendem Export.",
+        "caption": "Statische Illustration · Redaktioneller Entwurf eines Ablaufs mit geöffneten Fehlerdetails."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Zeile, Zusatz und aufklappbares Detail",
+      "paragraphs": [
+        "Die Folge besteht aus kompakten Zeilen. Ein führendes Symbol unterstützt den Titel; eine Beschreibung ergänzt etwa Dauer oder Ursache. Stelle die wesentliche Aussage in den Titel und halte Zusatzinformationen daneben kurz. Symbole sind dekorativ und tragen keine alleinige Bedeutung.",
+        "Für ausführlichere Informationen kannst du eine Zeile als Aufklappschalter gestalten. Der nachgestellte Pfeil zeigt die Öffnung an, der Detailbereich steht darunter, zum Text eingerückt. Halte die Zuordnung zum auslösenden Schritt auch bei langen Beschreibungen erkennbar."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Schlichte Folge oder Details zum Öffnen",
+      "paragraphs": [
+        "Du kannst passive Zeilen verwenden oder mit der optionalen Collapsible-Zusammenstellung Details öffnen lassen. Wähle passive Zeilen, wenn Titel und kurze Beschreibung ausreichen. Verstecke längere Erläuterungen im Detailbereich, wenn sie nur bei Bedarf gebraucht werden.",
+        "Eigene Grössen- oder Farbvarianten sind nicht definiert. Die Statusdarstellungen laufend, Fehler und ausstehend gehören zum Bearbeitungsstand. Sie sind keine frei wählbaren dekorativen Stile."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Status aus der Anwendung übernehmen",
+      "paragraphs": [
+        "Ein plausibler Ablauf führt von ausstehend zu laufend und anschliessend zu einem beschriebenen Ergebnis oder Fehler. Trace erzwingt diesen Ablauf nicht. Die Anwendung aktualisiert die Zeilen; ein fehlender Status bedeutet nicht automatisch Erfolg. Fehler brauchen verständlichen Text, auch wenn die Darstellung zusätzlich eine Fehlerfarbe verwendet.",
+        "Das Aufklappen ist davon unabhängig. Details können offen oder geschlossen sein; ein deaktivierter Schalter ändert diesen Zustand nicht. Wenn deine Anwendung die Öffnung selbst steuert, muss sie Änderungswünsche verarbeiten. Die Referenz hält Texte stabil lesbar und reduziert die Bewegung beim Öffnen bei entsprechender Systemeinstellung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Ergebnis und Ursache konkret benennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Daten eingelesen» und «Berechnung fehlgeschlagen» statt «Fertig» und «Fehler». Ergänze «Keine Verbindung zur Datenquelle» als Ursache, wenn diese tatsächlich bekannt ist. Trenne eine beobachtete Störung von einer bloss vermuteten Erklärung.",
+        "Empfehlung: Beginne mit der Tätigkeit und halte den Titel kurz. Er kann in schmalen Ansichten gekürzt erscheinen; wichtige Informationen müssen dennoch vollständig zugänglich bleiben. Zeitangaben sind ergänzende Daten und ersetzen weder Status noch verständliche Handlungshinweise."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Nur den Aufklappschalter bedienen",
+      "paragraphs": [
+        "Passive Zeilen haben keine eigene Tastaturbedienung. Den nativen Aufklappschalter erreichst du mit Tab; Enter oder Leertaste öffnet und schliesst die Details. Sein sichtbarer Text benennt den betroffenen Schritt. Der Fokus wird sichtbar angezeigt.",
+        "Escape schliesst die Details nicht. Der Fokus bleibt frei beweglich und wird nicht im Bereich festgehalten. Eigenständige Aktionen im geöffneten Inhalt brauchen ihre übliche Bedienung und eigene verständliche Namen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Kein automatisches Live-Protokoll",
+      "paragraphs": [
+        "Trace ist ein passiver Inhaltscontainer mit Texten, kein automatisch angesagtes Live-Log. Wenn laufende Änderungen angekündigt werden müssen, liegt diese Entscheidung bei der umgebenden Aufgabe. Plane gezielte Meldungen, damit nicht jede interne Aktualisierung unterbricht.",
+        "Beim Aufklappen verbindet der Schalter seinen Öffnungszustand mit dem zugehörigen Detailbereich. Verwende die vorgesehene Collapsible-Zusammenstellung. Fehlerbehebung, erneute Versuche und die tatsächliche Ausführung bleiben Aufgaben deiner Anwendung; aus einem sichtbaren Verlauf entsteht kein ausführbarer Prozess."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz abdeckt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene React-Schnittstelle, CSS-Gestaltung, das Aufklappverhalten, HTML/ARIA und die Zustandsbeispiele. Die Originalquelle klärt die passiven Textteile und den Aufklappschalter. Die Illustration ist ein redaktioneller Entwurf.",
+        "Die Komponentenbeschreibung ist im begrenzten Referenzumfang als vollständig geführt. Das ist keine allgemeine Freigabe deiner Anwendung oder ein Nachweis für assistive Technik und andere Plattformen. Prüfe insbesondere echte Statusmeldungen und lange Inhalte in deinem Einsatz."
+      ]
+    }
+  ]
+}

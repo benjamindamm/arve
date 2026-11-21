@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart",
+  "title": "Chart",
+  "summary": "Diagramme mit verständlichen Seriennamen, Legende und ergänzenden Wertangaben zusammensetzen. Der Diagrammtyp und die vollständige Datenalternative werden eigens ergänzt.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine gemeinsame Grundlage für Diagramme",
+      "paragraphs": [
+        "Chart verbindet einen Diagrammbereich mit Serienbeschriftungen, Farben, Legende und ergänzenden Wertangaben. Die Grundlage wählt selbst keinen Diagrammtyp und berechnet keine Kennzahlen. Zuerst steht die Frage an die Daten, danach die passende Darstellung.",
+        "Für Monatswerte, die nebeneinander verglichen werden sollen, eignet sich Chart Bar; für einen zeitlichen Verlauf kommt Chart Line infrage. Beide sind konkrete Zusammenstellungen auf dieser Grundlage. Wenn Menschen einzelne Zahlen nachschlagen oder weiterverwenden sollen, ist Table häufig der bessere Einstieg. Für eine einzige Kennzahl reicht meist eine klar beschriftete Zahl."
+      ],
+      "links": [
+        {
+          "text": "Chart Bar",
+          "href": "/systems/shadcn/components/chart-bar",
+          "paragraph": 1
+        },
+        {
+          "text": "Chart Line",
+          "href": "/systems/shadcn/components/chart-line",
+          "paragraph": 1
+        },
+        {
+          "text": "Table",
+          "href": "/systems/shadcn/components/table",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Monatswerte mit jederzeit lesbaren Zahlen",
+      "paragraphs": [
+        "Der Entwurf zeigt Besuche über Desktop-Geräte von Januar bis Juni: 186, 305, 237, 73, 209 und 214. Februar hat den höchsten Wert. Die Balken dienen hier als konkrete Zusammenstellung; sie sind keine fest eingebaute Chart-Variante.",
+        "Titel, Einheit und kurze Einordnung stehen über der Grafik. Darunter bleiben alle sechs Werte als Tabelle sichtbar. So lässt sich der Verlauf erfassen und eine Zahl genau ablesen, ohne einen Balken treffen zu müssen. Die deutschen Beschriftungen übersetzen das gebundene Beispieldatenset; die Werte bleiben erhalten."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart.svg",
+        "alt": "Desktop-Besuche von Januar bis Juni als Balkendiagramm und vollständige Tabelle. Februar: 305, April: 73.",
+        "caption": "Statische Illustration · Redaktioneller Entwurf mit den sechs Werten des Quellenbeispiels."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Grafik, Erklärung und Tabelle zusammenhalten",
+      "paragraphs": [
+        "Der gemeinsame Rahmen umfasst einen Titel, eine Zusammenfassung, den Diagrammbereich und die Datentabelle. Die Legende ordnet sichtbare Serien ihren Namen zu; ein ergänzender Tooltip kann Kategorie und Wert nahe am Zeiger wiederholen.",
+        "Die Referenz hält die Grafik in der Breite flexibel und gibt ihr eine begrenzte, von null verschiedene Höhe. Plane Titel und Tabelle als Bestandteil derselben Information ein. Bei vielen Spalten darf die Tabelle horizontal rollen, ohne den ganzen Rahmen zu verbreitern."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Serien und Wertangaben gezielt gestalten",
+      "paragraphs": [
+        "Die Serienkonfiguration erlaubt Namen und Symbole sowie entweder feste Farben oder Farben für helles und dunkles Erscheinungsbild. Sie beschreibt die Darstellung getrennt von den eigentlichen Daten.",
+        "Tooltip-Markierungen können als Punkt, Linie oder gestrichelte Linie erscheinen. Beschriftung und Markierung lassen sich ausblenden, Namen und Werte formatieren. Auch die Legende kann ihre Symbole ausblenden. Nutze diese Möglichkeiten für eine klare Zuordnung; das Ausblenden ersetzt keine verständlichen Seriennamen. Balken, Linien und Flächen werden als eigene Diagrammzusammenstellungen gewählt, nicht über einen universellen Typenschalter von Chart."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Neue Daten und fehlende Daten unterscheiden",
+      "paragraphs": [
+        "Im normalen Zustand stimmen Grafik, Tabelle und Zusammenfassung überein. Beim Datenwechsel aktualisiert die Anwendung alle drei gemeinsam und entfernt eine veraltete ergänzende Wertanzeige.",
+        "Ohne Datensätze erscheint eine ausdrückliche Leermeldung. Bei einem Fehler erklärt die Anwendung etwa: «Die Besuchszahlen konnten nicht geladen werden.» Beides darf nicht wie eine Reihe gemessener Nullwerte aussehen. Ein Tooltip verschwindet, wenn er inaktiv wird; Escape schliesst ihn an der aktuellen Position, bis sich die Quellenkoordinate ändert."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zeitraum, Einheit und Serie nennen",
+      "paragraphs": [
+        "«Desktop-Besuche · Januar bis Juni» sagt mehr als «Statistik». Ergänze die Einheit «Anzahl Besuche» und benenne Tabellenköpfe wie «Monat» und «Desktop». Abkürzungen wie «Jan» sind auf der Achse möglich, wenn die vollständigen Monatsnamen in der Tabelle stehen.",
+        "Halte die Zusammenfassung kurz und sachlich: «Februar hat mit 305 Besuchen den höchsten Wert.» Eine Ursache lässt sich aus diesen Zahlen nicht ableiten. Farbe allein genügt nicht zur Unterscheidung; Namen und exakte Werte müssen ohne sie verständlich bleiben."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Die Daten ohne Zeiger erreichen",
+      "paragraphs": [
+        "In dieser Referenz ist die Grafik vor assistiven Technologien verborgen und besitzt keine eigene Tastaturbedienung. Die dauerhaft vorhandene native Tabelle liefert die Daten; Titel und Zusammenfassung benennen und erklären die gesamte Abbildung. Der ergänzende Tooltip ist kein eigener Fokuspunkt.",
+        "Escape schliesst die zusätzliche Wertanzeige, ohne Daten zu entfernen. Füge für diese Verwendung keine künstlichen Tabstopps an Balken hinzu. Recharts bietet daneben eine eigene Tastaturebene; sie ist hier ausgeschaltet. Zusätzliche Filter oder eine bedienbare Legende brauchen eigene zugängliche Bedienelemente und eine sichtbare Fokusführung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Anwendung liefert den fachlichen Zusammenhang",
+      "paragraphs": [
+        "ChartContainer benötigt eine Serienkonfiguration und einen passenden Recharts-Inhalt. Er erzeugt weder eine vollständige Textalternative noch automatisch eine Datentabelle. Die Referenz ergänzt deshalb eine benannte Abbildung mit Beschreibung und eine Tabelle mit Zeilen- und Spaltenüberschriften.",
+        "Die Tabelle bleibt vollständig und in derselben Kategorienreihenfolge wie die Grafik verfügbar. Ein Tooltip oder eine Legende ersetzt sie nicht. Eine Legende wird durch ihr Aussehen auch nicht zum Filter: Wenn ein Klick Serien ein- oder ausblenden soll, muss die Anwendung diese Auswahl ausdrücklich gestalten und umsetzen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Grundlage und Referenzentscheidungen",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte Schnittstelle, die CSS-Regeln, das Zustandsmodell, HTML und Zugänglichkeitsregeln sowie die gebundenen Daten und Einsatzhinweise. Die Grundlage stammt aus der ausgewählten Base-UI-Fassung von shadcn; das ergänzende Balkenbeispiel liefert Form und Zahlen.",
+        "Tabelle, sichtbare Zusammenfassung und verborgenes SVG sind ausdrückliche Entscheidungen dieser Referenz. Die Illustration zeigt einen redaktionellen Entwurf. Daraus folgt kein allgemeiner Nachweis für eine konkrete Anwendung, Bildschirmleseprogramme oder andere Plattformen."
+      ]
+    }
+  ]
+}

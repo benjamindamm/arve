@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "questionnaire",
+  "title": "Questionnaire",
+  "summary": "Führe durch geordnete Fragen und erfasse native Formularantworten. Auswahl, Überspringen und Prüfung bleiben dabei nachvollziehbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Fragen nacheinander beantworten",
+      "paragraphs": [
+        "Verwende Questionnaire, wenn du Antworten in einer festgelegten Reihenfolge erfassen und jeweils eine Frage in den Mittelpunkt stellen möchtest, etwa beim Einrichten eines Projektberichts. Die Komponente verbindet Antworten, Vorwärts- und Rückwärtsnavigation sowie Prüfung vor dem Weitergehen.",
+        "Für eine einzelne Auswahl passt Radio Group besser. Wenn du mehrere Felder gleichzeitig vergleichen und bearbeiten lassen möchtest, ist ein gewöhnliches Formular mit Field und Input übersichtlicher. Entscheide zuerst, ob die schrittweise Führung die Aufgabe erleichtert; ein kurzer Fragebogen braucht nicht automatisch mehrere Schritte."
+      ],
+      "links": [
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        },
+        {
+          "text": "Field",
+          "href": "/systems/shadcn/components/field",
+          "paragraph": 1
+        },
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Einen Projektbericht einrichten",
+      "paragraphs": [
+        "Der Entwurf hat drei Fragen: zuerst das Berichtsformat als Einfachauswahl, danach optionale Berichtsinhalte als Mehrfachauswahl und zuletzt eine Kontaktadresse. Die Abbildung zeigt Frage 2 mit «Fortschritt» ausgewählt und «Risiken» noch offen.",
+        "«Zurück» erlaubt eine Korrektur, «Überspringen» verzichtet ausdrücklich auf die optionalen Inhalte, «Weiter» prüft die aktuelle Antwort. Die Auswahl allein wechselt die Frage nicht. Die letzte Aktion sollte hier «Angaben übernehmen» heissen: Eine Weiterverarbeitung oder ein Versand ist Aufgabe der Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/questionnaire.svg",
+        "alt": "Frage 2 von 3 zur Einrichtung eines Projektberichts, mit Fortschritt ausgewählt, Risiken offen und den Aktionen Zurück, Überspringen und Weiter.",
+        "caption": "Statische Illustration · Optionale Mehrfachauswahl innerhalb eines kurzen Frageablaufs."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Eine Frage mit klarer Umgebung",
+      "paragraphs": [
+        "Eine Formularüberschrift gibt dem gesamten Ablauf einen Namen. Darunter zeigt der Fortschritt die aktuelle Position, beispielsweise «Frage 2 von 3». Das ist eine Positionsangabe, keine Bestätigung gültiger Antworten.",
+        "Die aktive Frage besteht aus einem Titel, einer dauerhaften Erläuterung und den Antwortmöglichkeiten oder einem Textfeld. Antwortkarten verbinden Auswahlzeichen, kurzen Text und bei Bedarf eine Erklärung. Ordne die Navigation unter den Antworten an; eine Fehlermeldung gehört unmittelbar zur Frage. Lange Antworten dürfen die Karten vergrössern."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Antwortform passend zur Frage wählen",
+      "paragraphs": [
+        "Für genau eine Antwort verwendest du die Einfachauswahl mit Radiobuttons. Mehrfachauswahl aktiviert Checkboxen und eignet sich für voneinander unabhängige Inhalte wie Fortschritt und Risiken. Für freie Angaben steht ein natives Text- oder E-Mail-Feld bereit.",
+        "Eine Frage kann verpflichtend oder optional sein; nur optionale Fragen lassen sich überspringen. Einzelne Antworten können deaktiviert sein, deaktivierte Fragen werden bei der Navigation ausgelassen. Eigene Farb- oder Grössenvarianten sind hier nicht festgelegt."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Antworten prüfen und gezielt korrigieren",
+      "paragraphs": [
+        "Eine Frage ist unbeantwortet, beantwortet oder ausdrücklich übersprungen. Auch eine optionale, leere Frage gilt beim Weitergehen zunächst als ungültig. Überspringen entfernt ihre Antwort aus den abzugebenden Formulardaten. Beim normalen Wechsel bleiben frühere Antworten erhalten.",
+        "Fehlt eine gültige Antwort, bleibt die Frage aktiv, zeigt ihren Fehler und setzt den Fokus auf eine geeignete Antwort. Beim Absenden werden alle registrierten Fragen geprüft; die erste ungültige wird geöffnet. Ein Reset stellt Vorgaben wieder her und löscht Überspringen und Prüfversuche, sofern die Anwendung ihn nicht verhindert. Eine anschliessende Speicherbestätigung muss die Anwendung liefern."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die erwartete Antwort benennen",
+      "paragraphs": [
+        "«Welche Inhalte brauchst du im Bericht?» ist hilfreicher als «Deine Präferenzen». Ergänze «Mehrere Antworten möglich. Du kannst diese Frage überspringen.» statt nur «Optional». Halte Antworttitel kurz und erläutere Unterschiede darunter, statt mehrere Sätze in den Titel zu packen.",
+        "Ein konkreter Fehler wie «Wähle mindestens einen Inhalt oder überspringe die Frage.» erklärt den nächsten Schritt besser als «Ungültig». Benenne ein E-Mail-Feld ausdrücklich als «Kontaktadresse» und erkläre den Verwendungszweck. Verwende «Senden» erst, wenn die Anwendung tatsächlich etwas versendet."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tastatur durch die Fragen",
+      "paragraphs": [
+        "Tab und Umschalt+Tab folgen den nativen Formularfeldern und sichtbaren Aktionen. Pfeil hoch und runter bewegen den Fokus zwischen verfügbaren Antworten; bei Radios behalten links und rechts die native Auswahlbedienung. Ausserhalb von Radio- und Texteingaben führen links zurück und rechts nach beantworteter oder übersprungener Frage weiter.",
+        "Enter bestätigt eine ausgefüllte Antwort; Strg beziehungsweise Cmd+Enter bestätigt aus der aktiven Frage. Auf der letzten Frage wird damit das Absenden angefordert. Optionale Buchstaben- oder Zahlenkürzel wählen aktivierbare Antworten und greifen nicht beim Schreiben im Textfeld. Beim Fragewechsel erhält die Frage oder ihre ungültige Antwort den Fokus. Escape hat hier keine eigene Aktion."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Formular und Anwendung zusammenführen",
+      "paragraphs": [
+        "Der Ablauf ist ein natives Formular; jede Frage ist ein Fieldset mit Legend, jede Auswahl ein beschrifteter Radio- oder Checkbox-Input. Gib dem Formular einen zugänglichen Namen und Textfeldern eine eigene Beschriftung. Fehler werden als Alert mit der Frage verknüpft, der beschriftete Fortschritt wird zurückhaltend angekündigt. Inaktive Fragen bleiben erhalten, sind aber verborgen und nicht bedienbar.",
+        "Die aktive Frage und ihre Antworten sind getrennte Zustände. Bei gesteuerter Navigation fordert onItemChange nur einen Wechsel an; die Anwendung muss ihn übernehmen. onStatusChange meldet den Antwortstatus, onSubmit erhält das gültige Formularereignis. Speichern, Auswertung und Versand musst du ergänzen. Standardmässig prüft die Komponente Antwortpräsenz und gesetzte Ungültigkeit; für native E-Mail-Prüfung musst du noValidate=false setzen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz belegt",
+      "paragraphs": [
+        "Die Beschreibung stützt sich auf den gebundenen UX-Contract, die Schnittstelle, den Zustandsablauf, CSS und HTML/ARIA sowie statische Zustandsbeispiele. Der Export beschreibt eine konkrete React-Referenz mit nativen Formularelementen. Er begründet weder eine vollständige Umfrageplattform mit Auswertung noch eine allgemeine Freigabe deiner Anwendung. Die Illustration ist ein redaktioneller Entwurf."
+      ]
+    }
+  ]
+}

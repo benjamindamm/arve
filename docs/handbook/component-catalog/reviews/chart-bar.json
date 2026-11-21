@@ -1,0 +1,237 @@
+{
+  "component": "chart-bar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/component.json",
+      "sha256": "28b15e268839d9ab2a0419c733a2d5a2bb61ef722d22c37d16b8e18de327454d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/ux.json",
+      "sha256": "ea850bb28da24c0b9975607adfdc5fd8c6903f5f5ba26bb4dcb25c4f61000d24"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/interface.json",
+      "sha256": "376e07d14d72527dcae7461f8cabe42e7b4fb8da7c070445a8c1cb7e8fa15fec"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/stories.json",
+      "sha256": "d2b1cb3de4976907415fd07b62f22cbf01a89aea28b2f81b82c4a0d5f8e688d2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/behavior.scxml",
+      "sha256": "4ce2dd0995edc6753c2973f7cc7566b8922d072acf461a9764d984bc996114d8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/layout.css",
+      "sha256": "539fc6fbb14a2771025553dc77282d643756da7c645edbcc162f6a6608555cbb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.html",
+      "sha256": "1e2de74fa186b2d240b82c1f2131ed1df37cf741feac75294abe66e396e1d185"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.rules.json",
+      "sha256": "bf86bf3447e773277f565f4e627715f531530ae736ec4b5c5e4ae7dcaa2c27c1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/README.md",
+      "sha256": "572e4ecd5c5c5813c23cf2fb10f6b5bbaa71a9381b271c859ba1c47df4bd18bf"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-nullbasis",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Referenz vergleicht Monatsbesuche mit unabhängigen Balken und quantitativer Nullbasis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternativen",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Linie für kontinuierlichen Verlauf und Tabelle zum Nachschlagen sind redaktionelle Auswahlhilfe."
+    },
+    {
+      "id": "example-werte",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration übernimmt alle sechs Desktop-Werte in ihrer gebundenen Monatsreihenfolge.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/ux.json",
+          "pointer": "/exampleSource/dataset"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-tabelle",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Vollständige Tabelle mit Zeilen- und Spaltenüberschriften sowie Zusammenfassung gehört zur Textalternative.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "variants-indikator",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Punkt, Linie und gestrichelte Linie sind Tooltip-Indikatoren, keine zusätzlichen Balkendarstellungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/component.json",
+          "pointer": "/visualContract/variants/indicator"
+        }
+      ]
+    },
+    {
+      "id": "variants-standard",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Indikator ist standardmässig dot; hideLabel und hideIndicator sind standardmässig false.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1/description"
+        }
+      ]
+    },
+    {
+      "id": "variants-theme",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "ChartConfig trennt Daten und Konfiguration und bietet Farbe oder vollständige light/dark-Zuordnung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2/description"
+        }
+      ]
+    },
+    {
+      "id": "states-transaction",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datenwechsel aktualisiert Grafik, Tabelle und Zusammenfassung gemeinsam; leere und fehlerhafte Ergebnisse bleiben Caller-Aufgabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.rules.json",
+          "pointer": "/protocol"
+        }
+      ]
+    },
+    {
+      "id": "states-clear-hint",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datenwechsel leert den aktiven Hinweis; leere Arrays führen in den Leerzustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/behavior.scxml",
+          "snippet": "<assign location=\"loadStatus\" expr=\"rows.length ? 'ready' : 'empty'\" />"
+        }
+      ]
+    },
+    {
+      "id": "labels-einheit",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die gebundene Einheit ist die Anzahl Besuche; ein Jahr ist im Datensatz nicht enthalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/ux.json",
+          "pointer": "/exampleSource"
+        }
+      ]
+    },
+    {
+      "id": "labels-neutral",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Sachliche Beobachtung statt unbelegter Erfolgsbewertung ist redaktionelle Empfehlung."
+    },
+    {
+      "id": "keyboard-reference",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Grafik ist redundant verborgen, native Tabellenlektüre bleibt verfügbar; Tooltip hat kein unabhängiges Fokusziel und Escape schliesst ihn an der Quellkoordinate.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-coordinate",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Nach Escape bleibt die aktuelle Quellkoordinate unterdrückt, bis eine andere Koordinate eintrifft.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/behavior.scxml",
+          "snippet": "coordinateKey !== dismissedCoordinate"
+        }
+      ]
+    },
+    {
+      "id": "semantics-name",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Figure wird mit sichtbarem Titel benannt und mit Zusammenfassung beschrieben; die Tabelle besitzt eine Caption.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/accessibility.html",
+          "snippet": "aria-labelledby=\"chart-bar-title\" aria-describedby=\"chart-bar-summary\""
+        }
+      ]
+    },
+    {
+      "id": "semantics-composition",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die benannte Balkenfamilie ist eine explizite Recharts-Komposition auf Base UI und kein neuer upstream Export.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "sources-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Complete gilt im begrenzten Referenzumfang; release:false ist keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-bar/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Gebundene sechs Monatswerte unverändert übernommen und Monatsnamen deutsch ausgeschrieben; kein unbelegtes Jahr ergänzt.",
+    "Lineare Skala ab null und gleich breite Balken zeigen Mengen ohne überzeichnete Differenzen.",
+    "Ein einzelner Datensatz benötigt keine zusätzliche Farbkodierung; Titel und Tabellenkopf benennen Desktop.",
+    "Illustration zeigt die vollständige Tabelle statt eines ausschliesslich per Hover verfügbaren Wertes.",
+    "Diagrammfamilien nicht aus allgemeinen Recharts-Fähigkeiten abgeleitet; nur belegte Tooltip- und Theme-Optionen beschrieben."
+  ],
+  "limits": [
+    "Keine produktive Chart-Bar-Implementierung in Arve nachgewiesen.",
+    "Statische Illustration ist kein Nachweis für Pixelkonformität oder Laufzeitverhalten.",
+    "Gebundene Daten nennen kein Jahr; Aussagen zu Ursachen und längeren Trends sind daraus nicht ableitbar."
+  ]
+}

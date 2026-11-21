@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "navigation-menu",
+  "title": "Navigation Menu",
+  "summary": "Bündle Seitenziele in einer Navigation mit direkten Links und aufklappbaren Themengruppen. So kannst du mehr Orientierung anbieten, ohne alle Ziele ständig anzuzeigen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ziele nach Themen bündeln",
+      "paragraphs": [
+        "Verwende Navigation Menu, wenn du Seiten einer Website unter wenigen verständlichen Themen zugänglich machen möchtest. Ein direkter Link führt sofort zum Ziel; ein Öffner zeigt zuerst zugehörige Links. Wähle aufklappbare Bereiche nur, wenn die Gruppierung das Finden erleichtert.",
+        "Für wenige gleichrangige Ziele reicht eine einfache Linkliste. Für Aktionen wie «Exportieren» oder «Duplizieren» passt ein Dropdown Menu; eine Menubar bündelt Anwendungsbefehle. Tabs passen, wenn du zwischen zusammengehörigen Ansichten innerhalb eines Bereichs wechselst."
+      ],
+      "links": [
+        {
+          "text": "Dropdown Menu",
+          "href": "/systems/shadcn/components/dropdown-menu",
+          "paragraph": 1
+        },
+        {
+          "text": "Menubar",
+          "href": "/systems/shadcn/components/menubar",
+          "paragraph": 1
+        },
+        {
+          "text": "Tabs",
+          "href": "/systems/shadcn/components/tabs",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Berichte öffnen, Übersicht behalten",
+      "paragraphs": [
+        "Im Entwurf ist «Übersicht» die aktuelle Seite. Daneben öffnet «Berichte» zwei Ziele: «Umsatzbericht» und «Kostenbericht». Die kurzen Beschreibungen machen die Auswahl verständlich, bevor du eine andere Seite aufrufst.",
+        "Der geöffnete Bereich ändert die aktive Seite noch nicht. Der Pfeil bei «Berichte» kennzeichnet den Öffner; «Übersicht» bleibt ein direktes Ziel. Für das Schliessen nach einer Zielwahl setzt diese Referenz closeOnClick ausdrücklich auf true."
+      ],
+      "illustration": {
+        "src": "/component-examples/navigation-menu.svg",
+        "alt": "Navigation mit aktiver Übersicht und geöffnetem Bereich Berichte mit Umsatzbericht und Kostenbericht.",
+        "caption": "Statische Illustration · Aktive Seite und geöffnete Themengruppe bleiben getrennt."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Leiste und aufgeklappter Bereich",
+      "paragraphs": [
+        "Die Navigationsleiste enthält eine Liste aus direkten Links und Öffnern. Ein Öffner trägt einen Text und einen dekorativen Pfeil. Sein zugehöriger Bereich erscheint unterhalb der Leiste und enthält echte Links mit Titel und optionaler Beschreibung.",
+        "Halte zusammengehörige Ziele räumlich beieinander. Der umgebende Rahmen fasst den aufgeklappten Inhalt zusammen. Die Komponente bringt die Positionierung bereits einmal mit; füge in dieser Zusammensetzung keinen zweiten Positionierungsbereich hinzu."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zusammensetzung statt Stilvarianten",
+      "paragraphs": [
+        "Der Gestaltungscontract definiert keine eigenen Farb- oder Grössenvarianten. Du kannst direkte Links mit aufklappbaren Gruppen kombinieren und Beschreibungen ergänzen, wenn Titel allein zu wenig Orientierung geben.",
+        "Die Schnittstelle unterstützt horizontale und vertikale Ausrichtung; horizontal ist der Standard. Eine andere Ausrichtung verlangt passende Gestaltung und Tastaturprüfung. Ein optionaler Indikator ist dekorativ. Eine mobile Navigation mit einem eigenen Menüknopf entsteht daraus nicht automatisch. Plane sie für wenig Platz gesondert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Offen ist nicht die aktuelle Seite",
+      "paragraphs": [
+        "Ein Bereich kann geschlossen, geöffnet oder im Übergang sein. Beim Öffnen hebt sich der Öffner ab und sein Pfeil dreht sich. Die aktive Seite wird unabhängig davon am betreffenden Link markiert. Aktualisiere diese Markierung anhand des tatsächlichen Seitenziels.",
+        "Ein deaktivierter Öffner kann Fokus erhalten, öffnet aber keinen Bereich. Wenn deine Anwendung den offenen Bereich selbst steuert, muss sie Änderungen übernehmen oder bewusst ablehnen. Das Schliessen nach einem Linkklick ist standardmässig ausgeschaltet; entscheide es ausdrücklich für deine Navigation."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Ziele konkret benennen",
+      "paragraphs": [
+        "Wähle kurze Themen wie «Berichte» und eindeutige Ziele wie «Kostenbericht». «Mehr» als Gruppenname oder mehrere Links namens «Details» erschweren die Orientierung. Beschreibungen sollen den Unterschied erklären, etwa «Betriebsausgaben vergleichen», statt den Titel zu wiederholen.",
+        "Empfehlung: Halte Titel möglichst auf einer Zeile und Beschreibungen bei einem kurzen Satz. Prüfe längere Übersetzungen und schmale Ansichten. Gib der gesamten Navigation einen verständlichen Namen, zum Beispiel «Hauptnavigation»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Öffnen und zum Ziel gelangen",
+      "paragraphs": [
+        "Mit den Pfeiltasten links und rechts wechselst du in der horizontalen Leiste zwischen Öffnern; am Ende beginnt die Liste nicht automatisch wieder vorne. Pfeil ab öffnet einen verfügbaren Bereich und lässt den Fokus zunächst auf dem Öffner. Mit Tab erreichst du dessen erstes Ziel. Links behalten die gewohnte Aktivierung und das Öffnen in einem neuen Tab.",
+        "Escape schliesst den betreffenden Bereich; die Rückkehr zum Öffner folgt der Fokusregel der Quelle. Erzwinge sie bei einem Seitenwechsel oder beim Verlassen der Navigation nicht pauschal. Ein sichtbarer Fokusring zeigt die Tastaturposition. Hover ist nur ein zusätzlicher Zugang: Prüfe Öffner und Links auch mit Tippen auf einem Touchgerät."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Navigation mit echten Links",
+      "paragraphs": [
+        "Die äussere Navigation ist ein benannter nav-Bereich mit einer Liste. Öffner sind Buttons mit aufgeklapptem Zustand und einer Beziehung zum zugehörigen Popup. Ziele sind Links mit gültigem href; die aktuelle Seite erhält aria-current=\"page\". Weise ihnen keine Befehlsmenürollen zu.",
+        "Du verantwortest sinnvolle Zieladressen, den Navigationsnamen und die aktuelle Seitenmarkierung. Der offene Bereich ist kein ausgewähltes Seitenziel. Prüfe beim Einbinden auch wenig Platz und Fokuswechsel; die Komponente übernimmt weder dein Routing noch eine vollständige mobile Navigationslösung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung abdeckt",
+      "paragraphs": [
+        "Die Seite stützt sich auf den exportierten UX-Contract, die Schnittstelle, CSS, Zustandsmodell und HTML/ARIA-Regeln sowie die gebundene Base-UI-Quelle. Die Zustandsbeispiele zeigen unter anderem offene, geschlossene, deaktivierte und fokussierte Darstellungen.",
+        "Die Illustration ist ein redaktioneller Entwurf. Der Quellenstatus beschreibt den begrenzten Referenzumfang; er ersetzt keine Prüfung deiner konkreten Navigation mit Tastatur, Touch und assistiven Technologien."
+      ]
+    }
+  ]
+}

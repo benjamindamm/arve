@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-radar",
+  "title": "Chart Radar",
+  "summary": "Vergleiche Werte auf kreisförmig angeordneten Speichen mit gemeinsamem Massstab. Eine dauerhafte Tabelle hält die genauen Werte unabhängig von Form und Tooltip zugänglich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Erst die Vergleichsfrage klären",
+      "paragraphs": [
+        "Mit Chart Radar vergleichst du Werte auf benannten Speichen mit demselben radialen Massstab. Der Export zeigt sechs Monatswerte einer Desktop-Besuchsreihe. Die Form kann dir ein grobes Muster zeigen; ihre gefüllte Fläche ist keine zusätzliche Kennzahl.",
+        "Willst du den zeitlichen Verlauf von Januar bis Juni erklären, wähle vorzugsweise Chart Line: Dort bleibt die Zeitachse durchgehend lesbar. Für die Frage «Welcher Monat hat wie viele Besuche?» ist Chart Bar leichter abzulesen. Verwende Radar gezielt, wenn die Anordnung im Kreis deiner Vergleichsaufgabe hilft."
+      ],
+      "links": [
+        {
+          "text": "Chart Line",
+          "href": "/systems/shadcn/components/chart-line",
+          "paragraph": 1
+        },
+        {
+          "text": "Chart Bar",
+          "href": "/systems/shadcn/components/chart-bar",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Sechs Monate, eine Besuchsreihe",
+      "paragraphs": [
+        "Der Entwurf zeigt «Desktop-Besuche · Januar bis Juni» mit den tatsächlichen Beispielwerten. Februar liegt mit 305 am höchsten, Januar mit 186 am tiefsten; April hat 273. Die Tabelle nennt jeden Wert dauerhaft, ohne dass du einen Punkt treffen musst.",
+        "Die Skala von 0 bis 320 ist eine redaktionelle Wahl für diese Illustration. Alle Speichen verwenden denselben Nullpunkt und Massstab. Lies die einzelnen Abstände vom Zentrum, nicht die Grösse der gefüllten Fläche."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-radar.svg",
+        "alt": "Radardiagramm der Desktop-Besuche Januar bis Juni mit gemeinsamer Skala 0 bis 320 und vollständiger Wertetabelle: 186, 305, 237, 273, 209, 214.",
+        "caption": "Statische Illustration · Originalwerte, deutsche Monatsnamen und redaktionell gewählte Skala."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Form und genaue Werte zusammenhalten",
+      "paragraphs": [
+        "Setze einen aussagekräftigen Titel und eine kurze Zusammenfassung vor die Grafik. Die Monatsnamen stehen an den Speichen, die Legende benennt die Reihe «Desktop». Halte zwischen Beschriftung und Legende genügend Abstand; die Referenz verkleinert dafür den äusseren Radius auf 70 Prozent.",
+        "Die vollständige Tabelle gehört zur Abbildung. Gib ihr eine eigene Beschriftung sowie Spalten- und Zeilenüberschriften. Bei wenig Platz darf ihr Bereich horizontal scrollen, ohne Werte wegzulassen. Ein ergänzender Tooltip sitzt bei der Grafik und ersetzt diese Tabelle nicht."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Hinweise anpassen, Aussage bewahren",
+      "paragraphs": [
+        "Es gibt keine belegte eigene Auswahl an Radar-Grössen oder dekorativen Farbvarianten. Die Darstellung entsteht aus den Chart-Bausteinen und einer konkreten Recharts-Komposition.",
+        "Für Tooltip-Markierungen sind Punkt, Linie und gestrichelte Linie vorgesehen. Wähle die Markierung passend zur Reihenkennzeichnung; sie verändert keine Daten. Du kannst Tooltip-Titel oder Markierung ausblenden und Legendenicons steuern. Bewahre dabei verständliche Reihennamen. Helle und dunkle Reihenfarben lassen sich konfigurieren; prüfe ihre Lesbarkeit im jeweiligen Kontext."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Neue Daten ohne alte Hinweise zeigen",
+      "paragraphs": [
+        "Bei vorhandenen Daten bleiben Grafik, Zusammenfassung und Tabelle verfügbar. Ersetze sie bei einer Aktualisierung gemeinsam aus demselben Datensatz und entferne einen alten Tooltip. Beim Verlassen des Datenpunkts verschwindet der ergänzende Hinweis ebenfalls.",
+        "Für eine leere Ergebnismenge zeigst du etwa «Keine Besuche für diesen Zeitraum verfügbar». Bei einem Fehler passt «Besuchsdaten konnten nicht geladen werden». Beide Rückmeldungen verantwortet deine Anwendung. Eine leere Fläche oder sechs Nullwerte würden einen anderen Sachverhalt behaupten."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Einheiten nennen und Flächen nicht bewerten",
+      "paragraphs": [
+        "«Desktop-Besuche · Januar bis Juni» ist hilfreicher als «Radarübersicht». Nenne die Einheit «Anzahl Besuche» und halte Monatsnamen kurz und eindeutig. Die Zusammenfassung darf einen belegbaren Vergleich nennen, etwa «Februar: 305, Januar: 186».",
+        "Vermeide «Gesamtleistung: grosse Fläche»: Schon eine andere Reihenfolge der Speichen verändert die Polygonfläche. Halte Reihenfolge, Skalenbereich und Richtung beim Vergleich konstant. Mische keine unvereinbaren Einheiten auf einer gemeinsamen Skala; eine Umrechnung müsstest du nachvollziehbar erklären."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Werte ohne Grafikfokus lesen",
+      "paragraphs": [
+        "Die gewählte Referenz blendet die redundante Grafik für assistive Technik aus und macht sie nicht zum eigenen Tastaturziel. Du liest sämtliche Daten über die native Tabelle und die Zusammenfassung. Erfinde deshalb keine Pfeiltastenbedienung für diese Verwendung.",
+        "Der Pointer-Tooltip hat kein eigenes Fokusziel. Escape schliesst ihn an der aktuellen Position; erst eine veränderte Quellkoordinate kann ihn dort wieder erscheinen lassen. Tab erreicht zusätzliche Links oder Filter nach deren eigener Bedienlogik. Die Abbildung erhält ihren zugänglichen Namen vom sichtbaren Titel."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Anwendung trägt die Abbildung",
+      "paragraphs": [
+        "Binde Titel, Zusammenfassung, Grafik und Tabelle als zusammengehörige Figure ein. Der ChartContainer stellt den Rahmen für passende Recharts-Inhalte bereit und benötigt eine festgelegte, von null verschiedene Darstellungsgrösse. Er erzeugt weder die Daten noch automatisch eine vollständige Textalternative.",
+        "Die Legende dieser Referenz beschriftet Reihen; sie ist kein belegter Filter. Ergänzt du eine Auswahl, brauchst du dafür eigene bedienbare Steuerelemente. Radar ist eine Informationsdarstellung und übernimmt keine Formularwerte oder Navigationsfunktion."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Seite belegt",
+      "paragraphs": [
+        "Die Aussagen folgen dem veröffentlichten Radar-Contract mit Schnittstelle, Gestaltung, Zustandsmodell, HTML-/ARIA-Regeln und Beispieldaten. Die öffentliche Grundlage sind die gewählten Base-UI-Chart-Bausteine; das ergänzende offizielle Radar-Beispiel liefert Diagrammform und Daten.",
+        "Die Diagrammwahl und Hinweise zu Flächen und Skalen sind redaktionelle Empfehlungen. Der abgeschlossene Referenzumfang und die statische Illustration belegen keine allgemeine Freigabe einer Anwendung oder ihrer Barrierefreiheit."
+      ]
+    }
+  ]
+}

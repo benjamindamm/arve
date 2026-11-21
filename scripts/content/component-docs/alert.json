@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "alert",
+  "title": "Alert",
+  "summary": "Ein Alert zeigt ein dringendes Problem direkt im Seiteninhalt und erklärt den nächsten Schritt. Eine optionale Aktion hilft beim Beheben.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Dringende Rückmeldung am betroffenen Ort",
+      "paragraphs": [
+        "Ein Alert macht ein Problem innerhalb der Seite sichtbar, ohne den Arbeitsbereich zu überdecken. Setze ihn beispielsweise neben einen fehlgeschlagenen Speichervorgang, wenn die Person sofort wissen muss, dass ihre Änderungen noch nicht gesichert sind.",
+        "Die hier beschriebene Ausführung verwendet bereits die Rolle alert. Dynamisch eingefügte Meldungen sind deshalb für dringende Rückmeldungen vorgesehen. Für einen dauerhaften, unaufdringlichen Einführungstext empfehlen wir normalen Seiteninhalt. Betrifft der Fehler nur ein Eingabefeld, gehört eine Feldfehlermeldung direkt zu diesem Feld. Muss eine folgenschwere Aktion ausdrücklich bestätigt werden, passt ein Alert Dialog besser."
+      ],
+      "links": [
+        {
+          "text": "Alert Dialog",
+          "href": "/systems/shadcn/components/alert-dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Speicherfehler verständlich auffangen",
+      "paragraphs": [
+        "Der Entwurf zeigt die Meldung «Änderungen nicht gespeichert» mit der Erklärung «Prüfe die Verbindung und versuche es erneut.» und dem Button «Erneut speichern». Die Meldung steht im Zusammenhang mit der bearbeiteten Seite; sie verlangt keinen Wechsel in ein separates Fenster.",
+        "Der Titel nennt das Ergebnis, der Folgesatz einen nächsten Schritt. Das Symbol unterstützt die Erkennung. Der Button löst eine Aktion der Anwendung aus: Alert selbst speichert keine Daten und wiederholt keinen Vorgang."
+      ],
+      "illustration": {
+        "src": "/component-examples/alert.svg",
+        "alt": "Speicherfehlermeldung mit Warndreieck, Titel Änderungen nicht gespeichert, Verbindungshinweis und Button Erneut speichern.",
+        "caption": "Statische Illustration · Speicherfehler mit einem konkreten nächsten Schritt."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Problem, Erklärung und Handlung zusammenhalten",
+      "paragraphs": [
+        "Die umrahmte Fläche fasst Titel und Beschreibung zusammen. Ein ergänzendes Symbol steht vor dem Text; eine optionale Aktion erhält einen eigenen Bereich. Ohne Symbol und Aktion bleibt ein vollständiger Texthinweis möglich.",
+        "Die Beschreibung folgt unmittelbar auf den Titel. In der referenzierten Gestaltung steht die Aktion bei ausreichender Breite neben dem Text und bei schmalen Ansichten darunter. Plane Umbruch für längere Meldungen ein, statt die Höhe auf das Beispiel zu begrenzen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zwei Darstellungen, dieselbe Verantwortung",
+      "paragraphs": [
+        "Belegt sind default und destructive. Die Standarddarstellung verwendet eine neutrale Fläche und einen neutralen Rahmen. Die destruktive Darstellung hebt Text und Rahmen mit der entsprechenden semantischen Farbe hervor. Wir empfehlen sie für einen Fehler wie den fehlgeschlagenen Speichervorgang.",
+        "Die Farbwahl ändert die Dringlichkeit der Ankündigung nicht: Beide verwenden dieselbe Alert-Semantik. Separate Erfolgs-, Warn- oder Grössenvarianten sind nicht definiert. Symbol und Aktion sind optionale Inhalte, keine zusätzlichen Varianten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Die Anwendung steuert den weiteren Verlauf",
+      "paragraphs": [
+        "Alert wird angezeigt, kann mit neuen Inhalten aktualisiert und wieder entfernt werden. Ein eigener Lade-, Erfolgs- oder Geschlossen-Zustand gehört nicht zu seinem Verhalten. Auch automatisches Ausblenden und eine eingebaute Schliessen-Aktion sind nicht definiert.",
+        "Nach «Erneut speichern» verantwortet die Anwendung den Vorgang und seine Rückmeldung. Entferne die Fehlermeldung erst, wenn sie nicht mehr zutrifft. Erzeuge dieselbe Meldung nicht bei jeder Aktualisierung neu und verschiebe den Fokus nicht allein wegen ihres Erscheinens."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das Ergebnis nennen, den nächsten Schritt erklären",
+      "paragraphs": [
+        "«Änderungen nicht gespeichert» ist hilfreicher als «Fehler», weil der Titel die konkrete Folge nennt. «Prüfe die Verbindung und versuche es erneut» hilft mehr als «Ein unbekannter Fehler ist aufgetreten». Verwende nur Ursachen und Zusagen, die die Anwendung tatsächlich kennt.",
+        "Empfohlen sind ein kurzer Titel und eine knappe Erklärung mit einem klaren nächsten Schritt. Benenne Aktionen konkret, etwa «Erneut speichern» statt «OK». Wesentliche Informationen müssen im Text stehen; Farbe und Symbol reichen nicht aus. Lange Diagnosen gehören in ergänzende Hilfe."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Der Hinweis braucht keinen eigenen Fokus",
+      "paragraphs": [
+        "Die Meldungsfläche hat keine eigene Tastaturbedienung und keine Pfeiltastensteuerung. Ihre Ankündigung soll keinen erzwungenen Fokuswechsel auslösen. Tab führt zu enthaltenen interaktiven Elementen in der normalen Reihenfolge.",
+        "Ein eingesetzter nativer Button wird mit Enter oder Leertaste aktiviert; sein sichtbarer Text liefert den zugänglichen Namen. Der Aktionsbereich allein ist kein Button. Ein redundantes Symbol wird für assistive Technik ausgeblendet, damit die Meldung nicht doppelt beschrieben wird."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Hinweis und Aktion haben getrennte Aufgaben",
+      "paragraphs": [
+        "Die Wurzel liefert die Rolle alert. Der Titel ist ein Textcontainer und erzeugt keine automatische Überschrift. AlertAction ist ebenfalls ein Container; ein tatsächlich bedienbarer Button oder Link muss als Inhalt eingesetzt werden.",
+        "In Formularen ersetzt eine übergreifende Meldung weder die Zuordnung einzelner Fehler zu ihren Feldern noch deren Korrekturhilfe. Vermeide konkurrierende Ankündigungen desselben Problems. Die Anwendung verantwortet Einfügezeitpunkt, Aktualisierung und Aktionen; Alert stellt weder einen modalen Dialog noch eine Fokusfalle bereit."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte React-Schnittstelle, CSS- und Tokenbindungen, das Zustandsmodell sowie HTML/ARIA-Regeln und statische Beispiele. Die konkrete deutsche Speicherfehlermeldung und die Auswahl ihres nächsten Schritts sind redaktionelle Entscheidungen.",
+        "Der vollständige Contract gilt im begrenzten Referenzumfang. Die Illustration ist kein Laufzeitnachweis; Ankündigungen mit assistiver Technik und die eingebundene Speicheraktion müssen in der jeweiligen Anwendung geprüft werden."
+      ]
+    }
+  ]
+}

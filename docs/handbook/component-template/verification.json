@@ -1,8 +1,8 @@
 {
   "date": "2026-11-21",
   "status": "PASS_LIMITED",
-  "scope": "Button editorial alignment and portable semantic export integration",
-  "publication": "Arve local; ui-contracts committed and pushed",
+  "scope": "Button reference retained within the fully authored component handbook",
+  "publication": "local; baseline committed as 0c16bdc, subsequent handbook work not committed or pushed",
   "library": "shadcn",
   "component": "button",
   "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
@@ -12,40 +12,37 @@
     "sources": 20,
     "claims": 21
   },
-  "snapshotSha256": "ea04b0dfb2341856e2e1b20b2cf97e774076de7e745409e5f08e75db5296a8d4",
+  "snapshotSha256": "c5942ad8005856e2726743e5b227d04370a956878476ff23d845830370547bf4",
   "database": {
-    "pages": 116,
-    "updatedComponentPins": 69,
-    "preservedOtherComponentContent": 68,
+    "buttonContentUnchanged": true,
+    "otherComponentPagesAuthored": 68,
     "nonComponentPagesUnchanged": 47,
-    "implementationRecordUnchanged": true,
-    "secondApplyUpdates": 0
+    "contractPinsUnchanged": 69,
+    "implementationRecordUnchanged": true
   },
   "checks": [
-    "Export manifest and all 9324 package file hashes",
-    "Exact full-package import reuse",
-    "Importer tests: 8; skill reader tests: 8",
-    "Button template sections, source hashes, pointers, snippets and published snapshot parity",
-    "All 69 published Portal and MCP component references and leading sources",
-    "77 unique live CSS/font asset responses: HTTP200, SHA256 and MIME types",
-    "All registered MCP skills and references; 326 component downloads",
-    "TypeScript; normal production build; database-free static production build",
-    "Static preview: Enter, Space, Outline and disabled",
-    "Desktop 1440px and mobile 390px visual check; mobile contents collapsed"
+    "Button template: nine sections, 20 source hashes, 21 claim references and current snapshot equality",
+    "All 69 published component contents equal reviewed handoff text over MCP",
+    "TypeScript and normal production build",
+    "Database-free static production build; links and exact asset hashes",
+    "All 69 live pages at 390px: no document overflow, nine section anchors and no broken loaded images",
+    "All 68 new editorial SVGs visually checked and statically published byte-exact"
   ],
   "static": {
     "status": "PASS",
     "html": 198,
     "handbookPages": 116,
     "components": 69,
-    "internalLinks": 57348,
-    "verifiedAssets": 2955,
+    "internalLinks": 57609,
+    "verifiedContractAssets": 2955,
+    "additionalVerifiedSvgAssets": 68,
     "basePath": "/arve",
     "backend": false
   },
   "limits": [
     "No general accessibility, native-platform or complete implementation-conformance acceptance.",
-    "Only Button has been aligned to this editorial standard; the other 68 component texts have not been rewritten.",
-    "Historical implementation receipts remain pinned to their own earlier contracts."
-  ]
+    "The other 68 components are now editorially authored; their source/integration review is recorded in ../component-catalog/verification-summary.json."
+  ],
+  "handbookCoverage": "../component-catalog/verification-summary.json",
+  "historicalProof": "../component-catalog/history/0c16bdc/component-template-verification.json"
 }

@@ -1,0 +1,249 @@
+{
+  "component": "menubar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/component.json",
+      "sha256": "c3fd7e853c3ffd0b453f25e8ec7428e73fd7c157e941bce4e9d6fa1fb4a33330"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/ux.json",
+      "sha256": "45071b7c8bff2e132e930f09cbd0613cc0888f5f8b4208e3ed444a2204162102"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/interface.json",
+      "sha256": "b94a886b27d588e52c7190102cb32a27737d440389a1d099babd726d41cfb364"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/stories.json",
+      "sha256": "a4d4101efa22e786384b02ab4f5b1aa25d9bdb6f4882df375dbfd74545dbe159"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/behavior.scxml",
+      "sha256": "6ff3cdfd8b80a722450c90ac8e01edb01be0b67efceb21df630c47b45c471fae"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/layout.css",
+      "sha256": "34be87ef7b56806f5d29cee0241110bd634016673b6f3357aa9ed66dee836b6e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.html",
+      "sha256": "863e92c96555f5b2d53053988dab255a9a552d72d6b88bcd53a72ffd3f430aee"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.rules.json",
+      "sha256": "76d54569d7d6438bf2e62e00712b6b554b8d9694d2419d7f199a45e9d58819eb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/README.md",
+      "sha256": "54069a077838735f426b8274642c6510d731017fa1dec996f442a81612fb67f7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menu.md.source",
+      "sha256": "fab1ff211b932a7cc4c3eef9bc22a1a6860c8ea132618b9cb4645831871f375d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menubar.md.source",
+      "sha256": "e7471c6f8ab3877e924bbf34f33a22dce8720c1c9a6b3d7de5656f6ce473c000"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source",
+      "sha256": "0abe1b7b30525404044f1bf693e2a31f624260aec61a6d19271ac1c21f9cc26d"
+    }
+  ],
+  "claims": [
+    {
+      "id": "application-commands",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Dauerhaft sichtbare Anwendungsbefehle sind der Zweck; normale Seitenlinks benötigen nicht automatisch Menubar-Verhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "site-links",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Menubar-Verhalten ist für gewöhnliche Seitenlinks nicht automatisch angemessen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "editorial-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die Illustration ordnet Speichern, Export-Untermenü und Löschen als redaktionellen Berichtsablauf an.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/stories.json",
+          "pointer": "/stories/0/expectation"
+        }
+      ]
+    },
+    {
+      "id": "bound-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Leiste, Trigger, Popup, Gruppen, Auswahlzeichen und Untermenü sind tatsächliche Bestandteile; Menü-Root und Portal sind Controller.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/component.json",
+          "pointer": "/partBindings"
+        }
+      ]
+    },
+    {
+      "id": "item-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Befehlsvarianten heissen default und destructive; inset dient der Einrückung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "setting-types",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Checkbox und Radio haben unterschiedliche Auswahlverträge.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/interface.json",
+          "pointer": "/modules/0/declarations/7/events/0"
+        }
+      ]
+    },
+    {
+      "id": "close-defaults",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Befehle schliessen standardmässig; Checkbox-/Radio-Einträge standardmässig nicht. Deaktivierte Einträge können Fokus erhalten, werden aber nicht aktiviert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "state-authority",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Abgebrochene oder kontrollierte Änderungen schreiben Auswahlwerte nicht selbständig fort.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/behavior.scxml",
+          "snippet": "<if cond=\"!radioControlled &amp;&amp; !_event.data.eventDetails.isCanceled\">"
+        }
+      ]
+    },
+    {
+      "id": "shortcut-hint",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "MenubarShortcut zeigt lediglich Text und registriert keinen Tastaturbefehl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "specific-labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete kurze Handlungen und Kategorien sind redaktionelle Empfehlungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-levels",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Leistennavigation und vertikale Menünavigation sind getrennt; Fokus ist keine Aktivierung; deaktivierte Einträge können Fokus erhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "sibling-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Nach einem Menüwechsel kann zunächst die Menüfläche fokussiert sein; Ab hebt dann den ersten Befehl hervor.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "submenu-escape",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "closeParentOnEsc=false schliesst im Untermenü standardmässig nur die aktuelle Ebene.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menu.md.source",
+          "snippet": "| closeParentOnEsc     | `boolean`"
+        }
+      ]
+    },
+    {
+      "id": "menu-roles",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Menubar, Menuitem, Menuitemcheckbox und Menuitemradio behalten ihre tatsächliche Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Zustands-Fixtures sind statisch und begründen alleine keinen interaktiven Nachweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/menubar/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Berichtseditor als redaktionelles Beispiel mit drei klar benannten Menüs und geöffnetem Datei-Menü.",
+    "Navigation Menu und Dropdown Menu als aufgabenbezogene Alternativen genannt.",
+    "Standardverhalten der Base-UI-Einstellungen und fokussierbare deaktivierte Einträge ausdrücklich erklärt.",
+    "Kein automatisches Tastenkürzel und keine automatische Befehlsausführung durch Hervorhebung behauptet.",
+    "Orientierungsoption nicht als alleinige optische Variante beworben; Tastaturhinweise gelten ausdrücklich der üblichen horizontalen Leiste."
+  ],
+  "limits": [
+    "Für Menubar ist keine lokale Demo unter src/demos/shadcn vorhanden.",
+    "Statische Illustration ist kein Render- oder Pixelnachweis.",
+    "Keine allgemeine Prüfung der eingebauten Anwendung oder assistiver Technologien durchgeführt."
+  ]
+}

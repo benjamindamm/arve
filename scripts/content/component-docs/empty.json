@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "empty",
+  "title": "Empty",
+  "summary": "Mit Empty erklärst du einen leeren Inhaltsbereich und zeigst einen passenden nächsten Schritt. Du unterscheidest dabei den ersten Einstieg von einer erfolglosen Suche.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Wenn ein Bereich noch keinen Inhalt hat",
+      "paragraphs": [
+        "Mit Empty erklärst du, warum eine Sammlung nach erfolgreichem Laden keine Einträge enthält. Nutze den Bereich beim ersten Einstieg, etwa wenn du noch keine Dokumente hochgeladen hast. Er zeigt den Ausgangspunkt und einen passenden nächsten Schritt.",
+        "Auch nach einer Suche kann Empty passen. Erkläre dann, dass keine Treffer zu den gewählten Begriffen oder Filtern vorliegen, und biete das Anpassen der Suche an. Eine Upload-Aktion würde in diesem Fall am Anliegen vorbeigehen.",
+        "Während Daten geladen werden, wählst du Skeleton oder Spinner mit passender Rückmeldung. Wenn das Laden scheitert, brauchst du eine Fehlermeldung, beispielsweise mit Alert und einer Aktion zum erneuten Laden. Zeige einen Fehler nie als vermeintlich leere Sammlung."
+      ],
+      "links": [
+        {
+          "text": "Skeleton",
+          "href": "/systems/shadcn/components/skeleton",
+          "paragraph": 2
+        },
+        {
+          "text": "Spinner",
+          "href": "/systems/shadcn/components/spinner",
+          "paragraph": 2
+        },
+        {
+          "text": "Alert",
+          "href": "/systems/shadcn/components/alert",
+          "paragraph": 2
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Der erste Dokument-Upload",
+      "paragraphs": [
+        "Im Beispiel ist der Dokumentbereich verfügbar, aber noch unbenutzt. «Noch keine Dokumente» benennt den Zustand. Die kurze Erklärung verbindet ihn mit dem nächsten Schritt, und «Dokument hochladen» macht die Handlung vorhersehbar.",
+        "Das Symbol unterstützt den Text. Der Button ist eine zusätzlich eingesetzte Komponente: Erst die Anwendung öffnet damit die Dateiauswahl und verarbeitet den Upload. Die gestrichelte Umrandung bedeutet hier keinen Bereich zum Ablegen von Dateien."
+      ],
+      "illustration": {
+        "src": "/component-examples/empty.svg",
+        "alt": "Leerer Dokumentbereich mit Dokument-Symbol, Titel Noch keine Dokumente, kurzer Erklärung und Button Dokument hochladen.",
+        "caption": "Statische Illustration · Erster Einstieg in einen leeren Dokumentbereich."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Erklärung oben, nächster Schritt darunter",
+      "paragraphs": [
+        "Die Fläche ordnet ihre Inhalte mittig untereinander an. Im Kopf stehen ein optionales Medium, der Titel und die Beschreibung. Darunter nimmt ein eigener Inhaltsbereich deine ergänzenden Inhalte oder Aktionen auf. Die begrenzte Textbreite hält die Erklärung auch in breiten Ansichten gut lesbar.",
+        "Lass die Abstände zwischen Titel, Beschreibung und Aktion erkennbar. Wenn das Symbol nichts zum Verständnis beiträgt, kannst du es weglassen; die Aussage muss im Text vollständig bleiben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Mit Symbol oder nur mit Text",
+      "paragraphs": [
+        "EmptyMedia bietet die Varianten default und icon. Bei icon erhält das Symbol eine hinterlegte, abgerundete Fläche; default verzichtet auf diese Icon-Fläche. Nutze icon als ruhigen visuellen Anker oder lasse das Medium für einen knappen, rein textlichen Hinweis weg.",
+        "Der Export zeigt Beispiele mit beiden Medienvarianten und ohne Medium. Für die gesamte Empty-Fläche sind keine eigenen Grössen- oder Farbvarianten definiert. Der gestrichelte Rahmen gehört zur gewählten Referenzgestaltung."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Leer ist ein Ergebnis des Ladens",
+      "paragraphs": [
+        "Die Anwendung entscheidet zwischen Laden, Fehler, leerem Ergebnis und vorhandenen Daten. Empty selbst zeigt Inhalt an und aktualisiert ihn, wenn du andere Inhalte übergibst; es verwaltet weder Suche noch Upload.",
+        "Nach erfolgreichem Laden mit null Einträgen erscheint die leere Ansicht. Sobald Einträge eintreffen, ersetzt du sie durch die Sammlung. Erhalte den Fokus auf der auslösenden Aktion, soweit das möglich ist, und plane ein sinnvolles Fokusziel, falls diese Aktion mit der leeren Ansicht verschwindet."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Grund und Handlung konkret benennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Noch keine Dokumente» und «Lade dein erstes Dokument hoch, um hier zu starten.» Für eine erfolglose Suche passt «Keine passenden Dokumente» mit «Ändere den Suchbegriff oder setze die Filter zurück.»",
+        "Vermeide «Hier ist nichts» und einen Button namens «Los»: Beide lassen Ursache und Folge offen. Als Empfehlung reichen ein kurzer Titel, ein bis zwei erklärende Sätze und eine vorrangige Aktion. Versprich keine Aktion, die du im betreffenden Kontext nicht anbieten kannst."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Die Aktion erhält den Fokus",
+      "paragraphs": [
+        "Empty ist eine passive Struktur ohne eigene Tastatursteuerung. Fläche, Titel und dekoratives Symbol benötigen keinen Tabstopp. Enthaltene Buttons und Links behalten ihre eigene Bedienung.",
+        "Einen eingesetzten nativen Button erreichst du mit Tab und aktivierst ihn mit Eingabe oder Leertaste; zurück geht es mit Umschalt plus Tab. Sorge für einen sichtbaren Fokus und einen eindeutigen Namen wie «Dokument hochladen». Lege keine zusätzliche Tastaturaktion auf die gesamte Fläche."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Überschrift und Rückmeldung bewusst einbinden",
+      "paragraphs": [
+        "Der Titel-Wrapper erzeugt nicht selbst eine Überschrift. Ergänze eine echte Überschrift auf der zur Seite passenden Ebene. Das optionale dekorative Symbol bleibt für assistive Technik verborgen; die Erklärung und die Aktion stehen als Text bereit.",
+        "Empty bringt keine automatische Live-Meldung und keinen Dialog mit. Falls sich Suchergebnisse nach einer Eingabe ändern, plane die notwendige zugängliche Rückmeldung in der Anwendung. In einem Formular darf ein eingesetzter Upload-Button nicht versehentlich das Formular absenden."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Abgeglichen sind die exportierte Schnittstelle, die visuellen Regeln, das Verhaltensmodell, die HTML-/ARIA-Vorgaben und die Zustandsbeispiele. Sie belegen eine passive Inhaltsstruktur mit optionalem Medium und selbst ergänzten Aktionen.",
+        "Die konkrete Dateiauswahl, Ladefehler, Suchlogik und Fokusführung nach einem Austausch der Ansicht bleiben Aufgaben deiner Anwendung. Die Illustration ist ein redaktioneller Entwurf und kein Nachweis für eine fertige Upload-Funktion."
+      ]
+    }
+  ]
+}

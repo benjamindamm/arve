@@ -2,7 +2,7 @@ import type { Page } from '../../payload-types'
 import { RichText } from '../rich-text'
 import { ComponentDemo } from '../demo'
 import { blockAnchor } from '../content-outline'
-import { contractOptions } from '../contract-options'
+import { ComponentComparisons } from '../component-comparisons'
 import { HandbookOutline } from '../handbook-outline'
 import type { getContract } from '../../contracts/catalog'
 import './button.css'
@@ -24,31 +24,29 @@ export default function ButtonPage({ content, demo, contract }: { content: Page[
   const usage = find('usage'), example = find('example'), anatomy = find('anatomy'), variants = find('variants'), states = find('states'), labels = find('labels')
   const heading = (block: Text) => <h2>{lines(block)[0]}</h2>
   return <div className="button-rework">
-    <HandbookOutline scopeSelector=".button-rework" />
+    <HandbookOutline scopeSelector=".button-rework" initiallyCollapsed />
     <p className="button-illustration-note">Statische Vergleiche · Live-Beispiel separat bedienbar.</p>
+    {example && <section id="live-beispiel" className="button-rework-example"><div id={blockAnchor(example)}>{heading(example)}</div>
+      <ComponentDemo demoKey={demo?.key ?? undefined} label={demo?.label ?? undefined} initialVariant={demo?.variant ?? undefined} />
+      <Body block={example} />
+    </section>}
     {usage && <section id={blockAnchor(usage)}>{heading(usage)}
       <div className="button-comparison">
         <figure><div className="button-illustration"><Specimen>Änderungen speichern</Specimen></div><figcaption>{lines(usage)[1].split(' Link: ')[0]}</figcaption></figure>
         <figure><div className="button-illustration"><span className="button-link-specimen">Zur Projektübersicht <span aria-hidden="true">→</span></span></div><figcaption>Link: {lines(usage)[1].split(' Link: ')[1]}</figcaption></figure>
       </div><p>{lines(usage)[2]}</p>
     </section>}
-    {example && <section id="live-beispiel" className="button-rework-example"><div id={blockAnchor(example)}>{heading(example)}</div>
-      <ComponentDemo demoKey={demo?.key ?? undefined} label={demo?.label ?? undefined} initialVariant={demo?.variant ?? undefined} />
-      <Body block={example} />
-    </section>}
     {anatomy && <section id={blockAnchor(anatomy)}>{heading(anatomy)}
       <figure className="button-anatomy"><div className="button-action-group"><Specimen>Änderungen speichern</Specimen><Specimen outline>Abbrechen</Specimen></div><figcaption>Statische Illustration · Gewichtung einer Aktionsgruppe</figcaption></figure>
       <Body block={anatomy} />
     </section>}
     {variants && <section id={blockAnchor(variants)}>{heading(variants)}
-      <div className="button-api-grid"><div><h3>Varianten</h3><ul className="button-api-values">{contractOptions(contract,'variant').map(value => <li key={value}><code>{value}</code></li>)}</ul><p>{lines(variants)[1]}</p></div>
-      <div><h3>Grössen</h3><ul className="button-api-values">{contractOptions(contract,'size').map(value => <li key={value}><code>{value}</code></li>)}</ul><p>{lines(variants)[2]}</p></div></div>
+      <ComponentComparisons component="button" contract={contract} section="variants" />
       <p className="button-coverage-note">{lines(variants)[3]}</p>
     </section>}
     {states && <section id={blockAnchor(states)}>{heading(states)}
-      <div className="button-state-grid">{lines(states).slice(1).map((line, index) => <div className="button-state-card" key={line}>
-        <span className="button-state-number" aria-hidden="true">0{index + 1}</span><p>{line}</p>
-      </div>)}</div>
+      <ComponentComparisons component="button" contract={contract} section="states" />
+      <Body block={states} />
     </section>}
     {labels && <section id={blockAnchor(labels)}>{heading(labels)}
       <div className="button-comparison button-label-comparison">{lines(labels).slice(1, 3).map((line, index) => <figure key={line}>

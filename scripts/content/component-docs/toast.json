@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "toast",
+  "title": "Toast",
+  "summary": "Mit einem Toast bestätigst du einen Vorgang, ohne die laufende Arbeit zu unterbrechen. Eine kurze Meldung kann eine passende Folgeaktion anbieten.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Kurz bestätigen, weiterarbeiten",
+      "paragraphs": [
+        "Nutze einen Toast für eine beiläufige Rückmeldung nach einer Handlung: etwa nachdem eine Notiz archiviert wurde oder ein Export bereitsteht. Die Meldung bleibt ausserhalb des Arbeitsflusses und verlangt keine Bestätigung.",
+        "Wähle einen Alert im Seiteninhalt, wenn ein Hinweis dauerhaft sichtbar bleiben muss. Ein Fehler direkt am Formularfeld hilft bei einer falschen Eingabe besser als ein verschwindender Toast. Für eine zwingende Entscheidung vor einem folgenreichen Schritt eignet sich ein Alert Dialog. Wesentliche Ergebnisse müssen auch nach dem Schliessen der Meldung auffindbar bleiben."
+      ],
+      "links": [
+        {
+          "text": "Alert",
+          "href": "/systems/shadcn/components/alert",
+          "paragraph": 1
+        },
+        {
+          "text": "Alert Dialog",
+          "href": "/systems/shadcn/components/alert-dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine archivierte Notiz wiederfinden",
+      "paragraphs": [
+        "Du archivierst eine Sitzungsnotiz. Erst wenn die Anwendung das Archivieren bestätigt hat, erscheint «Notiz archiviert» mit «Im Archiv verfügbar.» und der optionalen Aktion «Rückgängig». Der Eintrag im Archiv bleibt als dauerhaftes Ergebnis sichtbar.",
+        "Plane die wichtige Rückgängig-Aktion hier ohne automatisches Ausblenden. Die Anwendung muss das Wiederherstellen ausführen, dessen Ergebnis prüfen und erst danach eine passende Rückmeldung geben. Ein Klick auf die Aktion schliesst den Toast nicht automatisch."
+      ],
+      "illustration": {
+        "src": "/component-examples/toast.svg",
+        "alt": "Im Archiv steht die Sitzungsnotiz. Darunter bestätigt ein Toast «Notiz archiviert», mit der Aktion «Rückgängig» und einem Schliessen-Symbol.",
+        "caption": "Statische Illustration · Archivierung mit dauerhaft sichtbarem Ergebnis und optionaler Rückgängig-Aktion."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Ergebnis und Aktion auf einen Blick",
+      "paragraphs": [
+        "Der Titel nennt das Ergebnis, die optionale Beschreibung ergänzt den nötigen Kontext. Daneben können eine Aktion und die Schliessen-Schaltfläche stehen. Ein Statussymbol erscheint bei einem ausdrücklich gesetzten Meldungstyp.",
+        "Der Meldungsbereich liegt unten am Bildschirmrand, auf breiteren Ansichten rechts. Mehrere Meldungen bilden einen Stapel, der sich zur Interaktion aufklappt. Halte Texte kurz und prüfe schmale Ansichten: Textumbruch vergrössert die Meldung, und Aktionen brauchen ebenfalls Platz."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Die Meldung gestalten",
+      "paragraphs": [
+        "Die eingebundene Darstellung kennt Erfolg, Information, Warnung, Fehler und Laden als Meldungstypen. Sie wählen das jeweilige Symbol; ohne Typ bleibt die Meldung untypisiert. Eigene Grössenvarianten sind nicht ausgewiesen.",
+        "Die Priorität ist eine eigene Wahl: Verwende im Normalfall die niedrige Priorität. Hohe Priorität hat eine gesonderte dringliche Ankündigung und ist kein Ersatz für einen dauerhaft sichtbaren Fehler. Mit oder ohne Aktion und mit begrenzter oder unbegrenzter Anzeigedauer passt du die Meldung an die Aufgabe an."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Meldungen anzeigen und schliessen",
+      "paragraphs": [
+        "Ohne abweichende Einstellung schliesst ein Toast nach fünf Sekunden. Bei Zeigerkontakt, Fokus im Meldungsbereich oder inaktivem Fenster pausiert die Zeit; danach läuft die Restzeit weiter. Mit timeout 0 entfällt das automatische Schliessen. Eine Lade-Meldung hat ebenfalls keinen Timer.",
+        "Bei einer asynchronen Aufgabe kann derselbe Toast von Laden zu Erfolg oder Fehler wechseln. Diese Anzeige führt den Vorgang nicht selbst aus. Die Anwendung bleibt für Fehlerbehandlung und den tatsächlichen Ergebniszustand verantwortlich.",
+        "Der Anbieter begrenzt den sichtbaren Stapel standardmässig auf drei Meldungen. Ältere Einträge oberhalb dieses Limits werden ausgeblendet und unbedienbar, nicht sofort entfernt. Schliessen beginnt den Abgang; die endgültige Entfernung folgt nach dem Übergang. Keines dieser Ereignisse beweist den fachlichen Abschluss."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Sag, was geschehen ist",
+      "paragraphs": [
+        "«Notiz archiviert» ist hilfreicher als «Erfolgreich!». Ergänze nur Kontext, den du zum Weiterarbeiten brauchst, beispielsweise «Im Archiv verfügbar.». «Rückgängig» benennt eine konkrete Folgehandlung; «OK» lässt deren Wirkung offen.",
+        "Beschränke dich möglichst auf einen kurzen Titel und einen kurzen Zusatz. Vermeide mehrere Handlungsaufträge, lange Fehleranalysen und Erfolgsmeldungen, solange ein Vorgang noch läuft. Gib dem Schliessen-Symbol einen deutschen zugänglichen Namen wie «Meldung schliessen»; die Quellvorgabe ist englisch."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Meldungen erreichen und verlassen",
+      "paragraphs": [
+        "Neue Toasts übernehmen den Fokus nicht und halten ihn nicht fest. Mit F6 gelangst du in den Meldungsbereich; Tab führt zu den erreichbaren Bedienelementen. Umschalt+Tab vom Meldungsbereich stellt den vorherigen Fokus wieder her. Enter oder Leertaste aktiviert eine fokussierte Aktion oder Schliessen-Schaltfläche.",
+        "Escape schliesst nur die Meldung, in der sich der Fokus befindet. Im eingeklappten Stapel ist Schliessen für assistive Technik verborgen, solange die Schaltfläche selbst keinen Fokus hat. F6 klappt den Bereich auf und macht sie zugänglich. Titel und Beschreibung benennen und erläutern die Meldung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Anzeige und Fachlogik verbinden",
+      "paragraphs": [
+        "Diese Referenz verwendet den Toast-Manager von Base UI. Der Toaster verbindet Anbieter, Portal, Meldungsbereich und Liste. Er muss bereits eingebunden sein, wenn die Anwendung Meldungen auslöst; der Manager verspricht keine Warteschlange vor diesem Zeitpunkt.",
+        "Die Standardmeldung ist ein nichtmodaler Dialog innerhalb eines höflich ankündigenden Meldungsbereichs. Sie trägt nicht pauschal die Rolle Status. Die hohe Priorität verwendet einen eigenen Ankündigungsweg. Plane bei Formularen und Dialogen weiterhin nachvollziehbare Fehlermeldungen und prüfe den Fokuswechsel im konkreten Ablauf."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung trägt",
+      "paragraphs": [
+        "Grundlage sind die gebundenen Schnittstellen, Gestaltungsregeln, Zustandsabläufe und HTML-/ARIA-Regeln sowie die eingefrorenen React-Quellen von shadcn und Base UI. Die Zustandsbeispiele im Paket sind statische Fixtures.",
+        "Die Illustration erklärt einen redaktionellen Einsatz. Sie belegt weder die Bedienung deiner Anwendung noch die Ankündigung mit jeder assistiven Technik. Prüfe insbesondere Timer, Stapel, Rückgängig-Aktion und Fokus im Zielprodukt."
+      ]
+    }
+  ]
+}

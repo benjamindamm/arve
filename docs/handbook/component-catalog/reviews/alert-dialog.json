@@ -1,0 +1,279 @@
+{
+  "component": "alert-dialog",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/component.json",
+      "sha256": "346e1f740ea44d635a2a7dadd7dd21c87c01869f52b6a6391c227c36b6f91deb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/ux.json",
+      "sha256": "56c26b8c898761b949c0c14fc63460a5ef2175b11178d510f87591be0150b7cc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/interface.json",
+      "sha256": "9f55fea40e0e7300ab8e48c9938db02c8772324e7fb992e309436aa383f2b680"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/stories.json",
+      "sha256": "ff927707b4a177bec6da085011e27584cb83275dfc131127dabf1888f40f634a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/behavior.scxml",
+      "sha256": "f60af4eab293f5487697900484741479948093cfb010551dbbdcb1a74a4acf09"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/layout.css",
+      "sha256": "402a8f7ab36a7599bf49ee88ac6430f8d4a040d9aaa22245d04f60e449b1b5a6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+      "sha256": "7c6492b125b86f8779154ea5329b7e7095767f3ec20d280e66d1f2598e0c1bb3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.rules.json",
+      "sha256": "6187eefb29a2b1012168ee82c89c2fd15d4b3da0b8ca76dc24da5817cb60cba7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/README.md",
+      "sha256": "4758cc5a3bd38c17951ffb8e01d43e7cad1691e8f39767bf0893ab266f99f344"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Fordert eine ausdrückliche Entscheidung bei folgenreichen Handlungen; Routineinformationen vermeiden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Alert für gewöhnliche Information, Dialog für längere Bearbeitung und Rückgängig bei reversiblen Handlungen werden als redaktionelle Auswahlhilfen empfohlen."
+    },
+    {
+      "id": "example-focus",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der Anfangsfokus auf Abbrechen ist eine explizite Referenzentscheidung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "example-deletion",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Sommerfest und der Verlust seiner Dateien sind redaktionelle Beispielinhalte; keine eingebaute Geschäftslogik."
+    },
+    {
+      "id": "anatomy-responsive",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Zentrierung, ausgewählte Maximalbreite 424 Pixel, Scrollen und umbrechende Aktionen bei erhaltener Reihenfolge sind belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/layout.css",
+          "snippet": "max-block-size: calc(100dvh - 32px);\n  overflow: auto;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/layout.css",
+          "snippet": "flex-direction: row;\n  flex-wrap: wrap;"
+        }
+      ]
+    },
+    {
+      "id": "variants-sizes",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Content erlaubt default und sm; kompakt hat maximal 320 Pixel Breite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/interface.json",
+          "pointer": "/modules/0/declarations/4/members/0/type/text"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/layout.css",
+          "snippet": "[data-slot=\"alert-dialog-content\"][data-size=\"sm\"] {\n  max-inline-size: 320px;\n}"
+        }
+      ]
+    },
+    {
+      "id": "variants-buttons",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die statische Semantik zeigt Cancel outline und Action destructive; Action übernimmt Button-Props.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "class=\"cn-button cn-button-variant-outline cn-button-size-default\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "class=\"cn-button cn-button-variant-destructive cn-button-size-default\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/interface.json",
+          "pointer": "/modules/0/declarations/10/members/0/type/text"
+        }
+      ]
+    },
+    {
+      "id": "states-confirmation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Bestätigen löst die Aktion aus, ohne automatisch zu schliessen. Abbrechen verwendet Close.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/ux.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/behavior.scxml",
+          "snippet": "<transition event=\"CONFIRM_ACTION\">\n        <send event=\"_effect.actionOnClick\" target=\"#_parent\">"
+        }
+      ]
+    },
+    {
+      "id": "states-trigger-outside",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Deaktiviert verhindert Öffnen; Aussenklick ist ein wirkungsloser Übergang.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/behavior.scxml",
+          "snippet": "cond=\"(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/behavior.scxml",
+          "snippet": "<transition event=\"OUTSIDE_PRESS\" />"
+        }
+      ]
+    },
+    {
+      "id": "states-app-feedback",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Rückmeldung, Mehrfachauslösung und Fehlerbehandlung müssen von der Anwendung gestaltet werden; Empfehlungen werden nicht als eingebaute Zustände beschrieben."
+    },
+    {
+      "id": "labels-concrete",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Handlung, betroffenes Projekt und endgültige Folgen werden gegenüber OK und Sind Sie sicher empfohlen."
+    },
+    {
+      "id": "keyboard-buttons",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Auslöser, Abbrechen und Bestätigen sind Buttons; Enter und Leertaste beschreiben ihre native Bedienung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"alert-dialog-trigger\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"alert-dialog-cancel\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"alert-dialog-action\""
+        }
+      ]
+    },
+    {
+      "id": "keyboard-focus-cycle",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Modaler Fokus bleibt innen, Escape/Abbrechen bestätigen nicht und Fokus wird zurückgegeben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/behavior.scxml",
+          "snippet": "<param name=\"target\" expr=\"'source-trigger-or-explicit-finalFocus'\" />"
+        }
+      ]
+    },
+    {
+      "id": "semantics-relations",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "alertdialog erhält Namen und Beschreibung über instanzbezogene Beziehungen; Beispielbuttons sind type button.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.html",
+          "snippet": "role=\"alertdialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.rules.json",
+          "pointer": "/ownership"
+        }
+      ]
+    },
+    {
+      "id": "semantics-modal-projection",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Base UI emittiert standardmässig kein aria-modal; modal verantwortet Fokusführung und Abschirmung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/accessibility.rules.json",
+          "pointer": "/actualModalityProjection"
+        }
+      ]
+    },
+    {
+      "id": "sources-fixture-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische Fixtures belegen Anatomie und Zustände, keinen vollständigen Laufzeitnachweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/stories.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/stories.json",
+          "pointer": "/stories/0/expectation"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/alert-dialog/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Konkreter Löschfall mit Projektname statt abstrakter Sicherheitsfrage.",
+    "Empfehlungen zu Alternativen, Textlänge, Fehlerbehandlung und Fokus nach Löschung ausdrücklich redaktionell behandelt.",
+    "Keine automatische Schliesswirkung der Action und kein standardmässiges aria-modal behauptet.",
+    "Kompaktgrösse von Buttondarstellung getrennt erklärt."
+  ],
+  "limits": [
+    "Keine lokale Alert-Dialog-Demo in Arve vorhanden; statische Illustration und Quellenszenarien sind keine Live-Prüfung.",
+    "Keine allgemeine Anwendungs-, Plattform- oder Assistenztechnologie-Freigabe aus dem Referenzstatus abgeleitet."
+  ]
+}

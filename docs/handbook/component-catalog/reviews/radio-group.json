@@ -1,0 +1,240 @@
+{
+  "component": "radio-group",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/component.json",
+      "sha256": "b243ded24b24159b928679cb52f6d64a4897ebfc630a561ca9fe3481baed641e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+      "sha256": "28aecf82723168b873e5f2a7b23acb5700bd5f6bd9418363130cb5e4b0b827de"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/interface.json",
+      "sha256": "8dfbea5708630c5b3ed4fbc943d13ab6af34580b76ca332d07d3a11c19558a19"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/stories.json",
+      "sha256": "2ecbcdc3c509a4a1a0f2c4bf500c20b4cbf0cf7b4abea1af0dc2921700327539"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/behavior.scxml",
+      "sha256": "8063cdbcdccae589333f0c8439e255b8f82f3701a10925b60396c5dc84f138e9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/layout.css",
+      "sha256": "7bed32dd2739ae4136f457d0465c1f3390920e42e4bba071a0d41a1eb6ee665c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/accessibility.html",
+      "sha256": "496edfbfb0db8863495d22290b91d1e1188a3555f01beca7e7e462443e292d5e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/accessibility.rules.json",
+      "sha256": "22777720b07c2846ab843ca83701dbca3882a29bd0019c2658d6c48c68717c91"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/README.md",
+      "sha256": "fcca8ea73abc90fefaabad4e016c4cf9673f0c78a26ded2bb932785f3c09e670"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/radio-group.md.source",
+      "sha256": "9dc0116f63ba90f81111f3c0922b2dd1c4565422d8d8cfc5bc903594bc546e80"
+    }
+  ],
+  "claims": [
+    {
+      "id": "single-value",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Gruppe wählt einen Wert aus einer benannten, gegenseitig ausschliessenden Menge.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Checkboxen für unabhängige Mehrfachwahl und Select für lange Listen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "delivery-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Zustellarten, Kosten und Frage sind ein deutsches redaktionelles Beispiel; keine eigene Implementierung wird behauptet."
+    },
+    {
+      "id": "anatomy-layout",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "16-Pixel-Kontrollen, 8-Pixel-Punkte und 8-Pixel-Textabstand; 12-Pixel-Optionsabstand ist Caller-Entscheidung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "variants-states",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Belegt sind checked, disabled, readOnly und caller-invalid; keine erfundenen Variantenprops.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/component.json",
+          "pointer": "/visualContract/variants/state"
+        }
+      ]
+    },
+    {
+      "id": "readonly-focus",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "readOnly bleibt fokussierbar und unterscheidet sich von disabled.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "empty-state",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Verhaltensmodell startet mit null als Wert; eine Auswahl ist nicht zwingend vorbelegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/behavior.scxml",
+          "snippet": "<data id=\"value\" expr=\"null\" />"
+        }
+      ]
+    },
+    {
+      "id": "no-user-clear",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Erneute Wahl der gewählten Option leert die Gruppe nicht; deaktiviert und readOnly verhindern Benutzeränderungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "required",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "required verlangt vor Formularübermittlung die Wahl eines Wertes.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/radio-group.md.source",
+          "snippet": "Whether the user must choose a value before submitting a form."
+        }
+      ]
+    },
+    {
+      "id": "controlled-cancellation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Nur unkontrolliert und ohne Abbruch übernimmt das Modell den angefragten Wert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/behavior.scxml",
+          "snippet": "<if cond=\"!controlled &amp;&amp; !_event.data.eventDetails.isCanceled\">"
+        }
+      ]
+    },
+    {
+      "id": "option-names",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der lesbare Optionstext benennt den sichtbaren Radio ausdrücklich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/component.json",
+          "pointer": "/anatomy/label"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-source",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab-Einstieg, umlaufende Pfeilauswahl, Space-Auswahl, Enter ohne Umschalten, Home/End ohne Behandlung und Escape ohne Löschen sind geprüft.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "rtl-composition",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "RTL-Navigation erfordert DirectionProvider und HTML-Richtung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "form-proxy",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Sichtbare role-radio-Kontrolle und verborgenes natives Formularelement sind die tatsächliche Anatomie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "external-form",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "form identifiziert das zuständige Formular auch ausserhalb der Gruppe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/radio-group.md.source",
+          "snippet": "Identifies the form that owns the radio inputs."
+        }
+      ]
+    },
+    {
+      "id": "evidence-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Komponentenabschluss ist begrenzt; release:false ist keine allgemeine Anwendungs- oder AT-Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/radio-group/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Die Übersicht empfiehlt wenige direkt vergleichbare Antworten, ohne eine unbelegte Höchstzahl vorzugeben.",
+    "Zustellart mit Standard, Express und Abholung als redaktionelles Beispiel; Vorauswahl ist ausdrücklich nur ein Beispiel.",
+    "Genau eine Auswahl gilt nach erfolgter Wahl; leerer Anfang und Pflichtwahl werden getrennt erklärt.",
+    "Fokus und Wert werden wegen controlled/cancel nicht gleichgesetzt.",
+    "Keine native Plattformverfügbarkeit oder lokale Radio-Group-Live-Demo behauptet."
+  ],
+  "limits": [
+    "Keine neue Laufzeitprüfung der Radio-Group-Implementierung; Zustands-Fixtures und historische Referenzprüfung ersetzen keine Anwendungsprüfung.",
+    "SVG ist eine statische redaktionelle Illustration, keine Pixelkonformitätsprüfung."
+  ]
+}

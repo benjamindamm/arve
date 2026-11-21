@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "progress",
+  "title": "Progress",
+  "summary": "Progress zeigt, wie weit eine laufende Aufgabe vorangekommen ist. Mit einer klaren Bezugsgrösse und verständlichem Text kannst du den erreichten Anteil einschätzen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Fortschritt mit einer verlässlichen Bezugsgrösse zeigen",
+      "paragraphs": [
+        "Verwende Progress, wenn du den erreichten Anteil einer laufenden Aufgabe zeigen kannst: etwa 8 von 20 übertragenen Dateien oder 40 Prozent eines Datenimports. Lege zuerst fest, was vollständig bedeutet. Ein Balken ist nur aussagekräftig, wenn sein Wert und sein Endpunkt dieselbe Aufgabe beschreiben.",
+        "Kennst du den erreichten Anteil nicht, zeige einen unbestimmten Zustand mit erklärendem Text. Für eine einfache Warteanzeige ohne Mengenbezug ist Spinner eine passende Alternative. Für einen veränderbaren Zahlenwert brauchst du Slider; Progress informiert und lässt sich nicht verstellen."
+      ],
+      "links": [
+        {
+          "text": "Spinner",
+          "href": "/systems/shadcn/components/spinner",
+          "paragraph": 1
+        },
+        {
+          "text": "Slider",
+          "href": "/systems/shadcn/components/slider",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Upload mit erkennbarem Umfang",
+      "paragraphs": [
+        "Der Entwurf zeigt «Bericht hochladen» bei 40 Prozent. «8 von 20 MB übertragen» erklärt die Bezugsgrösse; Label, Zahl und Balken beschreiben denselben Upload. Die Füllung belegt genau zwei Fünftel der Strecke.",
+        "Du solltest den Prozentwert aus dem tatsächlich übertragenen Umfang ableiten. Falls nach der Übertragung noch eine Verarbeitung folgt, benenne sie als eigenen Arbeitsschritt. Ein voller Uploadbalken darf nicht versprechen, dass auch die Verarbeitung abgeschlossen ist."
+      ],
+      "illustration": {
+        "src": "/component-examples/progress.svg",
+        "alt": "Uploadanzeige mit dem Label Bericht hochladen, 40 Prozent, einem zu zwei Fünfteln gefüllten Balken und dem Text 8 von 20 MB übertragen.",
+        "caption": "Statische Illustration · Messbarer Upload mit benannter Bezugsgrösse."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Aufgabe, Wert und Strecke zusammenhalten",
+      "paragraphs": [
+        "Die Aufgabenbeschriftung steht zusammen mit dem sichtbaren Wert oberhalb der durchgehenden Strecke. Der gefüllte Indikator zeigt den Anteil innerhalb dieser Strecke. Halte erklärende Angaben dicht bei der Anzeige, damit du mehrere gleichzeitige Vorgänge auseinanderhalten kannst.",
+        "Progress ergänzt die Strecke mit Indikator bereits automatisch nach deinen Inhalten. Füge deshalb keine zweite Standardstrecke als Kind hinzu. Label und sichtbare Wertanzeige sind eigene Teile; die Referenz ordnet den Wert am Zeilenende an und erlaubt Umbrüche."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Bestimmten und unbestimmten Umfang unterscheiden",
+      "paragraphs": [
+        "Der Contract definiert keine eigenen Farb- oder Grössenvarianten. Entscheidend ist der Wert: Eine endliche Zahl zeigt messbaren Fortschritt; null kennzeichnet einen unbekannten Anteil. Bei unbekanntem Anteil bleibt die sichtbare Wertanzeige leer.",
+        "Die exportierte CSS-Referenz zeigt unbestimmten Fortschritt mit einem mittigen Segment von 35 Prozent Breite. Diese Breite ist kein Messwert. Eine laufende Animation ist damit nicht belegt. Nutze einen erklärenden Text wie «Umfang wird ermittelt», statt daraus eine Prozentangabe abzuleiten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Vom Start bis zur Rückmeldung",
+      "paragraphs": [
+        "Bei bekannter Skala beginnt die Aufgabe am unteren Grenzwert. Mit neuen Werten wächst der angezeigte Anteil; am oberen Grenzwert gilt der Fortschritt als vollständig. Endliche Werte ausserhalb der Grenzen werden auf die Grenzen begrenzt. Null und nicht endliche Werte ergeben einen unbestimmten Zustand.",
+        "Deine Anwendung liefert die Aktualisierungen. Progress startet keinen Upload, misst keine Zeit und bietet keinen Abbruch. Zeige Abschluss und Fehler ausdrücklich ausserhalb des Balkens, beispielsweise «Bericht hochgeladen» oder «Upload unterbrochen. Versuche es erneut.» Die Füllung allein erklärt diese Ergebnisse nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Sagen, was gerade vorankommt",
+      "paragraphs": [
+        "«Bericht hochladen» benennt die Aufgabe besser als «Fortschritt» oder «Bitte warten». Halte das Label kurz und ergänze bei mehreren Vorgängen einen unterscheidbaren Dateinamen. Eine Prozentzahl ohne Aufgabenbezug reicht nicht.",
+        "Verwende passende Einheiten und dieselbe Bezugsgrösse für sichtbaren und zugänglichen Wert. Die Wertformatierung unterstützt Sprache und Zahlenformat; eine eigene Textalternative kann beispielsweise «8 von 20 Megabyte übertragen» vermitteln. Bei unbekanntem Umfang solltest du einen deutschen Zustandstext liefern: Der voreingestellte zugängliche Text lautet «indeterminate progress»."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Informieren, ohne einen Fokuspunkt hinzuzufügen",
+      "paragraphs": [
+        "Progress ist passiv: Es gibt keine Pfeiltasten zum Verstellen und keine Aktivierung mit Enter oder Leertaste. Die Referenz fügt keinen Tabstopp hinzu. Lass den Fokus bei der aktuellen Aufgabe; separat angebotene Aktionen wie «Abbrechen» benötigen eigene bedienbare Elemente.",
+        "ProgressLabel verknüpft den Aufgabennamen mit der Anzeige. Die Rolle progressbar vermittelt Grenzen und aktuellen Wert. Der sichtbare ProgressValue ist für assistive Technik ausgeblendet, weil der Wurzelknoten den Wert bereits übermittelt."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Werte und Aufgabenstatus korrekt verbinden",
+      "paragraphs": [
+        "Der erforderliche Wert ist eine Zahl oder null. Die Standardgrenzen sind 0 und 100; die Referenz verlangt endliche Grenzen mit min kleiner als max. Die Balkenbreite wird relativ zu diesen Grenzen berechnet. Bei messbarem Fortschritt enthält aria-valuenow den begrenzten Zahlenwert; bei unbestimmtem Fortschritt entfällt dieses Attribut.",
+        "aria-valuetext oder getAriaValueText erlaubt eine verständliche Wertalternative mit Einheiten. Plane Abschluss- und Fehlerrückmeldungen im umgebenden Ablauf und deren zugängliche Bekanntgabe separat. Progress bietet dafür weder ein eigenes Ereignis zur Wertänderung noch eine automatische Aufgabenmeldung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung abdeckt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die exportierte Schnittstelle, CSS-Regeln, das Zustandsmodell und HTML-/ARIA-Regeln sowie die gebundenen React- und Base-UI-Quellen. Die Zustandsbeispiele zeigen 0, 40, 100, unbekannten Umfang und Rechts-nach-links-Darstellung.",
+        "Der begrenzte Referenzumfang ist dokumentiert; daraus folgt keine allgemeine Freigabe deiner Anwendung oder ihrer Screenreader-Ausgabe. Prüfe insbesondere deine Einheiten, Zustandsmeldungen und die tatsächliche Datenanbindung im fertigen Ablauf."
+      ]
+    }
+  ]
+}

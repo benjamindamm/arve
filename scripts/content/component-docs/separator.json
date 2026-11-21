@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "separator",
+  "title": "Separator",
+  "summary": "Mit einer horizontalen oder vertikalen Linie machst du Grenzen zwischen Inhalten sichtbar. Entscheide bewusst, ob die Trennung Bedeutung trägt oder nur dekoriert.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine Grenze sichtbar machen",
+      "paragraphs": [
+        "Mit Separator trennst du zusammengehörige Inhalte in erkennbare Bereiche, etwa Kontaktdaten und Versandangaben in einer Übersicht. Setze die Linie dort ein, wo ein Abschnitt endet und ein anderer beginnt. Prüfe zuerst, ob zusätzlicher Abstand die Gliederung bereits verständlich macht.",
+        "Braucht ein Bereich eine eigene Bezeichnung, verwende eine Überschrift. Eine Linie erklärt kein Thema. Soll jemand die Breite zweier Bereiche verändern können, brauchst du einen bedienbaren Splitter; Separator bietet diese Funktion nicht."
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Kontaktdaten und Versand auseinanderhalten",
+      "paragraphs": [
+        "Die Übersicht zeigt zuerst die Kontaktperson, darunter nach einer horizontalen Linie die Versandart. Die Überschriften benennen die beiden Bereiche; die Linie verstärkt ihren Übergang. Du kannst die Informationen auch ohne die Linie verstehen.",
+        "Im Entwurf ist die Trennung als inhaltliche Grenze gedacht. Nutzt du dieselbe Linie nur als Schmuck unter einer bereits eindeutigen Überschrift, behandle sie bewusst als dekorativ. Die sichtbare Form allein entscheidet nicht über ihre Bedeutung."
+      ],
+      "illustration": {
+        "src": "/component-examples/separator.svg",
+        "alt": "Übersicht mit Kontaktperson Lea Meier und Versand per Standardversand, getrennt durch eine horizontale Linie.",
+        "caption": "Statische Illustration · Eine horizontale Grenze zwischen zwei benannten Bereichen."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Eine Linie mit Raum auf beiden Seiten",
+      "paragraphs": [
+        "Der Separator besteht aus einer einzelnen Linie. Horizontal füllt sie die verfügbare Breite; vertikal richtet sie sich an der Höhe ihres umgebenden Flex- oder Grid-Bereichs aus. Die Umgebung bestimmt damit ihre Länge.",
+        "Lass auf beiden Seiten genügend Abstand, damit die Linie nicht mit Text oder Bedienelementen zusammenfällt. Richte ihre Enden am Inhaltsbereich aus. Überschriften, Texte und Abstände gehören zur umgebenden Gestaltung und sind keine eingebauten Teile des Separators."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Horizontal oder vertikal wählen",
+      "paragraphs": [
+        "Horizontal ist die Voreinstellung und passt zu Bereichen untereinander. Vertikal eignet sich für nebeneinanderliegende Inhalte, sofern deren gemeinsame Höhe klar festgelegt ist. Beide Ausrichtungen sind belegt; eigene Grössen- oder Farbvarianten sind nicht definiert.",
+        "Wenn dein Layout bei wenig Platz von Spalten zu Zeilen wechselt, plane auch die passende Orientierung der Linie. Dieser Wechsel ist eine Aufgabe deiner Anwendung; die Referenz verspricht keine automatische Anpassung."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Passiv bleiben",
+      "paragraphs": [
+        "Separator hat keine Auswahl, keinen Ladezustand und keine Rückmeldung nach einer Aktion. Er bleibt eine passive Inhaltsgrenze. Änderungen seiner Eigenschaften können die Darstellung anpassen; Einfügen und Entfernen folgen dem umgebenden Inhalt.",
+        "Gib der Linie weder einen Griff noch eine Hover-Hervorhebung, die Verschieben erwarten lässt. Wenn Inhalte geladen werden oder ein Fehler auftritt, zeigt die Anwendung diese Rückmeldung beim betroffenen Inhalt. Die Trennlinie übernimmt das nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Inhalt benennen",
+      "paragraphs": [
+        "Beschrifte die angrenzenden Bereiche konkret, beispielsweise mit «Kontakt» und «Versand». «Bereich 1» und «Bereich 2» helfen beim Verstehen weniger. Halte die Überschriften kurz; längere Erläuterungen stehen beim jeweiligen Inhalt.",
+        "Der nicht fokussierbare Separator braucht keinen erfundenen Namen wie «Trennlinie zwischen Kontakt und Versand». Seine Bedeutung entsteht im Zusammenhang. Lege auch keinen Erklärungstext in die Linie, wenn eigentlich eine Überschrift gebraucht wird."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Kein zusätzlicher Fokuspunkt",
+      "paragraphs": [
+        "Die Linie ist nicht fokussierbar und hat keine eigene Tastaturbedienung. Tab, Enter und Pfeiltasten lösen bei ihr keine Aktion aus. Füge deshalb keinen Tabstopp hinzu. Links und Schaltflächen in den angrenzenden Bereichen behalten ihre eigene Bedienung.",
+        "Die Referenz verwendet eine bedeutungstragende, nicht bedienbare Trennung. Für eine rein dekorative Linie solltest du in der konkreten Einbindung dafür sorgen, dass sie vor assistiven Technologien verborgen bleibt."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Bedeutung und Ausrichtung getrennt entscheiden",
+      "paragraphs": [
+        "Die Referenz gibt die Inhaltsgrenze mit der Rolle separator und der passenden Orientierung aus. Horizontal und vertikal beschreiben die Lage der Linie; keine der beiden Ausrichtungen macht sie automatisch dekorativ.",
+        "In einem Formular ersetzt die Linie keine benannte Feldgruppe. In einem Dialog oder einer Navigation trennt sie allenfalls Bereiche, benennt aber weder den Dialog noch ein Navigationsziel. Sorge in der Umgebung für verständliche Überschriften, Gruppierung und Lesereihenfolge."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Seite belegt",
+      "paragraphs": [
+        "Grundlage sind die exportierte Schnittstelle, die visuellen Regeln, das passive Verhaltensmodell und die HTML-/ARIA-Referenz. Die beiden statischen Fixtures beschreiben horizontale und vertikale Ausrichtung.",
+        "Die Gestaltung bindet die tatsächlich beobachtete Orientierung ausdrücklich im semantischen Adapter. Die Illustration ist ein redaktioneller Entwurf und kein Laufzeitnachweis. Aus dem vollständigen Referenzumfang folgt keine allgemeine Freigabe deiner Anwendung oder anderer Plattformen."
+      ]
+    }
+  ]
+}

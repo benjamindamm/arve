@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "bubble",
+  "title": "Bubble",
+  "summary": "Gesprächsbeiträge als einzelne Blasen darstellen und mit lesbaren Namen ihren Absendern zuordnen. Optionale Reaktionen ergänzen den Text.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Gesprächsbeiträge zuordnen",
+      "paragraphs": [
+        "Bubble fasst einen Gesprächsbeitrag als eigene Fläche zusammen. Verwende sie für kurze Rückfragen und Antworten, deren Absender beim Überfliegen erkennbar bleiben sollen. Nenne die Person im Text; Farbe und Position dürfen diese Zuordnung nur ergänzen.",
+        "Für einen sachlichen Hinweis ausserhalb eines Gesprächs empfehlen wir Alert. Für einen ausführlichen Beitrag mit eigenständigem Kopf und mehreren Aktionen ist Card meist geeigneter. Entscheide zuerst, ob der Inhalt tatsächlich Teil eines Gesprächs ist, bevor du ihn als Sprechblase gestaltest."
+      ],
+      "links": [
+        {
+          "text": "Alert",
+          "href": "/systems/shadcn/components/alert",
+          "paragraph": 1
+        },
+        {
+          "text": "Card",
+          "href": "/systems/shadcn/components/card",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Rückfrage zum Bericht",
+      "paragraphs": [
+        "Lea meldet: «Der Bericht ist bereit.» Noah antwortet: «Danke, ich prüfe ihn heute.» Die Namen stehen direkt beim Beitrag. Die zweite Blase ist am anderen Rand ausgerichtet; auch ohne diesen Unterschied bleibt klar, wer spricht.",
+        "Die Reaktion «Danke · 1» sitzt am unteren Rand von Leas Beitrag. Sie veranschaulicht einen optionalen, von der Anwendung bereitgestellten Inhalt. Plane darunter genug Platz ein, damit sie die nächste Nachricht nicht verdeckt."
+      ],
+      "illustration": {
+        "src": "/component-examples/bubble.svg",
+        "alt": "Zwei Gesprächsbeiträge: Lea meldet den fertigen Bericht, Noah kündigt die Prüfung an. Unter Leas Beitrag steht die Reaktion Danke mit der Anzahl 1.",
+        "caption": "Statische Illustration · Gespräch mit sichtbaren Namen und einer optionalen Reaktion."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Textfläche mit Platz für Reaktionen",
+      "paragraphs": [
+        "Eine senkrechte Gruppe ordnet die Blasen. Jede Blase umfasst den eigentlichen Inhalt und bei Bedarf einen Bereich für Reaktionen. Ihre Breite folgt dem Inhalt und bleibt innerhalb des verfügbaren Platzes; lange Wörter können umbrechen.",
+        "Die abgerundete Fläche hält den Text zusammen. Reaktionen liegen zur Hälfte über ihrem oberen oder unteren Rand und können an beiden logischen Seiten stehen. Beurteile die Abstände deshalb mit den tatsächlich eingesetzten Reaktionsschaltflächen, auch bei mehrzeiligen Nachrichten."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Fläche und Ausrichtung bewusst wählen",
+      "paragraphs": [
+        "Belegt sind default, secondary, muted, tinted, outline, ghost und destructive. Als redaktionelle Empfehlung eignen sich zurückhaltende Flächen wie muted für längere Verläufe; outline grenzt mit einer Kontur ab, ghost verzichtet auf eine Fläche. Verwende destructive nur, wenn ein zusätzlich formulierter problematischer Inhalt diese Hervorhebung rechtfertigt.",
+        "default ist die voreingestellte, hervorgehobene Fläche; eine Variante primary gibt es nicht. tinted verbindet eine hellblaue Fläche mit dunklem Text, auch bei einem Moduswechsel. Die Blase lässt sich mit start oder end ausrichten; Reaktionen zusätzlich oben oder unten. Eigene Grössenvarianten sind nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Aktualisieren ohne eigene Reaktionslogik",
+      "paragraphs": [
+        "Die Blase wird angezeigt, kann bei geänderten Eigenschaften neu dargestellt und aus dem Verlauf entfernt werden. Ein eigener Lade-, Sende- oder Fehlerablauf gehört nicht zu ihrem Verhalten. Falls die Anwendung solche Rückmeldungen braucht, muss sie diese verständlich als Text ausgeben.",
+        "Auch Reaktionen besitzen hier keinen eingebauten Zustand oder Speicher. Die Anwendung entscheidet, ob «Danke» auswählbar ist, aktualisiert eine Anzahl und setzt bei einer umschaltbaren Schaltfläche deren gedrückten Zustand. Die Blase positioniert diesen Inhalt lediglich."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Namen statt Farbcodes",
+      "paragraphs": [
+        "Schreibe beispielsweise «Lea: Der Bericht ist bereit.» statt nur «Fertig» in einer farbigen Fläche. Halte jeden Beitrag bei einem Gedanken; längere Erklärungen dürfen umbrechen, sollten aber gut gegliedert bleiben.",
+        "Für eine Reaktion empfehlen wir einen zugänglichen Namen wie «Leas Nachricht mit Danke markieren». Ein einzelnes Symbol ohne verständlichen Namen erklärt weder die Handlung noch ihren Bezug. Eine rote Fläche allein vermittelt keinen Fehlergrund."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus nur für tatsächliche Aktionen",
+      "paragraphs": [
+        "Reiner Nachrichtentext erhält durch Bubble keine eigene Tastaturbedienung und keinen zusätzlichen Fokuspunkt. Der Wrapper installiert weder Pfeiltastennavigation noch einen wandernden Fokus.",
+        "Enthaltene native Schaltflächen werden mit Tab erreicht und mit Enter oder Leertaste ausgelöst; native Links mit Enter. Das gilt auch, wenn der Inhaltsbereich ausdrücklich als natives Bedienelement gerendert wird. Die Anwendung liefert den verständlichen Namen und erhält eine sichtbare Fokusmarkierung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Gesprächsrahmen in der Anwendung festlegen",
+      "paragraphs": [
+        "Die Grundstruktur besteht aus div-Containern mit lesbarem Nachrichtentext. Sie erzeugt keine automatische Gesprächs- oder Live-Region. Die Anwendung verantwortet die Einbindung des Verlaufs sowie die Ankündigung neuer Inhalte, soweit dies im konkreten Einsatz nötig ist.",
+        "BubbleContent kann ausdrücklich als nativer Link oder Button ausgegeben werden. Wähle das nur bei einer echten Navigation oder Handlung und vermeide darin weitere interaktive Elemente. Reaktionsaktionen behalten ihre eigene Semantik; die Blase übernimmt keine Formular- oder Dialogsteuerung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Geltungsgrenze",
+      "paragraphs": [
+        "Abgeglichen wurden die exportierte React-Schnittstelle, UX-Angaben, CSS-Regeln, der Zustandsautomat, HTML/ARIA und die statischen Beispielszenarien. Die Quellen unterscheiden die Textfläche klar von den Aktionen der umgebenden Anwendung.",
+        "Der vollständige Referenzstatus gilt für diesen begrenzten Quellenumfang. Er ist keine allgemeine Freigabe für eine konkrete Anwendung, assistive Technik oder andere Plattformen. Die Illustration ist ein redaktioneller Entwurf und kein Nachweis eines gerenderten Produkts."
+      ]
+    }
+  ]
+}

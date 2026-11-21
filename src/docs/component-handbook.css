@@ -1,0 +1,40 @@
+.component-handbook { margin-block:40px 72px; }
+.component-handbook > section { margin-block:64px; max-width:100%; }
+.component-handbook > section > h2 { margin:0 0 24px; max-width:30ch; }
+.component-handbook .rich-text { max-width:68ch; }
+.component-handbook .rich-text p { margin:0 0 20px; line-height:1.8; }
+.component-handbook .rich-text ul { margin-block:24px; padding-left:24px; }
+.component-handbook .rich-text li { padding-left:4px; margin-block:12px; line-height:1.75; }
+.component-handbook > details { border-top:1px solid var(--border); padding-block:24px; }
+.component-handbook > details:last-child { border-bottom:1px solid var(--border); }
+.component-handbook > details > summary { font-size:18px; font-weight:600; line-height:1.5; cursor:pointer; }
+.component-handbook > details[open] > summary { margin-bottom:24px; }
+.component-handbook-illustration { max-width:560px; overflow:auto; margin:28px 0; border:1px solid var(--border); border-radius:8px; background:#fafafa; }
+.component-handbook-illustration img { display:block; width:100%; height:auto; }
+.component-handbook-illustration:focus-visible { outline:3px solid var(--ring); outline-offset:3px; }
+.component-handbook #live-beispiel { margin-block:32px; }
+@media(max-width:640px){
+ .component-handbook { margin-top:28px; }
+ .component-handbook > section { margin-block:44px; }
+ .component-handbook > section > h2 { margin-bottom:20px; }
+ .component-handbook > details { padding-block:20px; }
+}
+.component-handbook-example { margin:28px 0 32px; }
+.component-handbook-example .component-handbook-illustration { margin:0 0 12px; max-width:100%; }
+.component-handbook-example figcaption { color:var(--muted-foreground); font-size:13px; line-height:1.65; }
+.component-handbook-example figcaption a { display:inline-block; margin-left:6px; }
+.component-handbook #live-beispiel > h3 { margin-bottom:16px; }
+/* A concrete example is the first chapter; the full index is optional. */
+.component-handbook { margin-top:0; }
+.component-handbook > section:first-child { margin-top:0; }
+.component-handbook > .handbook-outline { margin-block:32px 48px; }
+.component-handbook > .handbook-outline summary { font-size:14px; }
+@media(max-width:640px){
+ .component-handbook { margin-top:0; }
+ .component-handbook > .handbook-outline { margin-block:28px 36px; }
+}
+
+.component-handbook .component-handbook-notice { margin:0 0 24px; max-width:68ch; padding:16px 18px; border-left:3px solid #a77224; background:#fbf6ec; border-radius:0 6px 6px 0; color:var(--foreground,#171717); }
+.component-handbook .component-handbook-notice blockquote { margin:0; padding:0; border:0; font-style:normal; font-size:15px; line-height:1.65; }
+.component-handbook .component-handbook-notice a { text-underline-offset:3px; }
+.component-handbook .component-handbook-notice a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }

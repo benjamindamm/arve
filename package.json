@@ -16,7 +16,8 @@
     "build:static": "node scripts/build-static-site.mjs",
     "check:static": "node --import tsx scripts/check-static-site.ts",
     "preview:static": "node scripts/serve-static-site.mjs",
-    "check:component-template": "node --import tsx scripts/check-component-template.ts"
+    "check:component-template": "node --import tsx scripts/check-component-template.ts",
+    "check:component-catalog": "node --import tsx scripts/check-component-catalog.ts --all --published --report"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",

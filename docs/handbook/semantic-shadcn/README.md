@@ -39,3 +39,7 @@ Das Portal liefert diese Dateien unter `.../components/<component>/assets/<paket
 Importer- und Skilltests: jeweils acht bestanden. Regulärer Produktionsbuild und Build ohne Datenbank bestanden. Statische Veröffentlichung: 198 HTML-Dateien, 116 Handbuchseiten, 69 Komponenten, 57.348 geprüfte interne Verweise und 2.955 Dateien mit geprüftem Hash.
 
 Der Quellenstatus `complete` und `release:false` wird übernommen. Diese Integration ist keine allgemeine Abnahme aller React-, Angular-, iOS- oder Android-Implementierungen. Die Texte der übrigen 68 Komponenten wurden bei diesem Import nicht redaktionell neu ausgearbeitet. Arve ist lokal vorbereitet und noch nicht committet oder gepusht; ui-contracts ist gepusht.
+
+## Anschliessende redaktionelle Ausarbeitung
+
+Der oben beschriebene Import ist der historische Ausgangsstand. Inzwischen sind die übrigen 68 Komponenten nach der Button-Vorlage ausgearbeitet, mit eigenen Gestaltungsbeispielen und Quellenreviews. Aktueller Stand und Prüfungen: [Komponentenkatalog](../component-catalog/README.md). Die technischen Export- und Implementierungsrevisionen bleiben unverändert.

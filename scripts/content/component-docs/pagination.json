@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "pagination",
+  "title": "Pagination",
+  "summary": "Mit Pagination erreichst du gezielt einzelne Ergebnisseiten und erkennst die aktuelle Seite. Deine Anwendung liefert die Ziele und die zugehörigen Daten.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ergebnisse auf mehrere Seiten verteilen",
+      "paragraphs": [
+        "Verwende Pagination, wenn du eine Ergebnismenge in einzelne, gezielt erreichbare Seiten aufteilst, etwa ein Belegarchiv oder eine längere Trefferliste. Sie hilft dir, die aktuelle Position zu zeigen und zu einer bestimmten Ergebnisseite zurückzukehren. Seitenzahl und Ziele musst du aus den Daten der Anwendung bereitstellen.",
+        "Für wenige Einträge ist eine einzige Liste oft einfacher. Wenn du lediglich weitere Inhalte an dieselbe Liste anhängen willst, passt eine Aktion «Weitere laden» besser. Verwende Tabs für unterschiedliche Inhaltsbereiche; Seitenzahlen stehen hier für Ausschnitte derselben Ergebnismenge. Erfinde keine Gesamtseitenzahl, wenn deine Datenquelle sie nicht liefern kann."
+      ],
+      "links": [
+        {
+          "text": "Tabs",
+          "href": "/systems/shadcn/components/tabs",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Belege mit sichtbarer Position",
+      "paragraphs": [
+        "Das Beispiel zeigt einen Ausschnitt aus einem Belegarchiv auf Seite 2 von 3. Unter den Belegen liegen «Zurück», die Seitenzahlen und «Weiter». Die umrandete 2 bezeichnet die aktuelle Seite; die Zahlen 1 und 3 sind direkte Ziele.",
+        "Die Angabe «Seite 2 von 3» stammt im Entwurf von der Anwendung. Sie erklärt die Position zusätzlich, wird aber von Pagination weder berechnet noch automatisch ausgegeben. Halte diese Angabe, die sichtbaren Belege und die markierte Seite synchron."
+      ],
+      "illustration": {
+        "src": "/component-examples/pagination.svg",
+        "alt": "Belegarchiv mit zwei Belegen, Positionsangabe Seite 2 von 3 und Seitennavigation. Die Zahl 2 ist umrandet.",
+        "caption": "Statische Illustration · Seitennavigation für ein Belegarchiv mit bekannter Seitenzahl."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Ziele direkt bei der Ergebnisliste",
+      "paragraphs": [
+        "Die Navigation fasst eine Liste einzelner Seitenaktionen zusammen. Zahlen führen zu konkreten Seiten; «Zurück» und «Weiter» führen zu benachbarten Zielen. Eine Auslassung mit drei Punkten kann übersprungene Seiten andeuten. Sie ist kein bedienbares Menü und für assistive Technik ausgeblendet.",
+        "Platziere die Navigation als Empfehlung unmittelbar nach der zugehörigen Ergebnisliste. Die Referenz zentriert die Aktionen und erlaubt einen Zeilenumbruch. Unter 40 rem blendet sie die sichtbaren Texte von «Zurück» und «Weiter» aus; die Pfeile und zugänglichen Namen bleiben nötig."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Aktuelle Seite gezielt hervorheben",
+      "paragraphs": [
+        "Die zentrale Unterscheidung ist aktuell oder nicht aktuell. isActive setzt für die aktuelle Seite aria-current auf page und verwendet die umrandete Button-Darstellung; die anderen Seiten bleiben ohne diesen Rahmen. Damit kennzeichnest du den angezeigten Ausschnitt, keine Mehrfachauswahl.",
+        "Zahlen verwenden standardmässig die Icon-Grösse des Buttons, «Zurück» und «Weiter» dessen Standardgrösse. Die Grösse wird vom Button übernommen; eigene farbliche Pagination-Varianten sind nicht definiert. Wähle Auslassungen nur dort, wo du die angezeigten Seitenziele bewusst begrenzen möchtest."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Seitenwechsel und Grenzen abstimmen",
+      "paragraphs": [
+        "Beim Aktivieren wird zuerst der Klick an die Anwendung weitergegeben. Verhindert sie die Standardaktion nicht, folgt die native Navigation dem angegebenen Ziel. Ein Router kann die Aktion übernehmen. Die Markierung springt dabei nicht selbstständig weiter: Die Anwendung aktualisiert isActive passend zur tatsächlich angezeigten Seite.",
+        "Auf der ersten Seite lässt die Referenz «Zurück», auf der letzten «Weiter» weg. Ein disabled-Attribut für PaginationLink ist nicht vorgesehen. Die Anwendung bestimmt gültige Ziele und hält nach Filtern oder Löschen die aktuelle Seite gültig. Plane für asynchrones Laden eine passende Rückmeldung und einen Fehlerfall bei den Ergebnissen; Pagination liefert diese Zustände nicht."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zahlen und Richtungen verständlich benennen",
+      "paragraphs": [
+        "Halte die sichtbaren Zahlen kurz und aufsteigend. «Zurück» und «Weiter» sind verständlicher als unbeschriftete Pfeile allein. Übersetze auch deren zugängliche Namen, etwa «Vorherige Ergebnisseite» und «Nächste Ergebnisseite»: Die voreingestellten englischen Namen ändern sich durch den sichtbaren Text nicht automatisch.",
+        "Benenne den Navigationsbereich zum Beispiel «Belegseiten». Bei Zahlen empfiehlt sich ein zugänglicher Name wie «Seite 3». Vermeide «Mehr» für einen direkten Seitensprung: Das lässt offen, ob Inhalte ergänzt oder ersetzt werden. Lange Ergebnistitel gehören in die Liste, nicht in die Seitennavigation."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab die Seitenziele erreichen",
+      "paragraphs": [
+        "Mit Tab und Umschalt+Tab erreichst du die fokussierbaren Seitenaktionen. Enter aktiviert das hinterlegte Linkziel. In dieser konkreten Base-UI-Variante aktiviert auch die Leertaste beim Loslassen: Die über Button gerenderten Anker haben role=button und tabindex=0. Prüfe die sichtbare Fokusmarkierung in deiner Einbindung.",
+        "Pfeiltasten sowie Pos1 und Ende verschieben hier keine Seitenauswahl. Es gibt keinen gemeinsamen wandernden Fokus. Auslassungspunkte sind kein Fokusziel. Wenn ein Seitenwechsel Inhalte ohne vollständigen Seitenaufruf ersetzt, musst du Fokus und Orientierung im neuen Ergebnisbereich selbst planen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Navigation braucht echte Ziele",
+      "paragraphs": [
+        "Der benannte Navigationsbereich enthält eine Liste von Seitenaktionen mit href-Zielen. Die Button-Semantik dieser Quellvariante gehört zur konkreten Einbindung; behandle sie nicht ungeprüft als gewöhnliche Textlinks. Die aktuelle Seite wird zusätzlich zur sichtbaren Umrandung über aria-current kenntlich gemacht.",
+        "Pagination verwaltet weder Seitenindex noch Ergebnisumfang, berechnet keine Seitenzahl und ruft keine Daten ab. Deine Anwendung verbindet Ziele, Routing und Ergebnisansicht. Behalte bei einem Router auch die Bedeutung modifizierter Klicks auf echte Linkziele im Blick. Die Komponente übermittelt keinen Formularwert."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Umfang dieser Beschreibung",
+      "paragraphs": [
+        "Die Aussagen beruhen auf der veröffentlichten shadcn-Referenz mit CEM-Schnittstelle, CSS, SCXML und HTML/ARIA sowie den gebundenen React-Quellen. Die Referenzfälle zeigen eine mittlere Seite, beide Grenzen und Rechts-nach-links-Anordnung.",
+        "Die Illustration ergänzt ein redaktionelles Anwendungsbeispiel. Sie belegt weder einen Datenabruf noch das Verhalten einer fertigen Anwendung. Die konkrete Verbindung zu deinen Ergebnissen, die Rückmeldung beim Laden und die Fokusführung nach dem Wechsel musst du in deiner Einbindung prüfen."
+      ]
+    }
+  ]
+}

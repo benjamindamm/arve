@@ -1,0 +1,252 @@
+{
+  "component": "tabs",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/component.json",
+      "sha256": "8c2ba18eb203320ce994710ef7b363cd1fa11dd78e84b9c1dc652908cbac66c1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/ux.json",
+      "sha256": "3435b276a5f6aba31329c0b2957bc29c76d27c591d8b4c4b5c1143b972a7bc2a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/interface.json",
+      "sha256": "4c72008b3027f2711f80dcb5540985e3ec44ed4042c437b51fc216e5d2c0066f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/stories.json",
+      "sha256": "8fa62f700af1e2e8a327fd70cf213df327b8a772f7eb7b804124a3542cb9b916"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/behavior.scxml",
+      "sha256": "e42281a4d971ccb2bad0d547b8901e5356d0bf05d937bee3838a12e0b44020f3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/layout.css",
+      "sha256": "2a086e3f17650910a3beb3a64f747ab35ca18049a1e84bbbcc9f69976e26cff1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/accessibility.html",
+      "sha256": "2583d0744551aaa6aaccd866eda0ef3111acdd8bc6b37e711ba0826304b777ed"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/accessibility.rules.json",
+      "sha256": "aa966ad459c2eef871eef5fb4c8c1f38f45eba2f5a7e91aae28e951fc6faff40"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/README.md",
+      "sha256": "ce03a1f811ccb2c0726af78f8b64aac584d60d491b547e78c147770c910dc0f7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/tabs.md.source",
+      "sha256": "e88931d2dead82e790661c6af72298bb8ce1254d2c378f8c55a5310117b1016c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source",
+      "sha256": "1eda25325a7aae9184224247d837b94f98f162d4f697740cc2b1bd53bd35cec6"
+    }
+  ],
+  "claims": [
+    {
+      "id": "same-page",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Tabs wechseln zwischen zusammengehörigen Panels derselben Seite; keine aufeinanderfolgenden Aufgabenschritte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "related-panels",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Der fachliche Einsatz betrifft zusammengehörige Panels auf derselben Seite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/tabs.md.source",
+          "snippet": "A component for toggling between related panels on the same page."
+        }
+      ]
+    },
+    {
+      "id": "example-selection",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der redaktionelle Monatsbericht überträgt die belegte manuelle Auswahl, ohne eine Live-Demo zu behaupten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/stories.json",
+          "pointer": "/stories/0/inputs"
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Referenz besteht aus Root, benannter Leiste, Tabs und zugeordneten Panels.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "overflow",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Tableiste begrenzt ihre Breite und erlaubt horizontalen Überlauf.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/layout.css",
+          "snippet": "max-inline-size: 100%;"
+        }
+      ]
+    },
+    {
+      "id": "overflow-scroll",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Horizontaler Überlauf ist scrollbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/layout.css",
+          "snippet": "overflow-x: auto;"
+        }
+      ]
+    },
+    {
+      "id": "variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Nur default und line sind als Leistenvarianten belegt; die unterstützte Referenzorientierung ist horizontal.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "manual-auto",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Manuelle Aktivierung ist Standard; activateOnFocus aktiviert beim Pfeiltastenfokus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "controlled-fallback",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Benutzerwechsel sind abbrechbar; automatische Fallbacks gelten nur für unkontrollierte Werte und können null ergeben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "keep-mounted",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "keepMounted ist standardmässig false und behält bei true das versteckte HTML-Element im DOM.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/tabs.md.source",
+          "snippet": "| keepMounted | `boolean`                                                                                | `false` | Whether to keep the HTML element in the DOM while the panel is hidden.                                                                                                                        |"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze fachliche Ansichtsbezeichnungen statt nummerierter Tabs oder Aktionen empfohlen.",
+      "evidence": []
+    },
+    {
+      "id": "keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab, Links/Rechts, Home/End, Enter/Space und Escape sowie fokussierbare deaktivierte Tabs sind quellengebunden geprüft.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeiltastenfokus läuft standardmässig in einer Schleife.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "aria-client",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Automatische Beziehungen werden erst im Client registriert; das HTML ist eine Projektion dieses Zustands.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "aria-roles",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Benannte tablist, tab mit aria-selected und aria-controls sowie tabpanel mit aria-labelledby sind im Referenz-HTML vorhanden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz bleibt horizontal und macht die nicht weitergeleitete Orientierung ausdrücklich sichtbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tabs/README.md",
+          "snippet": "This reference therefore does not advertise working vertical Tabs or change frozen code."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Monatsbericht als konkreter redaktioneller Einsatz mit zwei gleichrangigen Ansichten.",
+    "Flächenvariante illustriert; Fokus und Auswahl im Text getrennt erklärt.",
+    "Originalquellen für keepMounted-Standard und Same-page-Zweck gezielt nachgeladen.",
+    "Keine pauschale Zustandserhaltung versprochen: keepMounted beschreibt DOM-Lebensdauer, Anwendungsspeicherung bleibt separat.",
+    "Aktiven Snapshot gezielt gelesen; nicht als unveränderlichen historischen Beleg verwendet."
+  ],
+  "limits": [
+    "Keine lokale Tabs-Demo vorhanden; Illustration ist statisch.",
+    "Vertikale Bedienung wird wegen belegter Wrapper-Grenze nicht zugesichert.",
+    "Keine Browser- oder Assistenztechnikprüfung im Rahmen dieses redaktionellen Auftrags ausgeführt."
+  ]
+}

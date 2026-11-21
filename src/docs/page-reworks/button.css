@@ -17,24 +17,14 @@
 .button-rework-example .system-button { max-width: 100%; }
 .button-anatomy { padding-block: 2rem; }
 .button-action-group { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
-.button-state-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem 2rem; }
-.button-state-card { border-top: 1px solid var(--border, #d9dee4); padding-top: 1rem; }
-.button-state-card p { margin-top: .5rem; }
-.button-state-number { font-size: .8rem; color: var(--muted-foreground, #52606d); }
 .button-rework > details { border-top: 1px solid var(--border, #d9dee4); padding-top: 1.25rem; }
 .button-rework > details + details { margin-top: -1.5rem; }
 .button-rework summary { cursor: pointer; font-weight: 600; padding-block: .25rem; }
 .button-rework details .handbook-block { margin-top: 1.25rem; }
 @media (max-width: 48rem) {
-  .button-comparison, .button-state-grid { grid-template-columns: 1fr; }
-  .button-illustration { min-height: 7rem; }
+  .button-comparison,   .button-illustration { min-height: 7rem; }
   .button-action-group { align-items: stretch; flex-direction: column; }
 }
 
 .button-rework .button-illustration-note { margin-block: -1.5rem -1rem; font-size: .85rem; color: var(--muted-foreground, #52606d); }
-.button-api-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; }
-.button-api-grid h3 { margin-top: 0; font-size: 1rem; }
-.button-api-values { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 1rem 0; }
-.button-api-values li { padding: .3rem .6rem; border: 1px solid var(--border, #d9dee4); border-radius: .35rem; font-size: .8rem; }
 .button-coverage-note { border-left: 2px solid var(--border, #d9dee4); padding-left: 1rem; font-size: .9rem; }
-@media (max-width: 48rem) { .button-api-grid { grid-template-columns: 1fr; } }

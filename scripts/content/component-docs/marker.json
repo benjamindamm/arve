@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "marker",
+  "title": "Marker",
+  "summary": "Mit Marker ordnest du kurze Systemnotizen, Arbeitsmeldungen und beschriftete Grenzen in einen Gesprächsverlauf ein. Der Text trägt die Bedeutung; Symbole und Linien unterstützen ihn.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Kurze Hinweise im Gespräch einordnen",
+      "paragraphs": [
+        "Mit Marker setzt du kurze Systemnotizen, Arbeitsmeldungen oder beschriftete Grenzen in einen Gesprächsverlauf. Nutze ihn etwa für «4 Unterlagen geprüft» zwischen zwei Nachrichten oder für «Ungelesene Nachrichten» vor neuen Beiträgen. Der Text erklärt die Bedeutung; ein Symbol unterstützt ihn lediglich.",
+        "Wähle die Trennlinienvariante, wenn du einen Abschnitt im Verlauf kenntlich machen willst. Für eine reine Linie ohne bedeutungstragenden Text passt Separator besser. Wenn du eine eigenständige Handlung anbieten willst, ist Button meist klarer; Marker eignet sich dafür, wenn die Handlung bewusst in die zurückhaltende Zeile des Verlaufs eingebettet werden soll."
+      ],
+      "links": [
+        {
+          "text": "Separator",
+          "href": "/systems/shadcn/components/separator",
+          "paragraph": 1
+        },
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Neue Beiträge im Verlauf abgrenzen",
+      "paragraphs": [
+        "Im Entwurf steht «Ungelesene Nachrichten» zwischen einer älteren und einer neuen Nachricht. Die beiden Linien lenken den Blick auf diese Grenze, ohne daraus eine zusätzliche Nachricht zu machen. Darunter bestätigt eine separate Zeile «4 Unterlagen geprüft» einen abgeschlossenen Arbeitsschritt.",
+        "Beide Marker sind hier passive Inhalte. Weder die Grenze noch die Bestätigung lässt sich auswählen oder aufklappen. Wenn du daraus einen Einstieg in die geprüften Unterlagen machen möchtest, brauchst du einen echten Link und eine passende Beschriftung wie «4 geprüfte Unterlagen öffnen»."
+      ],
+      "illustration": {
+        "src": "/component-examples/marker.svg",
+        "alt": "Gesprächsverlauf mit der beschrifteten Grenze Ungelesene Nachrichten und der Systemnotiz 4 Unterlagen geprüft.",
+        "caption": "Statische Illustration · Beschriftete Grenze und abgeschlossener Arbeitsschritt im Gespräch."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Text, Symbol und Linien zusammensetzen",
+      "paragraphs": [
+        "Die äussere Zeile nimmt die verfügbare Breite ein und ordnet den Inhalt nebeneinander an. Der Text trägt die eigentliche Aussage. Ein optionales Symbol steht daneben, bleibt für assistive Technik verborgen und darf deshalb keine zusätzliche, nur dort erkennbare Information enthalten.",
+        "Beim beschrifteten Trenner füllen flexible Linien den Raum links und rechts des Inhalts. Bei der Variante mit unterem Rand trennt eine Linie die nächste Zeile ab. Plane genügend Platz für verständliche Wörter ein; längerer Text darf umbrechen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Drei Anordnungen gezielt wählen",
+      "paragraphs": [
+        "Marker hat drei belegte Layoutvarianten. Sie verändern die Anordnung und Abgrenzung, nicht die Bedeutung oder Bedienbarkeit. Eigene Grössen- oder Bedeutungsvarianten sind nicht definiert."
+      ],
+      "bullets": [
+        "default: eine schlichte Zeile für kurze Notizen und Arbeitsmeldungen.",
+        "separator: ein mittiges Textlabel zwischen zwei Linien, etwa für eine Grenze im Verlauf.",
+        "border: die normale Ausrichtung mit unterem Rand, wenn mehrere Arbeitszeilen klar voneinander getrennt sein sollen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Arbeitsfortschritt braucht Inhalte der Anwendung",
+      "paragraphs": [
+        "Marker hat keinen eigenen Auswahl-, Aufklapp- oder Fortschrittsablauf. Die Anwendung zeigt ihn an, ändert seinen Inhalt und entfernt ihn bei Bedarf. Eine Anzeige wie «Unterlagen werden geprüft …» und der spätere Text «4 Unterlagen geprüft» entstehen durch diese Inhaltsänderung.",
+        "Soll eine laufende Arbeit zugänglich angekündigt werden, ergänzt du ausdrücklich die Statusrolle. Ein Spinner kann die laufende Arbeit visuell unterstützen; er erzeugt weder Fortschrittswerte noch den Abschluss. Animationen durch eine zusätzliche Shimmer-Stilklasse sind ebenfalls keine eingebaute Marker-Funktion."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aussage muss ohne Symbol verständlich sein",
+      "paragraphs": [
+        "Schreibe konkret und möglichst in einer kurzen Zeile: «4 Unterlagen geprüft» erklärt Ergebnis und Umfang besser als «Fertig». Für eine Grenze ist «Ungelesene Nachrichten» klarer als «Neu», wenn ältere und neue Beiträge direkt nebeneinander stehen.",
+        "Benutze für eine Aktion eine handlungsbezogene Formulierung wie «Prüfbericht öffnen». Ein Häkchen allein oder ein wechselnder Farbpunkt reicht nicht. Empfohlen ist sichtbarer Text, damit alle dieselbe Information erhalten. Vermeide lange Erklärungen in der kompakten Zeile; bringe Details in der zugehörigen Nachricht unter."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Passive Zeilen erhalten keinen Fokus",
+      "paragraphs": [
+        "Der normale Marker ist Textinhalt ohne eigene Tastaturbefehle und ohne Stopp in der Tab-Reihenfolge. Du musst ihn nicht nachträglich fokussierbar machen. Auch die Linienvariante fügt keine Tastaturbedienung hinzu.",
+        "Wenn du über render einen echten Button oder Link einsetzt, gilt dessen native Bedienung: Tab erreicht das Element, Enter aktiviert einen Link, Enter oder Leertaste einen Button. Der sichtbare Marker-Text liefert den zugänglichen Namen. Beim Button ist ein sichtbarer Tastaturfokus vorgesehen; prüfe bei jeder aktiven Einbindung Fokus und Aktion im tatsächlichen Kontext."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Aufgabe bestimmt die Semantik",
+      "paragraphs": [
+        "Standardmässig ist Marker ein div. Die Variante separator fügt keine Separator-Rolle hinzu. Gib einem Trenner mit bedeutungsvollem Text auch nicht nachträglich diese Rolle: Die Linien sind Dekoration, das Label soll als normaler Inhalt lesbar bleiben. Die untere Randlinie verändert ebenfalls keine Semantik.",
+        "Für veränderliche Arbeitsmeldungen wählst du gezielt role=status. Für Navigation oder Aktionen verwendest du render mit einem echten Link oder Button; ein Klickhandler allein macht die Standardzeile nicht zum Bedienelement. Marker verwaltet keine Auswahl, keine ungelesenen Nachrichten und keine Formularwerte. Diese Aufgaben bleiben bei der umgebenden Anwendung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf Komponentenbeschreibung, Schnittstelle, CSS, Zustandsmodell, HTML/ARIA-Regeln und die gebundenen originalen Base-UI-Quellen samt Beispielen. Sie belegen die drei Layoutvarianten, die Textverantwortung und die ausdrücklich ergänzbaren Status- und Aktionsverwendungen.",
+        "Der Contract beschreibt einen begrenzten Referenzumfang. Die Illustration ist ein redaktioneller Entwurf; sie belegt weder Laufzeitverhalten noch die Zugänglichkeit einer konkreten Anwendung. Für Marker liegt hier kein veröffentlichter Implementierungsnachweis wie beim Button vor."
+      ]
+    }
+  ]
+}

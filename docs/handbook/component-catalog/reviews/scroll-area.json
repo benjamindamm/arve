@@ -1,0 +1,202 @@
+{
+  "component": "scroll-area",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/component.json",
+      "sha256": "8ac55af192adebe52160833ca2819518b7fd8047c283d87726e262524aedc6b1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+      "sha256": "c5deb1f90318a5fd5ccac36712f4aba9447b2e2eae6286db6934602533b5f54c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/interface.json",
+      "sha256": "d65733b8b3c7aa642c92a93e1c8ce4c11ba3534d715ce5b369ec075608b24385"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+      "sha256": "2fe2c6158e3aa39f56522cb913e02723fb28a9cf8c552be48e297116f717d651"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/behavior.scxml",
+      "sha256": "7cd1769945098b3271f8298e41d958ec3e745ac260eb619719a3946678339a59"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/layout.css",
+      "sha256": "a32b0ecdf8b7d7e6eb0480b45644bd6af6aa50fe51763c2b5b30c11e1ae0a810"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.html",
+      "sha256": "88c149b0d1b0d19b95fe780a29bee2d33c4d81260a87efbbc247dcf761522d06"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+      "sha256": "7cd3cc6da5197cd2c70077352816d50aa172bf2e532eb4a25b24bdfd1de15943"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/README.md",
+      "sha256": "3f4f5b30c5914c1caabafbdf79facc6f822e7e95236ea6e623d4727c0b012fcf"
+    }
+  ],
+  "claims": [
+    {
+      "id": "bounded-use",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Scroll Area begrenzt überlaufenden Inhalt; automatisches Folgen und Chat-Anker gehören nicht zu ihrer Aufgabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "activity-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Projektaktivitäten, eine äussere Überschrift und ein Hinweis illustrieren den begrenzten Ausschnitt; die Zeichnung zeigt keine echte Laufzeit."
+    },
+    {
+      "id": "real-viewport-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der Viewport ist die tatsächliche innere Scrollfläche; Inhalt und Innenabstand liegen beim Aufrufer.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/component.json",
+          "pointer": "/anatomy/viewport"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/component.json",
+          "pointer": "/anatomy/content"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "axis-choices",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "ScrollBar ist standardmässig vertikal; die horizontale Leiste wird explizit als Inhalt im Viewport ergänzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1/description"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "overflow-tab-state",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Bei Überlauf mindestens einer Achse erhält der Viewport tabindex=0, sonst -1; native Messungen führen Position und Schiebergeometrie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "content-cue",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Überlauf darf nicht der einzige Hinweis auf weitere Inhalte sein; die Referenz verwendet eine echte Überschrift und native Inhalte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "native-input-and-name",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Tastatur-, Wheel- und Touchbedienung bleiben erhalten; Root-Beschriftungen sind keine zugesicherte Viewport-Beschriftung; die visuelle Scrollleiste ist aria-hidden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "native-key-check",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Pfeiltasten und Bildtasten werden als native Browserbedienung beschrieben, verbunden mit einer konkreten Prüfung im Zielbrowser; keine eigene Tastenzuordnung wird behauptet."
+    },
+    {
+      "id": "wrapper-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Root ist presentational, der Viewport wird nicht exportiert und Root-Props werden nicht als Viewport-Callbacks oder Labels zugesichert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "finite-scenarios",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die vorhandenen Szenarien umfassen overflow, fits-without-scroll, both-axes, rtl und viewport-focus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+          "pointer": "/stories/0/id"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+          "pointer": "/stories/1/id"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+          "pointer": "/stories/2/id"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+          "pointer": "/stories/3/id"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/scroll-area/stories.json",
+          "pointer": "/stories/4/id"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Native Tastaturbedienung mit konkreter Zielbrowserprüfung erklären, da das SCXML keine eigene Tastenzuordnung definiert.",
+    "Projektaktivitäten als statisches Beispiel wählen; äussere Überschrift und Hinweis bleiben ausserhalb des Ausschnitts.",
+    "Seitenlayout und Message Scroller als konkrete Alternativen abgrenzen; keine Varianten aus Radix annehmen."
+  ],
+  "limits": [
+    "Keine lokale interaktive Demo für Scroll Area ausgewertet oder behauptet.",
+    "SVG ist eine statische redaktionelle Illustration; keine Browser-, Pixel- oder AT-Prüfung dieser Seite."
+  ]
+}

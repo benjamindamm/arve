@@ -1,0 +1,265 @@
+{
+  "component": "chart-area",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/component.json",
+      "sha256": "8eabbe7b58fac16048b1e4cba0192f16c2e573203be2e34ee89508072c63dda2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+      "sha256": "3ad4a362b827fbf108490a76871b1f9c4643386d8036b2d356ecd61a7a28c283"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/interface.json",
+      "sha256": "36e5275934ce6ed612606319095941550fa81b14c5274f287f57283d15e59679"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/stories.json",
+      "sha256": "7da33d935cf28f8de08f23687c2ca59f6d72082af27c88e9f0599da8c9e21cf2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/behavior.scxml",
+      "sha256": "ad62ade0cec559f2d4c1b0ce8be5f162fabb68958c4b5549af934415abaafea6"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/layout.css",
+      "sha256": "d02aeb95477eac97b35bff0424d31a60b6c6e297384ff6a721fa7ba782319ad4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/accessibility.html",
+      "sha256": "7ba37c25f06c7cd728cf97a6bfb0e291ae0b18413132e1e6847689e4d9538124"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/accessibility.rules.json",
+      "sha256": "cd4d83c6e953c7b8812f4a7e854e3a3acb9a95cb8edc4a12a7deb215ca852a5a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/README.md",
+      "sha256": "bff690436bb212b18eacd61d1564e53620a0d1d083bcddec714da0e6265247ac"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-area-default.tsx.source",
+      "sha256": "b477e9e5366c89d6e95bf463586752cfadcb358ebf67914af09c7b9d313ae744"
+    }
+  ],
+  "claims": [
+    {
+      "id": "ordered-area",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die gebundene Fläche zeigt eine geordnete monatliche Desktop-Besucherreihe; die natürliche Interpolation erzeugt keine zusätzlichen Beobachtungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "chart-choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Nullbasis für diese Zähldaten empfohlen; Linie für Veränderungen oder mehrere Verläufe, Balken für Monatsvergleich, Tabelle für genaue Werte."
+    },
+    {
+      "id": "literal-data",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Der Entwurf übernimmt alle sechs Werte unverändert: 186, 305, 237, 73, 209, 214. Deutsche Monatsnamen sind redaktionelle Übersetzungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+          "pointer": "/exampleSource/dataset"
+        }
+      ]
+    },
+    {
+      "id": "illustration-not-runtime",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Gerade Verbindungen sind als statische Illustration erlaubt, aber kein Nachbau der natürlichen Laufzeitinterpolation.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/stories.json",
+          "pointer": "/stories/0/expectation"
+        }
+      ]
+    },
+    {
+      "id": "full-table",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Referenz verlangt vollständige Tabelle mit Spalten-/Zeilenüberschriften, Reihenfolge, exakten Werten und sichtbarer Einheit.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Abbildung, Beschriftung, Zusammenfassung, Plot, Datenbereich, Tooltip und Legende gehören zur festgelegten Anatomie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Tooltip-Indikatoren sind dot, line und dashed; dot, hideLabel=false und hideIndicator=false sind Defaults.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1"
+        }
+      ]
+    },
+    {
+      "id": "bounded-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Festgelegt sind Diagrammart, Datenzustand, Tooltip-Indikator und Theme, keine eigene gestapelte Variante.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "atomic-update",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datenwechsel entfernt den alten Tooltip; leere Daten führen zu empty.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/behavior.scxml",
+          "snippet": "<assign location=\"loadStatus\" expr=\"rows.length ? 'ready' : 'empty'\" />"
+        }
+      ]
+    },
+    {
+      "id": "caller-feedback",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Empty/error sind explizite Anwendungsrückmeldungen und ersetzen Diagramm und Tabelle; sie erzeugen keine Nullwerte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "unit",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die Dateneinheit ist Visitors (count), die Serie desktop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+          "pointer": "/exampleSource/unit"
+        }
+      ]
+    },
+    {
+      "id": "honest-summary",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Die Zusammenfassung benennt Einbruch und Erholung, vermeidet Ursachen- und Prognosebehauptungen; die Zählmethode ist im Beispiel nicht definiert."
+    },
+    {
+      "id": "keyboard-reference",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Referenzgrafik ist aria-hidden und accessibilityLayer=false, Werte bleiben über native Tabelle zugänglich; Tooltip hat keinen Fokus, Escape schliesst an aktueller Koordinate.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "wrapper-not-export",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Diagrammfamilie ist eine explizite Recharts-Zusammenstellung mit Base-UI-Wrapper, kein neuer upstream Export.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "caller-configuration",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der ChartContainer benötigt getrennte Konfiguration und Recharts-Inhalt; Tabelle, Aggregation und Auswahlbedienung entstehen nicht automatisch.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "limited-evidence",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz beansprucht kein allgemeines Pixel-, Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-area/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    },
+    {
+      "id": "source-footer-year",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Das gebundene Original nennt Januar bis Juni 2024.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-area-default.tsx.source",
+          "snippet": "January - June 2024"
+        }
+      ]
+    },
+    {
+      "id": "correct-growth-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Die Quellwerte ergeben (214−209)/209×100 = rund 2,4 Prozent Wachstum von Mai auf Juni. Die Original-Footerangabe 5,2 Prozent wurde nicht übernommen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-area-default.tsx.source",
+          "snippet": "Trending up by 5.2% this month"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Nullbasis und Skala bis 400 als redaktionelle Entscheidung für das Zählbeispiel; keine allgemeine Quellenregel für alle Flächendiagramme.",
+    "Sechs unveränderte Quellwerte statt erfundener Daten; deutsche Monatsnamen.",
+    "Die volle Tabelle ist Bestandteil der Illustration. Eine glatte Kurve würde bei dieser statischen Zeichnung unbelegte Zwischenwerte suggerieren; deshalb ausdrücklich gerade Verbindungen.",
+    "Keine Addition oder kumulierte Flächeninterpretation; keine interaktive Legende und keine weitere Serie erfunden.",
+    "Originalfooter nennt Januar–Juni 2024 und unbegründete 5,2 Prozent Wachstum. Jahr übernommen; Wachstumsangabe anhand der Monatswerte als rund 2,4 Prozent korrigiert."
+  ],
+  "limits": [
+    "Keine fachliche Definition der Besucherzählung im gebundenen Beispiel; widersprüchliche Wachstumsangabe des Originalfooters ist redaktionell korrigiert.",
+    "Keine lokale Chart-Area-Demo in src/demos/shadcn vorhanden; statische Illustration ist kein Laufzeitnachweis.",
+    "Browserprüfung und Integration bleiben beim Root; hier JSON, Belege, XML und geometrische Lesbarkeit geprüft."
+  ]
+}

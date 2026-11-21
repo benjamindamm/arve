@@ -1,0 +1,278 @@
+{
+  "component": "questionnaire",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/component.json",
+      "sha256": "57e6e06e7e4e76140496bb9cb67259ce39b1b6af237daf9741dcf9cdb33203f9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+      "sha256": "3de006d37925095a708959c4f45bf1c662bb1451d567a06f889119c9764fab58"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/interface.json",
+      "sha256": "e2254c34ae704ea3d4615aca1ea15b7d8e7791e08325233b1bd981819f62379a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/stories.json",
+      "sha256": "e873645d2374f3c0c2157017e2ac79b002e489e25691fbdfe471e9ca7e18209c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/behavior.scxml",
+      "sha256": "fbcb6571a814c8ff4166a02b7b17b63404fc5c204c0e3b2f35bbcb8a94b413b7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/layout.css",
+      "sha256": "fa050a0e2411543cecb4e8cbb5e7ec370ccb137bd1256874675068706cac7eb8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.html",
+      "sha256": "9738db284f4cdf49a42127730c19673ad459b22869bd7301012f5c5cdcba85ed"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+      "sha256": "d7ce034add7e5d2a58f848c9f6e685ec269ff9e0b2051c60db393a25c2ae6b4c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/README.md",
+      "sha256": "33464a23e8ae906622fef725ccbcae2391902d36e5744e4d5f5b941f30a326a1"
+    }
+  ],
+  "claims": [
+    {
+      "id": "ordered-native-answers",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Geordnete Fragen erfassen native Formularantworten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Radio Group für einzelne Auswahl und ein gewöhnliches Formular für gleichzeitigen Vergleich sind redaktionelle Einsatzempfehlungen."
+    },
+    {
+      "id": "example-choice",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Projektbericht mit Format, optionalen Inhalten und Kontaktadresse ist ein redaktioneller Drei-Fragen-Entwurf, keine zusätzliche Quellfunktion."
+    },
+    {
+      "id": "no-auto-advance",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Eine einzelne Auswahl führt nicht automatisch zur nächsten Frage.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "progress-position",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Progress zeigt die aktuelle Frage und Gesamtzahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-native",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Frage als Fieldset, Titel als Legend und beschriftete native Auswahlen sind gebundene Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "choice-growth",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Antwortkarten wachsen mit längerem Text.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "answer-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Item.multiple schaltet zwischen Radio und Checkbox um.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/component.json",
+          "pointer": "/visualContract/variants/type"
+        }
+      ]
+    },
+    {
+      "id": "optional-disabled",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Nur optionale Fragen lassen sich überspringen; deaktivierte Items sind von Navigation ausgeschlossen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "status-validation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Optional-unbeantwortet ist ungültig bis Antwort oder explizitem Skip; Next prüft aktiv, Submit alle Fragen und fokussiert die erste ungültige.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "reset-and-participation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Skip entfernt Antwortteilnahme; Reset kann verhindert werden und stellt sonst Vorgaben und anfängliche Navigation wieder her.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "labels-recommendations",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Frage, Mehrfachauswahlhinweis und handlungsfähiger Fehler sind redaktionelle Texte."
+    },
+    {
+      "id": "keyboard-context",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab, kontextabhängige Pfeile, Enter, Ctrl/Meta+Enter und optionale Kürzel folgen den beschriebenen Fokus- und Zielregeln; Escape ist passiv.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "callback-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "onItemChange ist eine nicht abbrechbare Wechselanfrage und getrennt von Antworten; onStatusChange beobachtet Status.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "cem-submit",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "onSubmit ist natives FormEvent nach erfolgreicher Quellenvalidierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/interface.json",
+          "pointer": "/modules/0/declarations/0/events/1"
+        }
+      ]
+    },
+    {
+      "id": "scxml-controlled",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "SCXML übernimmt angefragtes Item nur im ungesteuerten Modus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/behavior.scxml",
+          "snippet": "<if cond=\"!controlled\">\n        <assign location=\"item\" expr=\"_event.data.item\" />\n      </if>"
+        }
+      ]
+    },
+    {
+      "id": "native-validation",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "noValidate ist standardmässig true; false ergänzt native Constraint-Validierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "semantic-focus-errors",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Inaktive Items sind hidden/inert, Fehler werden registriert und als Alert angekündigt, Progress ist beschriftet und polite.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "fixture-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische HTML-Fixtures spezifizieren Anatomie und Zustände; tatsächliches Verhalten wird separat geprüft.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "reference-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die vollständige Referenz ist keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/questionnaire/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Eigenständiges Projektbericht-Beispiel verwendet dieselben belegten Antwortformen, ohne Tarifnamen aus dem Referenzfixture zu übernehmen.",
+    "Illustration zeigt die zweite Frage, damit Mehrfachauswahl und explizites Überspringen gemeinsam verständlich werden.",
+    "Fortschritt wird als Frageposition erklärt, nicht als Anteil gültiger Antworten.",
+    "Beschriftungen, Alternativen und Inhaltsempfehlungen sind redaktionelle Entscheidungen."
+  ],
+  "limits": [
+    "Keine lokale Questionnaire-Demo in src/demos/shadcn vorhanden.",
+    "Statische Illustration wurde nicht als Laufzeit- oder Pixelnachweis verwendet.",
+    "Speichern, Auswertung, Versand und asynchrone Rückmeldung sind keine zugesicherten Questionnaire-Funktionen."
+  ]
+}

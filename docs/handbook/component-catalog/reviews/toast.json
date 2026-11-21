@@ -1,0 +1,298 @@
+{
+  "component": "toast",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/component.json",
+      "sha256": "0923c29f982f0ee2c9dab039eaa9e3dd196c98f2bcf72a41080470dc0434a7f9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+      "sha256": "17dcd8f03095e82d2dfdadaa490191d7a66979718bbe09d330de89c2285985ad"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/interface.json",
+      "sha256": "361deefb4ff4e0079341eb440b2e44250e0b8f449f3e4dc55aa924b50bebb05c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/stories.json",
+      "sha256": "bba81c4b7bcf04d9bce4ead6953986b67f4427652f1679afc987a7cf562fa11b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/behavior.scxml",
+      "sha256": "6cd4dd60ccf95baa32564b369d2d703f8d360e310ac10e53b45b5b13c5e03c54"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/layout.css",
+      "sha256": "ff2fb00ce9b7ea70bc31c08c3c69817e4ef2ba7cbdf564e922f6adaed096c83e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.html",
+      "sha256": "3b336553784a615875ec1b7915ea31650c4832302f4346e1162588a9f2a74dc8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.rules.json",
+      "sha256": "ff52e3ae65e675f098bc442e01bb05564638432f4fa7d8022f1994921ed9874c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/README.md",
+      "sha256": "1b8dc30516952bddf600fc8078ea4080dbab1d66c6e37d70416e6b40e07038a4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source",
+      "sha256": "7109c9718288d39c49fe62e5a55a19a63a56ab60e950619df64d30d63564c0b9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/content/docs/components/base/toast.mdx.source",
+      "sha256": "282db7dad6c7a9abf562aa998f89cf9088e136868fbea9d41fd06ef9615f2ecc"
+    }
+  ],
+  "claims": [
+    {
+      "id": "nonmodal-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Toast liefert nichtmodale Rückmeldung; kritische Entscheidungen brauchen dauerhafte und wiederauffindbare Rückmeldung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Alert, Feldfehler und Alert Dialog sind Empfehlungen nach Dauer, Fehlerort und Entscheidungsbedarf."
+    },
+    {
+      "id": "example-undo",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Archivierungsbeispiel zeigt einen fachlich bestätigten Vorgang und ein dauerhaft auffindbares Ergebnis; wichtige Rückgängig-Aktion wird ohne automatisches Ausblenden geplant."
+    },
+    {
+      "id": "action-independent",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die optionale Aktion schliesst den Toast nicht automatisch.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Titel, Beschreibung, optionale Aktion, Schliessen und privates typabhängiges Symbol gehören zur Referenzanatomie.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Der Meldungsbereich ist unten mit seitlichem Abstand und begrenzter Breite positioniert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/layout.css",
+          "snippet": "[data-slot=\"toast-viewport\"] {\n  position: fixed;\n  inset-inline-end: 16px;\n  bottom: 16px;"
+        }
+      ]
+    },
+    {
+      "id": "types",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die typgebundene Darstellung kennt success, info, warning, error und loading.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/component.json",
+          "pointer": "/visualContract/variants/type/values"
+        }
+      ]
+    },
+    {
+      "id": "priority",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "low und high sind getrennte Prioritäten mit verschiedener Ankündigungssemantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "no-default-type",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Ohne gesetzten Typ bleibt der Toast untypisiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "timers",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Standarddauer 5000 ms, timeout 0 ohne automatische Schliessung, loading ohne Timer und Pause bei Hover, Fokus sowie Fensterverlust.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Schliessen und endgültige Entfernung sind unterschiedliche Lebenszyklusereignisse.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/behavior.scxml",
+          "snippet": "<transition event=\"SOURCE_CLOSED\" target=\"ending\">\n      <send event=\"onClose\" target=\"#_parent\" />"
+        }
+      ]
+    },
+    {
+      "id": "stack-limit",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Standardlimit drei: ältere Einträge werden limited/inert, nicht sofort entfernt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "promise-boundary",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Promise aktualisiert dieselbe Meldung von loading zu success/error und erhält Auflösung oder Ablehnung für die Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "concise-copy",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze Ergebnistitel, konkrete Folgeaktion und sachlicher Zusatz werden empfohlen; Erfolg erst nach bestätigtem Ergebnis formulieren."
+    },
+    {
+      "id": "close-name",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Die Quellvorgabe der Schliessen-Schaltfläche lautet Close toast und ist durch Props überschreibbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source",
+          "snippet": "data-slot=\"toast-close\"\n      aria-label=\"Close toast\""
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "F6 betritt den Bereich, Umschalt+Tab stellt vorherigen Fokus her; Escape ist fokusgebunden, Action/Close unterstützen Enter/Space.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "collapsed-close",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Schliessen ist eingeklappt und ohne eigenen Fokus aria-hidden; F6 öffnet den Stapel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "base-ui",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz bindet Base UI Toast ein; Toaster verbindet Provider, Portal, Viewport und Liste.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source",
+          "snippet": "import { Toast as ToastPrimitive } from \"@base-ui/react/toast\""
+        }
+      ]
+    },
+    {
+      "id": "mounted-provider",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Ein eingebundener Provider/Toaster ist erforderlich; keine zugesagte Warteschlange vor Einbindung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "default-role",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Niedrige Priorität ist nichtmodaler Dialog in höflichem Live-Bereich, kein pauschales role=status.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/accessibility.html",
+          "snippet": "role=\"dialog\" aria-modal=\"false\" tabindex=\"0\""
+        }
+      ]
+    },
+    {
+      "id": "evidence-boundary",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Zustands-Fixtures sind statisch; sie etablieren selbst keinen interaktiven Laufzeitnachweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/toast/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Archivierung als Beispiel gewählt, weil die Rückmeldung einen bestätigten Vorgang und einen dauerhaft verfügbaren Ergebnisort verbinden kann.",
+    "Für die wichtige optionale Rückgängig-Aktion timeout 0 empfohlen; die Anwendung führt sie aus und prüft ihr Ergebnis.",
+    "Base-UI-Variante anhand eingefrorener Originalquelle beschrieben; Sonner ist nicht Grundlage dieser Referenz.",
+    "Statische Illustration zeigt den aufgeklappten Meldungszustand und einen separaten dauerhaften Archiveintrag."
+  ],
+  "limits": [
+    "Keine lokale Toast-Livedemo im Verzeichnis src/demos/shadcn vorhanden.",
+    "Die neu erstellte Illustration ist kein Render- oder Pixelkonformitätsnachweis.",
+    "Keine neue Browser- oder assistive-Technik-Prüfung durchgeführt; tatsächliche Ergebnislogik bleibt Aufgabe der integrierenden Anwendung."
+  ]
+}

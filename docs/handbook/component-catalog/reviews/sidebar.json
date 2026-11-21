@@ -1,0 +1,224 @@
+{
+  "component": "sidebar",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/component.json",
+      "sha256": "d9f950bac4d005ff3c51a5b3f2f8e09ddb380e8b7b8aeb427f390c955dd91568"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+      "sha256": "9f15a010311e5aa8554875624f4625f24541c4c618127eda56eeb3ba6baacc36"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/interface.json",
+      "sha256": "ef5a6b0bc4431bd4471468ec85385fb8ee2505fbc3cfdd2788e2bb67acac7957"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/stories.json",
+      "sha256": "d1cf55e59ab994eccd413e0d5aab0830563bd01aba48a68cba3b2eaa7a1c627e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/behavior.scxml",
+      "sha256": "2ea4cc2e658f0fb0a7bd07719c76705f56c338d15ea9a63d1457ef6a77d4584d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/layout.css",
+      "sha256": "65601155e10833a749b01e980b4ad71d5b62b5fcefed2a85691da0c10a03c2d1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/accessibility.html",
+      "sha256": "9adb9ec03ad202e7b0efc6c2c7f2d501ec27918a531197548569ce2cf4df445b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/accessibility.rules.json",
+      "sha256": "10780b99b7fdb357d982833375c11870a7f2745a2dd483daa77e4ec12f19de75"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/README.md",
+      "sha256": "001dea679a3e489d464bbd6c2afd5a8770df257b877b370cae23bc63b02e8dce"
+    }
+  ],
+  "claims": [
+    {
+      "id": "sidebar-usage-1",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Dauerhafte beschriftete Anwendungsnavigation mit getrenntem Desktop- und mobilem Zustand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-usage-2",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Tabs für Ansichten derselben Aufgabe und Breadcrumb für den Standort als redaktionelle Alternativen.",
+      "evidence": []
+    },
+    {
+      "id": "sidebar-example-3",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration trennt aktuelle Seite und Umschalter; eine aktuelle Seite ist in der HTML-Referenz explizit markiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/accessibility.html",
+          "snippet": "href=\"#overview\" aria-current=\"page\""
+        }
+      ]
+    },
+    {
+      "id": "sidebar-anatomy-4",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf, Fuss und scrollbarer Inhaltsbereich sind getrennte sichtbare Bereiche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/layout.css",
+          "snippet": "[data-slot=\"sidebar-content\"] {\n  display: flex;\n  flex: 1;\n  flex-direction: column;\n  min-block-size: 0;\n  overflow: auto;"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-variants-5",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Sidebar bietet left/right, sidebar/floating/inset und offcanvas/icon/none.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/interface.json",
+          "pointer": "/modules/0/declarations/2/members/0/type/text"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-variants-6",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "none überspringt die responsive Sheet- und Collapse-Darstellung; Menügrössen und Outline sind vorhandene Optionen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-variants-7",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Outline ist als CSS-Regel vorhanden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/layout.css",
+          "snippet": ".cn-sidebar-menu-button-variant-outline {"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-states-8",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Desktop startet offen, mobile Überlagerung geschlossen; Medienwechsel synchronisiert sie nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/behavior.scxml",
+          "snippet": "<data id=\"openMobile\" expr=\"false\" />"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-states-9",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Cookie wird nur bei Desktop-Anfragen geschrieben, nicht automatisch gelesen; kontrollierte Anfrage kann ignoriert werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-labels-10",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Symbolziele brauchen bleibende Namen; Tooltip ergänzt nur.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-labels-11",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze eindeutige Bereichsnamen und benannte Zusatzaktionen sind redaktionelle Empfehlungen.",
+      "evidence": []
+    },
+    {
+      "id": "sidebar-keyboard-12",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Tastenbedienung, unabhängiger mobiler Fokusvertrag und keine Desktop-Fokusfalle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-keyboard-13",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Globale Tastenkombination greift in Eingabefeldern; offcanvas garantiert keine Fokusentfernung, mobile Standardschliessfläche ist verborgen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-semantics-14",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "isActive setzt kein aria-current; Links und Navigation sowie Überschriften werden vom Aufrufer gesetzt; Inset ist main.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "sidebar-sources-15",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Referenz bleibt auf ihren geprüften Umfang begrenzt und behauptet keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/sidebar/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Das Beispiel zeigt nur den aufgeklappten Desktop, damit eine mobile Verfügbarkeit bei collapsible=none nicht suggeriert wird.",
+    "Cookie-Anfrage und tatsächlicher sichtbarer Zustand werden getrennt erklärt.",
+    "Anwendungsnavigation ist als verständlicher Einsatz gewählt; die deutschen Namen sind redaktionelle Beispielinhalte."
+  ],
+  "limits": [
+    "Keine eingebundene lokale Sidebar-Demo und kein neuer Laufzeitnachweis erstellt.",
+    "Mobile Fokusführung wird an den vorhandenen Sheet-Vertrag delegiert; die eigene Anwendung muss ihre konkrete Einbindung prüfen."
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "component": "kbd",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/component.json",
+      "sha256": "df932f5d5b0f33a3df24db200757b0d4c5f6bc2eb5f53424dddcf7b6cbe6bbb7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+      "sha256": "8d2cc84d0a353177833dd1bfff32c8dbc28449253c5bbf90ed5a024f7ceebb07"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/interface.json",
+      "sha256": "22124aa47366426257fe6dde0823e468f630f2fa503e62c4094ea437155823e0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/stories.json",
+      "sha256": "25b0d2c7322dc6e5ba667762c067ee98cc9579e0fdfc3cfb76366521e4cc4c34"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/behavior.scxml",
+      "sha256": "113d5d329ad1faadea511c97ee5155c4baa6403050a5124b96dcfc7eaa6877fc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/layout.css",
+      "sha256": "b9e14739e49dbc69b2b13e75f918e510ad3ac784c3ec1e0c088b1ec61ea676a1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/accessibility.html",
+      "sha256": "57beb104ec39b57f9c146f77d04aa23f299f648166d350e57af8b56853706e20"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/accessibility.rules.json",
+      "sha256": "74a0c24cef68d2bfb8c618ca4928a10dd91cb5cc4db220d9cef942ee18127bf4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/README.md",
+      "sha256": "475dbb873e5d8d67111fa0151830875fc2a765bc2607846cc5b8773b1100149a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-notation",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Kbd zeigt Tastaturinput; die Notation registriert selbst keinen Kurzbefehl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "example-save",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Ctrl und S sind ein Quellenbeispiel und keine registrierte Speicheraktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-wrap",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Gruppe besteht aus inline angeordnetem Inhalt und kann umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/layout.css",
+          "snippet": "[data-slot=\"kbd-group\"] {\n  display: inline-flex;\n  flex-wrap: wrap;"
+        }
+      ]
+    },
+    {
+      "id": "variants-fixtures",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Fixtures zeigen Tastengruppe, Einzeltaste und langen Tastennamen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    },
+    {
+      "id": "variants-none",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Keine eigenen visuellen Varianten sind ausgewiesen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "states-passive",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Verhaltensmodell beschreibt Darstellung, Inhaltsänderung und Entfernen, keine gedrückten oder erfolgreichen Zustände.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "labels-symbols",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Mehrdeutige Symbole brauchen eine verständliche gesprochene Texterklärung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "labels-platform",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Plattformgerechte Schreibweise empfehlen; Unterstützung der tatsächlichen Kombination vor der Anzeige prüfen."
+    },
+    {
+      "id": "keyboard-passive",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Kbd und KbdGroup registrieren keine Shortcuts, bewegen keinen Fokus und behandeln keine Tastenereignisse.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-name",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Tastaturnotation erhält keine unnötige ARIA-Rolle oder Benennung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/accessibility.rules.json",
+          "pointer": "/naming"
+        }
+      ]
+    },
+    {
+      "id": "semantics-group",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Auch KbdGroup rendert kbd trotz div-Prop-Typisierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "semantics-context",
+      "blockName": "semantics",
+      "kind": "editorial",
+      "statement": "Geltungsbereich und mögliche Browser-/Betriebssystemkonflikte separat planen; Aktion zusätzlich über Bedienelement anbieten."
+    },
+    {
+      "id": "sources-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Quellenbeispiele und passive Notation belegen keine automatisch eingerichtete Aktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/kbd/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Tastaturhilfe für Speichern als explizit bedingtes Gestaltungsbeispiel gewählt; keine Live-Aktion behauptet.",
+    "Plattformgerechte Benennung, Kurzbefehlkonflikte und ergänzende Bedienelemente als redaktionelle Empfehlungen behandelt.",
+    "Keine gedrückt-, Fokus-, Fehler- oder Erfolgszustände der passiven Komponente erfunden."
+  ],
+  "limits": [
+    "Keine Implementierung eines registrierten Kurzbefehls oder einer automatischen Plattformanpassung in dieser Komponente.",
+    "SVG ist eine statische redaktionelle Illustration; keine Laufzeit- oder Pixelprüfung."
+  ]
+}

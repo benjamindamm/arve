@@ -1,0 +1,218 @@
+{
+  "component": "combobox",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/README.md",
+      "sha256": "f785a4dfa7d14a4ba2fa2201a01009d43907deafab5daebd652bf5a3952c8009"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/accessibility.html",
+      "sha256": "5671db460505f5cafe372de73aeff8262dda6f06949cd69b447f498a0b224e2e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/accessibility.rules.json",
+      "sha256": "e8236be47aebf8d40e5204a3022aca8da33664b9045802d0987644a6685c9f77"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/behavior.scxml",
+      "sha256": "51d16d622e99746a14ed122dab6a5298ab52e72b093c20621dc583259e2b2933"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/component.json",
+      "sha256": "d2d083e60dac112e729b61d9966debf0deeab1d5938edcec402a27fb3320c2d5"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/interface.json",
+      "sha256": "5de274838750a60ccba64377c1a70647f7cca5c9f55f1e1c1c99aadbf6e820e0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/stories.json",
+      "sha256": "2f974173754e8ede225345b2f1cdffc205f7919b9d53c15fbc9aabb2e0c8aaea"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/ux.json",
+      "sha256": "d2ee5a6c6a6be9eae57cb534a247aeb4f13b0b2250ca40a2d54c7076d49bd5d2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/combobox.md.source",
+      "sha256": "24b3b89e6e77b83eee1fa14a7a66bf125f3723e1c180eea79ebe57eba4d24062"
+    }
+  ],
+  "claims": [
+    {
+      "id": "fixed-options",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Combobox filtert feste Optionen und übernimmt keinen freien Text.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/combobox.md.source",
+          "snippet": "Combobox does not allow free-form text input."
+        }
+      ]
+    },
+    {
+      "id": "example-highlight",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Im Beispiel ist die Markierung ausdrücklich noch keine bestätigte Auswahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/component.json",
+          "pointer": "/anatomy/item"
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Gruppenlabel ist keine Feldbeschriftung; Markierung und Auswahlindikator sind verschiedene Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "multiple",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Mehrfachauswahl verwendet Wertearrays und Chips; Zusatzaktionen sind konfigurierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "query",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Suche, Markierung, Auswahl und Öffnung bleiben getrennt; autoHighlight ist standardmässig false.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "multi-close",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Ungefilterte Mehrfachauswahl bleibt offen, gefilterte Auswahl bei Input ausserhalb schliesst.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "disabled-wrapper",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Referenz gibt disabled an Root und Input weiter.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/ux.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Feldnamen und unterscheidbare Optionen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Fokus bleibt im Input; Enter bestätigt und Escape unterscheidet offenes Popup von geschlossenem Clear.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "closed-escape",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "SCXML fordert bei geschlossenem bearbeitbarem Zustand leeren Suchtext und null beziehungsweise [] an.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/behavior.scxml",
+          "snippet": "<transition event=\"ESCAPE\" cond=\"!open &amp;&amp; !disabled &amp;&amp; !readOnly\">"
+        }
+      ]
+    },
+    {
+      "id": "semantics",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Echte Input-Combobox, Listbox, Optionen und aktive ID sind konkret projiziert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/accessibility.html",
+          "snippet": "aria-activedescendant=\"fruit-banana\""
+        }
+      ]
+    },
+    {
+      "id": "value-query",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "CEM trennt den Inputänderungswunsch vom Auswahlwert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/interface.json",
+          "pointer": "/modules/0/declarations/0/events/3"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Referenz ist complete im begrenzten Umfang; keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    },
+    {
+      "id": "fixtures",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Zustandsbeispiele sind statische Fixtures und kein eigener Live-Nachweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/combobox/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Beispiel zeigt einen markierten, noch nicht ausgewählten Treffer ohne Häkchen.",
+    "Standortauswahl statt frei formulierter Suche als fachlicher Einsatz.",
+    "Geschlossenes Escape-Clear ausdrücklich erklärt; keine vereinfachte Aussage, Escape schliesse immer nur.",
+    "Keine neue Autocomplete-Komponente oder automatische Neuerstellung zugesagt."
+  ],
+  "limits": [
+    "Kein veröffentlichter Implementierungsnachweis dieser Komponente in Arve.",
+    "SVG ist eine redaktionelle Illustration ohne Pixelkonformitätsaussage.",
+    "Ladezustand, Pflichtprüfung und Anwendungseinbindung benötigen eigenen Nachweis."
+  ]
+}

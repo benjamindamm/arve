@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "message-scroller",
+  "title": "Message Scroller",
+  "summary": "Halte die Leseposition in einem wachsenden Gespräch und ermögliche bewusste Sprünge zum Anfang oder Ende. Neue Beiträge sollen dich beim Nachlesen nicht verdrängen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Gespräche weiterführen und nachlesen",
+      "paragraphs": [
+        "Nutze Message Scroller für einen wachsenden Gesprächsverlauf, etwa eine laufende Projektbesprechung. Die Komponente hält die Leseposition nachvollziehbar, während neue Nachrichten hinzukommen oder ältere Beiträge nachgeladen werden. Sie ergänzt Message um die Bewegung im Verlauf; sie erstellt und versendet selbst keine Nachrichten.",
+        "Wähle Scroll Area, wenn du lediglich einen begrenzten Bereich für allgemeine Inhalte brauchst. Für eine kurze, abgeschlossene Unterhaltung genügt häufig eine normale Folge von Nachrichten ohne eigenen Scrollbereich. Entscheide zudem bewusst, ob neue Beiträge automatisch sichtbar werden sollen: Automatisches Folgen ist standardmässig ausgeschaltet."
+      ],
+      "links": [
+        {
+          "text": "Scroll Area",
+          "href": "/systems/shadcn/components/scroll-area",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine frühere Abmachung nachlesen",
+      "paragraphs": [
+        "Du liest in der Projektbesprechung nochmals die Abmachung zur Freigabe. Die Illustration zeigt ältere Beiträge und unten den Sprung zum Ende. Neue Beiträge dürfen dich beim Nachlesen nicht aus dieser Stelle reissen. Mit der unteren Taste kommst du wieder zum aktuellen Gesprächsende.",
+        "Die Namen stehen direkt beim Text. So erkennst du auch ohne unterschiedlich gefärbte Sprechblasen, wer etwas geschrieben hat. Die Überschrift gibt dem Verlauf einen konkreten Kontext."
+      ],
+      "illustration": {
+        "src": "/component-examples/message-scroller.svg",
+        "alt": "Projektbesprechung mit Beiträgen von Lea und Nino zur Freigabe; ein Pfeil unten führt zum Gesprächsende.",
+        "caption": "Statische Illustration · Ältere Beiträge lesen und bewusst zum Ende springen."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Verlauf und Sprungtasten zusammenhalten",
+      "paragraphs": [
+        "Ein begrenzter Rahmen enthält den scrollbaren Ausschnitt. Darin folgen die einzelnen Nachrichten untereinander. Du platzierst die runden Sprungtasten mittig am oberen beziehungsweise unteren Rand des Rahmens. Sie erscheinen abhängig davon, ob in ihrer Richtung weiterer Inhalt erreichbar ist.",
+        "Jede direkte Inhaltszeile braucht eine stabile Nachrichtenidentität, auch ein eingefügter Trenner oder Ladehinweis. Diese Identität hält Sprungziele und Lesepositionen zuverlässig zusammen. Ein interner, für Hilfsmittel verborgener Abstandhalter unterstützt die Positionierung verankerter Beiträge; behandle ihn nicht als sichtbaren Inhalt."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Startpunkt und Bewegungsverhalten wählen",
+      "paragraphs": [
+        "Die Anfangsposition kann am Anfang, am Ende oder beim letzten gesetzten Nachrichtenanker liegen. Standard ist das Ende. Diese Wahl greift einmal beim ersten nicht leeren Inhalt; sie steuert nicht fortlaufend die Leseposition. Ein Anker kann einen wichtigen Gesprächsabschnitt markieren.",
+        "Die Sprungtaste hat die Richtung Anfang oder Ende; voreingestellt ist Ende mit sanfter Bewegung. Die Referenz zeigt eine begrenzte Gesprächsfläche. Ihre Höhe und Nachrichtenabstände sind keine universellen Grössenvarianten für jeden Einsatz."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Neue Beiträge respektieren deine Leseposition",
+      "paragraphs": [
+        "Wenn du automatisches Folgen einschaltest und bereits dem Gesprächsende folgst, wächst die Ansicht mit neuen Inhalten mit. Bewusstes Scrollen mit Rad, Touch oder Scrolltasten löst dieses Folgen. Beim Nachlesen weiter oben zieht dich ein neuer Beitrag nicht nach unten. Beim Voranstellen älterer Nachrichten bleibt die Position standardmässig erhalten.",
+        "Während die Anfangsposition berechnet wird, bleibt der Ausschnitt vorübergehend verborgen. Eine nicht verfügbare Sprungtaste ist unsichtbar und nicht bedienbar. Einen leeren Verlauf, Ladefortschritt und Verbindungsfehler erklärt die umgebende Anwendung; das sind keine eingebauten Scrollzustände."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Ziel und Gespräch verständlich benennen",
+      "paragraphs": [
+        "Gib dem Bereich einen Namen wie «Projektbesprechung» und dem Protokoll etwa «Nachrichten zur Freigabe». Für die Pfeiltasten eignen sich «Zum Anfang» und «Zum Ende» als zugängliche Namen. «Weiter» bleibt unklar, weil es auch den nächsten Beitrag meinen könnte.",
+        "Halte die Sprecherzuordnung als lesbaren Text fest. Empfehlung: Gliedere lange Beiträge in kurze Absätze, statt den Verlauf mit gleichförmigen Textwänden zu füllen. Eine ungelesene Anzahl oder ein Hinweis «Neue Nachrichten» braucht eine eigene, verlässliche Anwendungslogik; die Sprungtaste zählt keine Nachrichten."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Scrollen bleibt von Fokus getrennt",
+      "paragraphs": [
+        "Du erreichst den benannten Scrollbereich mit Tab. Dort bewegen Home, End, Bild auf, Bild ab, Pfeiltasten und Leertaste den Ausschnitt nach dem Verhalten des Browsers und lösen automatisches Folgen. Aktive Sprungtasten lassen sich mit Enter oder Leertaste auslösen. Escape hat keine besondere Aktion.",
+        "Nach einem angenommenen Sprungbefehl verliert die Taste absichtlich den Fokus. Der Sprung setzt ihn weder auf eine Nachricht noch automatisch zurück. Plane anschliessende Arbeitsschritte deshalb ohne versprochenen Fokuswechsel. Eine gescrollte oder sichtbare Nachricht ist keine ausgewählte Nachricht."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein Nachrichtenprotokoll sinnvoll einbetten",
+      "paragraphs": [
+        "Der fokussierbare Ausschnitt ist eine benannte Region; sein Inhalt ist ein Nachrichtenprotokoll mit role=log und aria-relevant=additions. Ergänze passende Namen und verständliche Sprechertexte. Diese Semantik verspricht keine Ansage jedes neu erzeugten Wortes. Wiederholtes Ersetzen ganzer Texte darf nicht die einzige Rückmeldung zu einer laufenden Aufgabe sein.",
+        "Eingabe und Senden gehören zur umgebenden Anwendung. Ein Sprung ist eine Navigation im Verlauf und kein Formularabschluss. Stabile IDs statt Listenpositionen oder Nachrichtentext sind auch für gezielte Sprünge nötig. Ist ein Ziel nicht verfügbar, kann der Befehl scheitern; erfinde daraus keine bestätigte Auswahl."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz trägt",
+      "paragraphs": [
+        "Ausgewertet sind Zweck und Anatomie, die React-Schnittstelle, CSS, das Zustandsmodell sowie HTML/ARIA und die Zustandsbeispiele des veröffentlichten Contracts. Sie beschreiben unter anderem Nachlesen, Anker, Sprungtasten und Tastaturfokus.",
+        "Die Komponente erweitert den Gesprächsbereich um Positionshaltung. Die Referenz belegt keinen Nachrichtentransport und keine allgemeine Freigabe für deine Anwendung oder Hilfsmittelkombination. Die Illustration erklärt einen Entwurf und ist kein Laufzeitnachweis."
+      ]
+    }
+  ]
+}

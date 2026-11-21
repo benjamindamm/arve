@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "menubar",
+  "title": "Menubar",
+  "summary": "Mit einer dauerhaft sichtbaren Menüleiste ordnest du die Befehle einer Anwendung in benannte Menüs. So bleiben auch umfangreiche Arbeitsflächen übersichtlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Befehle für eine Arbeitsfläche bündeln",
+      "paragraphs": [
+        "Mit einer Menubar bietest du dauerhaft sichtbare Menügruppen für eine Anwendung an, etwa Datei, Bearbeiten und Ansicht in einem Berichtseditor. Sie passt, wenn du zahlreiche wiederkehrende Befehle übersichtlich nach Aufgaben ordnen möchtest.",
+        "Für Links zu Seitenbereichen wählst du besser eine Navigation oder ein Navigation Menu. Brauchst du nur wenige Aktionen zu einem einzelnen Bericht, genügt ein Dropdown Menu. Eine besonders wichtige Aktion wie Speichern darf zusätzlich direkt auf der Arbeitsfläche erreichbar sein."
+      ],
+      "links": [
+        {
+          "text": "Navigation Menu",
+          "href": "/systems/shadcn/components/navigation-menu",
+          "paragraph": 1
+        },
+        {
+          "text": "Dropdown Menu",
+          "href": "/systems/shadcn/components/dropdown-menu",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht mit Datei-Menü",
+      "paragraphs": [
+        "Im Entwurf bleibt die Leiste über dem Bericht sichtbar. Datei ist geöffnet: Du kannst den Bericht speichern oder über Exportieren ein Untermenü mit Formaten erreichen. Der Pfeil kennzeichnet diesen zusätzlichen Schritt.",
+        "Die Trennlinie setzt das Löschen von den übrigen Befehlen ab. Die konkrete Beschriftung erklärt die Folge auch ohne Warnfarbe. Das Beispiel zeigt die Organisation der Befehle; Rückmeldung nach dem Speichern oder eine Löschbestätigung gehören zum umgebenden Ablauf."
+      ],
+      "illustration": {
+        "src": "/component-examples/menubar.svg",
+        "alt": "Berichtseditor mit Menüleiste Datei, Bearbeiten und Ansicht. Das geöffnete Datei-Menü zeigt Bericht speichern, Exportieren mit Untermenüpfeil und Bericht löschen.",
+        "caption": "Statische Illustration · Datei-Menü über einem Bericht; keine interaktive Vorschau."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Leiste, Menü und Untermenü zusammenhalten",
+      "paragraphs": [
+        "Oben stehen die Auslöser der einzelnen Menüs. Jeder Auslöser gehört zu seinem eigenen Menü. Im geöffneten Bereich ordnest du Befehle, Gruppenüberschriften und Trennlinien so an, dass zusammengehörige Aktionen zusammenbleiben.",
+        "Auswahlmarkierungen stehen bei einschaltbaren Einstellungen und bei einer Auswahl aus mehreren Möglichkeiten. Ein Untermenüpfeil kündigt weitere Einträge an. Das Menü richtet sich standardmässig am Anfang seines Auslösers aus; die Positionierung berücksichtigt verfügbaren Platz. Vermeide unnötig tiefe Untermenüs."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Befehl oder Einstellung wählen",
+      "paragraphs": [
+        "Ein normaler Eintrag führt eine Aktion aus. Ein Checkbox-Eintrag passt zu einer unabhängig schaltbaren Einstellung wie Raster anzeigen. Radio-Einträge passen zu einer gemeinsamen Auswahl wie Kompakt oder Komfortabel. Das sind unterschiedliche Aufgaben innerhalb des Menüs.",
+        "Für normale Befehle sind die Darstellungen default und destructive belegt. Nutze destructive gezielt für einen Befehl wie Bericht löschen. Mit inset kannst du Beschriftungen einrücken, um sie mit Einträgen samt Auswahlzeichen auszurichten. Eine eigene Grössenreihe der Menubar ist nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen ist noch keine Auswahl",
+      "paragraphs": [
+        "Ein geöffnetes Menü und ein hervorgehobener Eintrag zeigen, wo du gerade bist. Erst die Aktivierung löst den Befehl aus. Öffnest du ein anderes Menü derselben Leiste, schliesst das bisherige. Jedes Menü und Untermenü behält dabei seine eigene Zuständigkeit.",
+        "Normale Befehle schliessen das Menü standardmässig nach Aktivierung. Checkbox- und Radio-Einträge lassen es standardmässig offen, damit weitere Einstellungen möglich bleiben; dieses Verhalten lässt sich anpassen. Deaktivierte Einträge können Fokus erhalten, lösen aber nichts aus.",
+        "Die Anwendung führt Befehle aus und meldet deren Ergebnis. Wenn sie den Offen- oder Auswahlzustand selbst steuert oder eine Änderung abbricht, bleibt dieser Zustand massgebend. Eine Hervorhebung allein darf deshalb weder speichern noch eine Einstellung ändern."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Kurze Namen mit erkennbarem Ergebnis",
+      "paragraphs": [
+        "Wähle für die Leiste vertraute Kategorien wie Datei und Ansicht. Benenne Befehle mit konkreten Handlungen: Bericht speichern hilft mehr als Ausführen. Für eine Einstellung ist Raster anzeigen verständlicher als Rasteroption. Halte Einträge möglichst in einer kurzen Zeile lesbar.",
+        "Eine angezeigte Tastenkombination wie ⌘S richtet noch keinen Kurzbefehl ein. Zeige sie nur, wenn deine Anwendung sie tatsächlich unterstützt. Überschriften gliedern das Menü und dürfen nicht wie ausführbare Befehle formuliert sein."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Zwischen Menüs und Einträgen wechseln",
+      "paragraphs": [
+        "Gib der Leiste einen zugänglichen Namen, etwa Bericht bearbeiten. In der üblichen horizontalen Leiste wechselst du mit Links und Rechts zwischen den Auslösern; Home und End erreichen Anfang und Ende. Enter oder Leertaste öffnen ein Menü.",
+        "Im vertikalen Menü bewegen Auf und Ab den Fokus, Home und End erreichen die äussersten Einträge. Durch Eingabe von Buchstaben suchst du nach Beschriftungen. Enter oder Leertaste aktivieren den fokussierten, verfügbaren Eintrag. Nach einem Menüwechsel kann zunächst die Menüfläche fokussiert sein; Ab erreicht dann den ersten Befehl.",
+        "Bei Leserichtung von links nach rechts öffnet Rechts ein passendes Untermenü, Links führt zurück. Escape schliesst normalerweise die aktuelle Ebene und führt zum zugehörigen Auslöser zurück; im Untermenü bleibt das Elternmenü standardmässig offen. Tab folgt der Schliess- und Fokusregel der zugrunde liegenden Komponente. Prüfe diesen Ablauf im tatsächlichen Anwendungskontext."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Eine Befehlsleiste braucht Menüsemantik",
+      "paragraphs": [
+        "Die Leiste trägt die Rolle menubar, ihre Auslöser sind menuitem mit einer Beziehung zum geöffneten menu. Schaltbare Einstellungen verwenden menuitemcheckbox, eine gemeinsame Auswahl menuitemradio mit ausgewiesenem Auswahlzustand. Erhalte diese Unterschiede auch dann, wenn alle Zeilen ähnlich aussehen.",
+        "Die Menüleiste ersetzt weder eine Seitennavigation noch ein Formularfeld zur Dateneingabe. Gib Gruppen und Menüs verständliche Namen. Wenn ein Befehl einen Dialog öffnet, muss der anschliessende Ablauf den Fokus sinnvoll übernehmen. Für Schliessen durch einen Klick ausserhalb gilt die konkrete Fokusregel der Anwendung; verspreche keine pauschale Rückkehr."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung abdeckt",
+      "paragraphs": [
+        "Die Seite gleicht Schnittstelle, Gestaltung, Zustandsmodell und HTML/ARIA des veröffentlichten Exports mit der gebundenen Base-UI-Referenz ab. Besonders die Regeln für Menüwechsel und Einstellungen stammen aus dieser Variante. Statische Zustandsbeispiele und Illustration ersetzen keine Prüfung deiner eingebauten Menüleiste mit Tastatur und assistiven Technologien."
+      ]
+    }
+  ]
+}

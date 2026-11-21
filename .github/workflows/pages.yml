@@ -28,6 +28,8 @@ jobs:
         id: pages
       - name: Check component documentation reference
         run: npm run check:component-template
+      - name: Check all component documentation
+        run: npm run check:component-catalog
       - name: Build published snapshot without a database
         run: npm run build:static
         env:

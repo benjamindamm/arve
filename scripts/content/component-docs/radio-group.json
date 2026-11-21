@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "radio-group",
+  "title": "Radio Group",
+  "summary": "Mit Radio Group wählst du einen Wert aus sichtbaren, sich gegenseitig ausschliessenden Optionen. Eine gemeinsame Frage hält die Entscheidung verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine Entscheidung, alle Möglichkeiten sichtbar",
+      "paragraphs": [
+        "Nutze Radio Group, wenn du genau eine Antwort aus einer überschaubaren Gruppe brauchst und die Alternativen direkt vergleichbar sein sollen: etwa die Zustellung einer Bestellung oder den Rhythmus einer Abrechnung. Eine neue Auswahl ersetzt die bisherige.",
+        "Für mehrere unabhängig wählbare Zusatzleistungen passen Checkboxen. Wenn eine lange Liste den übrigen Inhalt verdrängt und der direkte Vergleich weniger wichtig ist, prüfe Select. Radio Group eignet sich weder für mehrere gleichzeitige Antworten noch als Schalter für eine einzelne Einstellung."
+      ],
+      "links": [
+        {
+          "text": "Checkboxen",
+          "href": "/systems/shadcn/components/checkbox",
+          "paragraph": 1
+        },
+        {
+          "text": "Select",
+          "href": "/systems/shadcn/components/select",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Zustellart auswählen",
+      "paragraphs": [
+        "Die Frage «Wie möchtest du die Lieferung erhalten?» führt zu drei Alternativen. «Standardzustellung» ist ausgewählt. Die Option «Expresszustellung» zeigt ihren Mehrpreis direkt im Namen; du musst dafür keine weiteren Informationen öffnen.",
+        "Der Hinweis «Wähle eine Zustellart» macht die Aufgabe klar. Die Illustration zeigt eine bereits getroffene Entscheidung. Soll die Person bewusst wählen, kannst du ohne Vorauswahl beginnen. Kennzeichne eine Pflichtwahl dann bereits an der Gruppenfrage."
+      ],
+      "illustration": {
+        "src": "/component-examples/radio-group.svg",
+        "alt": "Zustellart mit drei Radiobuttons: Standardzustellung ist ausgewählt, Expresszustellung mit 12 Franken Aufpreis und Abholung sind nicht ausgewählt.",
+        "caption": "Statische Illustration · Eine Zustellart aus drei sichtbaren Alternativen."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Frage, Auswahlkreis und Optionstext",
+      "paragraphs": [
+        "Stelle die gemeinsame Frage über die Optionen. Jeder Zeile ordnest du einen runden Auswahlkreis und einen lesbaren Optionstext zu. Nur der gewählte Kreis enthält den inneren Punkt. Ein zusätzlicher Hinweis gehört zur ganzen Gruppe, wenn er für alle Antworten gilt.",
+        "Die Referenz verwendet 16 Pixel grosse Kreise mit einem 8 Pixel grossen Punkt und 8 Pixel Abstand zum Text. Die 12 Pixel zwischen den Optionen sind eine bewusste Layoutentscheidung der Referenz; die zugrunde liegende Gruppe ordnet die Zeilen nicht selbst an. Lass längere Texte umbrechen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zustände statt Grössenvarianten",
+      "paragraphs": [
+        "Der Contract definiert keine eigenen Grössen- oder Farbvarianten. Du kannst einzelne Optionen oder die ganze Gruppe deaktivieren. Das hilft bei vorübergehend nicht verfügbaren Möglichkeiten; erkläre den Grund im sichtbaren Kontext.",
+        "Eine schreibgeschützte Gruppe zeigt eine feststehende Entscheidung und bleibt fokussierbar. Sie unterbindet Änderungen ebenso wie eine deaktivierte Gruppe, hat aber einen anderen Zweck. Pflichtwahl und Fehlermarkierung betreffen die Formularlogik und sind keine dekorativen Varianten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Leer beginnen und eindeutig Rückmeldung geben",
+      "paragraphs": [
+        "Ohne Anfangswert kann die Gruppe leer starten. Sobald du eine Option wählst, bleibt genau diese gewählt. Erneutes Aktivieren derselben Option und Escape leeren die Gruppe nicht. Falls «keine» eine gültige Antwort ist, biete dafür eine ausdrückliche Option an.",
+        "Bei einer Pflichtwahl muss vor dem Absenden ein Wert vorliegen. Die Anwendung entscheidet über Prüfzeitpunkt und Fehlermeldung, etwa «Wähle eine Zustellart». Verknüpfe die Meldung mit der Gruppe; eine farbige Umrandung allein erklärt den Fehler nicht.",
+        "Die Anwendung kann einen Änderungswunsch zurückweisen. Bei extern gesteuertem Wert bleibt dieser massgeblich, bis die Anwendung ihn aktualisiert. Plane deshalb Fokus und Auswahl als getrennte Zustände; ein bewegter Fokus garantiert noch keinen übernommenen Wert."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Eine Frage und eindeutige Antworten",
+      "paragraphs": [
+        "Formuliere die Gruppenfrage so, dass jede Option eine verständliche Antwort darauf gibt. «Zustellart» oder «Wie möchtest du die Lieferung erhalten?» sind konkreter als «Auswahl». «Standardzustellung» ist hilfreicher als «Option 1».",
+        "Halte die Antworten kurz und sprachlich parallel. Nenne entscheidende Kosten oder Einschränkungen direkt bei der betroffenen Option. Vermeide mehrere Fragen innerhalb einer Gruppe und verwende den Hinweistext nicht als Ersatz für die Namen der einzelnen Optionen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab hinein, mit Pfeilen weiter",
+      "paragraphs": [
+        "Tab führt zum aktuellen beziehungsweise zu einem verfügbaren Radiobutton. Die Pfeiltasten bewegen den Fokus und wählen unter den verfügbaren Optionen; am Ende läuft die Navigation weiter zum anderen Ende. Deaktivierte Optionen werden übersprungen. Die Leertaste wählt die fokussierte Option.",
+        "Enter schaltet die Auswahl nicht um. Home und End werden von dieser Gruppe nicht für die Navigation behandelt; Escape löscht keinen Wert. Das Verhalten von Enter im umgebenden Formular musst du separat berücksichtigen.",
+        "Der sichtbare Fokus gehört zum Radiobutton. Gib sowohl der Gruppe als auch jeder Option einen zugänglichen Namen. Bei einer Schreibrichtung von rechts nach links müssen HTML-Schreibrichtung und DirectionProvider zusammenpassen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Als benanntes Formularfeld einbinden",
+      "paragraphs": [
+        "Die Gruppe trägt die Rolle radiogroup, ihre sichtbaren Auswahlkreise die Rolle radio. In dieser Base-UI-Referenz ist der sichtbare Kreis ein eigenes Element; ein verborgenes natives Radio-Eingabefeld übernimmt die Formularanbindung. Ergänze keinen zweiten sichtbaren Radiobutton.",
+        "Du verantwortest die gemeinsame Beschriftung, die Namen der Optionen sowie verknüpfte Hilfe- und Fehlertexte. Für die Übermittlung brauchst du einen Feldnamen und unterscheidbare Optionswerte. Über form lässt sich die Gruppe auch einem Formular ausserhalb ihrer unmittelbaren Umgebung zuordnen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz belegt",
+      "paragraphs": [
+        "Die Aussagen stützen sich auf die exportierten UX-, Schnittstellen-, Verhaltens-, CSS- und HTML/ARIA-Regeln sowie die gebundene Base-UI-Dokumentation. Die Zustandsbeispiele sind statische Fixtures; historische Prüfungen betreffen ihren damaligen Referenzumfang.",
+        "Der abgeschlossene Komponentencontract ersetzt keine Prüfung deiner Formularlogik, Fokusführung oder Hilfsmittelnutzung in der fertigen Anwendung. Die Illustration ist ein redaktioneller Entwurf und kein Nachweis für eine laufende Implementierung."
+      ]
+    }
+  ]
+}

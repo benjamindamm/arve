@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "tooltip",
+  "title": "Tooltip",
+  "summary": "Ein Tooltip ergänzt eine verständliche Aktion um einen kurzen visuellen Hinweis bei Hover oder Tastaturfokus. Wichtige Informationen bleiben dauerhaft zugänglich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Kurze Zusatzhilfe zur eigentlichen Aktion",
+      "paragraphs": [
+        "Nutze einen Tooltip, wenn du eine bereits verständliche Aktion mit einer kurzen visuellen Erklärung ergänzen willst, etwa «Dokument speichern» über einem Speichersymbol. Die Aktion muss auch ohne den eingeblendeten Text verständlich und zugänglich bleiben.",
+        "Zeige Feldbeschriftungen, Pflichtangaben, Fehler und entscheidende Folgen dauerhaft im Inhalt. Wähle ein Popover, wenn du eine Erklärung ausdrücklich über eine Infoschaltfläche öffnen möchtest oder Links und weitere Bedienelemente brauchst. Ein Tooltip ist für solche Inhalte ungeeignet."
+      ],
+      "links": [
+        {
+          "text": "Popover",
+          "href": "/systems/shadcn/components/popover",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Speichern bleibt auch ohne Hinweis verständlich",
+      "paragraphs": [
+        "Im Entwurf gehört «Dokument speichern» zum Speichersymbol. Die Schaltfläche erhält denselben zugänglichen Namen. Der Tooltip macht die Aktion beim Darüberfahren oder beim Tastaturfokus zusätzlich lesbar; er enthält keine zweite Aktion.",
+        "Die dauerhafte Zeile «Speichert im aktuellen Projekt.» erklärt den Speicherort unabhängig vom Tooltip. Falls du diese Beschreibung mit der Schaltfläche verknüpfst, verweist du auf diesen sichtbaren Text. So bleibt die Information auch ohne Hover erreichbar."
+      ],
+      "illustration": {
+        "src": "/component-examples/tooltip.svg",
+        "alt": "Dokumentkarte mit fokussierter Speicherschaltfläche, darüber dem Tooltip Dokument speichern und darunter dem dauerhaften Hinweis Speichert im aktuellen Projekt.",
+        "caption": "Statische Illustration · Ergänzender Tooltip und dauerhaft sichtbare Beschreibung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Auslöser, Textfläche und Zeigerspitze",
+      "paragraphs": [
+        "Der Auslöser gehört zur normalen Oberfläche. Daneben erscheint eine kompakte Textfläche mit kontrastierendem Hintergrund und einer kleinen Spitze zum Auslöser. Halte die räumliche Zuordnung eindeutig und den Text kurz.",
+        "Die eingeblendete Fläche liegt technisch in einer separaten Ebene. Die zugrunde liegende Komponente übernimmt die Verankerung und reagiert auf Platzmangel am Bildschirmrand. Der gemeinsame Provider steuert Verzögerungen; er ist kein sichtbarer Rahmen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Position passend zum verfügbaren Platz",
+      "paragraphs": [
+        "Du kannst die Fläche oberhalb, unterhalb, links oder rechts anordnen sowie Ausrichtung und Abstand beeinflussen. Die Voreinstellung liegt mittig oberhalb mit 4 Pixeln Abstand. Wähle eine Seite, die benachbarte Inhalte möglichst wenig verdeckt, und prüfe enge Ansichten.",
+        "Eigene Farb- oder Grössenvarianten sind hier nicht ausgewiesen. Für die Wartezeit beim Hover kannst du Provider oder Auslöser konfigurieren. Der shadcn-Provider setzt standardmässig keine Wartezeit; übernimm deshalb keinen vermeintlichen Standard von 600 Millisekunden aus einer anderen Einbindung."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Einblenden, lesen und wieder schliessen",
+      "paragraphs": [
+        "Beim Hover erscheint der Hinweis sofort oder nach der eingestellten Wartezeit. Verlässt du den Auslöser während einer Wartezeit, wird das Öffnen abgebrochen. Tastaturfokus öffnet ohne Hover-Verzögerung.",
+        "Standardmässig kannst du den Zeiger vom Auslöser in die Hinweisfläche bewegen. Beim Verlassen des Hover-Bereichs, bei Fokusverlust, Escape oder Betätigen des Auslösers kann sie schliessen. Ein deaktivierter Tooltip öffnet nicht. Wenn deine Anwendung den offenen Zustand selbst steuert, muss sie die Öffnungs- und Schliessanforderungen entsprechend übernehmen. Eine Speicherbestätigung gehört in eine eigene Rückmeldung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aktion konkret benennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Dokument speichern» statt «Hier klicken» oder «Weitere Informationen». Ein kurzer Ausdruck reicht meist; längere Erklärungen gehören als sichtbarer Hilfetext in die Oberfläche. Wiederhole keine mehrteilige Anleitung im Tooltip.",
+        "Bei einer reinen Symbolschaltfläche vergibst du den zugänglichen Namen selbst, beispielsweise über aria-label. Er soll eng zum visuellen Hinweis passen. Verwende kein unverständliches Symbol, dessen Bedeutung erst der Tooltip erklären würde: Auf Touch-Geräten fehlt diese Hilfe."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus bleibt auf der Schaltfläche",
+      "paragraphs": [
+        "Mit Tab erreichst du den fokussierbaren Auslöser und öffnest den Hinweis. Der Fokus wandert dabei nicht in die Textfläche. Escape schliesst sie; Tab führt zum nächsten erreichbaren Element, ohne den Fokus einzuschliessen.",
+        "Enter und Leertaste bedienen eine Schaltfläche als deren eigentliche Aktion; plane sie nicht als Schalter zum dauerhaften Öffnen der Erklärung. Die Base-UI-Quelle deaktiviert Tooltips für Touch. Biete notwendige Erklärungen deshalb sichtbar oder über ein zugängliches Popover an."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Keine automatische vorgelesene Beschreibung",
+      "paragraphs": [
+        "Diese Base-UI-Variante erzeugt keine automatische ARIA-Tooltip- oder Beschreibungsbeziehung. In der exportierten Referenz ist die zusätzliche visuelle Fläche ausdrücklich mit aria-hidden ausgeblendet. aria-describedby am Auslöser zeigt auf einen dauerhaft sichtbaren Hilfetext, nicht auf den Tooltip.",
+        "Übernimm diese Trennung bewusst: Benenne die Aktion vollständig und verknüpfe erforderliche Zusatzinformation mit ihrem tatsächlichen Text. Verstecke Formularhinweise oder Dialoganweisungen nie ausschliesslich im Tooltip. Die Textfläche erhält keine Links, Eingabefelder oder eigene Fokusführung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Grenzen dieser Beschreibung",
+      "paragraphs": [
+        "Die Seite gleicht Zweck, Schnittstelle, Zustandsmodell, Gestaltung und HTML/ARIA mit dem veröffentlichten shadcn-Export ab. Die gebundenen React- und Base-UI-Quellen klären Verzögerung, Touch und die bewusst rein visuelle Semantik. Die Illustration ist ein redaktioneller Entwurf; sie belegt keine Laufzeit- oder Screenreader-Prüfung deiner Anwendung."
+      ]
+    }
+  ]
+}

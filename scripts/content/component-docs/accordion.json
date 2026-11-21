@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "accordion",
+  "title": "Accordion",
+  "summary": "Ein Accordion macht zusammengehörige Fragen sichtbar und öffnet die passenden Antworten bei Bedarf. Es eignet sich für Inhalte, die nicht alle gleichzeitig gelesen werden müssen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Gezielt nachlesen statt alles durchgehen",
+      "paragraphs": [
+        "Ein Accordion bündelt zusammengehörige Abschnitte, deren Inhalt Menschen je nach Bedarf öffnen. Es passt beispielsweise zu Fragen über einen Kursbesuch: Die Überschriften geben einen Überblick, die Antworten beanspruchen erst beim Öffnen Platz.",
+        "Verwende es, wenn einzelne Antworten unabhängig voneinander verständlich sind. Zeige Informationen dagegen offen als Text oder Tabelle, wenn alle sie lesen oder mehrere Angaben direkt vergleichen müssen. Für einen einzigen ergänzenden Abschnitt ist ein Collapsible die naheliegende Alternative. Ein verbindlicher Ablauf mit aufeinanderfolgenden Aufgaben braucht eine eigene Schrittführung."
+      ],
+      "links": [
+        {
+          "text": "Collapsible",
+          "href": "/systems/shadcn/components/collapsible",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Fragen vor dem Kursbesuch",
+      "paragraphs": [
+        "Der Entwurf zeigt drei konkrete Fragen. «Was soll ich mitbringen?» ist geöffnet; die Antwort nennt die nötigen Gegenstände direkt. Anreise und Abmeldung bleiben als erkennbare Themen sichtbar. Die Frage bleibt beim Öffnen unverändert, damit die Orientierung erhalten bleibt.",
+        "Für diese unabhängigen Hinweise empfehlen wir mehrere gleichzeitig offene Abschnitte. So kann jemand die Anreise nachlesen, ohne die Materialliste wieder zu verlieren. Eine Anmeldefrist oder eine kurzfristige Absage gehört zusätzlich gut sichtbar ausserhalb des Accordions auf die Seite."
+      ],
+      "illustration": {
+        "src": "/component-examples/accordion.svg",
+        "alt": "Fragen zum Kursbesuch: Materialliste mit Notizbuch und Trinkflasche geöffnet; Anreise und Abmeldung geschlossen.",
+        "caption": "Statische Illustration · Drei Kursfragen mit einer geöffneten Antwort."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Frage, Schalter und zugehörige Antwort",
+      "paragraphs": [
+        "Jeder Abschnitt besteht aus einer Überschrift mit einer Schaltfläche und dem zugehörigen Inhaltsbereich darunter. Die gesamte Frage bildet die Schaltfläche; ein Pfeilsymbol am Zeilenende kennzeichnet das Auf- und Zuklappen. Je nach Zustand erscheint das passende Symbol. Trennlinien halten benachbarte Abschnitte auseinander.",
+        "Die Gruppe nutzt die verfügbare Breite. Lange Fragen dürfen umbrechen, Antworten bestimmen ihre Höhe durch den tatsächlichen Inhalt. Die gezeigte Breite ist keine Vorgabe für das Produkt. Halte Fragen und Antworten innerhalb derselben Gruppe visuell zusammen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eine oder mehrere Antworten offen halten",
+      "paragraphs": [
+        "Standardmässig kann höchstens ein Abschnitt offen sein. Wird ein anderer geöffnet, schliesst der bisherige; erneutes Aktivieren schliesst auch den offenen Abschnitt. Diese Wahl hilft bei längeren Antworten, wenn gewöhnlich nur ein Thema gelesen wird.",
+        "Mit multiple können mehrere Abschnitte unabhängig offen bleiben. Das hilft bei kurzen Hinweisen, die zusammen gebraucht werden. Daneben sind deaktivierte Gruppen oder einzelne Abschnitte sowie Links-nach-rechts- und Rechts-nach-links-Richtung belegt. Eigene Farb- oder Grössenvarianten sind nicht ausgewiesen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen ist noch keine Bestätigung",
+      "paragraphs": [
+        "Geschlossen bleibt die Frage sichtbar. Nach dem Öffnen erscheint die Antwort direkt darunter. Beim Darüberfahren wird die Frage unterstrichen; Tastaturfokus erhält eine sichtbare Umrandung. Deaktivierte Schalter erscheinen abgeschwächt und ändern den Öffnungszustand nicht.",
+        "Die Anwendung kann den Öffnungszustand selbst führen und eine vorgeschlagene Änderung ablehnen. Der tatsächlich übergebene Wert bleibt dann massgebend. Öffnen bestätigt weder eine Auswahl noch den Abschluss einer Aufgabe. Falls Inhalte erst geladen werden, muss die Anwendung Wartezeit und Fehler verständlich im Abschnitt darstellen; das Accordion liefert dafür keinen eigenen Ladezustand."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Frage muss ohne Antwort verständlich sein",
+      "paragraphs": [
+        "«Was soll ich mitbringen?» benennt das Thema besser als «Weitere Informationen». Verwende kurze, unterscheidbare Fragen oder klare Themen wie «Anreise mit dem Zug». Wiederholte Titel wie «Details» machen die geschlossene Gruppe schwer überblickbar.",
+        "Beginne die Antwort mit der gesuchten Information und ergänze erst danach Erläuterungen. Vermeide zusätzliche Aktionen innerhalb der Frage-Schaltfläche; weiterführende Links gehören in die Antwort. Bei vielen langen Abschnitten empfehlen wir eine gegliederte Inhaltsseite, damit das wiederholte Aufklappen nicht zur Sucharbeit wird."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab zur Frage, mit Enter zur Antwort",
+      "paragraphs": [
+        "Tab und Umschalt+Tab bewegen den Fokus in der normalen Reihenfolge durch die bedienbaren Elemente. Enter oder Leertaste öffnen beziehungsweise schliessen die fokussierte Frage. Der sichtbare Fragetext gibt der Schaltfläche ihren zugänglichen Namen; das Pfeilsymbol bleibt für assistive Technik verborgen.",
+        "Diese Base-UI-Variante bietet keine besondere Navigation zwischen Fragen mit Pfeiltasten, Pos1 oder Ende. Plane dafür keine Bedienhinweise ein. Fokus und geöffneten Zustand getrennt gestalten: Eine fokussierte Frage ist nicht automatisch offen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Überschriften und Inhalte eindeutig verbinden",
+      "paragraphs": [
+        "Die gebundene Struktur verwendet eine h3-Überschrift mit einer nativen Schaltfläche. Prüfe deshalb die Überschriftenhierarchie der umgebenden Seite. Der Schalter meldet seinen Öffnungszustand über aria-expanded; ein offener Inhaltsbereich ist als benannter Bereich mit genau seiner Frage verbunden. IDs dürfen sich zwischen Instanzen nicht überschneiden.",
+        "Beim Schliessen wird der Inhaltsbereich standardmässig aus der Seite entfernt. Mit ausdrücklich gewähltem keepMounted bleiben sie verborgen und nicht interaktiv erhalten. Entscheide bei Formularfeldern bewusst, ob deren lokaler Zustand beim Schliessen bestehen bleiben muss, und prüfe das in der Anwendung. Pflichtangaben und Fehlermeldungen dürfen nicht unbemerkt hinter einer geschlossenen Frage verschwinden."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Die Seite gleicht die UX-Regeln mit der React-Schnittstelle, dem Zustandsmodell, den CSS-Regeln und den HTML-/ARIA-Vorgaben des gewählten Exports ab. Zustandsbeispiele belegen die beschriebene Darstellung; die redaktionelle Kursillustration veranschaulicht eine Einsatzentscheidung.",
+        "Der Contract beschreibt eine begrenzte Quellenreferenz auf Basis von Base UI. Daraus folgt keine allgemeine Freigabe für ein Produkt oder andere Plattformen. Inhalt, Einbettung und tatsächliche Bedienung müssen im jeweiligen Einsatz geprüft werden."
+      ]
+    }
+  ]
+}

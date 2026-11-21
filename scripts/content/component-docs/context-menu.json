@@ -1,0 +1,93 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "context-menu",
+  "title": "Context Menu",
+  "summary": "Du bietest Aktionen direkt an einem Inhalt an. Ein sichtbarer Aktionsbutton hält dieselben Befehle und Einstellungen für Touch und Tastatur zugänglich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Zusätzliche Wege zu denselben Aktionen",
+      "paragraphs": [
+        "Nutze ein Context Menu, wenn du Aktionen direkt an einem Inhalt anbieten möchtest, etwa an einer Berichtsvorschau oder einer Datei. Ein Rechtsklick spart dann den Weg zu einer entfernten Werkzeugleiste. Die Aktionen beziehen sich auf genau diesen Inhalt.",
+        "Biete dieselben Befehle und Einstellungen zusätzlich über eine sichtbare Schaltfläche mit Dropdown Menu an. So bleiben sie mit Touch und Tastatur auffindbar. Für den einzigen Zugang zu wichtigen Aktionen passt das Dropdown Menu besser. Für wenige häufige Hauptaktionen sind direkt sichtbare Buttons meist klarer."
+      ],
+      "links": [
+        {
+          "text": "Dropdown Menu",
+          "href": "/systems/shadcn/components/dropdown-menu",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht mit sichtbarem Aktionszugang",
+      "paragraphs": [
+        "Du siehst die Vorschau des Quartalsberichts und daneben «Berichtsaktionen». Das geöffnete Kontextmenü bietet «Bericht speichern», «Raster anzeigen» und «Bericht löschen». Die Trennlinie setzt das Löschen von den übrigen Aktionen ab; sein Text benennt die Folge auch ohne rote Farbe.",
+        "Die Schaltfläche bleibt sichtbar, wenn das Kontextmenü geschlossen ist. Ihr Dropdown stellt dieselben Aktionen einschliesslich «Raster anzeigen» bereit und verwendet denselben Einstellungszustand. Das Beispiel zeigt eine redaktionelle Auswahl aus den belegten Menüteilen."
+      ],
+      "illustration": {
+        "src": "/component-examples/context-menu.svg",
+        "alt": "Quartalsbericht mit sichtbarem Button Berichtsaktionen und geöffnetem Kontextmenü: Bericht speichern, aktiviertes Raster anzeigen und Bericht löschen.",
+        "caption": "Statische Illustration · Berichtsaktionen bleiben auch über den sichtbaren Button zugänglich."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Inhalt, Menüfläche und zusammengehörige Einträge",
+      "paragraphs": [
+        "Die Kontextfläche ist der Inhalt, auf dem du das Menü aufrufst. Das Menü erscheint am Zeiger. Darin stehen Befehle zeilenweise; Gruppenüberschriften und Trennlinien ordnen längere Listen. Ein Häkchen kennzeichnet eine aktive Einstellung, eine Radioauswahl genau einen Wert innerhalb ihrer Gruppe.",
+        "Ein Pfeil an einem Eintrag kündigt ein Untermenü an. Die Positionierung berücksichtigt den verfügbaren Platz. Plane ausreichend Raum für deutsche Beschriftungen ein; die Referenz lässt die Breite mit dem Inhalt wachsen und begrenzt sie am verfügbaren Raum."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Befehle, Einstellungen und Untermenüs wählen",
+      "paragraphs": [
+        "Für gewöhnliche Befehle gibt es die Standarddarstellung und für löschende Aktionen die Variante «destructive». Eine Einrückung richtet Beschriftungen mit benachbarten Auswahlindikatoren aus; sie bezeichnet keine zusätzliche Hierarchie.",
+        "Nutze Checkbox-Einträge für unabhängige Einstellungen wie «Raster anzeigen» und Radio-Einträge für Alternativen wie «Kompakt» oder «Komfortabel». Ein Untermenü hilft bei einer zusammengehörigen Befehlsgruppe, etwa Exportformaten. Halte diese Verschachtelung möglichst flach. Eigene Grössenvarianten sind nicht ausgewiesen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen, auswählen und Rückmeldung geben",
+      "paragraphs": [
+        "Die Fläche öffnet das Menü durch Rechtsklick oder langes Berühren während 500 Millisekunden. Bewegung oder Abbruch der Berührung kann das Öffnen verhindern. Ein gewöhnlicher Linksklick auf die Fläche löst keine Kontextaktion aus.",
+        "Ein hervorgehobener Eintrag ist noch nicht ausgeführt. Aktivierte Befehle schliessen das Menü standardmässig; Checkbox- und Radio-Einträge lassen es standardmässig offen. Deaktivierte Einträge bleiben sichtbar und können Fokus erhalten, führen aber nichts aus. Deine Anwendung führt den Befehl aus und meldet beispielsweise einen Speicherfehler. Abgebrochene Änderungsanfragen bewahren den bisherigen Zustand."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Handlung und ihren Gegenstand nennen",
+      "paragraphs": [
+        "Schreibe «Bericht löschen» statt «Entfernen» oder «Aktion 3». «Berichtsaktionen» bezeichnet den sichtbaren Zugang genauer als «Mehr». Für eine Checkbox passt «Raster anzeigen» besser als «Raster umschalten», weil das Häkchen den aktuellen Zustand vermittelt.",
+        "Halte Einträge kurz und unterscheidbar. Ergänze längere Erklärungen beim betroffenen Inhalt. Angezeigte Tastenkürzel sind lediglich Hinweise: Sie registrieren keinen Tastaturbefehl. Zeige sie nur, wenn deine Anwendung die entsprechende Aktion tatsächlich darüber anbietet."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Über den sichtbaren Button ins Menü",
+      "paragraphs": [
+        "Die Kontextfläche erzeugt selbst keinen Tabstopp und keinen eigenen Tastaturhandler. Plane deshalb «Berichtsaktionen» als erreichbaren Dropdown-Button ein: Enter oder Leertaste öffnet dessen Menü. Verlasse dich hier weder auf die Kontextmenütaste noch auf Umschalt+F10 als zugesicherten Öffnungsweg.",
+        "Im geöffneten vertikalen Menü bewegen Auf und Ab, Home und End sowie die Eingabe eines Beschriftungsanfangs die Hervorhebung. Enter oder Leertaste aktiviert einen verfügbaren Eintrag. Rechts öffnet in links-nach-rechts-Richtung ein Untermenü, Links führt zurück. Escape schliesst gemäss der jeweiligen Menüebene und Quellenregel; Tab folgt der Menü-Fokusverwaltung. Prüfe Fokus nach dem Schliessen im konkreten Einbau: Ein universeller Rücksprung zur passiven Kontextfläche ist nicht zugesichert."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein Aktionsmenü mit geteilten Anwendungsdaten",
+      "paragraphs": [
+        "Das Popup ist ein benanntes Menü. Befehle, Checkbox- und Radio-Einträge behalten ihre unterschiedlichen Rollen und Auswahlzustände. Benenne die Kontextfläche und das Menü verständlich, etwa «Berichtsvorschau» und «Berichtsaktionen». Ein Menü ist kein Dialog mit eigener Fokusfalle und kein Formularfeld zur Dateneingabe.",
+        "Der sichtbare Dropdown-Zugang ist eine eigene Komponente. Synchronisiere seine Einstellungen mit dem Kontextmenü über deine Anwendungsdaten. Jedes Untermenü besitzt seinen eigenen Öffnungszustand; das Hervorheben eines Eintrags darf weder speichern noch löschen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite dieser Beschreibung",
+      "paragraphs": [
+        "Diese Seite stützt sich auf die exportierte React-Schnittstelle, Gestaltungsregeln, den Zustandsvertrag und die HTML-/ARIA-Referenz sowie gebundene Base-UI-Originalquellen. Die Zustandsbeispiele beschreiben unter anderem Hervorhebung, Auswahl und Untermenüs. Sie und die statische Illustration belegen keine vollständige Bedienung deiner Anwendung. Prüfe insbesondere den sichtbaren Alternativzugang und den Fokus auf deinen Zielgeräten."
+      ]
+    }
+  ]
+}

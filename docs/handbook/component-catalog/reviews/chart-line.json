@@ -1,0 +1,234 @@
+{
+  "component": "chart-line",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/component.json",
+      "sha256": "012d5e4966d95798589fcaec7504c816d34b9610612d59cf48f67af4f1986201"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/ux.json",
+      "sha256": "3056d498d2fd7076b585a07831f8a0814acae656522d9c075fdd91ac2ec63f32"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/interface.json",
+      "sha256": "60831759cf1df2521ef570fa64cdfa5bf963615935940a1dfa4131601ab846e2"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/stories.json",
+      "sha256": "d146b16b0523642dfc1103c4db5d51e0f78e3377b2075856cd9e573104d3ab3e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/behavior.scxml",
+      "sha256": "e9674a96746beee1e4b8ebea8364700c3e4acf917d4a9ceaa1fc807a4b5c953d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/layout.css",
+      "sha256": "754c18d714a366ad8e6eb6ec57df5b877fd88cdb8cc2f16fa5c3653bb4e16d18"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.html",
+      "sha256": "0a7e398dac65f3d9631d35e04f8c9a478700d30fb534a10b2206fd5d7e6b969c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.rules.json",
+      "sha256": "d1e2cdcd13d98472ae2fec9ab39685e91712862ddbf051e854ebb42ffd3a354a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/README.md",
+      "sha256": "2ff0a3cf482e4377410489cbe8fb91c17fdf036dbc5b6b00c4a8474762620c0f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-line-default.tsx.source",
+      "sha256": "d9632a0e955df05c43a5090a87c2f04dfb3e3c475e963efd74d371489d5f2a7a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "ordered-observations",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Linie verbindet geordnete monatliche Beobachtungen; Interpolation ist kein Messwert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "choose-alternative",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für unabhängige Kategorien wird Chart Bar, für genaue Einzelwerte die Tabelle empfohlen."
+    },
+    {
+      "id": "exact-dataset",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die sechs Werte lauten in Reihenfolge 186, 305, 237, 73, 209 und 214.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/ux.json",
+          "pointer": "/exampleSource/dataset"
+        }
+      ]
+    },
+    {
+      "id": "honest-scale",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die Illustration verwendet eine lineare Skala von 0 bis 400 und formuliert keine unbelegte Wachstumsaussage."
+    },
+    {
+      "id": "complete-table",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die vollständige Tabelle hat Beschriftung sowie Zeilen- und Spaltenüberschriften.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-choices",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Der Tooltip bietet dot, line, dashed sowie hideLabel und hideIndicator.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/interface.json",
+          "pointer": "/modules/0/declarations/1/members/1/type/text"
+        }
+      ]
+    },
+    {
+      "id": "theme-colors",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "ChartConfig trennt Farbe und vollständige Light-/Dark-Themezuordnung als alternative Konfigurationen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2/type/text"
+        }
+      ]
+    },
+    {
+      "id": "dismiss-position",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Escape schliesst den Hinweis und merkt die aktuelle Koordinate.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/behavior.scxml",
+          "snippet": "<assign location=\"dismissedCoordinate\" expr=\"coordinateKey\" />"
+        }
+      ]
+    },
+    {
+      "id": "synchronous-updates",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Datenwechsel aktualisieren Grafik, Tabelle und Zusammenfassung zusammen; leere Daten und Fehler bleiben ausdrückliche Rückmeldungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.rules.json",
+          "pointer": "/protocol"
+        }
+      ]
+    },
+    {
+      "id": "no-missing-zero",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Fehlende Werte dürfen nicht stillschweigend zu null werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "precise-summary",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Zusammenfassung und Titel nennen Kennzahl, Zeitraum und überprüfbare Aussagen statt pauschalem Wachstum."
+    },
+    {
+      "id": "hidden-redundant-graph",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die gewählte redundante Grafik ist verborgen, hat accessibilityLayer=false und verlangt keinen Diagrammfokus zum Lesen der Werte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "figure-name",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Figure wird über sichtbaren Titel benannt und mit der Zusammenfassung beschrieben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/accessibility.html",
+          "snippet": "aria-labelledby=\"chart-line-title\" aria-describedby=\"chart-line-summary\""
+        }
+      ]
+    },
+    {
+      "id": "composition-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Chart Line ist eine Recharts-Komposition mit Base-UI-Wrapper, kein zusätzlicher Upstream-Export.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "bounded-reference",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz beansprucht keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-line/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    },
+    {
+      "id": "runtime-interpolation",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Das Originalbeispiel verwendet natürliche Interpolation.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-line-default.tsx.source",
+          "snippet": "type=\"natural\""
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Die exakten Quelldaten behalten; Monate für das deutsche Beispiel übersetzen.",
+    "Lineare Nullskala von 0 bis 400 und gerade Verbindungen ausdrücklich als Illustration kennzeichnen.",
+    "Den 5,2%-Wachstumssatz des Originalbeispiels nicht übernehmen: Er ist nicht aus Mai 209 und Juni 214 ableitbar.",
+    "Dauerhaft sichtbare Tabelle im SVG beibehalten statt Werte ausschliesslich an der Kurve anzuschreiben."
+  ],
+  "limits": [
+    "Keine lokale Chart-Line-Live-Demo vorhanden.",
+    "Statische Illustration belegt keine Recharts-Interpolation oder Browserbedienung.",
+    "Die zugängliche Tabellenkomposition ist die gewählte Referenz; Aussagen über andere Recharts-Tastaturkonfigurationen werden nicht verallgemeinert."
+  ]
+}

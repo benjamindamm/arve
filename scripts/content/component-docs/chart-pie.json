@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "chart-pie",
+  "title": "Chart Pie",
+  "summary": "Zeige wenige Anteile einer klar definierten Gesamtheit. Eine vollständige Tabelle macht alle Werte unabhängig von Farbe und Werthinweisen lesbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine Gesamtheit aufteilen",
+      "paragraphs": [
+        "Mit Chart Pie zeigst du, welchen Anteil wenige Kategorien an einer klar definierten Gesamtheit haben. Die Referenz verwendet nicht negative Besuchszahlen; Winkel und Farben ergänzen die vollständig lesbaren Werte. Wähle das Kreisdiagramm etwa für die Frage, über welche Kanäle alle Anmeldungen eines Monats eingegangen sind.",
+        "Empfehlung: Verwende ein Balkendiagramm, wenn du ähnlich grosse Kategorien genau vergleichen oder viele Kategorien zeigen willst. Für Veränderungen über mehrere Monate passt ein Liniendiagramm besser. Prüfe vor der Diagrammwahl, ob sich die Kategorien gegenseitig ausschliessen und zusammen das Ganze ergeben. Mehrfachnennungen aus einer Umfrage sind ohne weitere Erklärung keine sinnvolle Kreisaufteilung."
+      ]
+    },
+    {
+      "key": "example",
+      "title": "200 Anmeldungen, drei Eingangskanäle",
+      "paragraphs": [
+        "Der Entwurf zeigt 200 Kursanmeldungen im Oktober 2026: 100 über die Webseite, 60 per Telefon und 40 am Schalter. Die Sektoren bilden genau 50, 30 und 20 Prozent des Kreises ab. Überschrift und Zeitraum erklären die Gesamtheit; die Tabelle hält Anzahl und Anteil ohne Zeigerbewegung bereit.",
+        "Die Beispieldaten sind redaktionell gewählt und ersetzen nicht den gebundenen Browserdatensatz. Die zusätzliche Prozentspalte ist eine Empfehlung für diesen Entwurf; ihre Berechnung übernimmt die Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/chart-pie.svg",
+        "alt": "Kreisdiagramm für 200 Kursanmeldungen im Oktober 2026: Webseite 100 beziehungsweise 50 Prozent, Telefon 60 beziehungsweise 30 Prozent und Schalter 40 beziehungsweise 20 Prozent. Darunter stehen alle Werte in einer Tabelle.",
+        "caption": "Statische Illustration · Anteile aus 200 Kursanmeldungen, keine bedienbare Diagramm-Demo."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Bild und Zahlen zusammenhalten",
+      "paragraphs": [
+        "Die Abbildung verbindet Titel, kurze Zusammenfassung, Diagrammfläche und vollständige Datentabelle. Eine Legende ordnet Kategorien zu; ein eingeblendeter Werthinweis kann beim Überfahren zusätzlich helfen. Halte Titel und Tabelle beim Diagramm, damit du Bedeutung und Werte zusammen erfassen kannst.",
+        "Die Diagrammfläche nutzt die verfügbare Breite. Die Tabelle darf bei Platzmangel horizontal scrollen. Plane dafür genügend Raum ein und kürze lange Kategorien nicht so stark, dass ihre Bedeutung verloren geht."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Hinweise gestalten, Diagrammwahl beibehalten",
+      "paragraphs": [
+        "Die Referenz beschreibt ein Kreisdiagramm als Zusammensetzung aus Chart-Bausteinen und Recharts. Sie bietet keine eigene Auswahl benannter Kreisdiagrammgrössen oder Ringvarianten. Die Daten und ihre Beschriftung bleiben getrennt konfigurierbar.",
+        "Für den optionalen Werthinweis sind Punkt, Linie und gestrichelte Linie als Kennzeichen belegt. Du kannst Beschriftung oder Kennzeichen ausblenden und die Ausgabe formatieren. Nutze das nur, wenn die Zuordnung verständlich bleibt; die vollständige Tabelle bleibt erforderlich. Diese Wahl verändert das Kennzeichen im Hinweis, nicht die Geometrie der Sektoren."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Aktuelle Daten oder klare Rückmeldung",
+      "paragraphs": [
+        "Bei vorhandenen Daten bleiben Tabelle und Zusammenfassung dauerhaft verfügbar. Wenn sich der Datensatz ändert, aktualisiert die Anwendung Diagramm, Tabelle und Zusammenfassung gemeinsam und entfernt einen veralteten Werthinweis.",
+        "Ohne Daten zeigst du eine ausdrückliche Leermeldung, bei einem Ladefehler eine verständliche Fehlermeldung. Zeichne dafür keinen Kreis mit erfundenen Nullwerten. Ein ergänzender Werthinweis verschwindet, sobald er inaktiv wird; Escape schliesst ihn an der aktuellen Zeigerposition, bis sich diese Position ändert."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Das Ganze ausdrücklich benennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Kursanmeldungen nach Eingangskanal · Oktober 2026» statt «Verteilung». Nenne Einheit und Gesamtsumme, damit «50 %» nicht ohne Bezugsgrösse steht. Verwende in Legende und Tabelle dieselben kurzen Kategorienamen.",
+        "Empfehlung: Runde Prozentwerte konsistent und erkläre sichtbare Rundungsdifferenzen. Fasse kleine Kategorien nur dann als «Weitere» zusammen, wenn du die Zusammenfassung benennst und ihre Zusammensetzung zugänglich hältst. Vermeide Perspektive, herausgezogene Sektoren oder andere Hervorhebungen, die Grössenverhältnisse verzerren."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Alle Werte ohne Diagrammfokus lesen",
+      "paragraphs": [
+        "In dieser Referenz ist die Grafik für assistive Technik ausgeblendet und erhält keinen eigenen Tastaturfokus. Du liest die Daten über die native Tabelle mit Zeilen- und Spaltenüberschriften. Titel und Zusammenfassung benennen und erklären die Abbildung.",
+        "Der zusätzliche Werthinweis ist kein separat fokussierbares Tooltip-Steuerelement. Escape schliesst ihn, entfernt aber keine Daten. Wenn du Filter oder eine bedienbare Legende ergänzt, brauchen diese eigene zugängliche Namen, Fokusführung und Tastaturbedienung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Anwendung verantwortet die Zahlen",
+      "paragraphs": [
+        "Chart Pie ist eine dokumentierte Zusammenstellung auf Basis der Base-UI-Chart-Wrapper und Recharts, kein eigenständiger zusätzlicher Export von shadcn. Der Container erhält Konfiguration und Diagramminhalt; er berechnet weder die Gesamtheit noch fehlende Daten. Auch Legende und Werthinweis erstellen keine vollständige Textalternative.",
+        "Gib dem Diagramm eine tatsächlich nutzbare Fläche und halte Zahlenquelle, Tabelle und Zusammenfassung synchron. Die Abbildung ist eine Informationsdarstellung, kein Formularfeld und kein Fortschrittsregler. Für Auswahlaktionen brauchst du zusätzliche passende Bedienelemente."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Die Seite gleicht Nutzung und Daten mit der UX-Beschreibung, Aufbau und Optionen mit Schnittstelle und Gestaltung sowie Aktualisierung und Zugänglichkeit mit Zustandsmodell und HTML-/ARIA-Regeln ab. Die Referenz enthält einen vollständigen Browserdatensatz und begrenzte Zustandsbeispiele.",
+        "Das Anmeldungsbeispiel veranschaulicht die redaktionelle Empfehlung. Es belegt weder eine fertige Implementierung dieses Entwurfs noch eine allgemeine Freigabe für andere Frameworks, Plattformen oder assistive Technik."
+      ]
+    }
+  ]
+}

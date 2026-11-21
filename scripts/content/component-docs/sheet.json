@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "sheet",
+  "title": "Sheet",
+  "summary": "Mit einem Sheet bearbeitest du eine kurze Aufgabe am Fensterrand und behältst den Bezug zur dahinterliegenden Seite. Es verwendet Dialog-Verhalten; Speichern und Entwurfsschutz ergänzt deine Anwendung.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine kurze Aufgabe am Rand",
+      "paragraphs": [
+        "Du verwendest ein Sheet, wenn du im Kontext einer Seite etwas prüfen oder kurz bearbeiten möchtest: etwa den Namen eines Projekts neben der Projektübersicht. Die Seite bleibt als Orientierung sichtbar. Standardmässig ist sie währenddessen jedoch nicht bedienbar, denn Sheet ist eine modale Dialog-Komposition.",
+        "Wähle einen Dialog, wenn eine kompakte, mittig platzierte Aufgabe besser zur Aufmerksamkeit passt. Prüfe Drawer, wenn du eine ziehbare Fläche brauchst; aus der Randposition des Sheet folgt keine Wischbedienung. Für lange Formulare oder mehrere Arbeitsschritte ist eine eigene Seite meist übersichtlicher."
+      ],
+      "links": [
+        {
+          "text": "Dialog",
+          "href": "/systems/shadcn/components/dialog",
+          "paragraph": 1
+        },
+        {
+          "text": "Drawer",
+          "href": "/systems/shadcn/components/drawer",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Einen Projektnamen ändern",
+      "paragraphs": [
+        "Über «Projekt bearbeiten» öffnest du rechts die Aufgabe «Projekt bearbeiten». Das Feld «Projektname» enthält «Gartenplanung». «Änderungen speichern» benennt den Abschluss; «Abbrechen» und das Schliesssymbol bieten einen sichtbaren Ausstieg.",
+        "Der abgedunkelte Hintergrund erhält den Bezug zur Übersicht. Die schmale Fläche enthält bewusst nur ein Feld. Speichern, Validierung und der Umgang mit ungesicherten Änderungen sind Entwurfsentscheidungen der Anwendung, keine eingebauten Sheet-Funktionen."
+      ],
+      "illustration": {
+        "src": "/component-examples/sheet.svg",
+        "alt": "Rechts neben einer abgedunkelten Projektübersicht liegt ein Sheet mit dem Titel Projekt bearbeiten, dem Projektnamen Gartenplanung sowie Speichern, Abbrechen und einem Schliesssymbol.",
+        "caption": "Statische Illustration · Kurze Projektaufgabe am rechten Fensterrand; Speicherlogik ergänzt die Anwendung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Titel oben, Aktionen unten",
+      "paragraphs": [
+        "Der Auslöser gehört zur Seite. Die geöffnete Fläche liegt an einem Fensterrand, vor dem Hintergrund. Im Kopf stehen Titel und bei Bedarf eine kurze Beschreibung; darunter folgt deine eigentliche Aufgabe. Der Fuss nimmt die Aktionen auf und hält ihre vorgegebene Reihenfolge ein.",
+        "Das optionale Schliesssymbol sitzt oben rechts. Halte den Titel davon frei. Die Referenz begrenzt die Breite linker und rechter Flächen und lässt lange Inhalte scrollen. Prüfe auf kleinen Bildschirmen, ob Feldbeschriftungen, Fehlermeldungen und Aktionen noch bequem erreichbar sind."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Die passende Kante wählen",
+      "paragraphs": [
+        "Du kannst rechts, links, oben oder unten öffnen; rechts ist voreingestellt. Rechts oder links eignet sich für eine schmale Begleitaufgabe. Oben und unten nutzen die verfügbare Breite. Wähle die Kante nach Platzbedarf und Seitenaufbau, nicht als Kennzeichen einer anderen Verbindlichkeit.",
+        "Das Schliesssymbol ist standardmässig sichtbar und lässt sich ausblenden. Wenn du es ausblendest, biete einen anderen sichtbaren Schliessknopf innerhalb der Fläche an. Eigene Sheet-Farb- oder Grössenvarianten sind hier nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Schliessen ist kein Speichern",
+      "paragraphs": [
+        "Aus dem geschlossenen Zustand öffnet der Auslöser die Fläche; nach dem Öffnen liegt der Fokus darin. Escape, eine Schliessaktion oder standardmässig ein Druck ausserhalb können das Schliessen anfordern. Die Anwendung kann eine Anforderung ablehnen oder den offenen Zustand selbst steuern.",
+        "Lege vorab fest, ob ein ungesicherter Entwurf beim Schliessen erhalten bleibt oder verworfen wird. Bei drohendem Verlust ist eine verständliche Rückfrage sinnvoll. Halte die Fläche bei einem Speicherfehler offen, zeige die Ursache beim betroffenen Inhalt und bestätige einen erfolgreichen Abschluss. Diese Rückmeldungen musst du ergänzen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aufgabe beim Namen nennen",
+      "paragraphs": [
+        "«Projekt bearbeiten» hilft als Titel mehr als «Details». Beschrifte den Auslöser ebenso konkret und verwende «Änderungen speichern» statt «OK», wenn Daten übernommen werden. «Abbrechen» passt nur, wenn die Anwendung die angekündigte Wirkung tatsächlich umsetzt.",
+        "Beschränke die Beschreibung auf eine kurze Hilfe zur Aufgabe. Benenne alle Felder separat. Das eingebaute Schliesssymbol hat in der gebundenen Originalquelle den englischen Namen «Close»; für eine deutschsprachige Oberfläche musst du einen passend benannten Ausstieg vorsehen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokus hinein und wieder zurück",
+      "paragraphs": [
+        "Den nativen Auslöser und Schliessknopf aktivierst du mit Enter oder Leertaste. Beim Öffnen setzt die zugrunde liegende Dialog-Komponente den Fokus standardmässig auf das erste per Tab erreichbare Element; bei Touch auf die Fläche selbst, damit nicht sofort die Bildschirmtastatur erscheint.",
+        "Im modalen Standardfall bleiben Tab und Umschalt+Tab innerhalb der Fläche. Escape fordert das Schliessen an. Danach kehrt der Fokus standardmässig zum Auslöser oder zuvor fokussierten Element zurück; gezielte Fokusvorgaben sind möglich. Gib dem Dialog über den Titel einen zugänglichen Namen und prüfe die Fokusfolge mit deinen tatsächlichen Inhalten."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein Dialog mit eigener Aufgabe",
+      "paragraphs": [
+        "Die Fläche hat Dialog-Semantik, mit zugehörigem Titel und gegebenenfalls Beschreibung. Auslöser, Fläche und ihre Kennungen müssen zur gleichen Instanz gehören. Ein Sheet ersetzt weder Feldbeschriftungen noch Formularvalidierung; seine Schliessaktion löst keinen fachlichen Abschluss aus.",
+        "Modalität steuerst du unabhängig von der Kante: Neben dem modalen Standard kennt die Dialog-Grundlage nicht modale Nutzung und reine Fokusbegrenzung. Prüfe solche Abweichungen bewusst. Die gebundene Base-UI-Implementierung setzt standardmässig kein aria-modal; sie regelt die Abschirmung des Hintergrunds über ihr eigenes Modalitätsverhalten."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz absichert",
+      "paragraphs": [
+        "Die Seite gleicht Zweck, Schnittstelle, CSS, Zustandsmodell und HTML/ARIA mit dem gebundenen Export und den Originalquellen für Sheet und Base UI Dialog ab. Die Fixtures zeigen unter anderem offen, geschlossen, vier Kanten und die Fläche ohne Schliesssymbol.",
+        "Die Illustration ist ein redaktioneller Entwurf. Referenzstatus und statische Beispiele belegen weder deinen Speicherablauf noch die Bedienbarkeit deiner fertigen Anwendung; dafür bleiben Prüfungen mit den tatsächlichen Inhalten und Zielgeräten nötig."
+      ]
+    }
+  ]
+}

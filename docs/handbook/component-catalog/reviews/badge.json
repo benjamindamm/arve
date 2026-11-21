@@ -1,0 +1,278 @@
+{
+  "component": "badge",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/component.json",
+      "sha256": "249cc2d6b8a89ee526c7f989a35badcfe4babd1e969287da3befcf42fb30fe5a"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+      "sha256": "52b2e94fa2defa8e182e677b262acf56470427b28f34a2dc55b4753b0c2f8af4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/interface.json",
+      "sha256": "b0df0754ea99cd16436eac56098169c58551d17a5c32f60db6b0161936a76d38"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/stories.json",
+      "sha256": "f688fe17c4cd7464f0ab951a7875019854ebec02b4bbe09e5bf020b0832d879f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/behavior.scxml",
+      "sha256": "1c009beda3dba76124c65b7cc531dd88f9ae3716b22109b083f2650707ab3a63"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+      "sha256": "81f6af2dc8b2c5652a4edfcb1cc981bea3f6f7a02e7abf13d923f2610b000fb7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/accessibility.html",
+      "sha256": "cb919d571e4fa6b03a33d232e820e36301dcd20139e8fc2890f58fe929e6ce64"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/accessibility.rules.json",
+      "sha256": "0914678c033500cd6aa2d11fdea4d6071f4395b5bc6a53457cba809f315a311b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/README.md",
+      "sha256": "53b9bd5196c46f527451fa4d9dce4a2816b1651898a96edc0cbc96be813ccd2d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/badge.tsx.source",
+      "sha256": "cad65ac68df79093dc7e9655a94cc60011a2f82b45fc42a0ad74a6e6323c4389"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Badge zeigt kurzen Status oder Kategorie am zugehörigen Inhalt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "usage-alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Button für Aktionen, Checkbox oder Toggle für Auswahl und Alert für ausführliche Warnungen sind redaktionelle Abgrenzungen.",
+      "evidence": []
+    },
+    {
+      "id": "example-text",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Wörter tragen die Statusbedeutung unabhängig von Farbe und Symbol.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "example-design",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Dokumentenliste und Zuordnung der zwei Statusdarstellungen sind ein statischer redaktioneller Entwurf.",
+      "evidence": []
+    },
+    {
+      "id": "anatomy-parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Badge umfasst den Wrapper und ein optionales ergänzendes Symbol; Breite ist inhaltsabhängig, Referenzminimum 22 Pixel und Text einzeilig.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/component.json",
+          "pointer": "/anatomy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": "white-space: nowrap;"
+        }
+      ]
+    },
+    {
+      "id": "variants-six",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "API definiert genau default, secondary, destructive, outline, ghost und link; keine eigene Grössen-Prop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/interface.json",
+          "pointer": "/modules/0/declarations/0/members/2"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/interface.json",
+          "pointer": "/modules/0/declarations/0/members"
+        }
+      ]
+    },
+    {
+      "id": "variants-style",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Default/secondary sind gefüllt, destructive nutzt destructive-subtle und destructive, outline hat Kontur, ghost und link sind transparent.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-destructive {\n  background: var(--ui-color-destructive-subtle);\n  color: var(--ui-color-destructive);\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-outline {\n  border-color: var(--ui-color-border);\n  background: transparent;\n  color: var(--ui-color-foreground);\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-default {\n  background: var(--ui-color-primary);\n  color: var(--ui-color-primary-foreground);\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-secondary {\n  background: var(--ui-color-secondary);\n  color: var(--ui-color-secondary-foreground);\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-ghost {\n  background: transparent;\n  color: var(--ui-color-foreground);\n}"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": ".cn-badge-variant-link {\n  background: transparent;\n  color: var(--ui-color-primary);\n}"
+        }
+      ]
+    },
+    {
+      "id": "states-lifecycle",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kein eigener Auswahl-/Aktivierungszustand; Elternrendern ändert Inhalt. SCXML beschreibt gerendert und entfernt, CSS echte Anker-Hover-/Fokusregeln.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+          "pointer": "/updatesAndDescendants"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/behavior.scxml",
+          "snippet": "<transition event=\"PROPS_CHANGED\"/>"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/behavior.scxml",
+          "snippet": "<state id=\"removed\">"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": "a[data-slot=\"badge\"]:focus-visible {"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/layout.css",
+          "snippet": "a[data-slot=\"badge\"]:hover {"
+        }
+      ]
+    },
+    {
+      "id": "labels-no-color-only",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Bedeutung darf nicht nur durch Farbe codiert sein.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "labels-wording",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze Statuswörter und ausgelagerte Erklärungen sind redaktionelle Empfehlungen.",
+      "evidence": []
+    },
+    {
+      "id": "keyboard-default",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Defaultspan hat keine Aktivierung und keinen eigenen Tastaturlistener; native Overrides behalten ihre Tastatur-/Namenssemantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/accessibility.rules.json",
+          "pointer": "/keyboard"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-enter",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Die Enter-Aktivierung wird als allgemeine native Linkbedienung erklärt; kein Badge-eigenes Protokoll.",
+      "evidence": []
+    },
+    {
+      "id": "semantics-native",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Default ist span, keine erfundene Toggle-API; Symbolfixture blendet SVG mit aria-hidden aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/ux.json",
+          "pointer": "/referenceDecision"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/stories.json",
+          "pointer": "/stories/6/fixture/html"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/badge.tsx.source",
+          "snippet": "defaultTagName: \"span\""
+        }
+      ]
+    },
+    {
+      "id": "sources-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "README begrenzt complete auf Referenzumfang und benennt release:false, keine allgemeine Anwendungs-/Framework-/AT-Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/badge/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Informative Dokumentenstatus als Beispiel gewählt; keine erfundene Badge-Auswahl oder Entfernen-Aktion.",
+    "Sechs Quellnamen bleiben bei den Varianten sichtbar; Empfehlungen zur Gewichtung werden ausdrücklich redaktionell formuliert.",
+    "Beispiel vergrössert die Schrift für Lesbarkeit und behauptet keine Pixelkonformität."
+  ],
+  "limits": [
+    "Kein veröffentlichter Implementierungsnachweis für Badge in Arve; Illustration ist statisch.",
+    "Contract definiert keine automatische Ansage dynamischer Statusänderungen."
+  ]
+}

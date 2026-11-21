@@ -1,3 +1,4 @@
+import { catalogueMeta } from './component-catalogue-data'
 import { patternCatalog } from './pattern-catalog'
 import { designResources } from './design-resources'
 import { readTemplate } from './page-templates'
@@ -27,7 +28,8 @@ export async function documentationTree(system: string) {
   const entries = new Map(visible.map((page) => {
     const path = pagePath(system, page)
     const slug = page.component || sectionSlug(system, page.slug)
-    searchText.set(path, [JSON.stringify(designResources(system, slug) ?? ''), plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
+    const catalogue = page.component ? catalogueMeta({slug,path,summary:page.summary ?? undefined}) : undefined
+    searchText.set(path, [catalogue?.description ?? '', catalogue?.keywords ?? '', JSON.stringify(designResources(system, slug) ?? ''), plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
     const entry: Entry = {
       slug, path, title: page.title, summary: page.summary ?? undefined,
       pageType: page.pageType ?? undefined,

@@ -1,0 +1,237 @@
+{
+  "component": "dropdown-menu",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/component.json",
+      "sha256": "3f365286fecffb7e6ae20ca6809b3e25c8a1e4ae19398c460fda65f2cb470c57"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/ux.json",
+      "sha256": "74027d05835a48e6ab4bed98dcc2e15ef88acf99bad33c5beb61e6531ae967fc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/interface.json",
+      "sha256": "ff2f702d7e9073e92df142467b2085beb261f3b227bfb7791bc43500181c9498"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/stories.json",
+      "sha256": "f8d5142b350f9e375362d69e3d254823d2b84aca7bf5ad28397649389dc16a2b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/behavior.scxml",
+      "sha256": "112f6ad48fe4dfc8e331738d14b92c5567b0b7f89375677e98119215e17868dc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/layout.css",
+      "sha256": "dc45af567d959c5a410810cd40d4796eb5d3b9d8e26cc0ee2f7358d6caec2509"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.html",
+      "sha256": "c8e2a352667a5e1583e379c6ecef415d7595f05d95a9ccaf0734cc472bdc4476"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+      "sha256": "8d10db0a7c8e2db2db54688f895b6419b2f7b20a34f55866b784a045f7ab98e8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/README.md",
+      "sha256": "f9d44033ba0cd3b5bc464644a526ca449e73889aa3586d19678eaea3ab0af7bb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menu.md.source",
+      "sha256": "fab1ff211b932a7cc4c3eef9bc22a1a6860c8ea132618b9cb4645831871f375d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source",
+      "sha256": "18c1829679694a9b9850afcabf1158a80ec3624fb5e03d0d4b13339b729e0503"
+    }
+  ],
+  "claims": [
+    {
+      "id": "commands-not-form-values",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Das Menü bietet Befehle und Menüeinstellungen; für gewöhnliche Formularwerte ist es nicht gedacht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "example-composition",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Illustration übersetzt die belegte Bericht-Komposition mit Befehlen, Checkbox, Radiogruppe und Untermenü in deutsche Inhalte.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.html",
+          "snippet": "role=\"menuitemcheckbox\""
+        }
+      ]
+    },
+    {
+      "id": "popup-placement",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die belegte Content-Voreinstellung liegt unten, am Anfang ausgerichtet, mit vier Pixel Abstand.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/interface.json",
+          "pointer": "/modules/0/declarations/3/members/0/description"
+        }
+      ]
+    },
+    {
+      "id": "item-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Befehlsdarstellung besitzt die Werte default und destructive; inset ist als Einrückung belegt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "checkbox-radio",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Unabhängige Checkbox und gemeinsame Radioauswahl besitzen eigene Rollen und Zuständigkeiten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "close-default-command",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Normale Menübefehle schliessen standardmässig nach Aktivierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menu.md.source",
+          "snippet": "| closeOnClick | `boolean`                                                                               | `true`  |"
+        }
+      ]
+    },
+    {
+      "id": "close-default-settings",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Checkbox- und Radioeinträge schliessen in Base UI 1.9 standardmässig nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "controlled-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierte Werte und abgebrochene Änderungen bleiben autoritativ; das Menü führt Anwendungsbefehle nicht selbst aus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/behavior.scxml",
+          "snippet": "<if cond=\"!checkedControlled &amp;&amp; !_event.data.eventDetails.isCanceled\">"
+        }
+      ]
+    },
+    {
+      "id": "label-guidance",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Klare handlungsbezogene und stabile Namen wie Bericht löschen und Raster anzeigen sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "shortcut-display",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der Shortcut zeigt nur Text und registriert kein Tastenkürzel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-disabled-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Pfeile, Home/End, Textsuche und Aktivierung gelten für das vertikale Menü; deaktivierte Einträge können Fokus erhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "escape-submenu",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Escape schliesst standardmässig nur die aktuelle Untermenüebene.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/menu.md.source",
+          "snippet": "| closeParentOnEsc     | `boolean`                                                                                              | `false`"
+        }
+      ]
+    },
+    {
+      "id": "roles-focus",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Menürollen und getrennte Änderungszuständigkeiten gelten; Fokus nach Ausseninteraktion hängt von finalFocus und Schliessgrund ab.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "focus-policy",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die abschliessende Fokusbehandlung richtet sich nach tatsächlichem Besitzer, Anlass und finalFocus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/behavior.scxml",
+          "snippet": "<param name=\"policy\" expr=\"'actual-owner-reason-and-finalFocus-prop'\" />"
+        }
+      ]
+    },
+    {
+      "id": "source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der Referenzabschluss ist begrenzt und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/dropdown-menu/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Berichtaktionen als konkreter Kontext statt einer technischen Aufzählung verwendet.",
+    "Select und Navigation als benannte Alternativen abgegrenzt.",
+    "Checkbox und Radio bewusst als Menüeinstellungen mit anderem Standardschliessen erläutert.",
+    "Kompakte statische SVG mit grösserer Höhe für klar getrennte Befehls- und Einstellungsgruppen erstellt."
+  ],
+  "limits": [
+    "Keine lokale Dropdown-Menu-Demo unter src/demos/shadcn vorhanden.",
+    "Keine Browser- oder assistive Technik-Prüfung dieser redaktionellen Seite durchgeführt."
+  ]
+}

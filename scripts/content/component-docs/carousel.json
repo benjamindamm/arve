@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "carousel",
+  "title": "Carousel",
+  "summary": "Ein Carousel zeigt zusammengehörige Vorschauen nacheinander. Pfeile und eine ergänzte Positionsangabe helfen beim gezielten Durchblättern.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine kleine Folge gezielt durchsehen",
+      "paragraphs": [
+        "Ein Carousel eignet sich für wenige zusammengehörige Vorschauen, die einzeln verständlich sind: etwa drei Berichte oder Bilder eines Raums. Menschen blättern selbst und müssen die übrigen Inhalte nicht zwingend öffnen.",
+        "Wenn mehrere Angebote gleichzeitig verglichen werden sollen, ist eine sichtbare Kartenliste geeigneter. Für benannte Inhaltsbereiche mit direktem Wechsel passen Tabs besser. Verberge Pflichtangaben oder notwendige Arbeitsschritte nicht in einer blätterbaren Folge; dafür empfiehlt sich eine gegliederte Seite oder ein geführter Ablauf."
+      ],
+      "links": [
+        {
+          "text": "Tabs",
+          "href": "/systems/shadcn/components/tabs",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Drei Berichte zum Monatsabschluss",
+      "paragraphs": [
+        "Unter «Berichtsvorschauen» erscheint zuerst «Monatsübersicht» mit einem kurzen Hinweis zum Inhalt. Danach folgen «Erträge» und «Kosten». Die erste Karte steht vollständig im Blick; der deaktivierte Zurück-Pfeil und «Bericht 1 von 3» zeigen den Anfang der Folge.",
+        "Die Pfeile erhalten eigene seitliche Flächen und verdecken keinen Text. Der Positionsstatus wird von der Anwendung ergänzt und nach einem tatsächlichen Wechsel aktualisiert. Das Beispiel setzt auf manuelles Blättern ohne Endlosschleife."
+      ],
+      "illustration": {
+        "src": "/component-examples/carousel.svg",
+        "alt": "Berichtsvorschauen mit der Karte Monatsübersicht, deaktiviertem Zurück-Pfeil, aktivem Weiter-Pfeil und dem Status Bericht 1 von 3.",
+        "caption": "Statische Illustration · Manuell durch drei Berichtsvorschauen blättern."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Inhalt und Bedienung bleiben getrennt",
+      "paragraphs": [
+        "Ein benannter Bereich umfasst das Sichtfenster und die beiden Pfeiltasten. Im Sichtfenster bewegt sich eine gemeinsame Spur mit den einzelnen Inhaltsgruppen. Die Referenz zeigt pro Position eine ganze Karte mit Überschrift und Beschreibung.",
+        "Die Pfeile stehen horizontal links und rechts, vertikal oben und unten. Die exportierte Gestaltung reserviert dafür Platz innerhalb des Bereichs; die ursprüngliche React-Quelle setzt sie ausserhalb. Der separate Status unterhalb hilft bei der Orientierung und gehört zur Anwendung."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Richtung nach dem Inhalt wählen",
+      "paragraphs": [
+        "Horizontal ist die Voreinstellung und passt zur üblichen Folge von Vorschauen. Vertikal ist ebenfalls vorgesehen; die Referenz begrenzt dafür die Höhe des Sichtfensters. Wähle diese Ausrichtung nur, wenn die umgebende Seite genügend Platz bietet und die ungewohnte Tastaturbedienung berücksichtigt wird.",
+        "Für Sprachen mit einer Schreibrichtung von rechts nach links ist eine RTL-Konfiguration belegt. Schreibrichtung im HTML und Einstellung der Blätterfunktion müssen zusammenpassen. Eigene Carousel-Farb- oder Grössenvarianten sind nicht definiert. Die Pfeiltasten verwenden standardmässig die umrandete kleine Icon-Schaltfläche."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Anfang, Wechsel und Ende sichtbar machen",
+      "paragraphs": [
+        "Bis die Blätterfunktion bereit ist, sind zunächst beide Pfeile deaktiviert. In der gewählten Folge ohne Schleife bleibt am Anfang «Vorheriger Bericht» deaktiviert, am Ende «Nächster Bericht». Dazwischen sind beide Richtungen verfügbar.",
+        "Ein Klick oder Ziehen kann die Position ändern. Die Anwendung leitet ihren Status aus der tatsächlichen Auswahl ab und berücksichtigt eine Neuinitialisierung, etwa nach einer Grössenänderung. Automatisches Weiterschalten, eine Pausentaste und Seitenpunkte sind nicht eingebaut. Eine entsprechende Erweiterung braucht eigene Gestaltung und Prüfung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Ziel und Position benennen",
+      "paragraphs": [
+        "«Berichtsvorschauen» benennt den gesamten Bereich besser als «Carousel». «Monatsübersicht» und «Erträge» erklären den Inhalt besser als «Karte 1» und «Karte 2». Ergänze für jede Inhaltsgruppe eine verständliche Positionsangabe wie «1 von 3».",
+        "Empfohlen sind kurze Überschriften und ein bis zwei Sätze pro Vorschau. Die rein grafischen Pfeile brauchen zugängliche Namen, beispielsweise «Vorheriger Bericht» und «Nächster Bericht». Die Quellbeschriftungen sind englisch; für eine deutsche Oberfläche muss die Anwendung passende Namen setzen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Links und rechts gelten in beiden Ausrichtungen",
+      "paragraphs": [
+        "Tab folgt der tatsächlichen Reihenfolge der bedienbaren Inhalte und Schaltflächen. Enter oder Leertaste aktiviert einen fokussierten Pfeil; deaktivierte Pfeile sind nicht aktivierbar. Es gibt keinen eigenen Fokuswechsel zur neuen Karte.",
+        "Im Carousel löst Pfeil links das Zurückblättern und Pfeil rechts das Weiterblättern aus, auch bei vertikaler Darstellung und RTL. Pfeil oben und unten sind dafür nicht implementiert. Escape setzt die Auswahl nicht zurück. Da auch Tastendrücke in Eingabefeldern abgefangen werden, empfiehlt diese Referenz Inhalte ohne editierbare Felder."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Ein benannter Bereich mit einzelnen Gruppen",
+      "paragraphs": [
+        "Der äussere Bereich ist als Region mit der Rollenbeschreibung Carousel angelegt; jede Karte bildet eine Gruppe mit der Rollenbeschreibung Slide. Die Anwendung ergänzt Bereichsname, Positionsnamen und aussagekräftige Inhalte. Die Pfeile sind echte Schaltflächen, keine Links auf andere Seiten.",
+        "Eine Statusansage ist nicht automatisch vorhanden. Der gezeigte Positionsstatus wird ausserhalb ergänzt und mit der wirklichen Auswahl verbunden. In Formularen oder Dialogen bleiben deren Regeln für Fokus und Abschluss bestehen; das Carousel ersetzt weder einen Formularschritt noch die Dialognavigation."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz abdeckt",
+      "paragraphs": [
+        "Abgeglichen wurden Schnittstelle, Gestaltungsregeln, Zustandsmodell, HTML/ARIA und die statischen Szenarien mit der gebundenen React-Quelle. Das Blättern beruht auf Embla. Die Wahl von drei Berichten, die deutschen Texte und der externe Positionsstatus sind bewusste Gestaltungsentscheidungen.",
+        "Der Export beschreibt eine begrenzte Referenz. Die Illustration belegt weder Laufzeitverhalten noch die Zugänglichkeit einer konkreten Anwendung. Erweiterungen wie automatisches Blättern sind durch dieses Beispiel nicht geprüft."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "calendar",
+  "title": "Calendar",
+  "summary": "Calendar macht einzelne Daten und Zeiträume im Monatsraster wählbar. Auswahl, angezeigter Monat und Tastaturfokus bleiben getrennt.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ein Datum im Monatszusammenhang wählen",
+      "paragraphs": [
+        "Verwende Calendar, wenn Menschen einen Liefertermin oder mehrere Kurstage anhand von Wochentagen und benachbarten Daten wählen sollen. Für eine zusammenhängende Abwesenheit passt die Bereichsauswahl; für einzelne Kurstage die Mehrfachauswahl.",
+        "Soll der Kalender erst bei Bedarf neben einem Formularfeld erscheinen, passt die Zusammensetzung Date Picker. Für ein bekanntes, weit zurückliegendes Geburtsdatum empfehlen wir eine direkte Datumseingabe: Monat für Monat zurückzublättern ist umständlich. Calendar allein bietet weder Texteingabe noch Uhrzeitwahl."
+      ],
+      "links": [
+        {
+          "text": "Date Picker",
+          "href": "/systems/shadcn/components/date-picker",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Liefertermin mit sichtbarer Bestätigung",
+      "paragraphs": [
+        "Der Entwurf zeigt einen Lieferkalender für November 2026. Der 12. ist ausgewählt, der 13. nicht verfügbar. Die Textzeile unter dem Raster bestätigt das vollständige Datum; der Hinweis zur fehlenden Verfügbarkeit bleibt daneben dauerhaft lesbar.",
+        "Die deutsche Sprache und der Wochenbeginn am Montag sind bewusste Entwurfsentscheidungen. Sie müssen über die Lokalisierung eingerichtet werden: Die exportierte Referenz verwendet englische Datumsnamen und einen Wochenbeginn am Sonntag."
+      ],
+      "illustration": {
+        "src": "/component-examples/calendar.svg",
+        "alt": "Lieferkalender für November 2026 mit ausgewähltem 12. November, gesperrtem 13. und ausgeschriebener Bestätigung.",
+        "caption": "Statische Illustration · Liefertermin mit deutscher Lokalisierung als redaktioneller Entwurf."
+      },
+      "notice": {
+        "title": "Vor dem Einsatz: Tastaturbedienung prüfen",
+        "text": "Der ursprüngliche React-Wrapper dieser Referenz hat einen Fokusfehler. Übernimm die dokumentierte Korrektur und prüfe die Einbindung, bevor du den Kalender einsetzt.",
+        "link": {
+          "label": "Zur Fokuskorrektur",
+          "href": "#abschnitt-fokusreparatur-vor-dem-einsatz-sicherstellen"
+        }
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Monatskopf, Tagesraster und Rückmeldung",
+      "paragraphs": [
+        "Der Monatsname steht über den Wochentagen; die Pfeile an den Seiten wechseln den angezeigten Monat. Darunter bilden sieben Tagesspalten die Wochen. Tage des Nachbarmonats können das Raster ergänzen und erscheinen zurückhaltender.",
+        "Auswahl, heutiger Tag und Tastaturfokus haben unterschiedliche Aufgaben und müssen unterscheidbar bleiben. Eine optionale Statuszeile steht unter dem Raster. Der Kalender hat standardmässig keinen eigenen Rahmen; eine umgebende Card oder ein Popover kann ihn räumlich fassen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Auswahlart vor der Darstellung festlegen",
+      "paragraphs": [
+        "Belegt sind Einzelauswahl, Mehrfachauswahl, Bereichsauswahl und eine reine Anzeige ohne Tagesschaltflächen. Eine verpflichtende Einzelauswahl lässt sich durch erneutes Wählen desselben Datums nicht leeren; die optionale Einzelauswahl schon.",
+        "Mehrere Monate, Kalenderwochen und Auswahlfelder im Monatskopf helfen je nach Aufgabe beim Überblick oder beim grösseren Sprung. Die Referenzgestaltung kennt Tageszellen mit 28, 38 und 48 Pixeln. Kompakt und gross werden ausdrücklich über ein Attribut der einbindenden Anwendung gesetzt; sie sind keine eigene Grössenoption der ursprünglichen Calendar-Schnittstelle."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Blättern und Auswählen getrennt behandeln",
+      "paragraphs": [
+        "Ein Monatswechsel ändert nicht automatisch die Auswahl. Ebenso kann der Fokus zu einem anderen Tag wechseln, ohne ihn auszuwählen. Gesperrte Tage bleiben sichtbar und nicht wählbar; ausgeblendete Tage sind ein anderer Zustand. Die Monatsgrenzen beschränken das Blättern, legen aber allein keine gültigen Auswahldaten fest.",
+        "Bei Bereichen müssen Mindestlänge, Höchstlänge und Umgang mit gesperrten Tagen zur Aufgabe passen. Mit excludeDisabled beginnt eine Auswahl neu am zuletzt gewählten Tag, wenn der vorgeschlagene Bereich einen gesperrten Tag überquert. Die Anwendung verantwortet Verfügbarkeitsdaten, Prüfung und Speicherung; eine Auswahl sendet noch kein Formular ab."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Zweck und das ganze Datum benennen",
+      "paragraphs": [
+        "„Liefertermin wählen“ erklärt mehr als „Datum“. Bestätige beispielsweise „Gewählt: Donnerstag, 12. November 2026“ statt nur „12“. Benenne Pfeile mit „Vorheriger Monat“ und „Nächster Monat“ und gib jedem Tag einen vollständigen zugänglichen Datumsnamen.",
+        "Halte Wochentagskürzel knapp, aber die zugehörigen Namen verständlich. Begründe Einschränkungen dauerhaft, etwa „13. November: keine Lieferung“. Verstecke Pflichtangaben und Fehler nicht ausschliesslich in einer wechselnden Statusmeldung."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Fokusreparatur vor dem Einsatz sicherstellen",
+      "paragraphs": [
+        "Der unveränderte Wrapper dieser Revision hat einen belegten Fokusfehler: Intern wechselt der fokussierte Tag, der tatsächliche Tastaturfokus folgt aber nicht. Die Referenz ergänzt dafür einen ausdrücklich angeschlossenen Fokusverweis. Übernimm diese Korrektur und prüfe die Einbindung, bevor du die folgende Bedienung voraussetzt."
+      ],
+      "bullets": [
+        "Im korrigierten Raster ist ein Tag mit Tab erreichbar. Links/Rechts bewegen einen Tag, Oben/Unten eine Woche; gesperrte und ausgeblendete Tage werden übersprungen.",
+        "Bild auf/Bild ab wechseln den Monat, mit Umschalt das Jahr. Pos1/Ende gehen an die Wochengrenzen. Umschalt mit Links/Rechts springt einen Monat, mit Oben/Unten ein Jahr.",
+        "Enter oder Leertaste wählen den fokussierten verfügbaren Tag. Bei einer Darstellung von rechts nach links kehrt sich Links/Rechts um. Calendar selbst schliesst sich nicht mit Escape und hält den Fokus nicht fest."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Kalender und Formular bewusst verbinden",
+      "paragraphs": [
+        "Jeder Monat ist ein benanntes Raster mit Wochentagsüberschriften und nativen Tagesschaltflächen. Die reine Anzeige verzichtet auf diese Schaltflächen. Die optionale Statuszeile meldet Änderungen höflich; wichtige Anleitungen bleiben ausserhalb dieser Meldung bestehen.",
+        "Ein Popover oder Dialog verantwortet Öffnen, Schliessen und Fokusrückgabe. Übergibt die Anwendung onSelect, muss sie den ausgewählten Wert nachführen, auch wenn er zunächst leer ist. Verarbeite lokale Kalenderdaten bewusst und behandle das sprachabhängig formatierte data-day nicht als stabilen ISO-Datumsschlüssel."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Abgeglichen wurden Schnittstelle und Anatomie, Gestaltungsregeln und Zustandsbeispiele, das Verhaltensmodell sowie HTML und Zugänglichkeitsregeln des veröffentlichten Exports. Die Referenz beschreibt die an React DayPicker gebundene Umsetzung einschliesslich der nötigen Fokuskorrektur.",
+        "Einzelauswahl und Bereichsauswahl sind im begrenzten Referenzumfang ausgeübt; Mehrfachauswahl und Pflichtvarianten sind aus der Schnittstelle beschrieben. Die statische Illustration ist ein Entwurf und kein Implementierungsnachweis. Die Quellen geben keine allgemeine Freigabe für unterstützende Technologien oder andere Plattformen."
+      ]
+    }
+  ]
+}

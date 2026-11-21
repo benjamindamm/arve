@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "select",
+  "title": "Select",
+  "summary": "Mit Select wählst du einen oder mehrere vorgegebene Werte aus einer aufklappbaren Liste. Du kannst die Optionen durchgehen und die Auswahl gezielt bestätigen.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine feste Auswahl anbieten",
+      "paragraphs": [
+        "Verwende Select, wenn du einen oder mehrere vorgegebene Werte platzsparend anbieten möchtest, etwa die Versandart einer Bestellung. Freie Eingaben und das Filtern der Liste gehören nicht dazu.",
+        "Wähle eine Combobox, sobald du eine längere Liste durch Eingabe eingrenzen lassen willst. Ziehe Native Select vor, wenn dir die systemeigene Auswahloberfläche genügt. Für wenige Optionen, die du direkt vergleichbar zeigen möchtest, empfiehlt sich bei Einfachwahl eine Radio Group."
+      ],
+      "links": [
+        {
+          "text": "Combobox",
+          "href": "/systems/shadcn/components/combobox",
+          "paragraph": 1
+        },
+        {
+          "text": "Native Select",
+          "href": "/systems/shadcn/components/native-select",
+          "paragraph": 1
+        },
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Versandart ändern",
+      "paragraphs": [
+        "Du bearbeitest eine Bestellung: «Standard» ist bereits gewählt. In der geöffneten Liste ist «Express» hervorgehoben, aber noch nicht übernommen. Das Häkchen bleibt bei «Standard». Erst die bestätigte Auswahl ändert den Feldwert.",
+        "Die Beschriftung «Versandart» bleibt unabhängig vom Wert sichtbar. Gib den Optionen kurze, unterscheidbare Namen und erkläre Kosten oder Lieferfristen in einem zugeordneten Hinweis, wenn sie für die Entscheidung nötig sind."
+      ],
+      "illustration": {
+        "src": "/component-examples/select.svg",
+        "alt": "Geöffnete Auswahl Versandart: Standard trägt ein Häkchen, Express ist grau hervorgehoben, Abholung steht darunter.",
+        "caption": "Statische Illustration · Gewählter Wert und aktuelle Markierung sind getrennt."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Feld und Auswahlliste verbinden",
+      "paragraphs": [
+        "Der Auslöser zeigt den aktuellen Wert oder einen Platzhalter sowie einen Pfeil. Die zugehörige Liste enthält Optionen und das Häkchen für die Auswahl. Du kannst zusammengehörige Optionen gruppieren und mit einer Gruppenüberschrift oder Trennlinie gliedern. Die Gruppenüberschrift ersetzt die Feldbeschriftung nicht.",
+        "Standardmässig richtet sich der gewählte Eintrag am Auslöser aus; die Liste kann ihn dabei überlagern. Plane ausreichend Platz und überlasse die Anpassung an Fensterränder der Komponente. Bei langen Listen erscheinen Scrollhilfen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Einfach oder mehrfach wählen",
+      "paragraphs": [
+        "Bei Einfachwahl enthält das Feld einen Wert oder null. Mit Mehrfachwahl verwaltest du eine Liste von Werten; eine weitere Auswahl ergänzt oder entfernt einen Eintrag und lässt die Liste normalerweise offen. Verwende sie nur, wenn mehrere Werte fachlich zulässig sind.",
+        "Der Auslöser bietet die Grössen default und sm. Nutze die kleinere Ausführung gezielt bei dichter Anordnung und prüfe die Bedienbarkeit im vorgesehenen Kontext. Eigene Farbvarianten sind nicht ausgewiesen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Markieren, bestätigen und zurücknehmen",
+      "paragraphs": [
+        "Beim Öffnen kannst du Optionen durchgehen, ohne sofort den gewählten Wert zu ersetzen. Eine bestätigte Einfachwahl fordert zusätzlich das Schliessen an. Wertänderung und Öffnungszustand werden unabhängig gesteuert; auch eine abgelehnte Wertänderung verhindert das Schliessen nicht automatisch.",
+        "Nur lesbar erlaubt weiterhin Öffnen und Durchsehen, sperrt aber Änderungen. Ein deaktiviertes Feld unterbindet die Interaktion. Einzelne deaktivierte Optionen können in der offenen Liste Fokus erhalten, lassen sich jedoch nicht übernehmen.",
+        "Lege fest, ob eine leere Auswahl zulässig ist. Ein Platzhalter bietet nach der Auswahl keine Löschfunktion. Für eine löschbare Einfachwahl kannst du einen Eintrag mit dem Wert null anbieten oder eine separate Rücksetzaktion vorsehen. Validierung und verständliche Fehlermeldungen ergänzt du in der Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Entscheidung klar benennen",
+      "paragraphs": [
+        "Schreibe als Feldbeschriftung «Versandart» und als Platzhalter «Versandart wählen». «Bitte wählen» allein erklärt den Zweck nicht. Halte die Optionen möglichst kurz; ähnliche Anfänge wie «Versand per …» erschweren das schnelle Unterscheiden.",
+        "Verwende für einen echten Leerwert eine eindeutige Bezeichnung wie «Keine Zuordnung». Verwechsle ihn nicht mit einer fachlich gültigen Option. Plane bei langen Bezeichnungen genug Breite ein: Der angezeigte Wert kann gekürzt werden, während Optionstexte umbrechen können."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit der Tastatur auswählen",
+      "paragraphs": [
+        "Mit Tab erreichst du den Auslöser. Enter, Leertaste oder die öffnenden Pfeiltasten öffnen die Liste. Darin bewegen Pfeil hoch und runter, Home und End sowie das Tippen von Anfangsbuchstaben die Markierung. Enter oder Leertaste übernehmen eine verfügbare Option. Escape schliesst, ohne den bloss markierten Kandidaten zu übernehmen.",
+        "Beachte die Ausnahme bei geschlossener Einfachwahl: Anfangsbuchstaben können direkt einen Wert übernehmen. Das gilt nicht bei Mehrfachwahl oder nur lesbarem Feld. Verknüpfe eine sichtbare Beschriftung mit dem Auslöser und halte den Tastaturfokus erkennbar."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Den Wert richtig ins Formular übertragen",
+      "paragraphs": [
+        "Select verwendet einen Button mit der Rolle combobox und eine zugeordnete listbox mit Optionen. Trotz dieser Rolle gibt es hier kein Texteingabefeld zum Suchen. Der sichtbare Wert ist keine Feldbeschriftung.",
+        "Ordne name, bei Bedarf form und required am Select zu. Die Formularübermittlung erfolgt über den versteckten Formularwert; bei Mehrfachwahl werden mehrere Werte unter demselben Namen übertragen. Wenn du Objekte als Werte verwendest, musst du lesbare Bezeichnung, übermittelten Wert und Wertvergleich passend festlegen. Verknüpfe Hinweise und Fehler mit dem sichtbaren Auslöser."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Worauf diese Beschreibung beruht",
+      "paragraphs": [
+        "Geprüft sind die exportierte Schnittstelle, CSS-Regeln, Zustandsbeschreibung, HTML/ARIA-Regeln und statischen Zustandsbeispiele der Base-UI-basierten Referenz. Für Leerwert und Platzhalter wurden zusätzlich die gebundenen Originalunterlagen gelesen.",
+        "Die Illustration ist ein redaktioneller Entwurf. Die Quellenbeschreibung und ihre historischen Prüfungen ersetzen keine Prüfung deiner Formularintegration, Tastaturbedienung und Hilfstechnologien im fertigen Produkt."
+      ]
+    }
+  ]
+}

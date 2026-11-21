@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "input-otp",
+  "title": "Input OTP",
+  "summary": "Mit Input OTP gibst du einen kurzen Bestätigungscode in einem einzigen Textfeld ein. Sichtbare Zeichenplätze machen Länge und Eingabeposition erkennbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Kurze Einmalcodes übersichtlich eingeben",
+      "paragraphs": [
+        "Verwende Input OTP, wenn du einen kurzen Bestätigungscode mit bekannter Länge abfragst, etwa nach dem Versand einer Anmeldenachricht. Die sichtbaren Zeichenplätze machen die erwartete Länge deutlich und helfen beim Abgleichen.",
+        "Für freie Texte, lange Wiederherstellungsschlüssel oder Werte mit wechselnder Länge passt ein gewöhnliches Input besser. Wähle die aufgeteilte Darstellung nur, wenn du Länge und erlaubte Zeichen zuverlässig festlegen kannst. Die Komponente übernimmt die Eingabe; die Gültigkeit des Codes prüft deine Anwendung."
+      ],
+      "links": [
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Sechs Ziffern aus einer Nachricht",
+      "paragraphs": [
+        "Der Entwurf zeigt «Bestätigungscode» mit dem Hinweis «Gib die sechs Ziffern aus deiner Nachricht ein.» Drei Zeichen sind eingegeben, der nächste Platz ist hervorgehoben. Zwei Dreiergruppen erleichtern das Lesen. Der Trennstrich gehört zur Darstellung und ist kein zusätzliches Codezeichen.",
+        "«Code prüfen» ist eine ergänzende Formularaktion im Entwurf. So kannst du den Prüfschritt ausdrücklich benennen. Das Füllen des letzten Platzes löst für sich allein weder eine Übermittlung noch eine Bestätigung aus."
+      ],
+      "illustration": {
+        "src": "/component-examples/input-otp.svg",
+        "alt": "Bestätigungscode mit Hinweis auf sechs Ziffern, zwei Dreiergruppen, eingegebenen Ziffern 482, hervorgehobener vierter Position und der Aktion Code prüfen.",
+        "caption": "Statische Illustration · Teilweise ausgefüllter Bestätigungscode mit ergänzender Formularaktion."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Eine Eingabe hinter sechs Zeichenplätzen",
+      "paragraphs": [
+        "Du setzt die Zeichenplätze innerhalb von Gruppen zusammen und kannst die Gruppen durch einen sichtbaren Trenner gliedern. Zusammengehörige Plätze haben verbundene Rahmen; die äusseren Ecken sind gerundet. Die aktive Position erhält eine Hervorhebung und kann einen dargestellten Eingabestrich zeigen.",
+        "Hinter diesen Flächen liegt ein einziges echtes Textfeld. Es trägt den vollständigen Wert, den Fokus und die Beschriftung. Die Plätze sind visuelle Elemente. Baue daraus keine sechs eigenständig beschrifteten Textfelder."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Länge und Zeichenregeln bewusst wählen",
+      "paragraphs": [
+        "Es gibt keine eigene Auswahl benannter Grössen- oder Farbvarianten. Die belegten Wahlmöglichkeiten betreffen die Code-Regeln: maximale Länge, Zeichenmuster und die Bearbeitung eingefügter Texte. Passe die Zahl der sichtbaren Plätze an die festgelegte Länge an.",
+        "Die Referenz wählt sechs Ziffern und entfernt beim Einfügen Leerzeichen sowie Bindestriche. Damit lässt sich etwa «482-193» als zusammenhängender Code übernehmen. Das Ziffernmuster verwirft einen Kandidaten mit unzulässigen Zeichen; es entfernt nicht beliebige Buchstaben. Eine numerische Bildschirmtastatur allein begrenzt die erlaubten Zeichen nicht."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Vollständig heisst noch nicht gültig",
+      "paragraphs": [
+        "Die Eingabe kann leer, teilweise oder vollständig gefüllt sein. Die aktive Position zeigt, wo du gerade bearbeitest. Im deaktivierten Zustand ist die Darstellung abgeschwächt und die native Eingabe lässt sich nicht bearbeiten.",
+        "Die Komponente meldet den Übergang von einem zuvor beobachteten kürzeren Wert zur festgelegten Länge. Ein bereits vollständig übergebener Anfangswert fordert keine automatische Prüfung an. Deine Anwendung übernimmt Prüfanfrage, Wartezustand, Antwort und erneuten Versand.",
+        "Kennzeichne einen ungültigen oder abgelaufenen Code mit verständlichem Fehlertext zusätzlich zum Rahmen. Empfiehl eine konkrete nächste Handlung, etwa «Der Code ist abgelaufen. Fordere einen neuen Code an.» Zeige dies nur, wenn die Prüfung diesen Grund tatsächlich liefert."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Aufgabe und Herkunft nennen",
+      "paragraphs": [
+        "«Bestätigungscode» mit «Gib die sechs Ziffern aus deiner Nachricht ein.» erklärt Aufgabe und Format. «Code» allein ist ohne Kontext zu knapp. Benenne die tatsächliche Herkunft, wenn mehrere Nachrichten oder Verfahren möglich sind.",
+        "Halte die Beschriftung kurz und platziere längere Hilfe darunter. Verwende sichtbare Hinweise statt eines Platzhalters als einzige Anleitung. Ein Fehlertext soll sagen, was du als Nächstes tun kannst; «Fehler» allein hilft nicht weiter."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Ein Fokuspunkt für den ganzen Code",
+      "paragraphs": [
+        "Mit Tab erreichst du das eine echte Eingabefeld und verlässt es mit dem nächsten Tab-Schritt. Pfeiltasten und Auswahl arbeiten im vollständigen Wert. Mit Rückschritt und Entf entfernst du Zeichen; einen kopierten Code kannst du einfügen. Die visuellen Plätze bilden keine eigene Tab-Reihenfolge.",
+        "Verbinde die sichtbare Beschriftung mit dem echten Feld und ordne ihm Hilfe sowie Fehlertext zu. Enter folgt dem normalen Formularverhalten; Escape leert den Code nicht. Prüfe im eingebauten Formular, ob Fokus und aktive Position beim Bearbeiten erkennbar bleiben."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Mobile Eingabe und Formular zusammendenken",
+      "paragraphs": [
+        "Die Referenz verwendet ein Textfeld mit numerischem Eingabemodus und dem Hinweis für Einmalcode-Autovervollständigung. Das unterstützt passende mobile Eingabemöglichkeiten; ein angebotener Codevorschlag hängt von Browser, Gerät und Kontext ab. Erhalte führende Nullen als Teil des Textwerts.",
+        "Die dekorativen Gruppen und der Trenner sind in der Referenz vor assistiven Technologien verborgen. Beschriftung, Hilfetext und Fehlerzuordnung bleiben am tatsächlichen Feld; ungültige Eingaben kennzeichnest du zusätzlich mit aria-invalid. Plane Ablaufzeiten, Wiederholungsversuche und Versand getrennt in deiner Anwendung. Die Eingabekomponente macht keine Sicherheitszusage."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Abgeglichen sind die exportierte UX-Beschreibung, die CEM-Schnittstelle, CSS-Gestaltung, das SCXML-Verhalten, HTML/ARIA und die Zustandsbeispiele. Die Eingabe basiert hier auf input-otp; allgemeine Annahmen über andere shadcn-Eingaben ersetzen diese Regeln nicht.",
+        "Die Illustration ist ein redaktioneller Entwurf. Die Quellen beschreiben eine begrenzte Referenz und geben keine allgemeine Freigabe für deine Anwendung, mobile Autovervollständigung oder sämtliche assistiven Technologien. Prüfe diese Kombinationen in deinem konkreten Ablauf."
+      ]
+    }
+  ]
+}

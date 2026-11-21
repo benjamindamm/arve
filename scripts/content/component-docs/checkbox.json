@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "checkbox",
+  "title": "Checkbox",
+  "summary": "Mit einer Checkbox wählst du Optionen unabhängig voneinander aus. Beschriftung und Formular erklären, was die Auswahl bedeutet und wann sie wirksam wird.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Unabhängige Entscheidungen anbieten",
+      "paragraphs": [
+        "Mit einer Checkbox wählst du eine Option unabhängig von anderen aus oder ab. Nutze sie für eine einzelne Bestätigung oder mehrere Inhalte, die gemeinsam gelten dürfen, etwa Tabellen und Erläuterungen in einem Export.",
+        "Soll genau eine Antwort gelten, wähle Radio Group. Für eine sofort wirksame Ein/Aus-Einstellung kommt Switch infrage. Entscheide vor dem Entwurf, ob eine Auswahl sofort gilt oder erst beim Absenden des Formulars gespeichert wird. Eine Checkbox allein legt diesen Zeitpunkt nicht fest."
+      ],
+      "links": [
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        },
+        {
+          "text": "Switch",
+          "href": "/systems/shadcn/components/switch",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Inhalte für einen Export wählen",
+      "paragraphs": [
+        "Im Beispiel sind Tabellen und Erläuterungen ausgewählt, Abbildungen nicht. Die gemeinsame Frage macht den Zusammenhang deutlich; jede Option bleibt unabhängig. Der Hinweis erklärt, wann die Auswahl wirksam wird. Die Darstellung enthält bewusst keine Sammelauswahl.",
+        "Die vorhandene lokale Spartan-Demo zeigt dagegen eine einzelne Option «Projekt-Updates abonnieren» sowie einen Schalter zum Deaktivieren. Sie bindet weder eine Gruppe noch einen gemischten Zustand oder eine Speicherung an. Ihr Angular-Aufbau ist kein neuer Implementierungsnachweis für den aktuellen React-Contract."
+      ],
+      "illustration": {
+        "src": "/component-examples/checkbox.svg",
+        "alt": "Exportauswahl mit ausgewählten Tabellen und Erläuterungen sowie nicht ausgewählten Abbildungen. Ein Hinweis nennt das Absenden als Übernahmezeitpunkt.",
+        "caption": "Statische Illustration · unabhängige Optionen in einer Exportauswahl."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Kästchen und Text zusammenhalten",
+      "paragraphs": [
+        "Das Kästchen zeigt die Auswahl, der Indikator darin ein Häkchen oder bei gemischter Auswahl einen Strich. Der Text daneben erklärt die Bedeutung. Im visuellen Contract misst das Kästchen 16 Pixel, der Indikator 14 Pixel. Die optionale Anordnung mit 8 Pixel Abstand zum Text gehört zur umgebenden Zusammenstellung.",
+        "Platziere Hinweise und Fehlermeldungen nahe bei der zugehörigen Option oder Gruppe. Plane bei langen Texten einen vollständigen Umbruch ein und halte die Zuordnung zum Kästchen eindeutig."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Auswahlzustände statt dekorativer Varianten",
+      "paragraphs": [
+        "Der Contract bietet keine eigene Auswahl an Grössen oder Farbvarianten. Belegt sind die Darstellungen für ausgewählt, gemischt und deaktiviert sowie Fokus und Fehler. Wähle sie nach Bedeutung und Verfügbarkeit.",
+        "Ein gemischter Zustand hilft etwa bei «Alle sichtbaren Einträge auswählen», wenn nur ein Teil ausgewählt ist. Die Eigenschaft indeterminate ist vom booleschen Auswahlwert checked getrennt. Sie liefert keine fertige Gruppenlogik: Umfang, Berechnung und Wirkung einer Sammelauswahl musst du in der Anwendung festlegen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Auswahl, Sperre und Fehler unterscheiden",
+      "paragraphs": [
+        "Beim Umschalten ändert sich der Auswahlwert. Der Fokus bleibt zusätzlich sichtbar und ersetzt den Auswahlindikator nicht. Deaktiviert bedeutet, dass die Option nicht bedienbar ist; es sagt nichts darüber aus, ob sie ausgewählt ist. Erkläre den Grund einer Sperre in lesbarem Text. Schreibgeschützt erhält den Wert ebenfalls, ist aber eine eigene Eigenschaft.",
+        "Bei einem von der Anwendung kontrollierten Wert bleibt deren Vorgabe massgeblich. Eine Änderungsrückmeldung ist noch keine gespeicherte Auswahl; die Anwendung kann den Änderungsvorschlag auch abbrechen. Für Fehler liefert die Umgebung Kennzeichnung und erklärenden Text. Die Checkbox erfindet keine Validierungsregel."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die gewählte Option klar benennen",
+      "paragraphs": [
+        "Schreibe beispielsweise «Projekt-Updates abonnieren» statt «Updates nicht deaktivieren». Die Beschriftung soll ohne Umdenken erklären, was ein Häkchen bedeutet. Halte sie möglichst kurz; nötige Erläuterungen gehören in einen separaten Hinweis.",
+        "Gib zusammengehörigen Optionen eine gemeinsame Frage wie «Was soll der Export enthalten?». Benenne bei «Alle auswählen» den Umfang, etwa sichtbare Einträge. Ein zugänglicher Name allein macht den danebenstehenden Text noch nicht anklickbar: Plane die Aktivierung über die Beschriftung ausdrücklich ein."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab erreichen, mit Leertaste wählen",
+      "paragraphs": [
+        "Mit Tab erreichst du die bedienbare Checkbox in der normalen Fokusreihenfolge, mit der Leertaste schaltest du sie um. Enter schaltet sie im aktuellen Base-UI-Contract nicht um; innerhalb eines Formulars kann Enter dessen Absenden auslösen. Deaktivierte Checkboxen werden beim Tabben übersprungen.",
+        "Verbinde die Checkbox mit einem verständlichen zugänglichen Namen und erhalte den sichtbaren Fokus. Prüfe in deiner Einbindung zusätzlich lange Texte, die Aktivierung über den Beschriftungstext und die Bedienung mit assistiver Technik. Aus der statischen Illustration lässt sich diese Bedienbarkeit nicht ableiten."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Beschriftung und Formular bewusst anbinden",
+      "paragraphs": [
+        "Die aktuelle Base-UI-Referenz verwendet standardmässig ein span-Element mit Checkbox-Rolle und ein verstecktes natives Formularelement. Der Auswahlzustand wird als wahr, falsch oder gemischt vermittelt. Name, Formularwert und ein optionaler Wert für die nicht ausgewählte Checkbox sind Teil der Schnittstelle.",
+        "Die lokale Spartan-Demo ordnet den danebenstehenden span-Text über aria-labelledby zu; sie enthält dafür keine eigene Klickbindung. Ein Name ersetzt keine Aktivierungsbeziehung. Für die Base-UI-Referenz beschreibt die Originalquelle ein umschliessendes Label als einfachstes Muster. Gruppenbezeichnung, Fehlerzuordnung und Speicherablauf liegen bei deiner Formularzusammenstellung."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Aktuelle Referenz und lokale Studie einordnen",
+      "paragraphs": [
+        "Die Seite stützt sich auf die aktuelle Komponentenreferenz: Schnittstelle, CSS, Zustandsmodell und HTML/ARIA-Regeln sowie die gebundene Base-UI-Originalquelle zur Beschriftung. Die längere Ausgangsdokumentation und der lokale Spartan-Demoaufbau wurden zum Abgleich gelesen.",
+        "Aussagen der älteren Studie über einen rein binären Contract oder ein sichtbares natives Eingabeelement gelten nicht für die aktuelle Referenz. Die lokale Demo bleibt eine begrenzte Angular-Studie ohne veröffentlichten Checkbox-Implementierungsnachweis. Diese Redaktion umfasst keine neue Browser- oder Assistenztechnikprüfung und keine allgemeine Plattformfreigabe."
+      ]
+    }
+  ]
+}

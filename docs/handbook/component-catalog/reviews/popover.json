@@ -1,0 +1,308 @@
+{
+  "component": "popover",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/README.md",
+      "sha256": "9c639c9f8771baf37a2cfc13a3779fcfb33c18e45ebf6d9345792a321b18c1ab"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.html",
+      "sha256": "82a9900c7d8e692a0d8b12722d5124603a7dda24a451e8261e71235d857ba7fb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+      "sha256": "f3eece46b728ae7f9901ab37be2f7cd21e64b3dc109d2958115b5606cc2a2164"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/behavior.scxml",
+      "sha256": "bfa6019eba16765d2bf5059548fe3070c843bf95859bca5e731771df7042c809"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/component.json",
+      "sha256": "9580c68e2e7499a8fb9bc6cea405d478ef99a6b60bb7fb6c9e3e5c2d588cfbb5"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/layout.css",
+      "sha256": "dae9abd2fcb2c6c7cc71881bf95e3f25ab290f5e137cf8ba6c8798dff0bff085"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/ux.json",
+      "sha256": "d2683d3ad7bef262d9921eec9083ee347695c5ff8ff58e05c09a3da0df848974"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/popover.md.source",
+      "sha256": "8bd810e64a319f2bec49e1285254e436562fe30011d890407d9367ae8c382802"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/popover-example.tsx.source",
+      "sha256": "668dd4d2682d6940ed0d2619a1c181fed7c03937351ed3d994b16df9da79a0f4"
+    }
+  ],
+  "claims": [
+    {
+      "id": "anchored-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Popover stellt verankerte Zusatzinhalte und Bedienelemente bereit.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternative-selection",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Tooltip für kurze Erklärung, Hover Card für Linkvorschau und Dialog für umfangreiche Aufgaben sind redaktionelle Auswahlhinweise."
+    },
+    {
+      "id": "example-save-policy",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Speichern nach Prüfung, Fehler am Feld und Verwerfen beim Schliessen sind ausdrücklich vorgeschlagene Anwendungsregeln."
+    },
+    {
+      "id": "source-form-example",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die gebundene Originalquelle enthält ein kurzes Formular mit zwei beschrifteten Inputs.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/popover-example.tsx.source",
+          "snippet": "function PopoverWithForm() {"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-bound",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Auslöser, Inhalt, Kopf, Titel und Beschreibung sind gebundene Bestandteile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "bounded-width",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Referenz hat begrenzte Maximalbreite von 288 Pixel und primitiveeigene Positionierung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "word-wrap",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Lange Wörter können umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/layout.css",
+          "snippet": "overflow-wrap: anywhere;"
+        }
+      ]
+    },
+    {
+      "id": "no-visual-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Keine eigenen visuellen Varianten deklariert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "placement-defaults",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Standard ist bottom, center, sideOffset=4 und alignOffset=0.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "modality-close-requirement",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "modal=true aktiviert Fokusfang nur mit Popover.Close im Popup; trap-focus verlangt Close für Touch-Screenreader.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/popover.md.source",
+          "snippet": "When `modal` is `true`, focus trapping is enabled only if `<Popover.Close>` is rendered&#xA;inside `<Popover.Popup>`."
+        }
+      ]
+    },
+    {
+      "id": "trap-focus-close",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "trap-focus verlangt innenliegendes Close für Touch-Screenreader.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/popover.md.source",
+          "snippet": "When `modal` is `'trap-focus'`, render `<Popover.Close>` inside `<Popover.Popup>` so touch&#xA;screen readers can escape the popup."
+        }
+      ]
+    },
+    {
+      "id": "default-close",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Standardmodus erlaubt Ausseninteraktion, Schliessen bei Fokusverlust, Escape und Druck ausserhalb sowie normale Fokusrückkehr.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "controlled-close",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierter oder abgebrochener Schliesswunsch sendet Callback ohne unkontrollierten Zustandswechsel.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/behavior.scxml",
+          "snippet": "cond=\"(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)\""
+        }
+      ]
+    },
+    {
+      "id": "no-auto-save",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Schliessen wird nicht als Speicherbestätigung beschrieben; Speicher- und Fehlerlogik gehören zur umgebenden Anwendung."
+    },
+    {
+      "id": "action-labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Aufgabenbezogene Auslöser und getrennte Beschriftungen für Schliessen und Speichern sind redaktionelle Empfehlungen."
+    },
+    {
+      "id": "caller-trigger-name",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Aufrufer liefert den vollständigen zugänglichen Namen des Auslösers.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/component.json",
+          "pointer": "/anatomy/trigger"
+        }
+      ]
+    },
+    {
+      "id": "initial-focus-touch",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Standardfokus geht zum ersten tabbbaren Element; bei Touch auf die Popup-Fläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/popover.md.source",
+          "snippet": "By default, focus moves to the first tabbable element inside the popup, except when the popover&#xA;is opened by touch — then the popup itself is focused to avoid opening the virtual keyboard."
+        }
+      ]
+    },
+    {
+      "id": "keyboard-native-button",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Der Auslöser ist ein nativer Button mit aria-haspopup=dialog und verknüpfter Popup-ID.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.html",
+          "snippet": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">"
+        }
+      ]
+    },
+    {
+      "id": "popup-label-registration",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Title und Description registrieren den Namen und die Beschreibung des Popups.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "aria-modal-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Rolle dialog ist keine automatische Modalität; die gepinnte Implementierung emittiert standardmässig kein aria-modal.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+          "pointer": "/actualModalityProjection"
+        }
+      ]
+    },
+    {
+      "id": "instance-ownership",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Trigger und Popup-IDs, Labels und Beschreibungen gehören jeweils zu dieser Instanz.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+          "pointer": "/ownership"
+        }
+      ]
+    },
+    {
+      "id": "close-wrapper-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Wrapper exportiert kein PopoverClose; Root actionsRef.close oder zusammengesetztes Steuerelement schliesst.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "scope-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz ist kein allgemeines Pixel-, Framework- oder Assistenztechnologie-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/popover/README.md",
+          "snippet": "`release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Projektname als kleine konkrete Formularaufgabe gewählt; Speicher- und Verwerfregeln ausdrücklich als redaktionelle Empfehlung markiert.",
+    "Modalität mit der tatsächlichen Base-UI-Close-Anforderung erklärt, weil ein beliebiger Schliessbutton keinen Fokusfang belegt.",
+    "Keine Live-Demo behauptet; im lokalen Demoordner existiert keine Popover-Demo.",
+    "Alternative Komponenten als redaktionelle Auswahlhilfe benannt; keine fremden Komponentencontracts als Beleg geladen."
+  ],
+  "limits": [
+    "Speichern, Validierung und Verwerfen werden vom Popover nicht umgesetzt und sind für die Anwendung festzulegen.",
+    "Kein eigener PopoverClose-Export im shadcn-Wrapper; modale Anpassungen benötigen passende Primitive-Komposition und Prüfung.",
+    "Statische Illustration; kein Laufzeit-, Pixel- oder Hilfstechnologienachweis."
+  ]
+}

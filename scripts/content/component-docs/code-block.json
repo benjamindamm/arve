@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "code-block",
+  "title": "Code Block",
+  "summary": "Zeige mehrzeiligen Code lesbar und auswählbar. Eine eigene Kopieraktion übernimmt den von dir festgelegten Text.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Code zum Lesen und Übernehmen",
+      "paragraphs": [
+        "Nutze Code Block, wenn du mehrzeiligen Quelltext, einen Befehl oder eine Konfiguration lesbar und auswählbar zeigen möchtest. Die eigene Kopieraktion hilft, wenn du den Inhalt unverändert in einem anderen Werkzeug brauchst.",
+        "Für einen einzelnen Dateinamen im Satz reicht eine kurze Codeauszeichnung. Sollst du Text bearbeiten, passt Textarea besser. Für einen ausführbaren Editor brauchst du eine eigene Lösung: Code Block führt nichts aus und bringt keine Syntaxhervorhebung mit."
+      ],
+      "links": [
+        {
+          "text": "Textarea",
+          "href": "/systems/shadcn/components/textarea",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Konfiguration übernehmen",
+      "paragraphs": [
+        "Du zeigst unter «Bericht konfigurieren» die Datei bericht.json mit zwei Einstellungen. Die Zeilennummern erleichtern den Verweis auf die Spracheinstellung. Das Kopiersymbol steht neben dem Dateinamen; unter dem Block bleibt die Anleitung zum manuellen Kopieren sichtbar.",
+        "Übergib für diese Aktion den vollständigen JSON-Text ohne Zeilennummern. Die Komponente leitet den Kopierinhalt nicht aus der Anzeige ab. Prüfe deshalb nach jeder Inhaltsänderung, ob Anzeige und Kopiertext zusammenpassen."
+      ],
+      "illustration": {
+        "src": "/component-examples/code-block.svg",
+        "alt": "Konfiguration bericht.json mit vier nummerierten JSON-Zeilen, Kopiersymbol und Anleitung zum manuellen Kopieren.",
+        "caption": "Statische Illustration · Dateiname, übernehmbarer Code und dauerhafte Kopierhilfe."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Datei, Code und Hilfe zusammenhalten",
+      "paragraphs": [
+        "Der optionale Kopf verbindet Dateiname und Aktionen. Darunter steht der auswählbare Code in einer Schrift mit gleich breiten Zeichen. Im optionalen Fuss kannst du Sprache oder eine Legende nennen. Eine beschreibende Überschrift und die Kopierhilfe ergänzt du ausserhalb des Blocks.",
+        "Ohne Kopf kannst du die Aktionen direkt über dem Code platzieren. Dort erscheinen sie bei Berührung mit dem Mauszeiger, bei Fokus innerhalb des Blocks und auf Geräten mit grober Zeigereingabe. Lass genügend Platz, damit sie keinen wichtigen Code verdecken."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Lesbarkeit und Zeilenführung wählen",
+      "paragraphs": [
+        "Es gibt die normale und eine als destructive bezeichnete Darstellung sowie die normale und eine kleine Grösse. Nutze die kleine Grösse sparsam; die Referenz reduziert die Codeschrift von 14 auf 12 Pixel. Eine Fehlerdarstellung erklärt noch nicht, was am Code falsch ist: Ergänze eine konkrete Aussage.",
+        "Zeilennummern sind optional und beginnen standardmässig bei 1; für Auszüge kannst du einen anderen Startwert wählen. Ohne Umbruch bleiben lange Zeilen erhalten und sind scrollbar. Mit Umbruch passen sie sich der Breite an. Der Codebereich scrollt bei grosser Höhe innerhalb des Blocks; die Referenz begrenzt ihn auf 28 rem.",
+        "Einzelne Zeilen können normal, hinzugefügt, entfernt oder hervorgehoben sein. Erkläre Änderungen zusätzlich mit sichtbaren Zeichen und einer Legende; die Varianten erzeugen diese Zeichen nicht selbst."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Erfolg bestätigen, Rückweg offenhalten",
+      "paragraphs": [
+        "Nach erfolgreichem Kopieren wechselt das Symbol zur Bestätigung; der zugängliche Name und eine zurückhaltende Screenreader-Meldung lauten standardmässig «Copied». Nach zwei Sekunden endet die Bestätigung. Erneutes erfolgreiches Kopieren innerhalb dieser Zeit verlängert sie nicht.",
+        "Eine abgelehnte Anfrage erzeugt keine eigene Fehlermeldung und lässt die bisherige Rückmeldung bestehen. Biete deshalb dauerhaft an: «Markiere den Code und kopiere ihn manuell.» Die Kopieraktion braucht eine unterstützte Zwischenablage in einem sicheren Browserkontext. Bei deaktivierter Aktion kannst du den Code weiterhin lesen und auswählen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Zweck und Datei konkret benennen",
+      "paragraphs": [
+        "«Bericht konfigurieren» und «bericht.json» helfen dir mehr als «Beispiel» und «Code». Halte den Dateititel kurz: Er wird bei Platzmangel mit Auslassungspunkten gekürzt. Erkläre längere Zusammenhänge im Begleittext.",
+        "Die Kopieraktion hat ab Werk die englischen Namen «Copy» und «Copied», auch die Erfolgsmeldung ist englisch. Plane die deutsche Benennung und Rückmeldung bei der Einbindung ausdrücklich ein. Ein einzelner übersetzter Aktionsname übersetzt nicht automatisch die eingebaute Erfolgsmeldung."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Kopieren und Scrollen mit Tastatur",
+      "paragraphs": [
+        "Mit Tab erreichst du die aktive Kopieraktion und den Codebereich. Enter oder Leertaste lösen die fokussierte Kopieraktion aus; der Fokus bleibt dabei erhalten. Im Codebereich nutzt du die native Textauswahl und Scrollbedienung des Browsers. Tab führt wieder hinaus.",
+        "Verknüpfe den Codebereich mit einer beschreibenden Überschrift und der Kopierhilfe, damit du seinen Zweck auch mit Screenreader erkennst. Escape macht keine Änderung rückgängig und bricht einen bereits angefragten Kopiervorgang nicht ab."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Anzeige und Aktion getrennt einbinden",
+      "paragraphs": [
+        "Der Inhalt wird als vorformatierter Code ausgegeben und bleibt auch in einer von rechts nach links gelesenen Umgebung von links nach rechts ausgerichtet. Der Dateititel ist für sich keine semantische Überschrift. Die umgebende Seite stellt die passende Überschriftenebene und die Verknüpfung zum Codebereich bereit.",
+        "Kopieren ist eine eigenständige Schaltfläche, keine Formularabgabe. Ihr ausdrücklich übergebener Text entscheidet, ob etwa Änderungszeichen mitkopiert werden. Wähle diesen Inhalt passend zur Aufgabe und erkläre ihn bei Abweichungen von der Anzeige."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Worauf du dich hier stützen kannst",
+      "paragraphs": [
+        "Die Seite gleicht die veröffentlichte Schnittstelle, Gestaltungsregeln, Zustandsbeschreibung und HTML/ARIA-Vorgaben mit den gebundenen React-Quellen ab. Die Beispiele im Export beschreiben unter anderem Nummerierung, Umbruch und Kopierrückmeldung. Die Illustration ist ein redaktioneller Entwurf; sie weist weder ausgeführtes Kopieren noch die Bedienbarkeit deiner Anwendung nach."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "component": "input",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/component.json",
+      "sha256": "8884e8fb31692d48ffc5653c83ebe572c969c94bccbc060129f58c78870fbad9"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/ux.json",
+      "sha256": "32181c960ad9e098f53c677b8dfe2224160b76db3bfb92ff969f20044ac69c07"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/interface.json",
+      "sha256": "fe4246b45099246584da84ebd5c2a82b308d7a94d39e1347b2e620db1936dd88"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/stories.json",
+      "sha256": "9d3295002b7da380f7fedd6987701993d6dc6b503625e54ed3f3d2f57d54c5b1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/behavior.scxml",
+      "sha256": "e9fe1dab0a2228e20f349a2cfbb49c756d6d7363ceb36b7d51da2ca0dcd9cf23"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/layout.css",
+      "sha256": "552d3a1e30f3a1b7283eb6ac362acbc2cd0e9bf9916e7101c72ca3e75283b6b3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.html",
+      "sha256": "0aa195d500f2cc01af7e56e9906d0d4aa83082b767296d531b29caeccc0d9fcc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.rules.json",
+      "sha256": "2f032f4c04b8747cb04254a0e25c0ce8cdb1ec5142c0a71e86d5920ff67428ba"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/README.md",
+      "sha256": "d89fd8bb232c2e03b35dd37c1f8f31e979e548317a64533ff0a9ec6e155c3619"
+    },
+    {
+      "path": "src/demos/shadcn/controls.ts",
+      "sha256": "56369e9939fe2393f9db0aa1fa32f6da18a35776b22597f0621e0fb12ef68edd"
+    },
+    {
+      "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+      "sha256": "ea04b0dfb2341856e2e1b20b2cf97e774076de7e745409e5f08e75db5296a8d4"
+    }
+  ],
+  "claims": [
+    {
+      "id": "short-text-choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Textarea für längere Beschreibungen und Select für feste Werte empfohlen; Suchverhalten gehört nicht allein zu Input."
+    },
+    {
+      "id": "local-demo-scope",
+      "blockName": "example",
+      "kind": "demo",
+      "statement": "Lokale Demo: label-Zuordnung und natives type=text-Feld mit umschaltbarem disabled; keine Hilfe oder Fehlerdarstellung.",
+      "evidence": [
+        {
+          "path": "src/demos/shadcn/controls.ts",
+          "snippet": "<input brnInput [id]=\"id\" [disabled]=\"disabled()\" type=\"text\" />"
+        }
+      ]
+    },
+    {
+      "id": "caller-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Field, Label und Hilfe sind explizite Caller-Komposition; das Control ist das echte native Input.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/component.json",
+          "pointer": "/partBindings"
+        }
+      ]
+    },
+    {
+      "id": "fluid-width",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Input füllt seine Caller-Breite; die native Musterbreite ist kein intrinsischer Token.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "native-type-surface",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Schnittstelle übernimmt React-input-Props und einen nativen type; text ist der deklarierte Standard.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/interface.json",
+          "pointer": "/modules/0/declarations/0/members/3"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/interface.json",
+          "pointer": "/modules/0/declarations/0/members/1"
+        }
+      ]
+    },
+    {
+      "id": "rounded-shape",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Runde Form kommt von Caller-className, nicht von einer eigenen Input-Prop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/component.json",
+          "pointer": "/visualContract/variants/shape"
+        }
+      ]
+    },
+    {
+      "id": "readonly-disabled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Schreibschutz bewahrt den Wert; disabled und readOnly sind verschieden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.rules.json",
+          "pointer": "/disabled"
+        }
+      ]
+    },
+    {
+      "id": "error-owned-by-form",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Umgebung liefert aria-invalid und den Bezug zum Fehlertext; Input erfindet keine Validierungsregeln.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.rules.json",
+          "pointer": "/errors"
+        }
+      ]
+    },
+    {
+      "id": "wording-and-limits",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Kurze konkrete Beschriftung, korrigierbare Fehlermeldung und keine pauschale 80-Zeichen- oder Eindeutigkeitsregel empfohlen."
+    },
+    {
+      "id": "native-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Native Textbearbeitung und IME; Tab folgt nativer Reihenfolge und überspringt deaktivierte Controls.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "escape-preserves-value",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Escape stellt keinen früheren Wert wieder her.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "accessible-association",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die HTML-Komposition verbindet das native label per for und Hilfe per aria-describedby mit Input.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/accessibility.html",
+          "snippet": "<label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\">"
+        }
+      ]
+    },
+    {
+      "id": "source-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Quellengebundene React-Referenz, keine Zertifizierung aller Anwendungen oder nativer Plattformen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/input/ux.json",
+          "pointer": "/decisions/scope"
+        }
+      ]
+    },
+    {
+      "id": "historical-implementation-limit",
+      "blockName": "sources",
+      "kind": "editorial",
+      "statement": "Die ältere Dokumentation nennt keinen veröffentlichten Input-Implementierungsdatensatz; die lokale Demo ist kein neuer Nachweis.",
+      "evidence": [
+        {
+          "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+          "pointer": "/pages/58/content/11/body/root/children/2/children/0/text"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Aktuelle native Prop-Oberfläche ersetzt die überholte Beschränkung der alten Studie auf eine ausschliessliche Text-API. Andere Datentypen erhalten keine pauschalen Prüfversprechen.",
+    "Label, Hilfe, Fehleranzeige und fachliche Validierung bewusst getrennt beschrieben.",
+    "Historische 80-Zeichen- und Eindeutigkeitsbeispiele nicht als allgemeine Input-Regeln übernommen.",
+    "SVG zeigt einen gefüllten Projektname-Fall ohne behauptete Pixelkonformität."
+  ],
+  "limits": [
+    "Lokale Spartan-Demo enthält nur natives beschriftetes Textfeld und Disabled-Umschaltung; keine Hilfe, Fehlerprüfung, Schreibschutzsteuerung oder Speicherung.",
+    "Kein veröffentlichter Input-Implementierungsnachweis; kein neuer Laufzeit- oder Frameworkvergleich durchgeführt."
+  ]
+}

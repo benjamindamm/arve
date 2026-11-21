@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "scroll-area",
+  "title": "Scroll-area",
+  "summary": "Mit Scroll Area hältst du längere Inhalte in einem begrenzten Ausschnitt zugänglich. Die umgebende Seite behält dadurch ihren Platz und ihre Orientierung.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Einen Bereich begrenzen, den Überblick behalten",
+      "paragraphs": [
+        "Nutze Scroll Area, wenn eine längere Liste in einem bewusst begrenzten Ausschnitt bleiben soll, etwa die Aktivitäten zu einem Projekt neben dessen Stammdaten. Du legst die verfügbare Höhe fest; der Inhalt bleibt durch Scrollen erreichbar.",
+        "Lass längere Lesetexte bevorzugt mit der Seite wachsen, statt zusätzliche Scrollbereiche zu verschachteln. Brauchst du für einen Nachrichtenverlauf automatisches Folgen und das Bewahren der Leseposition, prüfe Message Scroller: Scroll Area übernimmt diese Aufgaben nicht."
+      ],
+      "links": [
+        {
+          "text": "Message Scroller",
+          "href": "/systems/shadcn/components/message-scroller",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Projektaktivitäten neben den Stammdaten",
+      "paragraphs": [
+        "Im Entwurf siehst du die letzten Änderungen am Projekt «Schulhaus West». Die Überschrift und der Hinweis stehen ausserhalb des begrenzten Ausschnitts. So erkennst du den Zweck und erfährst, dass weitere Einträge folgen, bevor du scrollst.",
+        "Der sichtbare Schieber zeigt die Position innerhalb des Inhalts. Seine Länge wird in der Anwendung aus Inhalt und sichtbarer Fläche berechnet; die Zeichnung stellt nur einen Moment dar."
+      ],
+      "illustration": {
+        "src": "/component-examples/scroll-area.svg",
+        "alt": "Projektaktivitäten mit drei sichtbaren Änderungen in einem begrenzten Bereich, vertikaler Scrollleiste und Hinweis auf weitere Einträge.",
+        "caption": "Statische Illustration · Projektaktivitäten in einem begrenzten Ausschnitt."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Rahmen, Ausschnitt und Scrollleiste",
+      "paragraphs": [
+        "Der äussere Rahmen begrenzt den Bereich. Darin liegt der Viewport: die tatsächlich scrollbare Fläche mit dem Inhalt. Der Fokusrahmen gehört zu dieser Fläche. Die vertikale Scrollleiste und ihr verschiebbarer Schieber liegen am Rand; bei zwei Achsen kommt eine Ecke zwischen den Leisten hinzu.",
+        "Ordne Überschrift und kurze Orientierung unmittelbar davor an. Plane Abstand zwischen Text und Leiste ein. Inhalt und Innenabstand gestaltest du selbst; eine feste Schieberlänge wäre keine sinnvolle Gestaltungsvorgabe."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eine oder zwei Scrollrichtungen",
+      "paragraphs": [
+        "Die eingebaute Scrollleiste ist vertikal. Eine horizontale ScrollBar ergänzt du ausdrücklich, wenn der Inhalt auch in der Breite überlaufen muss. Im Wrapper wird sie als zusätzlicher Inhalt im Viewport angeordnet; prüfe diese Komposition im konkreten Layout.",
+        "Bevorzuge für Text eine passende Zeilenbreite und Umbruch. Zwei Scrollrichtungen lohnen sich eher für Inhalte, deren räumlicher Zusammenhang erhalten bleiben muss. Eigene benannte Farb- oder Grössenvarianten sind nicht festgelegt; die Referenz zeigt einen begrenzten Bereich mit fliessender Breite."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Überlauf entsteht aus dem Inhalt",
+      "paragraphs": [
+        "Passt alles in den Viewport, braucht die Fläche keinen eigenen Tabstopp. Sobald mindestens eine Achse überläuft, wird sie per Tab erreichbar. Beim Scrollen ändern sich Position, Randinformationen und Schiebergeometrie aus den tatsächlichen Messungen.",
+        "Plane auch kurze, leere und nachträglich wachsende Inhalte. Leertext, Ladehinweise oder Fehlermeldungen lieferst du als Inhalt selbst. Die Komponente entscheidet nicht, ob neue Einträge die Leseposition verändern sollen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Inhalt benennen, weiteres Material ankündigen",
+      "paragraphs": [
+        "«Aktivitäten · Schulhaus West» beschreibt den Inhalt besser als «Scrollbereich». Ein Hinweis wie «Weitere Einträge durch Scrollen» macht den Überlauf verständlich, auch wenn die Leiste gerade wenig auffällt. Verlasse dich dafür nicht allein auf abgeschnittenen Text.",
+        "Halte Einträge kurz und unterscheidbar: «10:40 · Bauplan aktualisiert» ist hilfreicher als mehrere Zeilen «Änderung». Bewahre echte Listen, Überschriften und aussagekräftige Linktexte, statt den Inhalt als Bild einzusetzen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Die scrollbare Fläche fokussieren",
+      "paragraphs": [
+        "Mit Tab erreichst du den internen Viewport, wenn Inhalt überläuft. Dort bleibt die native Browserbedienung mit Pfeiltasten und Bild auf/Bild ab verfügbar; prüfe die benötigten Tasten im Zielbrowser. Tab führt weiter zu Links und anderen bedienbaren Inhalten. Sorge dafür, dass der Fokus sichtbar bleibt und du den Bereich wieder verlassen kannst.",
+        "Mausrad und Touch bedienen ebenfalls den echten Viewport. Die visuelle Leiste lässt sich ziehen, ist aber vor assistiven Technologien verborgen und kein zweites Tastatursteuerelement. Die Referenz benennt eine äussere Section über ihre Überschrift; ein aria-label am Root benennt nicht automatisch den internen Viewport."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "In Seite und Dialog bewusst einbetten",
+      "paragraphs": [
+        "Der Root dient der Darstellung; die umgebende Anwendung liefert die inhaltliche Gliederung. Gib dem Bereich eine tatsächlich begrenzte Höhe. Im Dialog solltest du besonders prüfen, welche Fläche scrollt und ob fokussierte Inhalte sichtbar bleiben. Vermeide nach Möglichkeit mehrere ineinanderliegende Scrollflächen.",
+        "Der Wrapper exportiert keinen eigenen Viewport. Eigenschaften am Root sind deshalb keine zugesicherte Weitergabe von Beschriftung oder Scroll-Callbacks an die innere Fläche. Auch eine öffentliche Wertsteuerung für die Scrollposition ist hier nicht vorgesehen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die gebundene React-Schnittstelle, CSS, das Verhaltensmodell sowie HTML/ARIA-Regeln. Die Szenarien behandeln passenden und überlaufenden Inhalt, zwei Achsen, Rechts-nach-links-Richtung und Viewport-Fokus.",
+        "Diese begrenzte Quellenreferenz ersetzt keine Prüfung deiner Inhaltslängen, Dialogeinbettung oder Bedienung mit assistiven Technologien. Das Beispiel ist eine redaktionelle Zeichnung und kein Implementierungsnachweis."
+      ]
+    }
+  ]
+}

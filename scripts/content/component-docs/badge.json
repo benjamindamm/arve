@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "badge",
+  "title": "Badge",
+  "summary": "Ein Badge zeigt einen kurzen Status oder eine Kategorie direkt am zugehörigen Inhalt. Lesbarer Text macht die Bedeutung auch ohne Farbe verständlich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Status direkt am Inhalt zeigen",
+      "paragraphs": [
+        "Ein Badge kennzeichnet einen kurzen Status oder eine Kategorie: etwa «In Prüfung» neben einem Gesuch oder «Intern» bei einem Dokument. Setze es dort ein, wo Teams mehrere Einträge rasch unterscheiden müssen. Platziere die Angabe unmittelbar beim zugehörigen Inhalt.",
+        "Soll eine Person etwas auslösen, passt ein Button. Soll sie eine Auswahl ein- oder ausschalten, passt eine Checkbox oder ein Toggle. Ein Badge besitzt standardmässig keine solche Bedienung. Für eine ausführliche Warnung mit Erklärung und nächstem Schritt ist ein Alert besser geeignet."
+      ],
+      "links": [
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 1
+        },
+        {
+          "text": "Checkbox",
+          "href": "/systems/shadcn/components/checkbox",
+          "paragraph": 1
+        },
+        {
+          "text": "Alert",
+          "href": "/systems/shadcn/components/alert",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Dokumente nach Bearbeitungsstand überblicken",
+      "paragraphs": [
+        "Die Dokumentenliste zeigt «In Prüfung» beim Budgetplan und «Freigegeben» beim Sitzungsprotokoll. Die unterschiedliche Füllung unterstützt das Überfliegen; die Wörter tragen die Bedeutung. Wer die Farben nicht unterscheiden kann, erhält dieselbe Information.",
+        "Die Statusangaben sind hier reine Information. Eine Aktion zum Öffnen oder Freigeben müsste die umgebende Liste separat anbieten. Die beiden Badges bleiben kurz und lassen genügend Platz für die Dokumenttitel."
+      ],
+      "illustration": {
+        "src": "/component-examples/badge.svg",
+        "alt": "Dokumentenliste mit Budgetplan und dunklem Badge In Prüfung sowie Sitzungsprotokoll und hellem Badge Freigegeben.",
+        "caption": "Statische Illustration · Zwei Dokumente mit lesbarem Bearbeitungsstand."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Eine kompakte Textfläche, bei Bedarf mit Symbol",
+      "paragraphs": [
+        "Das Badge besteht aus einer kompakten Fläche mit kurzem Text. Ein zusätzliches Symbol kann den Text unterstützen; es ersetzt ihn nicht. Halte die Zuordnung zum Titel auch bei schmalen Ansichten eindeutig.",
+        "Die Breite richtet sich nach dem Inhalt. Die Referenz hält Text in einer Zeile und nutzt eine Mindesthöhe von 22 Pixeln. Plane deshalb für längere Übersetzungen Platz ein, statt alle Statusangaben auf dieselbe schmale Breite zu zwingen."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Sechs Darstellungen bewusst gewichten",
+      "paragraphs": [
+        "Belegt sind default, secondary, destructive, outline, ghost und link. Default bildet eine kräftige gefüllte Fläche, secondary eine ruhigere. Outline begrenzt den Text mit einer Kontur, ghost lässt die Fläche transparent. Als redaktionelle Empfehlung: Nutze diese Unterschiede für eine klare Gewichtung innerhalb derselben Ansicht.",
+        "Destructive bietet eine hervorgehobene Fehlerfarbe; ergänze sie immer durch eine verständliche Aussage wie «Abgelehnt». Link ist eine optische Variante. Erst ein ausdrücklich als Link ausgegebenes Badge mit echtem Ziel wird zur Navigation. Eigene Grössenvarianten sind nicht definiert."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Den angezeigten Stand aktuell halten",
+      "paragraphs": [
+        "Das informative Badge ist sichtbar oder aus der Ansicht entfernt. Es speichert weder eine Auswahl noch einen gedrückten Zustand. Ändert sich ein Dokument von «In Prüfung» zu «Freigegeben», muss die Anwendung den Text und gegebenenfalls die Darstellung aktualisieren.",
+        "Der Badge-Contract regelt keine automatische Ansage einer solchen Änderung. Entscheide im konkreten Ablauf, wie wichtige Rückmeldungen wahrnehmbar werden. Bei einem echten Link kommen sichtbarer Tastaturfokus und Unterstreichung beim Darüberfahren hinzu."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den Zustand benennen, nicht nur einfärben",
+      "paragraphs": [
+        "«In Prüfung», «Freigegeben» und «Nur intern» sind verständliche Angaben. «Status 2» oder ein farbiger Punkt allein verlangen zusätzliches Wissen. Empfohlen sind wenige Wörter mit einer konsistenten Bedeutung über alle Listen hinweg.",
+        "Verwende keine Handlungsaufforderung wie «Jetzt freigeben» auf einem informativen Badge. Schreibe Erklärungen, Fristen und Fehlerursachen als begleitenden Text aus; ein Badge ist dafür zu kompakt."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Information braucht keinen zusätzlichen Fokus",
+      "paragraphs": [
+        "Das normale Badge ist Text und erhält keinen Tabstopp. Es hat keine eigene Tastatursteuerung und braucht keinen künstlichen Button-Namen. Der sichtbare Status muss im Inhalt lesbar bleiben.",
+        "Wird über die Render-Anpassung ein nativer Link oder Button eingesetzt, gelten dessen Benennung und Tastaturregeln. Ein Link braucht ein Ziel und lässt sich mit Enter öffnen. Eine Aktion gehört zu einem korrekt benannten Button. Die Farbe oder die Variante link ersetzt diese Voraussetzungen nicht."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Bedeutung und Aktion sauber zuordnen",
+      "paragraphs": [
+        "Standardmässig wird ein span ausgegeben. Das Badge ist damit weder Formularfeld noch Auswahlwert. Leite aus seinem Aussehen keinen interaktiven Zustand ab und ergänze keine Auswahl- oder Schalterrolle.",
+        "Optionale Symbole sollen den Status nicht ein zweites Mal vorlesen; im belegten Symbolbeispiel sind sie für assistive Technik ausgeblendet. Die umgebende Ansicht verantwortet die verständliche Verbindung zwischen Dokument und Status sowie alle weiterführenden Aktionen."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Referenz trägt",
+      "paragraphs": [
+        "Die Seite gleicht Zweck und Inhaltsregeln, die veröffentlichte React-Schnittstelle, CSS mit Tokenbindungen, den Zustandsablauf sowie HTML- und Zugänglichkeitsregeln ab. Die Fixtures belegen sechs Darstellungen, ein zusätzliches Symbol und einen ausdrücklich nativen Link.",
+        "Die statische Illustration ist ein redaktioneller Entwurf. Der dokumentierte Referenzumfang liefert keine allgemeine Freigabe für eine Anwendung, andere Frameworks oder assistive Technik."
+      ]
+    }
+  ]
+}

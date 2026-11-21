@@ -1,0 +1,199 @@
+{
+  "component": "chart-pie",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/component.json",
+      "sha256": "9baddd5afb0c4f0edf4f5374cc986d5649c4fbcaff0923292045355e30e50f34"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/ux.json",
+      "sha256": "9be2f1ddc0a4550cba14e4ff0327a336d114f5624a52f381df6fe3c45ee95f49"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/interface.json",
+      "sha256": "5445e95fc08771eb146df6785c5ed6d811439dda8d8b86fac75db4f23efdc046"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/stories.json",
+      "sha256": "1a600da2d299278be9082d8f5c096423a672fdf6927dd824aed49eb3771b5015"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/behavior.scxml",
+      "sha256": "8d9aebc628bf59fb61a550d65e8e51e76936c205e0a33b73cde99a01c3de3410"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/layout.css",
+      "sha256": "0114efce1fc330990cdb6a174c26b620cee3555e6a9ba9fc59eb1b1de55366a3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/accessibility.html",
+      "sha256": "6e4ca4c8e44c13f33c4621d06df840f2865a70fbdeaf6c5f14f7c82d5e116670"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/accessibility.rules.json",
+      "sha256": "7e3287df7b5a765b321330a2500c1ea2af061d8c7cc2ad0100a0527e6f006ce0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/README.md",
+      "sha256": "209950f7192937e5af8d75bf5f4e33eade47a2880e4f751063d34a55356b60d2"
+    }
+  ],
+  "claims": [
+    {
+      "id": "part-to-whole",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Die Referenz zeigt nicht negative Werte als Teile einer Gesamtheit; Winkel und Farbe sind ergänzend.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "example-arithmetic",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Die redaktionellen Zahlen 100, 60 und 40 ergeben 200; ihre Sektoren bilden 50, 30 und 20 Prozent ab."
+    },
+    {
+      "id": "complete-anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Titel, Zusammenfassung, Grafik, Tabelle und Legende gehören zur Zusammensetzung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "tooltip-indicators",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Punkt, Linie und gestrichelte Linie sind Kennzeichen des Werthinweises, keine Sektorvarianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/component.json",
+          "pointer": "/visualContract/variants/indicator"
+        }
+      ]
+    },
+    {
+      "id": "no-own-ring-variant",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Schnittstelle beschreibt Chart-Wrapper und eine Referenzkomposition; sie deklariert keine eigene Ringvariante.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/interface.json",
+          "pointer": "/modules/0/declarations"
+        }
+      ]
+    },
+    {
+      "id": "clear-stale-tooltip",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Bei Datenänderung werden aktive Kategorie und Werthinweis zurückgesetzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/behavior.scxml",
+          "snippet": "<assign location=\"activeIndex\" expr=\"null\" />"
+        }
+      ]
+    },
+    {
+      "id": "empty-error",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Leere Daten und Fehler sind eigene Rückmeldungen der Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/accessibility.rules.json",
+          "pointer": "/protocol"
+        }
+      ]
+    },
+    {
+      "id": "label-recommendation",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Titel mit Zeitraum, Einheit und Gesamtheit sowie unverzerrte Geometrie werden redaktionell empfohlen."
+    },
+    {
+      "id": "keyboard-redundant",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Grafik bleibt ohne Fokus; native Tabelle und umgebende Bedienelemente bleiben lesbar und Escape schliesst den ergänzenden Hinweis.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "pie-no-hidden-tabstop",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die Referenz setzt für Pie rootTabIndex=-1, um Fokus im ausgeblendeten Diagramm zu verhindern.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/README.md",
+          "snippet": "The reference passes Pie rootTabIndex=-1 because Recharts Pie otherwise emits a tab stop even with chart accessibilityLayer=false; this prevents an aria-hidden focus target while preserving supplementary pointer hints."
+        }
+      ]
+    },
+    {
+      "id": "composition-boundary",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Diagrammfamilie ist eine explizite Recharts-Zusammensetzung auf Basis der gewählten Base-UI-Wrapper.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "no-aggregation",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Container, Legende und Werthinweis ersetzen weder Datenberechnung noch vollständige Textalternative.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "limited-evidence",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Quellen beschreiben einen begrenzten Referenzumfang und keine allgemeine Anwendungsfreigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/chart-pie/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Anmeldungen als verständliche, überschneidungsfreie Gesamtheit mit drei Kategorien gewählt.",
+    "Die Sektoren werden aus exakten Anteilen berechnet; Anzahl und Prozent stehen dauerhaft in einer Tabelle.",
+    "Balken- und Liniendiagramm als konkrete Alternativen redaktionell empfohlen.",
+    "Keine Ringvariante oder fokussierbare Sektorauswahl aus allgemeinem Chartwissen ergänzt."
+  ],
+  "limits": [
+    "Das Beispiel ist eine statische redaktionelle Illustration mit eigenen Daten; keine lokale Chart-Pie-Demo vorhanden.",
+    "Keine Browserprüfung oder allgemeine Laufzeitfreigabe durch diese redaktionelle Bearbeitung."
+  ]
+}

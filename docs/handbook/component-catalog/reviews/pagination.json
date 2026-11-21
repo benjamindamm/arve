@@ -1,0 +1,191 @@
+{
+  "component": "pagination",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/component.json",
+      "sha256": "32908785c5807c2e36ff5ec78edfc3e175f7ba7d73ff87bd71745e8ac2465d91"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/ux.json",
+      "sha256": "1784f6fbcc014d1fe8ba5be9d0ea1f02c9f7667e8cc7855e383c00fc05f04906"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/interface.json",
+      "sha256": "19ecf70a8458f14ae624fe7885c80b6c64f41631884cbf6943c40949dad4f7d1"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/stories.json",
+      "sha256": "6d5f83cd83ee6c791126a1677b85cc0a4ecdec39694aadcfbeba50aa0e6def84"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/behavior.scxml",
+      "sha256": "048c609e7057822c044fb5f25179260ac3f6f5ba59dbaaa83eb8283051c6ef4d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/layout.css",
+      "sha256": "d13ba0e4ddd80369e4fff735f08c484e126a0afb6c6ae2c65cabe553bf5da125"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/accessibility.html",
+      "sha256": "02e17364bf5f6ee74a3985084a1af878ca56a6b171719241d1a4acb923b9e675"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/accessibility.rules.json",
+      "sha256": "1ef1de0c6cc568354f901d6e2d30e8fbb406f2605ae0d6955d24185a21736c0d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/README.md",
+      "sha256": "75ee3917b575bda990497466798079648a1b3dc18e5238c91eb8afad06371b67"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source",
+      "sha256": "71bc2c0a87e62898ddb261af9b9f66959dbd806dd231704c4b54c7452fc725c7"
+    }
+  ],
+  "claims": [
+    {
+      "id": "purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Pagination navigiert zu explizit gelieferten Ergebnisseiten; ohne Backend-Nachweis keine Gesamtzahl erfinden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "example-app-data",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Belegarchiv und Positionsangabe sind redaktionelle Beispielinhalte; die Anwendung liefert sie."
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Navigation, Liste, Seitenaktionen, Vorwärts-/Rückwärtsaktion und nicht interaktive Auslassung sind getrennte Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "responsive-labels",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die CSS-Projektion blendet die Texte der Nachbaraktionen bis 40rem aus und erlaubt Umbruch.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/layout.css",
+          "snippet": "@media (max-width:40rem)"
+        }
+      ]
+    },
+    {
+      "id": "active-size",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "isActive steuert Umrandung und aria-current; Grössen kommen vom Button.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Grenzaktionen werden ausgelassen; PaginationLink hat keine disabled-Prop.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "native-navigation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Erst onClick, danach nativeNavigation nur ohne defaultPrevented.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/behavior.scxml",
+          "snippet": "<if cond=\"!_event.data.event.defaultPrevented\">"
+        }
+      ]
+    },
+    {
+      "id": "localization",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Sichtbare und zugängliche Namen sind getrennt lokalisierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "names-editorial",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Belegseiten und Seite 3 sind empfohlene aufgabenspezifische Namen."
+    },
+    {
+      "id": "keyboard-specific",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tab/Enter und Space beim Loslassen gelten in dieser Variante; keine wandernde Pfeiltastenauswahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "caller-ownership",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Seitenberechnung, Routing, Abruf und Aktualisierung von isActive liegen bei der Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "fixtures-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Vier statische Referenzfälle sind middle-page, first-boundary, last-boundary und rtl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/pagination/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Belegarchiv als Beispiel mit bekannter Seitenzahl und einer aktuellen mittleren Seite gewählt.",
+    "Alternative Weitere laden als redaktionelle Entscheidung von direkter Seitennavigation abgegrenzt.",
+    "Base-UI-spezifische Button-Semantik und Space-Aktivierung ausdrücklich aufgenommen.",
+    "Keinen erfundenen Loading-, Fehler- oder Disabled-Zustand als Komponentenfunktion dokumentiert."
+  ],
+  "limits": [
+    "Kein lokaler Pagination-Demo-Nachweis vorhanden.",
+    "Statische Illustration und Referenz-Fixtures belegen keine anwendungsbezogene Daten-, Routing- oder Fokusintegration."
+  ]
+}

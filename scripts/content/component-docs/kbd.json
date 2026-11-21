@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "kbd",
+  "title": "Kbd",
+  "summary": "Mit Kbd zeigst du eine Taste oder Tastenkombination als lesbaren Hinweis. Die eigentliche Aktion und ihr Kurzbefehl werden von der Anwendung eingerichtet.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Tasten erklären, Handlungen erreichbar halten",
+      "paragraphs": [
+        "Verwende Kbd, wenn du eine Taste oder Tastenkombination im Zusammenhang mit einer Aufgabe zeigen möchtest: etwa in einer Tastaturhilfe oder neben dem Menüeintrag «Speichern». Die hervorgehobenen Tastennamen lassen sich schneller vom übrigen Satz unterscheiden.",
+        "Für eine auslösbare Aktion wählst du einen Button oder einen passenden Menüeintrag. Für einen Status wie «Gespeichert» eignet sich ein Text oder Badge. Kbd bezeichnet eine Eingabe über die Tastatur; die Darstellung allein richtet keinen Kurzbefehl ein."
+      ],
+      "links": [
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 1
+        },
+        {
+          "text": "Badge",
+          "href": "/systems/shadcn/components/badge",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Hinweis neben «Speichern»",
+      "paragraphs": [
+        "Der Entwurf zeigt eine Tastaturhilfe für eine Anwendung, in der Ctrl und S gemeinsam das aktuelle Dokument speichern sollen. Die Aktionsbezeichnung steht links, die Kombination daneben. Ein kurzer Satz erklärt, dass du beide Tasten gemeinsam verwendest.",
+        "Das ist ein Gestaltungsbeispiel mit einer Voraussetzung: Die Anwendung muss diesen Kurzbefehl tatsächlich anbieten. Der Quellenbeleg verwendet ebenfalls Ctrl und S als Notation, registriert aber keine Speicheraktion. Übernimm die Kombination deshalb erst, wenn sie im vorgesehenen Nutzungskontext funktioniert."
+      ],
+      "illustration": {
+        "src": "/component-examples/kbd.svg",
+        "alt": "Tastaturhilfe für ein Dokument mit der Aktion Speichern, den Tastenkappen Ctrl und S sowie einer Erklärung zum gemeinsamen Drücken.",
+        "caption": "Statische Illustration · Tastaturhinweis für eine Anwendung mit entsprechend eingerichtetem Kurzbefehl."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Eine Tastenkappe pro Taste",
+      "paragraphs": [
+        "Eine einzelne Tastenkappe enthält den Tastennamen oder ein verständliches Symbol. Mehrere Tastenkappen bilden mit KbdGroup eine zusammengehörige Notation. Im Beispiel trennt ein Pluszeichen Ctrl und S; es erklärt die Kombination und ist keine dritte Taste.",
+        "Platziere den Hinweis nahe bei der zugehörigen Handlung. Die gedeckte Fläche hält ihn gegenüber der Aktionsbezeichnung zurück. Die Breite folgt dem Inhalt; auch längere Namen sind vorgesehen. Eine Gruppe kann an der Grenze ihres umgebenden Bereichs umbrechen. Prüfe bei engem Platz, ob der Zusammenhang weiterhin erkennbar bleibt."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Einzeltaste oder Tastenkombination",
+      "paragraphs": [
+        "Du kannst eine einzelne Taste mit Kbd darstellen oder mehrere Tasten mit KbdGroup zusammenfassen. Die Quellenbeispiele zeigen eine Kombination, Enter als Einzeltaste und den längeren Namen Page Down. Wähle die Zusammensetzung nach der tatsächlichen Eingabe.",
+        "Eigene Farb-, Grössen- oder Bedeutungsvarianten sind im Contract nicht ausgewiesen. Verwende die Tastenkappen deshalb nicht als farbige Statusanzeige."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Der Hinweis bleibt passiver Inhalt",
+      "paragraphs": [
+        "Kbd besitzt im beschriebenen Umfang keine Zustände für gedrückte Tasten, Auswahl, Erfolg oder Fehler. Wenn du den Inhalt änderst, ändert sich nur die sichtbare Notation. Eine Animation beim Drücken oder eine Rückmeldung nach dem Speichern gehört nicht zu dieser Komponente.",
+        "Die umgebende Anwendung verantwortet die Aktion und deren Rückmeldung. Wird ein Kurzbefehl in einem bestimmten Kontext gesperrt oder geändert, halte den erklärenden Hinweis passend dazu aktuell. Lass keine veraltete Kombination stehen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Tastennamen statt Rätsel",
+      "paragraphs": [
+        "«Speichern mit Ctrl + S» verbindet Zweck und Eingabe klarer als eine isolierte Folge «⌃ S». Verwende kurze, vertraute Tastennamen. Wenn ein Symbol missverständlich sein kann, ergänze eine verständliche Erklärung als Text.",
+        "Empfohlen ist eine zur jeweiligen Plattform und Tastatur passende Schreibweise. Zeige Cmd oder Ctrl nur dann, wenn die Anwendung genau diese Kombination unterstützt; Kbd erkennt die Plattform nicht selbst. Lange Anweisungen gehören in den umgebenden Satz, nicht in eine einzelne Tastenkappe."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Keine zusätzliche Fokusstation",
+      "paragraphs": [
+        "Die Tastenkappen sind Text mit nativer kbd-Semantik. Sie installieren keine Tastaturereignisse, verschieben keinen Fokus und erhalten keinen eigenen Tabstopp. Enter oder die Leertaste aktivieren die Notation nicht.",
+        "Ein benachbarter Button oder Menüeintrag behält seine eigene Tastaturbedienung und braucht eine verständliche Aktionsbezeichnung. Für Kbd selbst ist keine zusätzliche Button-Rolle oder künstliche Benennung nötig. Sorge dafür, dass Aufgabe und Tastennamen auch ohne rein visuelle Deutung verständlich bleiben."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Darstellung und Kurzbefehl getrennt planen",
+      "paragraphs": [
+        "Kbd und KbdGroup geben beide native kbd-Elemente aus. Die Gruppe ist damit eine Zusammenfassung von Tastaturnotation und kein interaktives Gruppenfeld. Die Typisierung der Gruppen-Props als div ändert diese tatsächliche HTML-Ausgabe nicht.",
+        "In Dialogen, Formularen oder Menüs dokumentiert Kbd nur eine Eingabe. Plane separat, wann der Kurzbefehl gilt und ob er mit Browser- oder Betriebssystemfunktionen kollidiert. Biete die Handlung auch über ein passendes Bedienelement an; ein sichtbarer Tastaturhinweis ersetzt dieses nicht."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Worauf diese Beschreibung beruht",
+      "paragraphs": [
+        "Abgeglichen wurden die veröffentlichte Komponentenbeschreibung, die React-Schnittstelle, CSS-Regeln, Zustandsbeschreibung, HTML-Semantik und statischen Quellenbeispiele. Sie belegen die passive Tastaturnotation und ihre Zusammensetzung.",
+        "Die Beispiele sind kein Nachweis für registrierte Kurzbefehle, eine automatische Plattformanpassung oder das Funktionieren einer Speicheraktion. Die Illustration erläutert eine redaktionell gewählte Anwendungssituation und behauptet keine Übereinstimmung mit einem gemessenen Rendering."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "switch",
+  "title": "Switch",
+  "summary": "Mit einem Switch schaltest du eine benannte Einstellung ein oder aus. Der Name bleibt dabei gleich.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine Einstellung direkt ändern",
+      "paragraphs": [
+        "Verwende einen Switch für eine klar benannte Einstellung mit genau zwei Werten: ein oder aus. Er passt etwa zu «Benachrichtigungen», wenn deine Anwendung die Änderung unmittelbar wirksam macht. Diese Wirkung ist eine Anwendungsregel: Der Schalter allein speichert nichts.",
+        "Wenn du mehrere Angaben sammelst und erst mit «Speichern» übernimmst, empfehlen wir eine Checkbox. Für die Auswahl genau einer Möglichkeit aus mehreren passt eine Radio Group besser. Eine einmalige Aktion wie «Testnachricht senden» braucht einen Button."
+      ],
+      "links": [
+        {
+          "text": "Checkbox",
+          "href": "/systems/shadcn/components/checkbox",
+          "paragraph": 1
+        },
+        {
+          "text": "Radio Group",
+          "href": "/systems/shadcn/components/radio-group",
+          "paragraph": 1
+        },
+        {
+          "text": "Button",
+          "href": "/systems/shadcn/components/button",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Benachrichtigungen für einen Arbeitsbereich",
+      "paragraphs": [
+        "Im Entwurf bleibt «Benachrichtigungen» in beiden Ansichten gleich. Die Erklärung sagt, welche Nachrichten du einschaltest. Position und Kontrast des Schiebeknopfs machen die beiden Werte unterscheidbar; die ergänzenden Wörter «Aus» und «Ein» verdeutlichen den Vergleich.",
+        "Die lokale Spartan-Demo lässt dich den Schalter umlegen und über «Deaktiviert» sperren. Sie ändert nur den lokalen Zustand, speichert keine Einstellung und bietet keinen Grössenvergleich. Sie ist kein Implementierungsnachweis für den aktuellen React-Contract."
+      ],
+      "illustration": {
+        "src": "/component-examples/switch.svg",
+        "alt": "Benachrichtigungen in zwei Zuständen: Aus mit Knopf links und Ein mit Knopf rechts; Name und Erklärung bleiben gleich.",
+        "caption": "Statische Illustration · dieselbe Einstellung ausgeschaltet und eingeschaltet."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Schalter und Text gehören zusammen",
+      "paragraphs": [
+        "Die Schaltfläche besteht aus einer abgerundeten Bahn und einem beweglichen Knopf. Beim Einschalten wechseln Hintergrund und Knopfposition. Der sichtbare Name steht daneben; eine Erklärung ergänzt ihn bei Bedarf darunter.",
+        "Die Anordnung von Name, Hilfe und Schalter gestaltest du in der umgebenden Anwendung. Halte ihre Zuordnung auch bei Zeilenumbrüchen eindeutig. Der Knopf selbst enthält keinen Text und ist für assistive Technologien dekorativ."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Zwei belegte Grössen",
+      "paragraphs": [
+        "Du kannst zwischen der Standardgrösse und «sm» wählen. Der visuelle Contract beschreibt eine Bahn von 32 × 18 Pixeln mit 16-Pixel-Knopf beziehungsweise 24 × 14 Pixeln mit 12-Pixel-Knopf. Nutze die kleine Variante nur, wenn die Bedienfläche im Gesamtlayout weiterhin gut erreichbar bleibt.",
+        "Je nach Schreibrichtung wird die Bewegung des Knopfs gespiegelt. Eigene Farbvarianten wie «Destructive» sind im aktuellen Contract nicht vorgesehen. Ein oder aus sind Zustände derselben Einstellung."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Wert und Speicherung auseinanderhalten",
+      "paragraphs": [
+        "Der Switch kennt ein und aus, keinen gemischten Wert. Fokus, Deaktivierung und Schreibschutz kommen unabhängig davon hinzu. Deaktivierung verhindert die Bedienung; Schreibschutz erhält den Wert ebenfalls, ist aber ein eigener Zustand. Erkläre eine Einschränkung etwa mit «Wähle zuerst einen Arbeitsbereich».",
+        "Wenn deine Anwendung speichert, ergänze eine verständliche Rückmeldung für die laufende Anfrage und für Fehler. Zeige Erfolg erst nach Bestätigung. Lege fest, ob du die neue Stellung sofort oder erst nach Bestätigung anzeigst. Unbekannte oder noch ungeladene Werte solltest du nicht als «Aus» darstellen.",
+        "Bei kontrollierter Verwendung bestimmt die Anwendung den Wert. Eine Änderungsanfrage kann abgebrochen werden; sie garantiert weder eine neue Stellung noch erfolgreiches Speichern."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Benenne die Einstellung, nicht die nächste Aktion",
+      "paragraphs": [
+        "Gut ist «Benachrichtigungen» mit der Hilfe «Nachrichten zu neuen Aufgaben». Ungünstig sind wechselnde Texte wie «Jetzt einschalten» und «Jetzt ausschalten»: Damit verändert sich beim Umschalten der Name der Einstellung.",
+        "Halte den Namen kurz und positiv. «Benachrichtigungen nicht deaktivieren» macht die Bedeutung von ein und aus unnötig schwer. Lass längere Namen umbrechen und lagere Bedingungen in einen zugeordneten Hilfetext aus. Eine alleinstehende Angabe «Ein» ersetzt den Namen nicht."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Tab erreichen und umschalten",
+      "paragraphs": [
+        "Mit Tab erreichst du den bedienbaren Schalter, mit Umschalt+Tab gehst du zurück. In der hier gebundenen Base-UI-Variante schalten sowohl Leertaste als auch Enter um. Ein deaktivierter Schalter wird in der Tab-Reihenfolge übersprungen. Der Fokus braucht eine sichtbare Markierung.",
+        "Verknüpfe den sichtbaren Namen mit dem Schalter. Die semantische Vorlage verwendet dafür aria-labelledby; aria-checked vermittelt den aktuellen Wert. Der Name bleibt beim Umschalten gleich. Prüfe diese Bedienung und Ansage auch in deiner tatsächlichen Umsetzung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Formularwert und zugänglicher Schalter",
+      "paragraphs": [
+        "Die React-Referenz verwendet standardmässig ein span mit Switch-Rolle und daneben ein verborgenes natives Checkbox-Input für die Formulareinbindung. Die sichtbare Kontrolle ist damit kein natives Checkbox-Feld. Ein blosses Nachbauen der statischen HTML-Vorlage liefert noch kein Verhalten.",
+        "Für die Formularübertragung braucht die Einstellung einen Namen. Eingeschaltet wird standardmässig «on» übertragen; ausgeschaltet fehlt der Wert, sofern du keinen uncheckedValue festlegst. required verlangt die Aktivierung vor dem Absenden. Verwende das nur, wenn Einschalten fachlich tatsächlich verpflichtend ist. Fehlertext und seine zugängliche Zuordnung verantwortet das umgebende Formular."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Die Aussagen beruhen auf Schnittstelle, visuellen Regeln, Zustandsmodell und HTML/ARIA des aktuellen Exports sowie den gebundenen Base-UI-Originalquellen. Die ältere Seite wurde mit der lokalen Spartan-Demo abgeglichen; ihre früheren Aussagen zur nativen Struktur und zu Farbvarianten wurden nicht übernommen.",
+        "Die Quellen beschreiben eine begrenzte React-Referenz. Die Angular-Demo ersetzt keinen Abgleich mit ihr. Dauerhafte Speicherung, konkrete Fehlerabläufe und die Prüfung mit assistiven Technologien musst du für deine Anwendung ergänzen."
+      ]
+    }
+  ]
+}

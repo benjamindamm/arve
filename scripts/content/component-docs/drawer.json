@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "drawer",
+  "title": "Drawer",
+  "summary": "Mit einem Drawer bearbeitest du eine kurze Aufgabe am Bildschirmrand. Wischgesten und optionale Einrasthöhen ergänzen sichtbare Bedienelemente.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Eine kurze Aufgabe am Bildschirmrand",
+      "paragraphs": [
+        "Mit einem Drawer öffnest du eine begrenzte Aufgabe über der aktuellen Seite, etwa Filter für eine Ergebnisliste. Wähle ihn, wenn eine Wischgeste und gegebenenfalls mehrere Einrasthöhen zur Bedienung auf einem Touchscreen passen.",
+        "Prüfe ein Sheet, wenn du vor allem eine Randfläche ohne diesen Gestenablauf brauchst. Für eine kompakte, zentral zu beantwortende Frage passt ein Dialog besser. Lange Bearbeitungsabläufe mit mehreren Schritten gehören als redaktionelle Empfehlung auf eine eigene Seite. Die Position allein entscheidet nicht, ob der Hintergrund bedienbar bleibt."
+      ],
+      "links": [
+        {
+          "text": "Sheet",
+          "href": "/systems/shadcn/components/sheet",
+          "paragraph": 1
+        },
+        {
+          "text": "Dialog",
+          "href": "/systems/shadcn/components/dialog",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Filter öffnen, auswählen und übernehmen",
+      "paragraphs": [
+        "Über «Filter öffnen» gelangst du zu «Aufträge filtern». Im dargestellten Entwurf liegt der Drawer unten. «Nur offene Aufträge» beschreibt eine konkrete Auswahl; «12 Aufträge anzeigen» macht die Folge der Bestätigung deutlich.",
+        "Der sichtbare Griff ist bewusst eingeschaltet. «Schliessen» bleibt als eindeutiger Ausstieg vorhanden, auch wenn du keine Wischgeste ausführst. Für diesen Entwurf empfehlen wir, Änderungen erst beim Bestätigen zu übernehmen und sie beim blossen Schliessen zu verwerfen. Diese Filterlogik ergänzt die Anwendung."
+      ],
+      "illustration": {
+        "src": "/component-examples/drawer.svg",
+        "alt": "Unten geöffneter Drawer Aufträge filtern mit Wischgriff, ausgewähltem Filter Nur offene Aufträge und den Aktionen 12 Aufträge anzeigen und Schliessen.",
+        "caption": "Statische Illustration · Unterer Drawer mit bewusst sichtbarem Griff und separatem Ausstieg."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Orientierung oben, Aktionen am Ende",
+      "paragraphs": [
+        "Die Fläche liegt über der Seite; im voreingestellten modalen Betrieb kommt ein abgedunkelter Hintergrund hinzu. Titel und kurze Beschreibung erklären die Aufgabe, darunter stehen deine Inhalte. Der Aktionsbereich folgt am Ende in deiner festgelegten Reihenfolge.",
+        "Ein optionaler Griff deutet die Wischbedienung an. Er ist kein eigener Button und für assistive Technik ausgeblendet. Plane deshalb zusätzlich eine beschriftete Schliessen-Aktion. Bei wenig Platz muss der Inhalt erreichbar bleiben; prüfe das auch mit eingeblendeter Bildschirmtastatur."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Rand, Griff und Einrasthöhen wählen",
+      "paragraphs": [
+        "Die belegten Richtungen sind down, up, left und right. Sie bezeichnen die Wischrichtung zum Schliessen: down liegt unten, up oben, left links und right rechts. Voreingestellt ist down. Links und rechts sind physische Richtungen; leite daraus keine automatische Spiegelung ab.",
+        "Der Griff ist standardmässig ausgeschaltet und lässt sich über showSwipeHandle einblenden. Mit Snap-Points kannst du mehrere Einrasthöhen anbieten, etwa eine Vorschau und mehr Inhalt. Die Schnittstelle erlaubt Anteile der Viewporthöhe, Pixelwerte und px-/rem-Angaben. Eine andere Einrasthöhe bedeutet noch kein Schliessen. Eigene Farb- oder Grössenvarianten sind nicht ausgewiesen."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Öffnen und Schliessen sauber begleiten",
+      "paragraphs": [
+        "Der Ablauf führt von geschlossen über die Öffnungsbewegung zur offenen Fläche und über die Schliessbewegung zurück. Ein deaktivierter Auslöser öffnet sie nicht. Beim Wischen folgt die Fläche der Geste. Erst wenn die Bewegung als Schliessgeste erkannt wird, wird das Schliessen angefordert.",
+        "Escape, Schliessen und normalerweise ein Druck ausserhalb können ebenfalls eine Schliessanforderung auslösen. Du kannst das Schliessen durch Druck ausserhalb unterbinden. Bei kontrolliertem Öffnungszustand entscheidet deine Anwendung über die Übernahme; auch eine abgebrochene Zustandsänderung bleibt ohne Wechsel. Ladeanzeige, Speichern, Fehler und der Umgang mit ungesicherten Eingaben sind Aufgaben deiner Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Die Aufgabe benennen",
+      "paragraphs": [
+        "Verwende «Aufträge filtern» statt «Drawer» als Titel und «Filter öffnen» statt «Mehr» als Auslöser. Eine kurze Beschreibung wie «Grenze die angezeigten Aufträge ein» reicht zur Orientierung. Lass lange Erklärtexte aus dem Kopfbereich weg.",
+        "Unterscheide «12 Aufträge anzeigen» als Bestätigung von «Schliessen» als Ausstieg. Verwende «Abbrechen» nur, wenn dabei tatsächlich Änderungen verworfen werden. Ein blosses Griffsymbol vermittelt weder diese Folge noch einen zugänglichen Aktionsnamen."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Ohne Wischen vollständig bedienbar",
+      "paragraphs": [
+        "Den nativen Auslöser und die Schliessen-Aktion aktivierst du mit Enter oder Leertaste. Beim Öffnen wird der Fokus in die Fläche geführt. Im voreingestellten modalen Betrieb bleiben Tab und Umschalt+Tab innerhalb des Drawers; Escape fordert das Schliessen an. Danach kehrt der Fokus zum Auslöser oder einem ausdrücklich festgelegten Ziel zurück.",
+        "Gib der Dialogfläche über ihren Titel einen zugänglichen Namen und verknüpfe eine passende Beschreibung. Prüfe die tatsächliche Fokusreihenfolge deiner Felder und Aktionen. Der Griff erhält keinen zusätzlichen Tastaturstopp; alle wesentlichen Aufgaben müssen über explizite Bedienelemente erreichbar sein."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Modalität bewusst festlegen",
+      "paragraphs": [
+        "Der Drawer verwendet Dialogsemantik. Standardmässig ist modal=true: Fokus bleibt innerhalb, Seitenscrollen und Interaktionen ausserhalb sind gesperrt. Mit modal=false bleibt die übrige Seite bedienbar. Die zusätzliche Option trap-focus hält nur den Fokus innerhalb; Scrollen und Zeigerinteraktionen ausserhalb bleiben möglich. Wähle diese Kombination nur mit einem klaren Bedienkonzept.",
+        "Der Wrapper fügt den Hintergrund nur für modal=true ein. Randposition und Verdunkelung ersetzen die Fokusregeln nicht. Titel, Beschreibung und Auslöser müssen zur gleichen Instanz gehören. Die gebundene Base-UI-Implementierung setzt standardmässig kein aria-modal; aus der Referenz folgt keine pauschale ARIA-Freigabe."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Die Aussagen beruhen auf dem Komponenten- und UX-Contract, der CEM-Schnittstelle, CSS, dem SCXML-Ablauf und der HTML/ARIA-Projektion des gewählten Exports. Die gebundenen React- und Base-UI-Quellen klären Richtungen, Snap-Points und Modalitätsoptionen.",
+        "Die Illustration ist ein redaktioneller Entwurf. Statische Zustandsbeispiele belegen weder Gestenerkennung noch Fokusverhalten deiner Anwendung. Prüfe beides mit deinen Inhalten, einschliesslich Scrollen und sichtbarem Ausstieg auf dem Touchscreen."
+      ]
+    }
+  ]
+}

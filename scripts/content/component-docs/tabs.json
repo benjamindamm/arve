@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "tabs",
+  "title": "Tabs",
+  "summary": "Mit Tabs wechselst du zwischen zusammengehörigen Ansichten auf derselben Seite. Auswahl und Tastaturfokus bleiben dabei klar unterscheidbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Zwischen Ansichten derselben Sache wechseln",
+      "paragraphs": [
+        "Mit Tabs zeigst du einen von mehreren zusammengehörigen Inhaltsbereichen auf derselben Seite. Nutze sie etwa für Übersicht und Einzelheiten eines Berichts, wenn du jeweils nur eine Ansicht brauchst und jederzeit wechseln kannst.",
+        "Für eigenständige Seiten wählst du eine Navigation mit Links. Für Schritte, die du in einer bestimmten Reihenfolge erledigen musst, passt ein geführter Ablauf besser. Wenn du mehrere Bereiche gleichzeitig lesen oder vergleichen möchtest, sind offene Abschnitte oder ein Accordion geeigneter."
+      ],
+      "links": [
+        {
+          "text": "Accordion",
+          "href": "/systems/shadcn/components/accordion",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Bericht, zwei Blickwinkel",
+      "paragraphs": [
+        "Der Monatsbericht bietet Übersicht und Einzelheiten. Die Übersicht ist ausgewählt und zeigt die wichtigsten Zahlen. Um den Inhalt zu wechseln, aktivierst du Einzelheiten. Die Überschrift Monatsbericht bleibt ausserhalb des wechselnden Inhalts stehen und gibt beiden Ansichten ihren gemeinsamen Kontext.",
+        "Im manuellen Modus kannst du den Fokus bereits zu Einzelheiten bewegen, während die Übersicht sichtbar bleibt. Plane deshalb eine erkennbare Fokusmarkierung zusätzlich zur ausgewählten Fläche ein."
+      ],
+      "illustration": {
+        "src": "/component-examples/tabs.svg",
+        "alt": "Monatsbericht mit den Tabs Übersicht und Einzelheiten. Übersicht ist ausgewählt; das Panel zeigt 24 abgeschlossene und 3 offene Aufträge.",
+        "caption": "Statische Illustration · Zwei zusammengehörige Ansichten eines Monatsberichts."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Leiste und Inhalt gehören zusammen",
+      "paragraphs": [
+        "Die Tableiste bündelt die Auslöser oberhalb des Inhalts. Jeder Tab verweist auf sein eigenes Panel; der ausgewählte Tab erklärt, welcher Inhalt gerade sichtbar ist. Halte diese räumliche Nähe auch dann bei, wenn ein Panel deutlich länger wird.",
+        "Die Standarddarstellung legt die Tabs auf einen zurückhaltenden Hintergrund und hebt die Auswahl als Fläche hervor. Inaktive Panels bleiben unsichtbar. Die Breite folgt dem Inhalt; für knappen Platz sieht die Referenz begrenztes horizontales Scrollen vor. Prüfe dabei, ob du alle Ansichten noch gut entdecken kannst."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Fläche oder Linie, horizontal angeordnet",
+      "paragraphs": [
+        "Du kannst für die Leiste default oder line wählen. Die Standardvariante fasst die Auswahl auf einer gemeinsamen Fläche zusammen. line markiert den aktiven Tab mit einer Unterstreichung und eignet sich als zurückhaltendere Gliederung. Beide Varianten haben dasselbe Auswahlverhalten.",
+        "Diese Referenz unterstützt eine horizontale Anordnung. Die vorliegende Umsetzung reicht die Orientierung nicht an die zugrunde liegende Bedienlogik weiter. Eine vertikale Optik würde deshalb nicht zur Tastaturbedienung und Semantik passen. Verwende sie hier nicht als zugesicherte Variante."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Fokus ist noch keine Auswahl",
+      "paragraphs": [
+        "Standardmässig wechselt erst die Aktivierung den sichtbaren Inhalt. Mit activateOnFocus kannst du stattdessen schon beim Pfeiltastenfokus wechseln. Nutze diese automatische Aktivierung nur, wenn der nächste Inhalt ohne spürbare Wartezeit erscheint. Deaktivierte Tabs können Fokus erhalten, lassen sich aber nicht aktivieren.",
+        "Eine Anwendung kann einen angeforderten Wechsel abbrechen. Bei intern verwalteter Auswahl wird ein entfernter oder nachträglich deaktivierter aktiver Tab automatisch ersetzt; bleibt kein verfügbarer Tab, kann die Auswahl leer sein. Verwaltet die Anwendung den Wert selbst, muss sie solche Fälle lösen.",
+        "Plane den Umgang mit Eingaben in Panels ausdrücklich: keepMounted ist standardmässig ausgeschaltet. Mit dieser Option bleibt das versteckte Panel im DOM. Das ist keine Zusage für dauerhaft gespeicherte Eingaben oder Daten; deren Erhalt und Speicherung verantwortet deine Anwendung."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Benenn die Ansichten, nicht den Wechsel",
+      "paragraphs": [
+        "Wähle kurze, unterscheidbare Namen wie Übersicht und Einzelheiten. Tab 1 und Mehr sagen dir nicht, welchen Inhalt du erhältst. Beschrifte beide Tabs auf derselben fachlichen Ebene; mische keine Ansicht mit einer Aktion wie Bericht löschen.",
+        "Halte die Namen möglichst kurz und prüfe längere Übersetzungen im verfügbaren Platz. Verstecke entscheidende Angaben nicht ausschliesslich in einem inaktiven Panel, wenn du sie zum Verständnis der aktuellen Ansicht brauchst."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Mit Pfeilen orientieren, gezielt aktivieren",
+      "paragraphs": [
+        "Mit Tab gelangst du zum ausgewählten verfügbaren Tab und danach zum Panel. Links und Rechts bewegen den Fokus in der horizontalen Leiste, Home und End zu deren Anfang und Ende. Standardmässig läuft der Pfeiltastenfokus am Ende zum Anfang zurück. Auch deaktivierte Tabs können dabei fokussiert werden.",
+        "Im voreingestellten manuellen Modus aktivierst du einen verfügbaren fokussierten Tab mit Enter oder der Leertaste. Bei automatischer Aktivierung folgt die Auswahl dem Pfeiltastenfokus. Escape verändert die Auswahl nicht. Gib der Tableiste einen zugänglichen Namen, etwa Ansichten des Monatsberichts, und erhalte die sichtbare Fokusmarkierung auch im Panel."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Jeder Tab braucht sein zugehöriges Panel",
+      "paragraphs": [
+        "Die Tableiste erhält die Rolle tablist, ihre Auslöser tab und die Inhalte tabpanel. Auswahlstatus und Verknüpfungen zwischen Tab und Panel müssen zusammenpassen. Die Quelle registriert die automatischen ID-Beziehungen erst im Client; die HTML-Referenz zeigt diesen registrierten Zustand. Beurteile die Verknüpfungen deshalb an der laufenden Verwendung.",
+        "In einem Formular gliedern Tabs Inhalte, sie speichern oder senden sie nicht. Sorge für erreichbare Rückmeldungen, falls ein Fehler in einem verborgenen Bereich liegt. Für eine Seitennavigation brauchst du zusätzlich ein passendes Link- und Routingkonzept; der gezeigte Panelwechsel liefert das nicht automatisch."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung abdeckt",
+      "paragraphs": [
+        "Die Aussagen stützen sich auf die gebundenen React- und Base-UI-Quellen, die Schnittstellenbeschreibung, CSS, Zustandsmodell und HTML/ARIA-Regeln des Exports. Die Beispiele sind redaktionelle Entwürfe. Die Referenz beschreibt horizontale Tabs; sie belegt weder eine vertikale Bedienung noch den Erhalt von Anwendungsdaten über einen Panelwechsel hinaus."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "component": "empty",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/component.json",
+      "sha256": "101352130f80b92e25ba1cbc230505ddfc9287331c42a1c7f5b9546be898cd2d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/ux.json",
+      "sha256": "d26e4ebe0b9aaf54755ed7f258125a70a59bd2773dff8a88dbf1194a1c584d3c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/interface.json",
+      "sha256": "81101766a75d644fd245667485e16bd6c08ddd0b90a4d663957c33ffed3a3786"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/stories.json",
+      "sha256": "4dd00ee848268f2d38a5d3c1b3face300aa1506afb282ea100c6e1616f84331b"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/behavior.scxml",
+      "sha256": "7dc3d2acf54e884c1896db75a874e8fd17df1c5dbaeb3ed44ad51bf64068d33f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/layout.css",
+      "sha256": "912d11ecbf8df717208317ed325e434a27dd5935ff4d93477a8f78302d50256d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/accessibility.html",
+      "sha256": "45b46f5c9cdab301025bfc58296410f2ba16402a987d1fe7416cd7e7db6493ea"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/accessibility.rules.json",
+      "sha256": "0d536318e7ac65c3affaa3b358b6aa4ab9ee903f48951566af0bc77c547f6751"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/README.md",
+      "sha256": "14419f26b1bbc1ca4873e52c4f19d09a98458ea1269eb930364271e54dc0e7d9"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-empty-result",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Empty erscheint nach erfolgreichem Laden mit null Einträgen; Fehler und Laden sind gesondert zu behandeln.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "usage-search-copy",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Erster Einstieg und erfolglose Suche erhalten unterschiedliche Erklärung und Handlung."
+    },
+    {
+      "id": "example-additional-action",
+      "blockName": "example",
+      "kind": "contract",
+      "statement": "Die Upload-Aktion wird als Kind ergänzt; Empty übernimmt keinen Upload-Lebenszyklus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "anatomy-stack",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf und Inhaltsbereich stehen zentriert untereinander, die Textbreite ist begrenzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/layout.css",
+          "snippet": "[data-slot=\"empty-header\"] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: var(--ui-empty-header-gap);\n  max-inline-size: var(--ui-empty-content-max);"
+        }
+      ]
+    },
+    {
+      "id": "variants-media",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "EmptyMedia hat die Varianten default und icon.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/component.json",
+          "pointer": "/visualContract/variants/media"
+        }
+      ]
+    },
+    {
+      "id": "variants-icon-surface",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Nur die icon-Variante erhält die hinterlegte, abgerundete Symbolfläche.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/layout.css",
+          "snippet": "[data-slot=\"empty-icon\"][data-variant=\"icon\"] {\n  inline-size: var(--ui-empty-icon-box);\n  block-size: var(--ui-empty-icon-box);\n  border-radius: var(--ui-empty-icon-radius);\n  background: var(--ui-color-muted);\n}"
+        }
+      ]
+    },
+    {
+      "id": "states-passive",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Das Verhaltensmodell verwaltet Darstellung, Änderung übergebener Inhalte sowie Ein- und Aushängen, keinen Upload.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/behavior.scxml",
+          "snippet": "<state id=\"rendered\"><transition event=\"PROPS_CHANGED\"/><transition event=\"UNMOUNT\" target=\"removed\"/></state>"
+        }
+      ]
+    },
+    {
+      "id": "states-focus",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Anwendung ersetzt Empty bei eintreffenden Daten und erhält möglichst den Fokus auf der auslösenden Aktion.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/accessibility.rules.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "labels-reason-action",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Grund der Leere und Handlung sind in Text auszudrücken; ein dekoratives Symbol ist optional.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/ux.json",
+          "pointer": "/contentAlternative"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-wrapper",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Empty installiert keine Tastaturbehandlung und keine eigene Fokusnavigation; interaktive Kinder behalten ihre Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "keyboard-button",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Die beschriebene Tab-, Eingabe- und Leertastenbedienung setzt einen zusätzlich eingesetzten nativen Button voraus."
+    },
+    {
+      "id": "semantics-heading",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der Titel ist ein Wrapper mit einer vom Aufrufer ergänzten Überschrift.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/component.json",
+          "pointer": "/anatomy/title"
+        }
+      ]
+    },
+    {
+      "id": "semantics-icon",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz verbirgt das dekorative Symbol mit aria-hidden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/accessibility.html",
+          "snippet": "<div data-slot=\"empty-icon\" data-variant=\"icon\" aria-hidden=\"true\">"
+        }
+      ]
+    },
+    {
+      "id": "sources-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz übernimmt weder Lade- und Fehlerentscheidung noch einen automatischen Upload-Lebenszyklus.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/empty/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Erster Einstieg dient als konkretes SVG-Beispiel; erfolglose Suche wird in Einsatz und Beschriftung separat erklärt.",
+    "Upload-Button ausdrücklich als ergänzte Aktion beschrieben. Gestrichelter Rahmen wird nicht als Dropzone interpretiert.",
+    "Tastaturhinweis auf nativen ergänzten Button begrenzt; keine Bedienung der passiven Fläche erfunden.",
+    "Empfehlungen zu Textlänge, Fokusziel bei verschwindender Aktion und Formular-Button ergänzen die belegte passive Struktur."
+  ],
+  "limits": [
+    "Keine lokale Empty-Demo unter src/demos/shadcn gefunden; SVG bleibt statischer redaktioneller Entwurf.",
+    "Anwendungslogik für Suche, Dateiauswahl, Upload, dynamische Rückmeldungen und Fokus nach Austausch ist nicht Teil von Empty."
+  ]
+}

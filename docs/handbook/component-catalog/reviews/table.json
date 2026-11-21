@@ -1,0 +1,212 @@
+{
+  "component": "table",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/component.json",
+      "sha256": "f262e7430239a2c6c30287d1b1c8771efc23f207fa7717e515922fe9f7ffec36"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/ux.json",
+      "sha256": "3e50b5d74d9ca9c50946ae07aa511f4d935374e1896eb10b64209456ab12dab0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/interface.json",
+      "sha256": "82c323879365cdfd07fd740bf9aaa61f6d068fafb303e92f05430735c46df4fb"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/stories.json",
+      "sha256": "5ddbb7875e1075e7a5bd0bd8e57a58d2d159bbfe3adae70c33df76291f28d164"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/behavior.scxml",
+      "sha256": "cdcda25f5fbb2fd54d0eef074f192141236aa52d3ea38cca9253875609225718"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/layout.css",
+      "sha256": "831aae25c99d616214c0b8db0e45f6fe9fdde17a13fdcbe0d361eb45e039864e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.html",
+      "sha256": "0741e830bebbca3fb7959cfb8527195d212a7b3fe6d8cd3e52a9bf1e10b5e0e8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.rules.json",
+      "sha256": "5b7060da05a1513a3f9a6e0149e74fdacfaa59a07a1a28389a52d2fff98370fa"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/README.md",
+      "sha256": "3e89ce34aa96e41e610ba0496549eab9ca3297e4dcbc735ea4925d1dc3bf1fd7"
+    }
+  ],
+  "claims": [
+    {
+      "id": "usage-table",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Table stellt Daten in Zeilen und Spalten dar; Sortierung, Filter, Auswahl und Grid-Tastaturprotokoll sind nicht eingebaut.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/ux.json",
+          "pointer": "/purpose"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "example-dataset",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Raumdaten, rechtsbündige Zahlen und Summen sind ein statischer redaktioneller Entwurf.",
+      "evidence": []
+    },
+    {
+      "id": "anatomy-native",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Kopf, Körper, Fuss und Caption sind native Teile; Caption liegt unten, Container ermöglicht Überlauf, Text darf umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/component.json",
+          "pointer": "/anatomy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/layout.css",
+          "snippet": "overflow: auto;"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/layout.css",
+          "snippet": "caption-side: bottom;"
+        }
+      ]
+    },
+    {
+      "id": "variants-selection",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Keine öffentliche Varianten-API; ausgewählte Zeilen sind eine vom Aufrufer gesetzte Darstellung ohne Table-eigene Auswahl.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/component.json",
+          "pointer": "/visualContract/variants/rowSelection"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/interface.json",
+          "pointer": "/modules/0/declarations/4/members/1/type/text"
+        }
+      ]
+    },
+    {
+      "id": "states-updates",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Elternaktualisierungen ersetzen Inhalte ohne automatische Fokusverschiebung; Hover ändert den Zeilenhintergrund.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/ux.json",
+          "pointer": "/updatesAndDescendants"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/layout.css",
+          "snippet": "[data-slot=\"table-row\"]:hover,"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/behavior.scxml",
+          "snippet": "<transition event=\"PROPS_CHANGED\"/>"
+        }
+      ]
+    },
+    {
+      "id": "states-feedback",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Laden, Leere und Abruffehler werden als unterschiedliche Zustände der umgebenden Ansicht empfohlen.",
+      "evidence": []
+    },
+    {
+      "id": "labels-numbers",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Überschriften, gemeinsame Einheiten, konsistente Zahlen und Unterscheidung fehlender Werte von null verbessern den Vergleich.",
+      "evidence": []
+    },
+    {
+      "id": "keyboard-native",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Table installiert keinen Tastaturlistener und keine wandernde Fokussierung; interaktive Kinder behalten ihre Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.rules.json",
+          "pointer": "/keyboard"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/ux.json",
+          "pointer": "/referenceDecision"
+        }
+      ]
+    },
+    {
+      "id": "semantics-relations",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Caller liefert Caption und scope; komplexe Headerbeziehungen nutzen IDs/headers, gewöhnliche Table erhält keine Grid-Rolle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.rules.json",
+          "pointer": "/contentAlternative"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.rules.json",
+          "pointer": "/referenceDecision"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.html",
+          "snippet": "scope=\"col\""
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/accessibility.html",
+          "snippet": "scope=\"row\""
+        }
+      ]
+    },
+    {
+      "id": "sources-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die Referenz ist keine allgemeine Anwendungsfreigabe und kein allgemeines Framework- oder AT-Zertifikat.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/table/README.md",
+          "snippet": "kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Vergleichbare Raumdaten mit Stunden und CHF statt abstrakter Platzhalter; alle Summen rechnerisch konsistent.",
+    "Rechtsausrichtung der Zahlen explizit als redaktioneller Entwurf, da das Referenz-CSS Zellen am Textanfang ausrichtet.",
+    "Keine erfundene Sortierung, Filtersteuerung, auswählbare Zeile oder Grid-Tastaturbedienung.",
+    "Breite Illustration mit minWidth 560 für lesbare Spalten; responsive Anwendung als eigener Prüfauftrag beschrieben."
+  ],
+  "limits": [
+    "Keine lokale Table-Demo vorhanden.",
+    "Statische Illustration und Quellenabgleich sind kein Nachweis der Integration oder assistiven Laufzeitbedienung."
+  ]
+}

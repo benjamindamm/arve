@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "field",
+  "title": "Field",
+  "summary": "Mit Field hältst du Eingabe, Beschriftung, Hilfe und Fehlermeldung zusammen. So bleiben einzelne Felder und fachliche Gruppen verständlich aufgebaut.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Ein Feld als verständliche Einheit",
+      "paragraphs": [
+        "Verwende Field, wenn du ein Eingabeelement mit Beschriftung, Hilfetext und möglicher Fehlermeldung zusammenhalten möchtest. Das hilft etwa bei einer E-Mail-Adresse im Kontaktformular oder bei einer Einstellung mit erklärendem Text. Mehrere fachlich zusammengehörige Felder kannst du mit FieldSet und einer gemeinsamen Legende gruppieren.",
+        "Wähle Input für das eigentliche einzeilige Eingeben; Field liefert die umgebende Struktur. Brauchst du für ein einzelnes Steuerelement lediglich eine zugeordnete Beschriftung, kann Label genügen. Für einen längeren Freitext setzt du Textarea in die Feldstruktur ein. Entscheide also zuerst über die Eingabe und danach über ihre Anordnung."
+      ],
+      "links": [
+        {
+          "text": "Input",
+          "href": "/systems/shadcn/components/input",
+          "paragraph": 1
+        },
+        {
+          "text": "Label",
+          "href": "/systems/shadcn/components/label",
+          "paragraph": 1
+        },
+        {
+          "text": "Textarea",
+          "href": "/systems/shadcn/components/textarea",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Kontaktadresse korrigieren",
+      "paragraphs": [
+        "Der Entwurf zeigt die Gruppe «Kontaktangaben» mit dem Feld «E-Mail-Adresse». Unter der Eingabe steht der dauerhafte Hinweis «An diese Adresse senden wir deine Bestätigung.» Die zusätzliche Fehlermeldung «Ergänze die vollständige Adresse.» benennt die nötige Korrektur.",
+        "Du erkennst die Zugehörigkeit durch die gemeinsame linke Kante und den engeren Abstand innerhalb des Feldes. Die Legende beschreibt die Gruppe; sie ersetzt die einzelne Feldbeschriftung nicht. Die rote Rückmeldung ergänzt einen verständlichen Text, sodass die Farbe allein keine Bedeutung tragen muss."
+      ],
+      "illustration": {
+        "src": "/component-examples/field.svg",
+        "alt": "Gruppe Kontaktangaben mit E-Mail-Adresse, dem Eingabewert lea@, einem Hilfetext zur Bestätigung und der Fehlermeldung Ergänze die vollständige Adresse.",
+        "caption": "Statische Illustration · Vertikales Feld mit Hilfe und einer von der Anwendung gelieferten Fehlermeldung."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Beschriftung, Eingabe und Rückmeldung verbinden",
+      "paragraphs": [
+        "FieldLabel steht bei vertikaler Anordnung über dem Eingabebereich. FieldContent hält Eingabe, FieldDescription und FieldError als zusammenhängenden Stapel. FieldGroup ordnet mehrere Felder und stellt den Bezugsraum für das responsive Layout bereit. FieldSet und FieldLegend geben einer fachlichen Gruppe ihren gemeinsamen Rahmen und Namen.",
+        "FieldTitle sieht einer Beschriftung ähnlich, ist aber ein Textelement und kein natives Label. Wenn du damit etwa eine Checkbox benennst, musst du die zugängliche Zuordnung ausdrücklich herstellen. FieldSeparator kann Abschnitte durch eine Linie mit optionalem Text trennen; er übernimmt keine Feldbeschriftung."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Die Anordnung nach dem verfügbaren Platz wählen",
+      "paragraphs": [
+        "Die Standardausrichtung vertical stapelt Beschriftung und Inhalt. Empfohlen ist sie besonders für schmale Formulare und längere Hilfetexte. horizontal ordnet sie nebeneinander an; prüfe dabei, ob deine Beschriftungen ohne ungünstige Umbrüche Platz finden.",
+        "responsive beginnt untereinander und wechselt in der exportierten CSS-Referenz ab einer Breite von 28rem des FieldGroup-Containers nebeneinander. Massgeblich ist der Container, nicht die Fensterbreite. FieldLegend bietet die Darstellungen legend und label; beide bleiben semantisch eine Legende. Eigene Farb- oder Grössenvarianten für Field sind nicht belegt."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Fehler gezielt und verständlich anzeigen",
+      "paragraphs": [
+        "Field prüft keine Eingaben. Du legst in der Anwendung fest, wann eine Prüfung stattfindet, welche Meldung daraus entsteht und wann sie wieder verschwindet. Die Anwendung setzt auch den ungültigen oder deaktivierten Zustand am Eingabeelement.",
+        "Ohne Inhalt erscheint FieldError nicht. Bei einer Meldung zeigt es Text, bei mehreren unterschiedlichen Meldungen eine Liste; gleiche Meldungen werden zusammengefasst. Explizit übergebener Inhalt hat Vorrang vor der Fehlerliste. Plane daher eine eindeutige Quelle für die Rückmeldung. Empfehlungen zum Prüfzeitpunkt solltest du passend zum Formular festlegen."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Texte mit klar verteilten Aufgaben",
+      "paragraphs": [
+        "Beschrifte konkret: «E-Mail-Adresse» hilft mehr als «Angabe» oder «Hier eingeben». Halte das Label kurz und setze Zweck, Format oder Einschränkungen in den Hilfetext. Ein Platzhalter ersetzt keine sichtbare Beschriftung.",
+        "Formuliere Fehler als nächsten Schritt, etwa «Ergänze die vollständige Adresse.» statt «Ungültiger Wert». Benenne bei mehreren Fehlern unterschiedliche Probleme, statt dieselbe Aufforderung zu wiederholen. Nutze die Gruppenlegende für das gemeinsame Thema, beispielsweise «Kontaktangaben», und jedes Feldlabel für die einzelne Information."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Der Fokus gehört zum Steuerelement",
+      "paragraphs": [
+        "Field selbst hat keine eigene Tastatursteuerung und führt keinen zusätzlichen Fokus ein. Mit Tab und Umschalt+Tab erreichst du die enthaltenen bedienbaren Elemente gemäss deren Verhalten. Die übrigen Tasten hängen vom gewählten Input, der Checkbox oder einem anderen enthaltenen Steuerelement ab.",
+        "Verknüpfe FieldLabel mit dem Eingabeelement, damit dessen Name zugänglich ist und die native Label-Zuordnung den Fokus weitergeben kann. Ein bloss danebenstehender FieldTitle stellt diese Verbindung nicht her. Prüfe die Fokusreihenfolge auch nach einem Wechsel der Anordnung."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Zusammengehörigkeit auch programmatisch herstellen",
+      "paragraphs": [
+        "Field ist eine Gruppe; FieldSet und FieldLegend verwenden natives fieldset und legend. Die visuelle Nähe von Text und Eingabe genügt für ihre zugängliche Beziehung nicht. Du vergibst passende IDs und verknüpfst Label und Eingabe sowie Hilfe und Fehler über die vorgesehenen Beziehungen.",
+        "Die Referenz verbindet Hilfetext und Fehlermeldung über aria-describedby und kennzeichnet die ungültige Eingabe mit aria-invalid. FieldError verwendet role=alert. Diese Darstellung erzeugt weder die IDs noch die Validierung automatisch. Achte im Formular oder Dialog darauf, dass dynamische Fehlermeldungen zur richtigen Eingabe gehören und nach einer Korrektur aktuell bleiben."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was die Referenz für Field belegt",
+      "paragraphs": [
+        "Die Seite stützt sich auf die exportierte Komponentenbeschreibung, die React-Schnittstelle, CSS, das Verhaltensmodell sowie HTML/ARIA und die statischen Anwendungsfälle. Diese Quellen belegen Struktur, Ausrichtungen und die Behandlung übergebener Fehlermeldungen.",
+        "Der responsive Schwellenwert ist eine ausdrückliche Entscheidung der CSS-Referenz. Die Illustration ist ein redaktioneller Entwurf. Daraus folgt keine Freigabe deiner Formularvalidierung, deiner konkreten Umsetzung oder ihrer Bedienbarkeit mit assistiven Technologien."
+      ]
+    }
+  ]
+}

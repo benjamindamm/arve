@@ -1,0 +1,231 @@
+{
+  "component": "switch",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+      "sha256": "ea04b0dfb2341856e2e1b20b2cf97e774076de7e745409e5f08e75db5296a8d4"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.html",
+      "sha256": "7958444eebd4f8b55051fc1a6ccd1d8e3046ca5a58c08c90eaa81d1946b5cea3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.rules.json",
+      "sha256": "6a96dae769e996766be3b0271698dcb41780ef60bc25d5d58434b18c71917997"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/component.json",
+      "sha256": "d2a8a065aedcf12ce31def690a9e89b0dbdedb12667e3c99f068940a95db6c3f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/interface.json",
+      "sha256": "373d183443323916845897719cd38c325e492dd842843646ecd770b23413c826"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/ux.json",
+      "sha256": "fbdbda12d6f530acb2c40b3423e9083af6a8790114fc0a288653a356a67ef1aa"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/switch.md.source",
+      "sha256": "a9e05e85786746f8e3671849c4d08c842ca4f72c5345beef8df482194b787aa5"
+    },
+    {
+      "path": "src/demos/shadcn/controls.ts",
+      "sha256": "56369e9939fe2393f9db0aa1fa32f6da18a35776b22597f0621e0fb12ef68edd"
+    }
+  ],
+  "claims": [
+    {
+      "id": "binary-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Zweifache Einstellung mit stabilem Namen; unmittelbare Wirkung erfordert die Anwendung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Checkbox für gesammelt bestätigte Angaben, Radio Group für exklusive Auswahl und Button für eine Aktion empfohlen."
+    },
+    {
+      "id": "demo-scope",
+      "blockName": "example",
+      "kind": "demo",
+      "statement": "Lokale Spartan-Demo bindet Switch, Name und Deaktivierung ohne Speicherung oder Grössenwahl ein.",
+      "evidence": [
+        {
+          "path": "src/demos/shadcn/controls.ts",
+          "snippet": "<brn-switch [aria-labelledby]=\"id\" [disabled]=\"disabled()\" />"
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Optionale Feldanordnung und tatsächliche Kontrolle mit Knopf sind getrennt beschrieben.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/component.json",
+          "pointer": "/partBindings"
+        }
+      ]
+    },
+    {
+      "id": "size",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Standard und sm sowie gespiegelte Richtung sind belegt; keine Destructive-Variante.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/component.json",
+          "pointer": "/visualContract"
+        }
+      ]
+    },
+    {
+      "id": "disabled-readonly",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Deaktiviert und schreibgeschützt verhindern Änderungen und sind verschiedene Zustände.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.rules.json",
+          "pointer": "/disabled"
+        }
+      ]
+    },
+    {
+      "id": "controlled-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierte Werte bleiben führend; Änderungsanfragen können abgebrochen werden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/interface.json",
+          "pointer": "/modules/0/declarations/0/events/0"
+        }
+      ]
+    },
+    {
+      "id": "saving",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Unbekannte Werte nicht als Aus darstellen; laufende Speicherung, Erfolg und Fehler ergänzen."
+    },
+    {
+      "id": "stable-label",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der sichtbare Name bleibt über Zustandswechsel gleich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/interface.json",
+          "pointer": "/modules/0/declarations/0/members/0/description"
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Base-UI-Switch verwendet Space und Enter; Tab-Reihenfolge überspringt deaktivierte Kontrolle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "name-state",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Vorlage verknüpft Namen über aria-labelledby und führt aria-checked.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.html",
+          "snippet": "role=\"switch\" aria-checked=\"true\" aria-labelledby=\"switch-label\""
+        }
+      ]
+    },
+    {
+      "id": "form-values",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Ausgeschaltet wird ohne uncheckedValue kein Wert übertragen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/switch.md.source",
+          "snippet": "By default, unchecked switches do not submit any value, matching native checkbox behavior."
+        }
+      ]
+    },
+    {
+      "id": "form-required",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "required verlangt das Einschalten vor dem Absenden.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/switch.md.source",
+          "snippet": "Whether the user must activate the switch before submitting a form."
+        }
+      ]
+    },
+    {
+      "id": "root",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Standardwurzel ist span mit verborgenem nativen Formularelement.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/accessibility.rules.json",
+          "pointer": "/adapter"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Quellengebundene React-Referenz ist keine Zertifizierung aller Verbraucher oder nativer Plattformen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/switch/ux.json",
+          "pointer": "/decisions/scope"
+        }
+      ]
+    },
+    {
+      "id": "historical-correction",
+      "blockName": "sources",
+      "kind": "editorial",
+      "statement": "Historische native-input-Aussage und offene Destructive-Aussage wurden anhand aktueller Quellen ersetzt.",
+      "evidence": [
+        {
+          "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+          "snippet": "Was die Destructive-Varianten bedeuten, ist noch offen; auch die Prüfung für die Webumsetzung steht aus."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Anwendungsregel zur unmittelbaren Wirkung von garantierter Speicherung getrennt.",
+    "Alte native-input- und Destructive-Aussagen durch aktuelle Base-UI-Semantik und belegte Grössen ersetzt.",
+    "Statische Illustration vergleicht denselben Namen in beiden Werten; keine Pixelgleichheit behauptet."
+  ],
+  "limits": [
+    "Lokale Spartan-Demo ist kein veröffentlichter Implementierungsnachweis für den aktuellen React-Contract.",
+    "Speicherung und Fehlerabläufe fehlen in der lokalen Demo.",
+    "Keine eigene Browser- oder AT-Prüfung ausgeführt."
+  ]
+}

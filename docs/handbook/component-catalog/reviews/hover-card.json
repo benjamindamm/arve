@@ -1,0 +1,237 @@
+{
+  "component": "hover-card",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/accessibility.rules.json",
+      "sha256": "10dbcfe8156d7ca9f2bbe018f2810b5fe750138a2acc9c8a4da2750dfd38734d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/behavior.scxml",
+      "sha256": "76e1e5a6f576e18a87bab023d9c8097a306b183404d1bdaa62135c383b38f41f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/component.json",
+      "sha256": "58ff0b4659c367293956fee536d1c762ce69a5d9956df12965041e90a477c46f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/interface.json",
+      "sha256": "f429cde745c965f3b72b24f1f9d4c6453dc7dceefcbfd3e8f9f0f4e2ca216412"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/layout.css",
+      "sha256": "d6d86285c6409041ad36e8ca6fe333b054cb55cb38cf2a5233d3d816950fe298"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/stories.json",
+      "sha256": "2886cabe8dec8e6b1cde1d33840e5319d527b0b2647a0e7d9d5f57eb07881375"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/ux.json",
+      "sha256": "e61210f75719371f65306ffb9bd8aa9dbe810ebb82a867062d1e68048d36327d"
+    }
+  ],
+  "claims": [
+    {
+      "id": "link-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Vorschau ergänzt einen echten navigierbaren Link; wesentliche Informationen brauchen einen Weg ohne Hover.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/ux.json",
+          "pointer": "/avoid"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternative-choice",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Tooltip für kurze Bedeutungshinweise und Popover für bewusst geöffnete Aufgabenbereiche sind redaktionelle Abgrenzungen."
+    },
+    {
+      "id": "profile-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Nora Keller ist ein redaktionelles Profilbeispiel; der reguläre Profil-Link bildet die Touch-Alternative."
+    },
+    {
+      "id": "parts",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Root ist ein Controller ohne stabilen DOM-Knoten; Trigger und Inhalt bilden die sichtbaren Teile.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "bounded-width",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die Inhaltsbreite bleibt begrenzt und Wörter können umbrechen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/layout.css",
+          "snippet": "max-inline-size: min(var(--ui-hover-card-max-width),calc(100vw - 16px));"
+        }
+      ]
+    },
+    {
+      "id": "width-value",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Die semantische maximale Inhaltsbreite ist 272 px.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "no-style-variants",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Es gibt keine eigenen visuellen Varianten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "position-options",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die Fixtures enthalten die vier Platzierungen oben, rechts, unten, links.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/stories.json",
+          "pointer": "/stories"
+        }
+      ]
+    },
+    {
+      "id": "position-defaults",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Voreinstellung ist unten, zentriert, mit 4 px Seitenabstand und 4 px Ausrichtungsversatz.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "timing",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Fokus und Hover verwenden standardmässig 600 ms Öffnungs- und 300 ms Schliessverzögerung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "waiting-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Zeigerverlust, Fokusverlust und Escape brechen das Warten ab.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/behavior.scxml",
+          "snippet": "<transition event=\"POINTER_LEAVE FOCUS_OUT ESCAPE\" target=\"closed\" />"
+        }
+      ]
+    },
+    {
+      "id": "controlled-opening",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Im kontrollierten Betrieb sendet die Karte eine Änderungsanfrage, ohne selbst in opening zu wechseln.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/behavior.scxml",
+          "snippet": "<transition event=\"OPEN_DELAY_ELAPSED\" cond=\"(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)\">\n        <send event=\"onOpenChange\" target=\"#_parent\">\n          <param name=\"open\" expr=\"true\" />"
+        }
+      ]
+    },
+    {
+      "id": "short-labels",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Name, Rolle und kurze Zusammenfassung sind Empfehlungen; notwendige Informationen bleiben ausserhalb verfügbar."
+    },
+    {
+      "id": "link-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Enter folgt dem Link; Escape und Druck ausserhalb schliessen; es gibt keinen modalen Fokusfang.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "plain-content",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Der Inhaltsbereich ist ein div, ohne erfundene Dialog- oder Tooltip-Rolle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "no-title-export",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die öffentlichen Deklarationen sind HoverCard, HoverCardTrigger und HoverCardContent; Title/Description sind nicht exportiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/interface.json",
+          "pointer": "/modules/0/declarations"
+        }
+      ]
+    },
+    {
+      "id": "fixture-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Statische HTML-Fixtures zeigen Anatomie und Zustand und belegen nicht allein das Verhalten.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/hover-card/stories.json",
+          "pointer": "/purpose"
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Die optionale Linkvorschau wird ausdrücklich von Tooltip und Popover abgegrenzt.",
+    "Die Touch-Alternative ist das normale vollständige Linkziel; kein erfundener Tap-Modus.",
+    "Zeitwerte stammen aus der Base-UI-gebundenen Referenz, nicht aus Radix-Annahmen.",
+    "Das SVG zeigt eine einzelne offene Profilvorschau ohne zusätzliche Aktion im Inhalt."
+  ],
+  "limits": [
+    "Die Illustration und HTML-Fixtures sind statisch; keine neue Laufzeit-, Fokus- oder Assistenztechnikprüfung.",
+    "Kein allgemeiner Framework- oder Plattformnachweis; das Paket beschreibt die gebundene React-Variante."
+  ]
+}

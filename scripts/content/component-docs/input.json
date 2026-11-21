@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "input",
+  "title": "Input",
+  "summary": "Mit Input erfragst du kurze Werte in einer Zeile. Eine sichtbare Beschriftung und passende Hinweise machen klar, was du erwartest.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Kurze Werte selbst eingeben",
+      "paragraphs": [
+        "Nutze Input, wenn du einen kurzen Wert in einer Zeile erfragen möchtest, etwa einen Projektnamen. Frage nur Angaben ab, die du für die Aufgabe brauchst. Für längere Beschreibungen passt Textarea besser; für eine feste Liste erlaubter Werte eignet sich Select.",
+        "Ein Suchfeld braucht zusätzlich eine Suchaktion oder laufende Suche und eine verständliche Ergebnisdarstellung. Input allein legt dieses Verhalten nicht fest. Akzeptiere fachlich gleichwertige Schreibweisen, statt unnötig enge Formate zu verlangen."
+      ],
+      "links": [
+        {
+          "text": "Textarea",
+          "href": "/systems/shadcn/components/textarea",
+          "paragraph": 0
+        },
+        {
+          "text": "Select",
+          "href": "/systems/shadcn/components/select",
+          "paragraph": 0
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Ein Projekt verständlich benennen",
+      "paragraphs": [
+        "Der Entwurf zeigt «Projektname» mit dem Wert «Jahresbericht». Die Hilfe erklärt, wozu der Name dient. Sie wiederholt weder die Beschriftung noch führt sie eine unbelegte Längenregel ein.",
+        "In der lokalen Spartan-Demo kannst du ein beschriftetes natives Textfeld bearbeiten und deaktivieren. Hilfe, Fehler, Schreibschutz, Prüfung und Speichern bietet diese Demo nicht an. Sie ist kein veröffentlichter Implementierungsnachweis für den aktuellen React-Contract."
+      ],
+      "illustration": {
+        "src": "/component-examples/input.svg",
+        "alt": "Textfeld mit der Beschriftung Projektname, dem Wert Jahresbericht und der Hilfe Ein Name, den dein Team wiedererkennt.",
+        "caption": "Statische Illustration · Beschriftung, Eingabe und Hilfe für einen Projektnamen."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Beschriftung und Hilfe nah am Feld",
+      "paragraphs": [
+        "Die sichtbare Beschriftung steht über dem Eingabefeld. Darunter kannst du eine dauerhafte Hilfe oder eine passende Fehlermeldung platzieren. Diese Umgebung stellst du selbst zusammen; Input erzeugt sie nicht automatisch.",
+        "Das Feld füllt die verfügbare Breite seines Layouts. Bemiss diese Breite nach der erwarteten Eingabe; sie ist keine Längenbegrenzung. Lass Beschriftung und Hilfetext auf schmalen Flächen umbrechen. Der Feldwert bleibt einzeilig und muss auch bei langem Inhalt bearbeitbar bleiben."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Eingabetyp und Form bewusst wählen",
+      "paragraphs": [
+        "Wähle den Eingabetyp nach dem Wert, den du für die Aufgabe brauchst: Text für einen Namen, Passwort für ein Kennwort und Dateiauswahl für einen Anhang. Für E-Mail-Adressen, Telefonnummern oder Webadressen wählst du den jeweils passenden Typ. Auch Suche, Zahl, Datum und Uhrzeit sind in den Quellen gezeigt; welche Bedienung für deine Aufgabe passt, prüfst du im Zielkontext.",
+        "Wähle die normale oder stärker gerundete Form passend zu den übrigen Feldern im Formular. Die Rundung ändert nicht, welchen Wert du erfragst. Eigene Grössen- oder Farbvarianten sind nicht ausgewiesen. Deaktivierung und Fehler sind Zustände, keine dekorativen Varianten."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Eingabe erhalten und Korrektur ermöglichen",
+      "paragraphs": [
+        "Das Feld kann leer oder gefüllt sein und einen sichtbaren Tastaturfokus erhalten. Ein leeres Feld ist nicht automatisch fehlerhaft. Empfohlen ist eine Rückmeldung erst zu einem im Formular nachvollziehbaren Prüfzeitpunkt.",
+        "Schreibschutz bewahrt den Wert und verhindert Änderungen. Deaktivierung macht das Feld vorübergehend unverfügbar; erkläre den Grund ausserhalb des Felds. Bei einem Fehler setzt die umgebende Anwendung die Fehlermarkierung und verbindet den Korrekturhinweis mit dem Feld. Bewahre die Eingabe zur Korrektur. Input selbst bestimmt keine fachlichen Prüfregeln und meldet keinen Speichererfolg."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Den erwarteten Wert benennen",
+      "paragraphs": [
+        "«Projektname» sagt klar, was du erwartest; «Eingabe» oder «Wert» bleiben zu vage. Halte die Beschriftung kurz und dauerhaft sichtbar. Ein Platzhalter kann ein Beispiel zeigen, ersetzt aber weder Beschriftung noch notwendige Hilfe.",
+        "Erkläre Pflicht und optionale Angaben im gesamten Formular einheitlich. Formuliere Fehler konkret, etwa «Gib einen Projektnamen ein.» statt «Ungültig». Eine maximale Länge oder die Forderung nach einem eindeutigen Namen gehört zu deiner Fachaufgabe und ist keine allgemeine Input-Regel."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Native Textbearbeitung bewahren",
+      "paragraphs": [
+        "Mit Tab erreichst du das verfügbare Feld, mit Umschalt+Tab gehst du zurück. Deaktivierte Felder werden in der nativen Tab-Reihenfolge übersprungen. Textbearbeitung, Auswahl, Einfügen und Eingabemethoden-Editoren folgen dem nativen Feld. Escape stellt keinen früheren Wert wieder her.",
+        "Ordne die sichtbare Beschriftung über label und eine passende Feld-ID zu, damit das Feld einen zugänglichen Namen erhält. Prüfe den Fokus auch zusammen mit einer Fehlermarkierung. Welche Aktion Enter im Formular oder Dialog auslöst, musst du für diesen Kontext festlegen und prüfen."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Das Formular trägt die Verantwortung",
+      "paragraphs": [
+        "Input ist ein echtes natives Eingabeelement. Die einbindende Anwendung ergänzt Beschriftung, Hilfe und Fehlerbezug. aria-describedby verbindet den erläuternden Text mit dem Feld; aria-invalid kennzeichnet einen festgestellten Fehler, führt aber selbst keine Prüfung aus.",
+        "Lege im Formular fest, wann du prüfst, wie du Fehler zusammenfasst, wohin der Fokus nach dem Absenden geht und wie du Speichern bestätigst. Wenn die Anwendung den Wert kontrolliert, bleibt ihr übergebener Wert massgebend. Verändere während der Eingabe nicht ungefragt den Text oder die Auswahl.",
+        "Technisch übernimmt Input die nativen React-input-Eigenschaften und reicht den gewählten Typ weiter. Die HTML-Komposition des Contracts verwendet Text; andere Eingabetypen sind damit auf dieser Seite nicht als Implementierung geprüft. Prüfe ihre Browserbedienung im Zielkontext. Die stärker gerundete Form setzt die einbindende Anwendung über eine zusätzliche Klasse um; sie ist keine eigene Input-Eigenschaft."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Quellen und Reichweite",
+      "paragraphs": [
+        "Die Seite verbindet die aktuelle React-Schnittstelle mit den Gestaltungsregeln, dem Verhaltensmodell und der HTML-/ARIA-Komposition des Exports. Die vorhandene längere Dokumentation wurde mit dem lokalen Spartan-Beispiel abgeglichen.",
+        "Der Contract beschreibt eine begrenzte Quellenreferenz. Die Angular-Demo belegt weder vollständige Übereinstimmung mit ihr noch visuelle Gleichheit. Für Input liegt kein veröffentlichter Implementierungsnachweis vor; eine Freigabe für native Plattformen lässt sich daraus nicht ableiten."
+      ]
+    }
+  ]
+}

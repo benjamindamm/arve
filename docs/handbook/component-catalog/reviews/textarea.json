@@ -1,0 +1,245 @@
+{
+  "component": "textarea",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/ux.json",
+      "sha256": "aa71504255fe2d2e3eec88b86f870928003f7f03edde1e9ca5fcd73dcee8cc6d"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/component.json",
+      "sha256": "170e5775ddedf5bff7805ab5d85ac523c0902ab97b869fd0c1befe204d7c59b8"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/layout.css",
+      "sha256": "fd7379300467bf98380ba0616beda93c8691c50b8b2fb0662c4c3d81ad647bf0"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/stories.json",
+      "sha256": "83fa3ef9e07c34de61da3840bc79cc4e484a2bcf7d5478cba9699d8a46670a1e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/behavior.scxml",
+      "sha256": "5f286ece1f97fd040121df3e9d35967aa58ac90c39338748cc56e9e15d585d3c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/accessibility.rules.json",
+      "sha256": "476f84dcde5e9c155b602091227d37ab88595ab909fa8638d6c43c855411ed0e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/README.md",
+      "sha256": "2ae0b4a7f5f6a29eee6a003f540a1fabc1dd54d988b3452dd93baa98ce865461"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/textarea-example.tsx.source",
+      "sha256": "3199a0816889450768a891d9c3c97ca7618d7d03eca0867cf359bb2d3c9b30d9"
+    }
+  ],
+  "claims": [
+    {
+      "id": "multiline-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Textarea bearbeitet mehrzeiligen Klartext.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "choose-input",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Für einzeilige Angaben wird Input, für vorgegebene Antworten ein Auswahlfeld empfohlen."
+    },
+    {
+      "id": "example-editorial",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Beschriftung, zwei Absätze, Hilfe und Sendeaktion sind redaktionelle Entwurfsentscheidungen ohne neue Fachregeln."
+    },
+    {
+      "id": "field-label-caller",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Label und Feldanordnung werden durch die einbindende Anwendung zusammengesetzt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/component.json",
+          "pointer": "/partBindings"
+        }
+      ]
+    },
+    {
+      "id": "height-and-resize",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Mindesthöhe, field-sizing content und vertikales Vergrössern ersetzen keine feste Musterhöhe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "css-height",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "CSS setzt Inhaltsanpassung und vertikales Vergrössern ausdrücklich.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/layout.css",
+          "snippet": "  field-sizing: content;\n  resize: vertical;"
+        }
+      ]
+    },
+    {
+      "id": "native-choices",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Native Eigenschaften enthalten rows, required, readOnly und disabled; keine benannten visuellen Grössenvarianten im Contract.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "state-visual",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Fokus und Fehlerzustand werden sichtbar markiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/layout.css",
+          "snippet": "[data-slot=\"textarea\"]:focus-visible {\n  outline: 0;\n  border-color: var(--ui-color-ring);\n  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);\n}"
+        }
+      ]
+    },
+    {
+      "id": "error-relation",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Die Fehler-Fixture verbindet Hilfe und Fehlermeldung mit aria-describedby und markiert aria-invalid.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/stories.json",
+          "pointer": "/stories/4/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "change-model",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Native Änderungen werden nur im bearbeitbaren Zustand weitergegeben; kontrollierte Werte werden durch Eltern-Props bestimmt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/behavior.scxml",
+          "snippet": "<transition event=\"NATIVE_CHANGE\" cond=\"!disabled &amp;&amp; !readOnly &amp;&amp; !!_event.data.event\">"
+        }
+      ]
+    },
+    {
+      "id": "no-length-inference",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Mustertexte begründen keine fachlichen Eingabelimits.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "clear-label",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Konkrete Frage und dauerhafte Hilfe werden empfohlen; Platzhalter ist kein Label-Ersatz."
+    },
+    {
+      "id": "native-keyboard",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Enter fügt eine neue Zeile ein; Tab verlässt das Feld; Escape verwirft den Text nicht.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "label-help",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Die HTML-Komposition verknüpft natives Label und Hilfe mit der Textarea.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/accessibility.rules.json",
+          "pointer": "/referenceComposition"
+        }
+      ]
+    },
+    {
+      "id": "submit-readonly-disabled",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Nur lesbare Werte bleiben bei nativer Übermittlung enthalten; deaktivierte werden ausgeschlossen. Autosave und Submit-on-Enter sind nicht eingebaut.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/ux.json",
+          "pointer": "/updatesAndDescendants"
+        }
+      ]
+    },
+    {
+      "id": "wrap-review",
+      "blockName": "semantics",
+      "kind": "editorial",
+      "statement": "Längere Antworten sollen im Zielbrowser auf Höhe und Umbruch geprüft werden; es wird keine neue wrap-Eigenschaft oder Absatzumwandlung versprochen."
+    },
+    {
+      "id": "source-scope",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Der README begrenzt complete auf den Referenzumfang und weist eine allgemeine Anwendungsfreigabe zurück.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/textarea/README.md",
+          "snippet": "keine allgemeine Anwendungsfreigabe."
+        }
+      ]
+    },
+    {
+      "id": "misleading-source-copy",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Das gebundene Originalbeispiel enthält einen Enter-zum-Senden-Hinweis, obwohl Wrapper und Verhaltensregel keinen solchen Handler enthalten; dieser Hinweis wird nicht übernommen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/examples/textarea-example.tsx.source",
+          "snippet": "Type your message and press enter to send."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Rückmeldung als zusammenhängendes Beispiel statt einer technischen Teileliste gewählt.",
+    "Keine fachliche Zeichenbegrenzung, Speicherung oder Rich-Text-Fähigkeit aus Beispielen abgeleitet.",
+    "Den widersprüchlichen Enter-zum-Senden-Hilfetext des Originalbeispiels zugunsten von Wrapper, UX- und Tastaturregel verworfen.",
+    "Höhe als Inhaltsanpassung mit Mindesthöhe und vertikalem Vergrössern beschrieben; rows nicht als garantierte feste Höhe dargestellt.",
+    "Keine lokale Textarea-Demo unter src/demos/shadcn gefunden; keine Implementierungsverfügbarkeit behauptet."
+  ],
+  "limits": [
+    "Die statische Illustration belegt keine Bedienung oder Pixelkonformität.",
+    "Browserabhängige Inhaltsanpassung, Umbruch und Zusammenspiel mit konkreter Formularvalidierung sind in der Einbindung zu prüfen.",
+    "Das Originalbeispiel enthält widersprüchlichen Hilfetext zu Enter; das tatsächliche native Verhalten bleibt Zeilenumbruch."
+  ]
+}

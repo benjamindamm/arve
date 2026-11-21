@@ -1,0 +1,303 @@
+{
+  "component": "checkbox",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/component.json",
+      "sha256": "ad3518ff690630c98d192b40774345bb3fa656262bd28f48ff097a3b7dacf5a3"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/ux.json",
+      "sha256": "3e3748dafa9111b254b2a73cf254462922d289b8fc6fea37479c436065a78602"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/interface.json",
+      "sha256": "0c0381d9e655ed4598a2033402462abc034e9413d9db3fa89dfa45caf6969c76"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/stories.json",
+      "sha256": "89ab63868a97ec77dc59d9b709d77bd5a3190d2c25cc6248dd25d68ee7f78a19"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/behavior.scxml",
+      "sha256": "ac20796e1ad6700f1603e337c5c3a10faedc7a94c2a32615a61d43f7e3f93550"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/layout.css",
+      "sha256": "a5dd6bd6ec8a0d7100704f07f05a673eb65bab8b861d92f5287e79a6a456c1bc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.html",
+      "sha256": "1ab9ba549ca8b485319b8f81e33cb30717f362eefbd0d5261d4070ce9d91f22e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.rules.json",
+      "sha256": "1003c3c6157086e2f151ec27efe71ea69c5b24268f83e1b63a66b4e20285cb3f"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/README.md",
+      "sha256": "e179bed6a5a4c2493ec71b4398e5bbea8ebe93317cd9e84853ee8cf100cae67e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/checkbox.md.source",
+      "sha256": "07a2fe61b1904b37552452a9dcb8ee2bdeb3ba015f205f2a637a3aa5fdf6f0c3"
+    },
+    {
+      "path": "src/demos/shadcn/controls.ts",
+      "sha256": "56369e9939fe2393f9db0aa1fa32f6da18a35776b22597f0621e0fb12ef68edd"
+    },
+    {
+      "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+      "sha256": "ea04b0dfb2341856e2e1b20b2cf97e774076de7e745409e5f08e75db5296a8d4"
+    }
+  ],
+  "claims": [
+    {
+      "id": "boolean-purpose",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Checkbox wählt eine boolesche Option mit unabhängiger gemischter Darstellung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/ux.json",
+          "pointer": "/purpose"
+        }
+      ]
+    },
+    {
+      "id": "alternatives",
+      "blockName": "usage",
+      "kind": "editorial",
+      "statement": "Radio Group für exklusive Antworten und Switch für sofort wirksame Einstellungen sind redaktionelle Auswahlhilfen."
+    },
+    {
+      "id": "demo-scope",
+      "blockName": "example",
+      "kind": "demo",
+      "statement": "Die lokale Demo bindet eine einzelne Spartan-Checkbox, ihren zugänglichen Namen und disabled an; keine Gruppe, Speicherung oder indeterminate-Bindung.",
+      "evidence": [
+        {
+          "path": "src/demos/shadcn/controls.ts",
+          "snippet": "<brn-checkbox [aria-labelledby]=\"id\" [disabled]=\"disabled()\" />"
+        }
+      ]
+    },
+    {
+      "id": "demo-label",
+      "blockName": "example",
+      "kind": "demo",
+      "statement": "Die bestehende veröffentlichte Demo-Konfiguration benennt die Option Projekt-Updates abonnieren.",
+      "evidence": [
+        {
+          "path": "docs/handbook/component-catalog/history/0c16bdc/handbook-snapshot.json",
+          "pointer": "/pages/28/demo"
+        }
+      ]
+    },
+    {
+      "id": "parts-placement",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Feldanordnung ist Caller-Komposition; das Kontrollkästchen misst 16px, der Indikator 14px und der Beschriftungsabstand 8px.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/component.json",
+          "pointer": "/visualContract/layoutPolicy"
+        }
+      ]
+    },
+    {
+      "id": "label-wrapping",
+      "blockName": "anatomy",
+      "kind": "editorial",
+      "statement": "Lange Texte vollständig umbrechen und Hinweise nahe der zugehörigen Auswahl platzieren."
+    },
+    {
+      "id": "visual-choices",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Die visuellen Varianten sind checked, mixed und disabled; keine Grössen- oder Farbauswahl ist deklariert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/component.json",
+          "pointer": "/visualContract/variants"
+        }
+      ]
+    },
+    {
+      "id": "mixed-separate",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "checked ist boolean; indeterminate ist eine getrennte boolesche Darstellung und Semantik.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/interface.json",
+          "pointer": "/modules/0/declarations/0/members/0"
+        }
+      ]
+    },
+    {
+      "id": "group-responsibility",
+      "blockName": "variants",
+      "kind": "editorial",
+      "statement": "Der gemischte Zustand ersetzt keine Spezifikation von Umfang und Wirkung einer Sammelauswahl."
+    },
+    {
+      "id": "controlled-update",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierte Props bleiben massgeblich; ein Abbruch verhindert die interne Übernahme im unkontrollierten Fall.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/behavior.scxml",
+          "snippet": "<if cond=\"!controlled &amp;&amp; !_event.data.isCanceled\"><assign location=\"checked\" expr=\"_event.data.checked\"/></if>"
+        }
+      ]
+    },
+    {
+      "id": "locked-value",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Deaktivierung ignoriert Aktivierung; readOnly erhält den Wert und bleibt von disabled getrennt.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.rules.json",
+          "pointer": "/disabled"
+        }
+      ]
+    },
+    {
+      "id": "error-owner",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Parent oder Field liefert aria-invalid und aria-describedby; die Komponente erfindet keine Validierungsregeln.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.rules.json",
+          "pointer": "/errors"
+        }
+      ]
+    },
+    {
+      "id": "clear-label",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Positive kurze Beschriftung und ausdrücklich benannter Umfang einer Sammelauswahl vermeiden Missverständnisse."
+    },
+    {
+      "id": "keys-and-focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Leertaste schaltet Checkbox um, Enter nicht; Enter kann das Formular absenden. Tab folgt der nativen Reihenfolge, disabled wird übersprungen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.rules.json",
+          "pointer": "/keyboard"
+        }
+      ]
+    },
+    {
+      "id": "focus-style",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Fokusdarstellung ist zusätzlich über focus-visible mit Outline und Schatten vorgesehen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/layout.css",
+          "snippet": "[data-slot=\"checkbox\"]:focus-visible"
+        }
+      ]
+    },
+    {
+      "id": "root-and-input",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Standard-Root ist span mit Rolle und verstecktem nativem Formularelement, kein sichtbares natives Input oder Button.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/accessibility.rules.json",
+          "pointer": "/adapter"
+        }
+      ]
+    },
+    {
+      "id": "three-aria-states",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Fixture des gemischten Zustands vermittelt aria-checked=mixed.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/stories.json",
+          "pointer": "/stories/2/fixture/html"
+        }
+      ]
+    },
+    {
+      "id": "form-interface",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Schnittstelle enthält name, value und uncheckedValue.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/interface.json",
+          "pointer": "/modules/0/declarations/0/members"
+        }
+      ]
+    },
+    {
+      "id": "wrapping-label-pattern",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Gebundene Base-UI-Originaldokumentation empfiehlt ein umschliessendes Label als einfachstes Benennungsmuster.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/checkbox.md.source",
+          "snippet": "An enclosing `<label>` is the simplest labeling pattern:"
+        }
+      ]
+    },
+    {
+      "id": "demo-text-relation",
+      "blockName": "semantics",
+      "kind": "demo",
+      "statement": "Der sichtbare Demo-Text ist ein span mit id, auf den aria-labelledby verweist; der Text hat keine eigene Klickbindung.",
+      "evidence": [
+        {
+          "path": "src/demos/shadcn/controls.ts",
+          "snippet": "<span [id]=\"id\">{{ label() }}</span>"
+        }
+      ]
+    },
+    {
+      "id": "scope-limit",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Die React-Quellenbeschreibung zertifiziert weder alle Consumer noch native Plattformen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/checkbox/ux.json",
+          "pointer": "/decisions/scope"
+        }
+      ]
+    },
+    {
+      "id": "old-study",
+      "blockName": "sources",
+      "kind": "editorial",
+      "statement": "Ältere binäre/native Aussagen werden durch die aktuellen, getrennt belegten Base-UI-Regeln ersetzt; es wurde kein neuer Lauf der Demo behauptet."
+    }
+  ],
+  "decisions": [
+    "Das Exportbeispiel führt die bestehende fachliche Gestaltungsstudie mit unabhängigen Optionen fort; die Live-Demo bleibt die einzelne Abonnementoption.",
+    "Gemischte Auswahl wird als aktuell belegte Darstellung erklärt, während Gruppensteuerung als Anwendungsaufgabe benannt bleibt.",
+    "Der veraltete Gegensatz natives Input versus Spartan wird durch den aktuellen Base-UI-Standardaufbau ersetzt. Die Demo-Beschriftung wird anhand der lokalen Bindung beschrieben.",
+    "Keine ungebundene Behauptung über aktuelle Browserbeobachtungen oder Spartan-Tastaturgleichheit; Tastaturregeln beziehen sich ausdrücklich auf den Contract."
+  ],
+  "limits": [
+    "Kein veröffentlichter Checkbox-Implementierungsnachweis für die lokale Angular-Demo.",
+    "Keine neue Browser- oder Assistenztechnikprüfung; Aktivierung über Beschriftung und Formularanbindung bleiben an der jeweiligen Einbindung zu prüfen.",
+    "Der gemischte Zustand ist API-gestützt; die Referenz nennt kein separates natives gemischtes Bildmuster.",
+    "Die SVG ist eine redaktionelle Illustration ohne Render- oder Pixelkonformitätsaussage."
+  ]
+}

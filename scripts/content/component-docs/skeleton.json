@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "component": "skeleton",
+  "title": "Skeleton",
+  "summary": "Skeleton reserviert während des Ladens Platz für kommende Inhalte. Mit passenden Formen hältst du die erwartete Struktur sichtbar.",
+  "sections": [
+    {
+      "key": "usage",
+      "title": "Platz freihalten, solange Inhalte laden",
+      "paragraphs": [
+        "Setze Skeleton ein, wenn die Form des kommenden Inhalts bereits feststeht: etwa bei einer Kontaktliste mit Porträts und zwei Textzeilen. Du reservierst damit den benötigten Platz und zeigst, wo die Inhalte erscheinen werden.",
+        "Wähle für einen Vorgang ohne bekannte Inhaltsform eher einen Spinner mit erklärendem Text. Wenn du einen verlässlichen Fortschritt kennst, passt eine Fortschrittsanzeige besser. Ein leeres Suchergebnis braucht eine verständliche Leermeldung; ein fehlgeschlagener Abruf braucht eine Fehlermeldung. Lass in beiden Fällen keine Ladeflächen weiterlaufen."
+      ],
+      "links": [
+        {
+          "text": "Spinner",
+          "href": "/systems/shadcn/components/spinner",
+          "paragraph": 1
+        }
+      ]
+    },
+    {
+      "key": "example",
+      "title": "Eine Kontaktliste kündigt ihren Inhalt an",
+      "paragraphs": [
+        "Unter «Kontakte» stehen die Meldung «Kontakte werden geladen» und zwei angedeutete Listeneinträge. Jeder Eintrag reserviert Platz für ein rundes Porträt sowie Name und Funktion. Die unterschiedlich langen Balken machen die spätere Textstruktur erkennbar, ohne Inhalte vorzutäuschen.",
+        "Stimme Abstände und Höhe auf die fertigen Kontakte ab. Die Illustration zeigt eine redaktionelle Zusammenstellung der belegten Avatar- und Textformen. Sie stellt weder einen laufenden Abruf noch einen gemessenen Ladefortschritt dar."
+      ],
+      "illustration": {
+        "src": "/component-examples/skeleton.svg",
+        "alt": "Bereich Kontakte mit der Meldung Kontakte werden geladen und zwei Platzhaltern aus je einem Kreis und zwei Textbalken.",
+        "caption": "Statische Illustration · Platz für zwei Kontakte während des Ladens."
+      }
+    },
+    {
+      "key": "anatomy",
+      "title": "Die Form folgt dem erwarteten Inhalt",
+      "paragraphs": [
+        "Der sichtbare Baustein ist eine gefüllte, abgerundete Fläche. Du setzt mehrere Flächen zu einem groben Abbild des späteren Inhalts zusammen. Ein Kreis kann das Porträt vertreten, schmale Balken die Textzeilen und eine grössere Fläche einen Kartenbereich.",
+        "Die Referenz sieht 16 Pixel hohe Textflächen, einen Avatar von 40 Pixeln und eine Kartenfläche von 125 Pixeln Höhe vor. Text und Karte füllen den verfügbaren Platz. Plane deshalb den umgebenden Bereich mit: Skeleton legt deine Liste oder Karte nicht selbst an."
+      ]
+    },
+    {
+      "key": "variants",
+      "title": "Text, Avatar oder Karte zusammensetzen",
+      "paragraphs": [
+        "Die exportierte Referenz unterscheidet Text-, Avatar- und Kartenformen über Klassen, die du beim Einsetzen zuweist. Wähle die Form nach dem späteren Inhalt, nicht als dekorative Abwechslung. Es gibt dafür keine eigene Form-Eigenschaft und keine belegte Auswahl benannter Grössen- oder Farbvarianten.",
+        "Der ursprüngliche Wrapper nimmt Klassen und normale Eigenschaften eines div-Elements entgegen. Weitere Abmessungen sind damit eine bewusste Gestaltung deiner Anwendung; sie sind keine zusätzlichen Varianten dieser Referenz."
+      ]
+    },
+    {
+      "key": "states",
+      "title": "Den Ladezustand auch wieder beenden",
+      "paragraphs": [
+        "Während des Abrufs zeigt deine Anwendung die Ladeflächen und kennzeichnet den Inhaltsbereich als beschäftigt. Sobald Daten vorliegen, ersetzt sie die Flächen durch echte Inhalte und hebt diese Kennzeichnung auf. Bei einem Fehler oder einem leeren Ergebnis zeigt sie den jeweiligen Zustand ausdrücklich an. Skeleton steuert keinen dieser Wechsel selbst.",
+        "Die Flächen pulsieren in der Referenz. Bei der Systemeinstellung für reduzierte Bewegung stoppt die Animation; die verständliche Statusmeldung bleibt erhalten. Leite aus dem Puls weder verbleibende Zeit noch Fortschritt ab."
+      ]
+    },
+    {
+      "key": "labels",
+      "title": "Sag, welcher Inhalt noch fehlt",
+      "paragraphs": [
+        "Eine gute Meldung lautet «Kontakte werden geladen». «Bitte warten» lässt offen, worauf du wartest; «Keine Kontakte» wäre während des Abrufs irreführend. Halte die Meldung kurz und benenne den betroffenen Inhalt.",
+        "Schreibe keine Namen oder erfundenen Daten in die Ladeflächen. Eine gemeinsame Meldung für den Bereich genügt als redaktionelle Empfehlung; wiederhole sie nicht für jeden Balken. Behalte eine bereits bekannte Überschrift wie «Kontakte» bei, damit der Zusammenhang sichtbar bleibt."
+      ]
+    },
+    {
+      "key": "keyboard",
+      "title": "Ladeflächen brauchen keinen Fokus",
+      "paragraphs": [
+        "Skeleton ist kein Bedienelement. Es hat keine eigenen Tastenaktionen und keine eigene Fokussteuerung. Mache dekorative Flächen nicht mit Tab erreichbar und gib ihnen keine Namen wie «Platzhalter 1».",
+        "Falls du im umgebenden Bereich weiterhin Aktionen anbietest, brauchen diese ihre eigene Beschriftung und Tastaturbedienung. Ein Skeleton-Balken ersetzt weder einen bedienbaren Button noch ein Eingabefeld."
+      ]
+    },
+    {
+      "key": "semantics",
+      "title": "Die Meldung gehört zum Inhaltsbereich",
+      "paragraphs": [
+        "Die zugängliche Referenz setzt die Flächen in einen Bereich mit verknüpfter Überschrift und aria-busy. Ein separates Element mit role=status enthält die lesbare Lademeldung. Die dekorative Geometrie ist mit aria-hidden ausgeblendet. So trägt der Bereich die Bedeutung, während die Flächen nur Platz reservieren.",
+        "Diese Zusammenstellung musst du in deiner Anwendung herstellen. Der nackte Skeleton-Wrapper liefert weder die Meldung noch die Kennzeichnung des beschäftigten Bereichs automatisch. Auch in einem Dialog oder Formular bleibt die Anwendung für den Ladeablauf und die anschliessend nutzbaren Inhalte verantwortlich."
+      ]
+    },
+    {
+      "key": "sources",
+      "title": "Was diese Beschreibung belegt",
+      "paragraphs": [
+        "Die Beschreibung stützt sich auf die gebundenen React-Quellen, die Schnittstelle, die Gestaltungsregeln, das Verhaltensmodell und die HTML/ARIA-Referenz des Exports. Die Beispiele belegen Text-, Avatar- und Kartenformen.",
+        "Die zugängliche Zusammenstellung und die Regel für reduzierte Bewegung sind ausdrücklich Entscheidungen der Referenz. Daraus folgt kein Nachweis für die Ladeabläufe oder die vollständige Zugänglichkeit deiner Anwendung."
+      ]
+    }
+  ]
+}

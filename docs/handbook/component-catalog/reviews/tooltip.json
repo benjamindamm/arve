@@ -1,0 +1,245 @@
+{
+  "component": "tooltip",
+  "library": "shadcn",
+  "revision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
+  "sources": [
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/component.json",
+      "sha256": "61e723d535d897c9bc2afaa7fe8986ea90da3f54af793a1709a3e00269939165"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/ux.json",
+      "sha256": "ba17fea15f3cf6ef631374a33643c0fc6bf794f6af4cc6ca143b5e4b1a9e2445"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/interface.json",
+      "sha256": "a5c402ab774930407000e4833f081b285d202e4b0897cb1855632b2884d17c5e"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/stories.json",
+      "sha256": "577812b42cf139d993e41174af1d9d56569918c28c67d694bbce77337eb18570"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/behavior.scxml",
+      "sha256": "41151792a8136dac83842a6fa4c1d22133a91bef71a044bc0692b382079d13fd"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/layout.css",
+      "sha256": "5728691a447f441ddf4a94aeb7a7f711f363edeb9d3c0355713436c39e5bfb04"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.html",
+      "sha256": "a996ed8547fb0045e90f65b2a1fd202a42dfbec2d268bbe15ea3a887ac4c06e7"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.rules.json",
+      "sha256": "bb92fade96ff20598119d8703e3a33e2019d6916e270430372b549a315d55d91"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/README.md",
+      "sha256": "0988d6ff389ddf21884bfc5e3075f7d844d86d38d15f189375f1e9a61f10584c"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/tooltip.md.source",
+      "sha256": "e42c9b7b0c07f1b0e38535b4fe35f1c21c7b057d99063af8454e30fb860631cc"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/tooltip/trigger/TooltipTrigger.mjs.source",
+      "sha256": "f230bc0561fc51e3a9cab7cf5f4d526b5142ca2de2fec5452fc039b971ab5095"
+    },
+    {
+      "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source",
+      "sha256": "dc5ec917d8276af9d66e7c951b0608d67c149bcb311072166bc8ce67ee2b7488"
+    }
+  ],
+  "claims": [
+    {
+      "id": "supplementary",
+      "blockName": "usage",
+      "kind": "contract",
+      "statement": "Tooltip ergänzt ein korrekt benanntes Ziel; notwendige oder eigenständig interaktive Inhalte gehören nicht ausschliesslich hinein.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/ux.json",
+          "pointer": "/avoid"
+        }
+      ]
+    },
+    {
+      "id": "save-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Speicherbeispiel mit dauerhaftem Hinweis ist ein redaktioneller Entwurf und keine Demo.",
+      "evidence": []
+    },
+    {
+      "id": "anatomy-binding",
+      "blockName": "anatomy",
+      "kind": "contract",
+      "statement": "Provider und Root versprechen kein DOM-Element; Content ist ein tatsächlich positioniertes Portal-Popup.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/component.json",
+          "pointer": "/anatomy"
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "TooltipContent bietet side, sideOffset, align und alignOffset; Standard ist top, 4, center, 0.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/interface.json",
+          "pointer": "/modules/0/declarations/3/members/0"
+        }
+      ]
+    },
+    {
+      "id": "delay-default",
+      "blockName": "variants",
+      "kind": "contract",
+      "statement": "Der shadcn-Provider setzt delay=0; Hover-Verzögerung bleibt konfigurierbar.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/ux.json",
+          "pointer": "/sourceRule"
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Verlassen des Hover-Bereichs, Fokusverlust, Escape und Triggerbetätigung können schliessen; Root disabled verhindert Öffnen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.rules.json",
+          "pointer": "/sourceRule"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        },
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/behavior.scxml",
+          "snippet": "event=\"HOVER_REGION_LEFT\" target=\"closing\""
+        }
+      ]
+    },
+    {
+      "id": "wait-cancel",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Verlassen oder Fokusverlust während der Wartezeit bricht das Öffnen ab.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/behavior.scxml",
+          "snippet": "<transition event=\"POINTER_LEAVE FOCUS_OUT ESCAPE\" target=\"closed\" />"
+        }
+      ]
+    },
+    {
+      "id": "controlled",
+      "blockName": "states",
+      "kind": "contract",
+      "statement": "Kontrollierte Interaktionen melden Änderungen; der Zustand wird über SET_OPEN synchronisiert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/behavior.scxml",
+          "snippet": "event=\"SET_OPEN\" target=\"opening\""
+        }
+      ]
+    },
+    {
+      "id": "names",
+      "blockName": "labels",
+      "kind": "contract",
+      "statement": "Der zugängliche Name ist vom Aufrufer zu setzen und muss eng zum sichtbaren Hinweis passen.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/ux.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "focus",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tastaturfokus öffnet ohne Hover-Verzögerung; kein Fokus im Tooltip und keine Tab-Falle.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "touch",
+      "blockName": "keyboard",
+      "kind": "contract",
+      "statement": "Tooltips sind in dieser Quelle auf Touch-Geräten deaktiviert.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/sources/base-ui-1.9.0/docs/tooltip.md.source",
+          "snippet": "For this reason, tooltips are disabled on touch devices."
+        }
+      ]
+    },
+    {
+      "id": "enter-space",
+      "blockName": "keyboard",
+      "kind": "editorial",
+      "statement": "Enter und Leertaste dienen der eigentlichen Schaltflächenaktion; sie werden nicht als Tooltip-Öffnung versprochen.",
+      "evidence": []
+    },
+    {
+      "id": "actual-aria",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Referenz versteckt den visuellen Popupinhalt und verbindet aria-describedby mit persistent-help.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.html",
+          "snippet": "aria-describedby=\"persistent-help\""
+        }
+      ]
+    },
+    {
+      "id": "visual-only",
+      "blockName": "semantics",
+      "kind": "contract",
+      "statement": "Die Primitive liefert keine automatische ARIA-Tooltip-/Beschreibungsbeziehung.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/accessibility.rules.json",
+          "pointer": "/keyboardAndFocus"
+        }
+      ]
+    },
+    {
+      "id": "source-limits",
+      "blockName": "sources",
+      "kind": "contract",
+      "statement": "Quellenbeschreibung und statischer Entwurf belegen keine allgemeine Laufzeit- oder Screenreader-Freigabe.",
+      "evidence": [
+        {
+          "path": "src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library/components/tooltip/README.md",
+          "snippet": "kein allgemeines Pixel-/Framework-/AT-Zertifikat."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Beispiel trennt sichtbare Zusatzhilfe und dauerhafte Information; zugänglicher Name wird unabhängig vergeben.",
+    "Kein generisches ARIA-Tooltip-Muster behauptet: Massgeblich ist die tatsächlich gebundene Base-UI-Variante.",
+    "Keine Verzögerung empfohlen, die als bindender Quellenstandard missverstanden werden könnte.",
+    "Popover als redaktionelle Alternative benannt, keine ungeprüfte Popover-API beschrieben."
+  ],
+  "limits": [
+    "Keine lokale Tooltip-Demo in src/demos/shadcn vorhanden; Illustration zeigt einen statischen Entwurf.",
+    "Keine neue Browser- oder Screenreader-Prüfung dieser Anwendung durchgeführt."
+  ]
+}
