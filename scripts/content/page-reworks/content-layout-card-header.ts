@@ -9,7 +9,7 @@ const text = (key: string, title: string, paragraphs: string[]): Block => ({
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:30:59.744Z',
+  expectedUpdatedAt: '2026-11-20T14:18:10.834Z',
   summary: 'Titel, optionale Beschreibung und passende Aktion im Kopf eines Inhaltsbereichs anordnen.',
   content: [
     text('example', 'Card Header im Einsatz', [

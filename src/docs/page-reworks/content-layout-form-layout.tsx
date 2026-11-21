@@ -1,9 +1,13 @@
 'use client'
+
+import { LayoutRuleBlock } from './layout-rule-block'
 import { useId, useState } from 'react'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './content-layout-form-layout.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Feldgruppen", "Mehrzeilige Texte", "Aktionen"]}
 
 type Block = NonNullable<Page['content']>[number]
 type Text = Extract<Block, { blockType: 'text' }>
@@ -44,7 +48,7 @@ export default function FormLayout({ content }: { content: Page['content'] }) {
         <figcaption>{caption}</figcaption>
       </figure>
     </section>}
-    {blocks.filter(b => !['example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => b.blockName === 'sources'
+    {blocks.filter(b => !['example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => ["rules", "anatomy"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
       ? <details key={b.blockName} id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section key={b.blockName} id={blockAnchor(b)}><RichText data={b.body}/></section>)}
   </div>

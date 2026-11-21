@@ -1,5 +1,5 @@
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './form-und-ebenen.css'
 

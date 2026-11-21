@@ -1,0 +1,20 @@
+{
+  "purpose": "Compose a labelled native input or textarea with supplementary text and independent action buttons.",
+  "avoid": "Adornments must not become substitute labels.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 1188:5363 (Input Group), observed anatomy and examples.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:InputGroup",
+  "sourceRule": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation.",
+  "keyboardAndFocus": "Native input editing and Button activation remain with the composed components. Addon div is not keyboard focusable or a substitute for a label. This reference provides a real label and persistent described help; its clear Button is a caller action. Clicking decorative addon text can focus the input, but clicking its nested Button must preserve the Button interaction. Textarea compositions use their own visible label; addon does not promise textarea focusing.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation. Native input editing and Button activation remain with the composed components. Addon div is not keyboard focusable or a substitute for a label. This reference provides a real label and persistent described help; its clear Button is a caller action. Clicking decorative addon text can focus the input, but clicking its nested Button must preserve the Button interaction. Textarea compositions use their own visible label; addon does not promise textarea focusing.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/input-group.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/input-group-example.tsx.source"
+  ]
+}

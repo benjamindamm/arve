@@ -1,16 +1,17 @@
+import { currentReferenceNote } from '../shadcn-complete'
 import type { Page } from '../../../src/payload-types'
 type Block = NonNullable<Page['content']>[number]
 const base = {version:1, direction:'ltr' as const, format:'' as const, indent:0}
 const node = (text:string) => ({type:'text',version:1,text})
 const text = (key:string,title:string,paragraphs:string[]):Block => ({blockType:'text',blockName:key,body:{root:{...base,type:'root',children:[{...base,type:'heading',tag:'h2',children:[node(title)]},...paragraphs.map(value=>({...base,type:'paragraph',children:[node(value)]}))]}}})
-// Frozen original blocks from handbook-snapshot.json, capturedAt 2026-11-20T14:42:13.144Z.
-// Source commit e0f8d12953f524b62e6309a0bffae93d4b7832fa. No live snapshot import.
+// Editorial revision of the study capturedAt 2026-11-20T14:42:13.144Z.
+// Historical source: commit e0f8d12953f524b62e6309a0bffae93d4b7832fa. No live snapshot import.
 const preserved = [
         {
           "kind": "checkbox",
           "title": "Mehrere Optionen dürfen zugleich gelten",
-          "explanation": "Die Gruppe «Was soll der Export enthalten?» zeigt Tabellen und ausführliche Erläuterungen ausgewählt, Abbildungen nicht ausgewählt. Das lange Label bleibt vollständig lesbar. Jede Option ist unabhängig. Eine einzelne unabhängige Bestätigung kann ebenfalls eine Checkbox sein. Wenn genau eine aus mehreren gegenseitig ausschliessenden Optionen erlaubt ist, braucht es dagegen eine exklusive Auswahl. Nicht ausgewählt und ausgewählt sind die zwei lokalen Werte; Auswahl und Fokus müssen gleichzeitig erkennbar bleiben. «Alle auswählen» braucht zusätzlich eine Gruppenregel. Ein gemischter Zustand für «einige ausgewählt» ist im binären lokalen Contract nicht enthalten. Die Gruppe und ihre Zustandsbilder sind statische Gestaltungsstudien.",
-          "source": "Eigene Gestaltungsstudie für Arve; nicht aus den Contract-Tokens gerendert und keine zusätzliche lokale Komponentenfähigkeit.",
+          "explanation": "In der Gruppe «Was soll der Export enthalten?» sind Tabellen und ausführliche Erläuterungen ausgewählt, Abbildungen nicht. Die lange Beschriftung bleibt vollständig lesbar. Jede Option lässt sich unabhängig von den anderen auswählen. Auch eine einzelne Bestätigung kann eine Checkbox sein. Wenn nur eine der Antworten gelten darf, braucht es eine exklusive Auswahl. Der lokale Contract kennt die beiden Werte «nicht ausgewählt» und «ausgewählt». Auswahl und Fokus müssen gleichzeitig erkennbar bleiben. Für «Alle auswählen» braucht es eine zusätzliche Regel für die Gruppe. Ein gemischter Zustand für «einige ausgewählt» ist im binären lokalen Contract nicht enthalten. Die Gruppe und ihre Zustandsbilder sind statische Gestaltungsstudien.",
+          "source": "Eigene Gestaltungsstudie. Die Darstellung wird nicht aus den Contract-Tokens erzeugt und zeigt keine zusätzlichen Funktionen der lokalen Komponente.",
           "blockType": "componentStudy"
         },
         {
@@ -48,7 +49,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Eine Checkbox hält eine unabhängige Ja/Nein-Auswahl. Mehrere Checkboxen können gleichzeitig gewählt werden; auch eine einzelne Bestätigung ist möglich. «Genau eine aus mehreren» beschreibt dagegen eine exklusive Wahl und sollte nicht als konkurrierende unabhängige Checkboxen erscheinen.",
+                      "text": "Mit einer Checkbox lässt sich eine Option unabhängig auswählen oder abwählen. Mehrere Checkboxen können gleichzeitig ausgewählt sein; auch eine einzelne Bestätigung ist möglich. Soll genau eine von mehreren Antworten gelten, verwende eine exklusive Auswahl statt mehrerer unabhängiger Checkboxen.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -66,7 +67,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Gib einer zusammengehörigen Gruppe eine verständliche Frage oder Überschrift. Das Label jeder Option beschreibt, was ihre Auswahl bedeutet. Vermeide unnötige Verneinungen und bewahre die Bedeutung auch dann, wenn ein Label über mehrere Zeilen läuft.",
+                      "text": "Gib zusammengehörigen Optionen eine gemeinsame Frage oder Überschrift. Die Beschriftung jeder Option erklärt, was ihre Auswahl bedeutet. Vermeide unnötige Verneinungen. Auch mehrzeilige Beschriftungen müssen vollständig lesbar und verständlich bleiben.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -117,7 +118,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Die Auswahl bleibt beim Fokuswechsel erhalten; ein sichtbarer Fokus kommt zusätzlich hinzu. Häkchen und verständlicher Text helfen, den Zustand ohne alleinige Farberkennung zu verstehen. Auch eine deaktivierte Checkbox kann ausgewählt oder nicht ausgewählt sein. Der Grund einer Einschränkung steht lesbar ausserhalb des deaktivierten Elements.",
+                      "text": "Die Auswahl bleibt erhalten, wenn der Fokus weiterwandert. Hat eine ausgewählte Checkbox den Fokus, müssen beide Zustände erkennbar sein. Häkchen und verständlicher Text erklären den Zustand auch ohne Farbe. Eine deaktivierte Checkbox kann ausgewählt oder nicht ausgewählt sein. Erkläre den Grund der Einschränkung in einem lesbaren Text ausserhalb des deaktivierten Elements.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -135,7 +136,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Eine Auswahl ist nicht automatisch gespeichert. Mache im Formular deutlich, ob eine weitere Bestätigung nötig ist. Falls eine Gruppe mindestens eine Auswahl verlangt, gehört die Fehlerrückmeldung zur Gruppe und muss den nächsten Schritt erklären.",
+                      "text": "Eine Auswahl ist nicht automatisch gespeichert. Zeige im Formular, ob sie noch bestätigt werden muss. Wenn mindestens eine Option ausgewählt sein muss, ordne die Fehlermeldung der Gruppe zu und erkläre, was die Person als Nächstes tun soll.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -186,7 +187,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "«Alle auswählen» muss erklären, welche Optionen gemeint sind: etwa sichtbare Einträge oder die gesamte Ergebnismenge. Eine teilweise ausgewählte Gruppe kann einen gemischten Zustand benötigen. Das ist eine zusätzliche Fähigkeit; sie darf nicht aus dem Häkchen einer einzelnen Checkbox abgeleitet werden. Der aktuelle lokale Contract beschreibt ausschliesslich einen binären Wert.",
+                      "text": "Erkläre bei «Alle auswählen», welche Optionen gemeint sind: etwa sichtbare Einträge oder alle Ergebnisse. Sind nur einige Optionen ausgewählt, kann die Gruppe einen gemischten Zustand benötigen. Dafür ist eine zusätzliche Funktion nötig. Das Häkchen einer einzelnen Checkbox zeigt nicht, ob eine solche Gruppensteuerung vorhanden ist. Der aktuelle lokale Contract beschreibt ausschliesslich einen binären Wert.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -237,7 +238,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Die Spartan-Vorschau zeigt eine einzelne binäre Checkbox und Deaktivierung, keine Gruppe, Sammelauswahl oder Formularspeicherung. Sie verwendet einen Button mit Checkbox-Rolle, während die gepinnte Contractvorlage ein natives Eingabeelement nutzt. Beide dürfen nicht allein wegen ähnlicher Darstellung als gleich geprüft gelten.",
+                      "text": "In der Spartan-Vorschau lässt sich eine einzelne Checkbox auswählen, abwählen und deaktivieren. Gruppen, Sammelauswahl und Formularspeicherung zeigt sie nicht. Die Vorschau verwendet einen Button mit Checkbox-Rolle. Die festgelegte Contractvorlage nutzt ein natives Eingabeelement. Ihre ähnliche Darstellung belegt nicht, dass beide dieselben Anforderungen erfüllen.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -255,7 +256,7 @@ const preserved = [
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Prüfe die Namensbindung, sichtbaren Fokus, Umschalten per Leertaste, Pointer-Aktivierung des sichtbaren Labels sowie lange Labels und Touch-Bedienung. Die Namensbindung allein belegt keine klickbare Labelfläche. Ein veröffentlichter Implementierungsdatensatz und eine vollständige assistive Prüfung fehlen derzeit.",
+                      "text": "Prüfe, ob die Checkbox für assistive Technik korrekt benannt ist, der Fokus sichtbar bleibt und die Leertaste die Auswahl umschaltet. Prüfe ausserdem die Aktivierung über den sichtbaren Beschriftungstext, lange Beschriftungen und Touch-Bedienung. In der aktuellen Demo aktiviert ein Klick auf den Beschriftungstext die Checkbox nicht. Ein korrekt zugeordneter Name macht den Text noch nicht anklickbar. Ein veröffentlichter Implementierungsdatensatz und eine vollständige Prüfung mit assistiver Technik fehlen derzeit.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -467,38 +468,41 @@ const preserved = [
 ] satisfies Page['content']
 
 export const release = {
- // Current page read through read-only MCP; original content matched frozen snapshot.
- expectedUpdatedAt:'2026-11-20T07:48:51.774Z',
- summary:'Unabhängige Optionen erkennbar auswählen und den Umfang einer Gruppe verständlich machen.',
+ // Fresh read-only MCP read; current content and summary matched the previous release.
+ expectedUpdatedAt:'2026-11-20T15:10:00.929Z',
+ summary:'Mit einer Checkbox lässt sich eine Option unabhängig auswählen oder abwählen.',
  content:[
   text('example','Eine Option ausprobieren',[
-   'Mit Tab fokussieren, mit Leertaste umschalten und die Deaktivierung ausprobieren. Die Auswahl in dieser Demo speichert nichts.',
-   'Die echte Spartan-Demo zeigt eine einzelne binäre Checkbox. Gruppen, Sammelauswahl und ein gemischter Zustand sind damit nicht nachgewiesen.',
+   'Gehe mit Tab zur Checkbox, schalte sie mit der Leertaste um und probiere die Deaktivierung aus. Die Auswahl in dieser Demo wird nicht gespeichert.',
+   'Die Spartan-Demo zeigt eine einzelne Checkbox mit zwei Auswahlwerten. Sie belegt keine Funktion für Gruppen, Sammelauswahl oder einen gemischten Zustand.',
   ]),
   text('states','Auswahl und Verfügbarkeit unterscheiden',[
-   'Statische Gestaltungsbeispiele · keine zusätzlichen Funktionen der Live-Demo. Derselbe Zustand kann zusätzlich einen sichtbaren Fokus haben.',
+   'Die Bilder zeigen Gestaltungsbeispiele, keine zusätzlichen Funktionen der Live-Demo. In jedem dieser Zustände kann ein sichtbarer Fokus hinzukommen.',
    'Nicht ausgewählt', 'Ausgewählt', 'Ausgewählt · deaktiviert',
    'Projekt-Updates abonnieren',
    'Der Versand von Updates ist für dieses Projekt derzeit pausiert.',
-   'Deaktivierung beschreibt die Verfügbarkeit, nicht den Auswahlwert. Der Grund bleibt ausserhalb des deaktivierten Elements lesbar. Fokus ergänzt die Auswahl und ersetzt das Häkchen nicht.',
+   'Deaktivierung beschreibt die Verfügbarkeit, nicht den Auswahlwert. Der Grund bleibt ausserhalb des deaktivierten Elements lesbar. Der Fokus kommt zur Auswahl hinzu und ersetzt das Häkchen nicht.',
   ]),
   text('rules','Drei Regeln für Checkbox',[
-   '1. Unabhängig auswählen: eine einzelne Bestätigung oder mehrere Optionen, die zugleich gelten dürfen. Für genau eine von mehreren Möglichkeiten eine exklusive Auswahl mit Radio verwenden. Für eine unmittelbar wirksame Ein/Aus-Einstellung Switch prüfen; Speichern und Wirksamkeit ausdrücklich klären.',
-   '2. Bedeutung beschriften: das sichtbare Label sagt ohne unnötige Verneinung, was ausgewählt wird. Zusammengehörige Optionen erhalten eine gemeinsame Frage. Lange Labels dürfen umbrechen und bleiben vollständig lesbar; Namensbindung und klickbare Labelfläche getrennt prüfen.',
-   '3. Umfang und Rückmeldung erklären: «Alle auswählen» benennt die betroffene Menge, etwa sichtbare Einträge oder alle Ergebnisse. Eine erforderliche Mindestauswahl und ihre Fehler gehören zur Gruppe. Eine gesetzte Checkbox bedeutet noch keine Speicherung.',
+   '1. Unabhängige Entscheidungen ermöglichen: Verwende eine Checkbox für eine einzelne Bestätigung oder für Optionen, die zugleich gelten dürfen. Soll genau eine von mehreren Möglichkeiten gelten, verwende Radio. Für eine sofort wirksame Ein/Aus-Einstellung kommt Switch infrage. Kläre jeweils, wann die Änderung wirksam und wann sie gespeichert wird.',
+   '2. Die Auswahl verständlich beschriften: Der sichtbare Text erklärt ohne unnötige Verneinung, was ausgewählt wird. Zusammengehörige Optionen erhalten eine gemeinsame Frage. Lange Beschriftungen dürfen umbrechen und müssen vollständig lesbar bleiben. Prüfe sowohl den Namen für assistive Technik als auch, ob ein Klick auf die Beschriftung die Checkbox aktiviert.',
+   '3. Umfang und Rückmeldung erklären: «Alle auswählen» benennt die betroffenen Optionen, etwa sichtbare Einträge oder alle Ergebnisse. Wenn mindestens eine Option ausgewählt sein muss, erkläre das bei der Gruppe und zeige dort auch die Fehlermeldung. Eine ausgewählte Checkbox bedeutet noch nicht, dass die Auswahl gespeichert ist.',
   ]),
   text('boundaries','Einzeloption und Gruppe',[
-   'Mehrere unabhängige Checkboxen benötigen einen verständlichen Gruppennamen. Bei «Was soll der Export enthalten?» können Tabellen und Erläuterungen gleichzeitig gelten. Eine einzelne Einwilligung bleibt eine eigenständige Entscheidung.',
-   'Teilweise ausgewählte Gruppen können einen gemischten Zustand erfordern. Der gepinnte lokale Contract ist binär; die vorhandene Spartan-Demo belegt weder mixed noch Sammelauswahl. Eine Gruppensteuerung braucht eine zusätzliche Spezifikation und Prüfung.',
+   'Gib zusammengehörigen Checkboxen einen verständlichen Gruppennamen. Bei «Was soll der Export enthalten?» lassen sich Tabellen und Erläuterungen gleichzeitig auswählen. Eine einzelne Einwilligung bleibt eine eigenständige Entscheidung.',
+   'Sind nur einige Optionen einer Gruppe ausgewählt, kann ein gemischter Zustand nötig sein. Der festgelegte lokale Contract kennt nur «ausgewählt» und «nicht ausgewählt». Die Spartan-Demo belegt weder einen gemischten Zustand (mixed) noch eine Sammelauswahl oder die Konformität einer Gruppe. Eine Gruppensteuerung muss zusätzlich spezifiziert und geprüft werden.',
   ]),
   text('limits','Quellen und Prüfgrenzen',[
-   'Die sechs Originalblöcke aus dem Snapshot vom 20.11.2026, 14:42:13.144 UTC sind unten unverändert eingefroren. Die öffentliche Ausgangsseite wurde im Browser gelesen und die sechs Inhaltsblöcke wurden mit dem aktuellen MCP-Stand abgeglichen.',
-   'Die gepinnte Draft-Contractvorlage nutzt ein natives input type="checkbox". Die Spartan-Vorschau nutzt einen Button mit Checkbox-Rolle und einen über aria-labelledby benannten Text. Ähnliche Darstellung belegt keine gleiche Semantik, Labelfläche oder Formularanbindung. Contract-Pin und Demo-Einstellungen werden nicht geändert.',
-   'Offen bleiben sichtbarer Fokus, Leertaste, Pointer-Aktivierung des Labels, lange Labels, Touch-Bedienung sowie assistive Prüfung. Es gibt keinen veröffentlichten Implementierungsdatensatz und keine daraus ableitbare allgemeine Freigabe.',
+   'Die sechs Blöcke der Ausgangsstudie beruhen auf dem Snapshot vom 20.11.2026, 14:42:13.144 UTC. Ihre Erläuterungen wurden sprachlich überarbeitet. Inhalt und Zusammenfassung der veröffentlichten Seite wurden vor dieser Redaktion über MCP mit der bisherigen Release abgeglichen.',
+   'Die festgelegte Contractvorlage hat den Status Draft und nutzt ein natives input type="checkbox". Die Spartan-Vorschau nutzt einen Button mit Checkbox-Rolle; der Beschriftungstext ist über aria-labelledby als Name zugeordnet. Ein Klick auf diesen Text aktiviert die Checkbox in der Demo nicht. Die ähnliche Darstellung ist kein Nachweis gleicher Semantik, klickbarer Beschriftung oder Formularanbindung. Contract-Pin und Demo-Einstellungen bleiben unverändert.',
+   'Sichtbarer Fokus, Leertaste, Aktivierung über den Beschriftungstext, lange Beschriftungen, Touch-Bedienung und die Bedienung mit assistiver Technik müssen weiterhin geprüft werden. Es gibt keinen veröffentlichten Implementierungsdatensatz und keine daraus ableitbare allgemeine Freigabe.',
   ]),
   text('original','Vollständige Ausgangsstudie und Quellen',[
-   'Unveränderter Originalinhalt aus dem eingefrorenen Snapshot. Die statischen Gruppenbilder bleiben Gestaltungsstudien.',
+   'Die Erläuterungen der Ausgangsstudie sind sprachlich überarbeitet. Die statischen Gruppenbilder bleiben Gestaltungsstudien.',
   ]),
   ...preserved,
  ] satisfies Page['content'],
 }
+
+// Preserve the previous study with its explicit source context.
+release.content.unshift(currentReferenceNote(true))

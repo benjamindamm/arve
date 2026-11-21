@@ -37,6 +37,20 @@ test('portable input, binary assets, skills and idempotent immutable import',()=
   await writeFile(path.join(result.destination,'contracts.json'),'changed')
   await assert.rejects(importContractLibrary(bundle,dest),/refusing overwrite/)
 }))
+test('compact imports keep complete package bytes without repeating embedded sources',()=>fixture(async({bundle,dest,files,seal})=>{
+  files['library/library.json']=JSON.stringify({components:{Button:'components/button/component.json',Checkbox:'components/checkbox/component.json'}})
+  files['library/components/checkbox/component.json']=JSON.stringify({status:'complete',domains:{behavior:'behavior.scxml'}})
+  files['library/components/checkbox/behavior.scxml']='<scxml id="checkbox"/>'
+  await seal()
+  const result=await importContractLibrary(bundle,dest,{compact:true})
+  const contracts=JSON.parse(await readFile(path.join(result.destination,'contracts.json'),'utf8'))
+  assert.equal(contracts.length,2)
+  assert(contracts.every(c=>c.deferredFiles&&Object.keys(c.files).length===0))
+  assert(contracts[0].artifacts['tokens.json'])
+  assert(!contracts[0].artifacts['components/checkbox/component.json'])
+  assert.deepEqual(await readFile(path.join(result.destination,'package/library/components/button/button.fig')),Buffer.from([0,255,1]))
+  assert.equal((await importContractLibrary(bundle,dest,{compact:true})).reused,true)
+}))
 test('tampered bytes and undeclared files are rejected',()=>fixture(async({bundle,dest})=>{
   await writeFile(path.join(bundle,'library/tokens.json'),'tampered')
   await assert.rejects(importContractLibrary(bundle,dest),/checksum/)

@@ -1,0 +1,41 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Textarea" initial="active">
+  <datamodel>
+    <data id="disabled" expr="false" />
+    <data id="readOnly" expr="false" />
+    <data id="controlled" expr="false" />
+    <data id="value" expr="''" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT" />
+    <transition event="ESCAPE" />
+    <transition event="UNMOUNT" target="removed" />
+    <transition event="SET_DISABLED" cond="typeof _event.data.disabled === 'boolean'">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <transition event="SET_READONLY" cond="typeof _event.data.readOnly === 'boolean'">
+      <assign location="readOnly" expr="_event.data.readOnly" />
+    </transition>
+    <transition event="SET_CONTROLLED" cond="typeof _event.data.controlled === 'boolean'">
+      <assign location="controlled" expr="_event.data.controlled" />
+    </transition>
+    <transition event="SET_VALUE">
+      <assign location="value" expr="_event.data.value" />
+    </transition>
+    <transition event="NATIVE_CHANGE" cond="!disabled &amp;&amp; !readOnly &amp;&amp; !!_event.data.event">
+      <send event="onChange" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!controlled">
+        <assign location="value" expr="_event.data.value" />
+      </if>
+    </transition>
+    <transition event="NATIVE_INVALID" cond="!disabled &amp;&amp; !!_event.data.event">
+      <send event="onInvalid" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+    </transition>
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="active" />
+  </state>
+</scxml>

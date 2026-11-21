@@ -1,6 +1,4 @@
-import { release as themesRework } from './content/page-reworks/themes-und-zustaende'
-import { release as typographyRework } from './content/page-reworks/typografie'
-import { release as spacingRework } from './content/page-reworks/abstaende'
+import { currentPage } from './content/current-page'
 import assert from 'node:assert/strict'
 import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js'
@@ -21,13 +19,11 @@ try {
  const tree=await client.callTool({name:'list_documentation_tree',arguments:{system:'shadcn'}})
  assert(!tree.isError)
  for(const original of foundationsRelease) {
-  const entry = original.slug === 'shadcn-grundlagen' ? { ...original, ...foundationsOverviewRelease } : original.slug === 'shadcn-farben' ? { ...original, ...colorPageRelease } : original
-  const currentRework = ({'shadcn-themes-und-zustaende': themesRework, 'shadcn-typografie': typographyRework, 'shadcn-abstaende': spacingRework} as Record<string, {summary:string;content:unknown}>)[entry.slug]
-  if(currentRework) Object.assign(entry, currentRework)
+  const entry = await currentPage(original.slug === 'shadcn-grundlagen' ? { ...original, ...foundationsOverviewRelease } : original.slug === 'shadcn-farben' ? { ...original, ...colorPageRelease } : original)
   const section=entry.slug.slice('shadcn-'.length)
   const {docs:[page]}=await payload.find({collection:'pages',depth:1,draft:false,where:{and:[{slug:{equals:entry.slug}},{_status:{equals:'published'}}]}})
   assert(page)
-  if (section === 'grundlagen' || section === 'farben') {
+  {
     const withoutIds = (value: unknown): unknown => Array.isArray(value) ? value.map(withoutIds) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value).filter(([key,v]) => key !== 'id' && v != null).map(([key,v]) => [key,withoutIds(v)])) : value
     assert.deepEqual(withoutIds(page.content), withoutIds(entry.content))
     assert.equal(page.summary, entry.summary)

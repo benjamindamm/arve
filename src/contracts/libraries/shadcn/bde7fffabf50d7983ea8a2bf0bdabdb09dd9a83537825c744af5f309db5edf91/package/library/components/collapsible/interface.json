@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "collapsible.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Collapsible",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "open/defaultOpen control one panel. Disabled suppresses toggling. onOpenChange carries the boolean and cancellable source details. Closing changes panel presence according to Panel keepMounted/transition options; the caller restores focus before programmatically hiding a currently focused descendant if required."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "CollapsiblePrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/collapsible.tsx.source:5."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: CollapsiblePrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "collapsible",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CollapsibleTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "CollapsiblePrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/collapsible.tsx.source:9."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "collapsible-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CollapsibleContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "CollapsiblePrimitive.Panel.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/collapsible.tsx.source:15."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "collapsible-content",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

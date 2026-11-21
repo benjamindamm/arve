@@ -18,7 +18,7 @@ async function collect(root, directory = '', files = new Map()) {
   return files
 }
 
-export async function importContractLibrary(bundle, destinationRoot = 'src/contracts/libraries') {
+export async function importContractLibrary(bundle, destinationRoot = 'src/contracts/libraries', { compact = false } = {}) {
   if (!(await lstat(bundle)).isDirectory()) throw new Error('Package root must be a regular directory')
   const files = await collect(path.resolve(bundle))
   const manifest = JSON.parse(files.get('manifest.json')?.toString('utf8') ?? 'null')
@@ -51,16 +51,40 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
       if (path.posix.isAbsolute(value) || value.includes('\\') || !validPath(name) || !libraryFiles.has(name)) throw new Error('Missing or unsafe contract source: ' + value)
       return [[domain, name]]
     }))
-    const scope = libraryManifest.filter(([name]) => !name.startsWith('components/') || name.startsWith(directory + '/'))
+    const selected = new Set([definitionPath, 'library.json', 'README.md', ...Object.values(sources)])
+    if (compact) {
+      for (const [name] of libraryManifest) if (name.startsWith(directory + '/')) selected.add(name)
+      // Follow source bindings from the component's own text, preserving portable evidence
+      // without duplicating every other component's source tree in each MCP response.
+      const queue = [...selected]
+      const add = (name) => { if ((!name.startsWith('components/') || name.startsWith(directory + '/')) && validPath(name) && libraryFiles.has(name) && !selected.has(name)) { selected.add(name); queue.push(name) } }
+      for (let i = 0; i < queue.length; i++) {
+        const name = queue[i], bytes = libraryFiles.get(name)
+        if (!bytes || name === 'library.json' || name === 'README.md' || !/\.(json|md|css|scxml|html|source|txt|tsx?|xml)$/.test(name)) continue
+        const content = bytes.toString('utf8')
+        const references = []
+        if (name.endsWith('.json')) {
+          const walk = value => { if (typeof value === 'string') references.push(value); else if (Array.isArray(value)) value.forEach(walk); else if (value && typeof value === 'object') Object.values(value).forEach(walk) }
+          try { walk(JSON.parse(content)) } catch { /* Evidence text is not necessarily JSON. */ }
+        }
+        if (name.endsWith('.md')) for (const match of content.matchAll(/\]\(([^\s)]+)(?:\s+[^)]*)?\)/g)) references.push(match[1])
+        for (const reference of references) {
+          if (/^[a-z]+:/i.test(reference) || reference.startsWith('/') || reference.includes('\\')) continue
+          const clean = reference.split('#')[0]
+          add(path.posix.join(path.posix.dirname(name), clean)); add(clean)
+        }
+      }
+    }
+    const scope = libraryManifest.filter(([name]) => compact ? selected.has(name) : !name.startsWith('components/') || name.startsWith(directory + '/'))
     return { library: manifest.library, revision: manifest.revision, component: path.posix.basename(directory), origin: 'portable-export', status: definition.status, sources,
-      files: Object.fromEntries(scope.flatMap(([name, sha256]) => {
+      ...(compact ? { deferredFiles: true } : {}), files: Object.fromEntries((compact ? [] : scope).flatMap(([name, sha256]) => {
         const bytes = libraryFiles.get(name), content = bytes.toString('utf8')
         return Buffer.from(content).equals(bytes) && !content.includes('\0') ? [[name, { path: name, sha256, content }]] : []
       })), artifacts: Object.fromEntries(scope) }
   })
   // Preserve the complete, independently verifiable package, including its skills.
   // Flattened library files retain compatibility with existing Arve artifact paths.
-  const output = new Map(libraryFiles)
+  const output = new Map(compact ? [] : libraryFiles)
   for (const name of ['package', 'snapshot.json', 'contracts.json']) {
     if ([...libraryFiles.keys()].some(key => key === name || key.startsWith(name + '/'))) throw new Error('Reserved import path: ' + name)
   }
@@ -86,6 +110,6 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const [bundle, ...rest] = process.argv.slice(2)
-  if (!bundle || rest.length) throw new Error('Usage: node scripts/import-contract-library.mjs <portable-export-directory>')
-  console.log(JSON.stringify(await importContractLibrary(bundle), null, 2))
+  if (!bundle || rest.some(arg => arg !== '--compact')) throw new Error('Usage: node scripts/import-contract-library.mjs <portable-export-directory> [--compact]')
+  console.log(JSON.stringify(await importContractLibrary(bundle, undefined, { compact: rest.includes('--compact') }), null, 2))
 }

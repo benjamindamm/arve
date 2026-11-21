@@ -1,3 +1,4 @@
+import { SiteAnchor } from './site-anchor'
 import type { Page } from '../payload-types'
 import { Content } from './content'
 import { colorPairs, exportColor, colorContrast } from './color-page-values'
@@ -23,9 +24,9 @@ export function ColorPage({content}: {content:Page['content']}) {
     <p className="cp-role"><code>{fg}</code> auf <code>{bg}</code></p>
    </section>
   })}</div>
-  <p className="cp-caption">Kontrast: opake sRGB-Paare. Die Beispiele verwenden Exportwerte; der Portalrahmen hat eigene Werte.</p>
+  <p className="cp-caption">Die Kontrastzahlen gelten für Text und Fläche ohne Transparenz. Die Beispiele verwenden Farbwerte aus dem lokalen Export; der Portalrahmen hat eigene Werte. Die genaue Berechnung und ihre Grenzen stehen in der Vertiefung.</p>
   <div className="cp-rules"><Content blocks={texts.slice(0,2)}/></div>
-  <a className="cp-next" href="/systems/shadcn/themes-und-zustaende">Themes und visuelle Zustände →</a>
+  <SiteAnchor className="cp-next" href="/systems/shadcn/themes-und-zustaende">Themes und visuelle Zustände →</SiteAnchor>
   <details className="cp-evidence"><summary>Kontrastberechnung, offene Rollen und Quellen</summary>
    <Content blocks={texts.slice(2)}/>
    <p>Referenzstand: <code className="cp-revision">{studies[0].revision}</code></p>

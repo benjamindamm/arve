@@ -1,0 +1,51 @@
+{
+  "reference": {
+    "library": "shadcn",
+    "component": "input",
+    "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26"
+  },
+  "status": "draft",
+  "sources": {
+    "interface": "components/input/interface.json",
+    "tokens": "tokens.json",
+    "css": "components/input/layout.css",
+    "behavior": "components/input/behavior.scxml",
+    "accessibility": "components/input/accessibility.html",
+    "accessibilityRules": "components/input/accessibility.rules.json",
+    "ux": "components/input/ux.json",
+    "stories": "components/input/stories.json"
+  },
+  "files": {
+    "components/input/README.md": {
+      "path": "components/input/README.md",
+      "sha256": "aada6a0fa2e37007a7cd2987035f4480f0f95df510d5bc3a5bf80e64a5e0460e",
+      "content": "# Input\n\nDer Draft beschreibt ein beschriftetes, einzeiliges Textfeld. [CEM](interface.json) bindet Textwert, Platzhalter, Disabled und das native `input`-Ereignis. In der [HTML-Vorlage](accessibility.html) liefert das sichtbare Label den zugänglichen Namen. Die [Projektionsregeln](accessibility.rules.json) dokumentieren die Zuständigkeit des nativen Textfeldes für Fokus und Eingabe.\n\n## Figma-Quelle\n\nDer [Importbeleg](figma/figma-observations.json) bindet `provenance://source/.figma-pool%2Fshadcn.fig` per SHA-256 und erfasst die 32 Varianten des Sets `1928:3990` auf Seite `73:1977`. Die Grundfläche misst 320 × 32 px. Figma verwendet 10 px horizontalen und 4 px vertikalen Innenabstand. Der fokussierte LTR-Platzhalter mit Standardrundung hat im Export einen kleinen Schlagschatten, das fokussierte Feld mit Text einen 3-px-Ring.\n\nDie [Stories](stories.json), [editierbare FIG](input.fig) und [PNG-Vorschau](preview.png) zeigen sieben LTR-Varianten in Light und Dark. Für diese Übung habe ich ein eigenständiges Textfeld ohne Icons und Add-ons mit eigenen Beispieltexten gewählt. Die [CSS-Projektion](layout.css) begrenzt die Breite auf 320 px und lässt das Feld in schmaleren Containern schrumpfen. Die Schatten und der ungebundene Disabled-Füllwert werden für beide Farbmodi aus dem Export übernommen. Die [DTCG-Tokens](../../tokens.json) halten Masse, Farben und Fundstellen fest. RTL und Destructive sind im Importbeleg erfasst. Der [OpenPencil-Export](provenance://source/tools%2Fopenpencil%2Fexport-shadcn-input.mjs) erzeugt die Vorschau mit [Hashnachweis](validation/preview-check.json).\n\n## Draft-Stand\n\nDas [SCXML-Modell](behavior.scxml) übernimmt String-Werte aus dem nativen `input`-Ereignis, solange das Feld aktiviert ist. `SET_VALUE` synchronisiert Host-Updates auch im deaktivierten Zustand. Das native Feld besitzt Fokus, Tastatur und IME. Das Modell verarbeitet weitergeleitete Zwischenwerte wie andere native Input-Ereignisse. Escape ändert den gespeicherten Wert nicht. Der Host erhält das ursprüngliche DOM-Ereignis. Das Modell erzeugt kein zusätzliches DOM-Ereignis. Der [Coverage-Record](validation/completeness.json) bindet die Modellstellen.\n"
+    },
+    "components/input/accessibility.html": {
+      "path": "components/input/accessibility.html",
+      "sha256": "1bfcca9ef310a6a3ed34b31df7dfbb31234eb70528bd8f7768e8b1ea0f922b78",
+      "content": "<template data-component=\"Input\">\n  <label for=\"input-project-name\" data-part=\"label\">Projektname</label>\n  <input id=\"input-project-name\" class=\"figma-input\" type=\"text\" data-part=\"control\">\n</template>\n"
+    },
+    "components/input/accessibility.rules.json": {
+      "path": "components/input/accessibility.rules.json",
+      "sha256": "3d2d93eaef220c95d5fdc08ec79c2e0c15c2f2e7f2609c9358d5735fd6b18867",
+      "content": "{\n  \"format\": \"ui-contract-a11y-projection-draft\",\n  \"labelSource\": \"Associate the visible label with the native text input through a unique id.\",\n  \"placeholder\": \"Supplementary example text. The visible label provides the accessible name.\",\n  \"projections\": {\n    \"disabled\": \"Use the native disabled property.\"\n  },\n  \"focus\": \"The native input owns text selection, focus and editing keys. Disabled controls are skipped in sequential navigation.\"\n}\n"
+    },
+    "components/input/behavior.scxml": {
+      "path": "components/input/behavior.scxml",
+      "sha256": "3e15c9b2a45e3dc1878717a71a8e7a0b104b331c45a2804690967d30c082b1ec",
+      "content": "<scxml xmlns=\"http://www.w3.org/2005/07/scxml\" version=\"1.0\"\n       datamodel=\"ecmascript\" name=\"Input\" initial=\"control\">\n  <!-- The host applies initial and updated properties to the native control.\n       It forwards the value from the native input event. The browser owns\n       focus, editing keys and IME. Focus and Escape leave the value intact. -->\n  <datamodel>\n    <data id=\"value\" expr=\"''\"/>\n  </datamodel>\n  <state id=\"control\" initial=\"enabled\">\n    <transition event=\"SET_VALUE\" cond=\"_event.data &amp;&amp; typeof _event.data.value === 'string'\">\n      <assign location=\"value\" expr=\"_event.data.value\"/>\n    </transition>\n    <state id=\"enabled\">\n      <transition event=\"DISABLE\" target=\"disabled\"/>\n      <transition event=\"FOCUS_IN FOCUS_OUT ESCAPE\"/>\n      <transition event=\"NATIVE_INPUT\" cond=\"_event.data &amp;&amp; typeof _event.data.value === 'string'\">\n        <assign location=\"value\" expr=\"_event.data.value\"/>\n      </transition>\n    </state>\n    <state id=\"disabled\">\n      <transition event=\"ENABLE\" target=\"enabled\"/>\n    </state>\n  </state>\n</scxml>\n"
+    },
+    "components/input/interface.json": {
+      "path": "components/input/interface.json",
+      "sha256": "a6b5ac69cc32388406ef5ef2c66f820f5ff0a89b7ae7746e7af5eef46aee5f57",
+      "content": "{\n  \"schemaVersion\": \"2.1.0\",\n  \"modules\": [\n    {\n      \"kind\": \"javascript-module\",\n      \"path\": \"input.js\",\n      \"declarations\": [\n        {\n          \"kind\": \"class\",\n          \"name\": \"Input\",\n          \"description\": \"Single-line text entry with a visible label.\",\n          \"members\": [\n            {\n              \"kind\": \"field\",\n              \"name\": \"value\",\n              \"type\": {\n                \"text\": \"string\"\n              },\n              \"description\": \"Current text.\",\n              \"default\": \"\\\"\\\"\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"label\",\n              \"type\": {\n                \"text\": \"string\"\n              },\n              \"description\": \"Visible name of the field.\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"placeholder\",\n              \"type\": {\n                \"text\": \"string\"\n              },\n              \"description\": \"Optional example text shown while the field is empty.\",\n              \"default\": \"\\\"\\\"\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"disabled\",\n              \"type\": {\n                \"text\": \"boolean\"\n              },\n              \"description\": \"Native disabled state.\",\n              \"default\": \"false\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"rounded\",\n              \"type\": {\n                \"text\": \"boolean\"\n              },\n              \"description\": \"Use the pill-shaped frame.\",\n              \"default\": \"false\"\n            }\n          ],\n          \"events\": [\n            {\n              \"name\": \"input\",\n              \"type\": {\n                \"text\": \"InputEvent\"\n              },\n              \"description\": \"Native text-edit event. Read the current text from the input target.\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+    },
+    "components/input/ux.json": {
+      "path": "components/input/ux.json",
+      "sha256": "cc932015b9faf43af53e42f27c09cf5f8ac204a3533788dd506c08d0a891413b",
+      "content": "{\n  \"componentId\": \"shadcn:Input\",\n  \"purpose\": \"Kurzen Freitext einzeilig erfassen, etwa einen Projektnamen. Der sichtbare Feldname bleibt bei Eingabe erhalten.\"\n}\n"
+    }
+  },
+  "implementations": []
+}

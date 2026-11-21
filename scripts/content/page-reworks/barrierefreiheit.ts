@@ -3,8 +3,8 @@ type Block = NonNullable<Page['content']>[number]
 function copy(blockName:string,...paragraphs:string[]):Block {
  return {blockType:'text',blockName,body:{root:{type:'root',version:1,direction:'ltr',format:'',indent:0,children:paragraphs.map(text=>({type:'paragraph',version:1,direction:'ltr',format:'',indent:0,children:[{type:'text',version:1,text,detail:0,format:0,mode:'normal',style:''}]}))}}}
 }
-// Eight original CMS blocks, read-only through MCP on 20 November 2026.
-// Freeze literally here; do not import the changing handbook snapshot.
+// Eight detailed guidance blocks, editorially revised from the MCP baseline.
+// Keep this release self-contained; do not import the changing handbook snapshot.
 const original: {content:Block[]} = {
   "content": [
     {
@@ -61,7 +61,7 @@ const original: {content:Block[]} = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Die folgenden Aufgaben beschreiben erwartete Ergebnisse. Die Ablaufentscheidungen führt das Formularpattern; Fokuswahl, Prüfzeitpunkt und Wiederherstellung sind dort redaktionelle Vorschläge. Prüfstand und Quellen stehen am Schluss.",
+                  "text": "Die folgenden Aufgaben beschreiben, was du prüfen sollst und welches Ergebnis dabei erwartet wird. Den Ablauf erläutert die Seite «Formulare und Validierung». Die dort vorgeschlagenen Fokusziele, Prüfzeitpunkte und Wege zur Wiederherstellung sind redaktionelle Vorschläge. Prüfstand und Quellen stehen am Schluss.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -155,7 +155,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Erreiche «Projektname» mit Tab. Prüfe mit Screenreader Name, Rolle, Pflichtstatus, Wert und Hilfe. Gib einen Wert ein; löse danach mit leerem Pflichtfeld «Projekt erstellen» aus.",
+                  "text": "Gehe mit Tab zum Feld «Projektname». Prüfe mit einem Screenreader Name, Rolle, Pflichtstatus, Wert und Hilfe. Gib einen Wert ein. Leere danach das Pflichtfeld und löse «Projekt erstellen» aus.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -362,7 +362,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Nach dem Fokusvorschlag führt ein eindeutig zugeordneter Fehler zum Feld, mehrere Fehler zur Übersicht. Diese nennt Labels und Korrekturen. Jeder Feldlink setzt bei Tastaturaktivierung den Fokus auf das richtige Eingabeelement; blosses Scrollen genügt hier nicht.",
+                  "text": "Der vorgeschlagene Ablauf setzt den Fokus bei einem eindeutig zugeordneten Fehler auf das Feld und bei mehreren Fehlern auf die Übersicht. Diese nennt die betroffenen Felder mit ihren Labels und erklärt die Korrekturen. Jeder Feldlink setzt bei Tastaturaktivierung den Fokus auf das richtige Eingabeelement; blosses Scrollen genügt hier nicht.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -389,7 +389,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Fokus bleibt sichtbar, die Reihenfolge nachvollziehbar. Übersicht und Feldhinweis sind mit Screenreader verständlich, ohne konkurrierende Mehrfachansagen. Während der Korrektur versetzt keine laufende Prüfung den Fokus.",
+                  "text": "Der Fokus bleibt sichtbar, seine Reihenfolge nachvollziehbar. Übersicht und Feldhinweis sind mit einem Screenreader verständlich, ohne konkurrierende Mehrfachansagen. Während der Korrektur verschiebt keine laufende Prüfung den Fokus.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -478,7 +478,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Nach erfolgreicher erneuter Prüfung verschwinden veralteter Fehlertext und Fehlerstatus; benötigte Hilfe bleibt zugeordnet. Gültige Angaben bleiben erhalten. Angekündigter Erhalt oder Verlust beim Abbruch stimmt mit dem Verhalten überein. Ein sichtbarer Wert belegt keine serverseitige Speicherung.",
+                  "text": "Nach erfolgreicher erneuter Prüfung verschwinden veralteter Fehlertext und Fehlerstatus; benötigte Hilfe bleibt zugeordnet. Gültige Angaben bleiben erhalten. Beim Abbruch bleiben Angaben erhalten oder gehen verloren, wie zuvor angekündigt. Ein sichtbarer Wert belegt keine serverseitige Speicherung.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -505,7 +505,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Prüfe nach Schliessen die Rückkehr zum Auslöser. Existiert er nicht mehr, braucht das Pattern ein sinnvolles erreichbares Folgeziel.",
+                  "text": "Prüfe nach dem Schliessen, ob der Fokus zum Auslöser zurückkehrt. Existiert dieser nicht mehr, muss der vorgesehene Ablauf ein sinnvolles, erreichbares Folgeziel bieten.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -594,7 +594,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "«Projekt wird erstellt …» bezeichnet die Übermittlung. Erfolg erscheint erst nach bestätigter Annahme; eine Ablehnung erklärt den nächsten Schritt. «Es ist noch unklar, ob das Projekt erstellt wurde.» benennt die Unsicherheit. Zuerst folgt Statusklärung, kein blindes erneutes Senden.",
+                  "text": "«Projekt wird erstellt …» zeigt die laufende Übermittlung an. Erfolg erscheint erst nach bestätigter Annahme; eine Ablehnung erklärt den nächsten Schritt. «Es ist noch unklar, ob das Projekt erstellt wurde.» benennt die Unsicherheit. Solange das Ergebnis unklar ist, wird nicht erneut gesendet. Kläre zuerst den Status; sende nur bei eindeutig bestätigter Nichtannahme und behobener Ursache erneut, wie unter «Formulare und Validierung» beschrieben.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -621,7 +621,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "«Status prüfen» setzt eine verlässliche verfügbare Statusabfrage voraus. Werteerhalt und Schutz vor doppelter Anlage müssen eigens nachgewiesen werden.",
+                  "text": "«Status prüfen» setzt voraus, dass eine verlässliche Statusabfrage verfügbar ist. Dass eingegebene Werte erhalten bleiben und das Projekt nicht doppelt angelegt wird, muss eigens nachgewiesen werden.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -648,7 +648,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Statusmeldungen ohne Kontextwechsel kommen ohne Fokusübernahme verständlich an. Stimme Fokussteuerung und Live-Rückmeldung ab: Nicht jede Änderung braucht eine Ansage oder einen dringenden Alert.",
+                  "text": "Statusmeldungen ohne Kontextwechsel sind verständlich, ohne den Fokus zu übernehmen. Stimme die Fokussteuerung mit den Live-Rückmeldungen ab: Nicht jede Änderung braucht eine Ansage oder einen dringenden Alert.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -764,7 +764,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Prüfe tatsächliche Text-/Hintergrund- und relevante Nichttext-Kontraste. Berechnete Tokenpaare ersetzen keine Prüfung gerenderter Zustände. Ein schmaler Screenshot belegt weder Textvergrösserung noch Reflow vollständig.",
+                  "text": "Prüfe den tatsächlichen Kontrast zwischen Text und Hintergrund sowie relevante Nichttext-Kontraste. Berechnete Tokenpaare ersetzen keine Prüfung der dargestellten Zustände. Ein schmaler Screenshot belegt weder Textvergrösserung noch Reflow vollständig.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1025,7 +1025,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "Notiere Umsetzung/Revision, Datum, prüfende Person, Browser/Betriebssystem, Screenreader-Version, relevante Sprache/Theme/Vergrösserung, Eingabe, Erwartung, Beobachtung und Abweichungen. Bestanden gilt nur für diesen Fall; fehlende Zweige bleiben nicht prüfbar. DOM-Inspektion, assistiver Durchlauf, Kontrastrechnung und Nutzungsforschung liefern unterschiedliche Teilnachweise.",
+                  "text": "Halte fest, wer welche Umsetzung und Revision an welchem Datum geprüft hat. Notiere die Testumgebung: Browser und Betriebssystem, Screenreader-Version sowie relevante Sprache, Theme und Vergrösserung. Beschreibe die Eingabe, das erwartete Ergebnis, deine Beobachtung und mögliche Abweichungen. Ein bestandenes Ergebnis gilt nur für diesen Prüffall; nicht geprüfte Abläufe bleiben offen. DOM-Inspektion, Prüfung mit assistiven Technologien, Kontrastrechnung und Nutzungsforschung belegen jeweils unterschiedliche Aspekte.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1079,7 +1079,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "WCAG 2.2 führt Labels/Anleitungen (3.3.2, A), Fehleridentifikation (3.3.1, A), bekannte Korrekturvorschläge mit Ausnahmen (3.3.3, AA), sichtbaren Text im zugänglichen Namen (2.5.3, A) und Statusmeldungen ohne Fokusübernahme (4.1.3, AA). Textvergrösserung und Reflow (1.4.4/1.4.10, AA) haben eigene Bedingungen und Ausnahmen, etwa notwendige zweidimensionale Layouts beim Reflow.",
+                  "text": "WCAG 2.2 enthält Kriterien zu Labels und Anleitungen (3.3.2, A), Fehleridentifikation (3.3.1, A), bekannten Korrekturvorschlägen mit Ausnahmen (3.3.3, AA), sichtbarem Text im zugänglichen Namen (2.5.3, A) und Statusmeldungen ohne Fokusübernahme (4.1.3, AA). Für Textvergrösserung und Reflow (1.4.4/1.4.10, AA) gelten eigene Bedingungen und Ausnahmen, etwa notwendige zweidimensionale Layouts beim Reflow.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1138,7 +1138,7 @@ const original: {content:Block[]} = {
                 },
                 {
                   "mode": "normal",
-                  "text": "WAI-Tutorial und Understanding-Dokument unterstützen die Gestaltung. Fehlerübersicht und konkretes Fokusziel sind Lösungswege, keine pauschale WCAG-Pflicht. Produkt und Accessibility-Review entscheiden die lokalen Vorschläge für die jeweilige Umsetzung.",
+                  "text": "Das WAI-Tutorial und das Understanding-Dokument unterstützen die Gestaltung. Eine Fehlerübersicht und ein bestimmtes Fokusziel sind mögliche Lösungswege, keine pauschale WCAG-Pflicht. Das Produktteam und die Verantwortlichen für die Barrierefreiheitsprüfung entscheiden, welche der redaktionellen Vorschläge sie für die jeweilige Umsetzung übernehmen.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1223,17 +1223,17 @@ const original: {content:Block[]} = {
 }
 
 export const release = {
- expectedUpdatedAt:'2026-11-18T00:12:33.294Z',
- summary:'Prüfe einen Formularweg mit Tastatur, verständlichen Labels, erkennbaren Zuständen und Vergrösserung. Konkrete Aufgaben mit erwartbaren Ergebnissen.',
+ expectedUpdatedAt:'2026-11-20T15:16:36.117Z',
+ summary:'Prüfe ein Formular mit Tastatur, Screenreader und Vergrösserung. Vier Aufgaben zeigen, worauf es bei Labels, Fokus, Fehlern und Ergebnissen ankommt.',
  content:[
- copy('access-example','Am Fehler weiterarbeiten','Schematische Darstellung eines Fehlerzustands – kein ausführbares Formular und kein Prüfnachweis.','Projekt erstellen','Projektname (Pflichtfeld)','Zum Beispiel: Kundenportal','Einen Projektnamen eingeben.','Projekt erstellen','Label bleibt sichtbar','Hilfe und Korrektur stehen beim Feld. Bedeutung kommt auch als Text an.','Fokus bleibt unterscheidbar','Die blaue Kontur veranschaulicht den Tastaturfokus zusätzlich zum Fehlerzustand.','Vom Beispiel zur Prüfung','Die Darstellung zeigt die beabsichtigte Gestaltung. Die folgenden Aufgaben werden an einer konkreten Webumsetzung ausgeführt.'),
+ copy('access-example','Einen Fehler verstehen und korrigieren','Diese schematische Darstellung zeigt einen Fehlerzustand. Sie ist kein ausführbares Formular und belegt kein Prüfergebnis.','Projekt erstellen','Projektname (Pflichtfeld)','Zum Beispiel: Kundenportal','Einen Projektnamen eingeben.','Projekt erstellen','Das Label bleibt sichtbar','Hilfe und Korrektur stehen beim Feld. Der Fehler wird auch durch Text erklärt.','Der Fokus bleibt unterscheidbar','Die blaue Kontur veranschaulicht den Tastaturfokus zusätzlich zum Fehlerzustand.','Vom Beispiel zur Prüfung','Die Darstellung zeigt die beabsichtigte Gestaltung. Führe die folgenden Aufgaben an einer konkreten Webumsetzung aus.'),
  copy('access-checks','Vier Prüfaufgaben für den vollständigen Weg','Aufgabe','Erwartbares Ergebnis',
- 'Tastatur und Fokus','Gehe mit Tab und Umschalt+Tab durch das Formular und sende mit leerem Pflichtfeld ab. Prüfe einen Fehler; prüfe mehrere Fehler an einem geeigneten Mehrfeldformular.','Der Fokus ist sichtbar und nicht verdeckt; die Reihenfolge ist nachvollziehbar. Nach dem lokalen Fokusvorschlag führt ein Fehler zum Feld, mehrere zur Übersicht. Deren Feldlinks fokussieren bei Tastaturaktivierung die zugehörige Eingabe.',
- 'Labels und Fehler','Erreiche Projektname mit Screenreader. Prüfe Name, Rolle, Pflichtstatus, Wert und Hilfe. Korrigiere den Fehler und sende erneut ab.','Das sichtbare Label ist im zugänglichen Namen enthalten. Hilfe und Fehler sind zugeordnet, der Fehlerstatus ist wahrnehmbar. Nach erfolgreicher erneuter Prüfung verschwinden veralteter Fehlertext und Fehlerstatus; gültige Angaben bleiben erhalten.',
- 'Zustände und Ergebnis','Erzeuge laufende Übermittlung, bestätigten Erfolg, fachliche Ablehnung und unklare Antwort in einer geeigneten Testumgebung. Prüfe die Übergänge mit Screenreader.','Statusmeldungen ohne Kontextwechsel kommen ohne Fokusübernahme verständlich an. Erfolg erscheint erst nach bestätigter Annahme. Bei unklarem Ergebnis folgt zuerst Statusklärung; eine Statusabfrage und der Schutz vor doppelter Anlage brauchen eigene Nachweise.',
- 'Reflow, Zoom und Kontrast','Prüfe separat 200 Prozent Textvergrösserung und 320 CSS-Pixel Inhaltsbreite, etwa 1280 CSS-Pixel bei 400 Prozent Browserzoom. Prüfe geringe Höhe und Fehler plus Fokus in jedem vorgesehenen Theme.','Label, Hilfe, Fehler und Aktion bleiben lesbar und bedienbar; lange Meldungen umbrechen. Das vertikale Formular erfordert kein Scrollen in zwei Richtungen. Fixierte Bereiche verdecken den Fokus nicht. Miss die tatsächlichen Text- und relevanten Nichttext-Kontraste.'),
- copy('access-rules','Beim Gestalten festhalten','Labels benennen, Hinweise ergänzen und Fehler erklären die konkrete Korrektur. Platzhalter ersetzen kein Label.','Fokus, Fehler und Übermittlung getrennt zeigen. Farbe allein trägt keine Bedeutung.','Abbruch, Rückweg und Korrektur erhalten Angaben so, wie es angekündigt wurde. Einen sichtbaren Wert nicht als gespeicherten Wert behandeln.'),
- copy('access-limits','Prüfgrenzen vor dem Review lesen','Diese Seite formuliert Prüfaufgaben und erwartbare Ergebnisse. Sie bestätigt keine allgemeine Konformität oder Produktfreigabe.','Ein schmaler Screenshot belegt weder Textvergrösserung noch vollständigen Reflow. Die schematische Darstellung belegt keine Tastatur-, Screenreader-, Touch- oder Serverfunktion.','Für jedes Ergebnis Umsetzung/Revision, Datum, prüfende Person, Browser/Betriebssystem, Screenreader-Version, Sprache, Theme, Vergrösserung, Eingabe, Erwartung, Beobachtung und Abweichungen notieren. Fehlende Zweige bleiben offen.','Originale Prüfaufträge, Quellen und Grenzen','Die folgenden acht CMS-Blöcke sind der unveränderte Ausgangsstand vom 18. November 2026 (2026-11-18T00:12:33.294Z), am 20. November 2026 ausgelesen. Ihr damaliger Prüfstand ist historisch erhalten.'),
+ 'Tastatur und Fokus','Gehe mit Tab und Umschalt+Tab durch das Formular und sende mit leerem Pflichtfeld ab. Prüfe den Fall mit einem Fehler und an einem geeigneten Mehrfeldformular auch den Fall mit mehreren Fehlern.','Der Fokus ist sichtbar und nicht verdeckt; die Reihenfolge ist nachvollziehbar. Der vorgeschlagene Ablauf setzt den Fokus bei einem Fehler auf das Feld und bei mehreren auf die Übersicht. Deren Feldlinks setzen bei Tastaturaktivierung den Fokus auf die zugehörige Eingabe.',
+ 'Labels und Fehler','Gehe mit einem Screenreader zum Feld «Projektname». Prüfe Name, Rolle, Pflichtstatus, Wert und Hilfe. Korrigiere den Fehler und sende erneut ab.','Das sichtbare Label ist im zugänglichen Namen enthalten. Hilfe und Fehler sind zugeordnet, der Fehlerstatus ist wahrnehmbar. Nach erfolgreicher erneuter Prüfung verschwinden veralteter Fehlertext und Fehlerstatus; gültige Angaben bleiben erhalten.',
+ 'Zustände und Ergebnis','Erzeuge in einer geeigneten Testumgebung eine laufende Übermittlung, einen bestätigten Erfolg, eine fachliche Ablehnung und eine unklare Antwort. Prüfe die Übergänge mit einem Screenreader.','Statusmeldungen ohne Kontextwechsel sind verständlich, ohne den Fokus zu übernehmen. Erfolg erscheint erst nach bestätigter Annahme. Bei unklarem Ergebnis wird zuerst der Status geklärt. Eine verlässliche Statusabfrage und der Schutz vor doppelter Anlage müssen eigens nachgewiesen werden.',
+ 'Reflow, Zoom und Kontrast','Prüfe separat 200 Prozent Textvergrösserung und 320 CSS-Pixel Inhaltsbreite, etwa 1280 CSS-Pixel bei 400 Prozent Browserzoom. Prüfe auch bei geringer Fensterhöhe. Zeige Fehler und Fokus gleichzeitig in jedem vorgesehenen Theme.','Label, Hilfe, Fehler und Aktion bleiben lesbar und bedienbar; lange Meldungen umbrechen. Das vertikale Formular erfordert kein Scrollen in zwei Richtungen. Fixierte Bereiche verdecken den Fokus nicht. Miss die tatsächlichen Text- und relevanten Nichttext-Kontraste.'),
+ copy('access-rules','Worauf es beim Gestalten ankommt','Labels benennen die Felder, Hinweise ergänzen die Angaben und Fehlermeldungen erklären die konkrete Korrektur. Platzhalter ersetzen kein Label.','Zeige Fokus, Fehler und laufende Übermittlung als unterscheidbare Zustände. Verwende neben Farbe weitere Merkmale, um ihre Bedeutung zu vermitteln.','Bei Abbruch, Rückweg und Korrektur müssen Angaben so erhalten bleiben, wie es angekündigt wurde. Ein sichtbarer Wert belegt keine Speicherung.'),
+ copy('access-limits','Was diese Seite belegt','Diese Seite beschreibt Prüfaufgaben und erwartbare Ergebnisse. Sie bestätigt keine allgemeine Konformität oder Produktfreigabe.','Ein schmaler Screenshot belegt weder Textvergrösserung noch vollständigen Reflow. Die schematische Darstellung belegt keine Tastatur-, Screenreader-, Touch- oder Serverfunktion.','Prüfe die Abläufe in der vorgesehenen Umsetzung und Testumgebung. Halte erwartete und beobachtete Ergebnisse getrennt fest. Nicht geprüfte Abläufe bleiben offen; die genauen Angaben zur Dokumentation stehen in der Vertiefung.','Prüfaufträge, Quellen und offene Nachweise','Die folgenden Prüfaufträge erläutern Bedingungen, erwartete Ergebnisse und Quellen im Detail. Die Erläuterungen wurden sprachlich überarbeitet; der dokumentierte Prüfstand vom 18. November 2026 bleibt erhalten.'),
  ...original.content,
  ] satisfies Page['content'],
 }

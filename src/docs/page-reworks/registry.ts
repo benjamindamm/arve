@@ -1,7 +1,9 @@
 import type { ComponentType } from 'react'
 import type { Page } from '../../payload-types'
-type Props = { content: Page['content']; demo?: Page['demo'] }
+import type { Entry } from '../published-documentation'
+type Props = { content: Page['content']; demo?: Page['demo']; summary?: Page['summary']; catalogueEntries?: Entry[] }
 const loaders: Record<string, () => Promise<{default: ComponentType<Props>}>> = {
+  frameworks: () => import('./frameworks'),
   'referenz-pflegen': () => import('./referenz-pflegen'),
   'technische-anbindung': () => import('./technische-anbindung'),
   'release-stand': () => import('./release-stand'),

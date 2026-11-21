@@ -15,7 +15,7 @@ function block(blockName: string, title: string, copy: string[], destination?: [
 // Published CMS read on 20 November 2026, push:false and a read-only DB connection.
 // The overview originally has no CMS content blocks; no original study is replaced.
 export const release = {
-  expectedUpdatedAt: '2026-11-20T09:07:26.348Z',
+  expectedUpdatedAt: '2026-11-20T14:08:28.181Z',
   summary: 'Content layouts ordnen Inhalte innerhalb einer Card oder eines Abschnitts; Page layouts ordnen die grossen Bereiche der gesamten Seite.',
   content: [
     block('clo-label-value', 'Label–Value', [

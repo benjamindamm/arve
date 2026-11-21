@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "command.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Command",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Command wraps cmdk1.1.1. Root value/defaultValue is the active/highlighted item string, not a completed operation; Root onValueChange is that highlight callback. In this pinned implementation that callback is emitted in the controlled Root path, so this reference supplies controlled value/onValueChange and always mirrors the returned value. This is not a cancellable request; ignoring it is not promised to veto cmdk internal transient highlight. Item onSelect(value:string) is the actual invocation callback. Input has its own value/onValueChange(search:string). Item values and keywords are trimmed; supply stable unique values rather than relying on changing text content. Default fuzzy filtering/scoring sorts matches; shouldFilter=false transfers filtering/rendering to the caller, forceMount bypasses an item/group filter, loop defaults false, disablePointerSelection controls pointer highlight and vimBindings defaults true. Disabled items are excluded from enabled navigation/activation; there is no whole-Root disabled prop. List is listbox, input is combobox with active-descendant relation, items are option (not menuitem), group headings supply source relations. Empty is presentation; this reference supplies explicit status text for no results. Shortcut is only displayed text and registers no global shortcut. CommandDialog composes the existing Base UI Dialog contract, defaults title Command Palette/description Search for a command to run and showCloseButton=false. Its title/description are registered sibling parts before DialogContent; this reference mounts that composed actor on opening and removes it after onOpenChangeComplete(false), avoiding stray closed-state sibling headings while retaining the source closing lifecycle. The reference explicitly sets showCloseButton=true, so cancel is available without a physical Escape key or executing a command. It does not register a global Meta+K listener or automatically close after onSelect; caller invocation may close it explicitly."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:20."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: string) => void"
+              },
+              "description": "Actual controlled cmdk highlight callback, not command execution."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "command",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandDialog",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "Omit<React.ComponentProps<typeof Dialog>, \"children\"> & {\n  title?: string\n  description?: string\n  className?: string\n  showCloseButton?: boolean\n  children: React.ReactNode\n}"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"title\": \"\\\"Command Palette\\\"\", \"description\": \"\\\"Search for a command to run...\\\"\", \"showCloseButton\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:36."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: DialogPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual composed Base UI Dialog request; existing Dialog contract governs modality/focus/cancellation."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Composed source Dialog transition completion."
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "CommandInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Search string, independently controlled from active command item."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.Input>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:69."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(search: string) => void"
+              },
+              "description": "Actual cmdk Input query callback."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "command-input-wrapper",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "command-input",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.List>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:99."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "command-list",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandEmpty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.Empty>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:115."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "command-empty",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.Group>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:128."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "command-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.Separator>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:141."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "command-separator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof CommandPrimitive.Item>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:154."
+            }
+          ],
+          "events": [
+            {
+              "name": "onSelect",
+              "type": {
+                "text": "(value: string) => void"
+              },
+              "description": "Actual enabled command invocation callback, distinct from Root highlight."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "command-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CommandShortcut",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source:181."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "command-shortcut",
+              "description": "Actual source data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

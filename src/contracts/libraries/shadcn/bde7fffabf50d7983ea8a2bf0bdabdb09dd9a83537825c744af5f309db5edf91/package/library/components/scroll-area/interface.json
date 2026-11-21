@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "scroll-area.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ScrollArea",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ScrollAreaPrimitive.Root.Props"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/scroll-area.tsx.source:7; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "scroll-area",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            },
+            {
+              "name": "scroll-area-viewport",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ScrollBar",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ScrollAreaPrimitive.Scrollbar.Props"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/scroll-area.tsx.source:30; defaults: {\"orientation\": \"\\\"vertical\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "scroll-area-scrollbar",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            },
+            {
+              "name": "scroll-area-thumb",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

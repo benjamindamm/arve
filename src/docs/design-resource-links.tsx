@@ -1,3 +1,4 @@
+import { SiteAnchor } from './site-anchor'
 import { designResources } from './design-resources'
 
 export function DesignResourceLinks({ system, section }: { system: string; section: string }) {
@@ -13,7 +14,7 @@ export function DesignResourceLinks({ system, section }: { system: string; secti
         <strong>{title}</strong>
         <p>{formats[0].description}</p>
         <p>{formats.map((resource, index) => <span key={resource.id}>
-          {index > 0 && ' · '}<a href={resource.url} download>{resource.kind.toUpperCase()} herunterladen</a>
+          {index > 0 && ' · '}<SiteAnchor href={resource.url} download>{resource.kind.toUpperCase()} herunterladen</SiteAnchor>
         </span>)}</p>
       </li>)}
     </ul>

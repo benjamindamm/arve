@@ -1,6 +1,6 @@
 import type { Page } from '../../payload-types'
 import { Content } from '../content'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 
 export default function SystemStatesGuide({ content }: { content: Page['content'] }) {
   const blocks = content ?? []

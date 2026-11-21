@@ -20,7 +20,7 @@ export function LayoutExample({ id }: { id: string }) {
   if (!example) return null
   return (
     <main className="shell layout-example" id="inhalt">
-      <Link href="/systems/shadcn/layout">← Grid und Abstände</Link>
+      <Link href="/systems/shadcn/layout">← Layouts</Link>
       <header>
         <h1>{example.title}</h1>
         <p>{example.description}</p>

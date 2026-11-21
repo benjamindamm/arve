@@ -1,8 +1,8 @@
 import type { Page } from '../../../src/payload-types'
 
 export const release = {
-  "expectedUpdatedAt": "2026-11-17T22:33:55.374Z",
-  "summary": "Projekte vergleichen, bewusst zwischen Tabelle und Liste wählen und Auswahl, Sortierung sowie Zeilenaktionen eindeutig gestalten.",
+  "expectedUpdatedAt": "2026-11-20T14:38:03.043Z",
+  "summary": "Wähle eine Tabelle zum Vergleichen oder eine Liste für einzelne Projekte. Gestalte Auswahl, Sortierung und Aktionen so, dass ihr Umfang klar ist.",
   "content": [
     {
       "blockType": "text",
@@ -37,7 +37,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Synthetische Beispieldaten · Auswahl, Sortierung und Vorschau bleiben lokal und werden beim Neuladen zurückgesetzt."
+                  "text": "Beispieldaten · Auswahl, Sortierung und Vorschau gelten nur auf dieser Seite und werden beim Neuladen zurückgesetzt."
                 }
               ],
               "direction": "ltr",
@@ -461,7 +461,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Tabelle: wenn du gleiche Merkmale über mehrere Projekte vergleichst, etwa Status und Aufwand oben."
+                  "text": "Tabelle: wenn du mehrere Projekte anhand derselben Merkmale vergleichst, etwa Status und Aufwand im Beispiel oben."
                 }
               ],
               "direction": "ltr",
@@ -475,7 +475,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Liste: wenn du ein Projekt erkennst und seinen nächsten Schritt brauchst. Das statische Schema unten zeigt dafür Name, Kontext und eine eindeutige Fortsetzung."
+                  "text": "Liste: wenn du ein einzelnes Projekt finden und sehen möchtest, was als Nächstes zu tun ist. Das statische Beispiel unten zeigt dafür den Namen, den Kontext und die nächste Aufgabe."
                 }
               ],
               "direction": "ltr",
@@ -589,7 +589,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "1 · Vergleich bestimmt die Form. Spalten tragen vergleichbare Merkmale; eine Liste priorisiert Identität und nächsten Schritt. Kein Datenraster allein wegen vieler Einträge."
+                  "text": "1 · Wähle die Form nach der Aufgabe. In einer Tabelle lassen sich dieselben Merkmale mehrerer Projekte vergleichen. Eine Liste stellt das einzelne Projekt und seine nächste Aufgabe in den Vordergrund. Viele Einträge allein sind kein Grund für eine Tabelle."
                 }
               ],
               "direction": "ltr",
@@ -603,7 +603,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "2 · Auswahl braucht einen Umfang. Kopfcheckbox und Zähler gelten hier für alle vier sichtbaren Projekte. Teilwahl zeigt einen gemischten Kopfzustand; Sortieren erhält die Auswahl anhand der Projekt-ID. Gemeinsame Aktionen stehen ausserhalb der Zeilen."
+                  "text": "2 · Zeige, welche Einträge ausgewählt werden. Die Checkbox im Tabellenkopf und der Zähler beziehen sich hier auf alle vier sichtbaren Projekte. Ist nur ein Teil ausgewählt, zeigt die Checkbox einen Strich. Beim Sortieren bleibt die Auswahl über die Projekt-ID erhalten. Aktionen für mehrere ausgewählte Einträge stehen ausserhalb der Zeilen."
                 }
               ],
               "direction": "ltr",
@@ -617,7 +617,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "3 · Sortierung und Zeilenaktion bleiben getrennt. Sortierbutton, Richtung und Reihenfolge sind sichtbar. Gleicher Aufwand wird nach Projekt-ID geordnet. Die lokale Projektinfo gehört genau zur benannten Zeile."
+                  "text": "3 · Trenne Sortierung und Aktionen für einzelne Zeilen. Der Button zum Sortieren, die Sortierrichtung und die Reihenfolge sind sichtbar. Bei gleichem Aufwand entscheidet die Projekt-ID über die Reihenfolge. Die lokale Projektinfo gehört genau zu dem Projekt, für das sie geöffnet wurde."
                 }
               ],
               "direction": "ltr",
@@ -675,7 +675,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Wähle oben ein Projekt: Der Kopf zeigt einen Strich; der Zähler nennt die Teilmenge. „Auswahl ansehen“ wird verfügbar. Ohne Auswahl bleibt die Vorschau deaktiviert."
+                  "text": "Wähle oben ein Projekt: Die Checkbox im Tabellenkopf zeigt einen Strich, und der Zähler nennt die Anzahl ausgewählter Projekte. „Auswahl ansehen“ wird verfügbar. Ohne Auswahl bleibt die Vorschau deaktiviert."
                 }
               ],
               "direction": "ltr",
@@ -703,7 +703,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Noch keine Projekte. Leere Tabelle durch einen verständlichen Leerzustand ersetzen; keine nutzlose Kopfcheckbox oder Sortieraktion zeigen."
+                  "text": "Noch keine Projekte. Ersetze die leere Tabelle durch eine verständliche Meldung. Blende die Checkbox im Tabellenkopf und die Sortieraktionen aus, wenn es keine Einträge gibt."
                 }
               ],
               "direction": "ltr",
@@ -731,7 +731,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Projekte konnten nicht geladen werden. Bestehende Zeilen und Auswahl bei einer Aktualisierung erhalten und den Fehler am Ergebnisbereich zeigen. Die Texte hier sind Gestaltungsbeispiele, keine simulierte Datenanbindung."
+                  "text": "Projekte konnten nicht geladen werden. Erhalte bei einer fehlgeschlagenen Aktualisierung die bestehenden Zeilen und die Auswahl. Zeige den Fehler am Ergebnisbereich. Die Texte hier sind Gestaltungsbeispiele; eine Datenanbindung wird nicht simuliert."
                 }
               ],
               "direction": "ltr",
@@ -789,7 +789,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Das Beispiel enthält vollständig vier Projekte. Pagination und Nachladen sind nicht eingebaut. Bei grösseren Mengen sichtbare Anzahl, Gesamtmenge sofern bekannt und Auswahlumfang ausdrücklich festlegen. „Alle sichtbaren“ und „alle Treffer“ sind unterschiedliche Aktionen. Eine fachliche Auswahlstrategie bei Filter- oder Seitenwechsel muss das Produkt festlegen."
+                  "text": "Das Beispiel zeigt alle vier Projekte. Blättern zwischen Ergebnisseiten und Nachladen sind nicht eingebaut. Lege bei grösseren Mengen ausdrücklich fest, wie viele Einträge sichtbar sind, wie viele es insgesamt gibt, sofern bekannt, und für welche Einträge die Auswahl gilt. „Alle sichtbaren“ und „alle Treffer“ sind unterschiedliche Aktionen. Das Produkt muss festlegen, was beim Filtern oder beim Wechsel der Ergebnisseite mit der Auswahl geschieht."
                 }
               ],
               "direction": "ltr",
@@ -803,7 +803,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Sortierung und Auswahl bleiben nur bis zum Neuladen dieser Seite erhalten; URL, Rückkehr aus Details und geräteübergreifende Persistenz sind hier nicht implementiert."
+                  "text": "Sortierung und Auswahl bleiben nur bis zum Neuladen dieser Seite erhalten. Sie werden hier weder in der URL gespeichert noch bei der Rückkehr aus einer Detailansicht wiederhergestellt oder auf andere Geräte übertragen."
                 }
               ],
               "direction": "ltr",
@@ -995,7 +995,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Die Forschungsbeobachtungen UX-009/010/011/026 sind Kandidaten mit begrenztem Nachweis: kein allgemeiner Abschluss einer Mehrfachaktion, kein belastbarer gemischter Kopfzustand in der beobachteten Oberfläche, keine bewiesene fachliche Umsortierung und kein Nachweis für Serverpagination oder Gesamtmenge."
+                  "text": "Die Forschungsbeobachtungen UX-009/010/011/026 sind mögliche Muster mit begrenzten Nachweisen. Sie belegen nicht allgemein, wie eine Aktion für mehrere ausgewählte Einträge abgeschlossen wird. Auch die Anzeige einer teilweisen Auswahl im Tabellenkopf und die fachlich korrekte Umsortierung sind in der beobachteten Oberfläche nicht belastbar nachgewiesen. Ebenso fehlen Nachweise für eine serverseitige Aufteilung auf Ergebnisseiten und für die Gesamtzahl der Einträge."
                 }
               ],
               "direction": "ltr",
@@ -1009,7 +1009,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Der gemischte Kopfzustand und die deterministische Sortierung sind bewusste Gestaltungsentscheidungen dieses lokalen Beispiels. Sie sind keine nachträgliche Behauptung über die Originalbeobachtung. Die lokale Vorschau führt keine Backendaktion aus."
+                  "text": "Die Anzeige einer teilweisen Auswahl im Tabellenkopf und die eindeutig festgelegte Sortierreihenfolge wurden bewusst für dieses lokale Beispiel gestaltet. Sie werden damit nicht nachträglich als Eigenschaften der ursprünglich beobachteten Oberfläche dargestellt. Die lokale Vorschau führt keine Aktion im Backend aus."
                 }
               ],
               "direction": "ltr",

@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Table",
+  "referenceComposition": "<div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payments</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th scope=\"col\" data-slot=\"table-head\">Customer</th><th scope=\"col\" data-slot=\"table-head\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><th scope=\"row\">Alex</th><td data-slot=\"table-cell\">CHF 120</td></tr></tbody></table></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Native caption, header scopes and textual cell values communicate the full table without color or hover. Complex header relationships use IDs/headers as required by that dataset.",
+  "updatesAndDescendants": "Table wraps a native table in an overflow container; header/body/footer/head/row/cell/caption retain their native tags. No sorting, filtering, row selection or grid keyboard protocol is built in. Data Table composes those features separately. Parent updates replace rows without moving focus automatically.",
+  "referenceDecision": "The sample dataset, caption and explicit scopes are caller-supplied reference content. No ARIA grid role or roving tabindex is added to an ordinary table.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

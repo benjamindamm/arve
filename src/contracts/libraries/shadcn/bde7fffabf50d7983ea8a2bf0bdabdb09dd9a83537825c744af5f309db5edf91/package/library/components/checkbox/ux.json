@@ -1,0 +1,19 @@
+{
+  "componentId": "shadcn:Checkbox",
+  "purpose": "Choose a boolean option with an independent mixed-state presentation and native hidden form input.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "primitiveVersion": "1.9.0",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/checkbox.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/checkbox.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/checkbox-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/checkbox.md.source"
+  ],
+  "decisions": {
+    "scope": "Sufficient source-bound React reference description; no certification of every consumer or native platform.",
+    "normalizedProtocol": "SCXML events project source callbacks/native interactions. Send entries document the observed callback and are not additional DOM dispatches. The adapter supplies isCanceled after the source callback transaction. Controlled SET_VALUE/SET_CHECKED props remain authoritative.",
+    "visual": "Native FIG observations and DTCG values remain visual truth. React styles may differ; no unverified pixel equivalence is assumed."
+  }
+}

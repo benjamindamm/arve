@@ -1,18 +1,14 @@
 /* Reading rhythm for handbook pages; component specimens keep their own metrics. */
-.docs-layout {
-  grid-template-columns: 208px minmax(0, 800px);
-  gap: clamp(40px, 6vw, 80px);
-  padding-block: clamp(40px, 5vw, 72px) 48px;
-  align-items: start;
-}
-.documentation-sidebar { min-width: 0; position: sticky; top: 24px; }
-.docs-desktop-menu { max-height: calc(100dvh - 48px); overflow-y: auto; scrollbar-width: thin; padding-right: 12px; }
+.docs-layout.shell { width: min(1440px, calc(100% - 96px)); grid-template-columns: 232px minmax(0, 1fr); gap: clamp(48px, 5vw, 80px); padding-block: 48px; align-items: start; }
+.docs-layout .article { max-width: 1040px; font-size: 16px; }
+.documentation-sidebar { min-width: 0; position: sticky; top: 24px; display: flex; flex-direction: column; max-height: calc(100dvh - 48px); }
+.handbook-chapter-access, .handbook-nav-title { flex-shrink: 0; }
+.docs-desktop-menu { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; padding-right: 12px; }
 .docs-nav { font-size: .875rem; line-height: 1.5; }
-.docs-nav > .docs-tree > li + li { margin-top: 16px; }
+.docs-nav > .docs-tree > li + li { margin-top: 8px; }
 .docs-tree .docs-tree { border-left: 1px solid var(--border); margin: 6px 0 0 10px; padding-left: 6px; }
-.docs-mobile-menu { display: none; }
-.article h1 { max-width: 18ch; font-size: clamp(36px, 4.5vw, 56px); line-height: 1.12; letter-spacing: -.045em; margin-bottom: 24px; }
-.article > .lead { max-width: 54ch; font-size: clamp(18px, 2vw, 21px); line-height: 1.65; color: var(--muted-foreground); margin: 0 0 48px; }
+.article h1 { max-width: 24ch; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -.045em; margin-bottom: 24px; }
+.article > .lead { max-width: 65ch; font-size: 18px; line-height: 1.65; color: var(--muted-foreground); margin: 0 0 48px; }
 .article > .rich-text { max-width: 65ch; margin-block: 56px; }
 .article > .rich-text h2 { font-size: clamp(22px, 2.5vw, 27px); line-height: 1.3; margin: 48px 0 20px; letter-spacing: -.025em; }
 .article > .rich-text h2:first-child { margin-top: 0; }
@@ -48,17 +44,7 @@
 .article .cs-sequence { margin-block: 40px; gap: 24px; }
 .article .cs-text-version, .article .fs-text-alternative { margin-top: 32px; }
 .article .cs-text-version > p, .article .fs-text-alternative > p { max-width: 65ch; line-height: 1.8; }
-@media (max-width: 960px) {
-  .docs-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; max-width: 800px; }
-  .documentation-sidebar { position: static; }
-  .docs-desktop-menu { display: none; }
-  .docs-mobile-menu { display: block; border-block: 1px solid var(--border); }
-  .docs-mobile-menu > summary { padding: 18px 4px; cursor: pointer; font-weight: 600; }
-  .docs-mobile-menu > summary:focus-visible { outline: 3px solid var(--ring); outline-offset: 4px; }
-  .docs-mobile-menu .docs-nav { padding: 12px 0 24px; display: grid; }
-}
 @media (max-width: 520px) {
-  .docs-layout { padding-top: 24px; }
   .article > .lead { margin-bottom: 32px; }
   .article > .rich-text { margin-block: 40px; }
   .article > .component-study, .article > .foundation-study { margin-block: 40px; padding-block: 32px; }
@@ -109,12 +95,9 @@
 @container (max-width: 639px) { .cl-pairs > div { grid-template-columns: 1fr; gap: 8px; } .cl-card-header, .cl-actions { flex-direction: column; } }
 
 /* Handbook reading layout: wide specimens, restrained reading measure. */
-.docs-layout.shell { width: min(1440px, calc(100% - 96px)); grid-template-columns: 232px minmax(0, 1fr); gap: clamp(56px, 6vw, 104px); padding-top: 64px; }
-.docs-layout .article { max-width: 1040px; font-size: 16px; }
 .docs-nav details > summary { cursor: pointer; padding: 10px 12px; font-weight: 600; color: var(--foreground); }
 .docs-nav details[open] > summary { margin-bottom: 8px; }
 .docs-nav details > a { display: block; font-size: 13px; }
-.docs-nav > .docs-tree > li + li { margin-top: 8px; }
 .article .handbook-block { margin-block: 64px; scroll-margin-top: 32px; }
 .handbook-block > .rich-text { max-width: 68ch; }
 .handbook-block .rich-text h2 { font-size: 26px; line-height: 1.3; margin: 0 0 24px; letter-spacing: -.025em; }
@@ -122,8 +105,9 @@
 .handbook-block .rich-text p { line-height: 1.85; margin: 0 0 24px; }
 .handbook-block .rich-text li { line-height: 1.8; margin-block: 12px; }
 .handbook-block > figure { margin-block: 0; }
-.content-outline { margin: 40px 0 64px; padding: 24px 0; border-block: 1px solid var(--border); max-width: 68ch; }
-.content-outline > strong { font-size: 13px; color: var(--muted-foreground); font-weight: 500; }
+.content-outline { margin: 28px 0 40px; padding: 20px 0; border-block: 1px solid var(--border); max-width: 68ch; }
+.content-outline summary { font-size: 13px; color: var(--foreground); font-weight: 600; cursor: pointer; }
+.content-outline summary span { margin-left: 12px; color: var(--muted-foreground); font-size: 12px; font-weight: 400; }
 .content-outline ol { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px 32px; }
 .content-outline a { font-size: 14px; line-height: 1.6; text-decoration: none; }
 .content-outline a:hover { text-decoration: underline; }
@@ -138,9 +122,9 @@
 @media (min-width: 1360px) { .cl-views { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; gap: 40px; } }
 @media (max-width: 1100px) {
  .docs-layout.shell { width: calc(100% - 64px); grid-template-columns: minmax(0,1fr); max-width: 1040px; gap: 32px; padding-top: 40px; }
- .documentation-sidebar { position: static; }
+ .documentation-sidebar { position: static; max-height: none; }
  .docs-desktop-menu { display: none; }
- .docs-mobile-menu { display: block; border-block: 1px solid var(--border); }
+ .handbook-nav-title { display: none; }
 }
 @media (max-width: 600px) {
  .docs-layout.shell { width: calc(100% - 40px); padding-top: 24px; }
@@ -149,9 +133,54 @@
  .handbook-block .workflow-step { padding-left: 40px; }
  .cl-stage { padding: 20px; }
 }
-@media (max-width: 1100px) {
- .docs-mobile-menu > summary { padding: 18px 4px; cursor: pointer; font-weight: 600; }
- .docs-mobile-menu .docs-nav { padding: 12px 0 24px; display: grid; }
-}
 .handbook-block > .component-study, .handbook-block > .foundation-study { padding-block: 40px; background: white; }
 .handbook-block > .component-study > figcaption, .handbook-block > .foundation-study > figcaption { max-width: 65ch; margin-bottom: 40px; }
+
+/* Shared handbook chrome and prose. Specimens retain their own type and width. */
+.handbook-context { margin: 0 0 28px; font-size: 13px; color: var(--muted-foreground); }
+.handbook-context ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; list-style: none; padding: 0; margin: 0; }
+.handbook-context li { display: flex; align-items: center; min-width: 0; }
+.handbook-context li + li::before { content: '/'; padding: 0 10px; color: #a1a1aa; }
+.handbook-context a { text-decoration: none; }
+.handbook-context strong { color: var(--foreground); font-weight: 650; margin-right: 8px; }
+.handbook-context [aria-current] { color: var(--foreground); }
+.handbook-nav-title { margin: 0 0 14px 11px; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; color: var(--muted-foreground); }
+.handbook-chapter-button { width: 100%; display: flex; justify-content: space-between; gap: 16px; padding: 12px; background: var(--background); border: 1px solid var(--border); border-radius: 6px; color: var(--foreground); font: inherit; font-size: 14px; text-align: left; cursor: pointer; margin-bottom: 18px; }
+.handbook-chapter-dialog { width: min(620px, calc(100% - 32px)); max-height: calc(100dvh - 40px); margin: auto; padding: 24px; border: 1px solid var(--border); border-radius: 12px; color: var(--foreground); background: var(--background); box-shadow: 0 20px 80px #0003; overscroll-behavior: contain; }
+.handbook-chapter-dialog::backdrop { background: #18181b66; }
+body:has(.handbook-chapter-dialog[open]) { overflow: hidden; }
+.handbook-dialog-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 24px; }
+.handbook-dialog-head h2 { margin: 0; font-size: 20px; line-height: 1.3; letter-spacing: -.025em; }
+.handbook-dialog-head button, .handbook-return { background: var(--background); border: 1px solid var(--border); border-radius: 5px; padding: 9px 12px; color: var(--foreground); font: inherit; font-size: 13px; cursor: pointer; }
+.handbook-search { display: grid; gap: 8px; font-size: 13px; font-weight: 600; }
+.handbook-search input { width: 100%; min-height: 44px; padding: 10px 12px; font: inherit; font-weight: 400; color: var(--foreground); border: 1px solid #a1a1aa; border-radius: 5px; background: var(--background); }
+.handbook-search input:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+.handbook-chapter-dialog .docs-nav { display: grid; padding-block: 20px; }
+.handbook-chapter-dialog .docs-tree { list-style: none; }
+.handbook-return { margin-top: 20px; }
+.handbook-result-count { font-size: 13px; color: var(--muted-foreground); margin-top: 20px; }
+.handbook-search-results { list-style: none; padding: 0; margin: 0; }
+.handbook-search-results a { display: grid; gap: 5px; padding: 16px 8px; border-bottom: 1px solid var(--border); text-decoration: none; }
+.handbook-search-results a:hover, .handbook-search-results a[aria-current] { background: var(--muted); }
+.handbook-search-results span, .handbook-search-results small { color: var(--muted-foreground); font-size: 12px; line-height: 1.5; }
+.docs-layout .article > div > section > p, .docs-layout .article > div > section > :is(.rich-text, .payload-richtext) > p, .docs-layout .article > div > section > :is(.rich-text, .payload-richtext) > ul, .docs-layout .article > div > section > :is(.rich-text, .payload-richtext) > ol, .docs-layout .article > div > details > :is(.rich-text, .payload-richtext) { max-width: 68ch; }
+.docs-layout .article > div > section > h2, .docs-layout .article > div > section > :is(.rich-text, .payload-richtext) > h2 { font-size: clamp(22px, 2.3vw, 27px); line-height: 1.3; letter-spacing: -.025em; }
+.handbook-outline[hidden], .handbook-preview [hidden] { display: none !important; }
+.article [id^="abschnitt-"] { scroll-margin-top: 24px; }
+.handbook-preview { margin-block: 24px; min-width: 0; }
+.handbook-preview-toolbar { border-top: 1px solid var(--border); padding-top: 16px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; }
+.handbook-preview-toolbar > span { font-size: 12px; color: var(--muted-foreground); }
+.handbook-preview-toolbar [role="group"] { display: flex; gap: 4px; padding: 3px; border: 1px solid var(--border); border-radius: 7px; }
+.handbook-preview-toolbar button { border: 0; border-radius: 4px; background: transparent; color: var(--muted-foreground); font: inherit; font-size: 13px; padding: 9px 13px; cursor: pointer; }
+.handbook-preview-toolbar button[aria-pressed="true"] { background: var(--foreground); color: var(--background); }
+.handbook-preview [data-preview-mode="narrow"] > figure { margin-inline: auto; }
+.handbook-preview-hint { font-size: 12px; color: var(--muted-foreground); max-width: 68ch; margin: 12px 0 20px; }
+@media (max-width: 600px) {
+ .handbook-context { margin-bottom: 24px; font-size: 12px; }
+ .handbook-context ol { gap: 8px 0; }
+ .handbook-chapter-button { margin-bottom: 0; }
+ .handbook-chapter-dialog { padding: 20px; }
+ .handbook-dialog-head { align-items: flex-start; }
+ .handbook-dialog-head button { white-space: nowrap; }
+ .handbook-preview-toolbar { align-items: flex-start; flex-direction: column; }
+}

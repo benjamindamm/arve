@@ -1,0 +1,21 @@
+{
+  "purpose": "Select one associated panel while distinguishing keyboard focus from activation.",
+  "avoid": "Do not use tabs to disguise sequential task steps.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 73:2899 (Tabs), observed anatomy and examples.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Tabs",
+  "sourceRule": "Root value/defaultValue uses the primitive generic Tab.Value (including null; default implicit0). List defaults activateOnFocus=false and loopFocus=true; variant default|line only styles it. Trigger value identifies a matching Panel, disabled triggers cannot activate; keepMounted is explicit on Panels (the shown inactive-panel projection chooses it). Automatic tab/panel ID relations register in client effects and are not present in raw static server markup; the reference HTML shows the registered client state. User onValueChange(value,eventDetails) is cancellable. Automatic uncontrolled selection/fallback reasons initial/disabled/missing cannot be canceled and may yield null when no enabled tab remains. Controlled values never automatically fall back. Callback details include activationDirection. Tab focus and active panel are distinct in manual mode.",
+  "keyboardAndFocus": "Tab enters the selected/enabled tab and then its panel. The source horizontal tablist uses Left/Right, Home/End to move focus, including source-focusable disabled triggers that cannot activate; default manual mode requires Enter/Space to activate. activateOnFocus=true also changes selection on arrow focus. Escape leaves selection unchanged. IMPORTANT pinned wrapper limitation: Root orientation is consumed for CSS/data attributes and not forwarded to TabsPrimitive.Root; primitive ARIA and keyboard behavior remain horizontal even when visual orientation=vertical. This reference chooses horizontal layout and makes the upstream discrepancy explicit.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/tabs.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/tabs-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/tabs.md.source"
+  ],
+  "referenceDecision": "Stable actual item values, concrete visible labels and error/help relations are supplied by the caller. Use horizontal Tabs/ToggleGroup and array Slider values explicitly; upstream wrapper limitations are described, not hidden by altering frozen code."
+}

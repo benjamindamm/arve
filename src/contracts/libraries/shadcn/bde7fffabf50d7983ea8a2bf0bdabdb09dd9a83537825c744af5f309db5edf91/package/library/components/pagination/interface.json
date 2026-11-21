@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "pagination.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Pagination",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Root nav role=navigation is named pagination; Content/Item are ul/li. PaginationLink renders Button as anchor with nativeButton=false; isActive sets aria-current=page and outline instead of ghost, size defaults icon. Previous/Next default text and accessible English labels can be overridden for localization. Ellipsis is aria-hidden. The wrapper does not calculate page count, clamp indices, fetch results or implement a disabled prop on PaginationLink."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"nav\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:7; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "pagination",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PaginationContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"ul\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:22; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "pagination-content",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PaginationItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"li\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:35; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "pagination-item",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PaginationLink",
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "description": "Actual anchor destination supplied by the caller."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PaginationLinkProps"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:44; defaults {\"size\": \"\\\"icon\\\"\"}."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "React.MouseEventHandler<HTMLAnchorElement>"
+              },
+              "description": "Actual native link click handler; preventDefault delegates navigation to the caller/router."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "pagination-link",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PaginationPrevious",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof PaginationLink> & { text?: string }"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:68; defaults {\"text\": \"\\\"Previous\\\"\"}."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "PaginationNext",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof PaginationLink> & { text?: string }"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:96; defaults {\"text\": \"\\\"Next\\\"\"}."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "PaginationEllipsis",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source:122; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "pagination-ellipsis",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

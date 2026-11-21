@@ -1,0 +1,65 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "1196:1097"
+  },
+  "stories": [
+    {
+      "id": "figma-1986-1863",
+      "name": "Kbd",
+      "kind": "standalone-component",
+      "view": {
+        "figmaNode": "1986:1863",
+        "part": "1986:1863"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "referenceScope": "Pinned native/default content composition; original static Figma variants remain in stories. Source wrapper APIs and optional native render semantics are described in CEM/README.",
+  "contractCases": [
+    {
+      "id": "default-content-semantic-projection",
+      "html": "accessibility.html",
+      "expectSelector": "provenance://source/%2F%2Fkbd[@data-slot=\"kbd\"]"
+    },
+    {
+      "id": "prop-update-keeps-passive-contract",
+      "events": [
+        {
+          "event": "PROPS_CHANGED"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "unmount-remount",
+      "events": [
+        {
+          "event": "UNMOUNT"
+        },
+        {
+          "event": "MOUNT"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "no-fabricated-activation",
+      "events": [
+        {
+          "event": "ACTIVATE"
+        },
+        {
+          "event": "ESCAPE"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    }
+  ]
+}

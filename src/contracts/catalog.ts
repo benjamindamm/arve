@@ -1,3 +1,7 @@
+import { createHash } from 'node:crypto'
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+import shadcnComplete from './libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/contracts.json'
 import shadcnPortable from './libraries/shadcn/65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26/contracts.json'
 import shadcnSnapshot from './libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed/contracts.json'
 import switchContract from './exports/shadcn/switch/3994eb962797b7f48a25939c595dc9e9aac98e3423ff8865e313b3305d0cbb29.json'
@@ -16,18 +20,59 @@ type ContractExport = {
   status: string
   sources: Record<string, string>
   files: Record<string, { path: string; sha256: string; content: string }>
+  deferredFiles?: boolean
 }
 
-const catalog: ContractExport[] = [...shadcnPortable, ...shadcnSnapshot, button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious]
+const catalog = [...shadcnComplete, ...shadcnPortable, ...shadcnSnapshot, button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious] as unknown as ContractExport[]
+const hydrated = new Map<string, ContractExport>()
+const artifactRoots: Record<string,string> = {
+  'bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91': path.join(process.cwd(),'src/contracts/libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/package/library'),
+  '65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26': path.join(process.cwd(),'src/contracts/libraries/shadcn/65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26'),
+  '5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed': path.join(process.cwd(),'src/contracts/libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed'),
+}
+
+export function contractArtifactPath(contract: Pick<ContractExport, 'library' | 'component' | 'revision'>, name: string) {
+  const item = catalog.find(item => item.library === contract.library && item.component === contract.component && item.revision === contract.revision)
+  if (!item?.artifacts?.[name] || !/^[a-z][a-z0-9-]*$/.test(item.library) || !/^[a-f0-9]{64}$/.test(item.revision) || name.includes('\\') || name.split('/').some(part => !part || part === '.' || part === '..')) return undefined
+  const root=item.library==='shadcn'?artifactRoots[item.revision]:undefined
+  return root?path.join(root,name):undefined
+}
+
+function hydrate(item: ContractExport) {
+  if (!item.deferredFiles) return item
+  const key = `${item.library}/${item.revision}/${item.component}`
+  const cached = hydrated.get(key)
+  if (cached) return cached
+  const { deferredFiles: _, ...value } = item
+  const files: ContractExport['files'] = {}
+  const embedded = new Set([...Object.values(item.sources), `components/${item.component}/component.json`, `components/${item.component}/README.md`, 'library.json'])
+  for (const [name, sha256] of Object.entries(item.artifacts ?? {})) {
+    if (!embedded.has(name)) continue
+    const filename = contractArtifactPath(item, name)
+    if (!filename) throw new Error('Invalid registered contract artifact')
+    let bytes: Buffer
+    // Registered package assets are included explicitly by next.config.mjs.
+    try { bytes = readFileSync(/*turbopackIgnore: true*/ filename) } catch { throw new Error('Registered contract artifact unavailable') }
+    if (createHash('sha256').update(bytes).digest('hex') !== sha256) throw new Error('Contract artifact integrity check failed')
+    const content = bytes.toString('utf8')
+    if (Buffer.from(content).equals(bytes) && !content.includes('\0')) files[name] = { path: name, sha256, content }
+  }
+  const result = { ...value, files }
+  if (hydrated.size >= 4) hydrated.delete(hydrated.keys().next().value!)
+  hydrated.set(key, result)
+  return result
+}
 
 export function getContract(reference: { library?: string | null; component?: string | null; revision?: string | null } | null | undefined) {
-  return catalog.find((item) =>
+  const item = catalog.find((item) =>
     item.library === reference?.library &&
     item.component === reference?.component &&
     item.revision === reference?.revision,
   )
+  return item ? hydrate(item) : undefined
 }
 
 export function getShadcnContract(component: string) {
-  return catalog.find((item) => item.library === 'shadcn' && item.component === component)
+  const item = catalog.find((item) => item.library === 'shadcn' && item.component === component)
+  return item ? hydrate(item) : undefined
 }

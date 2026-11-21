@@ -1,12 +1,11 @@
+import { SiteAnchor } from '../../../../../../docs/site-anchor'
+import '../../../../../../docs/component-page.css'
+import { CopyValue } from '../../../../../../docs/copy-value'
+import { ContractSource } from '../../../../../../docs/contract-source'
 import { loadPageRework } from '../../../../../../docs/page-reworks/registry'
 import type { Page } from '../../../../../../payload-types'
-import { ContentOutline } from '../../../../../../docs/content-outline'
+import { HandbookContext } from '../../../../../../docs/handbook-context'
 import { TemplateContent } from '../../../../../../docs/template-content'
-import hljs from 'highlight.js/lib/core'
-import Link from 'next/link'
-import css from 'highlight.js/lib/languages/css'
-import json from 'highlight.js/lib/languages/json'
-import xml from 'highlight.js/lib/languages/xml'
 import { notFound } from 'next/navigation'
 import { DocumentationNav } from '../../../../../../docs/documentation-nav'
 import { documentationTree } from '../../../../../../docs/published-documentation'
@@ -15,9 +14,6 @@ import { getComponentPage } from '../../../../../../docs/component-pages'
 import { Content } from '../../../../../../docs/content'
 import { ComponentDemo } from '../../../../../../docs/demo'
 
-hljs.registerLanguage('xml', xml)
-hljs.registerLanguage('css', css)
-hljs.registerLanguage('json', json)
 
 const domains = [
   ['interface', 'Schnittstelle (CEM)', 'json'],
@@ -38,24 +34,37 @@ export default async function ComponentPage({ params }: {
   if (!page || !documentation || !designSystem) notFound()
 
   const contract = page.contract
+  const scopeNote = page.content.find(block => block.blockName === 'complete-reference-scope')
+  const editorialContent = page.content.filter(block => block !== scopeNote)
+  const platformLabels = { web: 'Web', ios: 'iOS', android: 'Android' } as const
   const ReworkedPage = system === 'shadcn' ? await loadPageRework(component) : undefined
 
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={page.path} />
-      <article className="article">
-        {system === 'shadcn' && <p><Link href="/systems/shadcn/komponenten">← Komponenten</Link></p>}
+      <article className="article component-documentation">
+        <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={page.path} />
         <h1>{page.title}</h1>
         {page.summary && <p className="lead">{page.summary}</p>}
+        <div className="component-availability" aria-label="Verfügbarer Stand">
+          <span>Contract <strong>{contract?.status === 'complete' ? 'Quellenreferenz vollständig' : contract?.status === 'draft' ? 'Entwurf' : contract?.status ?? 'nicht verknüpft'}</strong></span>
+          <span>{page.implementations.length ? page.implementations.map(entry => `${platformLabels[entry.platform]} · ${entry.releaseStatus}`).join(' / ') : 'Keine Implementierung veröffentlicht'}</span>
+          {page.demo && <span>Angular-Beispiel · Spartan</span>}
+        </div>
         <nav aria-label="Auf dieser Komponentenseite" className="component-jumps">
-          {page.demo && <a href="#live-beispiel">Live-Beispiel</a>}
-          <a href="#plattformstand">Plattformstand</a>
-          <a href="#contract">Contract</a>
+          {page.demo && <SiteAnchor href="#live-beispiel">Live-Beispiel</SiteAnchor>}
+          {!page.demo && page.designPreview && <SiteAnchor href="#design-vorschau">Designvorschau</SiteAnchor>}
+          <SiteAnchor href="#plattformstand">Plattformstand</SiteAnchor>
+          <SiteAnchor href="#contract">Contract</SiteAnchor>
         </nav>
-        {ReworkedPage ? <ReworkedPage content={page.content as unknown as Page['content']} demo={page.demo ?? undefined} /> : <>
-        <ContentOutline content={page.content} />
+        {page.demo && <p className="component-demo-note">{page.implementations.length ? (page.implementations.every(entry => entry.releaseStatus === 'preview') ? 'Der veröffentlichte Stand ist eine Preview. Prüfumfang und Contractbezug stehen im Plattformstand.' : 'Das lokale Beispiel ist bedienbar. Veröffentlichte Implementierungen und ihre Prüfgrenzen stehen im Plattformstand.') : 'Das Live-Beispiel dient dem Ausprobieren; es ist kein veröffentlichter Implementierungsnachweis.'}</p>}
+        {scopeNote && <details className="component-reference-scope"><summary>Referenz und Prüfstand einordnen</summary><Content blocks={[scopeNote]} /></details>}
+        {page.designPreview && <details className="component-design-preview" open={!page.demo}>
+          <summary>Designvorschau der Quellenreferenz</summary><figure id="design-vorschau"><div className="component-preview-image" tabIndex={0} role="region" aria-label="Quellenvorschau, bei Bedarf scrollbar"><img src={page.designPreview.url} alt={`Statische Designvorschau: ${page.title}`}/></div><figcaption>Statische Vorschau aus dem gewählten Export. <SiteAnchor href={page.designPreview.url} target="_blank" rel="noreferrer">In Originalgrösse öffnen ↗</SiteAnchor></figcaption></figure>
+        </details>}
+        {ReworkedPage ? <><p className="component-study-scope">Spartan · Angular-Referenz und vorhandene Gestaltungsstudie</p><ReworkedPage content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} /></> : <>
         <TemplateContent sections={page.templateSections} />
-        <Content blocks={page.content} />
+        <Content blocks={editorialContent} />
         </>}
         {page.demo && !ReworkedPage && (
           <section className="component-section" id="live-beispiel">
@@ -68,51 +77,61 @@ export default async function ComponentPage({ params }: {
         )}
         <section className="component-section" id="plattformstand">
           <h2>Plattformen und Implementierungen</h2>
-          <div className="architecture-grid">
-            {([['web', 'Web'], ['ios', 'iOS'], ['android', 'Android']] as const).map(([platform, label]) => {
-              const entries = page.implementations.filter((entry) => entry.platform === platform)
-              return <section className="card" key={platform}>
-                <h3>{label}</h3>
-                {entries.length === 0 && <p>Keine Implementierung veröffentlicht.</p>}
-                {entries.map((entry) => <div key={entry.id} className="implementation">
-                  <strong>{entry.name}</strong>
-                  <p>Freigabestatus: {entry.releaseStatus}</p>
-                  {entry.packageName && <p><code>{entry.packageName} {entry.packageVersion}</code></p>}
-                  {!!entry.contexts?.length && <p>{entry.contexts.map((context) => context === 'mobile' ? 'Mobiles Web' : 'Desktop-Web').join(' · ')}</p>}
-                  {entry.owner && <p>Team: {entry.owner}</p>}
-                  {entry.contract?.revision && <p className="contract-revision">Contract: <code>{entry.contract.revision}</code></p>}
-                  {entry.verification?.scope && <p>{entry.verification.scope}</p>}
-                  {entry.verification?.evidence && <p>Nachweis: {entry.verification.evidence}</p>}
+          <table className="component-platforms">
+            <caption>In Arve dokumentierte Einbindungen mit eigenem Prüfumfang. Framework-Referenzen werden darunter separat aufgeführt.</caption>
+            <thead><tr><th scope="col">Plattform</th><th scope="col">Verfügbarkeit</th></tr></thead>
+            <tbody>{(['web', 'ios', 'android'] as const).map(platform => {
+              const entries = page.implementations.filter(entry => entry.platform === platform)
+              return <tr key={platform}><th scope="row">{platformLabels[platform]}</th><td>
+                {entries.length === 0 ? 'Keine Implementierung veröffentlicht' : entries.map(entry => <div key={entry.id}>
+                  <strong>{entry.name}</strong> <span className="component-status">{entry.releaseStatus}</span>
+                  {entry.framework && <p>{entry.framework}</p>}
+                  {!!entry.contexts?.length && <p>{entry.contexts.map(context => context === 'mobile' ? 'Mobiles Web' : 'Desktop-Web').join(' · ')}</p>}
+                  <details className="component-evidence"><summary>Paket, Contractbezug und Prüfgrenzen</summary>
+                    {entry.packageName && <p><code>{entry.packageName} {entry.packageVersion}</code></p>}
+                    {entry.owner && <p>Team: {entry.owner}</p>}
+                    {entry.contract?.revision && <>
+                      <p>{entry.contract.revision === contract?.revision ? 'Implementierung und Seitencontract beziehen sich auf denselben Stand.' : 'Die Implementierung ist an einen anderen Contractstand gebunden als diese Seite. Der historische Bezug bleibt erhalten.'}</p>
+                      <CopyValue label="Contract der Implementierung" value={entry.contract.revision} />
+                      {contract && <CopyValue label="Contract dieser Seite" value={contract.revision} />}
+                    </>}
+                    {entry.verification?.scope && <p>{entry.verification.scope}</p>}
+                    {entry.verification?.evidence && <p>Nachweis: {entry.verification.evidence}</p>}
+                  </details>
                 </div>)}
-              </section>
-            })}
-          </div>
+              </td></tr>
+            })}</tbody>
+          </table>
+          {!!page.referenceFrameworks.length && <details className="component-frameworks"><summary>Framework-Referenzen · React, Angular und native Plattformen</summary>
+            <p>Diese Bibliotheken sind Referenzen für das Designsystem. Ihre Abdeckung dieser Komponente und die Übereinstimmung mit dem gewählten Contract müssen je Framework geprüft werden.</p>
+            <ul>{page.referenceFrameworks.map(ref => <li key={ref.id}><SiteAnchor href={ref.sourceUrl}>{ref.name} ↗</SiteAnchor> · {ref.framework} · {ref.platforms.join(' / ')}<small>{ref.relationship}</small></li>)}</ul>
+            <SiteAnchor href={`/systems/${system}/frameworks`}>Frameworks und Prüfstände im Überblick →</SiteAnchor>
+          </details>}
         </section>
         <section className="component-section" id="contract">
           <h2>Technischer Contract</h2>
           {contract ? (
             <>
-              <p>Bibliothek {contract.library} · Status {contract.status}</p>
-              <p className="contract-revision">Export-Revision <code>{contract.revision}</code></p>
+              <p className="component-contract-meta">{contract.library} <span className="component-status">{contract.status}</span>{contract.status === 'draft' && ' · Entwurf, keine allgemeine Konformitäts- oder Produktionsfreigabe.'}</p>
+              {contract.status === 'complete' && <p className="component-contract-release">Abgeschlossene Quellenreferenz · release: false. Konkrete Implementierungen behalten ihren eigenen Prüfstand.</p>}
+              <p className="component-domain-list">{domains.filter(([domain]) => contract.files[contract.sources[domain]]).map(([, title]) => title).join(' · ')}</p>
+              {page.implementations.some(entry => entry.contract?.revision && entry.contract.revision !== contract.revision) && <p className="component-revision-note">Seitencontract und Implementierung haben unterschiedliche Contractstände. <SiteAnchor href="#plattformstand">Bezug im Plattformstand vergleichen</SiteAnchor>.</p>}
+              <details className="component-export-details">
+                <summary>Export-Revision und Downloads</summary>
+                <CopyValue label="Export-Revision dieser Seite" value={contract.revision} />
               {contract.artifacts && (
                 <details>
                   <summary>Dateien im Bibliotheksimport</summary>
-                  <ul>{page.contractArtifacts.map((file) => <li key={file.path}><a href={file.url} download><code>{file.path}</code></a></li>)}</ul>
+                  <ul>{page.contractArtifacts.map((file) => <li key={file.path}><SiteAnchor href={file.url} download><code>{file.path}</code></SiteAnchor></li>)}</ul>
                 </details>
               )}
+              </details>
               {domains.map(([domain, title, language]) => {
                 const source = contract.files[contract.sources[domain]]
                 if (!source && (domain === 'ux' || domain === 'stories')) return null
                 if (!source) return <p key={domain}>{title} · Im Export fehlt eine Bindung.</p>
-                return (
-                  <details key={domain}>
-                    <summary>{title} · {source.path}</summary>
-                    <pre className="contract-code"><code dangerouslySetInnerHTML={{
-                      __html: hljs.highlight(source.content, { language }).value,
-                    }} /></pre>
-                    <p className="contract-revision">SHA-256 <code>{source.sha256}</code></p>
-                  </details>
-                )
+                const artifact=page.contractArtifacts.find(file=>file.path===source.path)
+                return artifact?<ContractSource key={domain+contract.revision} title={title} path={source.path} url={artifact.url} sha256={source.sha256} language={language}/>:null
               })}
             </>
           ) : <p>Für diese Seite ist kein verfügbarer Contract-Export verknüpft.</p>}

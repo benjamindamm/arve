@@ -1,0 +1,74 @@
+{
+  "reference": {
+    "library": "shadcn",
+    "component": "button",
+    "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26"
+  },
+  "status": "draft",
+  "sources": {
+    "interface": "components/button/interface.json",
+    "tokens": "tokens.json",
+    "css": "components/button/layout.css",
+    "behavior": "components/button/behavior.scxml",
+    "accessibility": "components/button/accessibility.html",
+    "accessibilityRules": "components/button/accessibility.rules.json",
+    "ux": "components/button/ux.json",
+    "stories": "components/button/stories.json"
+  },
+  "files": {
+    "components/button/README.md": {
+      "path": "components/button/README.md",
+      "sha256": "ef75d489d89cdacece940f2aeda79ce21c6c5afd91e85c2a9d36f965687be17b",
+      "content": "# Button\n\nQuelle ist `provenance://source/.figma-pool%2Fshadcn.fig`, Dateistand `2026-11-12T09:48:25.567Z`, SHA-256 `ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5`. Seite `72:2719`, Component Set `1872:3230`. Der lokale FIG-Reader v0.4.2 lieferte die [Knoten und Varianten](figma/figma-observations.json).\n\n- **Inventar:** 192 eindeutige Kombinationen aus sechs Stilen, vier Grössen, vier dargestellten Zuständen und zwei Rundungen. Die Figma-Eigenschaft heisst `Roudness`. `Left icon`, `Right icon` und `Kbd` sind boolesche Design-Eigenschaften mit Default `false`. Das eigenständige Set Icon Button hat die ID `1892:615`.\n- **Abgebildet:** Default in XS, SM, Default und LG, dazu Hover, Focus und Disabled in Default-Grösse und die Standarddarstellung von Outline. Alle acht verwenden die Rundung Default. Das [Layout-CSS](layout.css) setzt die Darstellung um. Die [Tokens](../../tokens.json) führen Variablen-IDs, Aliasreferenzen und die belegten Light/Dark-Farbwerte. Die dunkle Vorschau verwendet denselben extrahierten Fokusschatten als Annahme. Abmessungen des Textes hängen im Browser vom Font-Rendering ab.\n- **React-Abgleich:** Das Nova-Registry-Beispiel stimmt bei den nominalen Höhen überein. Figma verwendet bei Default und LG 4 px Abstand, der Registry-Button 6 px. Das Figma-Design setzt beim Default-Hover den ganzen Knoten auf 80 % Deckkraft. Der Registry-Button mischt nur seinen Hintergrund mit Transparenz.\n## Contract\n\n[component.json](component.json) bindet die vier Domänen und die [acht Stories](stories.json). Der Draft modelliert den Textbutton für eine Aktion. [CEM](interface.json) beschreibt die Schnittstelle und den nativen `click`. [SCXML](behavior.scxml) modelliert die Aktivierung und den Wechsel zwischen enabled und disabled. `action.requested` ist die interne Meldung an den Host und erzeugt keinen zweiten DOM-Click. Die [HTML-Vorlage](accessibility.html) und die [Projektionsregeln](accessibility.rules.json) übernehmen Fokus, Benennung und Tastaturaktivierung vom nativen Button. Die [UX-Regel](ux.json) beschreibt den Einsatzzweck.\n\nDiese Verhaltens- und Semantikregeln sind Entscheidungen für die Übung, abgeglichen mit den nativen Textbuttons des React-Starters. Die Registry-API enthält weitere Varianten und Optionen. Die Figma-Stories beschreiben statische Zustände.\n\n## Prüfungen\n\nDer Bibliothekscheck akzeptierte Referenzen, Token-Aliase und die ausgewählten Quellenschemata. Der [Coverage-Record](validation/completeness.json) bindet zehn Kriterien. A11Y-002 bleibt im Check offen, weil dessen Prüfprofil die native Benennung durch Button-Text nicht als Beleg erkennt. Eine separate SCXML-Ausführung prüfte Aktivierung, Escape, Deaktivierung und Reaktivierung. In der React-Vorschau habe ich Enter, Leertaste, Escape und die Tab-Reihenfolge mit deaktiviertem Button geprüft. Diese Browserprobe führt die SCXML-Datei nicht aus und ersetzt keine Prüfung mit assistiver Technik.\n\nDie editierbare [OpenPencil-Datei](button.fig) und die daraus gerenderte [PNG-Vorschau](preview.png) zeigen die acht Muster in beiden Farbmodi. Der [Prüfnachweis](validation/preview-check.json) hält Ein- und Ausgabehashes fest. Das [Exportskript](provenance://source/tools%2Fopenpencil%2Fexport-shadcn-button.mjs) verwendet die installierten OpenPencil- und React-Abhängigkeiten. Mit einem neuen Verzeichnis als Argument lässt sich der Export wiederholen, etwa `node provenance://source/tools%2Fopenpencil%2Fexport-shadcn-button.mjs provenance://source/%2Ftmp%2Fshadcn-button-preview`.\n"
+    },
+    "components/button/accessibility.html": {
+      "path": "components/button/accessibility.html",
+      "sha256": "a8b64e6cae09e620f7e342c380da5f7a97ed8565ca30ca80fe068e50969e4733",
+      "content": "<template data-component=\"Button\">\n  <button type=\"button\" data-part=\"control\"><span data-part=\"label\">Button</span></button>\n</template>\n"
+    },
+    "components/button/accessibility.rules.json": {
+      "path": "components/button/accessibility.rules.json",
+      "sha256": "b954f180b02154524a1d35020abd93e17ed33afdabf7fad1f76e2139829e1456",
+      "content": "{\n  \"format\": \"ui-contract-a11y-projection-draft\",\n  \"labelSource\": \"Visible text inside the native button, from interface.label.\",\n  \"control\": \"Render <button type=\\\"button\\\">. The browser supplies the button role.\",\n  \"projections\": {\n    \"enabled\": {\n      \"disabled\": false\n    },\n    \"disabled\": {\n      \"disabled\": true\n    }\n  },\n  \"focus\": \"Use native tab order. Tab and Shift+Tab move focus. Enter and Space use native activation. Disabled buttons are skipped in sequential navigation. Do not synthesise an extra click on keydown.\",\n  \"focusIndicator\": \"Display the focus treatment when the enabled control matches :focus-visible.\"\n}\n"
+    },
+    "components/button/behavior.scxml": {
+      "path": "components/button/behavior.scxml",
+      "sha256": "b444af6e2b343d3487bcf37ea79c3127955618eb10bc6e1ed33f58f225f203c5",
+      "content": "<scxml xmlns=\"http://www.w3.org/2005/07/scxml\" version=\"1.0\"\n       datamodel=\"ecmascript\" name=\"Button\" initial=\"enabled\">\n  <!-- The host sets disabled on mount and on updates. Native focus and activation\n       produce the normalised events. This machine does not dispatch DOM clicks. -->\n  <state id=\"enabled\">\n    <transition event=\"DISABLE\" target=\"disabled\"/>\n    <transition event=\"FOCUS_IN FOCUS_OUT ESCAPE\"/>\n    <transition event=\"NATIVE_CLICK\">\n      <send event=\"action.requested\" target=\"#_parent\"/>\n    </transition>\n  </state>\n  <state id=\"disabled\">\n    <transition event=\"ENABLE\" target=\"enabled\"/>\n  </state>\n</scxml>\n"
+    },
+    "components/button/interface.json": {
+      "path": "components/button/interface.json",
+      "sha256": "9d9395efef7d5a5fc792eec8955c48f6dec89c722e8572619389547f3c7c3087",
+      "content": "{\n  \"schemaVersion\": \"2.1.0\",\n  \"modules\": [\n    {\n      \"kind\": \"javascript-module\",\n      \"path\": \"button.js\",\n      \"declarations\": [\n        {\n          \"kind\": \"class\",\n          \"name\": \"Button\",\n          \"description\": \"Contract for a labelled native action button. The component has no stored value.\",\n          \"members\": [\n            {\n              \"kind\": \"field\",\n              \"name\": \"label\",\n              \"type\": {\n                \"text\": \"string\"\n              },\n              \"description\": \"Nonempty visible label that names the requested action.\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"disabled\",\n              \"type\": {\n                \"text\": \"boolean\"\n              },\n              \"description\": \"Disables the native button and suppresses activation.\",\n              \"default\": \"false\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"variant\",\n              \"type\": {\n                \"text\": \"\\\"default\\\" | \\\"outline\\\"\"\n              },\n              \"description\": \"Visual emphasis.\",\n              \"default\": \"\\\"default\\\"\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"size\",\n              \"type\": {\n                \"text\": \"\\\"xs\\\" | \\\"sm\\\" | \\\"default\\\" | \\\"lg\\\"\"\n              },\n              \"description\": \"Visual size. The current Outline proof covers default size.\",\n              \"default\": \"\\\"default\\\"\"\n            }\n          ],\n          \"events\": [\n            {\n              \"name\": \"click\",\n              \"type\": {\n                \"text\": \"MouseEvent\"\n              },\n              \"description\": \"Native click from pointer, keyboard or assistive activation. The component adds no application payload.\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+    },
+    "components/button/ux.json": {
+      "path": "components/button/ux.json",
+      "sha256": "80f211f8de43bcf34e51f1973476901c0f63a2a077c48f34a5d33fd6868e5b6e",
+      "content": "{\n  \"componentId\": \"shadcn:Button\",\n  \"purpose\": \"Eine unmittelbar benannte Aktion auf der aktuellen Ansicht auslösen, etwa ein Ergebnis zurücksetzen. Navigation verwendet einen Link. Formularübermittlung, Umschaltzustände und Icon-only-Bedienung liegen ausserhalb dieses Drafts.\"\n}\n"
+    }
+  },
+  "implementations": [
+    {
+      "id": 1,
+      "name": "Spartan Button",
+      "platform": "web",
+      "releaseStatus": "preview",
+      "packageName": "@spartan-ng/brain",
+      "packageVersion": "1.9.0",
+      "owner": null,
+      "contexts": [
+        "desktop",
+        "mobile"
+      ],
+      "contract": {
+        "library": "shadcn",
+        "component": "button",
+        "revision": "fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d"
+      },
+      "verification": {
+        "scope": "Klick und Deaktivierung im lokalen Browser geprüft. Mobile Bedienung, assistive Technologien und Contract-Konformität sind offen.",
+        "evidence": null
+      }
+    }
+  ]
+}

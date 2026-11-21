@@ -97,7 +97,7 @@ const original:Block[]=[
   }
 ]
 export const release={
- expectedUpdatedAt:"2026-11-13T12:43:02.810Z",
+ expectedUpdatedAt:"2026-11-20T15:22:23.849Z",
  title:'Technische Anbindung und MCP',
  summary:'Vom veröffentlichten Seitenbaum zur passenden Seite, zu Originaldateien und zum belegten Plattformstand.',
  content:[

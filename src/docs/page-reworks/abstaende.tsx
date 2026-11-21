@@ -1,5 +1,5 @@
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './abstaende.css'
 
@@ -33,7 +33,7 @@ export default function SpacingPage({ content }: { content: Page['content'] }) {
           </div>)}</div>
         </figure>)}
       </div>
-      <details><summary>{study.title}</summary><p>{study.explanation}</p><p>{study.source}</p></details>
+      <details><summary>Erklärung zum Beispiel</summary><p>{study.explanation}</p><p>{study.source}</p></details>
     </section>}
     {section('rules')}
     <section id={find('padding') ? blockAnchor(find('padding')!) : undefined}>

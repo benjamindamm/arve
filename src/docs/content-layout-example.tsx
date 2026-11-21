@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { HandbookPreview } from './handbook-preview'
 import { contentLayout } from './content-layouts'
 
 function Specimen({ kind }: { kind: string }) {
@@ -18,11 +19,7 @@ export function ContentLayoutExample({ section }: { section: string }) {
  const layout=contentLayout(section)
  if(!layout)return null
  return <section className="content-layout-example" aria-label="Beschriftete Layoutbeispiele">
-  <p className="cl-note">Statische Anordnungsbeispiele. Die dargestellten Aktionen sind nicht bedienbar.</p>
-  <div className="cl-views">{(['wide','narrow'] as const).map(size=><figure key={size} className={'cl-view cl-'+size}>
-   <figcaption><strong>{size==='wide'?'Breit':'Schmal'}</strong><p>{layout[size]}</p></figcaption>
-   <div className="cl-stage"><Specimen kind={layout.slug}/></div>
-  </figure>)}</div>
+  <HandbookPreview description="Statisches Anordnungsbeispiel · Aktionen nicht bedienbar" wide={<figure className="cl-view cl-wide"><figcaption><strong>Breit</strong><p>{layout.wide}</p></figcaption><div className="cl-stage"><Specimen kind={layout.slug}/></div></figure>} narrow={<figure className="cl-view cl-narrow"><figcaption><strong>Schmal</strong><p>{layout.narrow}</p></figcaption><div className="cl-stage"><Specimen kind={layout.slug}/></div></figure>} />
   <h2>Bei langen oder fehlenden Inhalten</h2><p>{layout.stress}</p>
   <p>{layout.related.map((item,index)=><span key={item.section}>{index>0 && ' · '}<Link href={'/systems/shadcn/'+item.section}>{item.label}</Link></span>)}</p>
  </section>

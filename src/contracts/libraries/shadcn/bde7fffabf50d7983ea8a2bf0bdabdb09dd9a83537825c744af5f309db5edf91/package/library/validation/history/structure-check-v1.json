@@ -1,0 +1,4003 @@
+{
+  "overall": "DRAFT",
+  "release": false,
+  "library": "shadcn",
+  "scope": "component-layout-1, structural bindings and authoring coverage",
+  "componentCount": 69,
+  "components": {
+    "components/button/component.json": {
+      "status": "draft",
+      "missingBindings": [],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/checkbox/component.json": {
+      "status": "draft",
+      "missingBindings": [],
+      "coverage": "COVERAGE_RECORDED",
+      "questions": []
+    },
+    "components/switch/component.json": {
+      "status": "draft",
+      "missingBindings": [],
+      "coverage": "COVERAGE_RECORDED",
+      "questions": []
+    },
+    "components/input/component.json": {
+      "status": "draft",
+      "missingBindings": [],
+      "coverage": "COVERAGE_RECORDED",
+      "questions": []
+    },
+    "components/accordion/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/alert/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/alert-dialog/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/aspect-ratio/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/attachment/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/avatar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/badge/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/breadcrumb/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/bubble/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/button-group/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/calendar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/card/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/carousel/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/code-block/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/collapsible/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/combobox/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/command/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/context-menu/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/data-table/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/date-picker/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/dialog/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/drawer/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/dropdown-menu/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/empty/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/field/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/hover-card/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/input-group/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/input-otp/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/item/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/kbd/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/label/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/marker/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/menubar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/message/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/message-scroller/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/native-select/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/navigation-menu/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/pagination/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/popover/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/progress/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/questionnaire/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/radio-group/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/scroll-area/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/select/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/separator/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/sheet/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/sidebar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/skeleton/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/slider/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/spinner/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/table/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/tabs/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/textarea/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/toast/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/toggle-group/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/tooltip/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-001",
+          "domain": "interface",
+          "question": "Welcher Wert wird angenommen und ausgegeben, mit welchem Typ?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "IF-002",
+          "domain": "interface",
+          "question": "Welche Ereignisse meldet die Komponente mit welchen Nutzdaten?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-001",
+          "domain": "behavior",
+          "question": "Welche Zustände und Übergänge bestimmen den Lebenszyklus?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-002",
+          "domain": "behavior",
+          "question": "Wann wird eine Eingabe oder Auswahl bestätigt und nach aussen gemeldet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-003",
+          "domain": "behavior",
+          "question": "Was geschieht bei Abbruch oder Escape, auch wenn ausdrücklich keine Änderung vorgesehen ist?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-001",
+          "domain": "html",
+          "question": "Welche native Semantik oder ARIA-Rolle erhält das Control?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-002",
+          "domain": "html",
+          "question": "Woher stammt der zugängliche Name und wie ist er zugeordnet?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-003",
+          "domain": "behavior",
+          "question": "Wie werden Tastaturbedienung und Fokuswechsel geregelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/trace/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-area/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-bar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-line/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-pie/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-radar/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-radial/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    },
+    "components/chart-tooltip/component.json": {
+      "status": "draft",
+      "missingBindings": [
+        "behavior",
+        "html"
+      ],
+      "coverage": "DRAFT_INCOMPLETE",
+      "questions": [
+        {
+          "id": "IF-003",
+          "domain": "interface",
+          "question": "Welche Inhalte oder Daten nimmt die Darstellung mit welchem Typ entgegen?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "VIS-001",
+          "domain": "tokens",
+          "question": "Welche Design-Tokens bestimmen die Darstellung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-005",
+          "domain": "html",
+          "question": "Welche native Inhaltsstruktur oder informative Rolle vermittelt die Bedeutung?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "A11Y-006",
+          "domain": "ux",
+          "question": "Welche gleichwertige Text-, Daten- oder Kontextalternative vermittelt die Information?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        },
+        {
+          "id": "BEH-004",
+          "domain": "ux",
+          "question": "Wie werden Aktualisierung, Ladezustand und mögliche interaktive Nachfahren behandelt?",
+          "blocking": true,
+          "reason": "DECISION_MISSING"
+        }
+      ]
+    }
+  },
+  "errors": []
+}

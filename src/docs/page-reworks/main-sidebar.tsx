@@ -1,7 +1,12 @@
+import { SiteAnchor } from '../site-anchor'
+import { LayoutRuleBlock } from './layout-rule-block'
+import { HandbookPreview } from '../handbook-preview'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './main-sidebar.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Einsatz", "Containerbreite · 42 rem", "Sidebar · Fensterhöhe ab 50 rem"], "responsive": ["Lesereihenfolge", "Notwendiger Inhalt"]}
 
 type Block = NonNullable<Page['content']>[number]
 function strings(block?: Block) {
@@ -16,7 +21,7 @@ export default function MainSidebar({ content }: { content: Page['content'] }) {
       <figcaption>{e[narrow ? 25 : 1]}</figcaption>
       <div className="ms-container"><div className="ms-shell">
         <header className="ms-header"><span className="ms-label">{e[2]}</span><strong>{e[3]}</strong></header>
-        <nav className="ms-nav" aria-label={`${e[4]} · ${e[narrow ? 25 : 1]}`}><span className="ms-label">{e[4]}</span><a href={`#${id}-overview`}>{e[5]}</a><a href={`#${id}-next`}>{e[6]}</a></nav>
+        <nav className="ms-nav" aria-label={`${e[4]} · ${e[narrow ? 25 : 1]}`}><span className="ms-label">{e[4]}</span><SiteAnchor href={`#${id}-overview`}>{e[5]}</SiteAnchor><SiteAnchor href={`#${id}-next`}>{e[6]}</SiteAnchor></nav>
         <div className="ms-columns">
           <article className="ms-main"><span className="ms-label">{e[7]}</span><h3>{e[8]}</h3><p>{e[9]}</p>
             <section id={`${id}-overview`}><h4>{e[10]}</h4><p>{e[11]}</p></section>
@@ -25,7 +30,7 @@ export default function MainSidebar({ content }: { content: Page['content'] }) {
           </article>
           <aside className="ms-aside" aria-label={`${e[16]} · ${e[narrow ? 25 : 1]}`}><span className="ms-label">{e[16]}</span>
             <section><h4>{e[17]}</h4><dl><div><dt>{e[18]}</dt><dd>{e[19]}</dd></div><div><dt>{e[20]}</dt><dd>{e[21]}</dd></div></dl></section>
-            <section><h4>{e[22]}</h4><ul><li><a href={`#${id}-overview`}>{e[23]}</a></li><li><a href={`#${id}-next`}>{e[24]}</a></li></ul></section>
+            <section><h4>{e[22]}</h4><ul><li><SiteAnchor href={`#${id}-overview`}>{e[23]}</SiteAnchor></li><li><SiteAnchor href={`#${id}-next`}>{e[24]}</SiteAnchor></li></ul></section>
           </aside>
         </div>
       </div></div>
@@ -34,10 +39,11 @@ export default function MainSidebar({ content }: { content: Page['content'] }) {
   function section(key: string, disclosure = false) {
     const b = find(key)
     if (b?.blockType !== 'text') return null
+    if (["rules", "responsive"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return disclosure ? <details id={blockAnchor(b)} className="ms-sources"><summary>{strings(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }} /></details> : <section id={blockAnchor(b)}><RichText data={b.body} /></section>
   }
   return <div className="main-sidebar-rework">
-    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2>{demo(false)}{demo(true)}<p className="ms-note">{e[26]}</p></section>}
+    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2><HandbookPreview wide={demo(false)} narrow={demo(true)} /><p className="ms-note">{e[26]}</p></section>}
     {section('rules')}{section('responsive')}{section('sources', true)}
   </div>
 }

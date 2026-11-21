@@ -10,38 +10,38 @@ const text = (key: string, title: string, paragraphs: string[], link?: [string, 
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T08:39:33.894Z',
-  summary: 'Wähle den Seitentyp nach der Aufgabe: überblicken, verstehen, bearbeiten oder anlegen.',
+  expectedUpdatedAt: '2026-11-20T13:48:10.853Z',
+  summary: 'Wähle den Seitentyp danach, ob du mehrere Einträge überblicken, einen Eintrag ansehen, Angaben bearbeiten oder einen neuen Eintrag erstellen willst.',
   content: [
-    text('examples', 'Vier Aufgaben, vier Seitentypen', ['Schematische Projektbeispiele: Die Felder zeigen den Aufbau; hier wird nichts gespeichert.']),
+    text('examples', 'Vier Aufgaben, vier Seitentypen', ['Die vereinfachten Projektbeispiele zeigen den Aufbau der vier Seitentypen. Die Felder sind schreibgeschützt; hier wird nichts gespeichert.']),
     text('overview', 'overview · Übersicht', [
       'Mehrere Einträge überblicken und einen passenden auswählen.',
-      'Typische Bereiche: Titel, Suche oder Filter bei Bedarf, Ergebnisliste und Einstieg zum Eintrag.',
+      'Typische Bereiche: Titel, bei Bedarf Suche oder Filter, Ergebnisliste und Links zu den einzelnen Einträgen.',
       'Projekte', '3 Projekte', 'Website erneuern', 'Aktiv', 'Kundenportal', 'In Planung', 'Jahresbericht', 'Abgeschlossen',
     ], ['overview ansehen', '/systems/shadcn/page-type-overview']),
     text('detail', 'detail · Detailansicht', [
-      'Einen Eintrag erkennen und seine Angaben und seinen Status verstehen.',
-      'Typische Bereiche: Rückweg, eindeutiger Titel, Status, Angaben und passende Folgeaktionen.',
+      'Einen bestimmten Eintrag ansehen und seine Angaben und seinen Status verstehen.',
+      'Typische Bereiche: Rückweg, eindeutiger Titel, Status, Angaben und passende nächste Aktionen.',
       'Website erneuern', 'Aktiv', 'Verantwortlich', 'Mara Keller', 'Termin', '30. November', 'Projektziel', 'Den neuen Webauftritt vorbereiten.',
     ], ['detail ansehen', '/systems/shadcn/detailseite']),
     text('edit', 'edit · Bearbeiten', [
       'Vorhandene Angaben ändern, prüfen und speichern.',
-      'Typische Bereiche: Eintragskontext, vorausgefüllte Felder, Hinweise oder Fehler und Abschluss mit Speichern oder Abbrechen.',
-      'Projekt bearbeiten', 'Projektname', 'Website erneuern', 'Verantwortlich', 'Mara Keller', 'Abschluss: Änderungen speichern oder abbrechen.',
+      'Typische Bereiche: Angaben zum bearbeiteten Eintrag, vorausgefüllte Felder, Hinweise oder Fehlermeldungen sowie die Aktionen Speichern und Abbrechen.',
+      'Projekt bearbeiten', 'Projektname', 'Website erneuern', 'Verantwortlich', 'Mara Keller', 'Zum Abschliessen: «Änderungen speichern» oder «Abbrechen».',
     ], ['edit ansehen', '/systems/shadcn/page-type-edit']),
-    text('create', 'create · Anlegen', [
-      'Einen neuen Eintrag erfassen, prüfen und anlegen.',
-      'Typische Bereiche: Titel, erforderliche Eingaben, Hinweise oder Fehler und Abschluss mit Anlegen oder Abbrechen.',
-      'Projekt anlegen', 'Projektname', 'Namen eingeben', 'Verantwortlich', 'Person angeben', 'Abschluss: Projekt anlegen oder abbrechen.',
+    text('create', 'create · Erstellen', [
+      'Angaben für einen neuen Eintrag erfassen, prüfen und den Eintrag erstellen.',
+      'Typische Bereiche: Titel, erforderliche Eingaben, Hinweise oder Fehlermeldungen sowie die Aktionen Erstellen und Abbrechen.',
+      'Projekt erstellen', 'Projektname', 'Namen eingeben', 'Verantwortlich', 'Person angeben', 'Zum Abschliessen: «Projekt erstellen» oder «Abbrechen».',
     ], ['create ansehen', '/systems/shadcn/page-type-create']),
     text('decision', 'Für deinen Entwurf entscheiden', [
       'Geht es um viele Einträge, beginne mit overview. Geht es um einen vorhandenen Eintrag, wähle detail zum Lesen oder edit zum Ändern. Für einen neuen Eintrag wähle create.',
-      'Leite die benötigten Bereiche aus dieser Aufgabe ab. Das räumliche Raster wählst du anschliessend mit einem Page layout; ein Seitentyp legt keine Spaltenzahl oder Kartenbreite fest.',
+      'Leite aus der Aufgabe ab, welche Bereiche du brauchst. Wie du sie auf der Seite anordnest, bestimmst du anschliessend mit einem Page layout. Der Seitentyp legt weder die Spaltenzahl noch die Kartenbreite fest.',
     ]),
     text('sources', 'Quellen und Prüfgrenzen', [
       'Grundlage: der veröffentlichte CMS-Stand von shadcn-page-types vom 20.11.2026 und seine vier zugeordneten Seitentypen. Die ursprüngliche Übersicht war eine Linkliste ohne eigene Inhaltsblöcke.',
-      'Die Beispiele sind redaktionelle Schematiken zur Wahl des Seitentyps. Sie beschreiben typische Inhaltsbereiche, keine verbindlichen Feldvorgaben, vollständigen Abläufe oder allgemein freigegebenen Komponenten. Die Unterseiten vertiefen ihren jeweiligen Typ; diese Übersicht behauptet keinen vollständigen Ausarbeitungsstand aller Unterseiten.',
-      'Prüfe für das konkrete Produkt zusätzlich Validierung, Lade-, Leer- und Fehlerzustände sowie Rückwege und den Umgang mit ungespeicherten Änderungen. Die Übersicht führt diese Abläufe nicht aus.',
+      'Die vereinfachten Beispiele helfen dir, den Seitentyp zu wählen. Sie zeigen typische Inhaltsbereiche. Daraus lassen sich keine verbindlichen Feldvorgaben, vollständigen Abläufe oder allgemeinen Freigaben für Komponenten ableiten. Die verlinkten Unterseiten erklären den jeweiligen Typ genauer; wie weit sie ausgearbeitet sind, geht aus dieser Übersicht nicht hervor.',
+      'Prüfe für das konkrete Produkt zusätzlich die Eingabeprüfung, Lade-, Leer- und Fehlerzustände sowie Rückwege und den Umgang mit ungespeicherten Änderungen. Diese Abläufe sind in der Übersicht nicht ausgearbeitet.',
     ]),
   ] satisfies Page['content'],
 }

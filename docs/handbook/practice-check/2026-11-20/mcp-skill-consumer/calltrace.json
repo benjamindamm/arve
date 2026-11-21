@@ -1,0 +1,112 @@
+{
+  "endpoint": "http://127.0.0.1:3010/mcp",
+  "firstCall": "Client.listTools -> tools.json",
+  "calls": [
+    {
+      "id": "01-discovery",
+      "name": "list_library_skills",
+      "arguments": {
+        "library": "shadcn"
+      },
+      "responseFile": "01-discovery.response.json"
+    },
+    {
+      "id": "02-main",
+      "name": "get_library_skill",
+      "arguments": {
+        "library": "shadcn",
+        "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26",
+        "skill": "ui-contracts"
+      },
+      "responseFile": "02-main.response.json"
+    },
+    {
+      "id": "03-index",
+      "name": "get_library_skill",
+      "arguments": {
+        "library": "shadcn",
+        "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26",
+        "skill": "ui-contracts",
+        "resourcePath": "library/library.json"
+      },
+      "responseFile": "03-index.response.json"
+    },
+    {
+      "id": "04-manifest",
+      "name": "get_library_skill",
+      "arguments": {
+        "library": "shadcn",
+        "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26",
+        "skill": "ui-contracts",
+        "resourcePath": "manifest.json"
+      },
+      "responseFile": "04-manifest.response.json"
+    },
+    {
+      "id": "05-reading",
+      "name": "get_library_skill",
+      "arguments": {
+        "library": "shadcn",
+        "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26",
+        "skill": "ui-contracts",
+        "resourcePath": "skills/ui-contracts/references/reading.md"
+      },
+      "responseFile": "05-reading.response.json"
+    },
+    {
+      "id": "06-input",
+      "name": "get_component_page",
+      "arguments": {
+        "system": "shadcn",
+        "component": "input"
+      },
+      "responseFile": "06-input.response.json"
+    },
+    {
+      "id": "07-button",
+      "name": "get_component_page",
+      "arguments": {
+        "system": "shadcn",
+        "component": "button"
+      },
+      "responseFile": "07-button.response.json"
+    },
+    {
+      "id": "08-switch",
+      "name": "get_component_page",
+      "arguments": {
+        "system": "shadcn",
+        "component": "switch"
+      },
+      "responseFile": "08-switch.response.json"
+    },
+    {
+      "id": "09-checkbox",
+      "name": "get_component_page",
+      "arguments": {
+        "system": "shadcn",
+        "component": "checkbox"
+      },
+      "responseFile": "09-checkbox.response.json"
+    },
+    {
+      "id": "10-form-search",
+      "name": "search_documentation",
+      "arguments": {
+        "system": "shadcn",
+        "query": "Formular",
+        "limit": 10
+      },
+      "responseFile": "10-form-search.response.json"
+    },
+    {
+      "id": "11-form",
+      "name": "get_documentation_page",
+      "arguments": {
+        "system": "shadcn",
+        "section": "formulare-validierung"
+      },
+      "responseFile": "11-form.response.json"
+    }
+  ]
+}

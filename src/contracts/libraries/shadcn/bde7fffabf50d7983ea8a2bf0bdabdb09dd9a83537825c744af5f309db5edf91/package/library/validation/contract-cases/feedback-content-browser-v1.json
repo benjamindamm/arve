@@ -1,0 +1,285 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual pinned React dynamic content and native scroll behavior in BrowserOS; bounded reference cases.",
+  "caseCount": 18,
+  "families": [
+    {
+      "cases": [
+        {
+          "expected": {
+            "fallback": true,
+            "image": "error",
+            "img": false
+          },
+          "name": "invalid source exposes named fallback",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": true,
+            "image": "error",
+            "img": false,
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "fallback": false,
+            "image": "loaded",
+            "img": true
+          },
+          "name": "valid source loads named native image and removes fallback",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": false,
+            "image": "loaded",
+            "img": true,
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "fallback": true,
+            "image": "error",
+            "img": false
+          },
+          "name": "source change retries and error restores fallback",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": true,
+            "image": "error",
+            "img": false,
+            "trace": "false"
+          }
+        }
+      ],
+      "family": "avatar"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "progress": "40",
+            "progressText": "40%"
+          },
+          "name": "determinate actual source value text",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": false,
+            "img": false,
+            "progress": "40",
+            "progressState": null,
+            "progressText": "40%",
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "progress": null,
+            "progressText": "indeterminate progress"
+          },
+          "name": "indeterminate omits aria-valuenow",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": false,
+            "img": false,
+            "progress": null,
+            "progressState": null,
+            "progressText": "indeterminate progress",
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "progress": "100",
+            "progressText": "100%"
+          },
+          "name": "source clamps to maximum",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": false,
+            "img": false,
+            "progress": "100",
+            "progressState": "",
+            "progressText": "100%",
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "progress": "0",
+            "progressText": "0%"
+          },
+          "name": "source clamps below minimum",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "fallback": false,
+            "img": false,
+            "progress": "0",
+            "progressState": null,
+            "progressText": "0%",
+            "trace": "false"
+          }
+        }
+      ],
+      "family": "progress"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "attachment": "error"
+          },
+          "name": "initial state is caller error prop",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "attachment": "error",
+            "fallback": false,
+            "img": false,
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "actions": "2",
+            "attachment": "error"
+          },
+          "name": "actual Button callback does not manufacture upload state",
+          "result": "pass",
+          "state": {
+            "actions": "2",
+            "attachment": "error",
+            "fallback": false,
+            "img": false,
+            "trace": "false"
+          }
+        },
+        {
+          "expected": {
+            "attachment": "uploading"
+          },
+          "name": "only caller prop update advances state",
+          "result": "pass",
+          "state": {
+            "actions": "2",
+            "attachment": "uploading",
+            "fallback": false,
+            "img": false,
+            "trace": "false"
+          }
+        }
+      ],
+      "family": "attachment"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "expanded": "true",
+            "trace": "true"
+          },
+          "name": "Space opens delegated Collapsible",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "expanded": "true",
+            "fallback": false,
+            "img": false,
+            "trace": "true"
+          }
+        },
+        {
+          "expected": {
+            "trace": "true"
+          },
+          "name": "Escape does not close bare Collapsible",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "expanded": "true",
+            "fallback": false,
+            "img": false,
+            "trace": "true"
+          }
+        },
+        {
+          "name": "Tab enters real disclosed child without trap",
+          "result": "pass"
+        },
+        {
+          "expected": {
+            "trace": "true"
+          },
+          "name": "source callback cancel retains expanded controlled state",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "expanded": "true",
+            "fallback": false,
+            "img": false,
+            "trace": "true"
+          }
+        },
+        {
+          "expected": {
+            "trace": "false"
+          },
+          "name": "accepted close updates controlled source state",
+          "result": "pass",
+          "state": {
+            "actions": "0",
+            "expanded": "false",
+            "fallback": false,
+            "img": false,
+            "trace": "false"
+          }
+        }
+      ],
+      "family": "trace"
+    },
+    {
+      "cases": [
+        {
+          "name": "overflow viewport is keyboard reachable; End scrolls actual viewport",
+          "result": "pass",
+          "state": {
+            "focus": true,
+            "max": 387,
+            "role": "presentation",
+            "scrollbarHidden": "true",
+            "tabIndex": 0,
+            "y": 387
+          }
+        },
+        {
+          "name": "Home returns to viewport start",
+          "result": "pass",
+          "state": {
+            "focus": true,
+            "max": 387,
+            "role": "presentation",
+            "scrollbarHidden": "true",
+            "tabIndex": 0,
+            "y": 0
+          }
+        },
+        {
+          "name": "Tab enters native content link",
+          "result": "pass",
+          "state": {
+            "href": "#activity-details",
+            "text": "View activity details"
+          }
+        }
+      ],
+      "family": "scroll-area"
+    }
+  ]
+}

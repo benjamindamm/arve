@@ -9,12 +9,12 @@ const text = (key: string, title: string, paragraphs: string[]): Block => ({
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T08:41:38.924Z',
+  expectedUpdatedAt: '2026-11-20T13:59:40.358Z',
   title: '4-column Card Grid',
-  summary: 'Für Übersichten, Dashboards und Kataloge: Cards auf vier Grundspalten verteilen und je nach Inhalt eine, zwei oder alle vier Spalten nutzen.',
+  summary: 'Verteile Karten auf vier Grundspalten, um Projekte, Aufgaben oder Angebote in einer Übersicht zu zeigen. Je nach Inhalt nutzt eine Karte eine, zwei oder alle vier Spalten.',
   content: [
     text('example', 'Projektübersicht im Vier-Spalten-Raster', [
-      'Synthetisches, statisches Beispiel mit sechs Cards. Die nummerierte Lesereihenfolge bleibt beim Umbruch erhalten; die Spaltenangaben beziehen sich auf die breite Ansicht.',
+      'Dieses statische Beispiel zeigt sechs Karten. Die Nummern geben die Lesereihenfolge an; sie bleibt beim Umbruch erhalten. Die Spaltenangaben gelten für die breite Ansicht: Der Teamhinweis nutzt die volle Breite, die beiden Vorlagen stehen mit vergleichbaren Inhalten nebeneinander.',
     ]),
     text('card-focus', 'Nächste Prüfung', [
       '01 · 2 von 4 Spalten', 'Website erneuern', 'Den überarbeiteten Entwurf bis Freitag prüfen. Inhalt und Navigation gemeinsam mit dem Projektteam besprechen.',
@@ -26,25 +26,25 @@ export const release = {
       '03 · 1 von 4 Spalten', '2 Aufgaben', 'Prüfung und Inhaltsabnahme.',
     ]),
     text('card-notice', 'Teamhinweis', [
-      '04 · 4 von 4 Spalten', 'Gemeinsamer Review am Donnerstag', 'Offene Fragen vor dem Termin im jeweiligen Projekt sammeln. Diese übergreifende Information erhält die volle Breite.',
+      '04 · 4 von 4 Spalten', 'Gemeinsame Prüfung am Donnerstag', 'Offene Fragen vor dem Termin im jeweiligen Projekt sammeln.',
     ]),
     text('card-template', 'Website starten', [
-      '05 · 2 von 4 Spalten', 'Projektvorlage', 'Für einen neuen Webauftritt mit Inhaltsplanung, Gestaltung und Review.',
+      '05 · 2 von 4 Spalten', 'Projektvorlage', 'Für einen neuen Webauftritt mit Inhaltsplanung, Gestaltung und Prüfung.',
     ]),
     text('card-report', 'Jahresbericht planen', [
-      '06 · 2 von 4 Spalten', 'Projektvorlage', 'Für eine Publikation mit Redaktion und Freigabe. Die beiden Vorlagen zeigen vergleichbare Inhalte nebeneinander.',
+      '06 · 2 von 4 Spalten', 'Projektvorlage', 'Für eine Publikation mit Redaktion und Freigabe.',
     ]),
     text('rules', 'So gestaltest du das Raster', [
-      'Einsatz: Für eine overview-Seite mit eigenständigen Informationseinheiten oder vergleichbaren Angeboten. Gib jeder Card einen eindeutigen Titel und wähle ihre Spanne nach dem benötigten Inhalt. Eine, zwei und vier Spalten sind bewusste Breitenoptionen; vier Spalten bedeuten eine variable Anzahl von Reihen.',
-      'Breit: Ab 52 rem verfügbarer Beispielbreite vier gleich breite Grundspalten. Die erste Reihe belegt 2 + 1 + 1 Spalten, die zweite 4 und die dritte 2 + 2. Zwischen den Cards liegen 1 rem Abstand; innen jeweils 1 rem.',
-      'Mittel: Ab 32 rem bis unter 52 rem Beispielbreite zwei Grundspalten. Cards mit Spanne 2 oder 4 belegen beide Spalten, Cards mit Spanne 1 eine. Schmal: Unter 32 rem stehen alle Cards in einer Spalte. Die Grenzen richten sich nach dem Inhaltscontainer, nicht nach der Fensterbreite.',
-      'Reihenfolge und Höhe: Von links nach rechts, dann nach unten lesen; schmal von oben nach unten. Keine visuelle Umsortierung und kein Nachfüllen von Lücken. Die höchste Card bestimmt die Höhe einer Reihe; kürzere Cards bleiben oben ausgerichtet. Wechselnde Inhaltshöhen erzeugen kein Masonry-Layout.',
+      'Einsatz: Nutze das Raster auf einer overview-Seite für eigenständige Aufgaben, Hinweise, Vorlagen oder vergleichbare Angebote. Gib jeder Karte einen eindeutigen Titel. Wähle je nach Inhalt eine Breite von einer, zwei oder vier Spalten. Die Anzahl der Reihen ist variabel.',
+      'Breit: Ab einer verfügbaren Breite von 52 rem hat das Beispiel vier gleich breite Grundspalten. Die Karten belegen in der ersten Reihe 2 + 1 + 1 Spalten, in der zweiten 4 und in der dritten 2 + 2. Zwischen den Karten liegt 1 rem Abstand. Jede Karte hat 1 rem Innenabstand.',
+      'Mittel: Ab 32 rem bis unter 52 rem hat das Beispiel zwei Grundspalten. Karten, die in der breiten Ansicht zwei oder vier Spalten nutzen, belegen nun beide Spalten. Karten mit einer Spalte bleiben einspaltig. Schmal: Unter 32 rem stehen alle Karten in einer Spalte. Entscheidend ist die Breite des Inhaltscontainers, nicht die Fensterbreite.',
+      'Reihenfolge und Höhe: In der breiten und mittleren Ansicht liest du von links nach rechts und dann nach unten, in der schmalen von oben nach unten. Behalte diese Reihenfolge bei und fülle Lücken nicht mit späteren Karten auf. Die höchste Karte bestimmt die Höhe einer Reihe; kürzere Karten sind oben ausgerichtet. Unterschiedliche Inhaltshöhen erzeugen kein Masonry-Layout.',
     ]),
     text('sources', 'Quellen und Prüfgrenzen', [
-      'Grundlage: veröffentlichter CMS-Stand shadcn-card-grid-4x4 vom 20.11.2026, updatedAt 2026-11-20T08:41:38.924Z, sowie das dokumentierte visuelle Layout-Mapping vom selben Tag. Beobachtet wurden vier Grundspalten mit Spannen 1, 2 und 4 und eine einspaltige schmale Ansicht; exakte Abstände und Umbruchgrenzen wurden daraus nicht gemessen.',
-      'Die Grenzen 32 rem und 52 rem, der Abstand 1 rem, das Card-Innenmass 1 rem und die sechs Beispieldaten sind lokale Referenzentscheidungen. Sie sind im begleitenden CSS umgesetzt und keine freigegebenen Systemtokens.',
-      'Die Card-Komposition orientiert sich an der shadcn-Referenz: abgegrenzte Fläche mit Titel, Beschreibung und Inhalt. Sie verwendet semantisches HTML und lokales CSS, keine hier abgenommene Card-Komponente. Das Beispiel bietet keine Projekt-, Auswahl- oder Navigationsfunktion.',
-      'Das Raster beschreibt die Anordnung vorhandener Inhalte. Lade-, Leer- und Fehlerzustände sowie die tatsächlichen Aktionen je Card müssen für das jeweilige Produkt ergänzt und geprüft werden. Eine allgemeine Komponenten- oder Barrierefreiheitsfreigabe ist damit nicht verbunden.',
+      'Grundlage sind der veröffentlichte CMS-Stand shadcn-card-grid-4x4 vom 20.11.2026, updatedAt 2026-11-20T08:41:38.924Z, und die dokumentierte visuelle Zuordnung der Layouts vom selben Tag. Dort wurden vier Grundspalten, Karten über eine, zwei und vier Spalten sowie eine einspaltige schmale Ansicht beobachtet. Exakte Abstände und Umbruchgrenzen wurden dabei nicht gemessen.',
+      'Die Umbruchgrenzen von 32 rem und 52 rem, der Abstand von 1 rem und der Innenabstand von 1 rem sind für dieses Beispiel im begleitenden CSS festgelegt. Diese Werte sind keine freigegebenen Systemtokens. Auch die sechs Beispieldaten wurden für diese Darstellung gewählt.',
+      'Die Karten orientieren sich an der shadcn-Referenz: eine abgegrenzte Fläche mit Titel, Beschreibung und Inhalt. Das Beispiel verwendet semantisches HTML und lokales CSS. Eine hier abgenommene Card-Komponente kommt nicht zum Einsatz. Das Beispiel bietet keine Projekt-, Auswahl- oder Navigationsfunktion.',
+      'Das Raster legt fest, wie vorhandene Inhalte angeordnet werden. Lade-, Leer- und Fehlerzustände sowie die tatsächlichen Aktionen je Karte musst du für das jeweilige Produkt ergänzen und prüfen. Das Beispiel erteilt keine allgemeine Freigabe für Komponenten oder Barrierefreiheit.',
     ]),
   ] satisfies Page['content'],
 }

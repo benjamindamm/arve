@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "questionnaire.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Questionnaire",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Root>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": [
+            {
+              "name": "onItemChange",
+              "type": {
+                "text": "(item: string) => void"
+              },
+              "description": "Actual item request, distinct from answers; no eventDetails cancellation."
+            },
+            {
+              "name": "onSubmit",
+              "type": {
+                "text": "React.FormEventHandler<HTMLFormElement>"
+              },
+              "description": "Native valid form submit after source item validation."
+            },
+            {
+              "name": "onReset",
+              "type": {
+                "text": "React.FormEventHandler<HTMLFormElement>"
+              },
+              "description": "Native reset; defaultPrevented vetoes source reset."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireProgress",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Progress>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Item>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": [
+            {
+              "name": "onStatusChange",
+              "type": {
+                "text": "(status: \"unanswered\" | \"answered\" | \"skipped\") => void"
+              },
+              "description": "Actual independent Item status observation."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireTitle",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Title>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireDescription",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Description>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireChoices",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Choices>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireChoice",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Choice>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "React.ChangeEventHandler<HTMLInputElement>"
+              },
+              "description": "Native answer transaction, defaultPrevented vetoes internal answer change."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireChoiceDescription",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Input>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "React.ChangeEventHandler<HTMLInputElement>"
+              },
+              "description": "Native text input callback; actual answer authority stays separate."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireError",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Error>"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireActions",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnairePrevious",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Previous> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireSkip",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Skip> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireNext",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Next> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        },
+        {
+          "kind": "class",
+          "name": "QuestionnaireSubmit",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof QuestionnairePrimitive.Submit> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">"
+              },
+              "description": "Exact pinned public wrapper type; defaults, source lines and slots in react-api-inventory. Runtime package @shadcn/react0.3.1 is frozen independently from source commit."
+            }
+          ],
+          "events": []
+        }
+      ]
+    }
+  ]
+}

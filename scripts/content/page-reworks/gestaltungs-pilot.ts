@@ -4,23 +4,23 @@ const base = { version: 1, direction: 'ltr' as const, format: '' as const, inden
 const text = (blockName: string, title: string, ...paragraphs: string[]): Block => ({blockType:'text',blockName,body:{root:{...base,type:'root',children:[{...base,type:'heading',tag:'h2',children:[{type:'text',version:1,text:title}]},...paragraphs.map(value=>({...base,type:'paragraph',children:[{type:'text',version:1,text:value}]}))]}}})
 // Published CMS read with push:false and a read-only database connection. Original contracts below are unchanged.
 export const release = {
-  expectedUpdatedAt: '2026-11-18T00:38:59.141Z',
-  summary: 'Denselben Projektworkflow gestalten: finden, verstehen, erstellen oder bearbeiten.',
+  expectedUpdatedAt: '2026-11-20T14:29:13.422Z',
+  summary: 'Mit editierbaren Vorlagen gestalten, wie Menschen Projekte finden, ansehen, erstellen und bearbeiten.',
   content: [
-    text('example', 'Ein Projekt durch den Arbeitsweg begleiten',
-      'Schematischer Ablauf · die Fachseiten erklären die Regeln, die Vorlagen liefern editierbare Entwürfe.',
+    text('example', 'Vom Suchergebnis zum Formular',
+      'Die Vorlagen zeigen einen Projektablauf. Die verlinkten Fachseiten erklären die Regeln dazu.',
       '1 · Finden', 'Suche: Alpen', 'Status: Aktiv', 'Alpen · P-101 · Aktiv', 'Projekt öffnen →',
       '2 · Detail', 'Alpen', 'Projekt-ID: P-101', 'Status: Aktiv', 'Namen bearbeiten →',
       '3 · Bearbeiten', 'Projektname', 'Alpen', 'Abbrechen · Namen speichern',
-      'Erstellen beginnt bei der Übersicht: einen Namen eingeben; ID und Status vergibt das System.',
-      'Rückweg: zur Übersicht mit derselben Suche und demselben Statusfilter. Das Schema ist keine Projektanwendung.'),
+      'Ein neues Projekt wird aus der Übersicht erstellt: einen Namen eingeben; ID und Status vergibt das System.',
+      'Zurück geht es zur Übersicht mit derselben Suche und demselben Statusfilter. Das Schema zeigt den Ablauf einer künftigen Projektanwendung.'),
     text('usage', 'In drei Schritten zum eigenen Entwurf',
-      '1. Eine Ablaufvorlage in breit und schmal herunterladen. SVG im Designwerkzeug importieren oder die native FIG in OpenPencil öffnen. Inter muss im Zielwerkzeug verfügbar sein.',
-      '2. Denselben Projektdatensatz durch Suche, Detail und Formular führen. Die Zustandsvorlagen ergänzen; Suchkriterien beim Rückweg, archivierte Projekte und ein unbekanntes Speicherergebnis mitgestalten.',
-      '3. Den Entwurf einer zweiten Person ohne mündliche Ergänzung geben. Fehlende Entscheidungen und Ressourcen festhalten; diese unabhängige Teamprobe steht noch aus.'),
+      '1. Lade die breite und die schmale Ablaufvorlage herunter. Importiere das SVG im Designwerkzeug oder öffne die native FIG in OpenPencil. Inter muss im Zielwerkzeug verfügbar sein.',
+      '2. Verwende dasselbe Projekt in Suche, Detailansicht und Formular. Ergänze die Zustandsvorlagen. Berücksichtige dabei die Suchkriterien bei der Rückkehr, archivierte Projekte und den Fall, dass das Speicherergebnis unbekannt ist.',
+      '3. Gib den Entwurf einer zweiten Person ohne mündliche Ergänzung. Halte fest, welche Entscheidungen und Ressourcen fehlen. Diese unabhängige Teamprobe steht noch aus.'),
     text('limits', 'Was für eine Anwendung noch fehlt',
       'Die Downloads sind statische, editierbare Gestaltungsvorlagen. Sie enthalten keine reale Suche oder Speicheranbindung. FIGs enthalten flache Frames und Texte, keine Varianten- oder Auto-Layout-Bibliothek.',
-      'Offen bleiben die Prüfung im Designwerkzeug, die unabhängige Teamprobe und Laufzeitprüfungen mit Tastatur, Zoom und assistiven Werkzeugen. Ein unbekannter Speicherstand braucht eine tatsächliche Statusklärung.'),
+      'Noch ausstehend sind die Prüfung im Designwerkzeug, die unabhängige Teamprobe und Tests der umgesetzten Anwendung mit Tastatur, Zoom und assistiven Werkzeugen. Ist das Speicherergebnis unbekannt, muss die Anwendung den tatsächlichen Status klären können.'),
 {
   "id": "6afcf3a334010ea3ee3caaf4",
   "body": {
@@ -57,7 +57,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Referenzstand 0.1 · 18.11.2026. Diese lokalen Entscheidungen machen den kleinen Projektworkflow gestaltbar. Sie sind weder allgemeine shadcn-Regeln noch eine Freigabe für ein Firmensystem. Die unabhängige Gestaltungsprüfung steht aus.",
+              "text": "Referenzstand 0.1 · 18.11.2026. Für diesen Projektablauf wurden eigene Gestaltungsentscheidungen getroffen. Sie gelten für dieses Beispiel und sind keine allgemeinen shadcn-Regeln oder eine Freigabe für ein Firmensystem. Die unabhängige Gestaltungsprüfung steht aus.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -75,7 +75,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Geltung: Web auf Desktop und schmalen Ansichten, Sprache de-CH, helles Erscheinungsbild. Die vorhandenen Rechnungs- und Komponentenbeispiele bleiben eigenständige Studien. Der beschriebene Projektworkflow ist eine Gestaltungsreferenz, noch keine ausführbare Anwendung.",
+              "text": "Das Beispiel ist für Weboberflächen auf dem Desktop und in schmalen Ansichten ausgelegt, mit Sprache de-CH und hellem Erscheinungsbild. Die vorhandenen Rechnungs- und Komponentenbeispiele bleiben eigenständige Studien. Der Projektablauf dient als Gestaltungsvorlage; eine ausführbare Anwendung gibt es noch nicht.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -94,9 +94,9 @@ export const release = {
 },
 {
   "id": "6afcf3a334010ea3ee3caaf9",
-  "title": "So arbeitet ihr mit der Referenz",
-  "summary": "Gestaltet denselben Datensatz durch alle drei Schritte. Nutzt die verlinkten Fachseiten für Regeln, Zustände und Rückwege.",
-  "caption": "Statische Arbeitsanleitung. Sie belegt keine bereits implementierte Navigation, Speicherung oder assistive Bedienung.",
+  "title": "Die Aufgaben im Entwurf ausarbeiten",
+  "summary": "Verwende dasselbe Projekt in allen drei Schritten. Die verlinkten Fachseiten erklären Regeln, Zustände und Rückwege.",
+  "caption": "Die Anleitung beschreibt einen statischen Entwurf. Navigation, Speicherung und assistive Bedienung müssen erst umgesetzt und geprüft werden.",
   "source": "Lokale Pilotentscheidung 0.1 vom 18.11.2026; aus der gemeinsamen Arbeitsfähigkeitsprüfung abgeleitet.",
   "blockName": "workflow",
   "steps": [
@@ -104,31 +104,31 @@ export const release = {
       "id": "6afcf3a334010ea3ee3caaf5",
       "key": "finden",
       "title": "Finden",
-      "description": "ID oder Name suchen, Status eingrenzen und genau ein Projekt öffnen. Suchkriterien bleiben beim Rückweg erhalten.",
-      "next": "Suchseite: Ergebnisse, Erstleere, Nulltreffer und schmale Darstellung.",
+      "description": "Nach ID oder Name suchen, nach Status filtern und genau ein Projekt öffnen. Bei der Rückkehr bleiben die Suchkriterien erhalten.",
+      "next": "Gestalte die Suchseite mit Ergebnissen, ohne vorhandene Projekte und ohne passende Treffer, jeweils auch in schmaler Darstellung.",
       "tone": "normal"
     },
     {
       "id": "6afcf3a334010ea3ee3caaf6",
       "key": "verstehen",
       "title": "Verstehen",
-      "description": "Name, unveränderliche ID und Status bilden die Identität. Aktive Projekte lassen sich bearbeiten, archivierte nur lesen.",
-      "next": "Detailseite: Informationsfolge, Aktionen und Rückkehr.",
+      "description": "Name, unveränderliche ID und Status zeigen, welches Projekt geöffnet ist. Aktive Projekte lassen sich bearbeiten, archivierte nur lesen.",
+      "next": "Lege auf der Detailseite die Reihenfolge der Angaben, die Aktionen und die Rückkehr zur Übersicht fest.",
       "tone": "normal"
     },
     {
       "id": "6afcf3a334010ea3ee3caaf7",
       "key": "bearbeiten",
       "title": "Erstellen oder bearbeiten",
-      "description": "Ein Name, ein klarer Speicherweg. Unveränderte, ungespeicherte und bestätigte Werte bleiben unterscheidbar.",
-      "next": "Formularseite: Validierung, Abbruch, Erfolg und unbekanntes Ergebnis.",
+      "description": "Einen Projektnamen eingeben und speichern. Das Formular zeigt, ob der Name unverändert ist, Änderungen noch ungespeichert sind oder das Speichern bestätigt wurde.",
+      "next": "Gestalte im Formular die Validierung, das Abbrechen sowie die Rückmeldung bei Erfolg und bei unbekanntem Speicherergebnis.",
       "tone": "normal"
     },
     {
       "id": "6afcf3a334010ea3ee3caaf8",
       "key": "pruefen",
       "title": "Zusammen prüfen",
-      "description": "Eine zweite Person soll den gesamten Weg ohne mündliche Ergänzungen gestalten können. Offene Entscheidungen und fehlende Ressourcen werden erfasst.",
+      "description": "Eine zweite Person soll den gesamten Ablauf ohne mündliche Ergänzungen gestalten können. Halte fest, welche Entscheidungen und Ressourcen ihr dabei fehlen.",
       "next": "Diese Teamprobe ist noch durchzuführen.",
       "tone": "attention"
     }
@@ -302,7 +302,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Ein Projekt hat genau drei fachliche Angaben: eine vom System gesetzte, unveränderliche ID; einen erforderlichen Projektnamen; den vom System gesetzten Status Aktiv oder Archiviert. Namen enthalten nach Entfernen äusserer Leerzeichen 1–80 Unicode-Graphemcluster. Doppelte Namen sind zulässig; die ID unterscheidet Projekte.",
+              "text": "Ein Projekt hat genau drei fachliche Angaben: eine unveränderliche ID, einen erforderlichen Projektnamen und den Status Aktiv oder Archiviert. Das System vergibt ID und Status. Für den Namen sind 1–80 wahrgenommene Zeichen zulässig (Unicode-Graphemcluster); Leerzeichen am Anfang und Ende werden vor dem Zählen entfernt. Mehrere Projekte dürfen denselben Namen haben; die ID unterscheidet sie.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -320,7 +320,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Neue Projekte sind Aktiv. Nur ihr Name wird bearbeitet. Archivierte Projekte sind lesbar; eine Archivieren-Aktion gehört nicht zum Pilot. Die Referenz setzt sequenzielle Abläufe voraus, ohne gleichzeitige Bearbeitung durch mehrere Personen.",
+              "text": "Neue Projekte erhalten den Status Aktiv. Bearbeitet wird nur der Name. Archivierte Projekte lassen sich ansehen; eine Aktion zum Archivieren gehört nicht zum Pilot. Die Abläufe setzen voraus, dass Projekte nacheinander bearbeitet werden, ohne gleichzeitige Änderungen durch mehrere Personen.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -338,7 +338,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Der Suchbestand ist vollständig und enthält höchstens 50 Projekte. Suche und Status wirken sofort lokal. q und status sind URL-gebunden und werden durch Detail und Bearbeitung weitergegeben. Grössere Bestände, Server-Suche, Rollen und Massenaktionen benötigen eigene Entscheidungen.",
+              "text": "Für die Suche liegen alle Projekte lokal vor, höchstens 50. Suche und Statusfilter wirken sofort. Die URL-Parameter q und status bleiben beim Öffnen der Detailansicht und beim Bearbeiten erhalten. Für grössere Bestände, Suche auf dem Server, Rollen und Massenaktionen sind weitere Entscheidungen nötig.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -480,7 +480,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Abstände verwenden 4, 8, 12, 16, 24, 32 und 48 px. Label zum Feld: 8 px. Feld zur Hilfe oder Fehlermeldung: 8 px. Zwischen Feldern oder zusammengehörigen Regionen: 24 px. Zwischen grossen Seitenabschnitten: 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
+              "text": "Die vorgesehenen Abstände sind 4, 8, 12, 16, 24, 32 und 48 px. Zwischen Label und Feld liegen 8 px, ebenso zwischen Feld und Hilfe oder Fehlermeldung. Zwischen Feldern oder zusammengehörigen Bereichen liegen 24 px, zwischen grossen Seitenabschnitten 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -516,7 +516,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Buttons und Eingaben haben im Entwurf mindestens 44 px Höhe, dürfen mit Inhalt wachsen und erhalten 8 px Radius. Das ist eine eigene einheitliche Pilotwahl, keine Behauptung über unveränderte Spartan-Defaults oder die unterschiedlichen Radien der importierten Komponenten. Es gibt keine zusätzliche Card um jede Information und keine haftenden Aktionsleisten.",
+              "text": "Buttons und Eingabefelder sind im Entwurf mindestens 44 px hoch, dürfen mit ihrem Inhalt wachsen und haben 8 px Radius. Diese einheitlichen Werte wurden für den Pilot gewählt. Die unveränderten Spartan-Defaults und die unterschiedlichen Radien der importierten Komponenten können davon abweichen. Einzelne Informationen erhalten keine zusätzliche Card; Aktionsleisten haften nicht am Bildschirmrand.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -551,7 +551,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Herkunft und offene Nachweise",
+              "text": "Herkunft und ausstehende Prüfungen",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -569,7 +569,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Herkunft: Das Handbuch und die importierte shadcn-Contractbibliothek liefern bestehende Komponenten- und Gestaltungsbefunde. Die hier gewählten Typografie-, Abstands-, Radius- und Layoutrollen sind ergänzende lokale Entscheidungen vom 18.11.2026. Sie ändern keine versionierten Contractdateien und lösen keinen Plattformnachweis aus.",
+              "text": "Die Vorlage baut auf dem Handbuch und der importierten shadcn-Contractbibliothek auf. Die Vorgaben für Typografie, Abstände, Radien und Layout wurden am 18.11.2026 für diesen Pilot ergänzt. Die versionierten Contractdateien bleiben unverändert. Ob sich diese Gestaltungsentscheidungen auf einer Plattform bewähren, ist damit noch nicht nachgewiesen.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -587,7 +587,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Design verantwortet künftig die visuellen Rollen; UX und Fachbereich prüfen Begriffe, Bedingungen und Rückwege; Entwicklung prüft die Umsetzbarkeit und technischen Nachweise. Das benennt benötigte Rollen, weist aber keinem realen Team ungefragt Verantwortung oder eine erteilte Freigabe zu.",
+              "text": "Für die weitere Arbeit braucht es Design für die visuellen Vorgaben, UX und Fachbereich für Begriffe, Bedingungen und Rückwege sowie Entwicklung für Umsetzbarkeit und technische Prüfungen. Diese Aufgaben sind noch keinem konkreten Team zugewiesen; eine Freigabe liegt nicht vor.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -605,7 +605,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Noch offen: vorhandene Designressourcen im Designwerkzeug verwenden und prüfen; breite und schmale Aufgabenentwürfe ausarbeiten; unabhängige Teamprobe durchführen. Ebenso offen sind reale Speicheranbindung, Statusklärung bei unbekanntem Ergebnis und Laufzeitprüfungen mit Tastatur, Zoom und assistiven Werkzeugen. Ein unbekannter Speicherstand darf nicht als Erfolg oder als sicher ungespeichert erscheinen.",
+              "text": "Als Nächstes sind die Designressourcen im Designwerkzeug zu verwenden und zu prüfen, die breiten und schmalen Entwürfe auszuarbeiten und die unabhängige Teamprobe durchzuführen. Für eine Anwendung fehlen ausserdem die reale Speicheranbindung, die Statusklärung bei unbekanntem Ergebnis und Tests mit Tastatur, Zoom und assistiven Werkzeugen. Ein unbekanntes Speicherergebnis darf weder als Erfolg noch als sicher ungespeichert erscheinen.",
               "type": "text",
               "style": "",
               "detail": 0,

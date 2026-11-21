@@ -1,8 +1,8 @@
 import type { Page } from '../../../src/payload-types'
 
 export const release = {
-  "expectedUpdatedAt": "2026-11-18T00:12:33.145Z",
-  "summary": "28 Patternkandidaten nach Aufgabe, Kategorie und Tags finden; kurze Abläufe mit Beobachtungsgrenzen und direkten Fachseiten.",
+  "expectedUpdatedAt": "2026-11-20T16:30:29.160Z",
+  "summary": "28 Patternkandidaten nach Aufgabe, Kategorie oder Tags durchsuchen. Kurze Ablaufvorschauen zeigen, was beobachtet wurde und welche Fragen offenbleiben; Fachseiten helfen beim Gestalten.",
   "content": [
     {
       "blockType": "text",
@@ -40,7 +40,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "28 Kandidaten aus einer Referenzaufnahme: nach Aufgabe, Kategorie oder Tag suchen und einen Ablauf ansehen. Die Vorschauen verdichten Beobachtungen; sie sind keine freigegebenen Regeln oder lokal implementierten Beispiele."
+                  "text": "Suche unter 28 beobachteten Patternkandidaten nach einer Aufgabe, Kategorie oder einem Tag. Die Ablaufvorschauen zeigen in drei Schritten, wie Menschen die untersuchte Oberfläche nutzen oder ihre Inhalte erfassen können. Sie fassen Beobachtungen zusammen; die Patterns sind weder als Regeln freigegeben noch als lokale Beispiele implementiert."
                 }
               ]
             }
@@ -56,28 +56,28 @@ export const release = {
       "steps": [
         {
           "key": "1",
-          "title": "Kriterien entwerfen",
-          "description": "Mehrere Suchkriterien setzen.",
+          "title": "Suchkriterien festlegen",
+          "description": "Mehrere Kriterien auswählen, bevor die Suche sie anwendet.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "2",
           "title": "Kriterien anwenden",
-          "description": "Die Suche übernimmt den Entwurf.",
+          "description": "Die Suche übernimmt die gewählten Kriterien.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "3",
-          "title": "Angewandten Kontext lesen",
+          "title": "Aktive Filter erkennen",
           "description": "Aktive Kriterien bleiben bei den Ergebnissen sichtbar.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Finden · Tags: context, filters",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Reset leert zunächst den Entwurf; erst erneutes Anwenden übernimmt die Rücksetzung. Nur UI-Übernahme belegt: Ergebniswerte und Datumsbereich waren nicht fachlich verlässlich."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Zurücksetzen leert zunächst nur die eingegebenen Kriterien; erst erneutes Anwenden setzt auch die Suche zurück. Belegt ist nur, dass die Oberfläche die Kriterien übernimmt: Ergebniswerte und Datumsbereich waren fachlich nicht verlässlich."
     },
     {
       "blockType": "workflowStudy",
@@ -94,8 +94,8 @@ export const release = {
         },
         {
           "key": "2",
-          "title": "Treffermenge ansehen",
-          "description": "Ein Nichttreffer zeigt eine leere Menge.",
+          "title": "Suchergebnisse ansehen",
+          "description": "Passt keine Zeile zum Suchtext, bleibt die Liste leer.",
           "tone": "normal",
           "next": null
         },
@@ -113,12 +113,12 @@ export const release = {
     {
       "blockType": "workflowStudy",
       "blockName": "UX-003",
-      "title": "Ansichtskontext wählen",
+      "title": "Zeitraum oder Konten auswählen",
       "summary": "Zeitraum der Analyse wählen.",
       "steps": [
         {
           "key": "1",
-          "title": "Kontext öffnen",
+          "title": "Auswahl öffnen",
           "description": "Zeitraum oder Kontenauswahl öffnen.",
           "tone": "normal",
           "next": null
@@ -132,24 +132,24 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Kontext wählen",
+          "title": "Konten auswählen",
           "description": "Eine gemeinsame Kontenansicht wählen.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Auswählen · Tags: ohne Tags",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Kontenauswahl und unmittelbare Optionssuche bedient; Nichttreffer ohne sichtbare Erklärung. Erfolgreiche Übernahme eines korrigierten Zeitraums nicht gesondert ausgewertet; keine allgemeine Accessibilityprüfung."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Kontenauswahl und sofortige Suche in den Optionen bedient; bei fehlenden Treffern erschien keine Erklärung. Ob ein korrigierter Zeitraum erfolgreich übernommen wurde, wurde nicht gesondert ausgewertet. Keine umfassende Prüfung der Barrierefreiheit."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-004",
-      "title": "Datumsbereich validieren",
-      "summary": "Ungültige Beziehung zwischen Datumsfeldern verstehen.",
+      "title": "Ungültigen Datumsbereich korrigieren",
+      "summary": "Verstehen, warum das Von-Datum nicht nach dem Bis-Datum liegen darf.",
       "steps": [
         {
           "key": "1",
-          "title": "Widerspruch eingeben",
+          "title": "Ungültigen Zeitraum eingeben",
           "description": "Das Von-Datum liegt nach dem Bis-Datum.",
           "tone": "normal",
           "next": null
@@ -176,11 +176,11 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-005",
       "title": "Bedingte Felder anzeigen",
-      "summary": "Ausführung terminieren",
+      "summary": "Einen Termin für die Ausführung festlegen.",
       "steps": [
         {
           "key": "1",
-          "title": "Terminierung wählen",
+          "title": "Ausführung zu einem Termin wählen",
           "description": "Die Terminoption blendet Datum und Kalender ein.",
           "tone": "normal",
           "next": null
@@ -188,26 +188,26 @@ export const release = {
         {
           "key": "2",
           "title": "Datum eingeben",
-          "description": "Einen Datumsentwurf ändern.",
+          "description": "Das Datum für die geplante Ausführung ändern.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "3",
           "title": "Option wechseln",
-          "description": "Sofortige Ausführung verbirgt das Feld; erneutes Öffnen erhält den Entwurf.",
+          "description": "Bei sofortiger Ausführung verschwindet das Datumsfeld. Wird die Terminoption erneut gewählt, bleibt das eingegebene Datum erhalten.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Eingeben · Tags: conditional, responsive",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Werterhalt nur im selben ungesendeten Formular belegt, auch schmal gesehen. Validierung, Neuaufruf und dauerhafte Speicherung offen; keine Übermittlung ausgeführt."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Das Datum blieb nur im selben, noch nicht abgesendeten Formular nachweislich erhalten; auch in der schmalen Ansicht beobachtet. Validierung, erneutes Aufrufen und dauerhafte Speicherung bleiben offen. Das Formular wurde nicht abgesendet."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-006",
       "title": "Import beginnen und abbrechen",
-      "summary": "Datenverwendung vor Dateiauswahl verstehen",
+      "summary": "Vor der Dateiauswahl verstehen, wie die Daten verwendet werden.",
       "steps": [
         {
           "key": "1",
@@ -218,14 +218,14 @@ export const release = {
         },
         {
           "key": "2",
-          "title": "Verwendung lesen",
-          "description": "Vor der Dateiauswahl die Information lesen.",
+          "title": "Datenverwendung nachlesen",
+          "description": "Vor der Dateiauswahl den Hinweis zur Verwendung der Daten lesen.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "3",
-          "title": "Einstieg abbrechen",
+          "title": "Import abbrechen",
           "description": "Den Informationsdialog abbrechen.",
           "tone": "normal",
           "next": null
@@ -238,7 +238,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-008",
       "title": "Status und Auswege erklären",
-      "summary": "Dateiverarbeitung einschätzen",
+      "summary": "Den Verarbeitungsstatus einer Datei und mögliche nächste Schritte erkennen.",
       "steps": [
         {
           "key": "1",
@@ -256,20 +256,20 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Ausweg erkennen",
-          "description": "Detailzugang oder Rückweg erkennen.",
+          "title": "Nächsten Schritt erkennen",
+          "description": "Erkennen, wo sich Details öffnen lassen oder ein Rückweg angeboten wird.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Zustände · Tags: error, processing, table",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine Datei übertragen und keine zeitliche Progression beobachtet. Fehlerdetails klärten die Ursache nicht; bei Nichtverfügbarkeit war ein Rückweg sichtbar, aber nicht bedient."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine Datei übertragen und den Verlauf einer Verarbeitung nicht beobachtet. Fehlerdetails klärten die Ursache nicht. Bei Nichtverfügbarkeit war ein Rückweg sichtbar; er wurde nicht genutzt."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-009",
       "title": "Mehrere Einträge auswählen",
-      "summary": "Zeilen vor gemeinsamer Folgeaktion markieren.",
+      "summary": "Zeilen markieren, auf die anschliessend eine gemeinsame Aktion angewendet werden kann.",
       "steps": [
         {
           "key": "1",
@@ -288,19 +288,19 @@ export const release = {
         {
           "key": "3",
           "title": "Auswahl ändern",
-          "description": "Gesamtwahl oder Abwahl verändert die Markierungen.",
+          "description": "Alle Zeilen auswählen oder Markierungen entfernen.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Auswählen · Tags: batch-selection, bulk, checkbox, disabled, selection",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine gemeinsame Aktion ausgeführt, keine Pagination geprüft. Filterverhalten unterschied sich je Ansicht: Markierungen blieben teils erhalten, erneutes Anwenden leerte sie andernorts. Gemischter Kopfzustand visuell nicht erkennbar; Semantik ungeprüft."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine gemeinsame Aktion ausgeführt und keinen Wechsel zwischen Listenseiten geprüft. Das Filterverhalten unterschied sich je Ansicht: Markierungen blieben teils erhalten, andernorts wurden sie beim erneuten Anwenden entfernt. An der Checkbox im Tabellenkopf war visuell kein Zustand für eine teilweise Auswahl erkennbar; die Semantik wurde nicht geprüft."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-010",
       "title": "Liste sortieren",
-      "summary": "Aufträge in anderer Reihenfolge betrachten",
+      "summary": "Aufträge in einer anderen Reihenfolge betrachten.",
       "steps": [
         {
           "key": "1",
@@ -318,8 +318,8 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Modus erkennen",
-          "description": "Das Steuerelement zeigt den gewählten Modus.",
+          "title": "Gewählte Sortierung erkennen",
+          "description": "Die gewählte Sortierung bleibt im Steuerelement sichtbar.",
           "tone": "normal",
           "next": null
         }
@@ -381,7 +381,7 @@ export const release = {
         {
           "key": "3",
           "title": "Hilfe schliessen",
-          "description": "Mit Schliessen zum Kontext zurückkehren.",
+          "description": "Die Hilfe schliessen und zum Arbeitsbereich zurückkehren.",
           "tone": "normal",
           "next": null
         }
@@ -392,7 +392,7 @@ export const release = {
     {
       "blockType": "workflowStudy",
       "blockName": "UX-013",
-      "title": "Diagramm und Tabelle wechseln",
+      "title": "Vom Diagramm zur Tabelle wechseln",
       "summary": "Analyse als Werte statt Grafik lesen.",
       "steps": [
         {
@@ -435,8 +435,8 @@ export const release = {
         },
         {
           "key": "2",
-          "title": "Information erweitern",
-          "description": "Die Erweiterungsaktion auslösen.",
+          "title": "Weitere Einträge aufklappen",
+          "description": "Die Aktion zum Anzeigen weiterer Einträge auslösen.",
           "tone": "normal",
           "next": null
         },
@@ -455,7 +455,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-016",
       "title": "Navigationsebenen öffnen und verlassen",
-      "summary": "In der Bereichshierarchie orientieren.",
+      "summary": "Sich zwischen den Ebenen der Navigation orientieren.",
       "steps": [
         {
           "key": "1",
@@ -486,7 +486,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-017",
       "title": "Nulltreffer erklären",
-      "summary": "Ausbleibende Ergebnisse einordnen",
+      "summary": "Verstehen, warum die Suche keine Ergebnisse zeigt.",
       "steps": [
         {
           "key": "1",
@@ -517,12 +517,12 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-018",
       "title": "Nach Aufgaben navigieren",
-      "summary": "Passenden Einstieg nach Aufgabe wählen",
+      "summary": "Die passende Seite anhand der eigenen Aufgabe finden.",
       "steps": [
         {
           "key": "1",
           "title": "Bereich öffnen",
-          "description": "Einen Bereichshub aufrufen.",
+          "description": "Die Übersichtsseite eines Bereichs aufrufen.",
           "tone": "normal",
           "next": null
         },
@@ -536,37 +536,37 @@ export const release = {
         {
           "key": "3",
           "title": "Ziel öffnen",
-          "description": "Ein repräsentatives Aufgabenziel öffnen.",
+          "description": "Eine der angebotenen Seiten für die gewählte Aufgabe öffnen.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Navigieren · Tags: dashboard, navigation",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Nur sichtbare Ziele und einzelne Unterziele geprüft; keine vollständige Reichweite. Die Kachel allein ist kein eigenständiger Ablauf."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Nur sichtbare Ziele und einzelne Unterziele geprüft; nicht alle Ziele wurden geprüft. Die Kachel allein ist kein eigenständiger Ablauf."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-019",
       "title": "Tabs durch kompakte Auswahl ersetzen",
-      "summary": "Zwischen Übertragsarten wechseln",
+      "summary": "Die Auswahl der Übertragsart in breiten und schmalen Ansichten erkennen.",
       "steps": [
         {
           "key": "1",
-          "title": "Breite Ansicht lesen",
+          "title": "Tabs in der breiten Ansicht ansehen",
           "description": "Die Ansichtsarten stehen nebeneinander als Tabs.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "2",
-          "title": "Schmale Ansicht lesen",
+          "title": "Auswahl in der schmalen Ansicht ansehen",
           "description": "Eine kompakte Auswahl ersetzt die Tabreihe.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "3",
-          "title": "Kontext erkennen",
+          "title": "Gewählte Übertragsart erkennen",
           "description": "Die aktuelle Art bleibt beschriftet.",
           "tone": "normal",
           "next": null
@@ -579,7 +579,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-020",
       "title": "Werte in einer Tabelle bearbeiten",
-      "summary": "Werte einer Vorlage am Objekt anpassen",
+      "summary": "Bearbeitbare Werte direkt in der Zeile einer Vorlage erkennen.",
       "steps": [
         {
           "key": "1",
@@ -591,14 +591,14 @@ export const release = {
         {
           "key": "2",
           "title": "Zeilenfelder erkennen",
-          "description": "Bearbeitbare Werte liegen im Kontext derselben Zeile.",
+          "description": "Die bearbeitbaren Werte stehen in derselben Tabellenzeile wie die Vorlage.",
           "tone": "normal",
           "next": null
         },
         {
           "key": "3",
-          "title": "Folgeaktion unterscheiden",
-          "description": "Die Erzeugungsaktion ist getrennt erkennbar.",
+          "title": "Aktion zum Erstellen erkennen",
+          "description": "Die Aktion zum Erstellen aus der Vorlage ist von den bearbeitbaren Feldern getrennt erkennbar.",
           "tone": "normal",
           "next": null
         }
@@ -610,11 +610,11 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-021",
       "title": "Auswirkungen vor einer Aktion anzeigen",
-      "summary": "Künftige Kontobelastung einschätzen",
+      "summary": "Eine künftige Kontobelastung einschätzen.",
       "steps": [
         {
           "key": "1",
-          "title": "Kontext lesen",
+          "title": "Konto und Fälligkeit ansehen",
           "description": "Konto und Fälligkeit ansehen.",
           "tone": "normal",
           "next": null
@@ -628,8 +628,8 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Detailzugang erkennen",
-          "description": "Auftragstypen bieten getrennte Detailzugänge.",
+          "title": "Links zu Details erkennen",
+          "description": "Für die einzelnen Auftragstypen lassen sich jeweils eigene Details aufrufen.",
           "tone": "normal",
           "next": null
         }
@@ -641,7 +641,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-022",
       "title": "In einen eingebetteten Arbeitsbereich wechseln",
-      "summary": "In einem eingebetteten Rechnungsportal Orientierung behalten",
+      "summary": "Sich in einem eingebetteten Rechnungsportal orientieren.",
       "steps": [
         {
           "key": "1",
@@ -659,7 +659,7 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Kontexte unterscheiden",
+          "title": "Navigationen unterscheiden",
           "description": "Übergeordnete und eingebettete Navigation auseinanderhalten.",
           "tone": "normal",
           "next": null
@@ -677,7 +677,7 @@ export const release = {
         {
           "key": "1",
           "title": "Detail öffnen",
-          "description": "Einen Eintrag vertieft ansehen.",
+          "description": "Die Details eines Eintrags öffnen.",
           "tone": "normal",
           "next": null
         },
@@ -690,14 +690,14 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Unverändert abbrechen",
-          "description": "Den unveränderten Entwurf abbrechen.",
+          "title": "Ohne Änderung abbrechen",
+          "description": "Die Bearbeitung abbrechen, ohne Werte zu ändern.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Bearbeiten · Tags: ohne Tags",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine Auswahl geändert. Verwerfen geänderter Werte und Speichersemantik damit nicht belegt."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Keine Auswahl geändert. Damit ist weder das Verwerfen geänderter Werte noch das Verhalten beim Speichern belegt."
     },
     {
       "blockType": "workflowStudy",
@@ -721,7 +721,7 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Aktion unterscheiden",
+          "title": "Handlungsmöglichkeiten unterscheiden",
           "description": "Information und Abschluss als getrennte Wege erkennen.",
           "tone": "normal",
           "next": null
@@ -739,7 +739,7 @@ export const release = {
         {
           "key": "1",
           "title": "Einführung öffnen",
-          "description": "Eine Funktionsführung starten.",
+          "description": "Die schrittweise Einführung in die Funktionen starten.",
           "tone": "normal",
           "next": null
         },
@@ -752,14 +752,14 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Führung schliessen",
+          "title": "Einführung schliessen",
           "description": "Die Einführung verlassen.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Verstehen · Tags: dialog, onboarding",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Breit fünf Informationsschritte nachgeprüft; schmal nur Schritt 1–2. Enter und Escape in einer schmalen Probe bedient, Fokus danach am Einstieg sichtbar. Keine vollständige Tastatur- oder Screenreaderprüfung; kein Transaktionswizard."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: In der breiten Ansicht fünf Informationsschritte nachgeprüft, in der schmalen nur Schritt 1–2. Enter und Escape in einer schmalen Ansicht ausprobiert; der Fokus war danach am Einstieg sichtbar. Keine vollständige Tastatur- oder Screenreaderprüfung. Die Einführung erläutert Funktionen; sie führt nicht durch den Abschluss einer Transaktion."
     },
     {
       "blockType": "workflowStudy",
@@ -770,7 +770,7 @@ export const release = {
         {
           "key": "1",
           "title": "Erste Zeilen lesen",
-          "description": "Die erste Teilmenge der Liste ansehen.",
+          "description": "Die zunächst angezeigten Zeilen der Liste ansehen.",
           "tone": "normal",
           "next": null
         },
@@ -783,14 +783,14 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Liste fortsetzen",
-          "description": "Mehr Zeilen und eine erneute Erweiterungsaktion werden sichtbar.",
+          "title": "Weitere Zeilen lesen",
+          "description": "Weitere Zeilen erscheinen. Die Aktion zum Nachladen wird erneut angeboten.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Finden · Tags: show-more-disclosure, table",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Sechs auf zwölf Zeilen beobachtet. Serverpagination, Gesamtmenge, Listenende und Rücksetzen des Umfangs nicht belegt."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Die Liste wuchs von sechs auf zwölf Zeilen. Ob der Server weitere Listenseiten liefert, wie viele Einträge es insgesamt gibt, wie das Listenende aussieht und wie sich die angezeigte Anzahl zurücksetzen lässt, ist nicht belegt."
     },
     {
       "blockType": "workflowStudy",
@@ -815,24 +815,24 @@ export const release = {
         {
           "key": "3",
           "title": "Aktion zuordnen",
-          "description": "Passenden Upload- oder Detailzugang erkennen.",
+          "description": "Die passende Möglichkeit zum Hochladen oder Öffnen von Details erkennen.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Zustände · Tags: deadline, row-action",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Darstellung beobachtet. Beobachtungsgrenzen: Vorhandene Zustände nur angesehen; keine Progression oder Freigabe ausgeführt. Nicht jede betrachtete Variante zeigte eine Frist."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Darstellung beobachtet. Beobachtungsgrenzen: Nur vorhandene Zustände angesehen; keine weiteren Bearbeitungsschritte oder Freigaben ausgeführt. Nicht jede betrachtete Variante zeigte eine Frist."
     },
     {
       "blockType": "workflowStudy",
       "blockName": "UX-028",
       "title": "Von einer Mitteilung zur Aufgabe wechseln",
-      "summary": "Eine neue Information in ihrem Arbeitsbereich öffnen.",
+      "summary": "Den Link von einer neuen Mitteilung zum zugehörigen Arbeitsbereich erkennen.",
       "steps": [
         {
           "key": "1",
           "title": "Neuigkeit erkennen",
-          "description": "Eine Mitteilung mit Ungelesenzähler ansehen.",
+          "description": "Eine Mitteilung mit einer Anzeige für die Anzahl ungelesener Einträge ansehen.",
           "tone": "normal",
           "next": null
         },
@@ -858,7 +858,7 @@ export const release = {
       "blockType": "workflowStudy",
       "blockName": "UX-029",
       "title": "Eintrag aus einer Übersicht öffnen",
-      "summary": "Eine Versicherung vertieft ansehen.",
+      "summary": "Die Details einer Versicherung ansehen.",
       "steps": [
         {
           "key": "1",
@@ -876,14 +876,14 @@ export const release = {
         },
         {
           "key": "3",
-          "title": "Kontext wiederaufnehmen",
+          "title": "Zur Übersicht zurückkehren",
           "description": "Mit dem sichtbaren Rückweg zur Übersicht zurückkehren.",
           "tone": "normal",
           "next": null
         }
       ],
       "caption": "Kategorie: Navigieren · Tags: ohne Tags",
-      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Ein repräsentativer Vertrag vertieft geöffnet; keine vollständige Fachprüfung. Separate Rückwegprobe: Filter erhalten, Sortierung auf Standard. Scrollposition nicht verglichen, Browser-Zurück ungeprüft, fachliche Zuordnung der Demowerte nicht belegt."
+      "source": "Kandidat · Referenzaufnahme 20.11.2026 · Interaktionen beobachtet. Beobachtungsgrenzen: Die Details eines repräsentativen Vertrags geöffnet; keine vollständige Fachprüfung. Bei einer gesondert geprüften Rückkehr blieb der Filter erhalten, die Sortierung wurde auf den Standard zurückgesetzt. Die Scrollposition wurde nicht verglichen. Browser-Zurück blieb ungeprüft; die fachliche Zuordnung der Demowerte ist nicht belegt."
     },
     {
       "blockType": "workflowStudy",
@@ -893,7 +893,7 @@ export const release = {
       "steps": [
         {
           "key": "1",
-          "title": "Ziel lesen",
+          "title": "Budget ansehen",
           "description": "Eine Budgetübersicht ansehen.",
           "tone": "normal",
           "next": null
@@ -938,7 +938,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Zwei weitere Registervormerkungen"
+                  "text": "Zwei weitere Kandidaten ohne aktuelle Beobachtung"
                 }
               ]
             },
@@ -1222,7 +1222,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Grundlage ist eine begrenzte Referenzaufnahme vom 20.11.2026 mit 28 beobachteten Mustern und zwei weiteren Registervormerkungen. IDs bleiben über den Bearbeitungsstand hinweg stabil. Kategorien und Tags dienen zum Finden; sie bescheinigen keine Qualität oder Implementierungsfähigkeit."
+                  "text": "Grundlage ist eine begrenzte Referenzaufnahme vom 20.11.2026 mit 28 beobachteten Mustern. Zwei weitere Kandidaten sind verzeichnet, wurden in dieser Aufnahme aber nicht beobachtet. Die IDs bleiben bei weiteren Bearbeitungen erhalten. Kategorien und Tags helfen beim Finden; sie sagen nichts über die Qualität oder Umsetzbarkeit eines Patterns aus."
                 }
               ]
             },
@@ -1236,7 +1236,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Die drei Schritte sind redaktionell verdichtete Ablaufvorschauen. Bei nur sichtbaren Ansichten beschreiben sie eine Lesefolge; sie behaupten keine ausgeführte Aktion. Beobachtungsgrenzen und ergänzende Nachprüfungen stehen pro ausgewähltem Kandidaten."
+                  "text": "Die drei Schritte jeder Vorschau fassen die Beobachtung redaktionell zusammen. Wo nur eine Ansicht betrachtet wurde, beschreiben sie, welche Inhalte sich darin nacheinander erfassen lassen. Sie bedeuten nicht, dass die gezeigten Aktionen ausgeführt wurden. Was beobachtet und ergänzend nachgeprüft wurde und welche Fragen offenbleiben, steht beim ausgewählten Kandidaten."
                 }
               ]
             },

@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation'
 import { Content } from '../../../../docs/content'
 import { documentationTree } from '../../../../docs/published-documentation'
 import { listSystems, readSystem, relationId } from '../../../../docs/systems'
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import { documentationData } from '../../../../docs/documentation-data'
 import { ShadcnHome } from '../../../../docs/shadcn-home'
 
 export default async function SystemHome({ params }: { params: Promise<{ system: string }> }) {
@@ -13,12 +12,7 @@ export default async function SystemHome({ params }: { params: Promise<{ system:
   if (!system || !documentation) notFound()
   if (slug === 'shadcn') return <ShadcnHome theme={system.theme} entries={documentation.tree} />
   const id = relationId(system.home)
-  const payload = await getPayload({ config })
-  const { docs: [home] } = id ? await payload.find({
-    collection: 'pages', limit: 1, draft: false, where: { and: [
-      { id: { equals: id } }, { designSystem: { equals: system.id } }, { _status: { equals: 'published' } },
-    ] },
-  }) : { docs: [] }
+  const home = id ? await (await documentationData()).page(system,{id}) : undefined
   const first = documentation.tree[0]
 
   return (

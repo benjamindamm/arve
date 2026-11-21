@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "navigation-menu.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "NavigationMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "NavigationMenuPrimitive.Root.Props<Value>[\"value\"]"
+              },
+              "description": "Root is native nav (nested primitive Roots use div), not role=menu or menubar. Generic value/defaultValue is the currently open item or null; it is distinct from the destination/current-page link. onValueChange carries cancellable details, and controlled props remain authoritative. Source delay/closeDelay default50ms, orientation defaults horizontal. The wrapper align defaults start and automatically appends one NavigationMenuPositioner: do not add a second one to this wrapper. Its built-in Positioner defaults bottom/start and offsets8/0; custom default-positioner side/offset composition needs the direct primitive Root, not fictitious Root props. Content moves into the active popup/viewport; the private source Popup itself is another native nav without an exposed label prop, while accessible destination links remain related to the named outer navigation in the client accessibility tree. Trigger is native button with expanded/controls, no invented menuitem role; disabled triggers may focus but cannot open. List/Item remain ul/li with primitive composite navigation (loopFocus=false on the top list). Link is a real anchor, active sets aria-current=page, closeOnClick defaultsfalse. This reference explicitly selects closeOnClick=true for actual destination links. NavigationMenuIndicator wraps primitive Icon (a decorative disclosure indicator), not an independent selected-item controller. onOpenChangeComplete is emitted with false after closing/unmount, not an invented opening callback. Deferred closing uses eventDetails.preventUnmountOnClose and actionsRef.unmount."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NavigationMenuPrimitive.Root.Props &\n  Pick<NavigationMenuPrimitive.Positioner.Props, \"align\">"
+              },
+              "description": "Exact public source type/defaults {\"align\": \"\\\"start\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:7."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: Value | null, eventDetails: NavigationMenuPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual open-item request, not route selection."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Pinned source emits false after closed lifecycle completion."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "navigation-menu",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.List>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:29."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation-menu-list",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:45."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation-menu-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NavigationMenuPrimitive.Trigger.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:62."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation-menu-trigger",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NavigationMenuPrimitive.Content.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:87."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation-menu-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuPositioner",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NavigationMenuPrimitive.Positioner.Props"
+              },
+              "description": "Exact public source type/defaults {\"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"8\", \"align\": \"\\\"start\\\"\", \"alignOffset\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:103."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuLink",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NavigationMenuPrimitive.Link.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:132."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "NavigationMenuPrimitive.Link.Props[\"onClick\"]"
+              },
+              "description": "Actual inherited native/React Button callback; wrapper-specific follow-up behavior is explicitly documented."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "navigation-menu-link",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NavigationMenuIndicator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Icon>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source:145."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation-menu-indicator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

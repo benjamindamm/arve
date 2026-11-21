@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "calendar.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Calendar",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DayPicker> & {\n  buttonVariant?: React.ComponentProps<typeof Button>[\"variant\"]\n}"
+              },
+              "description": "Actual complete wrapper type, exact defaults/source lines in react-api-inventory; DayPicker union and original package declarations are frozen."
+            }
+          ],
+          "events": [
+            {
+              "name": "onSelect",
+              "type": {
+                "text": "DayPickerProps[\"onSelect\"]"
+              },
+              "description": "Actual mode-specific selection callback, not a cancellable Base UI eventDetails transaction."
+            },
+            {
+              "name": "onDayClick",
+              "type": {
+                "text": "DayEventHandler<React.MouseEvent>"
+              }
+            },
+            {
+              "name": "onMonthChange",
+              "type": {
+                "text": "MonthChangeEventHandler"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CalendarDayButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DayButton> & { locale?: Partial<Locale> }"
+              },
+              "description": "Actual complete wrapper type, exact defaults/source lines in react-api-inventory; DayPicker union and original package declarations are frozen."
+            }
+          ],
+          "events": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,10 @@
+import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './page-type-create.css'
+
+const ruleLabels: Record<string, string[]> = {"decisions": ["Neuer oder bestehender Eintrag", "Feld und Systemangaben", "Abbrechen vor dem Absenden", "Laufende oder unbekannte Anfrage"]}
 
 type Block = NonNullable<Page['content']>[number]
 type Text = Extract<Block, { blockType: 'text' }>
@@ -18,6 +21,7 @@ export default function PageTypeCreate({ content }: { content: Page['content'] }
   const section = (key: string, collapsible = false) => {
     const b = get(key)
     if (!b) return null
+    if (["decisions", "regions"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return collapsible ? <details id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section id={blockAnchor(b)}><RichText data={b.body}/></section>
   }
@@ -32,12 +36,13 @@ export default function PageTypeCreate({ content }: { content: Page['content'] }
       </div>
       <p className="create-caption">{v[8]}</p>
     </section>}
+    {section('decisions')}
     <div className="create-variants">
       {error && <section className="create-variant" id={blockAnchor(error)}><h2>{e[0]}</h2><label htmlFor="create-error">{e[1]}</label><input id="create-error" value="" readOnly aria-invalid="true" aria-describedby="create-error-message"/><p id="create-error-message" className="create-error">{e[2]}</p><p>{e[3]}</p><p>{e[4]}</p></section>}
       {pending && <section className="create-variant" id={blockAnchor(pending)}><h2>{p[0]}</h2><p className="create-message"><span aria-hidden="true">◌ </span>{p[1]}</p><p>{p[2]}</p></section>}
       {confirmed && <section className="create-variant" id={blockAnchor(confirmed)}><h2>{c[0]}</h2><div className="create-message"><strong>{c[1]}</strong><p>{c[2]} <span className="create-status">{c[3]}</span></p></div><p>{c[4]}</p></section>}
       {unknown && <section className="create-variant" id={blockAnchor(unknown)}><h2>{u[0]}</h2><p className="create-message"><strong>{u[1]}</strong></p><p>{u[2]}</p></section>}
     </div>
-    {section('decisions')}{section('regions')}{section('contract', true)}{section('sources', true)}
+    {section('regions')}{section('contract', true)}{section('sources', true)}
   </div>
 }

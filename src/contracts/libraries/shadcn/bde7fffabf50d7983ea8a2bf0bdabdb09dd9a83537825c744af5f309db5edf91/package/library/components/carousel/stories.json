@@ -1,0 +1,45 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "72:2722"
+  },
+  "stories": [
+    {
+      "id": "figma-1936-551",
+      "name": "Card / Layout=Vertical",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1936:551",
+        "part": "1936:552"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1936-550",
+      "name": "Card / Layout=Horizontal",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1936:550",
+        "part": "1936:552"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "source-specific-normal-and-failure",
+      "expected": "Root props include opts:CarouselOptions, plugins:CarouselPlugin, orientation horizontal|vertical (defaulthorizontal), setApi(api) and native div props. useEmblaCarousel8.5.2 receives opts then an axis forced from orientation, so orientation wins over opts.axis. setApi receives the actual ready API, not a fabricated index event. Internal select/reInit observations derive canScrollPrev/Next; Previous/Next compose Button with default outline/icon-sm and readable hidden Previous slide/Next slide labels. Their disabled and onClick props are applied before {...props}, so callers can deliberately override them. Item is group with roledescription=slide; Root is region roledescription=carousel and requires caller context name. Content has an outer overflow viewport and inner flex track; className styles the track. Embla supplies drag, focus/resize behavior and snapping. No autoplay is enabled unless a plugin explicitly adds it; there is no built-in pause button, pagination or live announcement. This reference chooses three static slides, nonlooping default options, no plugin and external status from actual api.select subscriptions."
+    },
+    {
+      "id": "keyboard-focus-and-disabled",
+      "expected": "Next/Previous use native Button Enter/Space and are disabled at the respective nonlooping boundary. Root onKeyDownCapture intercepts Left to scrollPrev and Right to scrollNext even in vertical layout; it does not implement Up/Down and does not check editable descendant targets. This reference keeps editable fields outside the carousel. Tab follows actual child/Button order; no slide roving tabindex or focus jump is invented. Caller may override the capture handler via native props. Escape does not reset the selected slide. Each slide gets an explicit positional/task label in this reference."
+    },
+    {
+      "id": "meaningful-native-content",
+      "html": "accessibility.html"
+    }
+  ]
+}

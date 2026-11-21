@@ -2,7 +2,7 @@ import type { Page } from '../payload-types'
 import './workflow-study.css'
 
 type WorkflowBlock = Extract<NonNullable<Page['content']>[number], { blockType: 'workflowStudy' }>
-const toneLabels = { normal: 'Schritt', attention: 'Klärung oder Korrektur', success: 'Bestätigtes Ergebnis' }
+const toneLabels = { normal: 'Schritt', attention: 'Klärung oder Korrektur', success: 'Ergebnis' }
 
 /** All domain content comes from the published CMS block, also returned by MCP. */
 export function WorkflowStudy({ title, summary, steps, caption, source }: WorkflowBlock) {

@@ -98,7 +98,7 @@ const original:Block[]=[
   }
 ]
 export const release={
- expectedUpdatedAt:"2026-11-13T12:43:02.842Z",
+ expectedUpdatedAt:"2026-11-20T15:21:15.606Z",
  title:'Releases und Migrationen',
  summary:'Seitenfassung, Contractrevision und Komponentenpaket getrennt prüfen: Eine neue Beschreibung belegt keine neue Implementierung.',
  content:[
@@ -107,7 +107,7 @@ export const release={
    {key:'contract',title:'2 · Contract nur bei geänderter Vorgabe',description:'Ändert sich zusätzlich die technische Vorgabe, etwa die erlaubte Schnittstelle oder das Verhalten, den betroffenen Contract prüfen und als neue Exportrevision übernehmen.',next:'Ein Textwechsel allein benötigt keinen neuen Export. Bei einer inkompatiblen Vorgabe zusätzlich Vorher, Nachher und nötige Anpassung zeigen.',tone:'normal'},
    {key:'implementation',title:'3 · Umsetzung gesondert nachweisen',description:'Eine geänderte Implementierung mit Paketversion, Plattform und tatsächlichem Prüfumfang erfassen. Den Nachweis ausdrücklich auf die dabei geprüfte Contractrevision beziehen.',next:'Eine neue Seite oder ein neuer Contract ist noch kein Nachweis, dass ein Paket die Änderung umsetzt.',tone:'attention'},
   ],caption:'Dieses Beispiel erklärt eine Änderungsfolge. Es führt keine Paketänderung, Migration oder automatische Veröffentlichung aus.',source:'Lokale Mechanik: Pages.ts, Implementations.ts, component-pages.ts und import-contract-library.mjs.'},
-  copy('release-stands','Drei Stände getrennt lesen',
+  copy('release-stands','Drei Versionsstände vergleichen',
    'Handbuchseite · Was wird erklärt?','Payload führt Entwürfe und Seitenversionen. Die öffentliche Seite und MCP lesen den veröffentlichten Inhalt; updatedAt benennt dessen Änderungszeitpunkt. Eine Veröffentlichung bestätigt die Sichtbarkeit, nicht die technische Übereinstimmung.',
    'Contractexport · Welche Vorgabe gilt?','Die Komponentenseite verweist mit Bibliothek, Komponenten-ID und Exportrevision auf einen festen Contractstand. Die Revision ist ein SHA-256-Hash des Exports, keine Paketversion. Ein neuer Export wird unter einer neuen Revision abgelegt; bestehende Revisionen werden nicht überschrieben.',
    'Komponentenpaket · Was ist umgesetzt und geprüft?','Der Implementierungseintrag nennt unter anderem Paketversion, Plattform, Status, eigenen Contractbezug und Prüfgrenzen. Nur dieser konkrete Umfang ist belegt. Eine neuere Contractreferenz der Handbuchseite aktualisiert den älteren Implementierungsnachweis nicht.'),

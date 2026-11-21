@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import type { Page } from '../../payload-types'
 import './typografie.css'
 

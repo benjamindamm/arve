@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual pinned wrapper SSR, initial API state, required contexts and native structure; source clipboard/OTP/Embla behavior is separately browser tested.",
+  "cases": [
+    {
+      "component": "code-block",
+      "name": "native pre/code, explicit numbering and blank source line are preserved",
+      "result": "pass"
+    },
+    {
+      "component": "code-block",
+      "name": "Copy initial label/live state and independent exact value API",
+      "result": "pass"
+    },
+    {
+      "component": "input-otp",
+      "name": "one real named native input and explicitly hidden six visual slots",
+      "result": "pass"
+    },
+    {
+      "component": "input-otp",
+      "name": "slot context is required and separator source role is not a fake input",
+      "result": "pass"
+    },
+    {
+      "component": "carousel",
+      "name": "actual source named region/slides; raw SSR buttons remain disabled until API initialization",
+      "result": "pass"
+    },
+    {
+      "component": "carousel",
+      "name": "context-bound parts cannot operate outside the real Carousel root",
+      "result": "pass"
+    }
+  ]
+}

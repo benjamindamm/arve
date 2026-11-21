@@ -1,0 +1,11 @@
+{
+  "componentId": "shadcn:Drawer",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"drawer-panel\">Open drawer</button><div id=\"drawer-panel\" data-slot=\"drawer-popup\" role=\"dialog\" aria-labelledby=\"drawer-title\" aria-describedby=\"drawer-description\"><h2 id=\"drawer-title\">Project drawer</h2><p id=\"drawer-description\">Drawer task details.</p><button type=\"button\">Close drawer</button></div>",
+  "keyboardAndFocus": "The default modal drawer contains focus, supports Escape/Close and restores the trigger focus. Pointer swipes use the configured direction and primitive gesture logic; keyboard access remains available through explicit controls.",
+  "sourceRule": "The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups."
+}

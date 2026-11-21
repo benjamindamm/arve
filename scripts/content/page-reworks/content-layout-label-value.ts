@@ -9,7 +9,7 @@ const text = (key: string, title: string, paragraphs: string[]): Block => ({
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:30:59.831Z',
+  expectedUpdatedAt: '2026-11-20T14:09:10.568Z',
   summary: 'Eigenschaften eines Eintrags als gut lesbare Beschriftungs–Wert-Paare anzeigen.',
   content: [
     text('example', 'Projekteigenschaften', [

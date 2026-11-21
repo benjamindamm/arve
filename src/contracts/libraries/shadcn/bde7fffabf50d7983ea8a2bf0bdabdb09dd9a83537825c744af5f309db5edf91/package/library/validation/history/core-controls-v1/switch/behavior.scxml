@@ -1,0 +1,27 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0"
+       datamodel="ecmascript" name="Switch" initial="switchControl">
+  <!-- The host supplies the initial value and disabled state before exposing the control.
+       NATIVE_CHANGE carries the browser's checked boolean after native activation. -->
+  <datamodel>
+    <data id="checked" expr="false"/>
+  </datamodel>
+  <state id="switchControl" initial="enabled">
+    <transition event="SET_CHECKED" cond="_event.data &amp;&amp; typeof _event.data.checked === 'boolean'">
+      <assign location="checked" expr="_event.data.checked"/>
+    </transition>
+    <state id="enabled">
+      <transition event="DISABLE" target="disabled"/>
+      <transition event="FOCUS_IN FOCUS_OUT ESCAPE"/>
+      <transition event="NATIVE_CHANGE"
+                  cond="_event.data &amp;&amp; typeof _event.data.checked === 'boolean' &amp;&amp; checked !== _event.data.checked">
+        <assign location="checked" expr="_event.data.checked"/>
+        <send event="checked.changed" target="#_parent">
+          <param name="checked" expr="checked"/>
+        </send>
+      </transition>
+    </state>
+    <state id="disabled">
+      <transition event="ENABLE" target="enabled"/>
+    </state>
+  </state>
+</scxml>

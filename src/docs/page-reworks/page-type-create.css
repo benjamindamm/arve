@@ -26,3 +26,7 @@
 .create-rework summary{cursor:pointer;font-weight:600}
 .create-rework details[open] summary{margin-bottom:1rem}
 @container (min-width:640px){.create-actions{flex-direction:row;align-items:center}.create-variants{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* State explanations do not need a second outer card around their message. */
+.create-rework .create-variant { border:0; border-top:1px solid var(--border); border-radius:0; padding:1.1rem 0; }
+.create-rework .create-variants { column-gap:1.75rem; }
+.create-rework .create-caption { max-width:72ch; }

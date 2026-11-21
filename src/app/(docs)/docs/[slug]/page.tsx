@@ -1,3 +1,4 @@
+import { SiteAnchor } from '../../../../docs/site-anchor'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Content } from '../../../../docs/content'
@@ -25,7 +26,7 @@ export default async function DocumentationPage({ params }: { params: Promise<{ 
         {page ? <Content blocks={page.content} /> : (
           <>
             <p>{section.summary}</p>
-            <p>Der vollständige Inhalt ist als Entwurf im CMS verfügbar. <a href="/admin">Im CMS anmelden</a></p>
+            <p>Der vollständige Inhalt ist als Entwurf im CMS verfügbar. <SiteAnchor href="/admin">Im CMS anmelden</SiteAnchor></p>
           </>
         )}
       </article>

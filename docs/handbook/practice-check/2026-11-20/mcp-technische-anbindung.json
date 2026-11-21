@@ -1,0 +1,806 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"kind\":\"section\",\"path\":\"/systems/shadcn/technische-anbindung\",\"title\":\"Technische Anbindung und MCP\",\"pageType\":\"guide\",\"summary\":\"Vom veröffentlichten Seitenbaum zur passenden Seite, zu Originaldateien und zum belegten Plattformstand.\",\"updatedAt\":\"2026-11-20T15:22:23.849Z\",\"content\":[{\"id\":\"6b0065af401ae18320066cb0\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Beispiel: einen Button für eine Weboberfläche einordnen\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Frage an den Agenten: «Lies die veröffentlichte Buttonseite. Zeige Contractrevision, Originaldateien und Webstand; benenne offene Prüfungen.»\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Das Ergebnis verbindet Gestaltung und Umsetzung: Seiteninhalt und Demo helfen bei der Auswahl; Contract und Plattformstand begrenzen, was technisch belegt ist.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-example\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb1\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Drei Lesezugriffe führen zum belegten Stand\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Seitenbaum finden\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"list_documentation_tree({system: \\\"shadcn\\\"})\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Die Einträge liefern slug, kind, path, pageUrl und children. Für die Aufgabe passende Seite auswählen.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Veröffentlichte Seite lesen\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"get_documentation_page({system: \\\"shadcn\\\", section: \\\"technische-anbindung\\\"})\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"content, summary, updatedAt und templateSections lesen. Komponenten werden über get_component_page abgerufen.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Contract und Plattform vergleichen\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"get_component_page({system: \\\"shadcn\\\", component: \\\"button\\\"})\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"contractReference fixiert die Revision; contract.sources benennt die Domänendateien. contractArtifacts enthält Pfad, SHA-256 und Download-URL. implementations führt Paket, Plattform, Release- und Prüfstand separat.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-flow\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb2\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Vor einer Umsetzung entscheiden\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Gleiche Quelle: Portal und MCP beziehen den veröffentlichten CMS-Seiteninhalt. Ein neuer Entwurf ist darin noch nicht enthalten. Den Abrufzeitpunkt und updatedAt festhalten.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Gleicher Stand? Die Contractreferenz der Seite mit implementations[].contract vergleichen. Im gelesenen Buttonstand verweist die Seite auf 65133e67843c…; die Webimplementierung auf fe29eb804f0b…. Das ist kein Nachweis eines gemeinsamen Revisionsstands.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Aktuelles Beispiel aus dem Abruf vom 20. November 2026, keine allgemeine Plattformvorgabe: Der gelesene Webstand ist preview, Paket @spartan-ng/brain 1.9.0. Die Implementierung nennt lokale Klick- und Deaktivierungsprüfung; mobile Bedienung, assistive Technologien und Contract-Konformität bleiben offen. Eine Demo ersetzt diese Prüfungen nicht.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-rules\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb3\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Patterns gezielt suchen\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"search_documentation({system: \\\"shadcn\\\", query: \\\"Filtern\\\", limit: 5}) durchsucht Titel und Text veröffentlichter Seiten. Das Werkzeug hat keinen eigenen Tag-Filter.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"get_documentation_page({system: \\\"shadcn\\\", section: \\\"patterns\\\"}) ergänzt patterns mit id, title, task, status, category, tags, steps und observations. Beispiel aus dem gelesenen Stand: UX-001 mit Tags context und filters. Die Einträge sind als candidate ausgewiesen; eine ID ist kein Freigabenachweis.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Ein Agent kann die zurückgegebenen Tags in seinem Client filtern und danach die passende Fachseite lesen. Fehlende Tags bleiben leer; aus einem Tag wird keine Regel abgeleitet.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-patterns\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb4\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Originaldateien vollständig weitergeben\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Für den ausgewählten Komponentenstand alle Einträge in contractArtifacts verwenden, statt nur Codeausschnitte zu kopieren. Der gelesene Button liefert 21 Dateien einschließlich interface.json (CEM), tokens.json (DTCG), layout.css, behavior.scxml, accessibility.html und accessibility.rules.json sowie Kontext- und Prüfdateien. Jede URL lädt die vollständige Originaldatei; der SHA-256 bezeichnet deren Inhalt.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Der portable UI-Contracts-Export ist ein separates Paket mit Manifest, Abhängigkeiten, Bibliotheksdateien und skills/ui-contracts/SKILL.md. Der Import erhält das vollständige Paket einschließlich Skills unverändert unter seiner Revision. Die Komponenten-Downloadliste ist kein Download des gesamten portablen Pakets.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Skills beschreiben Arbeitsweisen für einen Agenten. Das Bündeln installiert oder startet keinen Agenten und führt keine Änderung selbstständig aus. MCP liest Dokumentation; Export, Import, Umsetzung und Veröffentlichung sind eigene Arbeitsschritte.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-files\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb5\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Lesendes SDK-Beispiel\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Voraussetzung: laufendes lokales Portal auf Port 3010 und @modelcontextprotocol/sdk 1.32.2. JavaScript mit ES-Modulen; alle drei Aufrufe lesen nur.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"import { Client } from '@modelcontextprotocol/sdk/client/index.js';\\nimport { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';\\nconst client = new Client({ name: 'handbook-reader', version: '1' });\\nawait client.connect(new StreamableHTTPClientTransport(\\n  new URL('http://127.0.0.1:3010/mcp')\\n));\\ntry {\\n  const read = async (name, args) => {\\n    const result = await client.callTool({ name, arguments: args });\\n    if (result.isError) throw new Error(JSON.stringify(result.content));\\n    return result.structuredContent;\\n  };\\n  const tree = await read('list_documentation_tree', { system: 'shadcn' });\\n  const page = await read('get_documentation_page', {\\n    system: 'shadcn', section: 'technische-anbindung'\\n  });\\n  const button = await read('get_component_page', {\\n    system: 'shadcn', component: 'button'\\n  });\\n  console.log(tree.tree, page.updatedAt);\\n  console.log(button.contractReference, button.contract?.sources);\\n  console.log(button.contractArtifacts, button.implementations);\\n} finally {\\n  await client.close();\\n}\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-sdk\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb6\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Quellen, Prüfumfang und ursprünglicher Inhalt\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Gelesene Buttonrevision der Seite: 65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26. Contractrevision der Webimplementierung: fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d. Am 20. November 2026 über das MCP-SDK tatsächlich ausgeführt: listTools sowie Seitenbaum, diese Seite, Patternkatalog und Buttonseite gelesen. Die 21 zurückgegebenen Buttonartefakte einzeln geladen: jeweils HTTP 200 und SHA-256 identisch mit contractArtifacts. Das prüft Auslieferung und Integrität dieses Stands, keine allgemeine Konformität.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Gelesene lokale Quellen: src/app/mcp/route.ts (vier lesende Werkzeuge und Eingabeschemas), src/docs/published-documentation.ts und component-pages.ts (veröffentlichte Inhalte), src/docs/pattern-catalog.ts (ID-/Tag-Projektion), Komponenten-files/route.ts (Originaldateien und Hashprüfung), scripts/import-contract-library.mjs (vollständiges portables Paket einschließlich Skills). Keine Schreib- oder Publikationsfunktion ist in der MCP-Route registriert.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Der folgende ursprüngliche Inhaltsblock bleibt wörtlich erhalten. Ausgangsstand der veröffentlichten Seite: 2026-11-13T12:43:02.810Z; gelesen am 20. November 2026.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"technical-evidence\",\"blockType\":\"text\"},{\"id\":\"6b0065af401ae18320066cb7\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Vom CMS zum Contract\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Eine veröffentlichte Seite bindet eine Export-Revision. Das Portal liest die hinterlegten Originaldateien, etwa SCXML für Verhalten oder CEM für Schnittstellen.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Für Agenten\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"mode\":\"normal\",\"text\":\"Der lokale MCP-Endpunkt /mcp stellt get_component_page bereit. Für system shadcn und component button liefert er die veröffentlichte Seite, ihren Contract und die Demo-Konfiguration.\",\"type\":\"text\",\"style\":\"\",\"detail\":0,\"format\":0,\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":null,\"blockType\":\"text\"}],\"templateSections\":[],\"resources\":null,\"pageUrl\":\"http://localhost:3010/systems/shadcn/technische-anbindung\"}"
+    }
+  ],
+  "structuredContent": {
+    "kind": "section",
+    "path": "/systems/shadcn/technische-anbindung",
+    "title": "Technische Anbindung und MCP",
+    "pageType": "guide",
+    "summary": "Vom veröffentlichten Seitenbaum zur passenden Seite, zu Originaldateien und zum belegten Plattformstand.",
+    "updatedAt": "2026-11-20T15:22:23.849Z",
+    "content": [
+      {
+        "id": "6b0065af401ae18320066cb0",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Beispiel: einen Button für eine Weboberfläche einordnen",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Frage an den Agenten: «Lies die veröffentlichte Buttonseite. Zeige Contractrevision, Originaldateien und Webstand; benenne offene Prüfungen.»",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Das Ergebnis verbindet Gestaltung und Umsetzung: Seiteninhalt und Demo helfen bei der Auswahl; Contract und Plattformstand begrenzen, was technisch belegt ist.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-example",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb1",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Drei Lesezugriffe führen zum belegten Stand",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Seitenbaum finden",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "list_documentation_tree({system: \"shadcn\"})",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Die Einträge liefern slug, kind, path, pageUrl und children. Für die Aufgabe passende Seite auswählen.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Veröffentlichte Seite lesen",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "get_documentation_page({system: \"shadcn\", section: \"technische-anbindung\"})",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "content, summary, updatedAt und templateSections lesen. Komponenten werden über get_component_page abgerufen.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Contract und Plattform vergleichen",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "get_component_page({system: \"shadcn\", component: \"button\"})",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "contractReference fixiert die Revision; contract.sources benennt die Domänendateien. contractArtifacts enthält Pfad, SHA-256 und Download-URL. implementations führt Paket, Plattform, Release- und Prüfstand separat.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-flow",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb2",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Vor einer Umsetzung entscheiden",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Gleiche Quelle: Portal und MCP beziehen den veröffentlichten CMS-Seiteninhalt. Ein neuer Entwurf ist darin noch nicht enthalten. Den Abrufzeitpunkt und updatedAt festhalten.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Gleicher Stand? Die Contractreferenz der Seite mit implementations[].contract vergleichen. Im gelesenen Buttonstand verweist die Seite auf 65133e67843c…; die Webimplementierung auf fe29eb804f0b…. Das ist kein Nachweis eines gemeinsamen Revisionsstands.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Aktuelles Beispiel aus dem Abruf vom 20. November 2026, keine allgemeine Plattformvorgabe: Der gelesene Webstand ist preview, Paket @spartan-ng/brain 1.9.0. Die Implementierung nennt lokale Klick- und Deaktivierungsprüfung; mobile Bedienung, assistive Technologien und Contract-Konformität bleiben offen. Eine Demo ersetzt diese Prüfungen nicht.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-rules",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb3",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Patterns gezielt suchen",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "search_documentation({system: \"shadcn\", query: \"Filtern\", limit: 5}) durchsucht Titel und Text veröffentlichter Seiten. Das Werkzeug hat keinen eigenen Tag-Filter.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "get_documentation_page({system: \"shadcn\", section: \"patterns\"}) ergänzt patterns mit id, title, task, status, category, tags, steps und observations. Beispiel aus dem gelesenen Stand: UX-001 mit Tags context und filters. Die Einträge sind als candidate ausgewiesen; eine ID ist kein Freigabenachweis.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Ein Agent kann die zurückgegebenen Tags in seinem Client filtern und danach die passende Fachseite lesen. Fehlende Tags bleiben leer; aus einem Tag wird keine Regel abgeleitet.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-patterns",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb4",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Originaldateien vollständig weitergeben",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Für den ausgewählten Komponentenstand alle Einträge in contractArtifacts verwenden, statt nur Codeausschnitte zu kopieren. Der gelesene Button liefert 21 Dateien einschließlich interface.json (CEM), tokens.json (DTCG), layout.css, behavior.scxml, accessibility.html und accessibility.rules.json sowie Kontext- und Prüfdateien. Jede URL lädt die vollständige Originaldatei; der SHA-256 bezeichnet deren Inhalt.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Der portable UI-Contracts-Export ist ein separates Paket mit Manifest, Abhängigkeiten, Bibliotheksdateien und skills/ui-contracts/SKILL.md. Der Import erhält das vollständige Paket einschließlich Skills unverändert unter seiner Revision. Die Komponenten-Downloadliste ist kein Download des gesamten portablen Pakets.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Skills beschreiben Arbeitsweisen für einen Agenten. Das Bündeln installiert oder startet keinen Agenten und führt keine Änderung selbstständig aus. MCP liest Dokumentation; Export, Import, Umsetzung und Veröffentlichung sind eigene Arbeitsschritte.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-files",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb5",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Lesendes SDK-Beispiel",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Voraussetzung: laufendes lokales Portal auf Port 3010 und @modelcontextprotocol/sdk 1.32.2. JavaScript mit ES-Modulen; alle drei Aufrufe lesen nur.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "import { Client } from '@modelcontextprotocol/sdk/client/index.js';\nimport { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';\nconst client = new Client({ name: 'handbook-reader', version: '1' });\nawait client.connect(new StreamableHTTPClientTransport(\n  new URL('http://127.0.0.1:3010/mcp')\n));\ntry {\n  const read = async (name, args) => {\n    const result = await client.callTool({ name, arguments: args });\n    if (result.isError) throw new Error(JSON.stringify(result.content));\n    return result.structuredContent;\n  };\n  const tree = await read('list_documentation_tree', { system: 'shadcn' });\n  const page = await read('get_documentation_page', {\n    system: 'shadcn', section: 'technische-anbindung'\n  });\n  const button = await read('get_component_page', {\n    system: 'shadcn', component: 'button'\n  });\n  console.log(tree.tree, page.updatedAt);\n  console.log(button.contractReference, button.contract?.sources);\n  console.log(button.contractArtifacts, button.implementations);\n} finally {\n  await client.close();\n}",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-sdk",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb6",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Quellen, Prüfumfang und ursprünglicher Inhalt",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Gelesene Buttonrevision der Seite: 65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26. Contractrevision der Webimplementierung: fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d. Am 20. November 2026 über das MCP-SDK tatsächlich ausgeführt: listTools sowie Seitenbaum, diese Seite, Patternkatalog und Buttonseite gelesen. Die 21 zurückgegebenen Buttonartefakte einzeln geladen: jeweils HTTP 200 und SHA-256 identisch mit contractArtifacts. Das prüft Auslieferung und Integrität dieses Stands, keine allgemeine Konformität.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Gelesene lokale Quellen: src/app/mcp/route.ts (vier lesende Werkzeuge und Eingabeschemas), src/docs/published-documentation.ts und component-pages.ts (veröffentlichte Inhalte), src/docs/pattern-catalog.ts (ID-/Tag-Projektion), Komponenten-files/route.ts (Originaldateien und Hashprüfung), scripts/import-contract-library.mjs (vollständiges portables Paket einschließlich Skills). Keine Schreib- oder Publikationsfunktion ist in der MCP-Route registriert.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Der folgende ursprüngliche Inhaltsblock bleibt wörtlich erhalten. Ausgangsstand der veröffentlichten Seite: 2026-11-13T12:43:02.810Z; gelesen am 20. November 2026.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "technical-evidence",
+        "blockType": "text"
+      },
+      {
+        "id": "6b0065af401ae18320066cb7",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Vom CMS zum Contract",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Eine veröffentlichte Seite bindet eine Export-Revision. Das Portal liest die hinterlegten Originaldateien, etwa SCXML für Verhalten oder CEM für Schnittstellen.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Für Agenten",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "mode": "normal",
+                    "text": "Der lokale MCP-Endpunkt /mcp stellt get_component_page bereit. Für system shadcn und component button liefert er die veröffentlichte Seite, ihren Contract und die Demo-Konfiguration.",
+                    "type": "text",
+                    "style": "",
+                    "detail": 0,
+                    "format": 0,
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": null,
+        "blockType": "text"
+      }
+    ],
+    "templateSections": [],
+    "resources": null,
+    "pageUrl": "http://localhost:3010/systems/shadcn/technische-anbindung"
+  }
+}

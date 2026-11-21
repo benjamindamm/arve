@@ -1,8 +1,10 @@
+import { SiteAnchor } from '../../docs/site-anchor'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import type { ReactNode } from 'react'
+import type { ReactNode, CSSProperties } from 'react'
 import './docs.css'
 import './handbook.css'
+import { sitePath, staticPublication } from '../../docs/site-path'
 
 export const metadata: Metadata = {
   title: { default: 'Arve — Design-Systeme', template: '%s | Arve' },
@@ -12,8 +14,8 @@ export const metadata: Metadata = {
 export default function DocsLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="de-CH">
-      <body>
-        <a className="skip" href="#inhalt">Zum Inhalt</a>
+      <body style={{ '--arve-mark-image': `url("${sitePath('/arve-mark.svg')}")` } as CSSProperties}>
+        <SiteAnchor className="skip" href="#inhalt">Zum Inhalt</SiteAnchor>
         <header className="site-header">
           <div className="shell topbar">
             <Link href="/" className="brand arve-brand"><span aria-hidden="true" className="arve-mark" />Arve</Link>
@@ -22,11 +24,11 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
               <Link href="/#mcp">Mit KI arbeiten</Link>
               <Link href="/#systeme">Design-Systeme</Link>
             </nav>
-            <a className="system-button outline" href="/admin">CMS öffnen <span aria-hidden="true">↗</span></a>
+            {!staticPublication && <SiteAnchor className="system-button outline" href="/admin">CMS öffnen <span aria-hidden="true">↗</span></SiteAnchor>}
           </div>
         </header>
         {children}
-        <footer className="shell footer"><span>Arve · Design-Systeme</span><a href="/admin">Payload CMS</a></footer>
+        <footer className="shell footer"><span>Arve · Design-Systeme</span>{staticPublication ? <span>Veröffentlichtes Handbuch</span> : <SiteAnchor href="/admin">Payload CMS</SiteAnchor>}</footer>
       </body>
     </html>
   )

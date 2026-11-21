@@ -1,0 +1,106 @@
+Projekt erstellen
+Zustand ansehen
+Statische Vorschau · Wähle einen Zustand, um seine Darstellung anzusehen. Das Feld ist schreibgeschützt; die abgebildeten Aktionen senden und speichern nichts.
+Projektname (erforderlich)
+1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.
+Formularaktionen
+Vom Entwurf zur Bestätigung
+Eingabe
+Der eingegebene Name ist ein Entwurf.
+Prüfung
+Beim Absenden wird der aktuelle Wert geprüft.
+Speichern
+Die Anfrage läuft; der Erfolg steht noch nicht fest.
+Bestätigung
+Erst nach bestätigter Annahme wird Erfolg angezeigt.
+Eingabe
+Neues Kundenportal
+Der Name ist ein Entwurf. Erst «Projekt erstellen» löst die Prüfung und Übermittlung aus.
+Projekt erstellen
+Abbrechen
+Feldfehler
+
+Einen Projektnamen eingeben.
+Projekt erstellen
+Abbrechen
+Nach erfolglosem Absenden bleibt die Eingabe erhalten, und das Feld erhält den Fokus. Danach wird nur das zuvor fehlerhafte Feld beim Verlassen erneut geprüft.
+Ungespeicherte Änderungen
+Neues Kundenportal
+Ungespeicherte Änderungen verwerfen?
+Weiterbearbeiten
+Verwerfen
+Die ungespeicherten Angaben gehen verloren. Diese Nachfrage erscheint vor dem Senden. Beim Bearbeiten wird der aktuelle Name mit dem bestätigten Ausgangswert verglichen, jeweils ohne Leerraum am Anfang und Ende.
+Übermittlung läuft
+Neues Kundenportal
+Projekt wird erstellt …
+Projekt erstellen
+Seite verlassen
+Erneutes Senden ist blockiert. Wer die Seite verlässt, wird gewarnt: Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.
+Annahme bestätigt
+Neues Kundenportal
+Projekt erstellt
+Zur Detailseite
+
+Diese Darstellung setzt eine bestätigte Annahme voraus. Die Vorschau selbst hat kein Projekt erstellt. In der Anwendung folgt die Detailseite mit der Bestätigung. Die Suchparameter q/status bleiben erhalten.
+Ausdrücklich abgelehnt
+Neues Kundenportal
+Der Auftrag wurde nicht angenommen.
+
+
+Ein nachgewiesenes Problem mit dem Wert wird am Feld erklärt. Fehlende Berechtigung oder eine Störung wird in der Meldung zum Vorgang erklärt. Erneutes Senden ist erst möglich, wenn die Nichtannahme bestätigt und die Ursache behoben ist.
+Ergebnis unbekannt
+Neues Kundenportal
+Es ist noch unklar, ob das Projekt erstellt wurde
+Auf Seite bleiben
+Seite verlassen
+Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.
+Solange das Ergebnis unbekannt ist, gibt es weder Verwerfen noch erneutes Senden. Zuerst muss der Status geklärt werden; die dafür benötigte Funktion ist noch nicht verfügbar. Auch nach der Rückkehr bleiben Bearbeiten und Senden bis zur Bestätigung des Ergebnisses gesperrt. «Auf Seite bleiben» erhält zunächst den Fokus. Escape bedeutet ebenfalls Bleiben.
+Drei Regeln für den Entwurf
+Begrenze den Namen auf 1 bis 80 Zeichen, nachdem Leerraum am Anfang und Ende entfernt wurde. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt. Die genaue Zählweise steht unter «Alle Regeln zum Formular».
+Prüfe zuerst beim Absenden. Danach wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ordne Hilfe und Fehlermeldung dem Feld zu, und erhalte die Eingabe.
+Unterscheide laufende Übermittlung, bestätigte Annahme, ausdrückliche Ablehnung und unbekanntes Ergebnis. Ist das Ergebnis unbekannt, muss es vor dem Verwerfen oder erneuten Senden geklärt werden. Die Funktion zur Statusklärung ist noch nicht verfügbar.
+Layout und Seitentypen
+Das Formular bleibt einspaltig. Die Vorgangsmeldung steht zwischen Feld und Aktionen; unter 640 px verfügbarer Inhaltsbreite folgen Aktionen in gleicher Reihenfolge untereinander.
+Feldgruppe und Aktionsanordnung · Form Layout
+Erstellen · create
+Bearbeiten · edit
+Bestätigtes Ergebnis · detail
+Quellen und Prüfgrenzen
+Grundlage ist der veröffentlichte CMS-Stand shadcn-formulare-validierung vom 20.11.2026, 08:04:53 UTC. Die folgende Erläuterung ist sprachlich überarbeitet. Sie bewahrt die fachlichen Regeln einschliesslich der lokalen Präzisierung vom 20.11.2026 zum unbekannten Ergebnis einer Speicherung. Die historischen Quellen bleiben im Projekt erhalten.
+Die Vorschau fasst den Ablauf in vier Phasen zusammen. Zusätzlich lassen sich Fehler, ungespeicherte Änderungen und die möglichen Ergebnisse einer Anfrage ansehen. Die Vertiefung beschreibt weiterhin alle acht Zustände der Studie und die Regeln für Bearbeitung, Abbruch und Rückkehr. Daraus entstehen weder neue fachliche Regeln noch eine Produktfreigabe.
+Die Vorschau enthält keine ausführbare Validierung oder Serveranbindung. Sie weist Speicherung, Statusklärung, sichere Wiederholung, Navigation und Fokuswechsel der späteren Anwendung nicht nach. Die in der Vertiefung genannten Prüfungen stehen weiterhin aus.
+Alle Regeln zum Formular
+Aktuelle Erläuterung der fachlichen Regeln: Projekt erstellen, Namen bearbeiten, abbrechen und zurückkehren. Sie berücksichtigt die Präzisierung vom 20.11.2026 und ist keine wörtliche Abschrift des damaligen Stands.
+Pilotumfang und Feldbedingungen
+Ein Projekt besitzt eine unveränderliche, systemvergebene ID, einen erforderlichen Namen und den systemgesetzten Status «Aktiv» oder «Archiviert». Eine Rolle erstellt Projekte und bearbeitet den Namen aktiver Projekte. Archivierte Projekte bleiben lesbar; im Piloten gibt es keine Archivierungsaktion.
+Für diesen Piloten gilt: Entferne zuerst Leerraum am Anfang und Ende des Namens. Danach muss er 1 bis 80 Zeichen lang sein. Gezählt werden Unicode-Graphemcluster, also zusammengehörige Zeichen, auch wenn sie aus mehreren Unicode-Codepunkten bestehen. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; der Name wird nicht weiter normalisiert. Gleiche Namen sind erlaubt. Das ist eine lokale Entscheidung für den Piloten, keine Vorgabe des ursprünglichen Designsystems oder Firmenregel.
+Feld zusammenstellen und zum richtigen Zeitpunkt prüfen
+Ordne die Elemente so an: «Projektname (erforderlich)», Eingabefeld, Hilfe «1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.» und gegebenenfalls die Fehlermeldung. Die Beschriftung bleibt sichtbar und ist dem Feld zugeordnet. Hilfe und Fehler sind als Beschreibung mit dem Feld verbunden. Bei einem Fehler erhält das Feld zusätzlich den Fehlerstatus. Fokus und Fehler müssen gleichzeitig erkennbar sein.
+Die Prüfung beginnt erst mit «Projekt erstellen» oder «Änderungen speichern». Ein unberührtes Feld zeigt keinen Fehler. Bleibt nach dem Entfernen des Leerraums am Anfang und Ende nichts übrig, lautet die Meldung «Einen Projektnamen eingeben.» Bei mehr als 80 Graphemclustern lautet sie «Den Projektnamen auf höchstens 80 Zeichen kürzen.» Nach erfolglosem Absenden erhält das Feld den Fokus. Für dieses einzelne Feld ist keine Fehlerübersicht vorgesehen.
+Nach dieser ersten Prüfung wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ist die Eingabe gültig, verschwindet die alte Fehlermeldung; andernfalls wird sie aktualisiert. Der Fokus bleibt dabei unverändert. Erneutes Absenden prüft den aktuellen Wert wieder. Die Hauptaktion bleibt erreichbar. Wird eine Aktion deaktiviert, braucht es trotzdem eine Erklärung.
+Bestehenden Namen bearbeiten
+Von der Detailseite aus öffnet «Projekt bearbeiten» den zuletzt bestätigten Namen. Bevor er bearbeitet werden kann, müssen dieser Ausgangswert und der vom System gesetzte Status geladen und geklärt sein. Bei «Archiviert» sind Name, ID und Status nur lesbar; eine Aktion zum Speichern gibt es dann nicht.
+Vergleiche den aktuellen Namen mit dem bestätigten Ausgangswert, jeweils ohne Leerraum am Anfang und Ende. Nur wenn sich diese Werte unterscheiden, gilt der Name als geändert. Wer den Ausgangswert wiederherstellt oder nur äusseren Leerraum ergänzt, hat nichts geändert. «Änderungen speichern» zeigt dann am Aktionsbereich «Keine Änderungen zu speichern.», sendet keine Anfrage und lässt die Seite geöffnet. Weder die Eingabe noch das Verlassen des Feldes oder «Abbrechen» löst im Hintergrund eine Anfrage aus.
+Nach bestätigtem Speichern öffnet sich die Detailseite desselben Projekts. Sie zeigt den gespeicherten Namen, die unveränderte ID und «Änderungen gespeichert». Die Suchparameter q und status bleiben beim Wechsel zwischen Suche, Detailseite und Bearbeitung erhalten. Die beschriebenen Abläufe setzen voraus, dass Änderungen nacheinander erfolgen. Gleichzeitige Bearbeitung gehört nicht zum Piloten; auch dieselbe Rolle können mehrere Personen haben. Vor einer Umsetzung mit paralleler Bearbeitung muss festgelegt werden, wie Konflikte gelöst werden. Stilles Überschreiben ist nicht freigegeben.
+Laufend, bestätigt, abgelehnt oder ungeklärt
+Die Meldung zum Vorgang steht zwischen Feld und Aktionen. Solange die Anfrage läuft, lautet sie «Projekt wird erstellt …» beziehungsweise «Änderungen werden gespeichert …». Erneutes Senden ist dann blockiert. Bei Meldungen ohne Seitenwechsel wird die Statusansage für Screenreader auf den Vorgang abgestimmt, ohne den Fokus zu verschieben. Nicht jeder Zustandswechsel braucht einen dringenden Alert.
+Erst wenn die Annahme bestätigt ist, öffnet sich die Detailseite des gespeicherten Projekts. Dort erhält die Seitenüberschrift den Fokus, und die Bestätigung bleibt sichtbar. Wird ausdrücklich bestätigt, dass die Anfrage nicht angenommen wurde, bleibt die Eingabe erhalten. Ein nachgewiesenes Problem mit dem Wert wird am Feld erklärt, andere Ursachen in der Meldung zum Vorgang. Ein anderer Name hilft nicht gegen eine Verbindungsstörung.
+Bleibt eine eindeutige Antwort aus, lautet die Meldung «Es ist noch unklar, ob das Projekt erstellt wurde» beziehungsweise «Es ist noch unklar, ob die Änderungen gespeichert wurden». Auch eine Zeitüberschreitung beweist keinen Fehler. Um das Ergebnis zu klären, braucht es eine Schnittstelle mit Bezug zur ursprünglichen Anfrage. Sie ist noch nicht verfügbar und muss im Entwurf als Voraussetzung gekennzeichnet werden. Biete sie noch nicht als bedienbare Funktion an. Ebenso wenig vorgesehen sind ein erfundener Supportweg, erneutes Senden oder eine Bestätigung anhand einer möglicherweise veralteten Liste. Der Status-Endpunkt wird erst bei der Umsetzung spezifiziert.
+Abbrechen, verlassen und zurückkehren
+Wurde beim Bearbeiten nichts geändert, führt «Abbrechen» direkt zur Detailseite. Ist beim Erstellen noch alles unverändert leer, führt die Aktion zur Liste. Die Suchparameter q/status bleiben erhalten. Bei ungespeicherten Änderungen erscheint vor jedem internen Rückweg die Frage «Ungespeicherte Änderungen verwerfen?» mit «Weiterbearbeiten» und «Verwerfen». Beim Erstellen dient der leere Name als Ausgangswert für den Vergleich. «Weiterbearbeiten» erhält den Entwurf und gibt den Fokus an das auslösende Element zurück. «Verwerfen» führt beim Bearbeiten zur Detailseite und beim Erstellen zur Liste.
+Die lokale Präzisierung vom 20.11.2026 legt fest: Ist unklar, ob gespeichert wurde, muss zuerst dieses Ergebnis geklärt werden. Die Nachfrage zu ungespeicherten Änderungen greift dann nicht; «Verwerfen» und erneutes Speichern werden nicht angeboten. Beim Verlassen lautet die Nachfrage «Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Zur Wahl stehen «Auf Seite bleiben» und «Seite verlassen». «Auf Seite bleiben» erhält zunächst den Fokus. Wer bleibt oder Escape drückt, behält Eingabe und Bezug zur Anfrage. Das Verlassen bestätigt weder Erfolg noch Nichtannahme. Bei der Rückkehr bleiben Bearbeiten und erneutes Senden gesperrt, bis das Ergebnis über die noch bereitzustellende Statusklärung bestätigt ist.
+Auch bei Browser-Zurück zwischen den Projektseiten innerhalb der Anwendung gilt dieser Schutz: Vor dem Senden wird bei ungespeicherten Änderungen nach dem Verwerfen gefragt. Während eine Anfrage läuft oder ihr Ergebnis unbekannt ist, erscheint die Warnung zum Verlassen. Wechsel aus der Anwendung heraus, Neuladen und Schliessen sind dadurch nicht abgesichert. Beim regulären Öffnen einer Detail- oder Formularseite erhält deren Überschrift den Fokus. Das gilt auch bei der Rückkehr zur Detailseite nach bestätigtem Speichern, Abbrechen ohne Änderungen oder Verwerfen. Wird eine Erstellung abgebrochen, erhält die Ergebnisüberschrift der Liste den Fokus. Die Suchkriterien bleiben erhalten.
+Erkläre vor der Entscheidung: «Die ungespeicherten Angaben gehen verloren.» Im Piloten wird der Entwurf nicht dauerhaft gespeichert. Beim Neuladen, Schliessen oder am Sitzungsende können lokale Angaben verloren gehen. Versprich keine Wiederherstellung. Die Nachfrage beim internen Abbrechen bietet keinen entsprechenden Schutz beim Neuladen im Browser.
+Während der Übermittlung heisst die Aktion «Seite verlassen», denn sie bricht den Vorgang nicht ab. Die Warnung lautet «Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Lokal verworfene Angaben stoppen keinen Serverauftrag. Fehlt bei der Rückkehr eine Bestätigung, bleibt das Ergebnis ungeklärt. Es wird nichts automatisch erneut gesendet. Die benötigte Statusklärung ist weiterhin offen.
+Breite und schmale Darstellung
+Für die Weboberfläche in de-CH ist der Inhalt einspaltig angeordnet. Überschrift und Kontext stehen vor dem Feld, die Meldung zum Vorgang vor den Aktionen. Auf dem Desktop steht zuerst «Projekt erstellen» beziehungsweise «Änderungen speichern», danach «Abbrechen». Sind weniger als 640 px Inhaltsbreite verfügbar, stehen dieselben Aktionen untereinander. Ihre Lese- und Fokusreihenfolge bleibt gleich.
+Die Aktionsleiste ist nicht fixiert. Hilfe, Fehlermeldungen und lange Namen brechen um. Auch bei geöffneter Bildschirmtastatur und geringer Höhe muss vertikales Scrollen möglich bleiben; das fokussierte Feld darf nicht verdeckt sein. Der Dialog zum Verwerfen erklärt die Folgen vor den Aktionen «Weiterbearbeiten» und «Verwerfen». «Weiterbearbeiten» erhält zunächst den Fokus. Escape schliesst die Nachfrage, ohne etwas zu verwerfen.
+Arbeitsstand und gezielte Abnahme
+Diese lokale Gestaltungsreferenz ist noch nicht unabhängig geprüft. Die vorhandene Input-/Button-Demo zeigt den hier beschriebenen Formularablauf nicht. Sie zeigt auch keine Speicherung, Erkennung ungespeicherter Änderungen, Nachfrage zum Verwerfen oder Statusklärung. Die lokalen Input-Regeln SET_VALUE und NATIVE_INPUT beschreiben den Umgang mit Werten. Sie regeln weder die Annahme beim Speichern noch Konflikte. Escape im Feld verwirft den Entwurf nicht.
+An der späteren Umsetzung ist noch zu prüfen: einen leeren oder zu langen Namen absenden; kombinierte Unicode-Zeichen an der Längengrenze eingeben; nach einer Korrektur das Feld verlassen und die aktualisierte Fehlermeldung prüfen; den Ausgangswert ändern und wiederherstellen; unverändert speichern, ohne eine Anfrage auszulösen; beim Erstellen und Bearbeiten mit ungespeicherten Änderungen abbrechen; nach bestätigter Speicherung zur Suche zurückkehren; nach einer Ablehnung die Eingabe behalten; eine verlorene Antwort sowie die Rückkehr während einer laufenden Übermittlung behandeln. Tastatur-, Screenreader-, Zoom- und Touch-Prüfungen stehen ebenfalls aus. Formulare mit mehreren Feldern oder Schritten gehören nicht zu diesem Piloten.
+Geltung, Texte und technische Grenze
+Gestaltungs-Pilot · gemeinsamer Umfang und Entscheidungsstand
+Content Design · erhaltene Meldungsvergleiche und Pilotgrenze
+Barrierefreiheit · bestehende Prüfaufträge, noch keine Funktionsabnahme
+Input · bestehende Vorschau und technischer Draft-Contract
+WAI Forms Tutorial · Quelle der bestehenden Studie, kein neuer Quellenreview

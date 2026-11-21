@@ -1,10 +1,15 @@
 'use client'
 
+import { LayoutRuleBlock } from './layout-rule-block'
+
 import { useState } from 'react'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
+import { HandbookPreview } from '../handbook-preview'
 import type { Page } from '../../payload-types'
 import { blockAnchor } from '../content-outline'
 import './narrow-single-card.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Cardbreite", "Eine Aufgabe", "Lange Inhalte"]}
 
 type Block = NonNullable<Page['content']>[number]
 function strings(block?: Block) {
@@ -36,10 +41,11 @@ export default function NarrowSingleCard({ content }: { content: Page['content']
   const section = (key: string, disclosure = false) => {
     const b = find(key)
     if (b?.blockType !== 'text') return null
+    if (["rules"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return disclosure ? <details id={blockAnchor(b)}><summary>{strings(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }} /></details> : <section id={blockAnchor(b)}><RichText data={b.body} /></section>
   }
   return <div className="narrow-single-card-rework">
-    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2><Example e={e} narrow={false} /><Example e={e} narrow /><p className="nsc-caption">{e[19]}</p></section>}
+    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2><HandbookPreview interactive narrowLabel="Schmal · Langtext" wide={<Example e={e} narrow={false} />} narrow={<Example e={e} narrow />} /><p className="nsc-caption">{e[19]}</p></section>}
     {section('rules')}{section('usage')}{section('sources', true)}
   </div>
 }

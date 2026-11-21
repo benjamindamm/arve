@@ -1,6 +1,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js'
 import { z } from 'zod'
+import { getLibrarySkill, LibrarySkillError, listLibrarySkills } from '../../contracts/library-skills'
 import { getComponentPage } from '../../docs/component-pages'
 
 import { type Entry, documentationTree, getDocumentationPage, searchDocumentation } from '../../docs/published-documentation'
@@ -32,6 +33,25 @@ export async function POST(request: Request) {
   const slug = z.string().regex(/^[a-z][a-z0-9-]{0,79}$/)
   const withUrl = <T extends { path: string }>(entry: T) => ({
     ...entry, pageUrl: new URL(entry.path, request.url).href,
+  })
+
+  const skillError = (error: unknown) => notFound(error instanceof LibrarySkillError
+    ? `${error.code}: ${error.message}` : 'SKILL_READ_FAILED: Unable to read the portable skill package.')
+
+  server.registerTool('list_library_skills', {
+    description: 'Discover read-only skills bundled with an explicitly selected contract library (library is required, e.g. shadcn). Returns export revisions, skill IDs, mainResourcePath and an allowlist of package-relative resources with SHA256. Choose a revision and skill, then use get_library_skill to read the main instructions and relevant references. No authoring or validation runtime is provided.',
+    inputSchema: { library: slug, revision: z.string().regex(/^[a-f0-9]{64}$/).optional() },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+  }, async ({ library, revision }) => {
+    try { return success(await listLibrarySkills(library, revision)) } catch (error) { return skillError(error) }
+  })
+
+  server.registerTool('get_library_skill', {
+    description: 'Read a portable skill or one allowlisted reference unchanged, pinned to library + export revision + skill ID from list_library_skills. Omit resourcePath to read SKILL.md first; then pass exact package-relative resourcePath values from discovery to read guidance, manifest or library index. Resolve relative links against the current resourcePath within that package; never against a source repository. Component contracts remain available through get_component_page. Every call verifies the full package manifest and SHA256 integrity. Read-only; no authoring tools.',
+    inputSchema: { library: slug, revision: z.string().regex(/^[a-f0-9]{64}$/), skill: slug, resourcePath: z.string().min(1).max(500).optional() },
+    annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+  }, async ({ library, revision, skill, resourcePath }) => {
+    try { return success(await getLibrarySkill(library, revision, skill, resourcePath)) } catch (error) { return skillError(error) }
   })
 
   server.registerTool('list_documentation_tree', {
@@ -77,6 +97,7 @@ export async function POST(request: Request) {
 
     const result = {
       ...page,
+      designPreview: page.designPreview ? { ...page.designPreview, url: new URL(page.designPreview.url, request.url).href } : null,
       pageUrl: new URL(page.path, request.url).href,
       contractArtifacts: page.contractArtifacts.map(file => ({ ...file, url: new URL(file.url, request.url).href })),
       demo: page.demo ? { ...page.demo, url: new URL(page.path + '#live-beispiel', request.url).href } : null,

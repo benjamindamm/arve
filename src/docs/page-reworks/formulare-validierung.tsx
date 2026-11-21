@@ -1,7 +1,7 @@
 'use client'
 import { useId, useState } from 'react'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { Content } from '../content'
 import { blockAnchor } from '../content-outline'
 import './formulare-validierung.css'

@@ -1,0 +1,335 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual pinned React wrappers and native platform interactions in BrowserOS; finite cases, not universal platform certification.",
+  "caseCount": 23,
+  "families": [
+    {
+      "cases": [
+        {
+          "expected": {
+            "notes": "Updated"
+          },
+          "name": "native controlled text change",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "notes",
+            "notes": "Updated",
+            "readonly": "Locked"
+          }
+        },
+        {
+          "expected": {
+            "notes": "Updated\nSecond"
+          },
+          "name": "Enter inserts newline rather than submitting",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "notes",
+            "notes": "Updated\nSecond",
+            "readonly": "Locked"
+          }
+        },
+        {
+          "expected": {
+            "notes": "Updated\nSecond"
+          },
+          "name": "Escape retains text",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "notes",
+            "notes": "Updated\nSecond",
+            "readonly": "Locked"
+          }
+        },
+        {
+          "expected": {
+            "readonly": "Locked"
+          },
+          "name": "readonly preserves native value",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "readonly-notes",
+            "notes": "Updated\nSecond",
+            "readonly": "Locked"
+          }
+        },
+        {
+          "expected": {
+            "focus": "After demo"
+          },
+          "name": "Tab skips disabled textarea",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "After demo",
+            "notes": "Updated\nSecond",
+            "readonly": "Locked"
+          }
+        }
+      ],
+      "family": "textarea"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "region": "at"
+          },
+          "name": "native selection change",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "native-select native reference Prevent navigationRegionSwitzerlandAustriaGermany unavailableDisabled regionSwitzerlandAfter demoInitial notesat0AnnualProjects destinationPage 1Page 2Page 3\n",
+            "region": "at"
+          }
+        },
+        {
+          "expected": {
+            "region": "at"
+          },
+          "name": "disabled option is skipped",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "region",
+            "region": "at"
+          }
+        },
+        {
+          "expected": {
+            "region": "at"
+          },
+          "name": "Escape no fabricated selection",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "region",
+            "region": "at"
+          }
+        },
+        {
+          "expected": {
+            "focus": "After demo"
+          },
+          "name": "Tab skips disabled native select",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "After demo",
+            "region": "at"
+          }
+        }
+      ],
+      "family": "native-select"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "focus": "query"
+          },
+          "name": "decorative addon click focuses first input",
+          "result": "pass",
+          "state": {
+            "count": "0",
+            "focus": "query",
+            "query": "Annual"
+          }
+        },
+        {
+          "expected": {
+            "count": "1",
+            "focus": "Clear search",
+            "query": ""
+          },
+          "name": "nested Button action is not redirected into input",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "focus": "Clear search",
+            "query": ""
+          }
+        },
+        {
+          "expected": {
+            "query": "Budget"
+          },
+          "name": "child input retains own change contract",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "focus": "query",
+            "query": "Budget"
+          }
+        },
+        {
+          "name": "textarea addon does not promise input-only default focus",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "focus": "input-group native reference Prevent navigationSearch reportsSearch iconClear searchEnter a report title.Group notesTextarea addonPlain notesAfter demoInitial notesch1BudgetProjects destinationPage 1Page 2Page 3\n",
+            "query": "Budget"
+          }
+        }
+      ],
+      "family": "input-group"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "count": "1",
+            "hash": "#projects"
+          },
+          "name": "native Enter follows actual destination",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "current": "Annual report",
+            "currentTab": -1,
+            "focus": "breadcrumb native reference Prevent navigationProjectsAnnual reportAfter demoInitial notesch1AnnualProjects destinationPage 1Page 2Page 3\n",
+            "hash": "#projects"
+          }
+        },
+        {
+          "expected": {
+            "current": "Annual report",
+            "currentTab": -1
+          },
+          "name": "current page is nonfocusable source span",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "current": "Annual report",
+            "currentTab": -1,
+            "focus": "breadcrumb native reference Prevent navigationProjectsAnnual reportAfter demoInitial notesch1AnnualProjects destinationPage 1Page 2Page 3\n",
+            "hash": "#projects"
+          }
+        },
+        {
+          "expected": {
+            "count": "2",
+            "hash": "#projects"
+          },
+          "name": "native preventDefault preserves caller routing authority",
+          "result": "pass",
+          "state": {
+            "count": "2",
+            "current": "Annual report",
+            "currentTab": -1,
+            "focus": "Projects",
+            "hash": "#projects"
+          }
+        }
+      ],
+      "family": "breadcrumb"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "count": "1",
+            "hash": "#page-1"
+          },
+          "name": "native Enter follows actual destination",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "current": "2",
+            "currentTab": 0,
+            "focus": "pagination native reference Prevent navigation12NextAfter demoInitial notesch1AnnualProjects destinationPage 1Page 2Page 3\n",
+            "hash": "#page-1"
+          }
+        },
+        {
+          "expected": {
+            "current": "2"
+          },
+          "name": "active link exposes current page",
+          "result": "pass",
+          "state": {
+            "count": "1",
+            "current": "2",
+            "currentTab": 0,
+            "focus": "pagination native reference Prevent navigation12NextAfter demoInitial notesch1AnnualProjects destinationPage 1Page 2Page 3\n",
+            "hash": "#page-1"
+          }
+        },
+        {
+          "expected": {
+            "count": "2",
+            "hash": "#page-1"
+          },
+          "name": "native preventDefault preserves caller routing authority",
+          "result": "pass",
+          "state": {
+            "count": "2",
+            "current": "2",
+            "currentTab": 0,
+            "focus": "Next",
+            "hash": "#page-1"
+          }
+        }
+      ],
+      "family": "pagination"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "count": "2"
+          },
+          "name": "independent child Button activation",
+          "result": "pass",
+          "state": {
+            "count": "2",
+            "focus": "Save report",
+            "hash": ""
+          }
+        },
+        {
+          "expected": {
+            "focus": "Export report"
+          },
+          "name": "Tab skips disabled Button without group roving focus",
+          "result": "pass",
+          "state": {
+            "count": "2",
+            "focus": "Export report",
+            "hash": ""
+          }
+        },
+        {
+          "expected": {
+            "count": "12"
+          },
+          "name": "Space activates second child own callback",
+          "result": "pass",
+          "state": {
+            "count": "12",
+            "focus": "Export report",
+            "hash": ""
+          }
+        },
+        {
+          "expected": {
+            "focus": "Export report"
+          },
+          "name": "orientation adds no invented arrow navigation",
+          "result": "pass",
+          "state": {
+            "count": "12",
+            "focus": "Export report",
+            "hash": ""
+          }
+        }
+      ],
+      "family": "button-group"
+    }
+  ]
+}

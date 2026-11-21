@@ -1,0 +1,21 @@
+.component-catalogue>p { max-width:68ch; line-height:1.65; }
+.component-catalogue label { display:block; margin-top:28px; margin-bottom:8px; font-size:14px; font-weight:600; }
+.component-catalogue input { width:100%; max-width:680px; min-height:44px; padding:10px 12px; border:1px solid var(--border); border-radius:5px; background:var(--background); color:var(--foreground); font:inherit; }
+.component-catalogue input:focus-visible,.component-catalogue a:focus-visible { outline:3px solid var(--ring); outline-offset:3px; }
+.reference-result-line { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; font-size:13px; margin-block:12px 24px; }
+.reference-result-line p { margin:0; }.reference-result-line button { background:none; border:0; font:inherit; text-decoration:underline; cursor:pointer; color:inherit; }
+.component-catalogue ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 32px; padding:0; margin:0; list-style:none; }
+.component-catalogue li { border-top:1px solid var(--border); min-width:0; }
+.component-catalogue li a { display:grid; gap:6px; padding:20px 4px; text-decoration:none; }
+.component-catalogue li strong { display:flex; justify-content:space-between; font-size:16px; }
+.component-catalogue li a:hover strong { text-decoration:underline; text-underline-offset:3px; }
+.component-catalogue li span:not(strong>span) { font-size:14px; line-height:1.6; color:var(--muted-foreground); }
+.component-catalogue li small { font-size:12px; color:#285b4b; }
+.components-overview>.legacy-component-studies { margin-top:40px; padding-top:20px; border-top:1px solid var(--border); }
+.legacy-component-studies>summary { cursor:pointer; font-weight:600; margin-bottom:24px; }
+.framework-reference-list { display:grid; gap:0; }
+.framework-reference-list>section { padding-block:28px; border-top:1px solid var(--border); }
+.framework-reference-list h2 { margin:0 0 8px; font-size:22px; }
+.framework-reference-list p { max-width:68ch; line-height:1.7; }
+.framework-reference-list small { color:var(--muted-foreground); font-size:13px; }
+@media(max-width:640px) { .component-catalogue ul { grid-template-columns:1fr; } }

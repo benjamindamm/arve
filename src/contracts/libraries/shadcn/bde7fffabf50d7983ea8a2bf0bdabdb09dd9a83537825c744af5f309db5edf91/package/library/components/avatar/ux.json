@@ -1,0 +1,21 @@
+{
+  "purpose": "Represent a person or entity with an image or fallback.",
+  "avoid": "Do not use an avatar as the sole identity label.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 72:2717 (Avatar), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful dynamic content/container; no user-set value on the root. Actual native scroll or delegated disclosure/action behavior remains explicitly described and exercised, rather than being classified as decorative.",
+  "componentId": "shadcn:Avatar",
+  "contentAlternative": "A loaded AvatarImage requires meaningful alt. This reference fallback uses explicit role=img and the same full name, while initials and badge color alone are insufficient. Nearby text supplies the person and availability independently.",
+  "updatesAndDescendants": "Avatar uses Base UI loading states idle/loading/loaded/error. AvatarImage onLoadingStatusChange reports the actual status; keepMounted=false preloads and only exposes a loaded image. keepMounted=true retains the image while loading but hides it from accessibility until loaded. Fallback span defaults delay=0 and is shown when not loaded after its delay; a positive delay avoids flashing. Source/srcSet/sizes changes retry loading. Root has no activation or selection API. AvatarGroup/Count only position caller content; counts and status are not calculated.",
+  "referenceDecision": "The full fallback name, readable Available badge and nearby identity text are explicit reference composition choices. The root does not automatically apply role=img or label initials. If adjacent text fully identifies the person, a decorative avatar can instead have empty alt deliberately.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/avatar.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/avatar.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/avatar-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/avatar.md.source"
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "sidebar.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "SidebarProvider",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "All exported Sidebar parts are preserved. SidebarProvider defaults defaultOpen=true and supplies desktop open/state, openMobile, isMobile, setOpen/setOpenMobile and toggleSidebar through useSidebar; Sidebar itself accepts side left|right, variant sidebar|floating|inset and collapsible offcanvas|icon|none. Desktop widths are16rem, icon3rem, mobile18rem. The pinned use-mobile hook is false during SSR/initial render and tracks window.innerWidth<768 using matchMedia afterward. Desktop openProp and onOpenChange should be supplied as a pair: setOpen calls the handler instead of internal state whenever a handler exists, even without an openProp. The callback is boolean-only, not cancellable eventDetails. Every desktop setOpen request writes sidebar_state=true|false, path=/, max-age604800; the provider does not read that cookie automatically, and a rejected/ignored controlled request can still write its candidate. Mobile toggle only changes openMobile, with no desktop onOpenChange or cookie write. The two states are not synchronized/reset on breakpoint changes. collapsible=none bypasses responsive Sheet/collapse rendering even though provider state can still change. Trigger calls caller onClick then always toggles (defaultPrevented is not a veto); Rail is native button tabindex=-1 and needs explicit type=button in a form-safe reference. Provider always registers lowercase Ctrl/Meta+b globally while mounted, including editable targets; there is no disable-shortcut prop, so this reference uses one provider and documents that application constraint. SidebarInset is main; avoid nested main landmarks. Header/Footer/Group/Content are containers, Menu/Sub are native lists, and MenuButton defaults button via useRender: actual navigation deliberately renders anchors. isActive only supplies appearance/data-active, not aria-current; caller supplies current-page semantics. GroupLabel requires caller heading choice. Skeleton has random50–89% width and no loading announcement; use the completed Skeleton usage policy. Optional tooltip is visual-only and shown collapsed desktop, so native names remain complete. Mobile Sidebar composes Sheet with fixed title Sidebar/description Displays the mobile sidebar and hides its direct default Close button in source CSS; this reference supplies an explicit nested Close navigation control. Desktop icon collapse is chosen to keep intended navigation available; offcanvas CSS alone does not supply an inert/focus-removal guarantee."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  defaultOpen?: boolean\n  open?: boolean\n  onOpenChange?: (open: boolean) => void\n}"
+              },
+              "description": "Exact public source type/defaults {\"defaultOpen\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:56."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual desktop Provider callback; not a cancellable transaction and not a mobile state event."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "sidebar-wrapper",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "useSidebar",
+          "description": "Actual required-context hook; throws outside SidebarProvider.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "SidebarContextProps"
+              },
+              "description": "Source desktop open/state/setOpen, openMobile/setOpenMobile, isMobile and toggleSidebar. State remains separate across viewport modes."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "Sidebar",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  side?: \"left\" | \"right\"\n  variant?: \"sidebar\" | \"floating\" | \"inset\"\n  collapsible?: \"offcanvas\" | \"icon\" | \"none\"\n}"
+              },
+              "description": "Exact public source type/defaults {\"side\": \"\\\"left\\\"\", \"variant\": \"\\\"sidebar\\\"\", \"collapsible\": \"\\\"offcanvas\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:152."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "sidebar-gap",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "sidebar-container",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "sidebar-inner",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:254."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>[\"onClick\"]"
+              },
+              "description": "Actual inherited native/React Button callback; wrapper-specific follow-up behavior is explicitly documented."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "sidebar-trigger",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarRail",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"button\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:287."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-rail",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarInset",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"main\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:312."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-inset",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Input>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:325."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-input",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarHeader",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:339."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-header",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarFooter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:350."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-footer",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Separator>"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:361."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-separator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:375."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:389."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarGroupLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"div\"> & React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:403."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "SidebarGroupAction",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"button\"> & React.ComponentProps<\"button\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:427."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "SidebarGroupContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:451."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-group-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"ul\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:465."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"li\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:476."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"button\"> &\n  React.ComponentProps<\"button\"> & {\n    isActive?: boolean\n    tooltip?: string | React.ComponentProps<typeof TooltipContent>\n  } & VariantProps<typeof sidebarMenuButtonVariants>"
+              },
+              "description": "Exact public source type/defaults {\"isActive\": \"false\", \"variant\": \"\\\"default\\\"\", \"size\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:508."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuAction",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"button\"> &\n  React.ComponentProps<\"button\"> & {\n    showOnHover?: boolean\n  }"
+              },
+              "description": "Exact public source type/defaults {\"showOnHover\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:562."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuBadge",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:592."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu-badge",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuSkeleton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  showIcon?: boolean\n}"
+              },
+              "description": "Exact public source type/defaults {\"showIcon\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:609."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu-skeleton",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuSub",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"ul\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:647."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu-sub",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuSubItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"li\">"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:658."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sidebar-menu-sub-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SidebarMenuSubButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"a\"> &\n  React.ComponentProps<\"a\"> & {\n    size?: \"sm\" | \"md\"\n    isActive?: boolean\n  }"
+              },
+              "description": "Exact public source type/defaults {\"size\": \"\\\"md\\\"\", \"isActive\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source:672."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        }
+      ]
+    }
+  ]
+}

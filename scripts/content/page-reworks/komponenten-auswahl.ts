@@ -15,14 +15,14 @@ function linked(blockName:string,title:string,description:string,entries:[string
  if(b.blockType==='text') b.body.root.children.push(...entries.map(([label,url])=>link(label,url)))
  return b
 }
-// Read-only Payload baseline, push:false, read 20.11.2026. Frozen, no live snapshot import.
+// Current explanation based on the read-only Payload baseline of 17.11.2026; editorially revised 20.11.2026. No live snapshot import.
 const original = [
   {
     "id": "6afce676d24234f397c13055",
     "kind": "selection",
     "title": "Was soll geschehen?",
-    "explanation": "Button: löst eine Handlung aus und hält selbst keinen Auswahlwert. Input: erfasst einen kurzen, einzeiligen freien Text. Checkbox: hält einen unabhängigen Ja/Nein-Wert; mehrere unabhängige Optionen dürfen zugleich gelten. Switch: zeigt eine Einstellung als ein oder aus. Der Zeitpunkt der Wirkung muss im Ablauf klar sein. Die vier Beispiele sind Gestaltungsstudien, keine Nachweise zusätzlicher lokaler Fähigkeiten.",
-    "source": "Eigene Gestaltungsstudie für Arve; nicht aus den Contract-Tokens gerendert und keine zusätzliche lokale Komponentenfähigkeit.",
+    "explanation": "Mit einem Button löst die Person eine Handlung aus. Der Button selbst hat keinen eigenen Auswahlzustand. Mit Input erfasst sie einen kurzen, einzeiligen freien Text. Mit Checkboxen wählt sie unabhängige Optionen aus oder ab; mehrere dürfen zugleich gelten. Ein Switch zeigt, ob eine Einstellung ein- oder ausgeschaltet ist. Der Ablauf muss deutlich machen, wann die Änderung wirkt. Die vier Beispiele sind Gestaltungsstudien und belegen keine zusätzlichen Fähigkeiten der lokalen Komponenten.",
+    "source": "Eigene Gestaltungsstudie; die Darstellung wird nicht aus den Contract-Tokens erzeugt und belegt keine zusätzliche Fähigkeit der lokalen Komponenten.",
     "revision": null,
     "blockName": "original-1",
     "blockType": "componentStudy"
@@ -134,7 +134,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Für eine aus mehreren gegenseitig ausschliessenden Optionen kommen beispielsweise Radio oder Select infrage; für durchsuchbare Listen gegebenenfalls eine Combobox. Diese Alternativen sind Entscheidungshilfen. Sie sind in diesem lokalen Komponentenpaket nicht als geprüfte Implementierungen verfügbar. Der Auswahlablauf bestimmt, ob Optionen sichtbar, verborgen oder durchsuchbar sein sollen; keine feste Anzahl entscheidet das unabhängig vom Inhalt.",
+                "text": "Soll die Person genau eine von mehreren Optionen wählen, kommen beispielsweise Radio oder Select infrage; für durchsuchbare Listen gegebenenfalls eine Combobox. Diese Alternativen helfen bei der Entscheidung, sind in diesem lokalen Komponentenpaket aber nicht als geprüfte Implementierungen verfügbar. Ob Optionen sichtbar, verborgen oder durchsuchbar sein sollen, hängt von der Aufgabe und dem Inhalt ab. Die Anzahl der Optionen allein entscheidet das nicht.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -187,7 +187,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Eine Checkbox kann eine einzelne unabhängige Bestätigung oder mehrere unabhängige Optionen abbilden. Sie ist nicht auf Mehrfachwahl beschränkt. Ein Switch vermittelt einen Ein-/Aus-Zustand und behält dasselbe Label.",
+                "text": "Eine Checkbox eignet sich auch für eine einzelne unabhängige Bestätigung. Mit mehreren Checkboxen kann die Person mehrere unabhängige Optionen wählen. Ein Switch zeigt, ob eine Einstellung ein- oder ausgeschaltet ist; sein Label bleibt dabei gleich.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -419,21 +419,21 @@ const original = [
   }
 ] satisfies NonNullable<Page['content']>
 export const release = {
- expectedUpdatedAt: "2026-11-17T23:42:46.646Z",
- summary:'Beginne mit der Nutzeraufgabe: Handlung, freier Text, unabhängige Auswahl oder direkt wirksame Einstellung.',
+ expectedUpdatedAt: "2026-11-20T14:43:09.583Z",
+ summary:'Wähle die Komponente danach, was die Person tun soll: einen Vorgang starten, Text eingeben, Optionen auswählen oder eine Einstellung ändern.',
  content:[
- text('decision','Was soll die Person tun?','Folge der passenden Aufgabe zum benötigten Wert und zur empfohlenen Komponente.','Aufgabe → benötigter Wert → Empfehlung','Schematische Beispiele · keine Speicherung und keine neuen Komponentenfähigkeiten.'),
- route('button','Einen Vorgang auslösen','Kein eigener Auswahlwert','Button','Die Person speichert Änderungen oder startet einen Exportauftrag. Der Button löst die Handlung aus.','Änderungen speichern',''),
+ text('decision','Was soll die Person tun?','Die vier Wege zeigen, welche Komponente zur jeweiligen Aufgabe passt.','Aufgabe → Eingabe oder Wirkung → Komponente','Die Beispiele sind schematisch. Sie speichern nichts und zeigen keine zusätzlichen Fähigkeiten der Komponenten.'),
+ route('button','Einen Vorgang auslösen','Eine Handlung starten','Button','Die Person speichert Änderungen oder startet einen Exportauftrag. Der Button löst die Handlung aus.','Änderungen speichern',''),
  route('input','Einen kurzen Wert selbst formulieren','Einzeiliger freier Text','Input','Die Person kennt den Wert und kann ihn selbst eingeben. Muss sie aus gültigen Vorgaben wählen, führt der Weg zu Auswahl und Suche.','Projektname','Jahresbericht'),
  route('checkbox','Optionen vor dem Abschliessen auswählen','Unabhängige Ja/Nein-Werte','Checkbox','Eine oder mehrere Optionen dürfen gelten. Die Auswahl bleibt von der späteren Handlung getrennt; erst «Exportieren» schliesst diesen Beispielablauf ab.','Tabellen einschliessen','Diagramme einschliessen'),
  route('switch','Eine Einstellung direkt ändern','Ein oder aus','Switch','Die Einstellung soll direkt wirken. Zeige, ob die Änderung übernommen wurde. Das Label bleibt beim Umschalten gleich.','Benachrichtigungen','Ein'),
- linked('boundary','Keiner dieser Wege passt?','Ein Ziel öffnen braucht einen Link. Genau eine feste Option, eine durchsuchbare Liste oder längerer Text braucht einen anderen Eingabeweg. Radio, Select und Combobox sind hier keine zusätzlich verfügbaren Contracts.',[['Auswahl und Suche: feste Werte und Listen','/systems/shadcn/auswahl-und-suche']]),
- text('rules','Drei Fragen vor der Festlegung','Handlung oder Ziel? Speichern startet einen Vorgang; ein Link öffnet eine vorhandene Seite oder Ressource. Entscheide nach Verhalten, auch beim Download.','Freier oder vorgegebener Wert? Input erfasst kurzen freien Text. Eine Suche in gültigen Optionen darf Freitext nicht unbemerkt als gültigen Wert übernehmen.','Auswahl oder direkte Einstellung? Checkboxen erlauben unabhängige Einzel- und Mehrfachwahl. Switches für direkt wirksame Einstellungen sind unsere lokale Gestaltungskonvention; beide brauchen einen klaren Zeitpunkt der Übernahme.'),
- linked('sourceDetails','Quellen und Prüfgrenzen','Die Auswahlwege sind redaktionelle Gestaltungsempfehlungen auf Basis der erhaltenen Fachfragen. shadcn ist die Referenzimplementierung. Die Beispiele sind Portalgestaltung; sie belegen weder vollständige Contracttreue noch dauerhafte Speicherung.',[
+ linked('boundary','Keiner dieser Wege passt?','Um ein Ziel zu öffnen, verwende einen Link. Soll die Person genau eine feste Option wählen, eine Liste durchsuchen oder längeren Text eingeben, braucht sie eine andere Eingabe. Für Radio, Select und Combobox gibt es in dieser Bibliothek keine Contracts.',[['Auswahl und Suche: feste Werte und Listen','/systems/shadcn/auswahl-und-suche']]),
+ text('rules','Drei Fragen vor der Festlegung','Handlung oder Ziel? Speichern startet einen Vorgang; ein Link öffnet eine vorhandene Seite oder Ressource. Entscheide nach Verhalten, auch beim Download.','Freier oder vorgegebener Wert? Input erfasst kurzen freien Text. Bei der Suche in gültigen Optionen darf die Oberfläche eingegebenen Freitext nicht unbemerkt als gültige Auswahl übernehmen.','Auswahl oder direkte Einstellung? Checkboxen erlauben eine einzelne unabhängige Auswahl ebenso wie mehrere. Für direkt wirksame Einstellungen empfehlen wir hier Switches. Diese lokale Konvention ist keine allgemeine ARIA-Vorschrift. In beiden Fällen muss klar sein, wann die Änderung übernommen wird.'),
+ linked('sourceDetails','Quellen und Prüfgrenzen','Die vier Wege sind Gestaltungsempfehlungen, die auf den unten erläuterten Auswahlfragen beruhen. shadcn ist die Referenzimplementierung. Die Beispiele zeigen die Gestaltung im Portal; sie belegen weder die vollständige Einhaltung der Contracts noch dauerhafte Speicherung.',[
  ['Button: Handlung und vorhandene Vorschau','/systems/shadcn/components/button'],['Input: kurze freie Werte','/systems/shadcn/components/input'],['Checkbox: unabhängige Optionen','/systems/shadcn/components/checkbox'],['Switch: Ein-/Aus-Einstellung','/systems/shadcn/components/switch'],['Auswahl und Suche','/systems/shadcn/auswahl-und-suche'],['Formulare und Validierung','/systems/shadcn/formulare-validierung']]),
- text('observations','Beobachtungen aus Aufgabenkontexten','UX-003 · Zeitraum oder Konto wählen: eine Kontextwahl mit gültigen Optionen, kein beliebiger Freitext. Beobachtet wurden Öffnen, Eingrenzen und Auswahl einzelner Varianten; daraus folgt keine allgemeine Such- oder Barrierefreiheitsfreigabe.','UX-009 · Zeilen vor einer gemeinsamen Folgeaktion markieren: unabhängige Auswahl und Handlung sind getrennt. Die untersuchten Varianten zeigen unterschiedliche Auswahlgrenzen bei Filterwechseln; ein gemischter Kopfzustand und ein vollständiger Bulkabschluss sind nicht belegt.','Die Beobachtungen sind Kandidaten im Patternkatalog und keine Komponentenfreigabe. Der vorliegende Auswahlweg erweitert den verfügbaren Contractumfang nicht.'),
+ text('observations','Beobachtungen aus Aufgabenkontexten','UX-003 · Zeitraum oder Konten auswählen: Die Person wählt aus gültigen Optionen, statt beliebigen Freitext einzugeben. Beobachtet wurden das Öffnen und Eingrenzen der Auswahl sowie die Auswahl in einzelnen Varianten. Damit sind weder die Suche noch die Barrierefreiheit allgemein freigegeben.','UX-009 · Zeilen vor einer gemeinsamen Folgeaktion markieren: Die Person kann unabhängig einzelne Zeilen auswählen; die gemeinsame Handlung wird getrennt davon angeboten. Welche Auswahl bei einem Filterwechsel erhalten bleibt, unterscheidet sich zwischen den untersuchten Varianten. Nicht belegt sind ein gemischter Zustand der Checkbox im Tabellenkopf und ein vollständig durchgeführter Ablauf der gemeinsamen Folgeaktion.','Die Beobachtungen sind im Patternkatalog als Kandidaten erfasst; sie geben keine Komponenten frei. Auch die Empfehlungen auf dieser Seite erweitern den Umfang der verfügbaren Contracts nicht.'),
  linked('catalog','Aufgabenkontexte im Patternkatalog','Die Originalbeobachtungen und ihre Grenzen lassen sich über die Kennungen UX-003 und UX-009 im Katalog nachlesen.',[['UX-Patterns: UX-003 / UX-009 suchen','/systems/shadcn/patterns']]),
- text('originalDetails','Ursprüngliche Auswahlfragen und Studie','Vollständiger veröffentlichter CMS-Ausgangsinhalt, unverändert eingefroren aus dem Stand 2026-11-17T23:42:46.646Z (read-only gelesen am 20.11.2026).'),
+ text('originalDetails','Ursprüngliche Auswahlfragen und Studie','Die folgenden Erläuterungen und die Studie beruhen auf dem veröffentlichten Stand vom 17.11.2026. Für diese Seite wurden sie sprachlich überarbeitet; die fachlichen Regeln und Grenzen bleiben erhalten.'),
  ...original,
  ] satisfies Page['content'],
 }

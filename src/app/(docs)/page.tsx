@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { listSystems } from '../../docs/systems'
 import { ArveWorkflows } from '../../docs/arve-workflows'
 import './platform.css'
+import { staticPublication } from '../../docs/site-path'
 
 export const dynamic = 'force-dynamic'
 
@@ -52,7 +53,7 @@ export default async function Home() {
               <div><dt>Der Skill führt die Arbeit.</dt><dd>Auswählen, umsetzen, prüfen – mit UI Contracts.</dd></div>
               <div><dt>Das Team entscheidet.</dt><dd>Über offene Fragen, Änderungen und Freigaben.</dd></div>
             </dl>
-            <Link className="platform-text-link" href="#systeme">Im Design-System ausprobieren <span aria-hidden="true">↓</span></Link>
+            {staticPublication ? <p>Diese Veröffentlichung zeigt das Handbuch. Ein MCP-Endpunkt ist hier nicht verfügbar.</p> : <Link className="platform-text-link" href="#systeme">Im Design-System ausprobieren <span aria-hidden="true">↓</span></Link>}
           </div>
           <figure className="platform-agent-example">
             <figcaption>So kommt Wissen in den Auftrag <span>Beispiel</span></figcaption>

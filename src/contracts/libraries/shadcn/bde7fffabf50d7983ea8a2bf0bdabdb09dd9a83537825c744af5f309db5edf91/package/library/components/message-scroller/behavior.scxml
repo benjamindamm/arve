@@ -1,0 +1,45 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="MessageScrollerProvider" initial="active">
+  <datamodel>
+    <data id="autoScroll" expr="true" />
+    <data id="canStart" expr="false" />
+    <data id="canEnd" expr="false" />
+    <data id="geometryReady" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="SOURCE_GEOMETRY">
+      <assign location="canStart" expr="!!_event.data.start" />
+      <assign location="canEnd" expr="!!_event.data.end" />
+      <assign location="geometryReady" expr="true" />
+    </transition>
+    <transition event="SOURCE_SCROLL" cond="!!_event.data.event">
+      <send event="onScroll" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+    </transition>
+    <transition event="BUTTON_CLICK" cond="!!_event.data.event &amp;&amp; (_event.data.direction === &quot;start&quot; ? canStart : canEnd)">
+      <send event="onClick" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!_event.data.event.defaultPrevented">
+        <send event="_effect.sourceBlurThenScroll" target="#_parent">
+          <param name="direction" expr="_event.data.direction" />
+          <param name="behavior" expr="_event.data.behavior || 'smooth'" />
+        </send>
+      </if>
+    </transition>
+    <transition event="SCROLL_TO_MESSAGE SCROLL_TO_START SCROLL_TO_END">
+      <send event="_effect.delegateSourceScrollCommand" target="#_parent">
+        <param name="options" expr="_event.data" />
+      </send>
+    </transition>
+    <transition event="CONTENT_APPEND CONTENT_PREPEND RESIZE">
+      <send event="_effect.sourceGeometryPolicy" target="#_parent">
+        <param name="policy" expr="'follow-only-when-following-preserve-prepend-and-anchor'" />
+      </send>
+    </transition>
+    <transition event="HOME END PAGE_UP PAGE_DOWN ARROW_UP ARROW_DOWN SPACE WHEEL TOUCH_MOVE">
+      <send event="_effect.sourceUserScrollIntent" target="#_parent" />
+    </transition>
+    <transition event="TAB SHIFT_TAB FOCUS_IN FOCUS_OUT ESCAPE" />
+  </state>
+</scxml>

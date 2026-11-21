@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual source wrapper native output and frozen-wrapper limitations, with browser behavior separately checked.",
+  "cases": [
+    {
+      "component": "radio-group",
+      "name": "actual named group/span radios and hidden native form inputs are preserved",
+      "result": "pass"
+    },
+    {
+      "component": "toggle-group",
+      "name": "group pressed buttons and exact group visual context remain native",
+      "result": "pass"
+    },
+    {
+      "component": "toggle-group",
+      "name": "standalone Toggle source has own boolean pressed state and actual disabled prop",
+      "result": "pass"
+    },
+    {
+      "component": "tabs",
+      "name": "actual tab roles; automatic cross-part ID registration waits for client effects",
+      "result": "pass"
+    },
+    {
+      "component": "tabs",
+      "name": "pinned wrapper visual vertical prop does not establish vertical primitive ARIA",
+      "result": "pass"
+    },
+    {
+      "component": "slider",
+      "name": "one-element array yields one native range with propagated explicit label",
+      "result": "pass"
+    },
+    {
+      "component": "slider",
+      "name": "actual scalar wrapper quirk creates two thumbs; array range count stays explicit",
+      "result": "pass"
+    }
+  ]
+}

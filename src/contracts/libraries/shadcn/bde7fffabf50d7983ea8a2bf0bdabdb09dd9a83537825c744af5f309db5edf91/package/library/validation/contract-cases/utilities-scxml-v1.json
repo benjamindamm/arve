@@ -1,0 +1,80 @@
+{
+  "result": "PASS",
+  "scope": "Finite exact source transaction/lifecycle/counterexamples, separate from actual browser evidence.",
+  "components": [
+    {
+      "component": "code-block",
+      "behaviorSha256": "afb88265bcc382d20fff55f7c3a9823e241c2e0b07ef5ca9595d8c3b9e59d506",
+      "cases": [
+        {
+          "name": "caller defaultPrevented does not veto actual clipboard effect",
+          "result": "pass"
+        },
+        {
+          "name": "only successful promise produces copied feedback; repeated success does not restart first timer",
+          "result": "pass"
+        },
+        {
+          "name": "rejection preserves source state without fabricated error/success callback",
+          "result": "pass"
+        },
+        {
+          "name": "disabled blocks request and Escape cannot revoke an issued clipboard operation",
+          "result": "pass"
+        },
+        {
+          "name": "removed source utility ignores subsequent user/source transactions",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "input-otp",
+      "behaviorSha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4",
+      "cases": [
+        {
+          "name": "explicit reference pattern and maxlength reject invalid whole candidates",
+          "result": "pass"
+        },
+        {
+          "name": "source completion requires observed shorter-to-full transition, not initial full prop",
+          "result": "pass"
+        },
+        {
+          "name": "controlled value remains prop-owned and callback is a string without invented eventDetails",
+          "result": "pass"
+        },
+        {
+          "name": "disabled native input does not report user change",
+          "result": "pass"
+        },
+        {
+          "name": "removed source utility ignores subsequent user/source transactions",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "carousel",
+      "behaviorSha256": "99483065c45fef4d84d90aebcb234bd6dfe19e5d38be6a56e84e1accc7e739d0",
+      "cases": [
+        {
+          "name": "actual ready API callback is not an invented slide-index event",
+          "result": "pass"
+        },
+        {
+          "name": "boundary button command differs from source select snapshot",
+          "result": "pass"
+        },
+        {
+          "name": "source Left/Right policy does not fabricate vertical Up/Down commands; Escape preserves index",
+          "result": "pass"
+        },
+        {
+          "name": "removed source utility ignores subsequent user/source transactions",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@ const text = (key: string, title: string, paragraphs: string[], link?: [string, 
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T08:57:18.767Z',
+  expectedUpdatedAt: '2026-11-20T14:07:52.070Z',
   summary: 'Stelle gleichrangige Themen oder Angebote in drei gleich breiten Spalten gegenüber; zusätzliche Einträge bilden weitere Reihen.',
   content: [
     text('example', 'Hilfe für dein nächstes Design', [

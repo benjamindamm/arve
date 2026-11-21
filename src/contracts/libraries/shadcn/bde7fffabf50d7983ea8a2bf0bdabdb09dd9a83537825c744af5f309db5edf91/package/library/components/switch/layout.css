@@ -1,0 +1,84 @@
+.figma-switch {
+  --track-width: var(--figma-switch-width);
+  --track-height: var(--figma-switch-height);
+  --thumb-size: var(--figma-switch-thumb);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.figma-switch[data-size="small"] {
+  --track-width: var(--figma-switch-small-width);
+  --track-height: var(--figma-switch-small-height);
+  --thumb-size: var(--figma-switch-small-thumb);
+}
+
+.figma-switch > input {
+  position: absolute;
+  inline-size: var(--track-width);
+  block-size: var(--track-height);
+  margin: 0;
+  opacity: 0;
+}
+
+.figma-switch__track {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  flex: none;
+  inline-size: var(--track-width);
+  block-size: var(--track-height);
+  padding: var(--figma-switch-inset);
+  border-radius: var(--figma-switch-radius);
+  background: var(--figma-input);
+  pointer-events: none;
+}
+
+.figma-switch__thumb {
+  inline-size: var(--thumb-size);
+  block-size: var(--thumb-size);
+  border-radius: var(--figma-switch-radius);
+  background: var(--figma-background);
+}
+
+.figma-switch > input:checked + .figma-switch__track {
+  justify-content: flex-end;
+  background: var(--figma-primary);
+}
+
+.figma-switch > input:checked + .figma-switch__track > .figma-switch__thumb {
+  background: var(--figma-primary-foreground);
+}
+
+.figma-switch > input:focus-visible + .figma-switch__track {
+  box-shadow: inset 0 0 0 var(--figma-switch-focus-width) var(--figma-ring);
+}
+
+.figma-switch > input:disabled + .figma-switch__track {
+  opacity: var(--figma-switch-disabled-opacity);
+}
+
+@media (forced-colors: active) {
+  .figma-switch > input {
+    position: static;
+    opacity: 1;
+  }
+
+  .figma-switch__track {
+    display: none;
+  }
+}
+
+/* Base UI 1.9 semantic root projection, using the same native Figma tokens. */
+[data-slot="switch"][role="switch"] { display: inline-flex; box-sizing: border-box; border: 1px solid var(--figma-border); background: var(--figma-background); }
+[data-slot="switch"][aria-checked="true"] { background: var(--figma-primary); color: var(--figma-primary-foreground); }
+[data-slot="switch"][aria-disabled="true"] { opacity: 0.5; }
+[data-slot="switch"]:focus-visible { outline: 2px solid var(--figma-ring); outline-offset: 2px; }
+
+/* Geometry and state projection for the pinned Base UI span root. */
+[data-slot="switch"][role="switch"] { inline-size: var(--figma-switch-width); block-size: var(--figma-switch-height); border-radius: var(--figma-switch-radius); padding: var(--figma-switch-inset); }
+[data-slot="switch"][aria-checked="true"] { justify-content: flex-end; }
+[data-slot="switch"][data-size="sm"] { inline-size: var(--figma-switch-small-width); block-size: var(--figma-switch-small-height); }
+[data-slot="switch-thumb"] { inline-size: var(--figma-switch-thumb); block-size: var(--figma-switch-thumb); border-radius: var(--figma-switch-radius); background: var(--figma-background); }
+[data-slot="switch"][data-size="sm"] [data-slot="switch-thumb"] { inline-size: var(--figma-switch-small-thumb); block-size: var(--figma-switch-small-thumb); }

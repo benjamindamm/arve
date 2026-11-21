@@ -1,8 +1,8 @@
 import type { Page } from '../../../src/payload-types'
 
 export const release = {
-  "expectedUpdatedAt": "2026-11-13T12:43:02.870Z",
-  "summary": "Laden, Erstleere, Nulltreffer, Fehler, Nichtverfügbarkeit und unklaren Speicherausgang unterscheiden; passende Auswege und Datenerhalt gestalten.",
+  "expectedUpdatedAt": "2026-11-20T14:27:29.953Z",
+  "summary": "Zeige verständlich, was beim Laden oder Speichern passiert. Biete passende nächste Schritte an und erhalte Daten und Eingaben.",
   "content": [
     {
       "blockType": "text",
@@ -34,7 +34,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Wähle die Meldung nach dem tatsächlichen Ergebnis und erhalte den Arbeitskontext."
+                  "text": "Zeige eine Meldung, die zum tatsächlichen Ergebnis passt. Erhalte dabei Suche, Filter und Eingaben."
                 }
               ]
             },
@@ -67,7 +67,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Erhaltener Kontext"
+                  "text": "Was erhalten bleibt"
                 }
               ]
             },
@@ -138,7 +138,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Der Bestand steht noch nicht fest. Die Fläche bleibt stabil; eine leere Antwort wird erst nach abgeschlossenem Laden bewertet."
+                  "text": "Ob Projekte vorhanden sind, steht noch nicht fest. Halte den Bereich beim Laden stabil. Zeige erst nach abgeschlossenem Laden an, ob die Liste leer ist."
                 }
               ]
             },
@@ -187,7 +187,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Erstleere"
+                  "text": "Noch keine Daten"
                 }
               ]
             },
@@ -258,7 +258,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Nulltreffer"
+                  "text": "Keine Suchtreffer"
                 }
               ]
             },
@@ -329,7 +329,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Fehler beim Lesen"
+                  "text": "Laden fehlgeschlagen"
                 }
               ]
             },
@@ -351,7 +351,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Der Leseversuch ist fehlgeschlagen. Versuche es erneut; deine Suchkriterien bleiben erhalten."
+                  "text": "Die Daten konnten nicht abgerufen werden. Versuche es erneut; deine Suchkriterien bleiben erhalten."
                 }
               ]
             },
@@ -373,7 +373,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Suche «Alpen» und Status «Aktiv» bleiben erhalten. Bereits geladene Daten beim Aktualisieren als bisherigen Stand kennzeichnen."
+                  "text": "Suche «Alpen» und Status «Aktiv» bleiben erhalten. Falls die Aktualisierung fehlschlägt, kennzeichne bereits geladene Daten als bisherigen Stand."
                 }
               ]
             }
@@ -422,7 +422,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Das angeforderte Projekt kann nicht angezeigt werden. Ein Grund ist hier nicht bestätigt."
+                  "text": "Das angeforderte Projekt kann nicht angezeigt werden. Eine Ursache ist hier nicht bestätigt."
                 }
               ]
             },
@@ -471,7 +471,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Unknown · Speicherausgang unklar"
+                  "text": "Speicherung nicht bestätigt"
                 }
               ]
             },
@@ -553,7 +553,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "1 · Zustand benennen: Ladephase, leeren Bestand und Nulltreffer unterscheiden. Eine Fehlermeldung nennt die betroffene Aufgabe; unbekannte Ursachen nicht behaupten."
+                  "text": "1 · Zustand benennen: Unterscheide zwischen laufendem Laden, einem leeren Bestand und einer Suche ohne Treffer. Nenne bei einem Fehler die betroffene Aufgabe. Behaupte keine Ursache, die nicht bekannt ist."
                 }
               ]
             },
@@ -564,7 +564,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "2 · Kontext erhalten: Suche, Filter und gültige Eingaben bewahren. Vorhandene Daten bei Aktualisierungsfehlern als bisherigen Stand kennzeichnen. Eine unbestätigte Schreibantwort nie als Erfolg oder sicheren Fehler ausgeben."
+                  "text": "2 · Kontext erhalten: Bewahre Suche, Filter und gültige Eingaben. Falls eine Aktualisierung fehlschlägt, kennzeichne vorhandene Daten als bisherigen Stand. Fehlt die Bestätigung einer Speicherung, melde weder Erfolg noch einen sicheren Fehlschlag."
                 }
               ]
             },
@@ -575,7 +575,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "3 · Nur sichere Auswege anbieten: Erstleere führt zur Erstellung, Nulltreffer zur Kriterienkorrektur, ein vorübergehender Lesefehler zum erneuten Lesen. Bei Unknown keine erneute Schreibaktion; Statusprüfung nur mit tatsächlich vorhandener Schnittstelle."
+                  "text": "3 · Nur sichere nächste Schritte anbieten: Gibt es noch keine Daten, biete die Erstellung an. Liefert eine Suche keine Treffer, ermögliche das Ändern der Kriterien. Scheitert der Datenabruf vorübergehend, biete einen neuen Versuch an. Ist unklar, ob gespeichert wurde, darf die Änderung nicht erneut gesendet werden. Biete eine Statusprüfung nur an, wenn die nötige Schnittstelle tatsächlich vorhanden ist."
                 }
               ]
             }
@@ -613,7 +613,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Laden · Noch kein abgeschlossenes Ergebnis · Fortschritt ohne erfundene Dauer zeigen."
+                  "text": "Laden · Das Laden ist noch nicht abgeschlossen. · Zeige den Fortschritt, ohne eine Dauer zu erfinden."
                 }
               ]
             },
@@ -624,7 +624,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Erstleere · Vollständiger Bestand geladen und leer · Erste Erstellung anbieten."
+                  "text": "Noch keine Daten · Der vollständige Bestand wurde geladen und ist leer. · Biete an, den ersten Eintrag zu erstellen."
                 }
               ]
             },
@@ -635,7 +635,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Nulltreffer · Bestand geladen, Auswahl leer · Kriterien ändern oder zurücksetzen."
+                  "text": "Keine Suchtreffer · Die Daten wurden geladen, aber nichts passt zur Suche und den Filtern. · Ermögliche das Ändern oder Zurücksetzen der Kriterien."
                 }
               ]
             },
@@ -646,7 +646,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Fehler · Ein Lesevorgang ist nachweislich fehlgeschlagen · Erneutes Lesen anbieten, sofern möglich."
+                  "text": "Laden fehlgeschlagen · Der Datenabruf ist nachweislich fehlgeschlagen. · Biete einen neuen Versuch an, sofern möglich."
                 }
               ]
             },
@@ -657,7 +657,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Nicht verfügbar · Angeforderte Ressource nicht zugänglich · Erklärten Rückweg anbieten; Ursache nur bei Beleg nennen."
+                  "text": "Nicht verfügbar · Die angeforderten Daten sind nicht zugänglich. · Biete einen verständlichen Rückweg an. Nenne die Ursache nur, wenn sie belegt ist."
                 }
               ]
             },
@@ -668,7 +668,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Unknown · Schreibvorgang ohne eindeutige Bestätigung · Eingaben erhalten, keine erneute Übermittlung."
+                  "text": "Speicherung nicht bestätigt · Es ist unklar, ob die Änderung gespeichert wurde. · Erhalte die Eingaben und sende sie nicht erneut."
                 }
               ]
             }
@@ -695,7 +695,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Prüfgrenzen und Patternbezug"
+                  "text": "Was die Beispiele zeigen und welche Patterns dazugehören"
                 }
               ]
             },
@@ -706,7 +706,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Die sechs Karten sind statische Gestaltungsbeispiele. Sie prüfen weder Ladezeiten, einen Wiederholungsdienst, Berechtigungen noch serverseitigen Datenerhalt oder die Klärung eines Schreibausgangs."
+                  "text": "Die sechs Karten sind statische Gestaltungsbeispiele. Mit ihnen werden weder Ladezeiten noch Dienste für erneute Versuche oder Berechtigungen geprüft. Auch ob Daten auf dem Server erhalten bleiben und sich ein unbestätigtes Speicherergebnis klären lässt, wird damit nicht geprüft."
                 }
               ]
             },
@@ -717,7 +717,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Bei Umsetzung: Statuswechsel für assistive Technik angemessen ankündigen, Fokus am Arbeitsort halten und tatsächlichen Datenerhalt nach Fehler und Rückkehr prüfen. Ladeanzeige ohne notwendige Animation gestalten; keine sechs gleichzeitigen Live-Regionen."
+                  "text": "Kündige bei der Umsetzung Statusänderungen für assistive Technik angemessen an. Halte den Fokus dort, wo die Person arbeitet. Prüfe, ob Daten nach einem Fehler und bei der Rückkehr tatsächlich erhalten bleiben. Die Ladeanzeige muss auch ohne Animation verständlich sein. Verwende keine sechs gleichzeitigen Live-Regionen."
                 }
               ]
             },
@@ -728,7 +728,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "UX-008 · Status und Auswege erklären: Kandidat. Interaktionen beobachtet; keine zeitliche Progression oder Dateiübertragung. Fehlerursache und bedienter Rückweg bleiben unbelegt."
+                  "text": "UX-008 · Status und Auswege erklären: Kandidat. Interaktionen wurden beobachtet, aber kein Ablauf über die Zeit und keine Dateiübertragung. Die Fehlerursache und die Nutzung des Rückwegs sind nicht belegt."
                 }
               ]
             },
@@ -739,7 +739,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "UX-017 · Nulltreffer erklären: Kandidat. Repräsentative Nulltreffer erzeugt und Liste wiederhergestellt; keine Prüfung aller fachlichen Kriterien."
+                  "text": "UX-017 · Nulltreffer erklären: Kandidat. Für ausgewählte typische Fälle wurden Suchen ohne Treffer erzeugt und die Liste danach wiederhergestellt. Es wurden nicht alle fachlichen Kriterien geprüft."
                 }
               ]
             },
@@ -750,7 +750,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "UX-027 · Erforderliche nächste Handlung anzeigen: Kandidat. Bestehende Zustände angesehen; keine Progression oder Freigabe ausgeführt. Kein Beleg für einen Unknown-Abgleich."
+                  "text": "UX-027 · Erforderliche nächste Handlung anzeigen: Kandidat. Bestehende Zustände wurden angesehen. Es wurde weder ein Wechsel zum nächsten Zustand noch eine Freigabe ausgeführt. Nicht nachgewiesen ist, ob sich ein unbestätigtes Speicherergebnis klären lässt."
                 }
               ]
             },
@@ -761,7 +761,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Diese Zuordnung ist keine Ready-Freigabe. Die ursprünglichen Zustandsregeln sind unten erhalten."
+                  "text": "Diese Zuordnung gibt die Patterns nicht für den Status Ready frei. Weitere Zustandsregeln stehen im nächsten aufklappbaren Abschnitt."
                 }
               ]
             }

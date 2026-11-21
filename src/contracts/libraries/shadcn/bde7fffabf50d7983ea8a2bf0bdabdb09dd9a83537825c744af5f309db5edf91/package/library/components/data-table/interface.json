@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "data-table.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DataTableRecipe",
+          "description": "Actual documented generic recipe, no universal upstream DataTable primitive. Public data/columns match the guide; remaining feature options/callbacks belong to actual TanStack useTable caller composition.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "columns",
+              "type": {
+                "text": "ColumnDef<DataTableFeatures,TData>[]"
+              },
+              "description": "Guide DataTableProps generic column definitions."
+            },
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "TData[]"
+              },
+              "description": "Guide DataTableProps typed rows."
+            },
+            {
+              "kind": "field",
+              "name": "features",
+              "type": {
+                "text": "typeof tableFeatures(...)"
+              },
+              "description": "Only explicitly registered v9 features exist."
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "type": {
+                "text": "{sorting?:SortingState;columnFilters?:ColumnFiltersState;columnVisibility?:VisibilityState;rowSelection?:RowSelectionState;pagination?:PaginationState}"
+              },
+              "description": "Independent actual TanStack useTable controlled feature states, not a new DataTable root prop."
+            }
+          ],
+          "events": [
+            {
+              "name": "onSortingChange",
+              "type": {
+                "text": "OnChangeFn<SortingState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onColumnFiltersChange",
+              "type": {
+                "text": "OnChangeFn<ColumnFiltersState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onColumnVisibilityChange",
+              "type": {
+                "text": "OnChangeFn<VisibilityState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onRowSelectionChange",
+              "type": {
+                "text": "OnChangeFn<RowSelectionState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onPaginationChange",
+              "type": {
+                "text": "OnChangeFn<PaginationState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DashboardDataTableBlock",
+          "description": "Separately frozen concrete dashboard-01 DataTable export with its own zod schema/application actions; supplementary block composition, not a universal table API.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "z.infer<typeof schema>[]"
+              },
+              "description": "Exact dashboard DataTable signature; source/schema remain frozen."
+            }
+          ],
+          "events": []
+        }
+      ]
+    }
+  ]
+}

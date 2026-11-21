@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "spinner.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Spinner",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"svg\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/spinner.tsx.source:5; defaults: {}."
+            },
+            {
+              "kind": "field",
+              "name": "aria-label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Loading\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "spinner",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

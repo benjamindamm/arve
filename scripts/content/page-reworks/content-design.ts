@@ -4,8 +4,8 @@ const node=(text:string)=>({type:'text',version:1,text,detail:0,format:0,mode:'n
 function copy(blockName:string,heading:string,...paragraphs:string[]):Block {
  return {blockType:'text',blockName,body:{root:{type:'root',version:1,direction:'ltr',format:'',indent:0,children:[{type:'heading',tag:'h2',version:1,direction:'ltr',format:'',indent:0,children:[node(heading)]},...paragraphs.map(text=>({type:'paragraph',version:1,direction:'ltr',format:'',indent:0,children:[node(text)]}))]}}}
 }
-// Literal read-only MCP capture of all nine original blocks, 2026-11-18T00:38:59.418Z.
-// No snapshot import: subsequent CMS exports cannot alter this evidence.
+// Current editorial explanation based on the nine blocks captured on 2026-11-18.
+// Historical source files remain unchanged; no mutable snapshot import.
 const original: Block[] = [
   {
     "body": {
@@ -24,7 +24,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Ein Projekt anlegen: jeder Text hat eine Aufgabe",
+                "text": "Projekt erstellen: Feld, Aktion und Ergebnis benennen",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -42,7 +42,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Das Feld heisst «Projektname», die Aktion «Projekt erstellen», das bestätigte Ergebnis «Projekt erstellt». Diese Begriffe bleiben auch im Fehler und im Rückweg erhalten. Ein Wechsel zu «Objekt» oder «Datensatz» verlangt eine unnötige Übersetzung.",
+                "text": "Das Feld heisst «Projektname», die Aktion «Projekt erstellen», das bestätigte Ergebnis «Projekt erstellt». Verwende diese Begriffe auch in Fehlermeldungen und beim Zurückkehren zum Formular. Ein Wechsel zu «Objekt» oder «Datensatz» erschwert die Zuordnung.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -60,7 +60,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die folgenden Formulierungen begleiten den lokalen Gestaltungs-Piloten in de-CH. Projektname, Pflicht und Längengrenze sind dafür neu gewählte Referenzentscheidungen, keine upstream-Vorgaben oder Firmenregeln. Prüfzeitpunkt und Rückwege führt das Formularpattern; die vollständige Pilotgrenze führt «Gestaltungs-Pilot».",
+                "text": "Die Beispiele gehören zum lokalen Gestaltungs-Piloten in de-CH. Projektname, Pflichtfeld und Längengrenze wurden für diesen Piloten festgelegt; sie stammen weder aus shadcn noch aus allgemeinen Unternehmensregeln. «Formulare und Validierung» erklärt, wann geprüft wird und wie man zum Formular zurückkehrt. «Mit dem Handbuch gestalten» beschreibt den Umfang und die Grenzen des Piloten.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -130,7 +130,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Hilfe im Piloten: «1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.» Gezählt werden danach sichtbare Zeichen als Unicode-Graphemcluster, nicht Bytes oder einzelne Codepunkte. Diese Grenze ist eine neue lokale Referenzentscheidung für den Piloten, keine allgemeine Arve-Regel.",
+                "text": "Die Hilfe im Piloten lautet: «1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.» Nach dem Entfernen dieses Leerraums werden sichtbare Zeichen als Unicode-Graphemcluster gezählt, nicht Bytes oder einzelne Codepunkte. Diese Grenze wurde für den lokalen Piloten festgelegt; sie ist keine allgemeine Regel.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -148,7 +148,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Pflicht: Für das einzelne Beispielfeld ist «Projektname (erforderlich)» eindeutig. Bei gemischten Formularen ist etwa «Alle Angaben sind erforderlich, sofern sie nicht als optional gekennzeichnet sind» vor den Feldern möglich. Dann heisst eine freiwillige Ergänzung «Beschreibung (optional)». Eine Konvention durchgängig verwenden; ein Sternchen braucht eine erklärte Bedeutung.",
+                "text": "Für das einzelne Beispielfeld ist «Projektname (erforderlich)» eindeutig. In Formularen mit erforderlichen und freiwilligen Angaben kann vor den Feldern stehen: «Alle Angaben sind erforderlich, sofern sie nicht als optional gekennzeichnet sind». Eine freiwillige Ergänzung heisst dann «Beschreibung (optional)». Verwende eine Kennzeichnung durchgängig. Erkläre die Bedeutung, wenn du ein Sternchen verwendest.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -166,7 +166,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Aktion: «Projekt erstellen» beschreibt die tatsächliche Übermittlung. Führt der nächste Schritt nur zu einer Prüfung, passt «Angaben prüfen». Ein Label für einen Wert, eine Einstellung und eine Aktion benötigt jeweils eine andere Sprachform.",
+                "text": "«Projekt erstellen» beschreibt das Absenden der Angaben. Führt der nächste Schritt nur zu einer Prüfung, passt «Angaben prüfen». Formuliere die Beschriftung passend dazu, ob sie einen Wert, eine Einstellung oder eine Aktion bezeichnet.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -184,7 +184,7 @@ const original: Block[] = [
     "blockType": "text"
   },
   {
-    "title": "Vier Meldungen: die Aussage folgt dem bekannten Zustand",
+    "title": "Warum die vier Meldungen passen",
     "blockName": null,
     "items": [
       {
@@ -197,19 +197,19 @@ const original: Block[] = [
         "context": "Der Projektname überschreitet die erlaubte Länge",
         "before": "Der Name ist zu lang",
         "after": "Den Projektnamen auf höchstens 80 Zeichen kürzen.",
-        "reason": "80 Unicode-Graphemcluster nach Entfernen von Rand-Leerraum sind die lokale Pilotgrenze. Hilfe, Prüfung und Fehler nennen dieselbe Grenze; den Wert zum Kürzen erhalten. Keine upstream- oder Firmenregel."
+        "reason": "Im lokalen Piloten sind nach dem Entfernen von Leerraum am Anfang und Ende höchstens 80 Unicode-Graphemcluster erlaubt. Hilfe, Prüfung und Fehler müssen dieselbe Grenze nennen. Erhalte den eingegebenen Namen, damit er gekürzt werden kann. Die Grenze stammt weder aus shadcn noch aus allgemeinen Unternehmensregeln."
       },
       {
         "context": "Die Anfrage wird noch bearbeitet",
         "before": "Projekt erstellt",
         "after": "Projekt wird erstellt …",
-        "reason": "Der Start der Übermittlung bestätigt noch keine Annahme. Diese Aussage passt nur zum laufenden Vorgang; ein erfolgreicher Feldcheck beweist ebenfalls keine Erstellung."
+        "reason": "Die Meldung passt, solange die Anfrage bearbeitet wird. Weder das Absenden noch eine erfolgreiche Feldprüfung bestätigt, dass das Projekt erstellt wurde."
       },
       {
         "context": "Die Antwort fehlt; das Ergebnis ist unbekannt",
         "before": "Projekt nicht erstellt. Erneut versuchen.",
         "after": "Es ist noch unklar, ob das Projekt erstellt wurde.",
-        "reason": "Die ausgebliebene Antwort beweist keinen Nicht-Erfolg. «Status prüfen» nur anbieten, wenn eine verlässliche Abfrage des ursprünglichen Vorgangs existiert; sie darf kein zweites Projekt erstellen. Andernfalls braucht das Produkt einen konkreten Klärungsweg."
+        "reason": "Auch ohne Antwort kann das Projekt erstellt worden sein. Biete «Status prüfen» nur an, wenn sich der ursprüngliche Vorgang verlässlich abfragen lässt. Die Abfrage darf kein zweites Projekt erstellen. Sonst muss das Produkt einen konkreten Weg zur Klärung bereitstellen."
       }
     ],
     "blockType": "messageComparison"
@@ -249,7 +249,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Im Einzelfeld-Piloten steht «Einen Projektnamen eingeben.» direkt bei «Projektname»; nach fehlgeschlagenem Absenden geht der Fokus zum Feld. Eine Fehlerübersicht ist hier nicht vorgesehen. Allgemein ausserhalb des Piloten: Bei mehreren Feldern verwendet eine Übersicht dieselben Labels und Korrekturen wie die Feldhinweise.",
+                "text": "Im Piloten mit einem einzigen Feld steht «Einen Projektnamen eingeben.» direkt bei «Projektname». Nach fehlgeschlagenem Absenden erhält das Feld den Fokus; eine Fehlerübersicht ist hier nicht vorgesehen. In Formularen mit mehreren Feldern ausserhalb des Piloten verwendet eine Fehlerübersicht dieselben Labels und Korrekturhinweise wie die Meldungen an den Feldern.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -267,7 +267,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Ausserhalb des Piloten, nur bei fachlich verlangter Eindeutigkeit, bestätigtem Namenskonflikt und zulässiger Offenlegung: «Dieser Projektname ist bereits vergeben. Einen anderen Namen wählen.» Im Piloten sind gleiche Namen zulässig; es gibt keinen Namenskonfliktfehler. Eine Verbindungsstörung gehört zum Vorgang und verlangt keine andere Schreibweise.",
+                "text": "«Dieser Projektname ist bereits vergeben. Einen anderen Namen wählen.» passt nur ausserhalb des Piloten: Der Name muss fachlich eindeutig sein, der Konflikt bestätigt und seine Offenlegung zulässig. Im Piloten sind gleiche Namen erlaubt; es gibt keinen Namenskonfliktfehler. Bei einer Verbindungsstörung muss der Name nicht geändert werden.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -301,7 +301,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Bestätigung und Erhalt sind getrennte Zusagen",
+                "text": "Erstellung bestätigen und Angaben erhalten",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -319,7 +319,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Erst nach bestätigter Annahme: Projekt «Jahresbericht» erstellt. Der konkrete Name ordnet das Ergebnis zu. «Projekt öffnen» kann zum Ergebnis führen, wenn dieser Weg tatsächlich vorhanden ist.",
+                "text": "Erst wenn die Annahme bestätigt ist, passt: Projekt «Jahresbericht» erstellt. Der Name zeigt, welches Projekt gemeint ist. Biete «Projekt öffnen» nur an, wenn das erstellte Projekt darüber tatsächlich erreichbar ist.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -371,7 +371,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Wann ist «Erneut versuchen» eine ehrliche Hilfe?",
+                "text": "Wann «Erneut versuchen» passt",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -389,7 +389,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Bei bestätigter Nichtannahme und behobener Ursache kann «Projekt wurde nicht erstellt. Erneut versuchen.» passen. Ein Namenskonflikt gehört nicht zum Piloten. Allgemein ausserhalb des Piloten kann ein fachlich verlangter eindeutiger Name erst Korrektur und dann erneutes Absenden verlangen.",
+                "text": "«Projekt wurde nicht erstellt. Erneut versuchen.» kann passen, wenn die Anfrage nachweislich nicht angenommen und die Ursache behoben wurde. Ein Namenskonflikt gehört nicht zum Piloten. Ausserhalb des Piloten kann ein fachlich erforderlicher eindeutiger Name dazu führen, dass die Eingabe vor dem erneuten Absenden korrigiert werden muss.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -407,7 +407,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Bei unbekanntem Ausgang zuerst den Status klären. Im Piloten ist die dafür erforderliche Integrationsschnittstelle noch nicht verfügbar: kein bedienbares «Status prüfen», kein erfundener Supportweg und kein «Erneut versuchen». Die Unsicherheit bleibt sichtbar. Die Gestaltung benennt diese Voraussetzung; die vorhandene Demo erfüllt sie nicht.",
+                "text": "Wenn unklar ist, ob das Projekt erstellt wurde, muss zuerst der Status geklärt werden. Im Piloten fehlt dafür noch die Integrationsschnittstelle. Deshalb gibt es weder einen bedienbaren Button «Status prüfen» noch «Erneut versuchen» oder einen erfundenen Supportweg. Die Unsicherheit bleibt sichtbar. Die Gestaltung beschreibt, was zur Klärung nötig ist; die vorhandene Demo kann es noch nicht leisten.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -441,7 +441,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Ton, Formate und Übersetzung mitführen",
+                "text": "Ton, Formate und Übersetzung abstimmen",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -477,7 +477,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die bisherigen Themen Zahlen, Datum und Währung bleiben relevant: Sprache allein bestimmt weder Region noch Währung oder Zeitzone. Die fachliche Bedeutung muss vor der Formatierung feststehen. Ein Kalenderdatum und ein Zeitpunkt sind verschieden.",
+                "text": "Lege bei Zahlen, Datumsangaben und Geldbeträgen zuerst die fachliche Bedeutung fest, dann das Format. Die Sprache allein bestimmt weder Region noch Währung oder Zeitzone. Unterscheide dabei ein Kalenderdatum von einem Zeitpunkt.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -529,7 +529,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Quelle, Empfehlung und offener Review",
+                "text": "Quellen, Empfehlungen und ausstehende Prüfungen",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -583,7 +583,7 @@ const original: Block[] = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Für den begrenzten Gestaltungs-Piloten sind Eingabebedingungen und Rückwege lokal entschieden. Nachweise für Annahme, Ablehnung und Statusklärung fehlen weiterhin. Eine unabhängige Person soll am Fehlertext die Korrektur finden und beim unbekannten Ergebnis erkennen, dass Erfolg offen ist. Dieser Verständlichkeitsreview und der assistive Test stehen noch aus; die Texte sind keine Produktfreigabe.",
+                "text": "Die Eingabebedingungen und die Rückkehr zum Formular wurden für den lokalen Gestaltungs-Piloten festgelegt. Noch fehlen Nachweise für Annahme, Ablehnung und Statusklärung. Eine unabhängige Person soll aus der Fehlermeldung ableiten können, was zu korrigieren ist. Bei unbekanntem Ergebnis muss sie erkennen, dass noch unklar ist, ob das Projekt erstellt wurde. Diese Prüfung der Verständlichkeit und der Test mit assistiver Technik stehen aus. Die Texte ersetzen keine Produktfreigabe.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -797,29 +797,29 @@ const original: Block[] = [
 ]
 const messages = original.find((block): block is Extract<Block, {blockType:'messageComparison'}> => block.blockType === 'messageComparison')!
 export const release = {
- expectedUpdatedAt:"2026-11-18T00:38:59.418Z",
+ expectedUpdatedAt:"2026-11-20T15:15:38.946Z",
  summary:'Werte klar benennen, Korrekturen zeigen und nur bestätigte Ergebnisse melden.',
  content:[
-  copy('writing-example','Projekt anlegen: so werden Texte konkret',
+  copy('writing-example','Projekt erstellen: so werden Texte konkret',
    'Zu unbestimmt','Konkret für diesen Schritt',
    'Hier eingeben','Bitte korrekt ausfüllen.','Weiter',
    'Projektname (erforderlich)','Jahresbericht','1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.','Projekt erstellen',
-   'Das Label benennt den Wert. Die Hilfe nennt die Bedingung. Die Aktion sagt, was als Nächstes geschieht.',
-   'Statisches Schreibbeispiel · erstellt kein Projekt. Pflicht und 80-Zeichen-Grenze gelten nur für diesen lokalen Piloten.'),
+   'Das Label benennt die Eingabe, die Hilfe erklärt die Anforderungen. Der Button sagt, was als Nächstes geschieht.',
+   'Dieses statische Textbeispiel erstellt kein Projekt. Das Pflichtfeld und die Grenze von 80 Zeichen gelten für den lokalen Piloten.'),
   copy('writing-rules','Vier Regeln beim Schreiben',
-   'Einen Begriff durchziehen. «Projektname», «Projekt erstellen», «Projekt erstellt»: Feld, Aktion und Ergebnis bleiben erkennbar verbunden.',
-   'Bedingungen vor die Eingabe stellen. Das Label bleibt sichtbar. Hilfe und Fehler nennen dieselbe Grenze; ein Platzhalter ersetzt kein Label.',
+   'Begriffe einheitlich verwenden. «Projektname», «Projekt erstellen», «Projekt erstellt»: Feld, Aktion und Ergebnis bleiben erkennbar verbunden.',
+   'Anforderungen vor der Eingabe erklären. Das Label bleibt sichtbar. Hilfe und Fehler nennen dieselbe Grenze; ein Platzhalter ersetzt kein Label.',
    'Die nächste Handlung benennen. «Angaben prüfen» führt zur Prüfung; «Projekt erstellen» zur Übermittlung. «Weiter» lässt das Ziel offen.',
-   'Korrektur statt Schuldzuweisung. Nenne die fehlende Angabe oder die konkrete Änderung. Eine Verbindungsstörung verlangt keine andere Schreibweise.'),
-  { ...messages, blockName:'writing-messages', title:'Fehler und Ergebnis: die Aussage folgt dem Zustand', items:messages.items.map((item,index)=>index===1?{...item,reason:'80 Zeichen sind die lokale Pilotgrenze. Hilfe, Prüfung und Fehler nennen dieselbe Grenze; den Wert zum Kürzen erhalten.'}:item).concat([{context:'Die Annahme ist bestätigt',before:'Fertig!',after:'Projekt «Jahresbericht» erstellt.',reason:'Erst nach bestätigter Annahme. «Projekt öffnen» nur anbieten, wenn der Weg zum tatsächlichen Ergebnis vorhanden ist.'}]) },
+   'Korrekturen erklären. Nenne die fehlende Angabe oder die konkrete Änderung. Bei einer Verbindungsstörung muss die Eingabe nicht geändert werden.'),
+  { ...messages, blockName:'writing-messages', title:'Meldungen passend zum Stand des Vorgangs', items:messages.items.map((item,index)=>index===1?{...item,reason:'Im lokalen Piloten sind höchstens 80 Zeichen erlaubt. Hilfe, Prüfung und Fehler nennen dieselbe Grenze. Erhalte den eingegebenen Namen, damit er gekürzt werden kann.'}:item).concat([{context:'Die Annahme ist bestätigt',before:'Fertig!',after:'Projekt «Jahresbericht» erstellt.',reason:'Diese Meldung passt erst nach bestätigter Annahme. Biete «Projekt öffnen» nur an, wenn das erstellte Projekt darüber tatsächlich erreichbar ist.'}]) },
   copy('writing-message-labels','Textvergleich','Unklar oder unbelegt','Passend unter dieser Bedingung'),
-  copy('writing-check','Vor dem Übergeben prüfen',
-   'Kann eine andere Person allein aus dem Fehlertext die Korrektur ableiten? Bleibt beim unbekannten Ergebnis erkennbar, dass der Erfolg offen ist?',
+  copy('writing-check','Vor der Übergabe prüfen',
+   'Kann eine andere Person aus der Fehlermeldung ableiten, was zu korrigieren ist? Erkennt sie bei unbekanntem Ergebnis, dass noch unklar ist, ob das Projekt erstellt wurde?',
    'Lange Labels und Meldungen umbrechen lassen. Übersetzungen als vollständige Nachrichten mit Zustand, Feldbezug, variablen Werten und erlaubter Folgeaktion übergeben.',
-   'Kein bedienbares «Status prüfen» oder «Erneut versuchen» bei unbekanntem Ausgang: Im Piloten fehlt die notwendige Integrationsschnittstelle. Nachweise für Annahme, Ablehnung und Statusklärung sowie Verständlichkeitsreview und assistiver Test stehen aus.'),
-  copy('writing-evidence','Fachgrenzen, Quellen und vollständiger Ausgangstext',
-   'Die folgenden neun Originalblöcke sind unverändert aus dem CMS-Stand vom 2026-11-18T00:38:59.418Z erhalten. Sie unterscheiden lokale Pilotentscheidungen, redaktionelle Empfehlungen, WAI-Erläuterungen und offene Nachweise.',
-   'Die sichtbaren Beispiele sind redaktionelle Vorschläge, keine Markenstimme, Produktfreigabe oder Bestätigung von Demofähigkeiten.'),
+   'Bei unbekanntem Ergebnis gibt es im Piloten keinen bedienbaren Button «Status prüfen» oder «Erneut versuchen»: Die notwendige Integrationsschnittstelle fehlt. Nachweise für Annahme, Ablehnung und Statusklärung sowie die Prüfung der Verständlichkeit und der Test mit assistiver Technik stehen aus.'),
+  copy('writing-evidence','Details zu Eingaben, Rückmeldungen und Quellen',
+   'Hier sind die Regeln und Grenzen der Beispiele genauer erklärt: was im lokalen Piloten festgelegt wurde, was wir redaktionell empfehlen und was die WAI erläutert. Ausstehende Prüfungen sind jeweils benannt.',
+   'Die Beispiele sind redaktionelle Vorschläge und ersetzen keine Produktfreigabe. Eine Markenstimme wird hier nicht festgelegt. Die Beispiele belegen keine Funktionen der Demo.'),
   ...original,
  ] satisfies Page['content'],
 }

@@ -1,33 +1,23 @@
 import { readTemplate } from './page-templates'
-import config from '@payload-config'
-import { getPayload } from 'payload'
+import { documentationData } from './documentation-data'
+import { contractFileUrl } from './site-path'
 import { pagePath, readSystem } from './systems'
 import type { Page } from '../payload-types'
 import { getContract } from '../contracts/catalog'
+import { frameworkReferences } from './framework-references'
 
 export async function getComponentPage(system: string, component: string) {
   const designSystem = await readSystem(system)
   if (!designSystem) return null
-  const payload = await getPayload({ config })
-  const { docs: [page] } = await payload.find({
-    collection: 'pages',
-    draft: false,
-    limit: 1,
-    depth: 1,
-    where: { and: [
-      { designSystem: { equals: designSystem.id } },
-      { component: { equals: component } },
-      { _status: { equals: 'published' } },
-    ] },
-  })
+  const data = await documentationData()
+  const page = await data.page(designSystem, { component })
   if (!page) return null
-
-  const { docs: implementations } = await payload.find({
-    collection: 'implementations', draft: false, pagination: false, depth: 0, sort: ['platform', 'name'],
-    where: { and: [{ componentPage: { equals: page.id } }, { _status: { equals: 'published' } }] },
-  })
+  const implementations = await data.implementations(page)
   const contract = getContract(page.contract)
   const demo = system === 'shadcn' && page.demo?.key === 'spartan-' + component ? page.demo : null
+  const references = frameworkReferences((await readPublishedSection(system, 'frameworks'))?.content)
+  const previewPath = `components/${component}/preview.png`
+  const previewHash = contract?.artifacts?.[previewPath]
 
   return {
     system,
@@ -41,11 +31,14 @@ export async function getComponentPage(system: string, component: string) {
     contractReference: page.contract ?? null,
     contract: contract ?? null,
     contractArtifacts: contract ? Object.entries(contract.artifacts ?? Object.fromEntries(Object.entries(contract.files).map(([name, file]) => [name, file.sha256]))).map(([path, sha256]) => ({
-      path, sha256, url: `${pagePath(system, page)}/files?path=${encodeURIComponent(path)}`,
+      path, sha256, url: contractFileUrl(contract.library, component, contract.revision, path),
     })) : [],
     demo,
+    referenceFrameworks: references,
+    designPreview: previewHash ? { path: previewPath, sha256: previewHash, kind: 'static-design' as const, url: contractFileUrl(contract!.library, component, contract!.revision, previewPath, true) } : null,
     implementations: implementations.map(({ id, name, platform, releaseStatus, packageName, packageVersion, owner, contexts, contract, verification }) => ({
       id, name, platform, releaseStatus, packageName, packageVersion, owner, contexts, contract, verification,
+      framework: references.find(ref => ref.packagePrefix && packageName?.startsWith(ref.packagePrefix))?.framework ?? null,
     })),
   }
 }
@@ -53,38 +46,14 @@ export async function getComponentPage(system: string, component: string) {
 export async function readPublishedSection(system: string, section: string) {
   const designSystem = await readSystem(system)
   if (!designSystem) return null
-  const payload = await getPayload({ config })
-  const { docs: [page] } = await payload.find({
-    collection: 'pages',
-    draft: false,
-    limit: 1,
-    where: { and: [
-      { designSystem: { equals: designSystem.id } },
-      { or: [{ slug: { equals: system + '-' + section } }, { slug: { equals: section } }] },
-      { component: { exists: false } },
-      { _status: { equals: 'published' } },
-    ] },
-  })
-  return page
+  const page = await (await documentationData()).page(designSystem, {slugs:[system + '-' + section,section]})
+  return page?.component ? undefined : page
 }
 
 export async function listPublishedComponents(system: string) {
   const designSystem = await readSystem(system)
   if (!designSystem) return []
-  const payload = await getPayload({ config })
-  const { docs } = await payload.find({
-    collection: 'pages',
-    draft: false,
-    pagination: false,
-    sort: 'title',
-    select: { title: true, component: true },
-    where: { and: [
-      { designSystem: { equals: designSystem.id } },
-      { component: { exists: true } },
-      { _status: { equals: 'published' } },
-    ] },
-  })
-  return docs
+  return (await (await documentationData()).pages(designSystem)).filter(page => page.component).sort((a,b) => a.title.localeCompare(b.title))
 }
 
 export function publicContent(content: Page['content']) {

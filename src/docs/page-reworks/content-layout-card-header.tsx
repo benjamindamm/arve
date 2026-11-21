@@ -1,9 +1,15 @@
 'use client'
+import { SiteAnchor } from '../site-anchor'
+
+
+import { LayoutRuleBlock } from './layout-rule-block'
 import { useId, useState } from 'react'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './content-layout-card-header.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Textgruppe", "Optionale Aktion", "Inhalt unter dem Kopf"]}
 
 type Block = NonNullable<Page['content']>[number]
 type Text = Extract<Block, { blockType: 'text' }>
@@ -31,7 +37,7 @@ export default function CardHeader({ content }: { content: Page['content'] }) {
           <div className="card-header-card">
             <header className="card-header-head">
               <div className="card-header-text"><h3>{title}</h3><p>{description}</p></div>
-              {withAction && <a className="card-header-action" href={`#${id}-content`}>{action}</a>}
+              {withAction && <SiteAnchor className="card-header-action" href={`#${id}-content`}>{action}</SiteAnchor>}
             </header>
             <section className="card-header-content" id={`${id}-content`} tabIndex={-1} aria-labelledby={`${id}-content-title`}>
               <h4 id={`${id}-content-title`}>{contentTitle}</h4>
@@ -42,7 +48,7 @@ export default function CardHeader({ content }: { content: Page['content'] }) {
         <figcaption>{caption}</figcaption>
       </figure>
     </section>}
-    {blocks.filter(b => !['example', 'card'].includes(b.blockName ?? '')).map(b => b.blockName === 'sources'
+    {blocks.filter(b => !['example', 'card'].includes(b.blockName ?? '')).map(b => ["rules"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
       ? <details key={b.blockName} id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section key={b.blockName} id={blockAnchor(b)}><RichText data={b.body}/></section>)}
   </div>

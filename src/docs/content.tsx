@@ -1,5 +1,7 @@
+import { SiteAnchor } from './site-anchor'
 import { blockAnchor } from './content-outline'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from './rich-text'
+import { sitePath } from './site-path'
 import type { Page } from '../payload-types'
 import { MessageComparison } from './message-comparison'
 import { WorkflowStudy } from './workflow-study'
@@ -36,9 +38,9 @@ export function Content({ blocks }: { blocks?: ContentBlock[] | null }) {
     return (
       <figure key={key} className={'guideline guideline-' + block.recommendation}>
         <strong>{block.recommendation === 'do' ? 'Do' : 'Don’t'}</strong>
-        {image?.url && <img src={image.url} alt={image.alt} />}
+        {image?.url && <img src={sitePath(image.url)} alt={image.alt} />}
         <figcaption>{block.explanation}</figcaption>
-        {image?.url && <a href={image.url} target="_blank" rel="noreferrer">Abbildung vergrössern</a>}
+        {image?.url && <SiteAnchor href={image.url} target="_blank" rel="noreferrer">Abbildung vergrössern</SiteAnchor>}
       </figure>
     )
   })?.map((element, index) => <div key={blocks?.[index].id ?? index} className="handbook-block" id={blockAnchor(blocks![index] as Block)}>{element}</div>)

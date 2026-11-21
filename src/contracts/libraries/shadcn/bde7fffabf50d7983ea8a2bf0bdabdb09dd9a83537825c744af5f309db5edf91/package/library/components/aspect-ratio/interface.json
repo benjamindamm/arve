@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "aspect-ratio.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "AspectRatio",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & { ratio: number }"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/aspect-ratio.tsx.source:3; defaults: {}."
+            },
+            {
+              "kind": "field",
+              "name": "ratio",
+              "type": {
+                "text": "number"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "aspect-ratio",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

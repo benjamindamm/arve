@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "accordion.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Accordion",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "AccordionPrimitive.Root.Value"
+              },
+              "description": "multiple=false permits at most one expanded item; pressing that item closes it. multiple=true toggles items independently. Disabled root/items suppress changes. The callback candidate may be canceled; controlled value stays prop-authoritative."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AccordionPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source:6."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: AccordionPrimitive.Root.Value, eventDetails: AccordionPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "accordion",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AccordionItem",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AccordionPrimitive.Item.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source:16."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "accordion-item",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AccordionTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AccordionPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source:26."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "accordion-trigger",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "accordion-trigger-icon",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AccordionContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AccordionPrimitive.Panel.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source:65."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "accordion-content",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

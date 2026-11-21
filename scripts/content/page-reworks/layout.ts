@@ -10,8 +10,8 @@ function block(blockName:string,title:string,paragraphs:string[],destination?:[s
     ...paragraphs.map(paragraph),...(destination?[link(...destination)]:[]),
   ]}}}
 }
-// Current CMS content read over MCP, 20.11.2026: frozen snapshot matches after
-// removing generated ids and nulls. Preserve this original study in details.
+// Current study read over MCP, 20.11.2026: content matches the previous release
+// after removing generated ids and nulls. Wording revised; technical rules retained.
 const original: {content: Block[]} = {
   "content": [
     {
@@ -104,7 +104,7 @@ const original: {content: Block[]} = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Die Grundlage «Abstände und Grössen» erklärt Nähe innerhalb einer Einheit, Trennung zwischen Gruppen, Innenraum und Bedienflächen. Sie führt auch den Status der vorgeschlagenen Abstandswerte. Hier wird keine zweite allgemeine Skala festgelegt.",
+                  "text": "Die Grundlage «Abstände und Grössen» erklärt Nähe innerhalb einer Einheit, Trennung zwischen Gruppen, Innenabstände und Bedienflächen. Sie erklärt auch, welchen Status die vorgeschlagenen Abstandswerte haben. Hier wird keine zweite allgemeine Skala festgelegt.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -389,7 +389,7 @@ const original: {content: Block[]} = {
   ]
 }
 export const release = {
-  expectedUpdatedAt:'2026-11-20T08:39:34.049Z',
+  expectedUpdatedAt:'2026-11-20T13:47:57.528Z',
   summary:'Wähle den Zweck der Seite, ihre Gesamtanordnung und die Anordnung im Inneren.',
   content:[
     block('layout-page-types','Page types · Seitentypen',[
@@ -407,7 +407,7 @@ export const release = {
     block('layout-navigation','Seitenstruktur und Navigation',[],['Orientierung und Wege auf der Seite gestalten','/systems/shadcn/seitenstruktur-und-navigation']),
     block('layout-evidence','Quellen und bisherige Rasterstudie',[
       'Die drei Vorschauen veranschaulichen die bestehenden Kategorien an statischen Beispielen. Sie legen keine zusätzlichen Layoutregeln oder Rasterwerte fest.',
-      'Die Beschreibungen folgen der veröffentlichten Gliederung in Page types, Page layouts und Content layouts. Die bisherige Rasterstudie mit ihren Quellen und Nachweisgrenzen bleibt nachfolgend unverändert erhalten (Stand 20. November 2026).',
+      'Die Beschreibungen folgen der veröffentlichten Gliederung in Page types, Page layouts und Content layouts. Darunter findest du die bisherige Rasterstudie mit ihren Quellen und den Grenzen ihrer Aussagekraft (fachlicher Stand 20. November 2026).',
     ]),
     ...original.content as Block[],
   ],

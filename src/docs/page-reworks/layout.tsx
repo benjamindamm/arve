@@ -1,3 +1,4 @@
+import { SiteAnchor } from '../site-anchor'
 import type { Page } from '../../payload-types'
 import { Content } from '../content'
 import './layout.css'
@@ -24,7 +25,7 @@ export default function LayoutOverview({content}:{content:Page['content']}){
       {cards.map((card,index)=>{
         const {copy:c,href,label}=card!
         return <section className="lor-category" key={names[index]}>
-          <p className="lor-scope">{c[2]}</p>
+          <p className="lor-scope"><span aria-hidden="true">0{index+1} · </span>{c[2]}</p>
           <figure className="lor-preview">
             <figcaption>{c[3]}</figcaption>
             {index===0?<div className="lor-page-type">
@@ -37,7 +38,7 @@ export default function LayoutOverview({content}:{content:Page['content']}){
             </div>}
           </figure>
           <h2>{c[0]}</h2><p className="lor-description">{c[1]}</p>
-          <a className="lor-destination" href={href}>{label}<span aria-hidden="true"> →</span></a>
+          <SiteAnchor className="lor-destination" href={href}>{label}<span aria-hidden="true"> →</span></SiteAnchor>
         </section>
       })}
     </div>

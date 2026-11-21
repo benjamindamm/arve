@@ -1,0 +1,24 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0"
+       datamodel="ecmascript" name="Input" initial="control">
+  <!-- The host applies initial and updated properties to the native control.
+       It forwards the value from the native input event. The browser owns
+       focus, editing keys and IME. Focus and Escape leave the value intact. -->
+  <datamodel>
+    <data id="value" expr="''"/>
+  </datamodel>
+  <state id="control" initial="enabled">
+    <transition event="SET_VALUE" cond="_event.data &amp;&amp; typeof _event.data.value === 'string'">
+      <assign location="value" expr="_event.data.value"/>
+    </transition>
+    <state id="enabled">
+      <transition event="DISABLE" target="disabled"/>
+      <transition event="FOCUS_IN FOCUS_OUT ESCAPE"/>
+      <transition event="NATIVE_INPUT" cond="_event.data &amp;&amp; typeof _event.data.value === 'string'">
+        <assign location="value" expr="_event.data.value"/>
+      </transition>
+    </state>
+    <state id="disabled">
+      <transition event="ENABLE" target="enabled"/>
+    </state>
+  </state>
+</scxml>

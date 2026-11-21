@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { HandbookNavigation } from './handbook-navigation'
 import type { Entry } from './published-documentation'
 
 function containsCurrent(entry: Entry, current?: string): boolean {
@@ -25,12 +26,15 @@ export function DocumentationNav({ system, tree, current }: { system: string; tr
   const home = '/systems/' + encodeURIComponent(system)
   const links = <><Link href={home} aria-current={home === current ? 'page' : undefined}>Übersicht</Link>
     <Branch entries={tree} current={current} /></>
+  const chapters: { path: string; title: string; context: string; summary?: string }[] = []
+  function collect(entries: Entry[], context = 'Handbuch') {
+    entries.forEach(entry => { chapters.push({ path: entry.path, title: entry.title, context, summary: entry.summary }); collect(entry.children ?? [], context === 'Handbuch' ? entry.title : context + ' / ' + entry.title) })
+  }
+  collect(tree)
   return (
     <aside className="documentation-sidebar">
-    <details className="docs-mobile-menu" key={current}>
-      <summary>Handbuch durchsuchen</summary>
-      <nav className="docs-nav" aria-label="Dokumentation">{links}</nav>
-    </details>
+    <p className="handbook-nav-title">Handbuch</p>
+    <HandbookNavigation chapters={chapters} current={current}>{links}</HandbookNavigation>
     <nav className="docs-nav docs-desktop-menu" aria-label="Dokumentation">
       {links}
     </nav>

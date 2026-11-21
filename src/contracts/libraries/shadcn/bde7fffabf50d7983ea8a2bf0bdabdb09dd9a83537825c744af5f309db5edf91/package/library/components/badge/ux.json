@@ -1,0 +1,19 @@
+{
+  "purpose": "Show a short status or category adjacent to content.",
+  "avoid": "Do not encode meaning solely through the color.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 72:2718 (Badge), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Badge",
+  "contentAlternative": "The visible status/category text carries meaning without color or icon interpretation.",
+  "updatesAndDescendants": "The default span has no stored selection or activation lifecycle. Parent rerenders change its text. useRender may deliberately supply an anchor/button; that native element must retain its own naming, keyboard and event semantics.",
+  "referenceDecision": "The default reference is informative text. Interactive render overrides use native link/Button contracts, not a new badge-specific toggle protocol.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/badge.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/badge.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/badge-example.tsx.source"
+  ],
+  "primitiveDocs": []
+}

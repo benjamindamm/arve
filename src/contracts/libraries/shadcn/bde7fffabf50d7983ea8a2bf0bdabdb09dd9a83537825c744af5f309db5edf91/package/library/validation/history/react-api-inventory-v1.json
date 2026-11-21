@@ -1,0 +1,5704 @@
+{
+  "format": "shadcn-react-api-inventory/1",
+  "shadcnCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "families": {
+    "button": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/button.tsx.source",
+      "exports": [
+        "Button",
+        "buttonVariants"
+      ],
+      "functions": [
+        {
+          "name": "Button",
+          "propsType": "ButtonPrimitive.Props & VariantProps<typeof buttonVariants>",
+          "defaults": {
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [
+            "button"
+          ],
+          "sourceLine": 35,
+          "sourceEndLine": 48
+        }
+      ],
+      "aliases": [
+        {
+          "name": "buttonVariants",
+          "expression": "cva(\n  \"cn-button group/button inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"cn-button-variant-default\",\n        outline: \"cn-button-variant-outline\",\n        secondary: \"cn-button-variant-secondary\",\n        ghost: \"cn-button-variant-ghost\",\n        destructive: \"cn-button-variant-destructive\",\n        link: \"cn-button-variant-link\",\n      },\n      size: {\n        default: \"cn-button-size-default\",\n        xs: \"cn-button-size-xs\",\n        sm: \"cn-button-size-sm\",\n        lg: \"cn-button-size-lg\",\n        icon: \"cn-button-size-icon\",\n        \"icon-xs\": \"cn-button-size-icon-xs\",\n        \"icon-sm\": \"cn-button-size-icon-sm\",\n        \"icon-lg\": \"cn-button-size-icon-lg\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n)"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "button"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/button.md.source"
+      ]
+    },
+    "checkbox": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/checkbox.tsx.source",
+      "exports": [
+        "Checkbox"
+      ],
+      "functions": [
+        {
+          "name": "Checkbox",
+          "propsType": "CheckboxPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "checkbox",
+            "checkbox-indicator"
+          ],
+          "sourceLine": 8,
+          "sourceEndLine": 32
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "checkbox"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/checkbox.md.source"
+      ]
+    },
+    "switch": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/switch.tsx.source",
+      "exports": [
+        "Switch"
+      ],
+      "functions": [
+        {
+          "name": "Switch",
+          "propsType": "SwitchPrimitive.Root.Props & {\n  size?: \"sm\" | \"default\"\n}",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "switch",
+            "switch-thumb"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 29
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "switch"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/switch.md.source"
+      ]
+    },
+    "input": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/input.tsx.source",
+      "exports": [
+        "Input"
+      ],
+      "functions": [
+        {
+          "name": "Input",
+          "propsType": "React.ComponentProps<\"input\">",
+          "defaults": {},
+          "slots": [
+            "input"
+          ],
+          "sourceLine": 5,
+          "sourceEndLine": 17
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "input"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/input.md.source"
+      ]
+    },
+    "accordion": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source",
+      "exports": [
+        "Accordion",
+        "AccordionItem",
+        "AccordionTrigger",
+        "AccordionContent"
+      ],
+      "functions": [
+        {
+          "name": "Accordion",
+          "propsType": "AccordionPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "accordion"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 14
+        },
+        {
+          "name": "AccordionItem",
+          "propsType": "AccordionPrimitive.Item.Props",
+          "defaults": {},
+          "slots": [
+            "accordion-item"
+          ],
+          "sourceLine": 16,
+          "sourceEndLine": 24
+        },
+        {
+          "name": "AccordionTrigger",
+          "propsType": "AccordionPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "accordion-trigger",
+            "accordion-trigger-icon",
+            "accordion-trigger-icon"
+          ],
+          "sourceLine": 26,
+          "sourceEndLine": 63
+        },
+        {
+          "name": "AccordionContent",
+          "propsType": "AccordionPrimitive.Panel.Props",
+          "defaults": {},
+          "slots": [
+            "accordion-content"
+          ],
+          "sourceLine": 65,
+          "sourceEndLine": 86
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "accordion"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/accordion.md.source"
+      ]
+    },
+    "alert": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/alert.tsx.source",
+      "exports": [
+        "Alert",
+        "AlertTitle",
+        "AlertDescription",
+        "AlertAction"
+      ],
+      "functions": [
+        {
+          "name": "Alert",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof alertVariants>",
+          "defaults": {},
+          "slots": [
+            "alert"
+          ],
+          "sourceLine": 17,
+          "sourceEndLine": 30
+        },
+        {
+          "name": "AlertTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-title"
+          ],
+          "sourceLine": 32,
+          "sourceEndLine": 43
+        },
+        {
+          "name": "AlertDescription",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-description"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 59
+        },
+        {
+          "name": "AlertAction",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-action"
+          ],
+          "sourceLine": 61,
+          "sourceEndLine": 69
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "alert-dialog": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source",
+      "exports": [
+        "AlertDialog",
+        "AlertDialogAction",
+        "AlertDialogCancel",
+        "AlertDialogContent",
+        "AlertDialogDescription",
+        "AlertDialogFooter",
+        "AlertDialogHeader",
+        "AlertDialogMedia",
+        "AlertDialogOverlay",
+        "AlertDialogPortal",
+        "AlertDialogTitle",
+        "AlertDialogTrigger"
+      ],
+      "functions": [
+        {
+          "name": "AlertDialog",
+          "propsType": "AlertDialogPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "alert-dialog"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 11
+        },
+        {
+          "name": "AlertDialogTrigger",
+          "propsType": "AlertDialogPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-trigger"
+          ],
+          "sourceLine": 13,
+          "sourceEndLine": 17
+        },
+        {
+          "name": "AlertDialogPortal",
+          "propsType": "AlertDialogPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-portal"
+          ],
+          "sourceLine": 19,
+          "sourceEndLine": 23
+        },
+        {
+          "name": "AlertDialogOverlay",
+          "propsType": "AlertDialogPrimitive.Backdrop.Props",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-overlay"
+          ],
+          "sourceLine": 25,
+          "sourceEndLine": 39
+        },
+        {
+          "name": "AlertDialogContent",
+          "propsType": "AlertDialogPrimitive.Popup.Props & {\n  size?: \"default\" | \"sm\"\n}",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "alert-dialog-content"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 62
+        },
+        {
+          "name": "AlertDialogHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-header"
+          ],
+          "sourceLine": 64,
+          "sourceEndLine": 75
+        },
+        {
+          "name": "AlertDialogFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-footer"
+          ],
+          "sourceLine": 77,
+          "sourceEndLine": 91
+        },
+        {
+          "name": "AlertDialogMedia",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-media"
+          ],
+          "sourceLine": 93,
+          "sourceEndLine": 104
+        },
+        {
+          "name": "AlertDialogTitle",
+          "propsType": "React.ComponentProps<typeof AlertDialogPrimitive.Title>",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-title"
+          ],
+          "sourceLine": 106,
+          "sourceEndLine": 117
+        },
+        {
+          "name": "AlertDialogDescription",
+          "propsType": "React.ComponentProps<typeof AlertDialogPrimitive.Description>",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-description"
+          ],
+          "sourceLine": 119,
+          "sourceEndLine": 130
+        },
+        {
+          "name": "AlertDialogAction",
+          "propsType": "React.ComponentProps<typeof Button>",
+          "defaults": {},
+          "slots": [
+            "alert-dialog-action"
+          ],
+          "sourceLine": 132,
+          "sourceEndLine": 143
+        },
+        {
+          "name": "AlertDialogCancel",
+          "propsType": "AlertDialogPrimitive.Close.Props &\n  Pick<React.ComponentProps<typeof Button>, \"variant\" | \"size\">",
+          "defaults": {
+            "variant": "\"outline\"",
+            "size": "\"default\""
+          },
+          "slots": [
+            "alert-dialog-cancel"
+          ],
+          "sourceLine": 145,
+          "sourceEndLine": 160
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [
+        "alert-dialog"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/alert-dialog.md.source"
+      ]
+    },
+    "aspect-ratio": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/aspect-ratio.tsx.source",
+      "exports": [
+        "AspectRatio"
+      ],
+      "functions": [
+        {
+          "name": "AspectRatio",
+          "propsType": "React.ComponentProps<\"div\"> & { ratio: number }",
+          "defaults": {},
+          "slots": [
+            "aspect-ratio"
+          ],
+          "sourceLine": 3,
+          "sourceEndLine": 20
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "attachment": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source",
+      "exports": [
+        "Attachment",
+        "AttachmentGroup",
+        "AttachmentMedia",
+        "AttachmentContent",
+        "AttachmentTitle",
+        "AttachmentDescription",
+        "AttachmentActions",
+        "AttachmentAction",
+        "AttachmentTrigger"
+      ],
+      "functions": [
+        {
+          "name": "Attachment",
+          "propsType": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof attachmentVariants> & {\n    state?: \"idle\" | \"uploading\" | \"processing\" | \"error\" | \"done\"\n  }",
+          "defaults": {
+            "state": "\"done\"",
+            "size": "\"default\"",
+            "orientation": "\"horizontal\""
+          },
+          "slots": [
+            "attachment"
+          ],
+          "sourceLine": 26,
+          "sourceEndLine": 46
+        },
+        {
+          "name": "AttachmentMedia",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof attachmentMediaVariants>",
+          "defaults": {
+            "variant": "\"icon\""
+          },
+          "slots": [
+            "attachment-media"
+          ],
+          "sourceLine": 64,
+          "sourceEndLine": 77
+        },
+        {
+          "name": "AttachmentContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "attachment-content"
+          ],
+          "sourceLine": 79,
+          "sourceEndLine": 93
+        },
+        {
+          "name": "AttachmentTitle",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "attachment-title"
+          ],
+          "sourceLine": 95,
+          "sourceEndLine": 109
+        },
+        {
+          "name": "AttachmentDescription",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "attachment-description"
+          ],
+          "sourceLine": 111,
+          "sourceEndLine": 126
+        },
+        {
+          "name": "AttachmentActions",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "attachment-actions"
+          ],
+          "sourceLine": 128,
+          "sourceEndLine": 142
+        },
+        {
+          "name": "AttachmentAction",
+          "propsType": "React.ComponentProps<typeof Button>",
+          "defaults": {
+            "size": "\"icon-xs\""
+          },
+          "slots": [
+            "attachment-action"
+          ],
+          "sourceLine": 144,
+          "sourceEndLine": 159
+        },
+        {
+          "name": "AttachmentTrigger",
+          "propsType": "useRender.ComponentProps<\"button\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 161,
+          "sourceEndLine": 184
+        },
+        {
+          "name": "AttachmentGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "attachment-group"
+          ],
+          "sourceLine": 186,
+          "sourceEndLine": 197
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "avatar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/avatar.tsx.source",
+      "exports": [
+        "Avatar",
+        "AvatarImage",
+        "AvatarFallback",
+        "AvatarGroup",
+        "AvatarGroupCount",
+        "AvatarBadge"
+      ],
+      "functions": [
+        {
+          "name": "Avatar",
+          "propsType": "AvatarPrimitive.Root.Props & {\n  size?: \"default\" | \"sm\" | \"lg\"\n}",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "avatar"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 25
+        },
+        {
+          "name": "AvatarImage",
+          "propsType": "AvatarPrimitive.Image.Props",
+          "defaults": {},
+          "slots": [
+            "avatar-image"
+          ],
+          "sourceLine": 27,
+          "sourceEndLine": 38
+        },
+        {
+          "name": "AvatarFallback",
+          "propsType": "AvatarPrimitive.Fallback.Props",
+          "defaults": {},
+          "slots": [
+            "avatar-fallback"
+          ],
+          "sourceLine": 40,
+          "sourceEndLine": 54
+        },
+        {
+          "name": "AvatarBadge",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "avatar-badge"
+          ],
+          "sourceLine": 56,
+          "sourceEndLine": 70
+        },
+        {
+          "name": "AvatarGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "avatar-group"
+          ],
+          "sourceLine": 72,
+          "sourceEndLine": 83
+        },
+        {
+          "name": "AvatarGroupCount",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "avatar-group-count"
+          ],
+          "sourceLine": 85,
+          "sourceEndLine": 100
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "avatar"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/avatar.md.source"
+      ]
+    },
+    "badge": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/badge.tsx.source",
+      "exports": [
+        "Badge",
+        "badgeVariants"
+      ],
+      "functions": [
+        {
+          "name": "Badge",
+          "propsType": "useRender.ComponentProps<\"span\"> & VariantProps<typeof badgeVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [],
+          "sourceLine": 25,
+          "sourceEndLine": 45
+        }
+      ],
+      "aliases": [
+        {
+          "name": "badgeVariants",
+          "expression": "cva(\n  \"cn-badge group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none\",\n  {\n    variants: {\n      variant: {\n        default: \"cn-badge-variant-default\",\n        secondary: \"cn-badge-variant-secondary\",\n        destructive: \"cn-badge-variant-destructive\",\n        outline: \"cn-badge-variant-outline\",\n        ghost: \"cn-badge-variant-ghost\",\n        link: \"cn-badge-variant-link\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "breadcrumb": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source",
+      "exports": [
+        "Breadcrumb",
+        "BreadcrumbList",
+        "BreadcrumbItem",
+        "BreadcrumbLink",
+        "BreadcrumbPage",
+        "BreadcrumbSeparator",
+        "BreadcrumbEllipsis"
+      ],
+      "functions": [
+        {
+          "name": "Breadcrumb",
+          "propsType": "React.ComponentProps<\"nav\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb"
+          ],
+          "sourceLine": 8,
+          "sourceEndLine": 17
+        },
+        {
+          "name": "BreadcrumbList",
+          "propsType": "React.ComponentProps<\"ol\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb-list"
+          ],
+          "sourceLine": 19,
+          "sourceEndLine": 30
+        },
+        {
+          "name": "BreadcrumbItem",
+          "propsType": "React.ComponentProps<\"li\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb-item"
+          ],
+          "sourceLine": 32,
+          "sourceEndLine": 40
+        },
+        {
+          "name": "BreadcrumbLink",
+          "propsType": "useRender.ComponentProps<\"a\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 42,
+          "sourceEndLine": 60
+        },
+        {
+          "name": "BreadcrumbPage",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb-page"
+          ],
+          "sourceLine": 62,
+          "sourceEndLine": 73
+        },
+        {
+          "name": "BreadcrumbSeparator",
+          "propsType": "React.ComponentProps<\"li\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb-separator"
+          ],
+          "sourceLine": 75,
+          "sourceEndLine": 100
+        },
+        {
+          "name": "BreadcrumbEllipsis",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "breadcrumb-ellipsis"
+          ],
+          "sourceLine": 102,
+          "sourceEndLine": 127
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "bubble": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source",
+      "exports": [
+        "BubbleGroup",
+        "Bubble",
+        "BubbleContent",
+        "BubbleReactions"
+      ],
+      "functions": [
+        {
+          "name": "BubbleGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "bubble-group"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 15
+        },
+        {
+          "name": "Bubble",
+          "propsType": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof bubbleVariants> & {\n    align?: \"start\" | \"end\"\n  }",
+          "defaults": {
+            "variant": "\"default\"",
+            "align": "\"start\""
+          },
+          "slots": [
+            "bubble"
+          ],
+          "sourceLine": 37,
+          "sourceEndLine": 55
+        },
+        {
+          "name": "BubbleContent",
+          "propsType": "useRender.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 57,
+          "sourceEndLine": 78
+        },
+        {
+          "name": "BubbleReactions",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  align?: \"start\" | \"end\"\n  side?: \"top\" | \"bottom\"\n}",
+          "defaults": {
+            "side": "\"bottom\"",
+            "align": "\"end\""
+          },
+          "slots": [
+            "bubble-reactions"
+          ],
+          "sourceLine": 100,
+          "sourceEndLine": 118
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "button-group": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/button-group.tsx.source",
+      "exports": [
+        "ButtonGroup",
+        "ButtonGroupSeparator",
+        "ButtonGroupText",
+        "buttonGroupVariants"
+      ],
+      "functions": [
+        {
+          "name": "ButtonGroup",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof buttonGroupVariants>",
+          "defaults": {},
+          "slots": [
+            "button-group"
+          ],
+          "sourceLine": 25,
+          "sourceEndLine": 39
+        },
+        {
+          "name": "ButtonGroupText",
+          "propsType": "useRender.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 41,
+          "sourceEndLine": 62
+        },
+        {
+          "name": "ButtonGroupSeparator",
+          "propsType": "React.ComponentProps<typeof Separator>",
+          "defaults": {
+            "orientation": "\"vertical\""
+          },
+          "slots": [
+            "button-group-separator"
+          ],
+          "sourceLine": 64,
+          "sourceEndLine": 80
+        }
+      ],
+      "aliases": [
+        {
+          "name": "buttonGroupVariants",
+          "expression": "cva(\n  \"cn-button-group flex w-fit items-stretch *:focus-visible:relative *:focus-visible:z-10 [&>[data-slot=select-trigger]:not([class*='w-'])]:w-fit [&>input]:flex-1\",\n  {\n    variants: {\n      orientation: {\n        horizontal:\n          \"cn-button-group-orientation-horizontal *:data-slot:rounded-r-none [&>[data-slot]~[data-slot]]:rounded-l-none [&>[data-slot]~[data-slot]]:border-l-0\",\n        vertical:\n          \"cn-button-group-orientation-vertical flex-col *:data-slot:rounded-b-none [&>[data-slot]~[data-slot]]:rounded-t-none [&>[data-slot]~[data-slot]]:border-t-0\",\n      },\n    },\n    defaultVariants: {\n      orientation: \"horizontal\",\n    },\n  }\n)"
+        }
+      ],
+      "composition": [
+        "separator"
+      ],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "calendar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/calendar.tsx.source",
+      "exports": [
+        "Calendar",
+        "CalendarDayButton"
+      ],
+      "functions": [
+        {
+          "name": "Calendar",
+          "propsType": "React.ComponentProps<typeof DayPicker> & {\n  buttonVariant?: React.ComponentProps<typeof Button>[\"variant\"]\n}",
+          "defaults": {
+            "showOutsideDays": "true",
+            "captionLayout": "\"label\"",
+            "buttonVariant": "\"ghost\""
+          },
+          "slots": [
+            "calendar"
+          ],
+          "sourceLine": 15,
+          "sourceEndLine": 205
+        },
+        {
+          "name": "CalendarDayButton",
+          "propsType": "React.ComponentProps<typeof DayButton> & { locale?: Partial<Locale> }",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 207,
+          "sourceEndLine": 243
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "card": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/card.tsx.source",
+      "exports": [
+        "Card",
+        "CardHeader",
+        "CardFooter",
+        "CardTitle",
+        "CardAction",
+        "CardDescription",
+        "CardContent"
+      ],
+      "functions": [
+        {
+          "name": "Card",
+          "propsType": "React.ComponentProps<\"div\"> & { size?: \"default\" | \"sm\" }",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "card"
+          ],
+          "sourceLine": 4,
+          "sourceEndLine": 17
+        },
+        {
+          "name": "CardHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-header"
+          ],
+          "sourceLine": 19,
+          "sourceEndLine": 30
+        },
+        {
+          "name": "CardTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-title"
+          ],
+          "sourceLine": 32,
+          "sourceEndLine": 40
+        },
+        {
+          "name": "CardDescription",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-description"
+          ],
+          "sourceLine": 42,
+          "sourceEndLine": 50
+        },
+        {
+          "name": "CardAction",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-action"
+          ],
+          "sourceLine": 52,
+          "sourceEndLine": 63
+        },
+        {
+          "name": "CardContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-content"
+          ],
+          "sourceLine": 65,
+          "sourceEndLine": 73
+        },
+        {
+          "name": "CardFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "card-footer"
+          ],
+          "sourceLine": 75,
+          "sourceEndLine": 83
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "carousel": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source",
+      "exports": [
+        "CarouselApi",
+        "Carousel",
+        "CarouselContent",
+        "CarouselItem",
+        "CarouselPrevious",
+        "CarouselNext",
+        "useCarousel"
+      ],
+      "functions": [
+        {
+          "name": "useCarousel",
+          "propsType": "No props parameter",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 35,
+          "sourceEndLine": 43
+        },
+        {
+          "name": "Carousel",
+          "propsType": "React.ComponentProps<\"div\"> & CarouselProps",
+          "defaults": {
+            "orientation": "\"horizontal\""
+          },
+          "slots": [
+            "carousel"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 133
+        },
+        {
+          "name": "CarouselContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "carousel-content"
+          ],
+          "sourceLine": 135,
+          "sourceEndLine": 154
+        },
+        {
+          "name": "CarouselItem",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "carousel-item"
+          ],
+          "sourceLine": 156,
+          "sourceEndLine": 172
+        },
+        {
+          "name": "CarouselPrevious",
+          "propsType": "React.ComponentProps<typeof Button>",
+          "defaults": {
+            "variant": "\"outline\"",
+            "size": "\"icon-sm\""
+          },
+          "slots": [
+            "carousel-previous"
+          ],
+          "sourceLine": 174,
+          "sourceEndLine": 209
+        },
+        {
+          "name": "CarouselNext",
+          "propsType": "React.ComponentProps<typeof Button>",
+          "defaults": {
+            "variant": "\"outline\"",
+            "size": "\"icon-sm\""
+          },
+          "slots": [
+            "carousel-next"
+          ],
+          "sourceLine": 211,
+          "sourceEndLine": 246
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "code-block": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source",
+      "exports": [
+        "CodeBlock",
+        "CodeBlockHeader",
+        "CodeBlockTitle",
+        "CodeBlockActions",
+        "CodeBlockCopyButton",
+        "CodeBlockContent",
+        "CodeBlockLine",
+        "CodeBlockFooter"
+      ],
+      "functions": [
+        {
+          "name": "CodeBlock",
+          "propsType": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof codeBlockVariants> & { size?: \"default\" | \"sm\" }",
+          "defaults": {
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [
+            "code-block"
+          ],
+          "sourceLine": 25,
+          "sourceEndLine": 41
+        },
+        {
+          "name": "CodeBlockHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "code-block-header"
+          ],
+          "sourceLine": 43,
+          "sourceEndLine": 54
+        },
+        {
+          "name": "CodeBlockTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "code-block-title"
+          ],
+          "sourceLine": 56,
+          "sourceEndLine": 67
+        },
+        {
+          "name": "CodeBlockActions",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "code-block-actions"
+          ],
+          "sourceLine": 69,
+          "sourceEndLine": 83
+        },
+        {
+          "name": "CodeBlockCopyButton",
+          "propsType": "React.ComponentProps<typeof Button> & { value: string }",
+          "defaults": {
+            "variant": "\"ghost\"",
+            "size": "\"icon-xs\""
+          },
+          "slots": [
+            "code-block-copy-button"
+          ],
+          "sourceLine": 85,
+          "sourceEndLine": 145
+        },
+        {
+          "name": "CodeBlockContent",
+          "propsType": "React.ComponentProps<\"pre\"> & {\n  wrap?: boolean\n  lineNumbers?: boolean\n  startLine?: number\n}",
+          "defaults": {
+            "wrap": "false",
+            "lineNumbers": "false",
+            "startLine": "1"
+          },
+          "slots": [
+            "code-block-content",
+            "code-block-code"
+          ],
+          "sourceLine": 147,
+          "sourceEndLine": 189
+        },
+        {
+          "name": "CodeBlockLine",
+          "propsType": "React.ComponentProps<\"span\"> & VariantProps<typeof codeBlockLineVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "code-block-line",
+            "code-block-line-content"
+          ],
+          "sourceLine": 208,
+          "sourceEndLine": 233
+        },
+        {
+          "name": "CodeBlockFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "code-block-footer"
+          ],
+          "sourceLine": 235,
+          "sourceEndLine": 246
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "collapsible": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/collapsible.tsx.source",
+      "exports": [
+        "Collapsible",
+        "CollapsibleTrigger",
+        "CollapsibleContent"
+      ],
+      "functions": [
+        {
+          "name": "Collapsible",
+          "propsType": "CollapsiblePrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "collapsible"
+          ],
+          "sourceLine": 5,
+          "sourceEndLine": 7
+        },
+        {
+          "name": "CollapsibleTrigger",
+          "propsType": "CollapsiblePrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "collapsible-trigger"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 13
+        },
+        {
+          "name": "CollapsibleContent",
+          "propsType": "CollapsiblePrimitive.Panel.Props",
+          "defaults": {},
+          "slots": [
+            "collapsible-content"
+          ],
+          "sourceLine": 15,
+          "sourceEndLine": 19
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "collapsible"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/collapsible.md.source"
+      ]
+    },
+    "combobox": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source",
+      "exports": [
+        "Combobox",
+        "ComboboxInput",
+        "ComboboxContent",
+        "ComboboxList",
+        "ComboboxItem",
+        "ComboboxGroup",
+        "ComboboxLabel",
+        "ComboboxCollection",
+        "ComboboxEmpty",
+        "ComboboxSeparator",
+        "ComboboxChips",
+        "ComboboxChip",
+        "ComboboxChipsInput",
+        "ComboboxTrigger",
+        "ComboboxValue",
+        "useComboboxAnchor"
+      ],
+      "functions": [
+        {
+          "name": "ComboboxValue",
+          "propsType": "ComboboxPrimitive.Value.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-value"
+          ],
+          "sourceLine": 18,
+          "sourceEndLine": 20
+        },
+        {
+          "name": "ComboboxTrigger",
+          "propsType": "ComboboxPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-trigger"
+          ],
+          "sourceLine": 22,
+          "sourceEndLine": 44
+        },
+        {
+          "name": "ComboboxInput",
+          "propsType": "ComboboxPrimitive.Input.Props & {\n  showTrigger?: boolean\n  showClear?: boolean\n}",
+          "defaults": {
+            "disabled": "false",
+            "showTrigger": "true",
+            "showClear": "false"
+          },
+          "slots": [
+            "input-group-button"
+          ],
+          "sourceLine": 66,
+          "sourceEndLine": 99
+        },
+        {
+          "name": "ComboboxContent",
+          "propsType": "ComboboxPrimitive.Popup.Props &\n  Pick<\n    ComboboxPrimitive.Positioner.Props,\n    \"side\" | \"align\" | \"sideOffset\" | \"alignOffset\" | \"anchor\"\n  >",
+          "defaults": {
+            "side": "\"bottom\"",
+            "sideOffset": "6",
+            "align": "\"start\"",
+            "alignOffset": "0"
+          },
+          "slots": [
+            "combobox-content"
+          ],
+          "sourceLine": 101,
+          "sourceEndLine": 136
+        },
+        {
+          "name": "ComboboxList",
+          "propsType": "ComboboxPrimitive.List.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-list"
+          ],
+          "sourceLine": 138,
+          "sourceEndLine": 149
+        },
+        {
+          "name": "ComboboxItem",
+          "propsType": "ComboboxPrimitive.Item.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-item"
+          ],
+          "sourceLine": 151,
+          "sourceEndLine": 180
+        },
+        {
+          "name": "ComboboxGroup",
+          "propsType": "ComboboxPrimitive.Group.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-group"
+          ],
+          "sourceLine": 182,
+          "sourceEndLine": 190
+        },
+        {
+          "name": "ComboboxLabel",
+          "propsType": "ComboboxPrimitive.GroupLabel.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-label"
+          ],
+          "sourceLine": 192,
+          "sourceEndLine": 203
+        },
+        {
+          "name": "ComboboxCollection",
+          "propsType": "ComboboxPrimitive.Collection.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-collection"
+          ],
+          "sourceLine": 205,
+          "sourceEndLine": 209
+        },
+        {
+          "name": "ComboboxEmpty",
+          "propsType": "ComboboxPrimitive.Empty.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-empty"
+          ],
+          "sourceLine": 211,
+          "sourceEndLine": 219
+        },
+        {
+          "name": "ComboboxSeparator",
+          "propsType": "ComboboxPrimitive.Separator.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-separator"
+          ],
+          "sourceLine": 221,
+          "sourceEndLine": 232
+        },
+        {
+          "name": "ComboboxChips",
+          "propsType": "React.ComponentPropsWithRef<typeof ComboboxPrimitive.Chips> &\n  ComboboxPrimitive.Chips.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-chips"
+          ],
+          "sourceLine": 234,
+          "sourceEndLine": 246
+        },
+        {
+          "name": "ComboboxChip",
+          "propsType": "ComboboxPrimitive.Chip.Props & {\n  showRemove?: boolean\n}",
+          "defaults": {
+            "showRemove": "true"
+          },
+          "slots": [
+            "combobox-chip",
+            "combobox-chip-remove"
+          ],
+          "sourceLine": 248,
+          "sourceEndLine": 284
+        },
+        {
+          "name": "ComboboxChipsInput",
+          "propsType": "ComboboxPrimitive.Input.Props",
+          "defaults": {},
+          "slots": [
+            "combobox-chip-input"
+          ],
+          "sourceLine": 286,
+          "sourceEndLine": 300
+        },
+        {
+          "name": "useComboboxAnchor",
+          "propsType": "No props parameter",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 302,
+          "sourceEndLine": 304
+        }
+      ],
+      "aliases": [
+        {
+          "name": "Combobox",
+          "expression": "ComboboxPrimitive.Root"
+        }
+      ],
+      "composition": [
+        "button",
+        "input-group"
+      ],
+      "primitiveModules": [
+        "combobox"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/combobox.md.source"
+      ]
+    },
+    "command": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/command.tsx.source",
+      "exports": [
+        "Command",
+        "CommandDialog",
+        "CommandInput",
+        "CommandList",
+        "CommandEmpty",
+        "CommandGroup",
+        "CommandItem",
+        "CommandShortcut",
+        "CommandSeparator"
+      ],
+      "functions": [
+        {
+          "name": "Command",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive>",
+          "defaults": {},
+          "slots": [
+            "command"
+          ],
+          "sourceLine": 20,
+          "sourceEndLine": 34
+        },
+        {
+          "name": "CommandDialog",
+          "propsType": "Omit<React.ComponentProps<typeof Dialog>, \"children\"> & {\n  title?: string\n  description?: string\n  className?: string\n  showCloseButton?: boolean\n  children: React.ReactNode\n}",
+          "defaults": {
+            "title": "\"Command Palette\"",
+            "description": "\"Search for a command to run...\"",
+            "showCloseButton": "false"
+          },
+          "slots": [],
+          "sourceLine": 36,
+          "sourceEndLine": 67
+        },
+        {
+          "name": "CommandInput",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.Input>",
+          "defaults": {},
+          "slots": [
+            "command-input-wrapper",
+            "command-input"
+          ],
+          "sourceLine": 69,
+          "sourceEndLine": 97
+        },
+        {
+          "name": "CommandList",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.List>",
+          "defaults": {},
+          "slots": [
+            "command-list"
+          ],
+          "sourceLine": 99,
+          "sourceEndLine": 113
+        },
+        {
+          "name": "CommandEmpty",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.Empty>",
+          "defaults": {},
+          "slots": [
+            "command-empty"
+          ],
+          "sourceLine": 115,
+          "sourceEndLine": 126
+        },
+        {
+          "name": "CommandGroup",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.Group>",
+          "defaults": {},
+          "slots": [
+            "command-group"
+          ],
+          "sourceLine": 128,
+          "sourceEndLine": 139
+        },
+        {
+          "name": "CommandSeparator",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.Separator>",
+          "defaults": {},
+          "slots": [
+            "command-separator"
+          ],
+          "sourceLine": 141,
+          "sourceEndLine": 152
+        },
+        {
+          "name": "CommandItem",
+          "propsType": "React.ComponentProps<typeof CommandPrimitive.Item>",
+          "defaults": {},
+          "slots": [
+            "command-item"
+          ],
+          "sourceLine": 154,
+          "sourceEndLine": 179
+        },
+        {
+          "name": "CommandShortcut",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "command-shortcut"
+          ],
+          "sourceLine": 181,
+          "sourceEndLine": 192
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "dialog",
+        "input-group"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "context-menu": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source",
+      "exports": [
+        "ContextMenu",
+        "ContextMenuTrigger",
+        "ContextMenuContent",
+        "ContextMenuItem",
+        "ContextMenuCheckboxItem",
+        "ContextMenuRadioItem",
+        "ContextMenuLabel",
+        "ContextMenuSeparator",
+        "ContextMenuShortcut",
+        "ContextMenuGroup",
+        "ContextMenuPortal",
+        "ContextMenuSub",
+        "ContextMenuSubContent",
+        "ContextMenuSubTrigger",
+        "ContextMenuRadioGroup"
+      ],
+      "functions": [
+        {
+          "name": "ContextMenu",
+          "propsType": "ContextMenuPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 11
+        },
+        {
+          "name": "ContextMenuPortal",
+          "propsType": "ContextMenuPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-portal"
+          ],
+          "sourceLine": 13,
+          "sourceEndLine": 17
+        },
+        {
+          "name": "ContextMenuTrigger",
+          "propsType": "ContextMenuPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-trigger"
+          ],
+          "sourceLine": 19,
+          "sourceEndLine": 30
+        },
+        {
+          "name": "ContextMenuContent",
+          "propsType": "ContextMenuPrimitive.Popup.Props &\n  Pick<\n    ContextMenuPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >",
+          "defaults": {
+            "align": "\"start\"",
+            "alignOffset": "4",
+            "side": "\"right\"",
+            "sideOffset": "0"
+          },
+          "slots": [
+            "context-menu-content"
+          ],
+          "sourceLine": 32,
+          "sourceEndLine": 64
+        },
+        {
+          "name": "ContextMenuGroup",
+          "propsType": "ContextMenuPrimitive.Group.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-group"
+          ],
+          "sourceLine": 66,
+          "sourceEndLine": 70
+        },
+        {
+          "name": "ContextMenuLabel",
+          "propsType": "ContextMenuPrimitive.GroupLabel.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "context-menu-label"
+          ],
+          "sourceLine": 72,
+          "sourceEndLine": 87
+        },
+        {
+          "name": "ContextMenuItem",
+          "propsType": "ContextMenuPrimitive.Item.Props & {\n  inset?: boolean\n  variant?: \"default\" | \"destructive\"\n}",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "context-menu-item"
+          ],
+          "sourceLine": 89,
+          "sourceEndLine": 110
+        },
+        {
+          "name": "ContextMenuSub",
+          "propsType": "ContextMenuPrimitive.SubmenuRoot.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-sub"
+          ],
+          "sourceLine": 112,
+          "sourceEndLine": 116
+        },
+        {
+          "name": "ContextMenuSubTrigger",
+          "propsType": "ContextMenuPrimitive.SubmenuTrigger.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "context-menu-sub-trigger"
+          ],
+          "sourceLine": 118,
+          "sourceEndLine": 147
+        },
+        {
+          "name": "ContextMenuSubContent",
+          "propsType": "React.ComponentProps<typeof ContextMenuContent>",
+          "defaults": {},
+          "slots": [
+            "context-menu-sub-content"
+          ],
+          "sourceLine": 149,
+          "sourceEndLine": 160
+        },
+        {
+          "name": "ContextMenuCheckboxItem",
+          "propsType": "ContextMenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "context-menu-checkbox-item"
+          ],
+          "sourceLine": 162,
+          "sourceEndLine": 196
+        },
+        {
+          "name": "ContextMenuRadioGroup",
+          "propsType": "ContextMenuPrimitive.RadioGroup.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-radio-group"
+          ],
+          "sourceLine": 198,
+          "sourceEndLine": 207
+        },
+        {
+          "name": "ContextMenuRadioItem",
+          "propsType": "ContextMenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "context-menu-radio-item"
+          ],
+          "sourceLine": 209,
+          "sourceEndLine": 241
+        },
+        {
+          "name": "ContextMenuSeparator",
+          "propsType": "ContextMenuPrimitive.Separator.Props",
+          "defaults": {},
+          "slots": [
+            "context-menu-separator"
+          ],
+          "sourceLine": 243,
+          "sourceEndLine": 254
+        },
+        {
+          "name": "ContextMenuShortcut",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "context-menu-shortcut"
+          ],
+          "sourceLine": 256,
+          "sourceEndLine": 267
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "context-menu"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/context-menu.md.source"
+      ]
+    },
+    "data-table": {
+      "kind": "documented-composition",
+      "sources": [
+        "sources/shadcn/apps/v4/content/docs/components/base/data-table.mdx.source",
+        "sources/shadcn/apps/v4/registry/bases/base/blocks/dashboard-01/components/data-table.tsx.source"
+      ]
+    },
+    "date-picker": {
+      "kind": "documented-composition",
+      "sources": [
+        "sources/shadcn/apps/v4/content/docs/components/base/date-picker.mdx.source"
+      ]
+    },
+    "dialog": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source",
+      "exports": [
+        "Dialog",
+        "DialogClose",
+        "DialogContent",
+        "DialogDescription",
+        "DialogFooter",
+        "DialogHeader",
+        "DialogOverlay",
+        "DialogPortal",
+        "DialogTitle",
+        "DialogTrigger"
+      ],
+      "functions": [
+        {
+          "name": "Dialog",
+          "propsType": "DialogPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "dialog"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 12
+        },
+        {
+          "name": "DialogTrigger",
+          "propsType": "DialogPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-trigger"
+          ],
+          "sourceLine": 14,
+          "sourceEndLine": 16
+        },
+        {
+          "name": "DialogPortal",
+          "propsType": "DialogPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-portal"
+          ],
+          "sourceLine": 18,
+          "sourceEndLine": 20
+        },
+        {
+          "name": "DialogClose",
+          "propsType": "DialogPrimitive.Close.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-close"
+          ],
+          "sourceLine": 22,
+          "sourceEndLine": 24
+        },
+        {
+          "name": "DialogOverlay",
+          "propsType": "DialogPrimitive.Backdrop.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-overlay"
+          ],
+          "sourceLine": 26,
+          "sourceEndLine": 37
+        },
+        {
+          "name": "DialogContent",
+          "propsType": "DialogPrimitive.Popup.Props & {\n  showCloseButton?: boolean\n}",
+          "defaults": {
+            "showCloseButton": "true"
+          },
+          "slots": [
+            "dialog-content",
+            "dialog-close"
+          ],
+          "sourceLine": 39,
+          "sourceEndLine": 83
+        },
+        {
+          "name": "DialogHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "dialog-header"
+          ],
+          "sourceLine": 85,
+          "sourceEndLine": 93
+        },
+        {
+          "name": "DialogFooter",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  showCloseButton?: boolean\n}",
+          "defaults": {
+            "showCloseButton": "false"
+          },
+          "slots": [
+            "dialog-footer"
+          ],
+          "sourceLine": 95,
+          "sourceEndLine": 120
+        },
+        {
+          "name": "DialogTitle",
+          "propsType": "DialogPrimitive.Title.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-title"
+          ],
+          "sourceLine": 122,
+          "sourceEndLine": 130
+        },
+        {
+          "name": "DialogDescription",
+          "propsType": "DialogPrimitive.Description.Props",
+          "defaults": {},
+          "slots": [
+            "dialog-description"
+          ],
+          "sourceLine": 132,
+          "sourceEndLine": 143
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [
+        "dialog"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/dialog.md.source"
+      ]
+    },
+    "drawer": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+      "exports": [
+        "Drawer",
+        "DrawerPortal",
+        "DrawerOverlay",
+        "DrawerSwipeHandle",
+        "DrawerTrigger",
+        "DrawerClose",
+        "DrawerContent",
+        "DrawerHeader",
+        "DrawerFooter",
+        "DrawerTitle",
+        "DrawerDescription"
+      ],
+      "functions": [
+        {
+          "name": "Drawer",
+          "propsType": "DrawerPrimitive.Root.Props & {\n  showSwipeHandle?: boolean\n}",
+          "defaults": {
+            "modal": "true",
+            "showSwipeHandle": "false",
+            "swipeDirection": "\"down\""
+          },
+          "slots": [
+            "drawer"
+          ],
+          "sourceLine": 26,
+          "sourceEndLine": 52
+        },
+        {
+          "name": "DrawerTrigger",
+          "propsType": "DrawerPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-trigger"
+          ],
+          "sourceLine": 54,
+          "sourceEndLine": 56
+        },
+        {
+          "name": "DrawerPortal",
+          "propsType": "DrawerPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-portal"
+          ],
+          "sourceLine": 58,
+          "sourceEndLine": 60
+        },
+        {
+          "name": "DrawerClose",
+          "propsType": "DrawerPrimitive.Close.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-close"
+          ],
+          "sourceLine": 62,
+          "sourceEndLine": 64
+        },
+        {
+          "name": "DrawerOverlay",
+          "propsType": "DrawerPrimitive.Backdrop.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-overlay"
+          ],
+          "sourceLine": 66,
+          "sourceEndLine": 80
+        },
+        {
+          "name": "DrawerSwipeHandle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "drawer-swipe-handle"
+          ],
+          "sourceLine": 82,
+          "sourceEndLine": 97
+        },
+        {
+          "name": "DrawerContent",
+          "propsType": "DrawerPrimitive.Popup.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-portal",
+            "drawer-viewport",
+            "drawer-popup",
+            "drawer-content"
+          ],
+          "sourceLine": 99,
+          "sourceEndLine": 164
+        },
+        {
+          "name": "DrawerHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "drawer-header"
+          ],
+          "sourceLine": 166,
+          "sourceEndLine": 177
+        },
+        {
+          "name": "DrawerFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "drawer-footer"
+          ],
+          "sourceLine": 179,
+          "sourceEndLine": 190
+        },
+        {
+          "name": "DrawerTitle",
+          "propsType": "DrawerPrimitive.Title.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-title"
+          ],
+          "sourceLine": 192,
+          "sourceEndLine": 200
+        },
+        {
+          "name": "DrawerDescription",
+          "propsType": "DrawerPrimitive.Description.Props",
+          "defaults": {},
+          "slots": [
+            "drawer-description"
+          ],
+          "sourceLine": 202,
+          "sourceEndLine": 213
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "drawer"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/drawer.md.source"
+      ]
+    },
+    "dropdown-menu": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source",
+      "exports": [
+        "DropdownMenu",
+        "DropdownMenuPortal",
+        "DropdownMenuTrigger",
+        "DropdownMenuContent",
+        "DropdownMenuGroup",
+        "DropdownMenuLabel",
+        "DropdownMenuItem",
+        "DropdownMenuCheckboxItem",
+        "DropdownMenuRadioGroup",
+        "DropdownMenuRadioItem",
+        "DropdownMenuSeparator",
+        "DropdownMenuShortcut",
+        "DropdownMenuSub",
+        "DropdownMenuSubTrigger",
+        "DropdownMenuSubContent"
+      ],
+      "functions": [
+        {
+          "name": "DropdownMenu",
+          "propsType": "MenuPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 11
+        },
+        {
+          "name": "DropdownMenuPortal",
+          "propsType": "MenuPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-portal"
+          ],
+          "sourceLine": 13,
+          "sourceEndLine": 15
+        },
+        {
+          "name": "DropdownMenuTrigger",
+          "propsType": "MenuPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-trigger"
+          ],
+          "sourceLine": 17,
+          "sourceEndLine": 19
+        },
+        {
+          "name": "DropdownMenuContent",
+          "propsType": "MenuPrimitive.Popup.Props &\n  Pick<\n    MenuPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >",
+          "defaults": {
+            "align": "\"start\"",
+            "alignOffset": "0",
+            "side": "\"bottom\"",
+            "sideOffset": "4"
+          },
+          "slots": [
+            "dropdown-menu-content"
+          ],
+          "sourceLine": 21,
+          "sourceEndLine": 53
+        },
+        {
+          "name": "DropdownMenuGroup",
+          "propsType": "MenuPrimitive.Group.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-group"
+          ],
+          "sourceLine": 55,
+          "sourceEndLine": 57
+        },
+        {
+          "name": "DropdownMenuLabel",
+          "propsType": "MenuPrimitive.GroupLabel.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-label"
+          ],
+          "sourceLine": 59,
+          "sourceEndLine": 74
+        },
+        {
+          "name": "DropdownMenuItem",
+          "propsType": "MenuPrimitive.Item.Props & {\n  inset?: boolean\n  variant?: \"default\" | \"destructive\"\n}",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "dropdown-menu-item"
+          ],
+          "sourceLine": 76,
+          "sourceEndLine": 97
+        },
+        {
+          "name": "DropdownMenuSub",
+          "propsType": "MenuPrimitive.SubmenuRoot.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-sub"
+          ],
+          "sourceLine": 99,
+          "sourceEndLine": 101
+        },
+        {
+          "name": "DropdownMenuSubTrigger",
+          "propsType": "MenuPrimitive.SubmenuTrigger.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-sub-trigger"
+          ],
+          "sourceLine": 103,
+          "sourceEndLine": 132
+        },
+        {
+          "name": "DropdownMenuSubContent",
+          "propsType": "React.ComponentProps<typeof DropdownMenuContent>",
+          "defaults": {
+            "align": "\"start\"",
+            "alignOffset": "-3",
+            "side": "\"right\"",
+            "sideOffset": "0"
+          },
+          "slots": [
+            "dropdown-menu-sub-content"
+          ],
+          "sourceLine": 134,
+          "sourceEndLine": 156
+        },
+        {
+          "name": "DropdownMenuCheckboxItem",
+          "propsType": "MenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-checkbox-item",
+            "dropdown-menu-checkbox-item-indicator"
+          ],
+          "sourceLine": 158,
+          "sourceEndLine": 195
+        },
+        {
+          "name": "DropdownMenuRadioGroup",
+          "propsType": "MenuPrimitive.RadioGroup.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-radio-group"
+          ],
+          "sourceLine": 197,
+          "sourceEndLine": 204
+        },
+        {
+          "name": "DropdownMenuRadioItem",
+          "propsType": "MenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-radio-item",
+            "dropdown-menu-radio-item-indicator"
+          ],
+          "sourceLine": 206,
+          "sourceEndLine": 241
+        },
+        {
+          "name": "DropdownMenuSeparator",
+          "propsType": "MenuPrimitive.Separator.Props",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-separator"
+          ],
+          "sourceLine": 243,
+          "sourceEndLine": 254
+        },
+        {
+          "name": "DropdownMenuShortcut",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "dropdown-menu-shortcut"
+          ],
+          "sourceLine": 256,
+          "sourceEndLine": 267
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "menu"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/menu.md.source"
+      ]
+    },
+    "empty": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/empty.tsx.source",
+      "exports": [
+        "Empty",
+        "EmptyHeader",
+        "EmptyTitle",
+        "EmptyDescription",
+        "EmptyContent",
+        "EmptyMedia"
+      ],
+      "functions": [
+        {
+          "name": "Empty",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "empty"
+          ],
+          "sourceLine": 4,
+          "sourceEndLine": 15
+        },
+        {
+          "name": "EmptyHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "empty-header"
+          ],
+          "sourceLine": 17,
+          "sourceEndLine": 28
+        },
+        {
+          "name": "EmptyMedia",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof emptyMediaVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "empty-icon"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 58
+        },
+        {
+          "name": "EmptyTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "empty-title"
+          ],
+          "sourceLine": 60,
+          "sourceEndLine": 68
+        },
+        {
+          "name": "EmptyDescription",
+          "propsType": "React.ComponentProps<\"p\">",
+          "defaults": {},
+          "slots": [
+            "empty-description"
+          ],
+          "sourceLine": 70,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "EmptyContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "empty-content"
+          ],
+          "sourceLine": 83,
+          "sourceEndLine": 94
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "field": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/field.tsx.source",
+      "exports": [
+        "Field",
+        "FieldLabel",
+        "FieldDescription",
+        "FieldError",
+        "FieldGroup",
+        "FieldLegend",
+        "FieldSeparator",
+        "FieldSet",
+        "FieldContent",
+        "FieldTitle"
+      ],
+      "functions": [
+        {
+          "name": "FieldSet",
+          "propsType": "React.ComponentProps<\"fieldset\">",
+          "defaults": {},
+          "slots": [
+            "field-set"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 18
+        },
+        {
+          "name": "FieldLegend",
+          "propsType": "React.ComponentProps<\"legend\"> & { variant?: \"legend\" | \"label\" }",
+          "defaults": {
+            "variant": "\"legend\""
+          },
+          "slots": [
+            "field-legend"
+          ],
+          "sourceLine": 20,
+          "sourceEndLine": 33
+        },
+        {
+          "name": "FieldGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "field-group"
+          ],
+          "sourceLine": 35,
+          "sourceEndLine": 46
+        },
+        {
+          "name": "Field",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof fieldVariants>",
+          "defaults": {
+            "orientation": "\"vertical\""
+          },
+          "slots": [
+            "field"
+          ],
+          "sourceLine": 64,
+          "sourceEndLine": 78
+        },
+        {
+          "name": "FieldContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "field-content"
+          ],
+          "sourceLine": 80,
+          "sourceEndLine": 91
+        },
+        {
+          "name": "FieldLabel",
+          "propsType": "React.ComponentProps<typeof Label>",
+          "defaults": {},
+          "slots": [
+            "field-label"
+          ],
+          "sourceLine": 93,
+          "sourceEndLine": 108
+        },
+        {
+          "name": "FieldTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "field-label"
+          ],
+          "sourceLine": 110,
+          "sourceEndLine": 118
+        },
+        {
+          "name": "FieldDescription",
+          "propsType": "React.ComponentProps<\"p\">",
+          "defaults": {},
+          "slots": [
+            "field-description"
+          ],
+          "sourceLine": 120,
+          "sourceEndLine": 133
+        },
+        {
+          "name": "FieldSeparator",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  children?: React.ReactNode\n}",
+          "defaults": {},
+          "slots": [
+            "field-separator",
+            "field-separator-content"
+          ],
+          "sourceLine": 135,
+          "sourceEndLine": 160
+        },
+        {
+          "name": "FieldError",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  errors?: Array<{ message?: string } | undefined>\n}",
+          "defaults": {},
+          "slots": [
+            "field-error"
+          ],
+          "sourceLine": 162,
+          "sourceEndLine": 211
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "label",
+        "separator"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "hover-card": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/hover-card.tsx.source",
+      "exports": [
+        "HoverCard",
+        "HoverCardTrigger",
+        "HoverCardContent"
+      ],
+      "functions": [
+        {
+          "name": "HoverCard",
+          "propsType": "PreviewCardPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "hover-card"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 8
+        },
+        {
+          "name": "HoverCardTrigger",
+          "propsType": "PreviewCardPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "hover-card-trigger"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 14
+        },
+        {
+          "name": "HoverCardContent",
+          "propsType": "PreviewCardPrimitive.Popup.Props &\n  Pick<\n    PreviewCardPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >",
+          "defaults": {
+            "side": "\"bottom\"",
+            "sideOffset": "4",
+            "align": "\"center\"",
+            "alignOffset": "4"
+          },
+          "slots": [
+            "hover-card-portal",
+            "hover-card-content"
+          ],
+          "sourceLine": 16,
+          "sourceEndLine": 48
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "preview-card"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/preview-card.md.source"
+      ]
+    },
+    "input-group": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source",
+      "exports": [
+        "InputGroup",
+        "InputGroupAddon",
+        "InputGroupButton",
+        "InputGroupText",
+        "InputGroupInput",
+        "InputGroupTextarea"
+      ],
+      "functions": [
+        {
+          "name": "InputGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "input-group"
+          ],
+          "sourceLine": 11,
+          "sourceEndLine": 23
+        },
+        {
+          "name": "InputGroupAddon",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof inputGroupAddonVariants>",
+          "defaults": {
+            "align": "\"inline-start\""
+          },
+          "slots": [
+            "input-group-addon"
+          ],
+          "sourceLine": 44,
+          "sourceEndLine": 64
+        },
+        {
+          "name": "InputGroupButton",
+          "propsType": "Omit<React.ComponentProps<typeof Button>, \"size\" | \"type\"> &\n  VariantProps<typeof inputGroupButtonVariants> & {\n    type?: \"button\" | \"submit\" | \"reset\"\n  }",
+          "defaults": {
+            "type": "\"button\"",
+            "variant": "\"ghost\"",
+            "size": "\"xs\""
+          },
+          "slots": [],
+          "sourceLine": 83,
+          "sourceEndLine": 102
+        },
+        {
+          "name": "InputGroupText",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 104,
+          "sourceEndLine": 114
+        },
+        {
+          "name": "InputGroupInput",
+          "propsType": "React.ComponentProps<\"input\">",
+          "defaults": {},
+          "slots": [
+            "input-group-control"
+          ],
+          "sourceLine": 116,
+          "sourceEndLine": 127
+        },
+        {
+          "name": "InputGroupTextarea",
+          "propsType": "React.ComponentProps<\"textarea\">",
+          "defaults": {},
+          "slots": [
+            "input-group-control"
+          ],
+          "sourceLine": 129,
+          "sourceEndLine": 140
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button",
+        "input",
+        "textarea"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "input-otp": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/input-otp.tsx.source",
+      "exports": [
+        "InputOTP",
+        "InputOTPGroup",
+        "InputOTPSlot",
+        "InputOTPSeparator"
+      ],
+      "functions": [
+        {
+          "name": "InputOTP",
+          "propsType": "React.ComponentProps<typeof OTPInput> & {\n  containerClassName?: string\n}",
+          "defaults": {},
+          "slots": [
+            "input-otp"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 31
+        },
+        {
+          "name": "InputOTPGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "input-otp-group"
+          ],
+          "sourceLine": 33,
+          "sourceEndLine": 41
+        },
+        {
+          "name": "InputOTPSlot",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  index: number\n}",
+          "defaults": {},
+          "slots": [
+            "input-otp-slot"
+          ],
+          "sourceLine": 43,
+          "sourceEndLine": 71
+        },
+        {
+          "name": "InputOTPSeparator",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "input-otp-separator"
+          ],
+          "sourceLine": 73,
+          "sourceEndLine": 90
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "item": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source",
+      "exports": [
+        "Item",
+        "ItemMedia",
+        "ItemContent",
+        "ItemActions",
+        "ItemGroup",
+        "ItemSeparator",
+        "ItemTitle",
+        "ItemDescription",
+        "ItemHeader",
+        "ItemFooter"
+      ],
+      "functions": [
+        {
+          "name": "ItemGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-group"
+          ],
+          "sourceLine": 9,
+          "sourceEndLine": 21
+        },
+        {
+          "name": "ItemSeparator",
+          "propsType": "React.ComponentProps<typeof Separator>",
+          "defaults": {},
+          "slots": [
+            "item-separator"
+          ],
+          "sourceLine": 23,
+          "sourceEndLine": 35
+        },
+        {
+          "name": "Item",
+          "propsType": "useRender.ComponentProps<\"div\"> & VariantProps<typeof itemVariants>",
+          "defaults": {
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [],
+          "sourceLine": 59,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ItemMedia",
+          "propsType": "React.ComponentProps<\"div\"> & VariantProps<typeof itemMediaVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "item-media"
+          ],
+          "sourceLine": 99,
+          "sourceEndLine": 112
+        },
+        {
+          "name": "ItemContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-content"
+          ],
+          "sourceLine": 114,
+          "sourceEndLine": 125
+        },
+        {
+          "name": "ItemTitle",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-title"
+          ],
+          "sourceLine": 127,
+          "sourceEndLine": 138
+        },
+        {
+          "name": "ItemDescription",
+          "propsType": "React.ComponentProps<\"p\">",
+          "defaults": {},
+          "slots": [
+            "item-description"
+          ],
+          "sourceLine": 140,
+          "sourceEndLine": 151
+        },
+        {
+          "name": "ItemActions",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-actions"
+          ],
+          "sourceLine": 153,
+          "sourceEndLine": 161
+        },
+        {
+          "name": "ItemHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-header"
+          ],
+          "sourceLine": 163,
+          "sourceEndLine": 174
+        },
+        {
+          "name": "ItemFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "item-footer"
+          ],
+          "sourceLine": 176,
+          "sourceEndLine": 187
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "separator"
+      ],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "kbd": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/kbd.tsx.source",
+      "exports": [
+        "Kbd",
+        "KbdGroup"
+      ],
+      "functions": [
+        {
+          "name": "Kbd",
+          "propsType": "React.ComponentProps<\"kbd\">",
+          "defaults": {},
+          "slots": [
+            "kbd"
+          ],
+          "sourceLine": 3,
+          "sourceEndLine": 14
+        },
+        {
+          "name": "KbdGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "kbd-group"
+          ],
+          "sourceLine": 16,
+          "sourceEndLine": 24
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "label": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/label.tsx.source",
+      "exports": [
+        "Label"
+      ],
+      "functions": [
+        {
+          "name": "Label",
+          "propsType": "React.ComponentProps<\"label\">",
+          "defaults": {},
+          "slots": [
+            "label"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 17
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "marker": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/marker.tsx.source",
+      "exports": [
+        "Marker",
+        "MarkerIcon",
+        "MarkerContent",
+        "markerVariants"
+      ],
+      "functions": [
+        {
+          "name": "Marker",
+          "propsType": "useRender.ComponentProps<\"div\"> & VariantProps<typeof markerVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [],
+          "sourceLine": 20,
+          "sourceEndLine": 40
+        },
+        {
+          "name": "MarkerIcon",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "marker-icon"
+          ],
+          "sourceLine": 42,
+          "sourceEndLine": 51
+        },
+        {
+          "name": "MarkerContent",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "marker-content"
+          ],
+          "sourceLine": 53,
+          "sourceEndLine": 61
+        }
+      ],
+      "aliases": [
+        {
+          "name": "markerVariants",
+          "expression": "cva(\n  \"cn-marker group/marker relative flex w-full items-center\",\n  {\n    variants: {\n      variant: {\n        default: \"cn-marker-variant-default\",\n        separator: \"cn-marker-variant-separator\",\n        border: \"cn-marker-variant-border\",\n      },\n    },\n  }\n)"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "menubar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source",
+      "exports": [
+        "Menubar",
+        "MenubarPortal",
+        "MenubarMenu",
+        "MenubarTrigger",
+        "MenubarContent",
+        "MenubarGroup",
+        "MenubarSeparator",
+        "MenubarLabel",
+        "MenubarItem",
+        "MenubarShortcut",
+        "MenubarCheckboxItem",
+        "MenubarRadioGroup",
+        "MenubarRadioItem",
+        "MenubarSub",
+        "MenubarSubTrigger",
+        "MenubarSubContent"
+      ],
+      "functions": [
+        {
+          "name": "Menubar",
+          "propsType": "MenubarPrimitive.Props",
+          "defaults": {},
+          "slots": [
+            "menubar"
+          ],
+          "sourceLine": 25,
+          "sourceEndLine": 33
+        },
+        {
+          "name": "MenubarMenu",
+          "propsType": "React.ComponentProps<typeof DropdownMenu>",
+          "defaults": {},
+          "slots": [
+            "menubar-menu"
+          ],
+          "sourceLine": 35,
+          "sourceEndLine": 37
+        },
+        {
+          "name": "MenubarGroup",
+          "propsType": "React.ComponentProps<typeof DropdownMenuGroup>",
+          "defaults": {},
+          "slots": [
+            "menubar-group"
+          ],
+          "sourceLine": 39,
+          "sourceEndLine": 43
+        },
+        {
+          "name": "MenubarPortal",
+          "propsType": "React.ComponentProps<typeof DropdownMenuPortal>",
+          "defaults": {},
+          "slots": [
+            "menubar-portal"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 49
+        },
+        {
+          "name": "MenubarTrigger",
+          "propsType": "React.ComponentProps<typeof DropdownMenuTrigger>",
+          "defaults": {},
+          "slots": [
+            "menubar-trigger"
+          ],
+          "sourceLine": 51,
+          "sourceEndLine": 65
+        },
+        {
+          "name": "MenubarContent",
+          "propsType": "React.ComponentProps<typeof DropdownMenuContent>",
+          "defaults": {
+            "align": "\"start\"",
+            "alignOffset": "-4",
+            "sideOffset": "8"
+          },
+          "slots": [
+            "menubar-content"
+          ],
+          "sourceLine": 67,
+          "sourceEndLine": 87
+        },
+        {
+          "name": "MenubarItem",
+          "propsType": "React.ComponentProps<typeof DropdownMenuItem>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "menubar-item"
+          ],
+          "sourceLine": 89,
+          "sourceEndLine": 104
+        },
+        {
+          "name": "MenubarCheckboxItem",
+          "propsType": "MenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "menubar-checkbox-item"
+          ],
+          "sourceLine": 106,
+          "sourceEndLine": 140
+        },
+        {
+          "name": "MenubarRadioGroup",
+          "propsType": "React.ComponentProps<typeof DropdownMenuRadioGroup>",
+          "defaults": {},
+          "slots": [
+            "menubar-radio-group"
+          ],
+          "sourceLine": 142,
+          "sourceEndLine": 146
+        },
+        {
+          "name": "MenubarRadioItem",
+          "propsType": "MenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "menubar-radio-item"
+          ],
+          "sourceLine": 148,
+          "sourceEndLine": 180
+        },
+        {
+          "name": "MenubarLabel",
+          "propsType": "React.ComponentProps<typeof DropdownMenuLabel> & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "menubar-label"
+          ],
+          "sourceLine": 182,
+          "sourceEndLine": 197
+        },
+        {
+          "name": "MenubarSeparator",
+          "propsType": "React.ComponentProps<typeof DropdownMenuSeparator>",
+          "defaults": {},
+          "slots": [
+            "menubar-separator"
+          ],
+          "sourceLine": 199,
+          "sourceEndLine": 210
+        },
+        {
+          "name": "MenubarShortcut",
+          "propsType": "React.ComponentProps<typeof DropdownMenuShortcut>",
+          "defaults": {},
+          "slots": [
+            "menubar-shortcut"
+          ],
+          "sourceLine": 212,
+          "sourceEndLine": 223
+        },
+        {
+          "name": "MenubarSub",
+          "propsType": "React.ComponentProps<typeof DropdownMenuSub>",
+          "defaults": {},
+          "slots": [
+            "menubar-sub"
+          ],
+          "sourceLine": 225,
+          "sourceEndLine": 229
+        },
+        {
+          "name": "MenubarSubTrigger",
+          "propsType": "React.ComponentProps<typeof DropdownMenuSubTrigger> & {\n  inset?: boolean\n}",
+          "defaults": {},
+          "slots": [
+            "menubar-sub-trigger"
+          ],
+          "sourceLine": 231,
+          "sourceEndLine": 246
+        },
+        {
+          "name": "MenubarSubContent",
+          "propsType": "React.ComponentProps<typeof DropdownMenuSubContent>",
+          "defaults": {},
+          "slots": [
+            "menubar-sub-content"
+          ],
+          "sourceLine": 248,
+          "sourceEndLine": 262
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "dropdown-menu"
+      ],
+      "primitiveModules": [
+        "menu",
+        "menubar"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/menu.md.source",
+        "sources/base-ui-1.9.0/docs/menubar.md.source"
+      ]
+    },
+    "message": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source",
+      "exports": [
+        "MessageGroup",
+        "Message",
+        "MessageAvatar",
+        "MessageContent",
+        "MessageFooter",
+        "MessageHeader"
+      ],
+      "functions": [
+        {
+          "name": "MessageGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "message-group"
+          ],
+          "sourceLine": 4,
+          "sourceEndLine": 12
+        },
+        {
+          "name": "Message",
+          "propsType": "React.ComponentProps<\"div\"> & { align?: \"start\" | \"end\" }",
+          "defaults": {
+            "align": "\"start\""
+          },
+          "slots": [
+            "message"
+          ],
+          "sourceLine": 14,
+          "sourceEndLine": 30
+        },
+        {
+          "name": "MessageAvatar",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "message-avatar"
+          ],
+          "sourceLine": 32,
+          "sourceEndLine": 43
+        },
+        {
+          "name": "MessageContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "message-content"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 56
+        },
+        {
+          "name": "MessageHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "message-header"
+          ],
+          "sourceLine": 58,
+          "sourceEndLine": 69
+        },
+        {
+          "name": "MessageFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "message-footer"
+          ],
+          "sourceLine": 71,
+          "sourceEndLine": 82
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "message-scroller": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/message-scroller.tsx.source",
+      "exports": [
+        "MessageScrollerProvider",
+        "MessageScroller",
+        "MessageScrollerViewport",
+        "MessageScrollerContent",
+        "MessageScrollerItem",
+        "MessageScrollerButton",
+        "useMessageScroller",
+        "useMessageScrollerScrollable",
+        "useMessageScrollerVisibility"
+      ],
+      "functions": [
+        {
+          "name": "MessageScrollerProvider",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Provider>",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 15,
+          "sourceEndLine": 19
+        },
+        {
+          "name": "MessageScroller",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Root>",
+          "defaults": {},
+          "slots": [
+            "message-scroller"
+          ],
+          "sourceLine": 21,
+          "sourceEndLine": 35
+        },
+        {
+          "name": "MessageScrollerViewport",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Viewport>",
+          "defaults": {},
+          "slots": [
+            "message-scroller-viewport"
+          ],
+          "sourceLine": 37,
+          "sourceEndLine": 51
+        },
+        {
+          "name": "MessageScrollerContent",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Content>",
+          "defaults": {},
+          "slots": [
+            "message-scroller-content"
+          ],
+          "sourceLine": 53,
+          "sourceEndLine": 67
+        },
+        {
+          "name": "MessageScrollerItem",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Item>",
+          "defaults": {
+            "scrollAnchor": "false"
+          },
+          "slots": [
+            "message-scroller-item"
+          ],
+          "sourceLine": 69,
+          "sourceEndLine": 85
+        },
+        {
+          "name": "MessageScrollerButton",
+          "propsType": "React.ComponentProps<typeof MessageScrollerPrimitive.Button> &\n  Pick<React.ComponentProps<typeof Button>, \"variant\" | \"size\">",
+          "defaults": {
+            "direction": "\"end\"",
+            "variant": "\"secondary\"",
+            "size": "\"icon-sm\""
+          },
+          "slots": [
+            "message-scroller-button"
+          ],
+          "sourceLine": 87,
+          "sourceEndLine": 127
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "native-select": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source",
+      "exports": [
+        "NativeSelect",
+        "NativeSelectOptGroup",
+        "NativeSelectOption"
+      ],
+      "functions": [
+        {
+          "name": "NativeSelect",
+          "propsType": "NativeSelectProps",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "native-select-wrapper",
+            "native-select",
+            "native-select-icon"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 42
+        },
+        {
+          "name": "NativeSelectOption",
+          "propsType": "React.ComponentProps<\"option\">",
+          "defaults": {},
+          "slots": [
+            "native-select-option"
+          ],
+          "sourceLine": 44,
+          "sourceEndLine": 55
+        },
+        {
+          "name": "NativeSelectOptGroup",
+          "propsType": "React.ComponentProps<\"optgroup\">",
+          "defaults": {},
+          "slots": [
+            "native-select-optgroup"
+          ],
+          "sourceLine": 57,
+          "sourceEndLine": 68
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "navigation-menu": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/navigation-menu.tsx.source",
+      "exports": [
+        "NavigationMenu",
+        "NavigationMenuContent",
+        "NavigationMenuIndicator",
+        "NavigationMenuItem",
+        "NavigationMenuLink",
+        "NavigationMenuList",
+        "NavigationMenuTrigger",
+        "navigationMenuTriggerStyle",
+        "NavigationMenuPositioner"
+      ],
+      "functions": [
+        {
+          "name": "NavigationMenu",
+          "propsType": "NavigationMenuPrimitive.Root.Props &\n  Pick<NavigationMenuPrimitive.Positioner.Props, \"align\">",
+          "defaults": {
+            "align": "\"start\""
+          },
+          "slots": [
+            "navigation-menu"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 27
+        },
+        {
+          "name": "NavigationMenuList",
+          "propsType": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.List>",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-list"
+          ],
+          "sourceLine": 29,
+          "sourceEndLine": 43
+        },
+        {
+          "name": "NavigationMenuItem",
+          "propsType": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item>",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-item"
+          ],
+          "sourceLine": 45,
+          "sourceEndLine": 56
+        },
+        {
+          "name": "NavigationMenuTrigger",
+          "propsType": "NavigationMenuPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-trigger"
+          ],
+          "sourceLine": 62,
+          "sourceEndLine": 85
+        },
+        {
+          "name": "NavigationMenuContent",
+          "propsType": "NavigationMenuPrimitive.Content.Props",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-content"
+          ],
+          "sourceLine": 87,
+          "sourceEndLine": 101
+        },
+        {
+          "name": "NavigationMenuPositioner",
+          "propsType": "NavigationMenuPrimitive.Positioner.Props",
+          "defaults": {
+            "side": "\"bottom\"",
+            "sideOffset": "8",
+            "align": "\"start\"",
+            "alignOffset": "0"
+          },
+          "slots": [],
+          "sourceLine": 103,
+          "sourceEndLine": 130
+        },
+        {
+          "name": "NavigationMenuLink",
+          "propsType": "NavigationMenuPrimitive.Link.Props",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-link"
+          ],
+          "sourceLine": 132,
+          "sourceEndLine": 143
+        },
+        {
+          "name": "NavigationMenuIndicator",
+          "propsType": "React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Icon>",
+          "defaults": {},
+          "slots": [
+            "navigation-menu-indicator"
+          ],
+          "sourceLine": 145,
+          "sourceEndLine": 161
+        }
+      ],
+      "aliases": [
+        {
+          "name": "navigationMenuTriggerStyle",
+          "expression": "cva(\n  \"cn-navigation-menu-trigger group/navigation-menu-trigger inline-flex h-9 w-max items-center justify-center outline-none disabled:pointer-events-none\"\n)"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "navigation-menu"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/navigation-menu.md.source"
+      ]
+    },
+    "pagination": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source",
+      "exports": [
+        "Pagination",
+        "PaginationContent",
+        "PaginationEllipsis",
+        "PaginationItem",
+        "PaginationLink",
+        "PaginationNext",
+        "PaginationPrevious"
+      ],
+      "functions": [
+        {
+          "name": "Pagination",
+          "propsType": "React.ComponentProps<\"nav\">",
+          "defaults": {},
+          "slots": [
+            "pagination"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 20
+        },
+        {
+          "name": "PaginationContent",
+          "propsType": "React.ComponentProps<\"ul\">",
+          "defaults": {},
+          "slots": [
+            "pagination-content"
+          ],
+          "sourceLine": 22,
+          "sourceEndLine": 33
+        },
+        {
+          "name": "PaginationItem",
+          "propsType": "React.ComponentProps<\"li\">",
+          "defaults": {},
+          "slots": [
+            "pagination-item"
+          ],
+          "sourceLine": 35,
+          "sourceEndLine": 37
+        },
+        {
+          "name": "PaginationLink",
+          "propsType": "PaginationLinkProps",
+          "defaults": {
+            "size": "\"icon\""
+          },
+          "slots": [
+            "pagination-link"
+          ],
+          "sourceLine": 44,
+          "sourceEndLine": 66
+        },
+        {
+          "name": "PaginationPrevious",
+          "propsType": "React.ComponentProps<typeof PaginationLink> & { text?: string }",
+          "defaults": {
+            "text": "\"Previous\""
+          },
+          "slots": [],
+          "sourceLine": 68,
+          "sourceEndLine": 94
+        },
+        {
+          "name": "PaginationNext",
+          "propsType": "React.ComponentProps<typeof PaginationLink> & { text?: string }",
+          "defaults": {
+            "text": "\"Next\""
+          },
+          "slots": [],
+          "sourceLine": 96,
+          "sourceEndLine": 120
+        },
+        {
+          "name": "PaginationEllipsis",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "pagination-ellipsis"
+          ],
+          "sourceLine": 122,
+          "sourceEndLine": 146
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "popover": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source",
+      "exports": [
+        "Popover",
+        "PopoverContent",
+        "PopoverDescription",
+        "PopoverHeader",
+        "PopoverTitle",
+        "PopoverTrigger"
+      ],
+      "functions": [
+        {
+          "name": "Popover",
+          "propsType": "PopoverPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "popover"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 9
+        },
+        {
+          "name": "PopoverTrigger",
+          "propsType": "PopoverPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "popover-trigger"
+          ],
+          "sourceLine": 11,
+          "sourceEndLine": 13
+        },
+        {
+          "name": "PopoverContent",
+          "propsType": "PopoverPrimitive.Popup.Props &\n  Pick<\n    PopoverPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >",
+          "defaults": {
+            "align": "\"center\"",
+            "alignOffset": "0",
+            "side": "\"bottom\"",
+            "sideOffset": "4"
+          },
+          "slots": [
+            "popover-content"
+          ],
+          "sourceLine": 15,
+          "sourceEndLine": 47
+        },
+        {
+          "name": "PopoverHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "popover-header"
+          ],
+          "sourceLine": 49,
+          "sourceEndLine": 57
+        },
+        {
+          "name": "PopoverTitle",
+          "propsType": "PopoverPrimitive.Title.Props",
+          "defaults": {},
+          "slots": [
+            "popover-title"
+          ],
+          "sourceLine": 59,
+          "sourceEndLine": 67
+        },
+        {
+          "name": "PopoverDescription",
+          "propsType": "PopoverPrimitive.Description.Props",
+          "defaults": {},
+          "slots": [
+            "popover-description"
+          ],
+          "sourceLine": 69,
+          "sourceEndLine": 80
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "popover"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/popover.md.source"
+      ]
+    },
+    "progress": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/progress.tsx.source",
+      "exports": [
+        "Progress",
+        "ProgressTrack",
+        "ProgressIndicator",
+        "ProgressLabel",
+        "ProgressValue"
+      ],
+      "functions": [
+        {
+          "name": "Progress",
+          "propsType": "ProgressPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "progress"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 25
+        },
+        {
+          "name": "ProgressTrack",
+          "propsType": "ProgressPrimitive.Track.Props",
+          "defaults": {},
+          "slots": [
+            "progress-track"
+          ],
+          "sourceLine": 27,
+          "sourceEndLine": 38
+        },
+        {
+          "name": "ProgressIndicator",
+          "propsType": "ProgressPrimitive.Indicator.Props",
+          "defaults": {},
+          "slots": [
+            "progress-indicator"
+          ],
+          "sourceLine": 40,
+          "sourceEndLine": 51
+        },
+        {
+          "name": "ProgressLabel",
+          "propsType": "ProgressPrimitive.Label.Props",
+          "defaults": {},
+          "slots": [
+            "progress-label"
+          ],
+          "sourceLine": 53,
+          "sourceEndLine": 61
+        },
+        {
+          "name": "ProgressValue",
+          "propsType": "ProgressPrimitive.Value.Props",
+          "defaults": {},
+          "slots": [
+            "progress-value"
+          ],
+          "sourceLine": 63,
+          "sourceEndLine": 71
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "progress"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/progress.md.source"
+      ]
+    },
+    "questionnaire": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/questionnaire.tsx.source",
+      "exports": [
+        "Questionnaire",
+        "QuestionnaireActions",
+        "QuestionnaireChoice",
+        "QuestionnaireChoiceDescription",
+        "QuestionnaireChoices",
+        "QuestionnaireDescription",
+        "QuestionnaireError",
+        "QuestionnaireInput",
+        "QuestionnaireItem",
+        "QuestionnaireNext",
+        "QuestionnairePrevious",
+        "QuestionnaireProgress",
+        "QuestionnaireSkip",
+        "QuestionnaireSubmit",
+        "QuestionnaireTitle"
+      ],
+      "functions": [
+        {
+          "name": "Questionnaire",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Root>",
+          "defaults": {},
+          "slots": [
+            "questionnaire"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 21
+        },
+        {
+          "name": "QuestionnaireProgress",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Progress>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-progress"
+          ],
+          "sourceLine": 23,
+          "sourceEndLine": 37
+        },
+        {
+          "name": "QuestionnaireItem",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Item>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-item"
+          ],
+          "sourceLine": 39,
+          "sourceEndLine": 53
+        },
+        {
+          "name": "QuestionnaireTitle",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Title>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-title"
+          ],
+          "sourceLine": 55,
+          "sourceEndLine": 69
+        },
+        {
+          "name": "QuestionnaireDescription",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Description>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-description"
+          ],
+          "sourceLine": 71,
+          "sourceEndLine": 85
+        },
+        {
+          "name": "QuestionnaireChoices",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Choices>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-choices"
+          ],
+          "sourceLine": 87,
+          "sourceEndLine": 101
+        },
+        {
+          "name": "QuestionnaireChoice",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Choice>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-choice",
+            "questionnaire-choice-input",
+            "questionnaire-choice-indicator",
+            "questionnaire-choice-indicator-dot",
+            "questionnaire-choice-indicator-check",
+            "questionnaire-choice-label",
+            "questionnaire-choice-shortcut"
+          ],
+          "sourceLine": 103,
+          "sourceEndLine": 153
+        },
+        {
+          "name": "QuestionnaireChoiceDescription",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "questionnaire-choice-description"
+          ],
+          "sourceLine": 155,
+          "sourceEndLine": 166
+        },
+        {
+          "name": "QuestionnaireInput",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Input>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-input-wrapper",
+            "questionnaire-input"
+          ],
+          "sourceLine": 168,
+          "sourceEndLine": 188
+        },
+        {
+          "name": "QuestionnaireError",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Error>",
+          "defaults": {},
+          "slots": [
+            "questionnaire-error"
+          ],
+          "sourceLine": 190,
+          "sourceEndLine": 201
+        },
+        {
+          "name": "QuestionnaireActions",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "questionnaire-actions"
+          ],
+          "sourceLine": 203,
+          "sourceEndLine": 217
+        },
+        {
+          "name": "QuestionnairePrevious",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Previous> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">",
+          "defaults": {
+            "size": "\"default\"",
+            "variant": "\"outline\""
+          },
+          "slots": [
+            "questionnaire-previous"
+          ],
+          "sourceLine": 219,
+          "sourceEndLine": 242
+        },
+        {
+          "name": "QuestionnaireSkip",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Skip> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">",
+          "defaults": {
+            "size": "\"default\"",
+            "variant": "\"outline\""
+          },
+          "slots": [
+            "questionnaire-skip"
+          ],
+          "sourceLine": 244,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "QuestionnaireNext",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Next> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">",
+          "defaults": {
+            "size": "\"default\"",
+            "variant": "\"default\""
+          },
+          "slots": [
+            "questionnaire-next"
+          ],
+          "sourceLine": 269,
+          "sourceEndLine": 292
+        },
+        {
+          "name": "QuestionnaireSubmit",
+          "propsType": "React.ComponentProps<typeof QuestionnairePrimitive.Submit> &\n  Pick<React.ComponentProps<typeof Button>, \"size\" | \"variant\">",
+          "defaults": {
+            "size": "\"default\"",
+            "variant": "\"default\""
+          },
+          "slots": [
+            "questionnaire-submit"
+          ],
+          "sourceLine": 294,
+          "sourceEndLine": 317
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "radio-group": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/radio-group.tsx.source",
+      "exports": [
+        "RadioGroup",
+        "RadioGroupItem"
+      ],
+      "functions": [
+        {
+          "name": "RadioGroup",
+          "propsType": "RadioGroupPrimitive.Props",
+          "defaults": {},
+          "slots": [
+            "radio-group"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 15
+        },
+        {
+          "name": "RadioGroupItem",
+          "propsType": "RadioPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "radio-group-item",
+            "radio-group-indicator"
+          ],
+          "sourceLine": 17,
+          "sourceEndLine": 35
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "radio",
+        "radio-group"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/radio-group.md.source"
+      ]
+    },
+    "scroll-area": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/scroll-area.tsx.source",
+      "exports": [
+        "ScrollArea",
+        "ScrollBar"
+      ],
+      "functions": [
+        {
+          "name": "ScrollArea",
+          "propsType": "ScrollAreaPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "scroll-area",
+            "scroll-area-viewport"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 28
+        },
+        {
+          "name": "ScrollBar",
+          "propsType": "ScrollAreaPrimitive.Scrollbar.Props",
+          "defaults": {
+            "orientation": "\"vertical\""
+          },
+          "slots": [
+            "scroll-area-scrollbar",
+            "scroll-area-thumb"
+          ],
+          "sourceLine": 30,
+          "sourceEndLine": 52
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "scroll-area"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/scroll-area.md.source"
+      ]
+    },
+    "select": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source",
+      "exports": [
+        "Select",
+        "SelectContent",
+        "SelectGroup",
+        "SelectItem",
+        "SelectLabel",
+        "SelectScrollDownButton",
+        "SelectScrollUpButton",
+        "SelectSeparator",
+        "SelectTrigger",
+        "SelectValue"
+      ],
+      "functions": [
+        {
+          "name": "SelectGroup",
+          "propsType": "SelectPrimitive.Group.Props",
+          "defaults": {},
+          "slots": [
+            "select-group"
+          ],
+          "sourceLine": 11,
+          "sourceEndLine": 19
+        },
+        {
+          "name": "SelectValue",
+          "propsType": "SelectPrimitive.Value.Props",
+          "defaults": {},
+          "slots": [
+            "select-value"
+          ],
+          "sourceLine": 21,
+          "sourceEndLine": 29
+        },
+        {
+          "name": "SelectTrigger",
+          "propsType": "SelectPrimitive.Trigger.Props & {\n  size?: \"sm\" | \"default\"\n}",
+          "defaults": {
+            "size": "\"default\""
+          },
+          "slots": [
+            "select-trigger"
+          ],
+          "sourceLine": 31,
+          "sourceEndLine": 64
+        },
+        {
+          "name": "SelectContent",
+          "propsType": "SelectPrimitive.Popup.Props &\n  Pick<\n    SelectPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\" | \"alignItemWithTrigger\"\n  >",
+          "defaults": {
+            "side": "\"bottom\"",
+            "sideOffset": "4",
+            "align": "\"center\"",
+            "alignOffset": "0",
+            "alignItemWithTrigger": "true"
+          },
+          "slots": [
+            "select-content"
+          ],
+          "sourceLine": 66,
+          "sourceEndLine": 106
+        },
+        {
+          "name": "SelectLabel",
+          "propsType": "SelectPrimitive.GroupLabel.Props",
+          "defaults": {},
+          "slots": [
+            "select-label"
+          ],
+          "sourceLine": 108,
+          "sourceEndLine": 119
+        },
+        {
+          "name": "SelectItem",
+          "propsType": "SelectPrimitive.Item.Props",
+          "defaults": {},
+          "slots": [
+            "select-item"
+          ],
+          "sourceLine": 121,
+          "sourceEndLine": 152
+        },
+        {
+          "name": "SelectSeparator",
+          "propsType": "SelectPrimitive.Separator.Props",
+          "defaults": {},
+          "slots": [
+            "select-separator"
+          ],
+          "sourceLine": 154,
+          "sourceEndLine": 165
+        },
+        {
+          "name": "SelectScrollUpButton",
+          "propsType": "React.ComponentProps<typeof SelectPrimitive.ScrollUpArrow>",
+          "defaults": {},
+          "slots": [
+            "select-scroll-up-button"
+          ],
+          "sourceLine": 167,
+          "sourceEndLine": 186
+        },
+        {
+          "name": "SelectScrollDownButton",
+          "propsType": "React.ComponentProps<typeof SelectPrimitive.ScrollDownArrow>",
+          "defaults": {},
+          "slots": [
+            "select-scroll-down-button"
+          ],
+          "sourceLine": 188,
+          "sourceEndLine": 207
+        }
+      ],
+      "aliases": [
+        {
+          "name": "Select",
+          "expression": "SelectPrimitive.Root"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "select"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/select.md.source"
+      ]
+    },
+    "separator": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/separator.tsx.source",
+      "exports": [
+        "Separator"
+      ],
+      "functions": [
+        {
+          "name": "Separator",
+          "propsType": "SeparatorPrimitive.Props",
+          "defaults": {
+            "orientation": "\"horizontal\""
+          },
+          "slots": [
+            "separator"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 22
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "separator"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/separator.md.source"
+      ]
+    },
+    "sheet": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source",
+      "exports": [
+        "Sheet",
+        "SheetTrigger",
+        "SheetClose",
+        "SheetContent",
+        "SheetHeader",
+        "SheetFooter",
+        "SheetTitle",
+        "SheetDescription"
+      ],
+      "functions": [
+        {
+          "name": "Sheet",
+          "propsType": "SheetPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "sheet"
+          ],
+          "sourceLine": 10,
+          "sourceEndLine": 12
+        },
+        {
+          "name": "SheetTrigger",
+          "propsType": "SheetPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "sheet-trigger"
+          ],
+          "sourceLine": 14,
+          "sourceEndLine": 16
+        },
+        {
+          "name": "SheetClose",
+          "propsType": "SheetPrimitive.Close.Props",
+          "defaults": {},
+          "slots": [
+            "sheet-close"
+          ],
+          "sourceLine": 18,
+          "sourceEndLine": 20
+        },
+        {
+          "name": "SheetContent",
+          "propsType": "SheetPrimitive.Popup.Props & {\n  side?: \"top\" | \"right\" | \"bottom\" | \"left\"\n  showCloseButton?: boolean\n}",
+          "defaults": {
+            "side": "\"right\"",
+            "showCloseButton": "true"
+          },
+          "slots": [
+            "sheet-content",
+            "sheet-close"
+          ],
+          "sourceLine": 39,
+          "sourceEndLine": 86
+        },
+        {
+          "name": "SheetHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sheet-header"
+          ],
+          "sourceLine": 88,
+          "sourceEndLine": 96
+        },
+        {
+          "name": "SheetFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sheet-footer"
+          ],
+          "sourceLine": 98,
+          "sourceEndLine": 106
+        },
+        {
+          "name": "SheetTitle",
+          "propsType": "SheetPrimitive.Title.Props",
+          "defaults": {},
+          "slots": [
+            "sheet-title"
+          ],
+          "sourceLine": 108,
+          "sourceEndLine": 116
+        },
+        {
+          "name": "SheetDescription",
+          "propsType": "SheetPrimitive.Description.Props",
+          "defaults": {},
+          "slots": [
+            "sheet-description"
+          ],
+          "sourceLine": 118,
+          "sourceEndLine": 129
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [
+        "dialog"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/dialog.md.source"
+      ]
+    },
+    "sidebar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/sidebar.tsx.source",
+      "exports": [
+        "Sidebar",
+        "SidebarContent",
+        "SidebarFooter",
+        "SidebarGroup",
+        "SidebarGroupAction",
+        "SidebarGroupContent",
+        "SidebarGroupLabel",
+        "SidebarHeader",
+        "SidebarInput",
+        "SidebarInset",
+        "SidebarMenu",
+        "SidebarMenuAction",
+        "SidebarMenuBadge",
+        "SidebarMenuButton",
+        "SidebarMenuItem",
+        "SidebarMenuSkeleton",
+        "SidebarMenuSub",
+        "SidebarMenuSubButton",
+        "SidebarMenuSubItem",
+        "SidebarProvider",
+        "SidebarRail",
+        "SidebarSeparator",
+        "SidebarTrigger",
+        "useSidebar"
+      ],
+      "functions": [
+        {
+          "name": "useSidebar",
+          "propsType": "No props parameter",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 47,
+          "sourceEndLine": 54
+        },
+        {
+          "name": "SidebarProvider",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  defaultOpen?: boolean\n  open?: boolean\n  onOpenChange?: (open: boolean) => void\n}",
+          "defaults": {
+            "defaultOpen": "true"
+          },
+          "slots": [
+            "sidebar-wrapper"
+          ],
+          "sourceLine": 56,
+          "sourceEndLine": 150
+        },
+        {
+          "name": "Sidebar",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  side?: \"left\" | \"right\"\n  variant?: \"sidebar\" | \"floating\" | \"inset\"\n  collapsible?: \"offcanvas\" | \"icon\" | \"none\"\n}",
+          "defaults": {
+            "side": "\"left\"",
+            "variant": "\"sidebar\"",
+            "collapsible": "\"offcanvas\""
+          },
+          "slots": [
+            "sidebar",
+            "sidebar",
+            "sidebar",
+            "sidebar-gap",
+            "sidebar-container",
+            "sidebar-inner"
+          ],
+          "sourceLine": 152,
+          "sourceEndLine": 252
+        },
+        {
+          "name": "SidebarTrigger",
+          "propsType": "React.ComponentProps<typeof Button>",
+          "defaults": {},
+          "slots": [
+            "sidebar-trigger"
+          ],
+          "sourceLine": 254,
+          "sourceEndLine": 285
+        },
+        {
+          "name": "SidebarRail",
+          "propsType": "React.ComponentProps<\"button\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-rail"
+          ],
+          "sourceLine": 287,
+          "sourceEndLine": 310
+        },
+        {
+          "name": "SidebarInset",
+          "propsType": "React.ComponentProps<\"main\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-inset"
+          ],
+          "sourceLine": 312,
+          "sourceEndLine": 323
+        },
+        {
+          "name": "SidebarInput",
+          "propsType": "React.ComponentProps<typeof Input>",
+          "defaults": {},
+          "slots": [
+            "sidebar-input"
+          ],
+          "sourceLine": 325,
+          "sourceEndLine": 337
+        },
+        {
+          "name": "SidebarHeader",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-header"
+          ],
+          "sourceLine": 339,
+          "sourceEndLine": 348
+        },
+        {
+          "name": "SidebarFooter",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-footer"
+          ],
+          "sourceLine": 350,
+          "sourceEndLine": 359
+        },
+        {
+          "name": "SidebarSeparator",
+          "propsType": "React.ComponentProps<typeof Separator>",
+          "defaults": {},
+          "slots": [
+            "sidebar-separator"
+          ],
+          "sourceLine": 361,
+          "sourceEndLine": 373
+        },
+        {
+          "name": "SidebarContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-content"
+          ],
+          "sourceLine": 375,
+          "sourceEndLine": 387
+        },
+        {
+          "name": "SidebarGroup",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-group"
+          ],
+          "sourceLine": 389,
+          "sourceEndLine": 401
+        },
+        {
+          "name": "SidebarGroupLabel",
+          "propsType": "useRender.ComponentProps<\"div\"> & React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 403,
+          "sourceEndLine": 425
+        },
+        {
+          "name": "SidebarGroupAction",
+          "propsType": "useRender.ComponentProps<\"button\"> & React.ComponentProps<\"button\">",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 427,
+          "sourceEndLine": 449
+        },
+        {
+          "name": "SidebarGroupContent",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-group-content"
+          ],
+          "sourceLine": 451,
+          "sourceEndLine": 463
+        },
+        {
+          "name": "SidebarMenu",
+          "propsType": "React.ComponentProps<\"ul\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-menu"
+          ],
+          "sourceLine": 465,
+          "sourceEndLine": 474
+        },
+        {
+          "name": "SidebarMenuItem",
+          "propsType": "React.ComponentProps<\"li\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-menu-item"
+          ],
+          "sourceLine": 476,
+          "sourceEndLine": 485
+        },
+        {
+          "name": "SidebarMenuButton",
+          "propsType": "useRender.ComponentProps<\"button\"> &\n  React.ComponentProps<\"button\"> & {\n    isActive?: boolean\n    tooltip?: string | React.ComponentProps<typeof TooltipContent>\n  } & VariantProps<typeof sidebarMenuButtonVariants>",
+          "defaults": {
+            "isActive": "false",
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [],
+          "sourceLine": 508,
+          "sourceEndLine": 560
+        },
+        {
+          "name": "SidebarMenuAction",
+          "propsType": "useRender.ComponentProps<\"button\"> &\n  React.ComponentProps<\"button\"> & {\n    showOnHover?: boolean\n  }",
+          "defaults": {
+            "showOnHover": "false"
+          },
+          "slots": [],
+          "sourceLine": 562,
+          "sourceEndLine": 590
+        },
+        {
+          "name": "SidebarMenuBadge",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-menu-badge"
+          ],
+          "sourceLine": 592,
+          "sourceEndLine": 607
+        },
+        {
+          "name": "SidebarMenuSkeleton",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  showIcon?: boolean\n}",
+          "defaults": {
+            "showIcon": "false"
+          },
+          "slots": [
+            "sidebar-menu-skeleton"
+          ],
+          "sourceLine": 609,
+          "sourceEndLine": 645
+        },
+        {
+          "name": "SidebarMenuSub",
+          "propsType": "React.ComponentProps<\"ul\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-menu-sub"
+          ],
+          "sourceLine": 647,
+          "sourceEndLine": 656
+        },
+        {
+          "name": "SidebarMenuSubItem",
+          "propsType": "React.ComponentProps<\"li\">",
+          "defaults": {},
+          "slots": [
+            "sidebar-menu-sub-item"
+          ],
+          "sourceLine": 658,
+          "sourceEndLine": 670
+        },
+        {
+          "name": "SidebarMenuSubButton",
+          "propsType": "useRender.ComponentProps<\"a\"> &\n  React.ComponentProps<\"a\"> & {\n    size?: \"sm\" | \"md\"\n    isActive?: boolean\n  }",
+          "defaults": {
+            "size": "\"md\"",
+            "isActive": "false"
+          },
+          "slots": [],
+          "sourceLine": 672,
+          "sourceEndLine": 702
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "tooltip"
+      ],
+      "primitiveModules": [
+        "merge-props",
+        "use-render"
+      ],
+      "primitiveDocs": []
+    },
+    "skeleton": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/skeleton.tsx.source",
+      "exports": [
+        "Skeleton"
+      ],
+      "functions": [
+        {
+          "name": "Skeleton",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "skeleton"
+          ],
+          "sourceLine": 3,
+          "sourceEndLine": 11
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "slider": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/slider.tsx.source",
+      "exports": [
+        "Slider"
+      ],
+      "functions": [
+        {
+          "name": "Slider",
+          "propsType": "SliderPrimitive.Root.Props",
+          "defaults": {
+            "min": "0",
+            "max": "100"
+          },
+          "slots": [
+            "slider",
+            "slider-track",
+            "slider-range",
+            "slider-thumb"
+          ],
+          "sourceLine": 4,
+          "sourceEndLine": 49
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "slider"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/slider.md.source"
+      ]
+    },
+    "spinner": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/spinner.tsx.source",
+      "exports": [
+        "Spinner"
+      ],
+      "functions": [
+        {
+          "name": "Spinner",
+          "propsType": "React.ComponentProps<\"svg\">",
+          "defaults": {},
+          "slots": [
+            "spinner"
+          ],
+          "sourceLine": 5,
+          "sourceEndLine": 20
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "table": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/table.tsx.source",
+      "exports": [
+        "Table",
+        "TableHeader",
+        "TableBody",
+        "TableFooter",
+        "TableHead",
+        "TableRow",
+        "TableCell",
+        "TableCaption"
+      ],
+      "functions": [
+        {
+          "name": "Table",
+          "propsType": "React.ComponentProps<\"table\">",
+          "defaults": {},
+          "slots": [
+            "table-container",
+            "table"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 16
+        },
+        {
+          "name": "TableHeader",
+          "propsType": "React.ComponentProps<\"thead\">",
+          "defaults": {},
+          "slots": [
+            "table-header"
+          ],
+          "sourceLine": 18,
+          "sourceEndLine": 26
+        },
+        {
+          "name": "TableBody",
+          "propsType": "React.ComponentProps<\"tbody\">",
+          "defaults": {},
+          "slots": [
+            "table-body"
+          ],
+          "sourceLine": 28,
+          "sourceEndLine": 36
+        },
+        {
+          "name": "TableFooter",
+          "propsType": "React.ComponentProps<\"tfoot\">",
+          "defaults": {},
+          "slots": [
+            "table-footer"
+          ],
+          "sourceLine": 38,
+          "sourceEndLine": 46
+        },
+        {
+          "name": "TableRow",
+          "propsType": "React.ComponentProps<\"tr\">",
+          "defaults": {},
+          "slots": [
+            "table-row"
+          ],
+          "sourceLine": 48,
+          "sourceEndLine": 56
+        },
+        {
+          "name": "TableHead",
+          "propsType": "React.ComponentProps<\"th\">",
+          "defaults": {},
+          "slots": [
+            "table-head"
+          ],
+          "sourceLine": 58,
+          "sourceEndLine": 66
+        },
+        {
+          "name": "TableCell",
+          "propsType": "React.ComponentProps<\"td\">",
+          "defaults": {},
+          "slots": [
+            "table-cell"
+          ],
+          "sourceLine": 68,
+          "sourceEndLine": 76
+        },
+        {
+          "name": "TableCaption",
+          "propsType": "React.ComponentProps<\"caption\">",
+          "defaults": {},
+          "slots": [
+            "table-caption"
+          ],
+          "sourceLine": 78,
+          "sourceEndLine": 89
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "tabs": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source",
+      "exports": [
+        "Tabs",
+        "TabsList",
+        "TabsTrigger",
+        "TabsContent",
+        "tabsListVariants"
+      ],
+      "functions": [
+        {
+          "name": "Tabs",
+          "propsType": "TabsPrimitive.Root.Props",
+          "defaults": {
+            "orientation": "\"horizontal\""
+          },
+          "slots": [
+            "tabs"
+          ],
+          "sourceLine": 7,
+          "sourceEndLine": 23
+        },
+        {
+          "name": "TabsList",
+          "propsType": "TabsPrimitive.List.Props & VariantProps<typeof tabsListVariants>",
+          "defaults": {
+            "variant": "\"default\""
+          },
+          "slots": [
+            "tabs-list"
+          ],
+          "sourceLine": 40,
+          "sourceEndLine": 53
+        },
+        {
+          "name": "TabsTrigger",
+          "propsType": "TabsPrimitive.Tab.Props",
+          "defaults": {},
+          "slots": [
+            "tabs-trigger"
+          ],
+          "sourceLine": 55,
+          "sourceEndLine": 69
+        },
+        {
+          "name": "TabsContent",
+          "propsType": "TabsPrimitive.Panel.Props",
+          "defaults": {},
+          "slots": [
+            "tabs-content"
+          ],
+          "sourceLine": 71,
+          "sourceEndLine": 79
+        }
+      ],
+      "aliases": [
+        {
+          "name": "tabsListVariants",
+          "expression": "cva(\n  \"cn-tabs-list group/tabs-list inline-flex w-fit items-center justify-center text-muted-foreground group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col\",\n  {\n    variants: {\n      variant: {\n        default: \"cn-tabs-list-variant-default bg-muted\",\n        line: \"cn-tabs-list-variant-line gap-1 bg-transparent\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [
+        "tabs"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/tabs.md.source"
+      ]
+    },
+    "textarea": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/textarea.tsx.source",
+      "exports": [
+        "Textarea"
+      ],
+      "functions": [
+        {
+          "name": "Textarea",
+          "propsType": "React.ComponentProps<\"textarea\">",
+          "defaults": {},
+          "slots": [
+            "textarea"
+          ],
+          "sourceLine": 4,
+          "sourceEndLine": 15
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "toast": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source",
+      "exports": [
+        "Toaster",
+        "Toast",
+        "ToastAction",
+        "ToastClose",
+        "ToastContent",
+        "ToastDescription",
+        "ToastPortal",
+        "ToastProvider",
+        "ToastTitle",
+        "ToastViewport",
+        "createToastManager",
+        "toast",
+        "useToastManager"
+      ],
+      "functions": [
+        {
+          "name": "ToastProvider",
+          "propsType": "ToastPrimitive.Provider.Props",
+          "defaults": {},
+          "slots": [],
+          "sourceLine": 12,
+          "sourceEndLine": 14
+        },
+        {
+          "name": "ToastPortal",
+          "propsType": "ToastPrimitive.Portal.Props",
+          "defaults": {},
+          "slots": [
+            "toast-portal"
+          ],
+          "sourceLine": 16,
+          "sourceEndLine": 18
+        },
+        {
+          "name": "ToastViewport",
+          "propsType": "ToastPrimitive.Viewport.Props",
+          "defaults": {},
+          "slots": [
+            "toast-viewport"
+          ],
+          "sourceLine": 20,
+          "sourceEndLine": 31
+        },
+        {
+          "name": "Toast",
+          "propsType": "ToastPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "toast"
+          ],
+          "sourceLine": 33,
+          "sourceEndLine": 58
+        },
+        {
+          "name": "ToastContent",
+          "propsType": "ToastPrimitive.Content.Props",
+          "defaults": {},
+          "slots": [
+            "toast-content"
+          ],
+          "sourceLine": 60,
+          "sourceEndLine": 71
+        },
+        {
+          "name": "ToastTitle",
+          "propsType": "ToastPrimitive.Title.Props",
+          "defaults": {},
+          "slots": [
+            "toast-title"
+          ],
+          "sourceLine": 73,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ToastDescription",
+          "propsType": "ToastPrimitive.Description.Props",
+          "defaults": {},
+          "slots": [
+            "toast-description"
+          ],
+          "sourceLine": 83,
+          "sourceEndLine": 94
+        },
+        {
+          "name": "ToastAction",
+          "propsType": "ToastPrimitive.Action.Props",
+          "defaults": {
+            "render": "<Button variant=\"outline\" size=\"sm\" />"
+          },
+          "slots": [
+            "toast-action"
+          ],
+          "sourceLine": 96,
+          "sourceEndLine": 109
+        },
+        {
+          "name": "ToastClose",
+          "propsType": "ToastPrimitive.Close.Props",
+          "defaults": {
+            "render": "<Button variant=\"ghost\" size=\"icon-sm\" />"
+          },
+          "slots": [
+            "toast-close"
+          ],
+          "sourceLine": 111,
+          "sourceEndLine": 140
+        },
+        {
+          "name": "Toaster",
+          "propsType": "ToastPrimitive.Provider.Props",
+          "defaults": {
+            "toastManager": "toast"
+          },
+          "slots": [],
+          "sourceLine": 244,
+          "sourceEndLine": 259
+        }
+      ],
+      "aliases": [
+        {
+          "name": "toast",
+          "expression": "ToastPrimitive.createToastManager()"
+        },
+        {
+          "name": "createToastManager",
+          "expression": "ToastPrimitive.createToastManager"
+        },
+        {
+          "name": "useToastManager",
+          "expression": "ToastPrimitive.useToastManager"
+        }
+      ],
+      "composition": [
+        "button"
+      ],
+      "primitiveModules": [
+        "toast"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/toast.md.source"
+      ]
+    },
+    "toggle-group": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/toggle-group.tsx.source",
+      "exports": [
+        "ToggleGroup",
+        "ToggleGroupItem"
+      ],
+      "functions": [
+        {
+          "name": "ToggleGroup",
+          "propsType": "ToggleGroupPrimitive.Props &\n  VariantProps<typeof toggleVariants> & {\n    spacing?: number\n    orientation?: \"horizontal\" | \"vertical\"\n  }",
+          "defaults": {
+            "spacing": "2",
+            "orientation": "\"horizontal\""
+          },
+          "slots": [
+            "toggle-group"
+          ],
+          "sourceLine": 23,
+          "sourceEndLine": 57
+        },
+        {
+          "name": "ToggleGroupItem",
+          "propsType": "TogglePrimitive.Props & VariantProps<typeof toggleVariants>",
+          "defaults": {
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [
+            "toggle-group-item"
+          ],
+          "sourceLine": 59,
+          "sourceEndLine": 87
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "toggle"
+      ],
+      "primitiveModules": [
+        "toggle",
+        "toggle-group"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/toggle.md.source",
+        "sources/base-ui-1.9.0/docs/toggle-group.md.source"
+      ],
+      "supplementaryFunctions": [
+        {
+          "name": "Toggle",
+          "sourcePath": "sources/shadcn/apps/v4/registry/bases/base/ui/toggle.tsx.source",
+          "propsType": "TogglePrimitive.Props & VariantProps<typeof toggleVariants>",
+          "defaults": {
+            "variant": "\"default\"",
+            "size": "\"default\""
+          },
+          "slots": [
+            "toggle"
+          ],
+          "sourceLine": 28,
+          "sourceEndLine": 41
+        }
+      ]
+    },
+    "tooltip": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source",
+      "exports": [
+        "Tooltip",
+        "TooltipTrigger",
+        "TooltipContent",
+        "TooltipProvider"
+      ],
+      "functions": [
+        {
+          "name": "TooltipProvider",
+          "propsType": "TooltipPrimitive.Provider.Props",
+          "defaults": {
+            "delay": "0"
+          },
+          "slots": [
+            "tooltip-provider"
+          ],
+          "sourceLine": 6,
+          "sourceEndLine": 17
+        },
+        {
+          "name": "Tooltip",
+          "propsType": "TooltipPrimitive.Root.Props",
+          "defaults": {},
+          "slots": [
+            "tooltip"
+          ],
+          "sourceLine": 19,
+          "sourceEndLine": 21
+        },
+        {
+          "name": "TooltipTrigger",
+          "propsType": "TooltipPrimitive.Trigger.Props",
+          "defaults": {},
+          "slots": [
+            "tooltip-trigger"
+          ],
+          "sourceLine": 23,
+          "sourceEndLine": 25
+        },
+        {
+          "name": "TooltipContent",
+          "propsType": "TooltipPrimitive.Popup.Props &\n  Pick<\n    TooltipPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >",
+          "defaults": {
+            "side": "\"top\"",
+            "sideOffset": "4",
+            "align": "\"center\"",
+            "alignOffset": "0"
+          },
+          "slots": [
+            "tooltip-content"
+          ],
+          "sourceLine": 27,
+          "sourceEndLine": 63
+        }
+      ],
+      "aliases": [],
+      "composition": [],
+      "primitiveModules": [
+        "tooltip"
+      ],
+      "primitiveDocs": [
+        "sources/base-ui-1.9.0/docs/tooltip.md.source"
+      ]
+    },
+    "trace": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/trace.tsx.source",
+      "exports": [
+        "Trace",
+        "TraceLine",
+        "TraceIcon",
+        "TraceTitle",
+        "TraceDescription",
+        "TraceCollapsible",
+        "TraceCollapsibleTrigger",
+        "TraceCollapsibleContent"
+      ],
+      "functions": [
+        {
+          "name": "Trace",
+          "propsType": "React.ComponentProps<\"div\">",
+          "defaults": {},
+          "slots": [
+            "trace"
+          ],
+          "sourceLine": 11,
+          "sourceEndLine": 22
+        },
+        {
+          "name": "TraceLine",
+          "propsType": "React.ComponentProps<\"span\"> & {\n  status?: \"running\" | \"error\" | \"pending\"\n}",
+          "defaults": {},
+          "slots": [
+            "trace-line"
+          ],
+          "sourceLine": 24,
+          "sourceEndLine": 42
+        },
+        {
+          "name": "TraceIcon",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "trace-icon"
+          ],
+          "sourceLine": 44,
+          "sourceEndLine": 56
+        },
+        {
+          "name": "TraceTitle",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "trace-title"
+          ],
+          "sourceLine": 58,
+          "sourceEndLine": 69
+        },
+        {
+          "name": "TraceDescription",
+          "propsType": "React.ComponentProps<\"span\">",
+          "defaults": {},
+          "slots": [
+            "trace-description"
+          ],
+          "sourceLine": 71,
+          "sourceEndLine": 85
+        },
+        {
+          "name": "TraceCollapsible",
+          "propsType": "Omit<React.ComponentProps<typeof Collapsible>, \"open\"> &\n  (\n    | { open?: undefined }\n    | {\n        open: boolean\n        onOpenChange: NonNullable<\n          React.ComponentProps<typeof Collapsible>[\"onOpenChange\"]\n        >\n      }\n  )",
+          "defaults": {},
+          "slots": [
+            "trace-collapsible"
+          ],
+          "sourceLine": 87,
+          "sourceEndLine": 110
+        },
+        {
+          "name": "TraceCollapsibleTrigger",
+          "propsType": "React.ComponentProps<typeof CollapsibleTrigger>",
+          "defaults": {},
+          "slots": [
+            "trace-collapsible-trigger"
+          ],
+          "sourceLine": 112,
+          "sourceEndLine": 138
+        },
+        {
+          "name": "TraceCollapsibleContent",
+          "propsType": "React.ComponentProps<typeof CollapsibleContent>",
+          "defaults": {},
+          "slots": [
+            "trace-collapsible-content",
+            "trace-collapsible-content-inner"
+          ],
+          "sourceLine": 140,
+          "sourceEndLine": 162
+        }
+      ],
+      "aliases": [],
+      "composition": [
+        "collapsible"
+      ],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-area": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-bar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-line": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-pie": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-radar": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-radial": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    },
+    "chart-tooltip": {
+      "kind": "react-source-wrapper",
+      "path": "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+      "exports": [
+        "ChartConfig",
+        "ChartContainer",
+        "ChartTooltip",
+        "ChartTooltipContent",
+        "ChartLegend",
+        "ChartLegendContent",
+        "ChartStyle"
+      ],
+      "functions": [
+        {
+          "name": "ChartContainer",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}",
+          "defaults": {
+            "initialDimension": "INITIAL_DIMENSION"
+          },
+          "slots": [
+            "chart"
+          ],
+          "sourceLine": 41,
+          "sourceEndLine": 81
+        },
+        {
+          "name": "ChartTooltipContent",
+          "propsType": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >",
+          "defaults": {
+            "indicator": "\"dot\"",
+            "hideLabel": "false",
+            "hideIndicator": "false"
+          },
+          "slots": [],
+          "sourceLine": 118,
+          "sourceEndLine": 267
+        },
+        {
+          "name": "ChartLegendContent",
+          "propsType": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps",
+          "defaults": {
+            "hideIcon": "false",
+            "verticalAlign": "\"bottom\""
+          },
+          "slots": [],
+          "sourceLine": 271,
+          "sourceEndLine": 324
+        }
+      ],
+      "aliases": [
+        {
+          "name": "ChartStyle",
+          "expression": "({ id, config }: { id: string; config: ChartConfig }) => {\n  const colorConfig = Object.entries(config).filter(\n    ([, config]) => config.theme ?? config.color\n  )\n\n  if (!colorConfig.length) {\n    return null\n  }\n\n  return (\n    <style\n      dangerouslySetInnerHTML={{\n        __html: Object.entries(THEMES)\n          .map(\n            ([theme, prefix]) => `\n${prefix} [data-chart=${id}] {\n${colorConfig\n  .map(([key, itemConfig]) => {\n    const color =\n      itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ??\n      itemConfig.color\n    return color ? `  --color-${key}: ${color};` : null\n  })\n  .join(\"\\n\")}\n}\n`\n          )\n          .join(\"\\n\"),\n      }}\n    />\n  )\n}"
+        },
+        {
+          "name": "ChartTooltip",
+          "expression": "RechartsPrimitive.Tooltip"
+        },
+        {
+          "name": "ChartLegend",
+          "expression": "RechartsPrimitive.Legend"
+        }
+      ],
+      "composition": [],
+      "primitiveModules": [],
+      "primitiveDocs": []
+    }
+  }
+}

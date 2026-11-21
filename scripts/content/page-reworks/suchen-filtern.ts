@@ -1,8 +1,8 @@
 import type { Page } from '../../../src/payload-types'
 
 export const release = {
-  "expectedUpdatedAt": "2026-11-20T08:04:53.481Z",
-  "summary": "Projekte sofort nach ID oder Name und Status finden; Live-Beispiel, Zustände sowie Vertrag für URL und Rückkehr.",
+  "expectedUpdatedAt": "2026-11-20T14:24:17.633Z",
+  "summary": "Gestalte eine Projektliste mit sofortiger Suche, Statusfilter und einem Rückweg zu denselben Suchkriterien.",
   "content": [
     {
       "blockType": "text",
@@ -34,7 +34,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Nach ID oder Name suchen und mit Status eingrenzen: Jede Änderung zeigt sofort die passende Menge."
+                  "text": "Suche nach ID oder Name und grenze die Ergebnisse nach Status ein. Die Liste reagiert sofort."
                 }
               ]
             },
@@ -45,7 +45,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Lokale Vorschau mit drei festen Projekten. Such- und Detailansicht sind bedienbar; URL, Browser-Zurück, Bearbeitung und Erstellung sind hier keine implementierte Projektanwendung. Der vollständige Vertrag steht unten."
+                  "text": "Probiere Suche und Detailansicht mit drei festen Projekten aus. Die Vorschau setzt URL-Verhalten, Browser-Zurück, Bearbeitung und Erstellung noch nicht um. Die Regeln dafür findest du in der Vertiefung."
                 }
               ]
             },
@@ -243,7 +243,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Aktive Projekte erlauben Namensbearbeitung; archivierte Projekte sind nur lesbar. ID und Status werden vom System gesetzt. Die Bearbeitung folgt dem Formularvertrag."
+                  "text": "Bei aktiven Projekten lässt sich der Name bearbeiten; archivierte Projekte sind nur lesbar. Das System setzt ID und Status. Für die Bearbeitung gelten die Regeln unter «Formulare und Validierung»."
                 }
               ]
             },
@@ -276,7 +276,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Patternkandidaten →"
+                  "text": "UX-Patterns →"
                 }
               ]
             },
@@ -287,7 +287,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Anschlussseiten"
+                  "text": "Weiterführende Seiten"
                 }
               ]
             }
@@ -385,7 +385,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "1 · Sofort und vollständig: Höchstens 50 Projekte lokal durchsuchen. ID oder Name als zusammenhängender Teilstring, ohne Gross-/Kleinschreibung; Suche UND Status. Leere Suche trifft alle IDs und Namen. Namen nach de-CH, bei gleichem Sortierwert ID aufsteigend."
+                  "text": "1 · Sofort suchen: Die Suche durchsucht den vollständigen Bestand von höchstens 50 Projekten lokal nach ID oder Name. Der Statusfilter grenzt die Ergebnisse zusätzlich ein. Die genauen Such- und Reihenfolgeregeln stehen in der Vertiefung."
                 }
               ]
             },
@@ -396,7 +396,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "2 · Kriterien und Ergebnis zusammen zeigen: Suche und Status stehen vor Ergebniszahl und Liste. Die Zahl wird ruhig angekündigt; der Fokus bleibt am bedienten Element. Reset leert die Suche und setzt Status auf Alle. «Projekt erstellen» bleibt auch bei Ergebnissen und Nulltreffern sichtbar."
+                  "text": "2 · Kriterien und Ergebnisse zusammen zeigen: Suche und Status stehen vor Ergebniszahl und Liste. Kündige die neue Zahl als Statusmeldung an, ohne den Fokus zu verschieben. «Suche zurücksetzen» leert die Suche und setzt den Status auf Alle. «Projekt erstellen» bleibt auch bei vorhandenen Ergebnissen und ohne Treffer sichtbar."
                 }
               ]
             },
@@ -407,7 +407,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "3 · Zum selben Suchkontext zurückkehren: q/status bleiben bei Liste, Detail und Bearbeitung erhalten. Rückkehr berechnet die Menge neu und fokussiert den Link derselben ID; fehlt sie, die Ergebnisüberschrift. Die vollständige URL- und Fokusmatrix bleibt verbindlich."
+                  "text": "3 · Zu denselben Suchkriterien zurückkehren: Behalte Suche und Status beim Öffnen und Bearbeiten eines Projekts bei. Berechne bei der Rückkehr die Ergebnisse neu und setze den Fokus auf den Link desselben Projekts. Ist es nicht mehr enthalten, erhält die Ergebnisüberschrift den Fokus."
                 }
               ]
             }
@@ -434,7 +434,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Ergebnisse, Nulltreffer und Erstleere"
+                  "text": "Ergebnisse, keine Treffer oder noch keine Projekte"
                 }
               ]
             },
@@ -445,7 +445,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Passende Ergebnisse · q=ALP, Status Alle → 2 Projekte: P-101 Alpen, P-102 Alpen Archiv. Mit Aktiv → 1 Projekt: P-101 Alpen. q=102, Archiviert → P-102."
+                  "text": "Passende Ergebnisse · q=ALP und Status Alle zeigen 2 Projekte: P-101 Alpen und P-102 Alpen Archiv. Mit Aktiv bleibt 1 Projekt: P-101 Alpen. q=102 und Archiviert zeigen P-102."
                 }
               ]
             },
@@ -456,7 +456,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Nulltreffer · Bestand vorhanden, q=Tal → 0 Projekte. «Keine Projekte für diese Suche.» / «Suchbegriff oder Status anpassen.» / «Suche zurücksetzen». Kriterien bleiben sichtbar; «Projekt erstellen» bleibt erreichbar."
+                  "text": "Keine Treffer · Es gibt Projekte, aber für q=Tal passt keines. Zeige «Keine Projekte für diese Suche.», «Suchbegriff oder Status anpassen.» und «Suche zurücksetzen». Die Kriterien bleiben sichtbar und «Projekt erstellen» bleibt erreichbar."
                 }
               ]
             },
@@ -467,7 +467,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Erstleere · Vollständiger Bestand leer → «Noch keine Projekte.» / «Projekt erstellen». Keine Aufforderung, Filter zu korrigieren. Reset erzeugt keine Daten."
+                  "text": "Noch keine Projekte · Ist der gesamte Bestand leer, zeige «Noch keine Projekte.» und «Projekt erstellen». Fordere nicht zur Änderung der Filter auf. Zurücksetzen erzeugt keine Daten."
                 }
               ]
             },
@@ -505,7 +505,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "URL und Rückkehr · Produktvertrag"
+                  "text": "Suchkriterien in der URL erhalten"
                 }
               ]
             },
@@ -516,7 +516,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Liste: q/status bei jeder Änderung in der URL aktualisieren, ohne Historieneintrag pro Zeichen. Reload und Direktlink übernehmen Kriterien. Fehlendes q bedeutet leere Suche; fehlender oder ungültiger status bedeutet Alle. Ungültigen Status erklären, q erhalten."
+                  "text": "Aktualisiere q/status bei jeder Änderung in der URL, ohne für jedes Zeichen einen Eintrag im Browserverlauf anzulegen. Beim Neuladen und bei Direktlinks gelten diese Kriterien. Fehlt q, ist das Suchfeld leer. Fehlt status oder ist der Wert ungültig, gilt Alle. Erkläre einen zurückgesetzten ungültigen Status und behalte q bei."
                 }
               ]
             },
@@ -527,7 +527,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Detail und Bearbeitung: q/status mitführen; ausdrücklicher Rücklink und Browser-Zurück liefern dieselben Kriterien. Rückkehr zur stabilen ID, nie zur alten Zeilennummer. Ist das Projekt nach Umbenennung nicht mehr enthalten, Ergebnisüberschrift fokussieren und den Grund kurz erklären."
+                  "text": "Übernimm q/status in Detailansicht und Bearbeitung. Rücklink und Browser-Zurück führen zu denselben Kriterien. Finde das zuvor geöffnete Projekt anhand seiner stabilen ID wieder, niemals anhand der alten Zeilennummer. Passt es nach einer Umbenennung nicht mehr, setze den Fokus auf die Ergebnisüberschrift und erkläre kurz den Grund."
                 }
               ]
             },
@@ -538,7 +538,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Erstellen: Der immer sichtbare Einstieg führt zum leeren Formular und trägt q/status mit. Ein neuer Direktaufruf oder Reload der Liste erzwingt keinen Fokus in der Suche. Ausserhalb der URL ist keine sitzungsübergreifende Speicherung zugesagt."
+                  "text": "«Projekt erstellen» bleibt sichtbar, führt zum leeren Formular und übernimmt q/status. Setze bei einem neuen Direktaufruf oder beim Neuladen der Liste den Fokus nicht ungefragt in die Suche. Eine zusätzliche Speicherung der Kriterien über Sitzungen hinweg ausserhalb der URL wird nicht zugesichert."
                 }
               ]
             }
@@ -576,7 +576,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "UX-001 · Filter anwenden: Kriterien zuerst entwerfen, dann ausdrücklich übernehmen. In der Referenzaufnahme leert Reset zunächst den Entwurf; erst erneutes Anwenden übernimmt die Rücksetzung."
+                  "text": "UX-001 · Filter anwenden: Wähle zuerst die Kriterien und übernimm sie dann mit «Anwenden». Im untersuchten Beispiel leert «Zurücksetzen» zunächst nur die noch nicht angewendeten Eingaben. Erst «Anwenden» setzt auch die gefilterten Ergebnisse zurück."
                 }
               ]
             },
@@ -587,7 +587,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "UX-002 · Liste sofort filtern: Jede Eingabe grenzt vorhandene Zeilen ein; Leeren zeigt sie wieder. Unser Projektpilot nutzt dieses Live-Verhalten mit seinen unten dokumentierten fachlichen Suchregeln. Keine zusätzliche Anwenden-Aktion."
+                  "text": "UX-002 · Liste sofort filtern: Jede Eingabe grenzt vorhandene Zeilen ein; Leeren zeigt sie wieder. Das Projektbeispiel nutzt dieses Verhalten mit den Suchregeln aus der Vertiefung. Eine zusätzliche Aktion «Anwenden» ist nicht vorgesehen."
                 }
               ]
             },
@@ -598,7 +598,7 @@ export const release = {
                 {
                   "type": "text",
                   "version": 1,
-                  "text": "Beide Einträge sind Kandidaten aus einer Referenzaufnahme. Sie belegen weder fachliche Suchkorrektheit noch Persistenz; die Projektentscheidung ist eine lokale Referenz und keine allgemeine shadcn-Regel."
+                  "text": "Beide Muster wurden in einer Referenzoberfläche beobachtet. Damit ist noch nicht geprüft, ob die Suche fachlich korrekte Ergebnisse liefert oder Kriterien dauerhaft speichert. Die Festlegung für das Projektbeispiel gilt nur hier; sie ist keine allgemeine shadcn-Regel."
                 }
               ]
             }
@@ -642,7 +642,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Für Web auf Desktop und schmalen Ansichten, Sprache de-CH: Eine vollständige Menge von höchstens 50 Projekten wird sofort lokal durchsucht. Suche nach ID oder Projektname, ohne Gross-/Kleinschreibung, als zusammenhängender Teilstring. Der Statusfilter «Alle / Aktiv / Archiviert» wird mit der Suche über UND kombiniert. Leere Suche trifft alle Namen und IDs. Der Hinweis «Suche und Filter wirken sofort» steht bei den Eingaben.",
+                  "text": "Für die Weboberfläche auf Desktop und in schmalen Ansichten gilt de-CH als Sprache. Durchsuche den vollständigen Bestand von höchstens 50 Projekten sofort lokal. Der Suchbegriff muss als zusammenhängende Zeichenfolge in der ID oder im Projektnamen vorkommen; Gross- und Kleinschreibung spielen keine Rolle. Zusätzlich muss der gewählte Status «Alle / Aktiv / Archiviert» passen: Suche und Status sind mit UND verknüpft. Bei leerem Suchfeld schränkt nur der Statusfilter die Ergebnisse ein. Zeige bei den Eingaben den Hinweis «Suche und Filter wirken sofort».",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -660,7 +660,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Die geladene Projektübersicht bietet immer den Einstieg «Projekt erstellen», auch bei vorhandenen Ergebnissen und Nulltreffern. Er führt zum leeren Erstellformular und trägt q/status mit. Die Liste zeigt ID, Projektname und Status. Reihenfolge: Projektname nach de-CH, bei gleichem Sortierwert ID aufsteigend. Es gibt Einzelöffnung, keine Mehrfachauswahl, Massenaktionen, Seitennavigation oder Sortiersteuerung. Bei mehr als 50 Einträgen, Teilmengen oder Serverabfragen muss das Produkt Such-, Mengen- und Antwortverhalten neu entscheiden; eine Teilmenge darf nicht als vollständiges Ergebnis erscheinen.",
+                  "text": "Die geladene Projektübersicht zeigt immer «Projekt erstellen», auch bei vorhandenen Ergebnissen und ohne Treffer. Der Link führt zum leeren Erstellformular und übernimmt q/status. Jedes Ergebnis zeigt ID, Projektname und Status. Ordne die Projekte nach Namen gemäss de-CH und bei gleichem Sortierwert aufsteigend nach ID. Projekte lassen sich einzeln öffnen; Mehrfachauswahl, Massenaktionen, Aufteilung auf mehrere Ergebnisseiten und eine wählbare Sortierung sind nicht vorgesehen. Bei mehr als 50 Einträgen, unvollständigem Bestand oder Serverabfragen muss das Team Suche, Ergebnismenge und Rückmeldungen neu festlegen. Zeige eine Teilmenge niemals als vollständiges Ergebnis an.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -678,7 +678,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Diese Festlegung konkretisiert FIND-01/02/05/07 als lokale fachliche Referenzentscheidung, nicht als shadcn-Upstream- oder Firmenregel. Der gemeinsame Pilot führt Datenmodell, Grenzen und offenen Review. Das Rechnungsbeispiel bleibt ein anderes, begrenztes Beispiel.",
+                  "text": "Diese Festlegung konkretisiert FIND-01/02/05/07 für das Projektbeispiel. Sie stammt weder aus shadcn selbst noch ist sie eine allgemeine Unternehmensregel. Datenmodell, Grenzen und noch offene Prüfungen stehen unter «Mit dem Handbuch gestalten». Das Rechnungsbeispiel hat einen eigenen, begrenzten Umfang.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -698,16 +698,16 @@ export const release = {
     {
       "id": "6affff25d3d9c0a5c8401b43",
       "title": "Von der Übersicht zum Projekt und zurück",
-      "summary": "Statische, übertragbare Aufgabenreferenz: Die Übersicht bietet den bezeichneten Einstieg «Projekte». Die Liste trägt dieselbe Überschrift. Die Suchregion steht vor Ergebniszahl und Ergebnissen; ein Projektname als Link öffnet genau ein Detail.",
-      "caption": "Statische Ablaufstudie, keine neue Projektanwendung und kein Implementierungsnachweis. Die unabhängige Gestaltungsprüfung mit den untenstehenden Fällen steht aus.",
-      "source": "Lokale Pilotentscheidung vom 18.11.2026; bestehende Such-, Detail- und Zustandsregeln zusammengeführt. FIND-01–08 und PAT-11/14, LAY-11/13/15 sind die redaktionelle Prüfbasis.",
+      "summary": "So ist der Ablauf vorgesehen: Die Übersicht bietet den Einstieg «Projekte». Die Liste trägt dieselbe Überschrift. Suche und Filter stehen vor Ergebniszahl und Ergebnissen. Der verlinkte Projektname öffnet genau ein Detail.",
+      "caption": "Der Ablauf zeigt den geplanten Entwurf, keine fertige Projektanwendung. Die unabhängige Gestaltungsprüfung mit den untenstehenden Fällen steht noch aus.",
+      "source": "Festlegung für das Projektbeispiel vom 18.11.2026. Sie führt bestehende Such-, Detail- und Zustandsregeln zusammen und stützt sich auf FIND-01–08, PAT-11/14 und LAY-11/13/15.",
       "blockName": null,
       "steps": [
         {
           "id": "6affff25d3d9c0a5c8401b3f",
           "key": "einstieg",
           "title": "Projekte öffnen",
-          "description": "Übersicht → «Projekte». Zuerst Seitenüberschrift, dann sichtbar beschriftete «Projekte suchen»-Eingabe und «Status»-Auswahl, danach «N Projekte» und Ergebnisse.",
+          "description": "Öffne in der Übersicht «Projekte». Auf der Liste folgen auf die Seitenüberschrift das Suchfeld «Projekte suchen» und die Auswahl «Status», beide mit sichtbarer Beschriftung. Darunter stehen «N Projekte» und die Ergebnisse.",
           "next": "Nach ID oder Name suchen und bei Bedarf Status eingrenzen.",
           "tone": "normal"
         },
@@ -715,24 +715,24 @@ export const release = {
           "id": "6affff25d3d9c0a5c8401b40",
           "key": "eingrenzen",
           "title": "Ergebnis verstehen",
-          "description": "Jede Änderung wirkt sofort. Eingabefokus bleibt erhalten; die aktualisierte Ergebniszahl wird ruhig als Status angekündigt. Sichtbare Kriterien bleiben in Suche und Statusauswahl erkennbar. «Suche zurücksetzen» leert q und setzt Status auf Alle; Daten bleiben erhalten.",
+          "description": "Jede Änderung wirkt sofort. Der Fokus bleibt an der Eingabe; die neue Ergebniszahl wird als Statusmeldung angekündigt. Suchbegriff und Status bleiben in den Eingaben sichtbar. «Suche zurücksetzen» leert q und setzt den Status auf Alle. Die Daten bleiben erhalten.",
           "next": "Ein Ergebnis über seinen Projektnamen öffnen.",
           "tone": "normal"
         },
         {
           "id": "6affff25d3d9c0a5c8401b41",
           "key": "detail",
-          "title": "Identität und Handlung prüfen",
-          "description": "Detail zeigt dieselbe ID, denselben Namen und Status. Aktive Projekte erlauben Namensbearbeitung; archivierte sind nur lesbar. ID und Status werden vom System gesetzt. Keine Archivieren-Aktion im Pilot.",
-          "next": "Bei Aktiv bei Bedarf bearbeiten; sonst oder danach «Zurück zu Projekten».",
+          "title": "Projekt prüfen und bei Bedarf bearbeiten",
+          "description": "Die Detailansicht zeigt dieselbe ID, denselben Namen und Status. Bei aktiven Projekten lässt sich der Name bearbeiten; archivierte sind nur lesbar. Das System setzt ID und Status. Das Projektbeispiel bietet keine Aktion zum Archivieren.",
+          "next": "Bearbeite bei Bedarf den Namen eines aktiven Projekts. Kehre mit «Zurück zu Projekten» zur Liste zurück.",
           "tone": "normal"
         },
         {
           "id": "6affff25d3d9c0a5c8401b42",
           "key": "rueckkehr",
           "title": "Im Suchkontext weiterarbeiten",
-          "description": "Detail und Bearbeitung tragen q/status weiter. Explizite Rückkehr und Browser-Zurück stellen dieselben Kriterien her. Die Liste berechnet Ergebnisse aus dem aktuellen Bestand neu. Fokus und sichtbare Position kehren zum Ergebnislink der geöffneten ID zurück, wenn er noch vorkommt.",
-          "next": "Fehlt die ID im Ergebnis, Fokus zur Ergebnisüberschrift; kurz erklären: «Das zuvor geöffnete Projekt ist in diesen Ergebnissen nicht enthalten.»",
+          "description": "Detailansicht und Bearbeitung übernehmen q/status. Sowohl der Rücklink als auch Browser-Zurück führen zu denselben Kriterien. Die Liste berechnet die Ergebnisse aus dem aktuellen Bestand neu. Ist das zuvor geöffnete Projekt noch enthalten, erhält sein Link den Fokus und wird wieder an seiner sichtbaren Position angezeigt.",
+          "next": "Fehlt das Projekt im Ergebnis, setze den Fokus auf die Ergebnisüberschrift. Erkläre kurz: «Das zuvor geöffnete Projekt ist in diesen Ergebnissen nicht enthalten.»",
           "tone": "success"
         }
       ],
@@ -756,7 +756,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Kontextmatrix · Rückkehr, Reload und Direktlink",
+                  "text": "Rückkehr, Neuladen und Direktlinks",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -774,7 +774,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Liste: q und status sind URL-gebunden und werden bei jeder Änderung aktualisiert. Eingaben erzeugen keine Browser-Historie pro Zeichen; das Öffnen eines Details bleibt ein eigener Navigationsschritt. Reload und Direktlink übernehmen die URL-Kriterien. Ohne q gilt leere Suche, ohne status «Alle». Ungültiger Status fällt auf «Alle» zurück und wird als zurückgesetzter Filter erklärt; q bleibt erhalten.",
+                  "text": "Aktualisiere q und status bei jeder Änderung in der URL der Liste. Lege dabei keinen Eintrag im Browserverlauf pro eingegebenem Zeichen an. Das Öffnen einer Detailansicht bleibt ein eigener Navigationsschritt. Beim Neuladen und bei Direktlinks gelten die Kriterien aus der URL. Fehlt q, ist das Suchfeld leer; fehlt status, gilt «Alle». Setze einen ungültigen Status auf «Alle» zurück und erkläre, dass der Filter zurückgesetzt wurde. q bleibt dabei erhalten.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -792,7 +792,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Detail und Bearbeitung: q/status gehören auch zu diesen Rückwegen. Direkt geöffnetes Detail mit Kriterien führt zur entsprechend gefilterten Liste; ohne Kriterien zu allen Projekten. Browser-Zurück und der ausdrückliche Listenrücklink liefern dieselben Kriterien. Beim Zurückkehren nach Namensänderung kann das Projekt seine Position wechseln oder aus dem Ergebnis fallen: ID ist die stabile Zuordnung, nie die alte Zeilennummer.",
+                  "text": "Übernimm q/status auch in die Rückwege aus Detailansicht und Bearbeitung. Ein Direktlink zum Detail mit Suchkriterien führt zurück zur entsprechend gefilterten Liste; ohne Kriterien führt er zu allen Projekten. Browser-Zurück und der Rücklink zur Liste stellen dieselben Kriterien wieder her. Nach einer Namensänderung kann das Projekt an anderer Stelle stehen oder nicht mehr zu den Kriterien passen. Ordne es deshalb anhand seiner stabilen ID zu, niemals anhand der alten Zeilennummer.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -810,7 +810,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Fokusmatrix: Rückkehr aus Detail oder Bearbeitung → Link der geöffneten ID und dessen sichtbare Position, sonst Ergebnisüberschrift. Neuer Direktaufruf oder Reload der Liste → normale Seitennavigation ohne erzwungenen Sprung in eine Eingabe. Ändern der Kriterien und Zurücksetzen → Fokus bleibt am bedienten Element. Keine sitzungsübergreifende Speicherung ausserhalb der URL zugesagt.",
+                  "text": "Bei der Rückkehr aus Detailansicht oder Bearbeitung erhält der Link des zuvor geöffneten Projekts den Fokus und wird wieder an seiner sichtbaren Position angezeigt. Fehlt das Projekt, erhält die Ergebnisüberschrift den Fokus. Bei einem neuen Direktaufruf oder beim Neuladen der Liste bleibt es bei der normalen Seitennavigation; setze den Fokus nicht ungefragt in ein Eingabefeld. Beim Ändern und Zurücksetzen der Kriterien bleibt der Fokus am bedienten Element. Eine zusätzliche Speicherung der Kriterien über Sitzungen hinweg ausserhalb der URL wird nicht zugesichert.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -829,7 +829,7 @@ export const release = {
     },
     {
       "id": "6affff25d3d9c0a5c8401b4a",
-      "title": "Zustandsmatrix · Ursache, Text und nächster Schritt",
+      "title": "Meldungen für Ergebnisse, leere Listen und Fehler",
       "blockName": null,
       "items": [
         {
@@ -837,7 +837,7 @@ export const release = {
           "context": "Vollständiger Bestand, passende Ergebnisse",
           "before": "Nicht nur «Fertig».",
           "after": "«2 Projekte»; ID, Name und Status pro Ergebnis; Projektname öffnet das Detail.",
-          "reason": "Ergebniszahl nach Änderung als ruhiger Status, ohne Fokusübernahme. q/status bleiben sichtbar und in der URL."
+          "reason": "Kündige die neue Ergebniszahl als Statusmeldung an, ohne den Fokus zu verschieben. q/status bleiben in den Eingaben sichtbar und in der URL erhalten."
         },
         {
           "id": "6affff25d3d9c0a5c8401b46",
@@ -849,23 +849,23 @@ export const release = {
         {
           "id": "6affff25d3d9c0a5c8401b47",
           "context": "Vollständiger Bestand ist leer",
-          "before": "Keine nutzlose Aufforderung zur Filterkorrektur.",
+          "before": "Nicht zur Änderung der Filter auffordern, wenn es noch keine Projekte gibt.",
           "after": "«Noch keine Projekte.» · «Projekt erstellen».",
-          "reason": "Erstleere ist unabhängig von Suchkriterien. Erstellung folgt dem Formularweg; keine vorhandenen Projekte werden durch Reset erzeugt."
+          "reason": "Ein vollständig leerer Bestand hängt nicht von Suchkriterien ab. «Projekt erstellen» führt zum Formular. Zurücksetzen kann keine Projekte erzeugen."
         },
         {
           "id": "6affff25d3d9c0a5c8401b48",
           "context": "Bestand wird bereitgestellt oder Bereitstellung scheitert",
           "before": "Keine Nulltreffer vortäuschen; lokale Suche braucht keine künstliche Wartephase.",
           "after": "Falls geladen wird: «Projekte werden geladen.» Bei Fehler: «Projekte konnten nicht geladen werden.» · «Erneut versuchen».",
-          "reason": "Bestehende Zustandsregel für eine spätere Datenanbindung: Suchkriterien erhalten, Bereich als beschäftigt kennzeichnen, Ladeende/Fehler verständlich ankündigen, Fokus nicht verschieben. Retry nur bei vorübergehender Ursache. Im lokalen Gestaltungsfall kein laufender Suchdienst."
+          "reason": "Falls später Daten angebunden werden, gelten die bestehenden Zustandsregeln: Behalte die Suchkriterien bei, kennzeichne den Bereich als beschäftigt und kündige Ladeende oder Fehler verständlich an. Verschiebe den Fokus nicht. Biete «Erneut versuchen» nur bei einer vorübergehenden Ursache an. Das lokale Beispiel benötigt keinen laufenden Suchdienst."
         },
         {
           "id": "6affff25d3d9c0a5c8401b49",
           "context": "Detail-ID unbekannt oder nicht mehr in der Liste",
           "before": "Keinen leeren Detailrahmen zeigen.",
           "after": "«Projekt nicht gefunden.» · «Zurück zu Projekten».",
-          "reason": "q/status bleiben erhalten, Rückkehrfokus zur Ergebnisüberschrift. Rechtewechsel und Löschung im laufenden Pilotbestand sind ausgeschlossen; reale veränderliche oder geschützte Daten lösen einen eigenen Berechtigungs- und Offenlegungsreview aus."
+          "reason": "Behalte q/status bei und setze bei der Rückkehr den Fokus auf die Ergebnisüberschrift. Im laufenden Projektbeispiel sind Änderungen der Zugriffsrechte und Löschungen ausgeschlossen. Für echte veränderliche oder geschützte Daten muss das Team gesondert prüfen, wer Zugriff hat und welche Informationen offengelegt werden dürfen."
         }
       ],
       "blockType": "messageComparison"
@@ -906,7 +906,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Breit stehen ID, Projektname und Status in klar bezeichneten Spalten; der Projektname ist der einzelne Öffnungslink. Die Aufgabe ist Wiederfinden, kein Zahlenvergleich. Schmal wird jedes Ergebnis als zusammengehöriger Eintrag mit denselben drei Angaben untereinander angeordnet. Eine zweite, doppelt fokussierbare Darstellung ist zu vermeiden.",
+                  "text": "Ordne auf breiten Flächen ID, Projektname und Status in klar bezeichneten Spalten an. Der Projektname ist der einzige Link zum Öffnen des Details. Die Liste hilft beim Wiederfinden, nicht beim Zahlenvergleich. Auf schmalen Flächen stehen dieselben drei Angaben untereinander und bilden einen zusammengehörigen Eintrag. Vermeide eine zweite Darstellung, deren Links ebenfalls per Tastatur erreichbar wären.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -924,7 +924,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Suche und Statusfilter stehen breit nebeneinander und schmal untereinander vor der Ergebnisüberschrift. Lange Namen und IDs dürfen umbrechen; kein Abschneiden der einzigen Identifikation. Status bleibt als Text sichtbar, nicht nur als Farbe. Sichtbare Beschriftungen ersetzen keinen benötigten zugänglichen Namen.",
+                  "text": "Suche und Statusfilter stehen auf breiten Flächen nebeneinander, auf schmalen untereinander, jeweils vor der Ergebnisüberschrift. Lass lange Namen und IDs umbrechen, damit Projekte eindeutig erkennbar bleiben. Zeige den Status als Text und nicht nur durch Farbe. Achte neben sichtbaren Beschriftungen auch auf die nötigen zugänglichen Namen.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -942,7 +942,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Entwurfsfälle: 1280 px breite und 320 px schmale Inhaltsfläche, zusätzlich 200 % Textvergrösserung mit einem 80-Graphemcluster-Namen. Alle Angaben, Reset und Detaillink bleiben lesbar und erreichbar. Bei Bildschirmtastatur muss die aktive Suche samt Kriterien erreichbar bleiben; keine haftende Region verdeckt sie. Tastaturfolge: Suche → Status → Reset, sofern angeboten → Ergebnislinks. Diese Zielwerte sind lokale Prüfflächen, kein ausgeführter Mobil-, Zoom- oder Screenreader-Test.",
+                  "text": "Prüfe den Entwurf mit 1280 px und 320 px breiter Inhaltsfläche sowie bei 200 % Textvergrösserung mit einem Namen aus 80 Unicode-Graphemclustern. Alle Angaben, «Suche zurücksetzen» und der Detaillink müssen lesbar und erreichbar bleiben. Auch bei geöffneter Bildschirmtastatur müssen Suche und Kriterien erreichbar sein; kein feststehender Bereich darf sie verdecken. Die Tastaturreihenfolge lautet: Suche, Status, gegebenenfalls «Suche zurücksetzen», dann Ergebnislinks. Diese Grössen sind für die lokale Entwurfsprüfung vorgesehen. Mobile Bedienung, Zoom und Screenreader wurden damit noch nicht getestet.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1031,7 +1031,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Unabhängige Gestaltungsprüfung noch offen: Eine zweite Person soll Übersicht → Suche → Detail → Bearbeitung → Rückkehr an breiter und schmaler Vorlage ohne mündliche Hilfe nachvollziehen, Nulltreffer von Erstleere unterscheiden und die erwarteten Ergebnisse benennen. Bei einer späteren Umsetzung zusätzlich Tastatur, Statusansagen, Fokus, URL-Verhalten und Zoom prüfen. Dokumentierte Entscheidungen schliessen diese Nachweislücke nicht.",
+                  "text": "Die unabhängige Gestaltungsprüfung steht noch aus. Eine zweite Person soll an breiter und schmaler Vorlage ohne mündliche Hilfe von der Übersicht über Suche und Detail zur Bearbeitung und wieder zurück finden. Sie soll fehlende Suchtreffer von einem vollständig leeren Bestand unterscheiden und die erwarteten Ergebnisse benennen. Prüfe bei einer späteren Umsetzung zusätzlich Tastaturbedienung, Statusansagen, Fokus, URL-Verhalten und Zoom. Die dokumentierten Entscheidungen ersetzen diese Prüfung nicht.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1049,7 +1049,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Vorhandener begrenzter Befund laut Bestandsprüfung vom 18.11.2026: Die Rechnungssuche mit fünf statischen Datensätzen liefert für Hosting + Bezahlt RE-1046 und RE-1044 und erhält die Kriterien im ausdrücklichen Detailrücklink. Laden/Retry sind dort Simulation; laufende URL-Aktualisierung, mobile Bedienung und assistive Tests sind damit nicht belegt. Dieser neue Projektvertrag verändert die Rechnungsdemo nicht.",
+                  "text": "Die Bestandsprüfung vom 18.11.2026 hat nur Folgendes gezeigt: Die Rechnungssuche mit fünf statischen Datensätzen liefert für Hosting + Bezahlt RE-1046 und RE-1044. Der Rücklink aus dem Detail erhält die Kriterien. Laden und erneutes Versuchen sind dort simuliert. Eine laufende URL-Aktualisierung, mobile Bedienung und die Nutzung mit assistiven Technologien wurden damit nicht nachgewiesen. Die Festlegung für Projekte verändert die Rechnungsdemo nicht.",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1084,7 +1084,7 @@ export const release = {
               "children": [
                 {
                   "mode": "normal",
-                  "text": "Führende Entscheidung und Anschlussregeln",
+                  "text": "Weiterführende Regeln und Beispiele",
                   "type": "text",
                   "style": "",
                   "detail": 0,
@@ -1113,7 +1113,7 @@ export const release = {
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Gestaltungspilot · gemeinsamer Umfang, Datenmodell und offener Review",
+                      "text": "Mit dem Handbuch gestalten · Umfang, Datenmodell und offene Prüfung",
                       "type": "text",
                       "style": "",
                       "detail": 0,

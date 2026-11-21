@@ -1,0 +1,6263 @@
+{
+  "page": {
+    "id": "72:2723",
+    "name": "Checkbox ",
+    "kind": "component",
+    "slug": "checkbox",
+    "top": [
+      {
+        "id": "2353:17525",
+        "name": "Be in the loop",
+        "type": "INSTANCE"
+      },
+      {
+        "id": "1937:1963",
+        "name": "Checkbox",
+        "type": "FRAME"
+      }
+    ],
+    "componentSets": [
+      {
+        "id": "1939:2183",
+        "name": "Checkbox",
+        "page": "Checkbox ",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Interaction",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Data state",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "1939:2182",
+            "name": "Interaction=Default, Data state=Unchecked",
+            "instances": 20,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2178",
+            "name": "Interaction=Focus, Data state=Unchecked",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2180",
+            "name": "Interaction=Disabled, Data state=Unchecked",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2179",
+            "name": "Interaction=Default, Data state=Checked",
+            "instances": 0,
+            "swapInstances": 12
+          },
+          {
+            "id": "1939:2185",
+            "name": "Interaction=Focus, Data state=Checked",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2175",
+            "name": "Interaction=Disabled, Data state=Checked",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2177",
+            "name": "Interaction=Invalid, Data state=Invalid-unchecked",
+            "instances": 2,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2181",
+            "name": "Interaction=Invalid, Data state=Invalid-checked",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1939:2176",
+            "name": "Interaction=Disabled, Data state=Invalid-checked",
+            "instances": 0,
+            "swapInstances": 0
+          }
+        ]
+      },
+      {
+        "id": "1944:482",
+        "name": "Checkbox",
+        "page": "Checkbox ",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "State",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "1944:481",
+            "name": "State=Default, Dir=LTR",
+            "instances": 15,
+            "swapInstances": 0
+          },
+          {
+            "id": "1944:483",
+            "name": "State=Disabled, Dir=LTR",
+            "instances": 2,
+            "swapInstances": 0
+          },
+          {
+            "id": "1944:492",
+            "name": "State=Invalid, Dir=LTR",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "1945:501",
+            "name": "State=Default, Dir=RTL",
+            "instances": 4,
+            "swapInstances": 0
+          },
+          {
+            "id": "1945:510",
+            "name": "State=Disabled, Dir=RTL",
+            "instances": 1,
+            "swapInstances": 0
+          },
+          {
+            "id": "1945:519",
+            "name": "State=Invalid, Dir=RTL",
+            "instances": 0,
+            "swapInstances": 0
+          }
+        ]
+      }
+    ],
+    "components": []
+  },
+  "frames": [
+    {
+      "id": "1937:1963",
+      "name": "Checkbox",
+      "type": "FRAME",
+      "x": -319,
+      "y": -229,
+      "width": 1092,
+      "height": 3332,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "padding": [
+          56,
+          56,
+          56,
+          56
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-12",
+        "stack_padding_left": "p-14",
+        "stack_padding_top": "p-14",
+        "stack_padding_right": "p-14",
+        "stack_padding_bottom": "p-14",
+        "rectangle_top_left_corner_radius": "radius-xl",
+        "rectangle_top_right_corner_radius": "radius-xl",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border"
+      },
+      "children": [
+        {
+          "id": "1937:1964",
+          "name": "Title",
+          "type": "FRAME",
+          "x": 56,
+          "y": 56,
+          "width": 980,
+          "height": 68,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-4"
+          },
+          "children": [
+            {
+              "id": "1937:1965",
+              "name": "Component description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 815,
+              "height": 68,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1937:1966",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 815,
+                  "height": 36,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Checkbox",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 30,
+                    "lineHeight": 36,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-3xl/Semi Bold"
+                },
+                {
+                  "id": "1937:1967",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 44,
+                  "width": 815,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "A control that allows the user to toggle between checked and not checked.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            },
+            {
+              "id": "1937:1968",
+              "name": "Buttons",
+              "type": "FRAME",
+              "x": 831,
+              "y": 0,
+              "width": 149,
+              "height": 32,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    1
+                  ],
+                  "radius": 2
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-xs",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  12,
+                  0,
+                  12
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-3",
+                "stack_padding_right": "px-3",
+                "rectangle_top_left_corner_radius": "rounded-xl",
+                "rectangle_top_right_corner_radius": "rounded-xl",
+                "rectangle_bottom_left_corner_radius": "rounded-xl",
+                "rectangle_bottom_right_corner_radius": "rounded-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "1937:1969",
+                  "name": "Text",
+                  "type": "FRAME",
+                  "x": 12,
+                  "y": 6,
+                  "width": 103,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "counterSizing": "HUG"
+                  },
+                  "childCount": 1
+                },
+                {
+                  "id": "1937:1971",
+                  "name": "lucide/arrow-up-right",
+                  "type": "INSTANCE",
+                  "x": 121,
+                  "y": 8,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/arrow-up-right",
+                    "mainComponentId": "128:198"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1937:1972",
+          "name": "Component elements",
+          "type": "FRAME",
+          "x": 56,
+          "y": 172,
+          "width": 980,
+          "height": 836,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 40,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-10"
+          },
+          "children": [
+            {
+              "id": "2463:11853",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Components",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 24,
+                "lineHeight": 32,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-2xl/Semi Bold"
+            },
+            {
+              "id": "1937:1973",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 72,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Checkbox",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2203:8011",
+              "name": "Wrapper",
+              "type": "FRAME",
+              "x": 0,
+              "y": 140,
+              "width": 508,
+              "height": 370,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2203:8083",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 20,
+                  "y": 20,
+                  "width": 100,
+                  "height": 330,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 24,
+                    "padding": [
+                      58,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-6"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2203:8019",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 136,
+                  "y": 20,
+                  "width": 352,
+                  "height": 330,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            },
+            {
+              "id": "2203:8091",
+              "name": "Wrapper",
+              "type": "FRAME",
+              "x": 0,
+              "y": 550,
+              "width": 980,
+              "height": 286,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2203:8092",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 20,
+                  "y": 20,
+                  "width": 100,
+                  "height": 246,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 24,
+                    "padding": [
+                      72,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-6"
+                  },
+                  "childCount": 3
+                },
+                {
+                  "id": "2203:8099",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 136,
+                  "y": 20,
+                  "width": 824,
+                  "height": 246,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "counterSizing": "HUG"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11729",
+          "name": "Seperator",
+          "type": "LINE",
+          "x": 56,
+          "y": 1056,
+          "width": 980,
+          "height": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": 2,
+          "strokeAlign": "CENTER",
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stroke_weight": "border-2"
+          }
+        },
+        {
+          "id": "1937:1983",
+          "name": "Frame 2",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1104,
+          "width": 980,
+          "height": 120,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1937:1984",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Examples",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "1937:1985",
+              "name": "Frame 3",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 980,
+              "height": 92,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 0,
+                "padding": [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-6"
+              },
+              "children": [
+                {
+                  "id": "1937:1986",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 24,
+                  "width": 980,
+                  "height": 28,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Basic",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 18,
+                    "lineHeight": 28,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-lg/Semi Bold"
+                },
+                {
+                  "id": "1937:1987",
+                  "name": "Frame 7",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 52,
+                  "width": 980,
+                  "height": 40,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      16,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_padding_top": "pt-4"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11750",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1272,
+          "width": 980,
+          "height": 102,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1945:541",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 378,
+              "y": 41,
+              "width": 224,
+              "height": 20,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 2,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "1944:481",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR",
+                  "Field description": false
+                },
+                "overrides": 4
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-0,5"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1937:2002",
+          "name": "Frame 3",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1422,
+          "width": 980,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1937:2003",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Description",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "1937:2004",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 980,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "1937:2005",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 980,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use FieldContent and FieldDescription for helper text.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11759",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1538,
+          "width": 980,
+          "height": 144,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1945:551",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 346,
+              "y": 41,
+              "width": 288,
+              "height": 62,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 2,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "1944:481",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR",
+                  "Field description": true
+                },
+                "overrides": 6
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-0,5"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1937:2020",
+          "name": "Frame 11",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1730,
+          "width": 980,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1937:2021",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Disabled",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "1937:2022",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 980,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "1937:2023",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 980,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use the disabled prop to prevent interaction and add the data-disabled attribute to the <Field> component for disabled styles.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11779",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1846,
+          "width": 980,
+          "height": 102,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1945:563",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 378,
+              "y": 41,
+              "width": 224,
+              "height": 20,
+              "opacity": 0.5,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 2,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "component": {
+                "mainComponent": "State=Disabled, Dir=LTR",
+                "mainComponentId": "1944:483",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "State": "Disabled",
+                  "Dir": "LTR",
+                  "Field description": false
+                },
+                "overrides": 5
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-0,5",
+                "opacity": "opacity-50"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1937:2035",
+          "name": "Frame 12",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1996,
+          "width": 980,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1937:2036",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Group",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "1937:2037",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 980,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "1937:2038",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 980,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use multiple fields to create a checkbox list.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11780",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2112,
+          "width": 980,
+          "height": 280,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1945:675",
+              "name": "Field set",
+              "type": "FRAME",
+              "x": 330,
+              "y": 41,
+              "width": 320,
+              "height": 198,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4"
+              },
+              "children": [
+                {
+                  "id": "2084:2041",
+                  "name": "Group",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 320,
+                  "height": 66,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "1945:669",
+                  "name": "Field group",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 82,
+                  "width": 320,
+                  "height": 116,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 12,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-3"
+                  },
+                  "childCount": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1945:682",
+          "name": "Frame 13",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2440,
+          "width": 980,
+          "height": 28,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1945:683",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Table",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            }
+          ]
+        },
+        {
+          "id": "2463:11781",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2516,
+          "width": 980,
+          "height": 270,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1947:969",
+              "name": "Table",
+              "type": "FRAME",
+              "x": 203,
+              "y": 41,
+              "width": 574,
+              "height": 188,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 0,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "children": [
+                {
+                  "id": "1947:970",
+                  "name": "Table header",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 574,
+                  "height": 40,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    null,
+                    null,
+                    1,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "border_bottom_weight": "border-width"
+                  },
+                  "childCount": 4
+                },
+                {
+                  "id": "1947:975",
+                  "name": "Row",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 40,
+                  "width": 574,
+                  "height": 37,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    null,
+                    null,
+                    1,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "border_bottom_weight": "border-width"
+                  },
+                  "childCount": 4
+                },
+                {
+                  "id": "1947:980",
+                  "name": "Row",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 77,
+                  "width": 574,
+                  "height": 37,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    null,
+                    null,
+                    1,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "border_bottom_weight": "border-width"
+                  },
+                  "childCount": 4
+                },
+                {
+                  "id": "1947:985",
+                  "name": "Row",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 114,
+                  "width": 574,
+                  "height": 37,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    null,
+                    null,
+                    1,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "border_bottom_weight": "border-width"
+                  },
+                  "childCount": 4
+                },
+                {
+                  "id": "1947:1019",
+                  "name": "Row",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 151,
+                  "width": 574,
+                  "height": 37,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "border_bottom_weight": "border-width"
+                  },
+                  "childCount": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1945:722",
+          "name": "Frame 14",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2834,
+          "width": 980,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "1945:723",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 980,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "RTL",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "1945:724",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 980,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "1945:725",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 980,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "To enable RTL support in shadcn/ui, see the RTL configuration guide.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular",
+                  "runs": [
+                    {
+                      "text": "To enable RTL support in shadcn/ui, see the "
+                    },
+                    {
+                      "text": "RTL configuration guide",
+                      "textDecoration": "UNDERLINE",
+                      "link": "https://ui.shadcn.com/docs/rtl"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:11828",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2950,
+          "width": 980,
+          "height": 326,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "1945:834",
+              "name": "Field group",
+              "type": "FRAME",
+              "x": 298,
+              "y": 41,
+              "width": 384,
+              "height": 244,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 20,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MAX"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-5"
+              },
+              "children": [
+                {
+                  "id": "1945:762",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 384,
+                  "height": 20,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 2,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MAX"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=RTL",
+                    "mainComponentId": "1945:501",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "RTL",
+                      "Field description": false
+                    },
+                    "overrides": 2
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5"
+                  }
+                },
+                {
+                  "id": "1945:803",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 40,
+                  "width": 384,
+                  "height": 62,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 2,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MAX"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=RTL",
+                    "mainComponentId": "1945:501",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "RTL",
+                      "Field description": true
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5"
+                  }
+                },
+                {
+                  "id": "1945:838",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 122,
+                  "width": 384,
+                  "height": 20,
+                  "opacity": 0.5,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 2,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MAX"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "State=Disabled, Dir=RTL",
+                    "mainComponentId": "1945:510",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "State": "Disabled",
+                      "Dir": "RTL",
+                      "Field description": false
+                    },
+                    "overrides": 2
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "opacity": "opacity-50"
+                  }
+                },
+                {
+                  "id": "1945:863",
+                  "name": "Frame 32",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 162,
+                  "width": 384,
+                  "height": 82,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": 1,
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 10,
+                    "padding": [
+                      10,
+                      10,
+                      10,
+                      10
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_padding_left": "p-2,5",
+                    "stack_padding_top": "p-2,5",
+                    "stack_padding_right": "p-2,5",
+                    "stack_padding_bottom": "p-2,5",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "details": [
+    {
+      "id": "1939:2183",
+      "name": "Checkbox",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 72,
+      "width": 352,
+      "height": 258,
+      "layout": {
+        "mode": "GRID",
+        "gap": 10,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Interaction",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Data state",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border",
+        "grid_row_gap": "gap-6",
+        "grid_column_gap": "gap-6"
+      },
+      "children": [
+        {
+          "id": "1939:2182",
+          "name": "Interaction=Default, Data state=Unchecked",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 4,
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        },
+        {
+          "id": "1939:2178",
+          "name": "Interaction=Focus, Data state=Unchecked",
+          "type": "COMPONENT",
+          "x": 94,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#737373",
+              "variable": "ring"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 4,
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "color": "#A1A1A180",
+              "offset": [
+                0,
+                0
+              ],
+              "radius": 0,
+              "spread": 3
+            }
+          ],
+          "effectStyle": "Box Shadow/Focus ring",
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        },
+        {
+          "id": "1939:2180",
+          "name": "Interaction=Disabled, Data state=Unchecked",
+          "type": "COMPONENT",
+          "x": 282,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "opacity": 0.5,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 4,
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width",
+            "opacity": "opacity-50"
+          }
+        },
+        {
+          "id": "1939:2179",
+          "name": "Interaction=Default, Data state=Checked",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 94,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "cornerRadius": 4,
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          },
+          "children": [
+            {
+              "id": "1939:2134",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "x": 1,
+              "y": 1,
+              "width": 14,
+              "height": 14,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "1939:2185",
+          "name": "Interaction=Focus, Data state=Checked",
+          "type": "COMPONENT",
+          "x": 94,
+          "y": 94,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#737373",
+              "variable": "ring"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 4,
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "color": "#A1A1A180",
+              "offset": [
+                0,
+                0
+              ],
+              "radius": 0,
+              "spread": 3
+            }
+          ],
+          "effectStyle": "Box Shadow/Focus ring",
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          },
+          "children": [
+            {
+              "id": "1939:2186",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "x": 1,
+              "y": 1,
+              "width": 14,
+              "height": 14,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "1939:2175",
+          "name": "Interaction=Disabled, Data state=Checked",
+          "type": "COMPONENT",
+          "x": 282,
+          "y": 94,
+          "width": 16,
+          "height": 16,
+          "opacity": 0.5,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "cornerRadius": 4,
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width",
+            "opacity": "opacity-50"
+          },
+          "children": [
+            {
+              "id": "1939:2171",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "x": 1,
+              "y": 1,
+              "width": 14,
+              "height": 14,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "1939:2177",
+          "name": "Interaction=Invalid, Data state=Invalid-unchecked",
+          "type": "COMPONENT",
+          "x": 188,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E7000B",
+              "variable": "text-destructive"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 4,
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "color": "#DC262633",
+              "offset": [
+                0,
+                0
+              ],
+              "radius": 0,
+              "spread": 3
+            }
+          ],
+          "effectStyle": "Box Shadow/Destructive",
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        },
+        {
+          "id": "1939:2181",
+          "name": "Interaction=Invalid, Data state=Invalid-checked",
+          "type": "COMPONENT",
+          "x": 188,
+          "y": 94,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "cornerRadius": 4,
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "color": "#DC262633",
+              "offset": [
+                0,
+                0
+              ],
+              "radius": 0,
+              "spread": 3
+            }
+          ],
+          "effectStyle": "Box Shadow/Destructive",
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          },
+          "children": [
+            {
+              "id": "1939:2163",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "x": 1,
+              "y": 1,
+              "width": 14,
+              "height": 14,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "1939:2176",
+          "name": "Interaction=Disabled, Data state=Invalid-checked",
+          "type": "COMPONENT",
+          "x": 282,
+          "y": 188,
+          "width": 16,
+          "height": 16,
+          "fills": [
+            {
+              "type": "SOLID",
+              "opacity": 0.1,
+              "color": "#E7000B",
+              "variable": "destructive-subtle"
+            }
+          ],
+          "cornerRadius": 4,
+          "clipsContent": true,
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          },
+          "children": [
+            {
+              "id": "1939:2167",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "x": 1,
+              "y": 1,
+              "width": 14,
+              "height": 14,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1939:2182",
+      "name": "Interaction=Default, Data state=Unchecked",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 0,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 4,
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      }
+    },
+    {
+      "id": "1939:2178",
+      "name": "Interaction=Focus, Data state=Unchecked",
+      "type": "COMPONENT",
+      "x": 94,
+      "y": 0,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#737373",
+          "variable": "ring"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 4,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "color": "#A1A1A180",
+          "offset": [
+            0,
+            0
+          ],
+          "radius": 0,
+          "spread": 3
+        }
+      ],
+      "effectStyle": "Box Shadow/Focus ring",
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      }
+    },
+    {
+      "id": "1939:2180",
+      "name": "Interaction=Disabled, Data state=Unchecked",
+      "type": "COMPONENT",
+      "x": 282,
+      "y": 0,
+      "width": 16,
+      "height": 16,
+      "opacity": 0.5,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 4,
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width",
+        "opacity": "opacity-50"
+      }
+    },
+    {
+      "id": "1939:2179",
+      "name": "Interaction=Default, Data state=Checked",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 94,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#171717",
+          "variable": "primary"
+        }
+      ],
+      "cornerRadius": 4,
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "1939:2134",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "x": 1,
+          "y": 1,
+          "width": 14,
+          "height": 14,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "1939:2185",
+      "name": "Interaction=Focus, Data state=Checked",
+      "type": "COMPONENT",
+      "x": 94,
+      "y": 94,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#171717",
+          "variable": "primary"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#737373",
+          "variable": "ring"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 4,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "color": "#A1A1A180",
+          "offset": [
+            0,
+            0
+          ],
+          "radius": 0,
+          "spread": 3
+        }
+      ],
+      "effectStyle": "Box Shadow/Focus ring",
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "1939:2186",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "x": 1,
+          "y": 1,
+          "width": 14,
+          "height": 14,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "1939:2175",
+      "name": "Interaction=Disabled, Data state=Checked",
+      "type": "COMPONENT",
+      "x": 282,
+      "y": 94,
+      "width": 16,
+      "height": 16,
+      "opacity": 0.5,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#171717",
+          "variable": "primary"
+        }
+      ],
+      "cornerRadius": 4,
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width",
+        "opacity": "opacity-50"
+      },
+      "children": [
+        {
+          "id": "1939:2171",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "x": 1,
+          "y": 1,
+          "width": 14,
+          "height": 14,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "1939:2177",
+      "name": "Interaction=Invalid, Data state=Invalid-unchecked",
+      "type": "COMPONENT",
+      "x": 188,
+      "y": 0,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E7000B",
+          "variable": "text-destructive"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 4,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "color": "#DC262633",
+          "offset": [
+            0,
+            0
+          ],
+          "radius": 0,
+          "spread": 3
+        }
+      ],
+      "effectStyle": "Box Shadow/Destructive",
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      }
+    },
+    {
+      "id": "1939:2181",
+      "name": "Interaction=Invalid, Data state=Invalid-checked",
+      "type": "COMPONENT",
+      "x": 188,
+      "y": 94,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#171717",
+          "variable": "primary"
+        }
+      ],
+      "cornerRadius": 4,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "color": "#DC262633",
+          "offset": [
+            0,
+            0
+          ],
+          "radius": 0,
+          "spread": 3
+        }
+      ],
+      "effectStyle": "Box Shadow/Destructive",
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "1939:2163",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "x": 1,
+          "y": 1,
+          "width": 14,
+          "height": 14,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "1939:2176",
+      "name": "Interaction=Disabled, Data state=Invalid-checked",
+      "type": "COMPONENT",
+      "x": 282,
+      "y": 188,
+      "width": 16,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "opacity": 0.1,
+          "color": "#E7000B",
+          "variable": "destructive-subtle"
+        }
+      ],
+      "cornerRadius": 4,
+      "clipsContent": true,
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "1939:2167",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "x": 1,
+          "y": 1,
+          "width": 14,
+          "height": 14,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "1944:482",
+      "name": "Checkbox",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 72,
+      "width": 824,
+      "height": 174,
+      "layout": {
+        "mode": "GRID",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "State",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-4",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border",
+        "grid_row_gap": "gap-6",
+        "grid_column_gap": "gap-6"
+      },
+      "children": [
+        {
+          "id": "1944:481",
+          "name": "State=Default, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 42,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5"
+          },
+          "children": [
+            {
+              "id": "1943:462",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1943:460",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Default, Data state=Unchecked",
+                    "mainComponentId": "1939:2182",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Default",
+                      "Data state": "Unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                },
+                {
+                  "id": "2084:1522",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=LTR",
+                    "mainComponentId": "1928:3985",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "LTR",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1943:470",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1945:529",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                },
+                {
+                  "id": "2084:1833",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Left",
+                    "mainComponentId": "1928:3988",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Left"
+                    },
+                    "overrides": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1944:483",
+          "name": "State=Disabled, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 66,
+          "width": 400,
+          "height": 42,
+          "opacity": 0.5,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5",
+            "opacity": "opacity-50"
+          },
+          "children": [
+            {
+              "id": "1944:484",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1944:485",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Default, Data state=Unchecked",
+                    "mainComponentId": "1939:2182",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Default",
+                      "Data state": "Unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                },
+                {
+                  "id": "2084:1723",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=LTR",
+                    "mainComponentId": "1928:3985",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "LTR",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1944:488",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1945:531",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                },
+                {
+                  "id": "2084:1846",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Left",
+                    "mainComponentId": "1928:3988",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Left"
+                    },
+                    "overrides": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1944:492",
+          "name": "State=Invalid, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 132,
+          "width": 400,
+          "height": 42,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5"
+          },
+          "children": [
+            {
+              "id": "1944:493",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1944:494",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E7000B",
+                      "variable": "text-destructive"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#DC262633",
+                      "offset": [
+                        0,
+                        0
+                      ],
+                      "radius": 0,
+                      "spread": 3
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/Destructive",
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Invalid, Data state=Invalid-unchecked",
+                    "mainComponentId": "1939:2177",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Invalid",
+                      "Data state": "Invalid-unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                },
+                {
+                  "id": "2084:1744",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=LTR",
+                    "mainComponentId": "1928:3985",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "LTR",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1944:497",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "1945:533",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                },
+                {
+                  "id": "2084:1849",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 24,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Left",
+                    "mainComponentId": "1928:3988",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Left"
+                    },
+                    "overrides": 2
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1945:501",
+          "name": "State=Default, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 424,
+          "y": 0,
+          "width": 400,
+          "height": 42,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MAX"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5"
+          },
+          "children": [
+            {
+              "id": "1945:502",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1807",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=RTL",
+                    "mainComponentId": "1930:418",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "RTL",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                },
+                {
+                  "id": "1945:503",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Default, Data state=Unchecked",
+                    "mainComponentId": "1939:2182",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Default",
+                      "Data state": "Unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1945:506",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1852",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Right",
+                    "mainComponentId": "1930:446",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Right"
+                    },
+                    "overrides": 2
+                  }
+                },
+                {
+                  "id": "1945:535",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1945:510",
+          "name": "State=Disabled, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 424,
+          "y": 66,
+          "width": 400,
+          "height": 42,
+          "opacity": 0.5,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MAX"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5",
+            "opacity": "opacity-50"
+          },
+          "children": [
+            {
+              "id": "1945:511",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1762",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=RTL",
+                    "mainComponentId": "1930:418",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "RTL",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                },
+                {
+                  "id": "1945:512",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Default, Data state=Unchecked",
+                    "mainComponentId": "1939:2182",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Default",
+                      "Data state": "Unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1945:515",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1862",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Right",
+                    "mainComponentId": "1930:446",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Right"
+                    },
+                    "overrides": 2
+                  }
+                },
+                {
+                  "id": "1945:537",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1945:519",
+          "name": "State=Invalid, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 424,
+          "y": 132,
+          "width": 400,
+          "height": 42,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 2,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MAX"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Field description",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-0,5"
+          },
+          "children": [
+            {
+              "id": "1945:520",
+              "name": "Frame 30",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1750",
+                  "name": "FieldLabel",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "State=Default, Dir=RTL",
+                    "mainComponentId": "1930:418",
+                    "componentSet": "FieldLabel",
+                    "properties": {
+                      "State": "Default",
+                      "Dir": "RTL",
+                      "Asterisk": false,
+                      "Badge": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2"
+                  }
+                },
+                {
+                  "id": "1945:521",
+                  "name": "Checkbox",
+                  "type": "INSTANCE",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E7000B",
+                      "variable": "text-destructive"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": 4,
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#DC262633",
+                      "offset": [
+                        0,
+                        0
+                      ],
+                      "radius": 0,
+                      "spread": 3
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/Destructive",
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "Interaction=Invalid, Data state=Invalid-unchecked",
+                    "mainComponentId": "1939:2177",
+                    "componentSet": "Checkbox",
+                    "properties": {
+                      "Interaction": "Invalid",
+                      "Data state": "Invalid-unchecked"
+                    }
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "1945:524",
+              "name": "Frame 31",
+              "type": "FRAME",
+              "x": 0,
+              "y": 22,
+              "width": 400,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2084:1868",
+                  "name": "FieldDescription",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 376,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "component": {
+                    "mainComponent": "Alignment=Right",
+                    "mainComponentId": "1930:446",
+                    "componentSet": "FieldDescription",
+                    "properties": {
+                      "Alignment": "Right"
+                    },
+                    "overrides": 2
+                  }
+                },
+                {
+                  "id": "1945:539",
+                  "name": "Box",
+                  "type": "FRAME",
+                  "x": 384,
+                  "y": 2,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1944:481",
+      "name": "State=Default, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 42,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5"
+      },
+      "children": [
+        {
+          "id": "1943:462",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1943:460",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Default, Data state=Unchecked",
+                "mainComponentId": "1939:2182",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Default",
+                  "Data state": "Unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            },
+            {
+              "id": "2084:1522",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "1928:3985",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1943:470",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1945:529",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            },
+            {
+              "id": "2084:1833",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Left",
+                "mainComponentId": "1928:3988",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Left"
+                },
+                "overrides": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1944:483",
+      "name": "State=Disabled, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 66,
+      "width": 400,
+      "height": 42,
+      "opacity": 0.5,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5",
+        "opacity": "opacity-50"
+      },
+      "children": [
+        {
+          "id": "1944:484",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1944:485",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Default, Data state=Unchecked",
+                "mainComponentId": "1939:2182",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Default",
+                  "Data state": "Unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            },
+            {
+              "id": "2084:1723",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "1928:3985",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1944:488",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1945:531",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            },
+            {
+              "id": "2084:1846",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Left",
+                "mainComponentId": "1928:3988",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Left"
+                },
+                "overrides": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1944:492",
+      "name": "State=Invalid, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 132,
+      "width": 400,
+      "height": 42,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5"
+      },
+      "children": [
+        {
+          "id": "1944:493",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1944:494",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E7000B",
+                  "variable": "text-destructive"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#DC262633",
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "radius": 0,
+                  "spread": 3
+                }
+              ],
+              "effectStyle": "Box Shadow/Destructive",
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Invalid, Data state=Invalid-unchecked",
+                "mainComponentId": "1939:2177",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Invalid",
+                  "Data state": "Invalid-unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            },
+            {
+              "id": "2084:1744",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "1928:3985",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1944:497",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "1945:533",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 0,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            },
+            {
+              "id": "2084:1849",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 24,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Left",
+                "mainComponentId": "1928:3988",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Left"
+                },
+                "overrides": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1945:501",
+      "name": "State=Default, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 424,
+      "y": 0,
+      "width": 400,
+      "height": 42,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MAX"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5"
+      },
+      "children": [
+        {
+          "id": "1945:502",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1807",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=RTL",
+                "mainComponentId": "1930:418",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "RTL",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            },
+            {
+              "id": "1945:503",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Default, Data state=Unchecked",
+                "mainComponentId": "1939:2182",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Default",
+                  "Data state": "Unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1945:506",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1852",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Right",
+                "mainComponentId": "1930:446",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Right"
+                },
+                "overrides": 2
+              }
+            },
+            {
+              "id": "1945:535",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1945:510",
+      "name": "State=Disabled, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 424,
+      "y": 66,
+      "width": 400,
+      "height": 42,
+      "opacity": 0.5,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MAX"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5",
+        "opacity": "opacity-50"
+      },
+      "children": [
+        {
+          "id": "1945:511",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1762",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=RTL",
+                "mainComponentId": "1930:418",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "RTL",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            },
+            {
+              "id": "1945:512",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Default, Data state=Unchecked",
+                "mainComponentId": "1939:2182",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Default",
+                  "Data state": "Unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1945:515",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1862",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Right",
+                "mainComponentId": "1930:446",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Right"
+                },
+                "overrides": 2
+              }
+            },
+            {
+              "id": "1945:537",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1945:519",
+      "name": "State=Invalid, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 424,
+      "y": 132,
+      "width": 400,
+      "height": 42,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MAX"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Field description",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-0,5"
+      },
+      "children": [
+        {
+          "id": "1945:520",
+          "name": "Frame 30",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1750",
+              "name": "FieldLabel",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=RTL",
+                "mainComponentId": "1930:418",
+                "componentSet": "FieldLabel",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "RTL",
+                  "Asterisk": false,
+                  "Badge": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              }
+            },
+            {
+              "id": "1945:521",
+              "name": "Checkbox",
+              "type": "INSTANCE",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E7000B",
+                  "variable": "text-destructive"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": 4,
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#DC262633",
+                  "offset": [
+                    0,
+                    0
+                  ],
+                  "radius": 0,
+                  "spread": 3
+                }
+              ],
+              "effectStyle": "Box Shadow/Destructive",
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "Interaction=Invalid, Data state=Invalid-unchecked",
+                "mainComponentId": "1939:2177",
+                "componentSet": "Checkbox",
+                "properties": {
+                  "Interaction": "Invalid",
+                  "Data state": "Invalid-unchecked"
+                }
+              },
+              "boundVariables": {
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1945:524",
+          "name": "Frame 31",
+          "type": "FRAME",
+          "x": 0,
+          "y": 22,
+          "width": 400,
+          "height": 20,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2084:1868",
+              "name": "FieldDescription",
+              "type": "INSTANCE",
+              "x": 0,
+              "y": 0,
+              "width": 376,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "component": {
+                "mainComponent": "Alignment=Right",
+                "mainComponentId": "1930:446",
+                "componentSet": "FieldDescription",
+                "properties": {
+                  "Alignment": "Right"
+                },
+                "overrides": 2
+              }
+            },
+            {
+              "id": "1945:539",
+              "name": "Box",
+              "type": "FRAME",
+              "x": 384,
+              "y": 2,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": "provenance://source/.figma-pool%2Fshadcn.fig",
+  "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "classification": "observation",
+  "scope": "Supplement covering all native parts and variants of the pre-existing family; previous draft contracts and exports are preserved. Runtime contract coverage is not inferred."
+}

@@ -10,7 +10,7 @@ const link = (text: string, path: string) => ({
 })
 
 export const release = {
-  expectedUpdatedAt: '2026-11-18T00:12:33.193Z',
+  expectedUpdatedAt: '2026-11-20T14:34:01.284Z',
   summary: 'Felder anordnen, Formularverhalten gestalten, den Input wählen oder eine Meldung formulieren: direkt zur passenden Fachseite.',
   content: [{
     blockType: 'text',
@@ -20,7 +20,7 @@ export const release = {
         type: 'root', version: 1, direction: 'ltr', format: '', indent: 0,
         children: [
           link('Form Layout · Felder, Hilfe, Fehler und Aktionen anordnen', 'content-layout-form-layout'),
-          link('Formulare und Validierung · Prüfzeitpunkt, Korrektur und Speicherausgänge gestalten', 'formulare-validierung'),
+          link('Formulare und Validierung · Prüfzeitpunkte, Korrekturen und Rückmeldungen beim Speichern gestalten', 'formulare-validierung'),
           link('Input · Aufbau und Zustände des Eingabefelds ansehen', 'components/input'),
           link('Content Design · Labels, Hilfe und Fehlermeldungen formulieren', 'content-design'),
         ],

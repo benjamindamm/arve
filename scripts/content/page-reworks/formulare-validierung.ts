@@ -7,69 +7,69 @@ const text = (key:string,title:string,paragraphs:string[],links:[string,string][
  ...paragraphs.map(value=>({...base,type:'paragraph',children:[node(value)]})),
  ...links.map(([label,url])=>({...base,type:'paragraph',children:[{...base,type:'link',fields:{url,linkType:'custom',newTab:false},children:[node(label)]}]})),
 ]}}})
-// Exact published content read with push:false and a read-only database connection on 20 November 2026.
+// Current explanation based on the published study; source history remains in the research documents.
 const preserved = [
   {
     "title": "Von der Eingabe zum geklärten Ergebnis",
-    "summary": "Ein Projekt erstellen: Name eingeben, prüfen und das Übermittlungsergebnis unterscheiden. Der Name wird erst mit «Projekt erstellen» übermittelt. Die acht Zustände bleiben die Erstellstudie; die Bearbeitungsvariante folgt darunter. Gültige Eingabe, laufende Übermittlung und bestätigte Speicherung sind getrennte Aussagen.",
-    "caption": "Statische Ablaufstudie. Die Zweige sind in den Texten vollständig beschrieben. Kein ausführbares Formular, kein SCXML-Contract und kein Nachweis für Speicherung, Statusabfrage oder sichere Wiederholung.",
-    "source": "Lokale Referenzentscheidung für den Gestaltungs-Piloten, 18.11.2026; aufbauend auf der bestehenden achtteiligen Formularstudie. Keine upstream-Vorgabe, Firmenregel oder Produktfreigabe.",
+    "summary": "Beim Erstellen eines Projekts wird der Name erst mit «Projekt erstellen» übermittelt. Die acht Zustände zeigen auch Fehler und alternative Ergebnisse. Darunter folgt die Bearbeitung eines bestehenden Namens. Eine gültige Eingabe, eine laufende Anfrage und eine bestätigte Speicherung müssen erkennbar verschieden bleiben.",
+    "caption": "Statische Ablaufstudie mit allen Verzweigungen im Text. Sie enthält kein ausführbares Formular und keinen SCXML-Contract. Speicherung, Statusabfrage und sichere Wiederholung sind damit nicht nachgewiesen.",
+    "source": "Lokale Gestaltungsentscheidung für den Piloten vom 18.11.2026 auf Grundlage der bestehenden achtteiligen Formularstudie. Sie ist keine Vorgabe des ursprünglichen Designsystems, keine Firmenregel und keine Produktfreigabe.",
     "blockName": null,
     "steps": [
       {
         "key": "eingeben",
         "title": "Angaben eingeben",
-        "description": "Zweck, Pflichtangaben und Anforderungen sind vor der Eingabe verständlich. Der Projektname bleibt während der Bearbeitung ein Entwurf.",
+        "description": "Erkläre vor der Eingabe den Zweck des Formulars, die Pflichtangaben und die Anforderungen. Der eingegebene Projektname bleibt zunächst ein Entwurf.",
         "next": "«Projekt erstellen» löst die Prüfung aus.",
         "tone": "normal"
       },
       {
         "key": "pruefen",
         "title": "Angaben prüfen",
-        "description": "Die relevanten Angaben werden geprüft. Ein lokal gültiger Wert ist noch keine Annahme durch das Produkt.",
+        "description": "Das Formular prüft die relevanten Angaben. Auch wenn der Wert diese Prüfung besteht, hat das Produkt ihn noch nicht angenommen.",
         "next": "Bei Eingabefehlern: Fehler verstehen. Ohne bekannte Eingabefehler: übermitteln.",
         "tone": "normal"
       },
       {
         "key": "fehler-verstehen",
         "title": "Fehler verstehen",
-        "description": "Der Pilot hat genau ein Eingabefeld. Der Fehler steht bei «Projektname», der Wert bleibt erhalten und der Fokus geht zum Feld. Eine Fehlerübersicht entfällt.",
+        "description": "Der Pilot hat genau ein Eingabefeld. Deshalb steht der Fehler direkt bei «Projektname», und eine Fehlerübersicht entfällt. Die Eingabe bleibt erhalten; das Feld erhält den Fokus.",
         "next": "Zum betroffenen Feld gehen und korrigieren.",
         "tone": "attention"
       },
       {
         "key": "korrigieren",
         "title": "Gezielt korrigieren",
-        "description": "Nur die betroffenen Angaben ändern. Erledigte Fehler werden aktualisiert; die Korrektur verschiebt den Fokus nicht ungefragt.",
+        "description": "Die betroffenen Angaben lassen sich korrigieren. Die Fehlermeldung wird dabei aktualisiert, ohne den Fokus ungefragt zu verschieben.",
         "next": "«Projekt erstellen» prüft die aktuellen Angaben erneut.",
         "tone": "normal"
       },
       {
         "key": "uebermitteln",
         "title": "Übermittlung läuft",
-        "description": "Eine erkennbare Warteanzeige erklärt den laufenden Vorgang. Mehrfachauslösen wird nachvollziehbar verhindert. Eine laufende Übermittlung ist noch kein Erfolg.",
+        "description": "Eine Warteanzeige macht deutlich, dass die Anfrage läuft und noch kein Erfolg feststeht. Erneutes Auslösen wird verhindert und verständlich erklärt.",
         "next": "Antwort auswerten: bestätigt, ausdrücklich abgelehnt oder Ergebnis unbekannt.",
         "tone": "normal"
       },
       {
         "key": "bestaetigt",
         "title": "Erstellung bestätigt",
-        "description": "Erst die bestätigte Annahme erlaubt «Projekt erstellt». Das Ergebnis und ein sinnvoller nächster Ort bleiben erreichbar.",
-        "next": "Zur Detailseite des bestätigt erstellten Projekts wechseln; Suchkontext q/status mitnehmen.",
+        "description": "Zeige «Projekt erstellt» erst, wenn die Annahme bestätigt ist. Das Ergebnis und ein sinnvoller nächster Schritt müssen erreichbar bleiben.",
+        "next": "Zur Detailseite des erstellten Projekts wechseln und die Suchparameter q/status beibehalten.",
         "tone": "success"
       },
       {
         "key": "abgelehnt",
         "title": "Übermittlung ausdrücklich abgelehnt",
         "description": "Der Dienst bestätigt, dass der Auftrag nicht angenommen wurde. Ein korrigierbares Problem wird dem Feld zugeordnet; fehlende Berechtigung oder eine Störung wird als solche erklärt.",
-        "next": "Belegte Feldursache am Feld korrigieren. Andere Ursachen als Vorgangsmeldung erklären; nur nach bestätigter Nichtannahme und behobener Ursache erneut senden.",
+        "next": "Ein nachgewiesenes Problem mit dem Wert am Feld erklären, andere Ursachen in der Meldung zum Vorgang. Erneut senden erst, wenn die Nichtannahme bestätigt und die Ursache behoben ist.",
         "tone": "attention"
       },
       {
         "key": "unbekannt",
         "title": "Ergebnis unbekannt",
-        "description": "Eine fehlende Antwort beweist weder Erstellung noch Ablehnung. Der Entwurf und der Bezug zum ausgelösten Vorgang bleiben nachvollziehbar; die Oberfläche behauptet keinen sicheren Misserfolg.",
-        "next": "Ergebnis bleibt ungeklärt. Statusklärung ist eine erforderliche, noch nicht verfügbare Integrationsschnittstelle. Kein Wiederholungs- oder erfundener Supportweg.",
+        "description": "Bleibt die Antwort aus, kann das Projekt trotzdem erstellt worden sein. Bewahre den Entwurf und den Bezug zur ursprünglichen Anfrage. Zeige keinen sicheren Misserfolg an.",
+        "next": "Das Ergebnis muss geklärt werden. Die dafür erforderliche Schnittstelle ist noch nicht verfügbar. Biete weder erneutes Senden noch einen erfundenen Supportweg an.",
         "tone": "attention"
       }
     ],
@@ -128,7 +128,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Neue lokale Referenzentscheidung: Der Name umfasst nach Entfernen des Rand-Leerraums 1–80 Unicode-Graphemcluster. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; keine weitere Normalisierung. Gleiche Namen sind erlaubt. Diese Entscheidung gilt für den Pilot, nicht als upstream- oder Firmenregel.",
+                "text": "Für diesen Piloten gilt: Entferne zuerst Leerraum am Anfang und Ende des Namens. Danach muss er 1 bis 80 Zeichen lang sein. Gezählt werden Unicode-Graphemcluster, also zusammengehörige Zeichen, auch wenn sie aus mehreren Unicode-Codepunkten bestehen. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; der Name wird nicht weiter normalisiert. Gleiche Namen sind erlaubt. Das ist eine lokale Entscheidung für den Piloten, keine Vorgabe des ursprünglichen Designsystems oder Firmenregel.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -180,7 +180,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Reihenfolge: «Projektname (erforderlich)», Eingabe, Hilfe «1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.», gegebenenfalls Feldfehler. Label bleibt sichtbar und dem Feld zugeordnet; Hilfe und Fehler sind als Beschreibung verbunden, ein Fehler erhält zusätzlich den Fehlerstatus. Fokus und Fehler müssen gleichzeitig erkennbar sein.",
+                "text": "Ordne die Elemente so an: «Projektname (erforderlich)», Eingabefeld, Hilfe «1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.» und gegebenenfalls die Fehlermeldung. Die Beschriftung bleibt sichtbar und ist dem Feld zugeordnet. Hilfe und Fehler sind als Beschreibung mit dem Feld verbunden. Bei einem Fehler erhält das Feld zusätzlich den Fehlerstatus. Fokus und Fehler müssen gleichzeitig erkennbar sein.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -198,7 +198,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Erst «Projekt erstellen» oder «Änderungen speichern» prüft. Ein unberührtes Feld zeigt keinen Fehler. Leer nach Randtrim: «Einen Projektnamen eingeben.» Über 80 Graphemcluster: «Den Projektnamen auf höchstens 80 Zeichen kürzen.» Nach erfolglosem Absenden geht der Fokus zum Feld; keine Fehlerübersicht für dieses Einzelfeld.",
+                "text": "Die Prüfung beginnt erst mit «Projekt erstellen» oder «Änderungen speichern». Ein unberührtes Feld zeigt keinen Fehler. Bleibt nach dem Entfernen des Leerraums am Anfang und Ende nichts übrig, lautet die Meldung «Einen Projektnamen eingeben.» Bei mehr als 80 Graphemclustern lautet sie «Den Projektnamen auf höchstens 80 Zeichen kürzen.» Nach erfolglosem Absenden erhält das Feld den Fokus. Für dieses einzelne Feld ist keine Fehlerübersicht vorgesehen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -216,7 +216,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Danach wird nur das zuvor fehlerhafte Feld beim Verlassen erneut geprüft: gültig entfernt den veralteten Fehler, ungültig aktualisiert ihn. Kein Fokuswechsel bei dieser Korrektur. Erneutes Absenden prüft den aktuellen Wert erneut. Die Hauptaktion bleibt erreichbar; eine deaktivierte Aktion ersetzt keine Erklärung.",
+                "text": "Nach dieser ersten Prüfung wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ist die Eingabe gültig, verschwindet die alte Fehlermeldung; andernfalls wird sie aktualisiert. Der Fokus bleibt dabei unverändert. Erneutes Absenden prüft den aktuellen Wert wieder. Die Hauptaktion bleibt erreichbar. Wird eine Aktion deaktiviert, braucht es trotzdem eine Erklärung.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -268,7 +268,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die Detailseite öffnet «Projekt bearbeiten» mit dem zuletzt bestätigten Namen. Ausgangswert und systemgesetzter Status müssen beim Öffnen feststehen; bei ungeklärtem Laden gibt es noch keinen bearbeitbaren Ausgang. «Archiviert» zeigt Name, ID und Status als lesbare Werte ohne Speichern-Aktion.",
+                "text": "Von der Detailseite aus öffnet «Projekt bearbeiten» den zuletzt bestätigten Namen. Bevor er bearbeitet werden kann, müssen dieser Ausgangswert und der vom System gesetzte Status geladen und geklärt sein. Bei «Archiviert» sind Name, ID und Status nur lesbar; eine Aktion zum Speichern gibt es dann nicht.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -286,7 +286,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Geändert bedeutet: Der randgetrimmte aktuelle Name unterscheidet sich vom randgetrimmten bestätigten Ausgangswert. Zurück zum Ausgangswert oder nur Rand-Leerraum ergänzen bedeutet ungeändert. «Änderungen speichern» bei identischem Wert meldet «Keine Änderungen zu speichern.» am Aktionsbereich, sendet keine Anfrage und bleibt auf der Seite. Eingabe, Blur und Abbrechen senden niemals heimlich.",
+                "text": "Vergleiche den aktuellen Namen mit dem bestätigten Ausgangswert, jeweils ohne Leerraum am Anfang und Ende. Nur wenn sich diese Werte unterscheiden, gilt der Name als geändert. Wer den Ausgangswert wiederherstellt oder nur äusseren Leerraum ergänzt, hat nichts geändert. «Änderungen speichern» zeigt dann am Aktionsbereich «Keine Änderungen zu speichern.», sendet keine Anfrage und lässt die Seite geöffnet. Weder die Eingabe noch das Verlassen des Feldes oder «Abbrechen» löst im Hintergrund eine Anfrage aus.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -304,7 +304,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Nach bestätigtem Speichern führt der Weg zur Detailseite desselben Projekts: gespeicherter Name, unveränderte ID und «Änderungen gespeichert». q und status aus der Suche bleiben über Detail und Bearbeiten erhalten. Die Referenzabläufe setzen sequenzielle Bearbeitung voraus; gleichzeitige Änderungen sind ausserhalb des Piloten. Eine Rolle bedeutet nicht nur eine Person. Vor einer Umsetzung mit paralleler Bearbeitung ist ein Konfliktweg festzulegen; stilles Überschreiben ist damit nicht freigegeben.",
+                "text": "Nach bestätigtem Speichern öffnet sich die Detailseite desselben Projekts. Sie zeigt den gespeicherten Namen, die unveränderte ID und «Änderungen gespeichert». Die Suchparameter q und status bleiben beim Wechsel zwischen Suche, Detailseite und Bearbeitung erhalten. Die beschriebenen Abläufe setzen voraus, dass Änderungen nacheinander erfolgen. Gleichzeitige Bearbeitung gehört nicht zum Piloten; auch dieselbe Rolle können mehrere Personen haben. Vor einer Umsetzung mit paralleler Bearbeitung muss festgelegt werden, wie Konflikte gelöst werden. Stilles Überschreiben ist nicht freigegeben.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -356,7 +356,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die Vorgangsmeldung steht nach dem Feld und vor den Aktionen. Laufend: «Projekt wird erstellt …» beziehungsweise «Änderungen werden gespeichert …»; erneutes Senden ist blockiert. Meldungen ohne Seitenwechsel erhalten eine abgestimmte Statusansage ohne Fokusübernahme. Nicht jeder Übergang ist ein dringender Alert.",
+                "text": "Die Meldung zum Vorgang steht zwischen Feld und Aktionen. Solange die Anfrage läuft, lautet sie «Projekt wird erstellt …» beziehungsweise «Änderungen werden gespeichert …». Erneutes Senden ist dann blockiert. Bei Meldungen ohne Seitenwechsel wird die Statusansage für Screenreader auf den Vorgang abgestimmt, ohne den Fokus zu verschieben. Nicht jeder Zustandswechsel braucht einen dringenden Alert.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -374,7 +374,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Nur bestätigte Annahme führt zur Detailseite des gespeicherten Projekts; dort folgt der Fokus der Seitenüberschrift und die Bestätigung bleibt sichtbar. Ausdrückliche Nichtannahme erhält die Eingabe: belegte Feldursachen am Feld, andere Ursachen beim Vorgang. Ein anderer Name hilft nicht gegen eine Verbindungsstörung.",
+                "text": "Erst wenn die Annahme bestätigt ist, öffnet sich die Detailseite des gespeicherten Projekts. Dort erhält die Seitenüberschrift den Fokus, und die Bestätigung bleibt sichtbar. Wird ausdrücklich bestätigt, dass die Anfrage nicht angenommen wurde, bleibt die Eingabe erhalten. Ein nachgewiesenes Problem mit dem Wert wird am Feld erklärt, andere Ursachen in der Meldung zum Vorgang. Ein anderer Name hilft nicht gegen eine Verbindungsstörung.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -392,7 +392,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Ohne eindeutige Antwort: «Es ist noch unklar, ob das Projekt erstellt wurde» beziehungsweise «Es ist noch unklar, ob die Änderungen gespeichert wurden». Keine Zeitüberschreitung macht daraus einen sicheren Fehler. Statusklärung mit Bezug zum ursprünglichen Vorgang ist eine erforderliche, noch nicht verfügbare Integrationsschnittstelle. Im Entwurf als Voraussetzung markieren, nicht als bedienbare Funktion. Kein erfundener Supportweg, kein Wiederholen, keine Bestätigung anhand einer möglicherweise veralteten Liste. Ein Status-Endpunkt wird erst bei der Umsetzung spezifiziert.",
+                "text": "Bleibt eine eindeutige Antwort aus, lautet die Meldung «Es ist noch unklar, ob das Projekt erstellt wurde» beziehungsweise «Es ist noch unklar, ob die Änderungen gespeichert wurden». Auch eine Zeitüberschreitung beweist keinen Fehler. Um das Ergebnis zu klären, braucht es eine Schnittstelle mit Bezug zur ursprünglichen Anfrage. Sie ist noch nicht verfügbar und muss im Entwurf als Voraussetzung gekennzeichnet werden. Biete sie noch nicht als bedienbare Funktion an. Ebenso wenig vorgesehen sind ein erfundener Supportweg, erneutes Senden oder eine Bestätigung anhand einer möglicherweise veralteten Liste. Der Status-Endpunkt wird erst bei der Umsetzung spezifiziert.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -444,7 +444,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Bei unverändertem Bearbeiten führt «Abbrechen» direkt zur Detailseite; bei unverändert leerem Erstellen zur Liste. q/status bleiben erhalten. Bei ungespeicherten Änderungen fragt jeder interne Rückweg: «Ungespeicherte Änderungen verwerfen?» mit «Weiterbearbeiten» und «Verwerfen». Erstellen vergleicht dabei mit dem leeren Ausgangswert. Weiterbearbeiten erhält den Entwurf und führt den Fokus zum Auslöser zurück; Verwerfen führt beim Bearbeiten zum Detail, beim Erstellen zur Liste.",
+                "text": "Wurde beim Bearbeiten nichts geändert, führt «Abbrechen» direkt zur Detailseite. Ist beim Erstellen noch alles unverändert leer, führt die Aktion zur Liste. Die Suchparameter q/status bleiben erhalten. Bei ungespeicherten Änderungen erscheint vor jedem internen Rückweg die Frage «Ungespeicherte Änderungen verwerfen?» mit «Weiterbearbeiten» und «Verwerfen». Beim Erstellen dient der leere Name als Ausgangswert für den Vergleich. «Weiterbearbeiten» erhält den Entwurf und gibt den Fokus an das auslösende Element zurück. «Verwerfen» führt beim Bearbeiten zur Detailseite und beim Erstellen zur Liste.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -462,7 +462,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Lokale Präzisierung vom 20.11.2026: Ein bereits unbekannter Speicherausgang hat Vorrang vor der Dirty-Regel. Hier gibt es kein «Verwerfen» und keinen erneuten Speicherversuch. Beim Verlassen lautet die Nachfrage «Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Aktionen: «Auf Seite bleiben» und «Seite verlassen»; anfänglicher Fokus auf «Auf Seite bleiben». Bleiben erhält Eingabe und Vorgangsbezug, Escape bedeutet Bleiben. Verlassen bestätigt weder Erfolg noch Nichtannahme. Bei Rückkehr bleibt Bearbeiten oder erneutes Senden gesperrt, bis die noch bereitzustellende Statusklärung einen bestätigten Ausgang liefert.",
+                "text": "Die lokale Präzisierung vom 20.11.2026 legt fest: Ist unklar, ob gespeichert wurde, muss zuerst dieses Ergebnis geklärt werden. Die Nachfrage zu ungespeicherten Änderungen greift dann nicht; «Verwerfen» und erneutes Speichern werden nicht angeboten. Beim Verlassen lautet die Nachfrage «Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Zur Wahl stehen «Auf Seite bleiben» und «Seite verlassen». «Auf Seite bleiben» erhält zunächst den Fokus. Wer bleibt oder Escape drückt, behält Eingabe und Bezug zur Anfrage. Das Verlassen bestätigt weder Erfolg noch Nichtannahme. Bei der Rückkehr bleiben Bearbeiten und erneutes Senden gesperrt, bis das Ergebnis über die noch bereitzustellende Statusklärung bestätigt ist.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -480,7 +480,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Browser-Zurück zwischen den Projektseiten innerhalb der Anwendung folgt demselben Schutz wie ein interner Rückweg: vor Übermittlung die Dirty-Nachfrage, während laufendem oder unbekanntem Vorgang die Verlassenswarnung. Navigation ausserhalb der Anwendung, Reload und Schliessen sind davon nicht abgesichert. Bei regulärem Öffnen von Detail oder Formular sowie nach bestätigtem Speichern, sauberem Abbrechen oder Verwerfen zum Detail erhält die Zielüberschrift den Fokus. Abbruch einer Erstellung führt zur Ergebnisüberschrift der Liste; Suchkriterien bleiben erhalten.",
+                "text": "Auch bei Browser-Zurück zwischen den Projektseiten innerhalb der Anwendung gilt dieser Schutz: Vor dem Senden wird bei ungespeicherten Änderungen nach dem Verwerfen gefragt. Während eine Anfrage läuft oder ihr Ergebnis unbekannt ist, erscheint die Warnung zum Verlassen. Wechsel aus der Anwendung heraus, Neuladen und Schliessen sind dadurch nicht abgesichert. Beim regulären Öffnen einer Detail- oder Formularseite erhält deren Überschrift den Fokus. Das gilt auch bei der Rückkehr zur Detailseite nach bestätigtem Speichern, Abbrechen ohne Änderungen oder Verwerfen. Wird eine Erstellung abgebrochen, erhält die Ergebnisüberschrift der Liste den Fokus. Die Suchkriterien bleiben erhalten.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -498,7 +498,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Vor der Entscheidung klar sagen: «Die ungespeicherten Angaben gehen verloren.» Der Pilot hat keinen dauerhaften Entwurf. Neuladen, Schliessen oder Sitzungsende kann lokale Angaben verlieren; keine Wiederherstellung versprechen. Interne Abbruchbestätigung ist keine Zusage für Browser-Reload.",
+                "text": "Erkläre vor der Entscheidung: «Die ungespeicherten Angaben gehen verloren.» Im Piloten wird der Entwurf nicht dauerhaft gespeichert. Beim Neuladen, Schliessen oder am Sitzungsende können lokale Angaben verloren gehen. Versprich keine Wiederherstellung. Die Nachfrage beim internen Abbrechen bietet keinen entsprechenden Schutz beim Neuladen im Browser.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -516,7 +516,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Während Übermittlung heisst der Rückweg «Seite verlassen», nicht «Vorgang abbrechen». Warnung: «Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Lokales Verwerfen stoppt keinen Serverauftrag. Bei Rückkehr ohne Bestätigung bleibt der Ausgang ungeklärt; kein automatisches Senden. Die dafür benötigte Statusklärung ist weiterhin offen.",
+                "text": "Während der Übermittlung heisst die Aktion «Seite verlassen», denn sie bricht den Vorgang nicht ab. Die Warnung lautet «Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.» Lokal verworfene Angaben stoppen keinen Serverauftrag. Fehlt bei der Rückkehr eine Bestätigung, bleibt das Ergebnis ungeklärt. Es wird nichts automatisch erneut gesendet. Die benötigte Statusklärung ist weiterhin offen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -568,7 +568,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Web in de-CH: einspaltiger Seiteninhalt, Überschrift und Kontext vor dem Feld, Vorgangsmeldung vor den Aktionen. Desktop zeigt die Hauptaktion «Projekt erstellen» beziehungsweise «Änderungen speichern» zuerst, danach «Abbrechen». Unter 640 px verfügbarer Inhaltsbreite stehen dieselben Aktionen in derselben Lese- und Fokusreihenfolge untereinander.",
+                "text": "Für die Weboberfläche in de-CH ist der Inhalt einspaltig angeordnet. Überschrift und Kontext stehen vor dem Feld, die Meldung zum Vorgang vor den Aktionen. Auf dem Desktop steht zuerst «Projekt erstellen» beziehungsweise «Änderungen speichern», danach «Abbrechen». Sind weniger als 640 px Inhaltsbreite verfügbar, stehen dieselben Aktionen untereinander. Ihre Lese- und Fokusreihenfolge bleibt gleich.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -586,7 +586,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Keine fixierte Aktionsleiste. Hilfe, Fehler und lange Namen umbrechen; bei Bildschirmtastatur und geringer Höhe bleibt vertikales Scrollen möglich. Feldfokus darf nicht verdeckt werden. Der Verwerfendialog zeigt die Folge vor «Weiterbearbeiten» und «Verwerfen»; Weiterbearbeiten erhält den anfänglichen Fokus. Escape schliesst nur diese Nachfrage und verwirft nichts.",
+                "text": "Die Aktionsleiste ist nicht fixiert. Hilfe, Fehlermeldungen und lange Namen brechen um. Auch bei geöffneter Bildschirmtastatur und geringer Höhe muss vertikales Scrollen möglich bleiben; das fokussierte Feld darf nicht verdeckt sein. Der Dialog zum Verwerfen erklärt die Folgen vor den Aktionen «Weiterbearbeiten» und «Verwerfen». «Weiterbearbeiten» erhält zunächst den Fokus. Escape schliesst die Nachfrage, ohne etwas zu verwerfen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -638,7 +638,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Lokale Gestaltungsreferenz; die unabhängige Prüfung steht aus. Die vorhandene Input-/Button-Demo zeigt weder diesen Formularweg noch Speicherung, Dirty-Erkennung, Verwerfendialog oder Statusklärung. Die bestehenden lokalen Input-Regeln SET_VALUE und NATIVE_INPUT betreffen Werte, nicht Speicherannahme oder Konflikte; Escape im Feld verwirft den Entwurf nicht.",
+                "text": "Diese lokale Gestaltungsreferenz ist noch nicht unabhängig geprüft. Die vorhandene Input-/Button-Demo zeigt den hier beschriebenen Formularablauf nicht. Sie zeigt auch keine Speicherung, Erkennung ungespeicherter Änderungen, Nachfrage zum Verwerfen oder Statusklärung. Die lokalen Input-Regeln SET_VALUE und NATIVE_INPUT beschreiben den Umgang mit Werten. Sie regeln weder die Annahme beim Speichern noch Konflikte. Escape im Feld verwirft den Entwurf nicht.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -656,7 +656,7 @@ const preserved = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Noch auszuführen: leer und überlang absenden; kombinierte Unicode-Zeichen an der Grenze prüfen; Fehler beim Blur korrigieren; Ausgangswert ändern und wiederherstellen; identisch speichern ohne Anfrage; Dirty-Abbruch in beiden Varianten; bestätigte Speicherung mit Suchrückweg; Ablehnung mit Werterhalt; verlorene Antwort und Rückkehr während Übermittlung. Tastatur-, Screenreader-, Zoom- und Touch-Prüfung an der späteren Umsetzung bleiben offen. Mehrfeld- und Mehrschrittprüfungen gehören nicht zu diesem Piloten.",
+                "text": "An der späteren Umsetzung ist noch zu prüfen: einen leeren oder zu langen Namen absenden; kombinierte Unicode-Zeichen an der Längengrenze eingeben; nach einer Korrektur das Feld verlassen und die aktualisierte Fehlermeldung prüfen; den Ausgangswert ändern und wiederherstellen; unverändert speichern, ohne eine Anfrage auszulösen; beim Erstellen und Bearbeiten mit ungespeicherten Änderungen abbrechen; nach bestätigter Speicherung zur Suche zurückkehren; nach einer Ablehnung die Eingabe behalten; eine verlorene Antwort sowie die Rückkehr während einer laufenden Übermittlung behandeln. Tastatur-, Screenreader-, Zoom- und Touch-Prüfungen stehen ebenfalls aus. Formulare mit mehreren Feldern oder Schritten gehören nicht zu diesem Piloten.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -869,22 +869,22 @@ const preserved = [
   }
 ] satisfies Page['content']
 export const release = {
- expectedUpdatedAt:"2026-11-20T08:04:53.615Z",
- summary:'Einen Projektnamen erfassen, prüfen und den Speicherausgang verständlich zeigen.',
+ expectedUpdatedAt:"2026-11-20T14:23:11.593Z",
+  summary:'Einen Projektnamen eingeben, Fehler erklären und das Ergebnis beim Speichern verständlich anzeigen.',
  content:[
-  text("example","Projekt erstellen",["Zustand ansehen", "Statische Vorschau · Die Auswahl zeigt Zustandsbilder. Das Feld ist schreibgeschützt; die abgebildeten Aktionen senden und speichern nichts.", "Projektname (erforderlich)", "1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.", "Formularaktionen"]),
-  text("phases","Vom Entwurf zur Bestätigung",["Eingabe", "Name als Entwurf erfassen.", "Prüfung", "Absenden prüft den aktuellen Wert.", "Speichern", "Übermittlung läuft: noch kein Erfolg.", "Bestätigung", "Nur bestätigte Annahme erlaubt den Erfolgstext."]),
-  text("state-input","Eingabe",["Neues Kundenportal", "Der Name ist ein Entwurf. Erst «Projekt erstellen» prüft und übermittelt.", "Projekt erstellen", "Abbrechen"]),
-  text("state-error","Feldfehler",["", "Einen Projektnamen eingeben.", "Projekt erstellen", "Abbrechen", "Nach erfolglosem Absenden: Wert erhalten, Fokus zum Feld. Danach nur das fehlerhafte Feld beim Verlassen erneut prüfen."]),
-  text("state-dirty","Ungespeichert geändert",["Neues Kundenportal", "Ungespeicherte Änderungen verwerfen?", "Weiterbearbeiten", "Verwerfen", "Die ungespeicherten Angaben gehen verloren. Diese Nachfrage gilt vor einer Übermittlung; beim Bearbeiten zählt der randgetrimmte Vergleich mit dem bestätigten Ausgangswert."]),
-  text("state-saving","Übermittlung läuft",["Neues Kundenportal", "Projekt wird erstellt …", "Projekt erstellen", "Seite verlassen", "Erneutes Senden ist blockiert. Beim Verlassen: Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden."]),
-  text("state-confirmed","Annahme bestätigt",["Neues Kundenportal", "Projekt erstellt", "Zur Detailseite", "", "Dieses Zustandsbild setzt eine bestätigte Annahme voraus. Die Vorschau hat kein Projekt erstellt. In der Anwendung folgt die Detailseite mit Bestätigung und erhaltenem Suchkontext q/status."]),
-  text("state-rejected","Ausdrücklich abgelehnt",["Neues Kundenportal", "Der Auftrag wurde nicht angenommen.", "", "", "Belegte Feldursache am Feld erklären; Berechtigung oder Störung als Vorgangsmeldung. Erneut senden erst nach bestätigter Nichtannahme und behobener Ursache."]),
-  text("state-unknown","Ergebnis unbekannt",["Neues Kundenportal", "Es ist noch unklar, ob das Projekt erstellt wurde", "Auf Seite bleiben", "Seite verlassen", "Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.", "Vorrang vor ungespeicherten Änderungen: kein Verwerfen, kein erneutes Senden. Statusklärung ist erforderlich, aber noch nicht verfügbar. Bei Rückkehr bleiben Bearbeiten und Senden gesperrt, bis der Ausgang bestätigt ist. Escape bedeutet Bleiben; anfänglicher Fokus auf «Auf Seite bleiben»."]),
-  text("rules","Drei Regeln für den Entwurf",["Wert klar begrenzen: 1–80 Unicode-Graphemcluster nach Randtrim. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt.", "Zum richtigen Zeitpunkt prüfen: erst beim Absenden; danach das zuvor fehlerhafte Feld bei Blur. Hilfe und Fehler gehören zum Feld, der Wert bleibt erhalten.", "Ausgänge unterscheiden: laufend, bestätigt, ausdrücklich abgelehnt und unbekannt. Unbekannt hat Vorrang vor Verwerfen und Wiederholen; eine Statusklärung ist noch keine verfügbare Funktion."]),
+  text("example","Projekt erstellen",["Zustand ansehen", "Statische Vorschau · Wähle einen Zustand, um seine Darstellung anzusehen. Das Feld ist schreibgeschützt; die abgebildeten Aktionen senden und speichern nichts.", "Projektname (erforderlich)", "1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.", "Formularaktionen"]),
+  text("phases","Vom Entwurf zur Bestätigung",["Eingabe", "Der eingegebene Name ist ein Entwurf.", "Prüfung", "Beim Absenden wird der aktuelle Wert geprüft.", "Speichern", "Die Anfrage läuft; der Erfolg steht noch nicht fest.", "Bestätigung", "Erst nach bestätigter Annahme wird Erfolg angezeigt."]),
+  text("state-input","Eingabe",["Neues Kundenportal", "Der Name ist ein Entwurf. Erst «Projekt erstellen» löst die Prüfung und Übermittlung aus.", "Projekt erstellen", "Abbrechen"]),
+  text("state-error","Feldfehler",["", "Einen Projektnamen eingeben.", "Projekt erstellen", "Abbrechen", "Nach erfolglosem Absenden bleibt die Eingabe erhalten, und das Feld erhält den Fokus. Danach wird nur das zuvor fehlerhafte Feld beim Verlassen erneut geprüft."]),
+  text("state-dirty","Ungespeicherte Änderungen",["Neues Kundenportal", "Ungespeicherte Änderungen verwerfen?", "Weiterbearbeiten", "Verwerfen", "Die ungespeicherten Angaben gehen verloren. Diese Nachfrage erscheint vor dem Senden. Beim Bearbeiten wird der aktuelle Name mit dem bestätigten Ausgangswert verglichen, jeweils ohne Leerraum am Anfang und Ende."]),
+  text("state-saving","Übermittlung läuft",["Neues Kundenportal", "Projekt wird erstellt …", "Projekt erstellen", "Seite verlassen", "Erneutes Senden ist blockiert. Wer die Seite verlässt, wird gewarnt: Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden."]),
+  text("state-confirmed","Annahme bestätigt",["Neues Kundenportal", "Projekt erstellt", "Zur Detailseite", "", "Diese Darstellung setzt eine bestätigte Annahme voraus. Die Vorschau selbst hat kein Projekt erstellt. In der Anwendung folgt die Detailseite mit der Bestätigung. Die Suchparameter q/status bleiben erhalten."]),
+  text("state-rejected","Ausdrücklich abgelehnt",["Neues Kundenportal", "Der Auftrag wurde nicht angenommen.", "", "", "Ein nachgewiesenes Problem mit dem Wert wird am Feld erklärt. Fehlende Berechtigung oder eine Störung wird in der Meldung zum Vorgang erklärt. Erneutes Senden ist erst möglich, wenn die Nichtannahme bestätigt und die Ursache behoben ist."]),
+  text("state-unknown","Ergebnis unbekannt",["Neues Kundenportal", "Es ist noch unklar, ob das Projekt erstellt wurde", "Auf Seite bleiben", "Seite verlassen", "Speicherstand ungeklärt. Die Anfrage kann weiterlaufen. Beim Zurückkehren muss das Ergebnis geklärt werden.", "Solange das Ergebnis unbekannt ist, gibt es weder Verwerfen noch erneutes Senden. Zuerst muss der Status geklärt werden; die dafür benötigte Funktion ist noch nicht verfügbar. Auch nach der Rückkehr bleiben Bearbeiten und Senden bis zur Bestätigung des Ergebnisses gesperrt. «Auf Seite bleiben» erhält zunächst den Fokus. Escape bedeutet ebenfalls Bleiben."]),
+  text("rules","Drei Regeln für den Entwurf",["Begrenze den Namen auf 1 bis 80 Zeichen, nachdem Leerraum am Anfang und Ende entfernt wurde. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt. Die genaue Zählweise steht unter «Alle Regeln zum Formular».", "Prüfe zuerst beim Absenden. Danach wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ordne Hilfe und Fehlermeldung dem Feld zu, und erhalte die Eingabe.", "Unterscheide laufende Übermittlung, bestätigte Annahme, ausdrückliche Ablehnung und unbekanntes Ergebnis. Ist das Ergebnis unbekannt, muss es vor dem Verwerfen oder erneuten Senden geklärt werden. Die Funktion zur Statusklärung ist noch nicht verfügbar."]),
   text("connections","Layout und Seitentypen",["Das Formular bleibt einspaltig. Die Vorgangsmeldung steht zwischen Feld und Aktionen; unter 640 px verfügbarer Inhaltsbreite folgen Aktionen in gleicher Reihenfolge untereinander."],[["Feldgruppe und Aktionsanordnung · Form Layout", "/systems/shadcn/content-layout-form-layout"], ["Erstellen · create", "/systems/shadcn/page-type-create"], ["Bearbeiten · edit", "/systems/shadcn/page-type-edit"], ["Bestätigtes Ergebnis · detail", "/systems/shadcn/detailseite"]]),
-  text("sources","Quellen und Prüfgrenzen",["Grundlage ist der vollständig veröffentlichte CMS-Stand shadcn-formulare-validierung vom 20.11.2026, 08:04:53 UTC. Die lokale Vertragspräzisierung vom 20.11.2026 zu unbekanntem Speicherausgang bleibt unten unverändert erhalten.", "Die Vorschau reduziert die sichtbare Folge auf vier Phasen und zeigt Fehler, Änderungen sowie Speicherausgänge gezielt. Die vollständige achtteilige Studie und alle Anschlussregeln bleiben im Projektvertrag erhalten. Keine neue fachliche Regel, keine Produktfreigabe.", "Keine ausführbare Validierung oder Serverintegration: Speicherung, Statusklärung, sichere Wiederholung, Navigation und Fokusübergänge der späteren Anwendung werden hier nicht nachgewiesen. Die offenen Prüfungen im Projektvertrag bleiben offen."]),
-  text("contract","Vollständiger Projektvertrag und Anschluss",["Unveränderter veröffentlichter Stand einschliesslich Erstellstudie, Bearbeitung, Rückwegen und Präzisierung vom 20.11.2026."]),
+  text("sources","Quellen und Prüfgrenzen",["Grundlage ist der veröffentlichte CMS-Stand shadcn-formulare-validierung vom 20.11.2026, 08:04:53 UTC. Die folgende Erläuterung ist sprachlich überarbeitet. Sie bewahrt die fachlichen Regeln einschliesslich der lokalen Präzisierung vom 20.11.2026 zum unbekannten Ergebnis einer Speicherung. Die historischen Quellen bleiben im Projekt erhalten.", "Die Vorschau fasst den Ablauf in vier Phasen zusammen. Zusätzlich lassen sich Fehler, ungespeicherte Änderungen und die möglichen Ergebnisse einer Anfrage ansehen. Die Vertiefung beschreibt weiterhin alle acht Zustände der Studie und die Regeln für Bearbeitung, Abbruch und Rückkehr. Daraus entstehen weder neue fachliche Regeln noch eine Produktfreigabe.", "Die Vorschau enthält keine ausführbare Validierung oder Serveranbindung. Sie weist Speicherung, Statusklärung, sichere Wiederholung, Navigation und Fokuswechsel der späteren Anwendung nicht nach. Die in der Vertiefung genannten Prüfungen stehen weiterhin aus."]),
+  text("contract","Alle Regeln zum Formular",["Aktuelle Erläuterung der fachlichen Regeln: Projekt erstellen, Namen bearbeiten, abbrechen und zurückkehren. Sie berücksichtigt die Präzisierung vom 20.11.2026 und ist keine wörtliche Abschrift des damaligen Stands."]),
   ...preserved,
  ] satisfies Page['content'],
 }

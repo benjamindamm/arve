@@ -1,5 +1,6 @@
+import { LayoutVariantPicker } from './layout-variant-picker'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './page-type-overview.css'
 
@@ -10,13 +11,14 @@ const flatten = (n: Child): string => n.text ?? (n.children ?? []).map(flatten).
 const lines = (b: Text) => b.body.root.children.map(n => flatten(n as Child))
 
 export default function Overview({ content }: { content: Page['content'] }) {
-  return <div className="overview-rework">{(content ?? []).map(b => {
+  const variants: Parameters<typeof LayoutVariantPicker>[0]['variants'] = []
+  const remaining = (content ?? []).map(b => {
     if (b.blockType !== 'text') return null
     const v = lines(b)
     const kind = b.blockName
     if (kind === 'sources') return <details key={kind} id={blockAnchor(b)}><summary>{v[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
     if (!['dashboard', 'list-search', 'analytics', 'catalog', 'service-hub'].includes(kind ?? '')) return <section key={b.id ?? kind} id={blockAnchor(b)}><RichText data={b.body}/></section>
-    return <section key={kind} id={blockAnchor(b)} className="ov-variant">
+    variants.push({ id: blockAnchor(b), title: v[0], purpose: v[1], kind: kind!, content: <section key={kind} id={blockAnchor(b)} className="ov-variant">
       <h2>{v[0]}</h2>
       <figure className={`ov-example ov-${kind}`}>
         <div className="ov-canvas"><h3>{v[5]}</h3>
@@ -28,6 +30,8 @@ export default function Overview({ content }: { content: Page['content'] }) {
         </div><figcaption>{v[4]}</figcaption>
       </figure>
       <div className="ov-guidance"><p className="ov-purpose">{v[1]}</p><p>{v[2]}</p><p>{v[3]}</p></div>
-    </section>
-  })}</div>
+    </section> })
+    return null
+  })
+  return <div className="overview-rework"><LayoutVariantPicker variants={variants}/>{remaining}</div>
 }

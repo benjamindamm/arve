@@ -1,0 +1,74 @@
+{
+  "result": "PASS",
+  "scope": "Native callback identity and independent selected/month/popup authority; date arithmetic and focus remain delegated to actual pinned sources and tested browser.",
+  "components": [
+    {
+      "component": "calendar",
+      "behaviorSha256": "ceb825e03c615f30157f6ac6ccaf1707eec477966461a54f9a321cad123e4902",
+      "cases": [
+        {
+          "name": "source onSelect preserves exact Date, modifiers and native event objects",
+          "result": "pass"
+        },
+        {
+          "name": "ignored controlled selection is not secretly committed and host prop synchronizes separately",
+          "result": "pass"
+        },
+        {
+          "name": "without onSelect primitive stores normalized multi/range values without fake callback",
+          "result": "pass"
+        },
+        {
+          "name": "disabled source day cannot select or run day click callback",
+          "result": "pass"
+        },
+        {
+          "name": "display month and selection are independent; controlled month waits for host",
+          "result": "pass"
+        },
+        {
+          "name": "native navigation delegates source algorithms without synthetic selected event",
+          "result": "pass"
+        },
+        {
+          "name": "inline Escape is passive",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "date-picker",
+      "behaviorSha256": "3f8320fdaa19a300f7e70ad3b7538e63b26aff58fac259e174e9127944217a35",
+      "cases": [
+        {
+          "name": "source onSelect preserves exact Date, modifiers and native event objects",
+          "result": "pass"
+        },
+        {
+          "name": "ignored controlled selection is not secretly committed and host prop synchronizes separately",
+          "result": "pass"
+        },
+        {
+          "name": "without onSelect primitive stores normalized multi/range values without fake callback",
+          "result": "pass"
+        },
+        {
+          "name": "disabled source day cannot select or run day click callback",
+          "result": "pass"
+        },
+        {
+          "name": "display month and selection are independent; controlled month waits for host",
+          "result": "pass"
+        },
+        {
+          "name": "native navigation delegates source algorithms without synthetic selected event",
+          "result": "pass"
+        },
+        {
+          "name": "Popover cancellation retains popup and selected authority",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

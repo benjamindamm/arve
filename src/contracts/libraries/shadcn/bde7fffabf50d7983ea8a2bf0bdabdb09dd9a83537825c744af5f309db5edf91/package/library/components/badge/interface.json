@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "badge.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Badge",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"span\"> & VariantProps<typeof badgeVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/badge.tsx.source:25; defaults: {\"variant\": \"\\\"default\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"secondary\" | \"destructive\" | \"outline\" | \"ghost\" | \"link\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "cssParts": []
+        }
+      ]
+    }
+  ]
+}

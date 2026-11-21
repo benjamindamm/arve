@@ -1,0 +1,59 @@
+{
+  "purpose": "Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations.",
+  "avoid": "Do not rely only on color, geometry or hover for access to the values.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 201:20 (Area), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful informative plot with an exhaustive table and text equivalent, no adjustable Root value. Optional source pointer tooltip remains explicitly modeled; interactive descendants must retain their own contracts.",
+  "componentId": "shadcn:ChartArea",
+  "contentAlternative": "Full captioned table with column headers, row headers, exact values and category order; visible summary explicitly states units/unknown units and the chart-specific interpretation. Every category/series survives without color, geometry, pointer hover or transient tooltip.",
+  "updatesAndDescendants": "ChartContainer is a div/context/ResponsiveContainer composition, not a plot API. It requires config:ChartConfig and a Recharts-compatible child, initialDimension defaults320x200; caller gives a nonzero constrained chart size. Config keys map optional ReactNode labels/icons and either color or complete light/dark theme values; generated --color-key variables are scoped to the chart id. ChartStyle returns null without color/theme entries. ChartTooltip and ChartLegend are direct Recharts aliases. ChartTooltipContent requires chart context, returns null when inactive/empty, filters payload type=none, resolves series/nameKey/labelKey and supports formatter, labelFormatter, hideLabel/hideIndicator and dot/line/dashed indicators. ChartLegendContent requires context, returns null with no payload, supports nameKey/hideIcon/verticalAlign. For one payload item with a non-dot indicator, the label nests inside the default row; a custom formatter replaces that row and owns the nested label as well. Neither tooltip nor legend fabricates source data, performs aggregation or automatically makes a complete text alternative. The actual source custom tooltip is a plain div, not a separately focusable ARIA tooltip widget. Recharts3.8 accessibilityLayer keyboard behavior and TooltipBoundingBox Escape dismissal are separately pinned. This reference offers the entire native table and summary continuously; its SVG is explicitly redundant aria-hidden with accessibilityLayer=false. Thus every value is readable without hover, chart focus or a particular screen reader mode. Pointer tooltip remains supplemental and Escape dismisses at the current coordinate until the source coordinate changes. Reference updates replace graph/table/summary from the same dataset; empty and failure are explicit caller feedback instead of a fabricated zero chart. Interactive application filters and legends, if composed, require their own Button/selection contract.",
+  "referenceDecision": "The source Base UI chart wrapper remains the public foundation. The named chart family is an explicit Recharts composition, not a new exported upstream component. The supplemental official new-york-v4 example supplies its actual plot shape and literal dataset only; it does not replace the chosen Base UI wrapper. Dataset counts, accessible figure/table, redundant hidden SVG, units, zero-baseline bar policy and reduced-motion/no-animation reference usage are explicit caller decisions. Figma supplies all native visual measurements; no claim equates this React sample with every Figma raster.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/chart.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/chart-example.tsx.source",
+    "sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-area-default.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "chartSpecificInterpretation": "Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)",
+  "exampleSource": {
+    "examplePath": "sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-area-default.tsx.source",
+    "exampleSha256": "b477e9e5366c89d6e95bf463586752cfadcb358ebf67914af09c7b9d313ae744",
+    "dataset": [
+      {
+        "month": "January",
+        "desktop": 186
+      },
+      {
+        "month": "February",
+        "desktop": 305
+      },
+      {
+        "month": "March",
+        "desktop": 237
+      },
+      {
+        "month": "April",
+        "desktop": 73
+      },
+      {
+        "month": "May",
+        "desktop": 209
+      },
+      {
+        "month": "June",
+        "desktop": 214
+      }
+    ],
+    "categoryKey": "month",
+    "series": [
+      "desktop"
+    ],
+    "unit": "Visitors (count)",
+    "supplementalVariant": "Official new-york-v4 example supplies concrete Recharts plot/data only; chosen public wrappers remain pinned Base UI chart.tsx. Figma supplies native visual observations."
+  },
+  "sourcePackage": "recharts@3.8.0",
+  "referenceDataBinding": "sources/chart-reference-data.json#/families/chart-area"
+}

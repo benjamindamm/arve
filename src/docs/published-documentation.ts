@@ -1,8 +1,7 @@
 import { patternCatalog } from './pattern-catalog'
 import { designResources } from './design-resources'
 import { readTemplate } from './page-templates'
-import config from '@payload-config'
-import { getPayload } from 'payload'
+import { documentationData } from './documentation-data'
 import { publicContent, readPublishedSection } from './component-pages'
 import { layoutExamples } from './layout-metadata'
 
@@ -22,12 +21,7 @@ export async function documentationTree(system: string) {
   const designSystem = await readSystem(system)
   if (!designSystem) return null
 
-  const payload = await getPayload({ config })
-  const { docs } = await payload.find({
-    collection: 'pages', draft: false, pagination: false, depth: 0, sort: ['order', 'title'],
-    select: { slug: true, component: true, title: true, content: true, parent: true, summary: true, pageType: true, template: true },
-    where: { and: [{ designSystem: { equals: designSystem.id } }, { _status: { equals: 'published' } }] },
-  })
+  const docs = await (await documentationData()).pages(designSystem)
   const searchText = new Map<string, string>()
   const visible = docs.filter((page) => page.id !== relationId(designSystem.home) || page.pageType !== 'overview')
   const entries = new Map(visible.map((page) => {

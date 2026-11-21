@@ -4,7 +4,7 @@ const text=(value:string)=>({type:'text',version:1,text:value,detail:0,format:0,
 function copy(blockName:string,...paragraphs:string[]):Block{return {blockType:'text',blockName,body:{root:{type:'root',version:1,direction:'ltr',format:'',indent:0,children:paragraphs.map(value=>({type:'paragraph',version:1,direction:'ltr',format:'',indent:0,children:[text(value)]}))}}}}
 function links(blockName:string,entries:[string,string][]):Block{return {blockType:'text',blockName,body:{root:{type:'root',version:1,direction:'ltr',format:'',indent:0,children:entries.map(([label,url])=>({type:'paragraph',version:1,direction:'ltr',format:'',indent:0,children:[{type:'link',version:1,direction:'ltr',format:'',indent:0,fields:{linkType:'custom',url,newTab:false},children:[text(label)]}]}))}}}}
 // Published page read on 20 November 2026, push:false and read-only DB connection.
-// Its three original blocks match this frozen snapshot and remain below as historical detail.
+// The three earlier handbook blocks below are current explanatory copy, edited for clarity.
 const original: {content: Block[]} = {
   "content": [
     {
@@ -73,43 +73,43 @@ const original: {content: Block[]} = {
     },
     {
       "recommendation": "do",
-      "explanation": "Beschreibe Objekt und Folge, etwa «Rechnung RE-1048 endgültig löschen?». Benenne beide Aktionen eindeutig und prüfe, wohin der Fokus nach Abbruch oder Abschluss zurückkehrt.",
+      "explanation": "Nenne das betroffene Objekt und die Folgen, etwa «Rechnung RE-1048 endgültig löschen?». Beschrifte die Aktionen zum Abbrechen und Fortfahren eindeutig. Prüfe, wohin der Fokus nach dem Abbruch oder Abschluss zurückkehrt.",
       "blockType": "guideline"
     },
     {
       "recommendation": "dont",
-      "explanation": "Jede kleine, leicht rückgängig zu machende Änderung mit einer Bestätigung unterbrechen.",
+      "explanation": "Jede kleine Änderung braucht eine Bestätigung, auch wenn sie sich leicht rückgängig machen lässt.",
       "blockType": "guideline"
     }
   ]
 }
 export const release={
- expectedUpdatedAt:'2026-11-17T22:33:55.334Z',
- summary:'Vor einer folgenreichen Aktion Ziel, Auswirkung und Wiederherstellbarkeit verständlich machen.',
+ expectedUpdatedAt:'2026-11-20T14:31:27.362Z',
+ summary:'Mach vor einer Bestätigung klar, was betroffen ist, was sich ändert und ob sich die Aktion rückgängig machen lässt.',
  content:[
-  copy('destructive-demo','Eine Projektvorlage entfernen','Lokale Demo · synthetisches Beispiel ohne echte Projekte oder Speicherung.',
-   'Projektvorlage «Sommerfest»','Die Vorlage verschwindet aus dieser Demo-Liste. Neuladen der Seite setzt die Demo zurück.',
+  copy('destructive-demo','Eine Projektvorlage entfernen','Lokale Demo mit Beispieldaten · keine echten Projekte, keine Speicherung.',
+   'Projektvorlage «Sommerfest»','Die Vorlage verschwindet aus dieser Demo-Liste. Wenn du die Seite neu lädst, wird die Demo zurückgesetzt.',
    'Entfernen in Demo prüfen','Projektvorlage «Sommerfest» aus der Demo entfernen?',
-   'Die Vorlage wird nur aus der lokalen Demo-Liste entfernt. Echte Projekte und Daten bleiben unberührt. Nach Neuladen ist die Vorlage wieder vorhanden.',
+   'Die Vorlage wird nur aus der lokalen Demo-Liste entfernt. Echte Projekte und Daten bleiben unberührt. Wenn du die Seite neu lädst, ist die Vorlage wieder vorhanden.',
    'Abbrechen','Vorlage aus Demo entfernen','Vorlage in der Demo vorhanden.','Abgebrochen. Die Vorlage bleibt in der Demo.','Vorlage aus der Demo entfernt.','Demo neu starten'),
   copy('destructive-rules','Wann braucht es eine Bestätigung?',
-   'Bestätigen, wenn ein Fehlklick spürbare Folgen hätte und die Aktion nicht einfach rückgängig zu machen ist: etwa gemeinsame Daten löschen oder einen Zugriff entziehen. Vorher sagen, welches Objekt und welche weiteren Personen betroffen sind.',
-   'Nicht für jede kleine Änderung unterbrechen. Bei leicht umkehrbaren Einstellungen genügt meist eine klare unmittelbare Rückmeldung. Rückgängig nur anbieten, wenn es tatsächlich funktioniert und die Grenzen verständlich sind.',
-   'Nicht über den Dialog eine unklare Aktion reparieren. Zuerst Ziel und Umfang klären; bei mehreren Objekten deren Anzahl nennen. Erst dann die konkrete Handlung bestätigen lassen. «Vorlage entfernen» hilft bei der Entscheidung, «OK» nicht.'),
-  copy('destructive-anatomy','Diese Angaben gehören an die Entscheidung',
-   'Ziel: den betroffenen Namen oder die Anzahl im Titel nennen. Folge: erklären, was verschwindet oder sich ändert. Wiederherstellbarkeit: nur den tatsächlich vorhandenen Weg und seine Grenzen nennen; «endgültig» ist keine Standardformulierung.',
-   'Abbruch bleibt klar sichtbar und erhält im Beispiel den ersten Fokus. Tab und Umschalt+Tab bleiben im modalen Dialog, Escape bricht ab. Nach dem Schliessen geht der Fokus zum Auslöser zurück; entfällt dieser im Produkt, ein sinnvolles nächstes Ziel vorsehen.',
-   'Nach Bestätigung den tatsächlichen Ausgang melden. Während einer laufenden Aktion Mehrfachauslösen verhindern; bei Fehlern keinen Erfolg anzeigen. Die lokale Demo zeigt nur Abbruch und erfolgreichen lokalen Abschluss, keine echte Serveraktion.'),
+   'Lass die Aktion bestätigen, wenn ein Fehlklick spürbare Folgen hätte und sie sich nicht einfach rückgängig machen lässt, etwa beim Löschen gemeinsamer Daten oder beim Entziehen eines Zugriffs. Erkläre vorher, welches Objekt und welche weiteren Personen betroffen sind.',
+   'Unterbrich nicht jede kleine Änderung mit einer Nachfrage. Bei Einstellungen, die sich leicht zurücksetzen lassen, genügt meist eine klare unmittelbare Rückmeldung. Biete «Rückgängig» nur an, wenn es tatsächlich funktioniert, und erkläre die Grenzen.',
+   'Die Aktion muss schon vor dem Bestätigungsdialog verständlich sein. Kläre zuerst Ziel und Umfang; nenne bei mehreren Objekten deren Anzahl. Lass dann die konkrete Handlung bestätigen. «Vorlage entfernen» hilft bei der Entscheidung, «OK» nicht.'),
+  copy('destructive-anatomy','Das gehört in den Bestätigungsdialog',
+   'Nenne im Titel den Namen des betroffenen Objekts oder die Anzahl der Objekte. Erkläre, was verschwindet oder sich ändert und ob sich die Aktion rückgängig machen lässt. Beschreibe nur den tatsächlich verfügbaren Weg und seine Grenzen. Verwende «endgültig» nur, wenn es zutrifft.',
+   'Die Aktion zum Abbrechen bleibt klar sichtbar und erhält im Beispiel zuerst den Fokus. Tab und Umschalt+Tab bewegen den Fokus nur innerhalb des modalen Dialogs; Escape bricht ab. Nach dem Schliessen kehrt der Fokus zum Auslöser zurück. Falls dieser im Produkt danach entfällt, brauchst du ein sinnvolles nächstes Fokusziel.',
+   'Melde das Ergebnis der Aktion, sobald es feststeht. Verhindere während der Verarbeitung, dass sie mehrfach ausgelöst wird. Zeige bei einem Fehler keinen Erfolg an. Die lokale Demo zeigt nur den Abbruch und das erfolgreiche Entfernen aus der lokalen Liste. Sie führt keine echte Serveraktion aus.'),
   links('destructive-next',[
    ['Handlungstexte formulieren → Content Design','/systems/shadcn/content-design'],
    ['Ergebnis und Fehler mitteilen → Laden, leer und Fehler','/systems/shadcn/laden-leer-fehler'],
    ['Handlungen gestalten → Button','/systems/shadcn/components/button'],
   ]),
-  copy('destructive-evidence','Quellen, Prüfgrenzen und bisheriger Stand',
-   'shadcn/ui ist die Referenzimplementierung. Die Alert-Dialog-Referenz beschreibt eine modale Unterbrechung mit Titel, Beschreibung und Abbruch-/Aktionspaar. Die Formulierung einer unwiderruflichen Kontolöschung aus ihrem Beispiel ist keine allgemeine Produkteigenschaft.',
-   'WAI APG beschreibt benannte modale Dialoge, Fokusführung, Escape und die Fokus-Rückkehr. Für einen schwer umkehrbaren letzten Schritt nennt es den Fokus auf der am wenigsten destruktiven Aktion als geeignete Möglichkeit. Die drei Entscheidungsregeln oben sind eine redaktionelle Gestaltungshilfe.',
-   'Die Vorschau verwendet einen nativen HTML-Dialog mit showModal(), beschriftet über Titel und kurze Folgenbeschreibung. Sie ist keine eingebundene shadcn-Komponente und belegt weder einen neuen Komponenten-Contract noch eine allgemeine Freigabe für assistive Technik.',
-   'Im Produkt bleiben Umfang, Berechtigungen, Wiederherstellung, laufende Verarbeitung, Fehler und das Ziel nach einer Entfernung am tatsächlichen Ablauf zu prüfen. Die bisherigen drei CMS-Blöcke folgen unverändert als historischer Stand.'),
+  copy('destructive-evidence','Quellen und Grenzen der Vorschau',
+   'shadcn/ui ist die Referenzimplementierung. Die Alert-Dialog-Referenz beschreibt einen modalen Dialog, der den Ablauf unterbricht. Er enthält einen Titel, eine Beschreibung sowie Aktionen zum Abbrechen und Fortfahren. Im Beispiel geht es um eine unwiderrufliche Kontolöschung. Daraus lässt sich keine allgemeine Eigenschaft anderer Produkte ableiten.',
+   'WAI APG beschreibt modale Dialoge mit zugänglichem Namen, die Fokusführung, Escape und die Rückkehr des Fokus nach dem Schliessen. Lässt sich ein letzter Schritt nur schwer rückgängig machen, kann der erste Fokus laut APG auf der am wenigsten destruktiven Aktion liegen. Die drei Entscheidungsregeln oben sind eine redaktionelle Gestaltungshilfe.',
+   'Die Vorschau verwendet einen nativen HTML-Dialog mit showModal(). Er ist über den Titel und eine kurze Beschreibung der Folgen beschriftet. Die Vorschau bindet keine shadcn-Komponente ein. Sie belegt weder einen neuen Komponenten-Contract noch eine allgemeine Freigabe für assistive Technik.',
+   'Prüfe im tatsächlichen Produktablauf, was die Aktion umfasst, welche Berechtigungen nötig sind, ob sich Daten wiederherstellen lassen und wie die Oberfläche während der Verarbeitung und bei Fehlern reagiert. Prüfe auch, wohin der Fokus nach einer Entfernung geht. Die drei ergänzenden Hinweise unten wurden sprachlich überarbeitet.'),
   links('destructive-sources',[
    ['shadcn/ui · Alert Dialog, gelesen am 20.11.2026','https://ui.shadcn.com/docs/components/base/alert-dialog'],
    ['WAI APG · Alert Dialog, gelesen am 20.11.2026','https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/'],

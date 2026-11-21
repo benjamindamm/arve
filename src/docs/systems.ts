@@ -1,18 +1,12 @@
-import config from '@payload-config'
-import { getPayload } from 'payload'
+import { documentationData } from './documentation-data'
 import type { Page } from '../payload-types'
 
 export async function readSystem(slug: string) {
-  const payload = await getPayload({ config })
-  const { docs: [system] } = await payload.find({
-    collection: 'design-systems', depth: 0, limit: 1, where: { slug: { equals: slug } },
-  })
-  return system
+  return (await listSystems()).find(system => system.slug === slug)
 }
 
 export async function listSystems() {
-  const payload = await getPayload({ config })
-  return (await payload.find({ collection: 'design-systems', depth: 0, pagination: false, sort: 'name' })).docs
+  return (await documentationData()).systems()
 }
 
 export function sectionSlug(system: string, slug: string) {

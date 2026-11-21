@@ -1,3 +1,4 @@
+import { catalogueNote } from '../shadcn-complete'
 import type { Page } from '../../../src/payload-types'
 type Block = NonNullable<Page['content']>[number]
 const base = {version:1,direction:'ltr' as const,format:'' as const,indent:0}
@@ -15,7 +16,7 @@ function linked(blockName:string,title:string,description:string,links:[string,s
  if(block.blockType==='text') block.body.root.children.push(...links.map(([label,url])=>link(label,url)))
  return block
 }
-// Published CMS content read through MCP, without writes. Frozen baseline; never import mutable snapshots.
+// Current explanatory text, edited from the MCP-read baseline; no mutable snapshot import.
 const original = [
   {
     "id": "6afce676d24234f397c13050",
@@ -53,7 +54,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Eine Komponente ist eine wiederkehrende Antwort auf eine konkrete Aufgabe. Soll eine Person eine Handlung auslösen, einen Wert eingeben, eine Option wählen oder eine Einstellung ändern? Diese Frage bestimmt den Einstieg. Die visuelle Ähnlichkeit zweier Bausteine reicht für die Auswahl nicht aus.",
+                "text": "Wähle die Komponente danach, was die Person tun soll: eine Handlung auslösen, einen Wert eingeben, eine Option wählen oder eine Einstellung ändern. Zwei Bausteine können ähnlich aussehen und trotzdem unterschiedlichen Aufgaben dienen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -149,7 +150,7 @@ const original = [
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Input · kurzen freien Text eingeben",
+                    "text": "Input · einen kurzen Text eingeben",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -181,7 +182,7 @@ const original = [
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Checkbox · unabhängige Optionen markieren",
+                    "text": "Checkbox · eine oder mehrere unabhängige Optionen wählen",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -213,7 +214,7 @@ const original = [
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Switch · einen Ein-/Aus-Zustand einstellen",
+                    "text": "Switch · eine Einstellung ein- oder ausschalten",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -245,7 +246,7 @@ const original = [
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Komponenten auswählen · die Grenzen vergleichen",
+                    "text": "Komponenten auswählen · ähnliche Aufgaben unterscheiden",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -301,7 +302,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die Gestaltungsstudien erklären Aufbau, Unterschiede und relevante Zustände. Sie sind statische Beispiele und keine bedienbaren Controls. Die Spartan-Live-Demos lassen sich ausprobieren, zeigen aber nur einen begrenzten lokalen Umfang. Der technische Contract beschreibt den verknüpften Referenzstand; sein Status ist nicht automatisch eine Implementierungsfreigabe.",
+                "text": "Die Gestaltungsstudien zeigen, wie die Komponenten aufgebaut sind, worin sie sich unterscheiden und welche Zustände für die Gestaltung wichtig sind. Diese statischen Beispiele lassen sich nicht bedienen. Die Spartan-Live-Demos kannst du ausprobieren; sie zeigen die jeweils lokal vorhandenen Funktionen. Der technische Contract beschreibt den verknüpften Referenzstand. Sein Status bedeutet nicht automatisch, dass die Implementierung freigegeben ist.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -319,7 +320,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Die vier Seiten verknüpfen weiterhin ihre bestehenden Contractrevisionen. Nur für Button ist derzeit eine Webimplementierung als Preview registriert. Input, Checkbox und Switch haben lokale Vorschauen, aber noch keinen veröffentlichten Implementierungsdatensatz. Für iOS und Android ist in diesem Bestand keine Implementierung veröffentlicht.",
+                "text": "Die vier Seiten verweisen auf ihre bestehenden Contractrevisionen. Nur für Button ist derzeit eine Webimplementierung als Preview registriert. Für Input, Checkbox und Switch gibt es lokale Vorschauen, aber noch keinen veröffentlichten Implementierungsdatensatz. Für iOS und Android ist in diesem Bestand keine Implementierung veröffentlicht.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -372,7 +373,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Ein Input allein ist noch kein Formular, ein Button noch kein Speichervorgang und ein Switch noch keine dauerhafte Einstellungsänderung. Patterns beschreiben diese Abläufe mit Rückmeldung, Fehler und Wiederaufnahme. Grundlagen erklären Farbe, Schrift, Abstände und visuelle Zustände. Die Komponentenseiten zeigen ihre konkrete Anwendung.",
+                "text": "Ein Input allein ist noch kein Formular. Ein Button führt nicht selbst den gesamten Speichervorgang aus, und ein Switch speichert eine Einstellungsänderung nicht automatisch dauerhaft. Die UX-Patterns beschreiben die zugehörigen Abläufe: welche Rückmeldung erscheint, wie Fehler angezeigt werden und wie die Person danach fortfährt. Die Grundlagen erklären Farbe, Schrift, Abstände und visuelle Zustände; die Komponentenseiten zeigen, wie sie angewendet werden.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -390,7 +391,7 @@ const original = [
             "children": [
               {
                 "mode": "normal",
-                "text": "Arve verwendet shadcn als Referenzimplementierung und Spartan für lokale Webbeispiele. Die Entscheidungsfragen lassen sich auf ein Firmensystem übertragen; dessen Varianten, Regeln und Nachweise müssen separat zugeordnet werden.",
+                "text": "Arve verwendet shadcn als Referenzimplementierung und Spartan für lokale Webbeispiele. Die Fragen zur Komponentenwahl helfen auch bei der Arbeit mit einem firmeneigenen Designsystem. Prüfe dort gesondert, welche Varianten und Regeln gelten und welche Nachweise vorliegen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -541,16 +542,18 @@ const original = [
 ] satisfies NonNullable<Page['content']>
 
 export const release = {
- expectedUpdatedAt: "2026-11-20T13:30:59.979Z",
- summary: 'Handlung auslösen, Text eingeben, unabhängig auswählen oder eine Einstellung ändern: den passenden Baustein finden.',
+ expectedUpdatedAt: "2026-11-20T14:39:06.877Z",
+ summary: 'Finde den passenden Baustein für deine Oberfläche. Der Katalog verbindet Designvorschauen, Quellencontracts und Framework-Referenzen.',
  content: [
-  text('comparison','Vier Aufgaben, vier Bausteine','Schematische Vorschauen · die Komponentenseiten bieten die vorhandenen Spartan-Demos zum Ausprobieren.'),
-  card('button','Button','Handlung','Änderungen speichern','','Löst eine Handlung aus, etwa Änderungen speichern.'),
-  card('input','Input','Freier Wert','Projektname','Alpen','Erfasst einen kurzen, einzeiligen Text, den die Person selbst eingibt.'),
-  card('checkbox','Checkbox','Unabhängige Auswahl','Kopie per E-Mail erhalten','','Markiert eine unabhängige Option; mehrere Optionen dürfen zugleich gelten.'),
-  card('switch','Switch','Ein-/Aus-Einstellung','Benachrichtigungen','Ein','Zeigt eine Einstellung als ein oder aus; das Label bleibt beim Wechsel gleich.'),
-  linked('selection','Noch unsicher?','Der Auswahlguide klärt Handlung oder Navigation, freien Text oder bekannte Werte und die Grenze zwischen Auswahl und Einstellung.',[['Komponenten auswählen','/systems/shadcn/komponenten-auswahl']]),
-  linked('workflow','Im Ablauf weitergestalten','Lege fest, wann eine Auswahl gilt und wie Erfolg, Fehler oder eine ausstehende Übernahme sichtbar werden.',[['UX-Patterns ansehen','/systems/shadcn/patterns'],['Grundlagen ansehen','/systems/shadcn/grundlagen'],['Layouts ansehen','/systems/shadcn/layout']]),
+  text('comparison','Vier Aufgaben, vier Bausteine','Die Vorschauen zeigen die Bausteine vereinfacht. Auf den Komponentenseiten kannst du die vorhandenen Spartan-Demos ausprobieren.'),
+  card('button','Button','Eine Handlung auslösen','Änderungen speichern','','Löst eine Handlung aus, zum Beispiel das Speichern von Änderungen.'),
+  card('input','Input','Text eingeben','Projektname','Alpen','Hier gibt die Person einen kurzen, einzeiligen Text selbst ein.'),
+  card('checkbox','Checkbox','Unabhängige Optionen wählen','Kopie per E-Mail erhalten','','Die Person kann eine unabhängige Option auswählen. Mehrere Optionen dürfen zugleich ausgewählt sein.'),
+  card('switch','Switch','Eine Einstellung ein- oder ausschalten','Benachrichtigungen','Ein','Zeigt, ob eine Einstellung ein- oder ausgeschaltet ist. Die Beschriftung bleibt beim Wechsel gleich.'),
+  linked('selection','Noch unsicher?','Die Seite «Komponenten auswählen» hilft dir, ähnliche Aufgaben zu unterscheiden: eine Handlung auslösen oder ein Ziel öffnen, Text eingeben oder aus bekannten Werten wählen, eine Option wählen oder eine Einstellung ändern.',[['Komponenten auswählen','/systems/shadcn/komponenten-auswahl']]),
+  linked('workflow','Im Ablauf weitergestalten','Lege fest, wann eine Auswahl wirksam wird. Zeige, ob die Übernahme noch aussteht, erfolgreich war oder fehlgeschlagen ist.',[['UX-Patterns ansehen','/systems/shadcn/patterns'],['Grundlagen ansehen','/systems/shadcn/grundlagen'],['Layouts ansehen','/systems/shadcn/layout']]),
   ...original,
  ] satisfies Page['content'],
 }
+
+release.content.unshift(catalogueNote)

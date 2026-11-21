@@ -1,0 +1,3862 @@
+{
+  "format": "shadcn-figma-observations/1",
+  "source": "provenance://source/.figma-pool%2Fshadcn.fig",
+  "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "classification": "observation",
+  "reader": "@leogcode/figma-reader 0.4.2",
+  "page": {
+    "id": "73:227",
+    "name": "Dialog",
+    "kind": "component",
+    "slug": "dialog",
+    "top": [
+      {
+        "id": "2353:17791",
+        "name": "Be in the loop",
+        "type": "INSTANCE"
+      },
+      {
+        "id": "2136:6712",
+        "name": "Dialog",
+        "type": "FRAME"
+      }
+    ],
+    "componentSets": [
+      {
+        "id": "2136:6736",
+        "name": "Dialog header",
+        "page": "Dialog",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "2136:6737",
+            "name": "Dir=RTL",
+            "instances": 1,
+            "swapInstances": 0
+          },
+          {
+            "id": "2136:6993",
+            "name": "Dir=LTR",
+            "instances": 5,
+            "swapInstances": 0
+          }
+        ]
+      },
+      {
+        "id": "2136:7033",
+        "name": "DialogFooter",
+        "page": "Dialog",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "One button",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "2136:7034",
+            "name": "Dir=LTR",
+            "instances": 2,
+            "swapInstances": 0
+          },
+          {
+            "id": "2136:7010",
+            "name": "Dir=RTL",
+            "instances": 1,
+            "swapInstances": 0
+          }
+        ]
+      }
+    ],
+    "components": []
+  },
+  "frames": [
+    {
+      "id": "2136:6712",
+      "name": "Dialog",
+      "type": "FRAME",
+      "x": -487,
+      "y": -157,
+      "width": 976,
+      "height": 3815,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "padding": [
+          56,
+          56,
+          56,
+          56
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-12",
+        "stack_padding_left": "p-14",
+        "stack_padding_top": "p-14",
+        "stack_padding_right": "p-14",
+        "stack_padding_bottom": "p-14",
+        "rectangle_top_left_corner_radius": "radius-xl",
+        "rectangle_top_right_corner_radius": "radius-xl",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border"
+      },
+      "children": [
+        {
+          "id": "2136:6713",
+          "name": "Title",
+          "type": "FRAME",
+          "x": 56,
+          "y": 56,
+          "width": 864,
+          "height": 92,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-4"
+          },
+          "children": [
+            {
+              "id": "2136:6714",
+              "name": "Component description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 699,
+              "height": 92,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2136:6715",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 699,
+                  "height": 36,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Dialog",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 30,
+                    "lineHeight": 36,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-3xl/Semi Bold"
+                },
+                {
+                  "id": "2136:6716",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 44,
+                  "width": 699,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2136:6717",
+              "name": "Buttons",
+              "type": "FRAME",
+              "x": 715,
+              "y": 0,
+              "width": 149,
+              "height": 32,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    1
+                  ],
+                  "radius": 2
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-xs",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  12,
+                  0,
+                  12
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-3",
+                "stack_padding_right": "px-3",
+                "rectangle_top_left_corner_radius": "rounded-xl",
+                "rectangle_top_right_corner_radius": "rounded-xl",
+                "rectangle_bottom_left_corner_radius": "rounded-xl",
+                "rectangle_bottom_right_corner_radius": "rounded-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2136:6718",
+                  "name": "Text",
+                  "type": "FRAME",
+                  "x": 12,
+                  "y": 6,
+                  "width": 103,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "counterSizing": "HUG"
+                  },
+                  "childCount": 1
+                },
+                {
+                  "id": "2136:6720",
+                  "name": "lucide/arrow-up-right",
+                  "type": "INSTANCE",
+                  "x": 121,
+                  "y": 8,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/arrow-up-right",
+                    "mainComponentId": "128:198"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2136:6721",
+          "name": "Component elements",
+          "type": "FRAME",
+          "x": 56,
+          "y": 196,
+          "width": 864,
+          "height": 589,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 40,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-10"
+          },
+          "children": [
+            {
+              "id": "2463:15560",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Components",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 24,
+                "lineHeight": 32,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-2xl/Semi Bold"
+            },
+            {
+              "id": "2136:6722",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 72,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Dialog Header",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2231:4147",
+              "name": "Wrapper",
+              "type": "FRAME",
+              "x": 0,
+              "y": 140,
+              "width": 864,
+              "height": 164,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2231:4155",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 20,
+                  "y": 20,
+                  "width": 824,
+                  "height": 124,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            },
+            {
+              "id": "2232:1238",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 344,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Dialog Footer",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2232:1211",
+              "name": "Wrapper",
+              "type": "FRAME",
+              "x": 0,
+              "y": 412,
+              "width": 834,
+              "height": 177,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2232:1212",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 20,
+                  "y": 20,
+                  "width": 794,
+                  "height": 137,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15558",
+          "name": "Seperator",
+          "type": "LINE",
+          "x": 56,
+          "y": 833,
+          "width": 864,
+          "height": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": 2,
+          "strokeAlign": "CENTER",
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stroke_weight": "border-2"
+          }
+        },
+        {
+          "id": "2136:6766",
+          "name": "Frame 2",
+          "type": "FRAME",
+          "x": 56,
+          "y": 881,
+          "width": 864,
+          "height": 120,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2136:6767",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Examples",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2136:6768",
+              "name": "Frame 3",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 864,
+              "height": 92,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 0,
+                "padding": [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-6"
+              },
+              "children": [
+                {
+                  "id": "2136:6769",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 24,
+                  "width": 864,
+                  "height": 28,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Custom Close Button",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 18,
+                    "lineHeight": 28,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-lg/Semi Bold"
+                },
+                {
+                  "id": "2136:6770",
+                  "name": "Frame 7",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 52,
+                  "width": 864,
+                  "height": 40,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      16,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_padding_top": "pt-4"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15579",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1049,
+          "width": 864,
+          "height": 278,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2137:345",
+              "name": "Dialog",
+              "type": "FRAME",
+              "x": 208,
+              "y": 41,
+              "width": 448,
+              "height": 196,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2137:381",
+                  "name": "Group",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 448,
+                  "height": 116,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      16,
+                      16,
+                      0,
+                      16
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2137:360",
+                  "name": "DialogFooter",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 132,
+                  "width": 448,
+                  "height": 64,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "opacity": 0.5,
+                      "color": "#F5F5F5"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    null,
+                    null,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    0,
+                    0,
+                    14,
+                    14
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      16,
+                      16,
+                      16,
+                      16
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "Dir=LTR",
+                    "mainComponentId": "2136:7034",
+                    "componentSet": "DialogFooter",
+                    "properties": {
+                      "Dir": "LTR",
+                      "One button": false
+                    },
+                    "overrides": 4
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4",
+                    "stack_padding_bottom": "p-4",
+                    "rectangle_bottom_left_corner_radius": "radius-xl",
+                    "rectangle_bottom_right_corner_radius": "radius-xl",
+                    "border_top_weight": "border-t"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2136:6776",
+          "name": "Frame 3",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1375,
+          "width": 864,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2136:6777",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "No Close Button",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2136:6778",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 864,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2136:6779",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 864,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use showCloseButton={false} to hide the close button.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15581",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1491,
+          "width": 864,
+          "height": 186,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2137:382",
+              "name": "Dialog",
+              "type": "FRAME",
+              "x": 240,
+              "y": 41,
+              "width": 384,
+              "height": 104,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2137:384",
+                  "name": "Dialog header",
+                  "type": "INSTANCE",
+                  "x": 16,
+                  "y": 16,
+                  "width": 352,
+                  "height": 72,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 4,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "Dir=LTR",
+                    "mainComponentId": "2136:6993",
+                    "componentSet": "Dialog header",
+                    "properties": {
+                      "Dir": "LTR",
+                      "Icon": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2137:408",
+          "name": "Frame 11",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1725,
+          "width": 864,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2137:409",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Sticky Footer",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2137:410",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 864,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2137:411",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 864,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Keep actions visible while the content scrolls.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15603",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1841,
+          "width": 864,
+          "height": 599,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2137:510",
+              "name": "Dialog",
+              "type": "FRAME",
+              "x": 208,
+              "y": 41,
+              "width": 448,
+              "height": 517,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "primarySizing": "FIXED"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2137:511",
+                  "name": "Group",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 448,
+                  "height": 436,
+                  "clipsContent": true,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      16,
+                      16,
+                      0,
+                      16
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "grow": 1,
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2137:532",
+                  "name": "DialogFooter",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 452,
+                  "width": 448,
+                  "height": 65,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "opacity": 0.5,
+                      "color": "#F5F5F5"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    null,
+                    null,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    0,
+                    0,
+                    14,
+                    14
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      16,
+                      16,
+                      17,
+                      16
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "Dir=RTL",
+                    "mainComponentId": "2136:7010",
+                    "componentSet": "DialogFooter",
+                    "properties": {
+                      "Dir": "RTL",
+                      "One button": false
+                    },
+                    "overrides": 3
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4",
+                    "rectangle_bottom_left_corner_radius": "radius-xl",
+                    "rectangle_bottom_right_corner_radius": "radius-xl",
+                    "border_top_weight": "border-t"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2137:548",
+          "name": "Frame 12",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2488,
+          "width": 864,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2137:549",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Scrollable Content",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2137:550",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 864,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2137:551",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 864,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Long content can scroll while the header stays in view.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15604",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2604,
+          "width": 864,
+          "height": 525,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2137:552",
+              "name": "Dialog",
+              "type": "FRAME",
+              "x": 208,
+              "y": 41,
+              "width": 448,
+              "height": 443,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "primarySizing": "FIXED"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2137:553",
+                  "name": "Group",
+                  "type": "FRAME",
+                  "x": 16,
+                  "y": 16,
+                  "width": 416,
+                  "height": 411,
+                  "clipsContent": true,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "grow": 1,
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2136:6784",
+          "name": "Frame 10",
+          "type": "FRAME",
+          "x": 56,
+          "y": 3177,
+          "width": 864,
+          "height": 68,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2136:6785",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 864,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "RTL",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2136:6786",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 864,
+              "height": 40,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2136:6787",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 864,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "To enable RTL support in shadcn/ui, see the RTL configuration guide.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular",
+                  "runs": [
+                    {
+                      "text": "To enable RTL support in shadcn/ui, see the "
+                    },
+                    {
+                      "text": "RTL configuration guide",
+                      "textDecoration": "UNDERLINE",
+                      "link": "https://ui.shadcn.com/docs/rtl"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:15617",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 3293,
+          "width": 864,
+          "height": 466,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2137:590",
+              "name": "Dialog",
+              "type": "FRAME",
+              "x": 239.5,
+              "y": 41,
+              "width": 385,
+              "height": 384,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 16,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2137:591",
+                  "name": "Group",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 385,
+                  "height": 304,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      16,
+                      16,
+                      0,
+                      16
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2137:594",
+                  "name": "DialogFooter",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 320,
+                  "width": 385,
+                  "height": 64,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "opacity": 0.5,
+                      "color": "#F5F5F5"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    null,
+                    null,
+                    null
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    0,
+                    0,
+                    14,
+                    14
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 8,
+                    "padding": [
+                      16,
+                      16,
+                      16,
+                      16
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "component": {
+                    "mainComponent": "Dir=LTR",
+                    "mainComponentId": "2136:7034",
+                    "componentSet": "DialogFooter",
+                    "properties": {
+                      "Dir": "LTR",
+                      "One button": true
+                    },
+                    "overrides": 4
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-2",
+                    "stack_padding_left": "p-4",
+                    "stack_padding_top": "p-4",
+                    "stack_padding_right": "p-4",
+                    "stack_padding_bottom": "p-4",
+                    "rectangle_bottom_left_corner_radius": "radius-xl",
+                    "rectangle_bottom_right_corner_radius": "radius-xl",
+                    "border_top_weight": "border-t"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "2136:6736",
+      "name": "Dialog header",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 72,
+      "width": 824,
+      "height": 52,
+      "clipsContent": true,
+      "layout": {
+        "mode": "GRID",
+        "gap": 16,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-4",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border",
+        "grid_row_gap": "gap-6",
+        "grid_column_gap": "gap-6"
+      },
+      "children": [
+        {
+          "id": "2136:6737",
+          "name": "Dir=RTL",
+          "type": "COMPONENT",
+          "x": 424,
+          "y": 0,
+          "width": 368,
+          "height": 52,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Icon",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1"
+          },
+          "children": [
+            {
+              "id": "2136:6738",
+              "name": "Dialog header",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 368,
+              "height": 52,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2136:6739",
+                  "name": "Dialog title",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 368,
+                  "height": 24,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "SPACE_EVENLY",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2136:6741",
+                  "name": "Dialog description",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 32,
+                  "width": 368,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2136:6993",
+          "name": "Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 368,
+          "height": 52,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Icon",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1"
+          },
+          "children": [
+            {
+              "id": "2136:6994",
+              "name": "Dialog header",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 368,
+              "height": 52,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2136:6995",
+                  "name": "Dialog title",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 368,
+                  "height": 24,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "SPACE_EVENLY",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2136:6998",
+                  "name": "Dialog description",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 32,
+                  "width": 368,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2136:6737",
+      "name": "Dir=RTL",
+      "type": "COMPONENT",
+      "x": 424,
+      "y": 0,
+      "width": 368,
+      "height": 52,
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MAX",
+        "counterAlign": "MIN",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1"
+      },
+      "children": [
+        {
+          "id": "2136:6738",
+          "name": "Dialog header",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 368,
+          "height": 52,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "grow": 1
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2136:6739",
+              "name": "Dialog title",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 368,
+              "height": 24,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "SPACE_EVENLY",
+                "counterAlign": "MIN",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2136:6985",
+                  "name": "lucide/x",
+                  "type": "INSTANCE",
+                  "x": 0,
+                  "y": 0,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/x",
+                    "mainComponentId": "128:2934",
+                    "overrides": 2
+                  }
+                },
+                {
+                  "id": "2136:6740",
+                  "name": "Login to your account",
+                  "type": "TEXT",
+                  "x": 16,
+                  "y": 0,
+                  "width": 352,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "card-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Login to your account",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Medium",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "align": "RIGHT",
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Medium"
+                }
+              ]
+            },
+            {
+              "id": "2136:6741",
+              "name": "Dialog description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 32,
+              "width": 368,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MAX",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2136:6742",
+                  "name": "Enter your email below to login to your account",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 368,
+                  "height": 20,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Enter your email below to login to your account",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                    "align": "RIGHT",
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-sm/Regular"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2136:6993",
+      "name": "Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 0,
+      "width": 368,
+      "height": 52,
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 4,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MAX",
+        "counterAlign": "MIN",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1"
+      },
+      "children": [
+        {
+          "id": "2136:6994",
+          "name": "Dialog header",
+          "type": "FRAME",
+          "x": 0,
+          "y": 0,
+          "width": 368,
+          "height": 52,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 8,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "grow": 1
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2"
+          },
+          "children": [
+            {
+              "id": "2136:6995",
+              "name": "Dialog title",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 368,
+              "height": 24,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "SPACE_EVENLY",
+                "counterAlign": "MIN",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2136:6996",
+                  "name": "Login to your account",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 352,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "popover-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Login to your account",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Medium",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Medium"
+                },
+                {
+                  "id": "2136:6997",
+                  "name": "lucide/x",
+                  "type": "INSTANCE",
+                  "x": 352,
+                  "y": 0,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/x",
+                    "mainComponentId": "128:2934",
+                    "overrides": 2
+                  }
+                }
+              ]
+            },
+            {
+              "id": "2136:6998",
+              "name": "Dialog description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 32,
+              "width": 368,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2136:6999",
+                  "name": "Enter your email below to login to your account",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 368,
+                  "height": 20,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Enter your email below to login to your account",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-sm/Regular"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2136:7033",
+      "name": "DialogFooter",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 72,
+      "width": 794,
+      "height": 65,
+      "clipsContent": true,
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 24,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "One button",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-6",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border"
+      },
+      "children": [
+        {
+          "id": "2136:7034",
+          "name": "Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 385,
+          "height": 64,
+          "fills": [
+            {
+              "type": "SOLID",
+              "opacity": 0.5,
+              "color": "#F5F5F5"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            null,
+            null,
+            null
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            0,
+            0,
+            14,
+            14
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "One button",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2",
+            "stack_padding_left": "p-4",
+            "stack_padding_top": "p-4",
+            "stack_padding_right": "p-4",
+            "stack_padding_bottom": "p-4",
+            "rectangle_bottom_left_corner_radius": "radius-xl",
+            "rectangle_bottom_right_corner_radius": "radius-xl",
+            "border_top_weight": "border-t"
+          },
+          "children": [
+            {
+              "id": "2136:7036",
+              "name": "Button",
+              "type": "INSTANCE",
+              "x": 16,
+              "y": 16,
+              "width": 114,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#171717",
+                  "variable": "primary"
+                }
+              ],
+              "cornerRadius": [
+                10,
+                10,
+                10,
+                10
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  10,
+                  0,
+                  10
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "component": {
+                "mainComponent": "Variant=Default, Size=default, State=Default, Roudness=Default",
+                "mainComponentId": "1872:3173",
+                "componentSet": "Button",
+                "properties": {
+                  "Variant": "Default",
+                  "Size": "default",
+                  "State": "Default",
+                  "Roudness": "Default",
+                  "Left icon": false,
+                  "Right icon": false,
+                  "Kbd": false
+                },
+                "overrides": 2
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1",
+                "stack_padding_left": "px-2,5",
+                "stack_padding_right": "px-2,5",
+                "height": "h-8",
+                "rectangle_top_left_corner_radius": "radius-lg",
+                "rectangle_top_right_corner_radius": "radius-lg",
+                "rectangle_bottom_left_corner_radius": "radius-lg",
+                "rectangle_bottom_right_corner_radius": "radius-lg"
+              }
+            },
+            {
+              "id": "2136:7035",
+              "name": "Button",
+              "type": "INSTANCE",
+              "x": 138,
+              "y": 16,
+              "width": 67,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                10,
+                10,
+                10,
+                10
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  10,
+                  0,
+                  10
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "component": {
+                "mainComponent": "Variant=Outline, Size=default, State=Default, Roudness=Default",
+                "mainComponentId": "1872:3166",
+                "componentSet": "Button",
+                "properties": {
+                  "Variant": "Outline",
+                  "Size": "default",
+                  "State": "Default",
+                  "Roudness": "Default",
+                  "1879:25": false
+                },
+                "overrides": 2
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1",
+                "stack_padding_left": "px-2,5",
+                "stack_padding_right": "px-2,5",
+                "height": "h-8",
+                "rectangle_top_left_corner_radius": "radius-lg",
+                "rectangle_top_right_corner_radius": "radius-lg",
+                "rectangle_bottom_left_corner_radius": "radius-lg",
+                "rectangle_bottom_right_corner_radius": "radius-lg",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2136:7010",
+          "name": "Dir=RTL",
+          "type": "COMPONENT",
+          "x": 409,
+          "y": 0,
+          "width": 385,
+          "height": 65,
+          "fills": [
+            {
+              "type": "SOLID",
+              "opacity": 0.5,
+              "color": "#F5F5F5"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            null,
+            null,
+            null
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            0,
+            0,
+            14,
+            14
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 8,
+            "padding": [
+              16,
+              16,
+              17,
+              16
+            ],
+            "primaryAlign": "MAX",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "One button",
+                "type": "BOOL",
+                "default": true
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-2",
+            "stack_padding_left": "p-4",
+            "stack_padding_top": "p-4",
+            "stack_padding_right": "p-4",
+            "rectangle_bottom_left_corner_radius": "radius-xl",
+            "rectangle_bottom_right_corner_radius": "radius-xl",
+            "border_top_weight": "border-t"
+          },
+          "children": [
+            {
+              "id": "2136:6923",
+              "name": "Button",
+              "type": "INSTANCE",
+              "x": 180,
+              "y": 16,
+              "width": 67,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "background"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                10,
+                10,
+                10,
+                10
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  10,
+                  0,
+                  10
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "component": {
+                "mainComponent": "Variant=Outline, Size=default, State=Default, Roudness=Default",
+                "mainComponentId": "1872:3166",
+                "componentSet": "Button",
+                "properties": {
+                  "Variant": "Outline",
+                  "Size": "default",
+                  "State": "Default",
+                  "Roudness": "Default",
+                  "1879:25": false
+                },
+                "overrides": 2
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1",
+                "stack_padding_left": "px-2,5",
+                "stack_padding_right": "px-2,5",
+                "height": "h-8",
+                "rectangle_top_left_corner_radius": "radius-lg",
+                "rectangle_top_right_corner_radius": "radius-lg",
+                "rectangle_bottom_left_corner_radius": "radius-lg",
+                "rectangle_bottom_right_corner_radius": "radius-lg",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            },
+            {
+              "id": "2136:6922",
+              "name": "Button",
+              "type": "INSTANCE",
+              "x": 255,
+              "y": 16,
+              "width": 114,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#171717",
+                  "variable": "primary"
+                }
+              ],
+              "cornerRadius": [
+                10,
+                10,
+                10,
+                10
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  10,
+                  0,
+                  10
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "component": {
+                "mainComponent": "Variant=Default, Size=default, State=Default, Roudness=Default",
+                "mainComponentId": "1872:3173",
+                "componentSet": "Button",
+                "properties": {
+                  "Variant": "Default",
+                  "Size": "default",
+                  "State": "Default",
+                  "Roudness": "Default",
+                  "Left icon": false,
+                  "Right icon": false,
+                  "Kbd": false
+                },
+                "overrides": 2
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1",
+                "stack_padding_left": "px-2,5",
+                "stack_padding_right": "px-2,5",
+                "height": "h-8",
+                "rectangle_top_left_corner_radius": "radius-lg",
+                "rectangle_top_right_corner_radius": "radius-lg",
+                "rectangle_bottom_left_corner_radius": "radius-lg",
+                "rectangle_bottom_right_corner_radius": "radius-lg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2136:7034",
+      "name": "Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 0,
+      "width": 385,
+      "height": 64,
+      "fills": [
+        {
+          "type": "SOLID",
+          "opacity": 0.5,
+          "color": "#F5F5F5"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        null,
+        null,
+        null
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        0,
+        0,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "One button",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-2",
+        "stack_padding_left": "p-4",
+        "stack_padding_top": "p-4",
+        "stack_padding_right": "p-4",
+        "stack_padding_bottom": "p-4",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border-t"
+      },
+      "children": [
+        {
+          "id": "2136:7036",
+          "name": "Button",
+          "type": "INSTANCE",
+          "x": 16,
+          "y": 16,
+          "width": 114,
+          "height": 32,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "cornerRadius": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "component": {
+            "mainComponent": "Variant=Default, Size=default, State=Default, Roudness=Default",
+            "mainComponentId": "1872:3173",
+            "componentSet": "Button",
+            "properties": {
+              "Variant": "Default",
+              "Size": "default",
+              "State": "Default",
+              "Roudness": "Default",
+              "Left icon": false,
+              "Right icon": false,
+              "Kbd": false
+            },
+            "overrides": 2
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1",
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "height": "h-8",
+            "rectangle_top_left_corner_radius": "radius-lg",
+            "rectangle_top_right_corner_radius": "radius-lg",
+            "rectangle_bottom_left_corner_radius": "radius-lg",
+            "rectangle_bottom_right_corner_radius": "radius-lg"
+          }
+        },
+        {
+          "id": "2136:7035",
+          "name": "Button",
+          "type": "INSTANCE",
+          "x": 138,
+          "y": 16,
+          "width": 67,
+          "height": 32,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "component": {
+            "mainComponent": "Variant=Outline, Size=default, State=Default, Roudness=Default",
+            "mainComponentId": "1872:3166",
+            "componentSet": "Button",
+            "properties": {
+              "Variant": "Outline",
+              "Size": "default",
+              "State": "Default",
+              "Roudness": "Default",
+              "1879:25": false
+            },
+            "overrides": 2
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1",
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "height": "h-8",
+            "rectangle_top_left_corner_radius": "radius-lg",
+            "rectangle_top_right_corner_radius": "radius-lg",
+            "rectangle_bottom_left_corner_radius": "radius-lg",
+            "rectangle_bottom_right_corner_radius": "radius-lg",
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2136:7010",
+      "name": "Dir=RTL",
+      "type": "COMPONENT",
+      "x": 409,
+      "y": 0,
+      "width": 385,
+      "height": 65,
+      "fills": [
+        {
+          "type": "SOLID",
+          "opacity": 0.5,
+          "color": "#F5F5F5"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        null,
+        null,
+        null
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        0,
+        0,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 8,
+        "padding": [
+          16,
+          16,
+          17,
+          16
+        ],
+        "primaryAlign": "MAX",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "One button",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-2",
+        "stack_padding_left": "p-4",
+        "stack_padding_top": "p-4",
+        "stack_padding_right": "p-4",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border-t"
+      },
+      "children": [
+        {
+          "id": "2136:6923",
+          "name": "Button",
+          "type": "INSTANCE",
+          "x": 180,
+          "y": 16,
+          "width": 67,
+          "height": 32,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "component": {
+            "mainComponent": "Variant=Outline, Size=default, State=Default, Roudness=Default",
+            "mainComponentId": "1872:3166",
+            "componentSet": "Button",
+            "properties": {
+              "Variant": "Outline",
+              "Size": "default",
+              "State": "Default",
+              "Roudness": "Default",
+              "1879:25": false
+            },
+            "overrides": 2
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1",
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "height": "h-8",
+            "rectangle_top_left_corner_radius": "radius-lg",
+            "rectangle_top_right_corner_radius": "radius-lg",
+            "rectangle_bottom_left_corner_radius": "radius-lg",
+            "rectangle_bottom_right_corner_radius": "radius-lg",
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        },
+        {
+          "id": "2136:6922",
+          "name": "Button",
+          "type": "INSTANCE",
+          "x": 255,
+          "y": 16,
+          "width": 114,
+          "height": 32,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#171717",
+              "variable": "primary"
+            }
+          ],
+          "cornerRadius": [
+            10,
+            10,
+            10,
+            10
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "component": {
+            "mainComponent": "Variant=Default, Size=default, State=Default, Roudness=Default",
+            "mainComponentId": "1872:3173",
+            "componentSet": "Button",
+            "properties": {
+              "Variant": "Default",
+              "Size": "default",
+              "State": "Default",
+              "Roudness": "Default",
+              "Left icon": false,
+              "Right icon": false,
+              "Kbd": false
+            },
+            "overrides": 2
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1",
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "height": "h-8",
+            "rectangle_top_left_corner_radius": "radius-lg",
+            "rectangle_top_right_corner_radius": "radius-lg",
+            "rectangle_bottom_left_corner_radius": "radius-lg",
+            "rectangle_bottom_right_corner_radius": "radius-lg"
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "All reported sets and standalone components on this page. Normalized visual trees are limited to depth 3; native FIG export retains deeper editable trees. Hidden source variants are included in the component inventory.",
+  "unestablished": [
+    "runtime public API and event payloads",
+    "state transitions and commitment/cancellation",
+    "native or ARIA semantics, names, keyboard and focus",
+    "responsive adaptation and runtime contrast",
+    "full token variable-to-DTCG mapping"
+  ]
+}

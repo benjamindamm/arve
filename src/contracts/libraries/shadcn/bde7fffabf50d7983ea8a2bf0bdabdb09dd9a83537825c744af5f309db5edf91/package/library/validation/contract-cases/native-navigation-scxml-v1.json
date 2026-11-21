@@ -1,0 +1,146 @@
+{
+  "result": "PASS",
+  "scope": "Finite source/native transaction protocol checks, not an independent browser implementation.",
+  "components": [
+    {
+      "component": "textarea",
+      "behaviorSha256": "5f286ece1f97fd040121df3e9d35967aa58ac90c39338748cc56e9e15d585d3c",
+      "cases": [
+        {
+          "name": "native event object is retained and uncontrolled value synchronizes",
+          "result": "pass"
+        },
+        {
+          "name": "controlled value changes only through props, not native candidate",
+          "result": "pass"
+        },
+        {
+          "name": "disabled blocks change and validation callback; Escape retains value",
+          "result": "pass"
+        },
+        {
+          "name": "readonly permits focus protocol but blocks text change",
+          "result": "pass"
+        },
+        {
+          "name": "invalid reports original native form event without inventing an error message",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "native-select",
+      "behaviorSha256": "1838c95126022e066454d6c99fc2412cbd42bb16dffdc82a3b9b56a5e2507ce8",
+      "cases": [
+        {
+          "name": "native event object is retained and uncontrolled value synchronizes",
+          "result": "pass"
+        },
+        {
+          "name": "controlled value changes only through props, not native candidate",
+          "result": "pass"
+        },
+        {
+          "name": "disabled blocks change and validation callback; Escape retains value",
+          "result": "pass"
+        },
+        {
+          "name": "multiple native select value is preserved without stringifying its collection",
+          "result": "pass"
+        },
+        {
+          "name": "invalid reports original native form event without inventing an error message",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "breadcrumb",
+      "behaviorSha256": "6c87eb84f4f65a186644b6c59905dfc093b9a1484ec2ca11463528a9430fd51d",
+      "cases": [
+        {
+          "name": "native href navigation follows the actual click transaction",
+          "result": "pass"
+        },
+        {
+          "name": "preventDefault suppresses native navigation but does not hide the handler observation",
+          "result": "pass"
+        },
+        {
+          "name": "route/current state is supplied by caller; arrows and Escape do not select pages",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "pagination",
+      "behaviorSha256": "048c609e7057822c044fb5f25179260ac3f6f5ba59dbaaa83eb8283051c6ef4d",
+      "cases": [
+        {
+          "name": "native href navigation follows the actual click transaction",
+          "result": "pass"
+        },
+        {
+          "name": "preventDefault suppresses native navigation but does not hide the handler observation",
+          "result": "pass"
+        },
+        {
+          "name": "route/current state is supplied by caller; arrows and Escape do not select pages",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "button-group",
+      "behaviorSha256": "ef0bab0d4bf531654a89aa84045146206e7d4cddae32ba036675899a7ffd753e",
+      "cases": [
+        {
+          "name": "group orientation introduces neither selection nor duplicated child actions",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "input-group",
+      "behaviorSha256": "0780d6fcfcb50ad7759a19a4feb188f720f20124dbafd8883561731a2d6b0706",
+      "cases": [
+        {
+          "name": "addon focuses first native input only",
+          "result": "pass"
+        },
+        {
+          "name": "nested Button, textarea-only layout and explicit caller handler do not redirect focus",
+          "result": "pass"
+        },
+        {
+          "name": "child changes/actions are delegated without new group callbacks",
+          "result": "pass"
+        },
+        {
+          "name": "unmount prevents active transactions until remounted",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

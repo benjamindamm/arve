@@ -4,6 +4,10 @@ Plattform für mehrere Design-Systeme mit Payload CMS, Next.js und PostgreSQL. A
 
 Im Admin-Bereich lassen sich Seiten mit Rich Text, Bildern und Do’s und Don’ts pflegen. Die Sammlung **Seiten** unterstützt Entwürfe und Versionshistorie. Die Startseite erklärt die Arbeitswege für gemeinsames Entwerfen, gezieltes Umsetzen und die Weiterentwicklung bestehender Designs und Codebases.
 
+## Statische Veröffentlichung
+
+Das öffentliche Handbuch kann ohne laufendes CMS auf GitHub Pages erscheinen. `npm run build:static` baut den gespeicherten veröffentlichten Datenbankstand, `npm run check:static` prüft Seiten und Dateien, `npm run preview:static` startet die lokale Vorschau unter `http://127.0.0.1:3020/arve/`. Navigation, Suche, Live-Beispiele und Contract-Downloads bleiben bedienbar. Admin und MCP gehören zur separat laufenden Payload-Anwendung. [Inhalte aktualisieren und auf GitHub Pages veröffentlichen](docs/deployment/github-pages.md).
+
 ## Lokal starten
 
 Voraussetzungen sind Docker mit Compose und Node.js 22 ab 22.23.4 oder Node.js ab 24.22.1. Die Befehle werden im Projektordner ausgeführt.

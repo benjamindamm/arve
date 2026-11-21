@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Skeleton",
+  "referenceComposition": "<section aria-busy=\"true\" aria-labelledby=\"skeleton-heading\"><h2 id=\"skeleton-heading\">Contacts</h2><div role=\"status\">Loading contacts</div><div data-slot=\"skeleton\" aria-hidden=\"true\"></div></section>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The host supplies Loading contacts as the meaningful status; the source skeleton geometry is explicitly hidden in this reference.",
+  "updatesAndDescendants": "Skeleton itself is a div with animate-pulse and inherited props. The caller owns loading/data/error and aria-busy, replaces placeholder shapes with content after completion, and reports failure instead of pulsing forever. Reduced motion stops placeholder animation without removing status text.",
+  "referenceDecision": "The labelled busy region, status text, aria-hidden and motion policy are authorized reference composition decisions, not built-in behavior claimed for the bare Skeleton wrapper.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "menubar.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "MenubarMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Actual menu Root open/defaultOpen; each menu/submenu instance owns its state. Menubar container itself exposes no selected menu value."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenu>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:35."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: MenuPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual cancellable source request with native event/reason; controlled props remain authoritative."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual source callback after the transition lifecycle."
+            },
+            {
+              "name": "onItemHighlighted",
+              "type": {
+                "text": "(highlightedItem: HTMLElement | undefined, eventDetails: MenuPrimitive.Root.HighlightEventDetails) => void"
+              },
+              "description": "Actual inherited source callback, not command activation; context menu inherits the Menu highlight details."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "menubar-menu",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "Menubar",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenubarPrimitive.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:25."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuGroup>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:39."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarPortal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuPortal>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:45."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-portal",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuTrigger>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:51."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-trigger",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuContent>"
+              },
+              "description": "Exact source props/defaults {\"align\": \"\\\"start\\\"\", \"alignOffset\": \"-4\", \"sideOffset\": \"8\"}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:67."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuItem>"
+              },
+              "description": "Exact source props/defaults {\"variant\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:89."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "MenuPrimitive.Item.Props[\"onClick\"]"
+              },
+              "description": "Actual native item activation handler inherited from primitive Item props."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "menubar-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarCheckboxItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:106."
+            }
+          ],
+          "events": [
+            {
+              "name": "onCheckedChange",
+              "type": {
+                "text": "(checked: boolean, eventDetails: MenuPrimitive.CheckboxItem.ChangeEventDetails) => void"
+              },
+              "description": "Actual source menu setting callback; defaults closeOnClick=false."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "menubar-checkbox-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarRadioGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuRadioGroup>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:142."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: any, eventDetails: MenuPrimitive.RadioGroup.ChangeEventDetails) => void"
+              },
+              "description": "Actual generic source radio setting callback; item activation does not automatically dismiss by default."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "menubar-radio-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarRadioItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:148."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-radio-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuLabel> & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:182."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-label",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuSeparator>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:199."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-separator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarShortcut",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuShortcut>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:212."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-shortcut",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarSub",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuSub>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:225."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-sub",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarSubTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuSubTrigger> & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:231."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-sub-trigger",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MenubarSubContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuSubContent>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/menubar.tsx.source:248."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "menubar-sub-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

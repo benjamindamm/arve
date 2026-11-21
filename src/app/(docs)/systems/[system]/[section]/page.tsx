@@ -1,7 +1,8 @@
 import { loadPageRework } from '../../../../../docs/page-reworks/registry'
 import { ColorPage } from '../../../../../docs/color-page'
 import { FoundationsOverview } from '../../../../../docs/foundations-overview'
-import { ContentOutline } from '../../../../../docs/content-outline'
+import { HandbookOutline } from '../../../../../docs/handbook-outline'
+import { HandbookContext } from '../../../../../docs/handbook-context'
 import { ContentLayoutExample } from '../../../../../docs/content-layout-example'
 import { DesignResourceLinks } from '../../../../../docs/design-resource-links'
 import { readTemplate } from '../../../../../docs/page-templates'
@@ -69,16 +70,20 @@ export default async function SectionPage({ params }: { params: Promise<{ system
 
   const foundationsOverview = shadcn && section === 'grundlagen'
   const colorPage = shadcn && section === 'farben'
+  const patternCatalog = shadcn && section === 'patterns'
+  const componentCatalogue = shadcn && section === 'komponenten'
+  const catalogueEntries = componentCatalogue ? find(documentation.tree)?.children?.filter(entry=>entry.kind==='component') ?? [] : undefined
   const ReworkedPage = shadcn ? await loadPageRework(section) : undefined
 
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={path} />
       <article className="article">
+        <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={path} />
         <h1>{page.title}</h1>
-        {page.summary && <p className="lead">{page.summary}</p>}
-        {ReworkedPage ? <ReworkedPage content={page.content} /> : foundationsOverview ? <FoundationsOverview content={page.content} /> : colorPage ? <ColorPage content={page.content} /> : <>
-        <ContentOutline content={page.content} />
+        {page.summary && !patternCatalog && <p className="lead">{page.summary}</p>}
+        {!patternCatalog && !componentCatalogue && <HandbookOutline key={path} initiallyCollapsed={shadcn && section === 'page-type-overview'} />}
+        {ReworkedPage ? <ReworkedPage content={page.content} {...(patternCatalog ? { summary: page.summary } : {})} catalogueEntries={catalogueEntries} /> : foundationsOverview ? <FoundationsOverview content={page.content} /> : colorPage ? <ColorPage content={page.content} /> : <>
         <TemplateContent sections={readTemplate(page.pageType, page.template)} />
         <DesignResourceLinks system={system} section={section} />
         {shadcn && <ContentLayoutExample section={section} />}
@@ -87,7 +92,7 @@ export default async function SectionPage({ params }: { params: Promise<{ system
           <details><summary>Quelle und Stand</summary><Content blocks={page.content?.slice(-1)} /></details>
         </> : <Content blocks={page?.content} />}
         </>}
-        {!foundationsOverview && children.length > 0 && (
+        {!foundationsOverview && !componentCatalogue && children.length > 0 && (
           <ul className="component-index">
             {children.map((child) => (
               <li key={child.slug}><Link href={child.path}><strong>{child.title}</strong>{child.summary && ' · ' + child.summary}</Link></li>

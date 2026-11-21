@@ -1,0 +1,533 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual aliased BaseUI Select/Combobox and cmdk wrappers: independent callbacks, readonly browsing, single/multiple values, empty status, named primitive clear/removal, closed-Escape clear, and complete CommandDialog cancellation/focus lifecycle.",
+  "caseCount": 37,
+  "families": [
+    {
+      "cases": [
+        {
+          "expected": {
+            "open": "true",
+            "value": "Apple"
+          },
+          "name": "opening arrow enters real listbox without committing another value",
+          "result": "pass",
+          "state": {
+            "focus": "Apple",
+            "open": "true",
+            "role": "option",
+            "value": "Apple"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "value": "Banana"
+          },
+          "name": "Enter chooses native option and closes single select",
+          "result": "pass",
+          "state": {
+            "focus": "Banana▼",
+            "open": "false",
+            "role": "combobox",
+            "value": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "value": "Banana"
+          },
+          "name": "canceled value candidate preserves selection while independent closing still succeeds",
+          "result": "pass",
+          "state": {
+            "focus": "Banana▼",
+            "open": "false",
+            "role": "combobox",
+            "value": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "open": "true",
+            "value": "Banana"
+          },
+          "name": "readonly permits browsing popup",
+          "result": "pass",
+          "state": {
+            "focus": "Banana",
+            "open": "true",
+            "role": "option",
+            "value": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "open": "true",
+            "value": "Banana"
+          },
+          "name": "readonly blocks actual commit and leaves browsing open",
+          "result": "pass",
+          "state": {
+            "focus": "Cherry",
+            "open": "true",
+            "role": "option",
+            "value": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "value": "Banana"
+          },
+          "name": "Escape closes without choosing highlighted option",
+          "result": "pass",
+          "state": {
+            "focus": "Banana▼",
+            "open": "false",
+            "role": "combobox",
+            "value": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "value": "Cherry"
+          },
+          "name": "closed native trigger typeahead commits matching enabled single value",
+          "result": "pass",
+          "state": {
+            "focus": "Cherry▼",
+            "open": "false",
+            "role": "combobox",
+            "value": "Cherry"
+          }
+        },
+        {
+          "name": "disabled actual trigger exposes disabled state",
+          "result": "pass",
+          "state": "- main\n  - heading \"select source picker\" [level=1]\n  - checkbox \"Cancel selected value\" [ref=e1]\n  - checkbox \"Cancel popup change\" [ref=e2]\n  - checkbox \"Readonly picker\" [ref=e3]\n  - checkbox \"Disabled options\" [ref=e4]\n  - LabelText\n  - combobox \"Fruit\" [disabled] [collapsed] [ref=e5]: \"Cherry\"\n  - paragraph\n  - button \"After picker\" [ref=e6]\n  - status \"Select value\"\n  - status \"Combobox value\"\n  - status \"Multiple values\"\n  - status \"Picker open\"\n  - status \"Query seen\"\n  - status \"Highlighted command\"\n  - status \"Command count\"\n  - status \"Last command\"\n  - status \"Picker reason\""
+        },
+        {
+          "name": "actual multiple Select returns array and stays open after item toggle",
+          "result": "pass",
+          "state": {
+            "expanded": "true",
+            "many": "[\"Apple\",\"Banana\"]"
+          }
+        },
+        {
+          "name": "multiple Select can deselect a chosen item without scalar coercion",
+          "result": "pass",
+          "state": "[\"Banana\"]"
+        }
+      ],
+      "family": "select"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "open": "true",
+            "query": "ba",
+            "selected": "null"
+          },
+          "name": "typing filters without committing a selected value",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "true",
+            "query": "ba",
+            "selected": "null"
+          }
+        },
+        {
+          "name": "actual virtual option highlight retains native input focus and active-descendant",
+          "result": "pass",
+          "state": {
+            "active": "base-ui-_r_0_-0",
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "true",
+            "query": "ba",
+            "selected": "null"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "query": "Banana",
+            "selected": "Banana"
+          },
+          "name": "Enter selects highlighted source option",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "false",
+            "query": "Banana",
+            "selected": "Banana"
+          }
+        },
+        {
+          "expected": {
+            "query": "",
+            "selected": "null"
+          },
+          "name": "named actual primitive Clear resets both independent selected and input transactions",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "false",
+            "query": "",
+            "selected": "null"
+          }
+        },
+        {
+          "expected": {
+            "empty": 1,
+            "selected": "null"
+          },
+          "name": "real empty status has source children without committing arbitrary query",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 1,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "true",
+            "query": "zzzz",
+            "selected": "null"
+          }
+        },
+        {
+          "expected": {
+            "open": "false",
+            "selected": "null"
+          },
+          "name": "Escape dismisses without selecting arbitrary text",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "false",
+            "query": "",
+            "selected": "null"
+          }
+        },
+        {
+          "expected": {
+            "selected": "Apple"
+          },
+          "name": "source matching option can be selected after empty result recovery",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[\"Apple\"]",
+            "open": "false",
+            "query": "Apple",
+            "selected": "Apple"
+          }
+        },
+        {
+          "expected": {
+            "focus": "many-fruit",
+            "many": "[]"
+          },
+          "name": "named primitive ChipRemove updates actual multiple array",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "many-fruit",
+            "many": "[]",
+            "open": "false",
+            "query": "Apple",
+            "selected": "Apple"
+          }
+        },
+        {
+          "expected": {
+            "many": "[\"Banana\"]"
+          },
+          "name": "multiple source selection returns array and retains selection input",
+          "result": "pass",
+          "state": {
+            "active": null,
+            "empty": 0,
+            "focus": "many-fruit",
+            "many": "[\"Banana\"]",
+            "open": "false",
+            "query": "Apple",
+            "selected": "Apple"
+          }
+        },
+        {
+          "expected": {
+            "open": "true",
+            "selected": "Apple"
+          },
+          "name": "readonly primary combobox still permits popup browsing",
+          "result": "pass",
+          "state": {
+            "active": "base-ui-_r_0_-0",
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[]",
+            "open": "true",
+            "query": "Apple",
+            "selected": "Apple"
+          }
+        },
+        {
+          "expected": {
+            "selected": "Apple"
+          },
+          "name": "readonly prevents selected value change",
+          "result": "pass",
+          "state": {
+            "active": "base-ui-_r_0_-1",
+            "empty": 0,
+            "focus": "search-fruit",
+            "many": "[]",
+            "open": "true",
+            "query": "Apple",
+            "selected": "Apple"
+          }
+        },
+        {
+          "name": "Escape on already closed single combobox explicitly requests selected/query clear",
+          "result": "pass",
+          "state": {
+            "query": "",
+            "reason": "escape-key",
+            "value": "null"
+          }
+        },
+        {
+          "name": "multiple filtering with input outside popup closes after accepted item press",
+          "result": "pass",
+          "state": {
+            "expanded": "false",
+            "many": "[\"Apple\",\"Banana\"]"
+          }
+        },
+        {
+          "name": "Escape on already closed multiple input requests empty array, not dismissal-only",
+          "result": "pass",
+          "state": "[]"
+        },
+        {
+          "name": "Combobox canceled item selection also prevents its dependent close, unlike Select independent closing",
+          "result": "pass",
+          "state": {
+            "expanded": "true",
+            "value": "null"
+          }
+        },
+        {
+          "name": "explicit Tab-enabled named primitive Clear is Enter-operable and returns to native input",
+          "result": "pass",
+          "state": {
+            "focus": "search-fruit",
+            "value": "null"
+          }
+        },
+        {
+          "name": "explicit Tab-enabled named ChipRemove is Enter-operable and returns to chips input",
+          "result": "pass",
+          "state": {
+            "focus": "many-fruit",
+            "many": "[]"
+          }
+        }
+      ],
+      "family": "combobox"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "commands": "0",
+            "highlight": "export",
+            "options": [
+              "Export report"
+            ]
+          },
+          "name": "query filters and highlights without command invocation",
+          "result": "pass",
+          "state": {
+            "commands": "0",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "export",
+            "last": "none",
+            "options": [
+              "Export report"
+            ],
+            "query": "exp"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "last": "export"
+          },
+          "name": "Enter invokes actual Item onSelect, distinct from highlight",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "export",
+            "last": "export",
+            "options": [
+              "Export report"
+            ],
+            "query": "exp"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "dialog": false,
+            "query": "exp"
+          },
+          "name": "inline Escape neither closes command root nor clears search",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "export",
+            "last": "export",
+            "options": [
+              "Export report"
+            ],
+            "query": "exp"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "options": []
+          },
+          "name": "no-results state is explicit, with no hidden execution",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "",
+            "last": "export",
+            "options": [],
+            "query": "zzzz"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "highlight": "export"
+          },
+          "name": "enabled navigation skips disabled option and does not loop by default",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "export",
+            "last": "export",
+            "options": [
+              "Save report",
+              "Export report",
+              "Unavailable command"
+            ],
+            "query": ""
+          }
+        },
+        {
+          "expected": {
+            "commands": "2",
+            "last": "export"
+          },
+          "name": "keyboard highlight commits only via native selection callback",
+          "result": "pass",
+          "state": {
+            "commands": "2",
+            "dialog": false,
+            "focus": "combobox",
+            "highlight": "export",
+            "last": "export",
+            "options": [
+              "Save report",
+              "Export report",
+              "Unavailable command"
+            ],
+            "query": ""
+          }
+        },
+        {
+          "name": "actual composed Dialog has registered title/description and modal command input",
+          "result": "pass",
+          "state": "- dialog \"Report command palette\"\n  - LabelText\n  - combobox \"Palette commands\" [expanded] [ref=e13]\n  - group [ref=e14] [cursor=pointer]\n  - listbox \"Suggestions\" [ref=e15]\n    - group \"Report actions\"\n      - option \"Save report\" [selected] [ref=e16]\n      - option \"Export report\" [ref=e17]\n      - option \"Unavailable command\" [disabled] [ref=e18]\n  - button \"Close\" [ref=e19]"
+        },
+        {
+          "expected": {
+            "commands": "2",
+            "dialog": false,
+            "focus": "Open command palette"
+          },
+          "name": "Dialog Escape closes actor without executing a command",
+          "result": "pass",
+          "state": {
+            "commands": "2",
+            "dialog": false,
+            "focus": "Open command palette",
+            "highlight": "export",
+            "last": "export",
+            "options": [
+              "Save report",
+              "Export report",
+              "Unavailable command"
+            ],
+            "query": ""
+          }
+        },
+        {
+          "name": "fresh CommandDialog fixture has an explicit named cancel control and true registered title/description",
+          "result": "pass",
+          "state": {
+            "description": "Search for a report command.",
+            "input": "combobox",
+            "label": "Report command palette"
+          }
+        },
+        {
+          "name": "visible Close cancels without command execution and unmounts closed sibling heading after lifecycle completion",
+          "result": "pass",
+          "state": {
+            "commands": "0",
+            "dialog": false,
+            "focus": "Open command palette",
+            "strayTitle": false
+          }
+        }
+      ],
+      "family": "command"
+    }
+  ]
+}

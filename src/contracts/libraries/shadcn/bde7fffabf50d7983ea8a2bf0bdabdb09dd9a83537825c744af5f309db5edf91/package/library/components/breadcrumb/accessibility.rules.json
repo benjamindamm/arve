@@ -1,0 +1,7 @@
+{
+  "componentId": "shadcn:Breadcrumb",
+  "sourceRule": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed.",
+  "keyboardAndFocus": "Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation.",
+  "referenceComposition": "<nav aria-label=\"breadcrumb\"><ol data-slot=\"breadcrumb-list\"><li><a href=\"#projects\" data-slot=\"breadcrumb-link\">Projects</a></li><li role=\"presentation\" aria-hidden=\"true\">/</li><li><span role=\"link\" aria-disabled=\"true\" aria-current=\"page\" data-slot=\"breadcrumb-page\">Annual report</span></li></ol></nav><section id=\"projects\"><h2>Projects</h2></section>",
+  "protocol": "SCXML consumes actual source/native transaction observations; callback objects remain original. Sends document observed callbacks, not second DOM dispatches. Parent-controlled props alone synchronize authoritative values. HTML/CSS is a semantic projection; executable behavior uses actual pinned React wrappers."
+}

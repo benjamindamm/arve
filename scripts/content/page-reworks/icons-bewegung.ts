@@ -3,7 +3,7 @@ import type { Page } from '../../../src/payload-types'
 const base = { version: 1, direction: 'ltr' as const, format: '' as const, indent: 0 }
 const text = (value: string) => ({ type: 'text', version: 1, text: value })
 export const release = {
-  expectedUpdatedAt: '2026-11-17T23:33:02.624Z',
+  expectedUpdatedAt: '2026-11-20T13:46:09.130Z',
   summary: 'Die Inhalte dieser früheren Sammelseite findest du jetzt in drei eigenen Grundlagen.',
   content: [{
     blockType: 'text', blockName: 'destinations',

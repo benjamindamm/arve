@@ -1,0 +1,155 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:Input",
+  "componentSha256": "e6604150061b7e5486091f1617436402ac90df900109df072080da782245f2b2",
+  "profile": "interactive-control/1",
+  "profileSha256": "643e8814e78bd44e5cdbe1eb88797957a4e543b71064014b8f10b08307eb556c",
+  "requirements": {
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "a6b5ac69cc32388406ef5ef2c66f820f5ff0a89b7ae7746e7af5eef46aee5f57",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fmembers%2F0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "a6b5ac69cc32388406ef5ef2c66f820f5ff0a89b7ae7746e7af5eef46aee5f57",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fevents%2F0"
+          }
+        }
+      ]
+    },
+    "VIS-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "52171cae1c65df3af3268f2e12017cd315c13c3a36c3db587a55256511698b9b",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Finput%2Fheight"
+          }
+        }
+      ]
+    },
+    "VIS-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "da7036c1589408983304ab09d30634d6834fbf4b3aae90eaa909cbc1e6960992",
+          "selector": {
+            "kind": "lines",
+            "value": "1:12"
+          }
+        },
+        {
+          "sha256": "da7036c1589408983304ab09d30634d6834fbf4b3aae90eaa909cbc1e6960992",
+          "selector": {
+            "kind": "lines",
+            "value": "19:26"
+          }
+        },
+        {
+          "sha256": "da7036c1589408983304ab09d30634d6834fbf4b3aae90eaa909cbc1e6960992",
+          "selector": {
+            "kind": "lines",
+            "value": "33:36"
+          }
+        }
+      ]
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "3e15c9b2a45e3dc1878717a71a8e7a0b104b331c45a2804690967d30c082b1ec",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Astate[@id=\"control\"]/@initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "3e15c9b2a45e3dc1878717a71a8e7a0b104b331c45a2804690967d30c082b1ec",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[@event=\"NATIVE_INPUT\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "3e15c9b2a45e3dc1878717a71a8e7a0b104b331c45a2804690967d30c082b1ec",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "1bfcca9ef310a6a3ed34b31df7dfbb31234eb70528bd8f7768e8b1ea0f922b78",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Finput[@type=\"text\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "1bfcca9ef310a6a3ed34b31df7dfbb31234eb70528bd8f7768e8b1ea0f922b78",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Flabel[@for=\"input-project-name\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "3e15c9b2a45e3dc1878717a71a8e7a0b104b331c45a2804690967d30c082b1ec",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"FOCUS_IN\")]"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "cc932015b9faf43af53e42f27c09cf5f8ac204a3533788dd506c08d0a891413b",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fpurpose"
+          }
+        }
+      ]
+    }
+  }
+}

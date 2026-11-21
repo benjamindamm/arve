@@ -1,4 +1,6 @@
 'use client'
+import { SiteAnchor } from '../site-anchor'
+
 import {useId,useState} from 'react'
 import type {Page} from '../../payload-types'
 import {Content} from '../content'
@@ -19,7 +21,7 @@ export default function NavigationPage({content}:{content:Page['content']}){
   <figure className="nav-figure"><figcaption>{c[5]}</figcaption>
    <div className={'nav-schema nav-schema-'+mode}>
     <div className="nav-global"><small>{c[6]}</small><div><strong>{c[7]}</strong><span className="nav-active">{c[8]}</span><span>{c[9]}</span></div></div>
-    <div className="nav-location"><small>{c[10]}</small><strong>{c[11]}</strong><a href={'#'+id+'-results'}>← {c[12]}</a></div>
+    <div className="nav-location"><small>{c[10]}</small><strong>{c[11]}</strong><SiteAnchor href={'#'+id+'-results'}>← {c[12]}</SiteAnchor></div>
     <div className="nav-body"><div className="nav-local"><small>{c[13]}</small><div>{c.slice(14,17).map((label,i)=><span className={i===0?'nav-active':''} key={label}>{label}{mode===2?<span aria-hidden="true"> →</span>:null}</span>)}</div></div>
      <div className="nav-main"><small>{c[17]}</small><h3>{c[18]}</h3><p>{c[19]}</p></div>
     </div>

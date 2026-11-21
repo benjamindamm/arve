@@ -1,3 +1,4 @@
+import { SiteAnchor } from './site-anchor'
 import type { Page } from '../payload-types'
 type SourceBlock = NonNullable<Page['content']>[number]
 type Block = Exclude<SourceBlock, {blockType: 'guideline'}> | Omit<Extract<SourceBlock, {blockType: 'guideline'}>, 'image'>
@@ -14,5 +15,5 @@ export function blockAnchor(block: Block) {
 export function ContentOutline({content}:{content: Block[] | null | undefined}) {
  const headings=(content??[]).flatMap(block=>{const title=blockTitle(block);return title?[{title,id:blockAnchor(block)}]:[]})
  if(headings.length<4)return null
- return <nav className="content-outline" aria-label="Auf dieser Seite"><strong>Auf dieser Seite</strong><ol>{headings.map(({title,id})=><li key={id}><a href={'#'+id}>{title}</a></li>)}</ol></nav>
+ return <nav className="content-outline" aria-label="Auf dieser Seite"><strong>Auf dieser Seite</strong><ol>{headings.map(({title,id})=><li key={id}><SiteAnchor href={'#'+id}>{title}</SiteAnchor></li>)}</ol></nav>
 }

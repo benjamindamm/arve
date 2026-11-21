@@ -104,11 +104,14 @@ try {
     assert.equal(response.status, 200, `Interner Link nicht direkt erreichbar: ${link}`)
     await response.body?.cancel()
   }
-  const search = await client.callTool({ name: 'search_documentation', arguments: { system: 'shadcn', query: 'Pilot', limit: 30 } })
-  assert(!search.isError && search.structuredContent)
-  const searchText = JSON.stringify(search.structuredContent)
-  for (const entry of pilotRelease) assert(searchText.includes(pathFor(entry.slug)), `Pilotsuche findet ${entry.slug} nicht`)
-  console.log(`Fünf Seiten, ${links.size} interne Links und Pilotsuche geprüft. Keine Schreiboperation ausgeführt.`)
+  // Search by each current page title; editorial copy need not repeat an internal project label.
+  for (const sourceEntry of pilotRelease) {
+    const entry = await currentPage(sourceEntry)
+    const search = await client.callTool({ name: 'search_documentation', arguments: { system: 'shadcn', query: entry.title, limit: 30 } })
+    assert(!search.isError && search.structuredContent)
+    assert(JSON.stringify(search.structuredContent).includes(pathFor(entry.slug)), `Titelsuche findet ${entry.slug} nicht`)
+  }
+  console.log(`Fünf Seiten, ${links.size} interne Links und Titelsuche geprüft. Keine Schreiboperation ausgeführt.`)
 } finally {
   await client.close()
   await payload.destroy()

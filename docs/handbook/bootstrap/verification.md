@@ -63,3 +63,23 @@ Mit genau diesem Snapshot erneut ausgeführt:
 Die Prüfungen belegen den beschriebenen lokalen Stand und seine Übertragbarkeit. Contract-Draftstatus und ausstehende fachliche beziehungsweise assistive Prüfungen bleiben davon unabhängig.
 
 Gesamtabgleich nach Abschluss aller Seiten: `check-handbook-presentation.ts` PASS (50 Portal-Seiten, 49 MCP-Unterseiten, alle 47 Release-Dateien, neutraler öffentlicher Inhalt und unveränderte Pins).
+
+## Sprachliche Überarbeitung der Detailseite · 20. November 2026
+
+Nach der seitenweisen Redaktion wurde der veröffentlichte Snapshot erneut erfasst: 50 Seiten und eine Implementierung, keine Medien. SHA-256: `f16be6a44ddf5f2af76df8609bf35849a817ba2d766b4fc9fb880d044af22aa5`. Die Detailseite entspricht der neuen Release und der MCP-Ausgabe; HTTP 200. Blockstruktur, Beispielwerte, URLs und fachliche Bedingungen bleiben erhalten. Typecheck erfolgreich. Die weiter oben dokumentierten Datenbank-Integrationstests beziehen sich auf den dort genannten vorherigen Snapshot; sie wurden für diese Textänderung nicht wiederholt.
+
+## Sprachliche Redaktion des gesamten Handbuchs · 20. November 2026
+
+Alle 50 Seiten einzeln bearbeitet und bei 1440/390 CSS-Pixeln gelesen und visuell geprüft; Details siehe `../editorial-review/revisions/README.md`. 42 CMS-Seiten und die statische Systemstartseite erhielten Textänderungen; sieben weitere Seiten wurden vollständig geprüft und bewusst unverändert belassen.
+
+Finaler Snapshot: 50 veröffentlichte Seiten, eine Implementierung, keine Medien. Erfasst `2026-11-20T17:50:01.352Z`, SHA-256 `cd49d38258bf708a4804710e39ef953f8ba0ead5b3f6ec98ee870bb33a1cd647`. HEAD `21a05df87cb270de46cab8db07e37794fc2150c3`; Arbeitsbaum enthält die noch nicht committete Redaktion.
+
+Erneut ausgeführt: Typecheck und Produktionsbuild erfolgreich; Gesamtabgleich aller 50 Portal-Seiten und 49 MCP-Unterseiten mit Releases und Snapshot PASS; Grundlagen-, Komponenten-, Formularworkflow- und Pilotprüfungen PASS. Der Vergleich der Snapshot-Metadaten bestätigt unveränderte System-/Seitenzuordnung, Vorlagen, Reihenfolge, Status, Contractpins, Implementierung und Medien. Die Contractdateien wurden nicht verändert.
+
+Die weiter oben dokumentierten isolierten Datenbank- und Importer-Integrationstests wurden für diese Textänderungen nicht erneut ausgeführt.
+
+## Vollständiger shadcn-Export · 21. November 2026
+
+Aktueller Snapshot: 116 veröffentlichte Seiten, darunter 69 Komponenten, eine unveränderte Implementierung und keine Medien. SHA-256: `c09df3e1b574cd839e0b68ac953880bf291c8482f06d6936448a2795782dd30d`. Alle Komponentenseiten sind an `bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91` gebunden. Der historische Implementierungspin bleibt unverändert.
+
+Gesamtabgleich aller 116 Portal-Seiten und 115 MCP-Unterseiten PASS; alle 69 vollständigen Quellencontracts und Framework-Referenzen geprüft. Wiederholtes Apply der gesonderten Übernahme: null neue und null geänderte Seiten. Importer-/Skill-Tests (14), MCP-Skillprüfung beider Revisionen, Komponenten-Releaseprüfung, TypeScript und Produktionsbuild erfolgreich. Die früheren isolierten Bootstrap-Datenbanktests und die redaktionellen 50-Seiten-Reviews bleiben historische Nachweise und wurden nicht als Abnahme aller neuen Seiten fortgeschrieben. Umfang und Grenzen: [Vollständige Quellenreferenz](../complete-shadcn/README.md).

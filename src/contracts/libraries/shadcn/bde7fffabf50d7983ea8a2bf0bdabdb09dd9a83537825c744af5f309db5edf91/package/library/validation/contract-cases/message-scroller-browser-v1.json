@@ -1,0 +1,214 @@
+{
+  "result": "PASS",
+  "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification.",
+  "cases": [
+    {
+      "component": "message-scroller",
+      "name": "opening end applies actual constrained geometry",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BODY",
+          "text": "Report discussionPrevent scroll commandAppend messagePrepend historySam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13Scroll to startScroll to endJump to message eight{\"start\":true,\"end\":false}[\"m10\",\"m11\",\"m12\",\"m13\"]Loading older messages and transport errors are caller feedback, independent from scroll state.\n"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":true,\"end\":false}",
+          "Visible message IDs": "[\"m10\",\"m11\",\"m12\",\"m13\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": -152,
+          "focused": false,
+          "max": 728,
+          "top": 728
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "native Home scrolls viewport to start and releases follow",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Report discussion messages",
+          "tag": "DIV",
+          "text": "Sam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":false,\"end\":true}",
+          "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 576,
+          "focused": true,
+          "max": 728,
+          "top": 0
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "appending while reader is away does not yank to bottom",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Append message"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":false,\"end\":true}",
+          "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 576,
+          "focused": false,
+          "max": 800,
+          "top": 0
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "active native Button onClick can veto scroll command",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Scroll to end"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":false,\"end\":true}",
+          "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 576,
+          "focused": false,
+          "max": 800,
+          "top": 0
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "accepted real button command reaches end without selecting/focusing message",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BODY",
+          "text": "Report discussionPrevent scroll commandAppend messagePrepend historySam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13Sam: New report message 14Scroll to startScroll to endJump to message eight{\"start\":true,\"end\":false}[\"m11\",\"m12\",\"m13\",\"m14\"]Loading older messages and transport errors are caller feedback, independent from scroll state.\n"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":true,\"end\":false}",
+          "Visible message IDs": "[\"m11\",\"m12\",\"m13\",\"m14\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": -224,
+          "focused": false,
+          "max": 800,
+          "top": 800
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "hook command aligns actual stable message ID",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Jump to message eight"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":true,\"end\":true}",
+          "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 0,
+          "focused": false,
+          "max": 800,
+          "top": 576
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "prepend preserves actual visible anchor geometry",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Prepend history"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":true,\"end\":true}",
+          "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 0,
+          "focused": false,
+          "max": 872,
+          "top": 648
+        }
+      }
+    },
+    {
+      "component": "message-scroller",
+      "name": "Escape leaves native transcript intact and focused",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Report discussion messages",
+          "tag": "DIV",
+          "text": "Sam: Earlier report historyAlex: Report message 0Sam: Report message 1Alex: Report message 2Sam: Report message 3Alex: Report message 4Sam: Report message 5Alex: Report message 6Sam: Report message 7Alex: Report message 8Sam: Report message 9Alex: Report message 10Sam: Report message 11Alex: Report message 12Sam: Report message 13Alex: New report message 14"
+        },
+        "checks": [],
+        "fieldset": [],
+        "outputs": {
+          "Scroll edges": "{\"start\":true,\"end\":true}",
+          "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": {
+          "anchorTop": 0,
+          "focused": true,
+          "max": 872,
+          "top": 648
+        }
+      }
+    }
+  ]
+}

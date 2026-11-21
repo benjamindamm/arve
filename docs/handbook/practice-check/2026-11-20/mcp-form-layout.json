@@ -1,0 +1,529 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"kind\":\"section\",\"path\":\"/systems/shadcn/content-layout-form-layout\",\"title\":\"Form Layout\",\"pageType\":\"layout\",\"summary\":\"Zusammengehörige Formularfelder in einer klaren Reihenfolge anordnen.\",\"updatedAt\":\"2026-11-20T17:12:35.800Z\",\"content\":[{\"id\":\"6b007f83cbca4f70f81a0e83\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Projekt bearbeiten\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Zustand ansehen\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Normal\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Mit Feldfehler\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Layoutvorschau · Wähle einen Zustand, um die Anordnung mit und ohne Feldfehler zu vergleichen. Das Feld ist schreibgeschützt; «Änderungen speichern» und «Abbrechen» sind nicht bedienbar.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"example\",\"blockType\":\"text\"},{\"id\":\"6b007f83cbca4f70f81a0e84\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Projektname (erforderlich)\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Neues Kundenportal\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Einen Projektnamen eingeben.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"field\",\"blockType\":\"text\"},{\"id\":\"6b007f83cbca4f70f81a0e85\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Formularaktionen\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Änderungen speichern\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Abbrechen\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"actions\",\"blockType\":\"text\"},{\"id\":\"6b007f83cbca4f70f81a0e86\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"So ist die Feldgruppe aufgebaut\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Label → Eingabe → Hilfe → gegebenenfalls Fehler. Die Beschriftung bleibt über dem Feld; ein Fehler ergänzt die Hilfe direkt darunter.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Die Vorschau zeigt dasselbe Feld in zwei Zuständen: ausgefüllt oder leer mit einer Fehlermeldung nach erfolglosem Absenden. Beim Wechsel wird keine Eingabe geprüft.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"anatomy\",\"blockType\":\"text\"},{\"id\":\"6b007f83cbca4f70f81a0e87\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Drei Regeln für die Anordnung\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Ordne die Felder in einer Spalte an und begrenze das Formular auf 640 px Breite. Jede Feldgruppe folgt der Reihenfolge Label, Eingabe, Hilfe und gegebenenfalls Fehler. Lass zwischen mehreren Gruppen 24 px Abstand.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Text braucht Platz: Labels, Hilfe und Fehler dürfen mehrzeilig werden. Nachfolgende Inhalte rücken nach unten; die Reihenfolge bleibt auf schmalen Flächen erhalten.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Platziere die Aktionen nach dem Feld: «Änderungen speichern» steht vor «Abbrechen». Sind weniger als 640 px Formularbreite verfügbar, stehen beide untereinander und nutzen die volle Breite.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"type\":\"link\",\"fields\":{\"url\":\"/systems/shadcn/formulare-validierung\",\"newTab\":false,\"linkType\":\"custom\"},\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Prüfzeitpunkt und Formularablauf: Formulare und Validierung\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"rules\",\"blockType\":\"text\"},{\"id\":\"6b007f83cbca4f70f81a0e88\",\"body\":{\"root\":{\"type\":\"root\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"tag\":\"h2\",\"type\":\"heading\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Quellen und Prüfgrenzen\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Grundlage: veröffentlichter CMS-Stand shadcn-content-layout-form-layout (20. November 2026, 13:30 UTC) und shadcn-formulare-validierung (20. November 2026, 08:04 UTC). Diese Seite beschreibt die Anordnung der Felder und verwendet die vorhandenen Beispieltexte. «Formulare und Validierung» erklärt das Formularverhalten: die Feldtexte, wann Eingaben geprüft werden, wohin der Fokus wechselt, wie Fehler korrigiert werden und welche Ergebnisse beim Speichern möglich sind.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Die maximale Formularbreite von 640 px und die untereinander angeordneten Aktionen bei weniger als 640 px verfügbarer Inhaltsbreite stammen aus der bestehenden lokalen Gestaltungsreferenz. Der Abstand von 24 px zwischen Feldgruppen stand bereits auf dieser Layoutseite. Diese Masse gelten für die hiesige Referenzgestaltung; sie sind keine allgemeine Vorgabe von shadcn.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Das Beispiel passt sich der verfügbaren Breite an und ersetzt die bisherigen getrennten Darstellungen für breite und schmale Flächen. Die Zustandsauswahl zeigt nur eine Vorschau. Das Feld lässt sich nicht bearbeiten, Eingaben werden nicht geprüft und die Formularaktionen lösen weder Navigation noch Speicherung aus. Daraus entstehen keine zusätzlichen fachlichen Regeln; ein allgemeiner Nachweis für Barrierefreiheit ist damit nicht erbracht.\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"type\":\"link\",\"fields\":{\"url\":\"/systems/shadcn/components/input\",\"newTab\":false,\"linkType\":\"custom\"},\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Input\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"},{\"type\":\"paragraph\",\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"type\":\"link\",\"fields\":{\"url\":\"/systems/shadcn/components/button\",\"newTab\":false,\"linkType\":\"custom\"},\"format\":\"\",\"indent\":0,\"version\":1,\"children\":[{\"text\":\"Button\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}],\"direction\":\"ltr\"}},\"blockName\":\"sources\",\"blockType\":\"text\"}],\"templateSections\":[],\"resources\":null,\"pageUrl\":\"http://localhost:3010/systems/shadcn/content-layout-form-layout\"}"
+    }
+  ],
+  "structuredContent": {
+    "kind": "section",
+    "path": "/systems/shadcn/content-layout-form-layout",
+    "title": "Form Layout",
+    "pageType": "layout",
+    "summary": "Zusammengehörige Formularfelder in einer klaren Reihenfolge anordnen.",
+    "updatedAt": "2026-11-20T17:12:35.800Z",
+    "content": [
+      {
+        "id": "6b007f83cbca4f70f81a0e83",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Projekt bearbeiten",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Zustand ansehen",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Normal",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Mit Feldfehler",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Layoutvorschau · Wähle einen Zustand, um die Anordnung mit und ohne Feldfehler zu vergleichen. Das Feld ist schreibgeschützt; «Änderungen speichern» und «Abbrechen» sind nicht bedienbar.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "example",
+        "blockType": "text"
+      },
+      {
+        "id": "6b007f83cbca4f70f81a0e84",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Projektname (erforderlich)",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Neues Kundenportal",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "1 bis 80 Zeichen. Leerzeichen am Anfang und Ende werden entfernt.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Einen Projektnamen eingeben.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "field",
+        "blockType": "text"
+      },
+      {
+        "id": "6b007f83cbca4f70f81a0e85",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Formularaktionen",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Änderungen speichern",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Abbrechen",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "actions",
+        "blockType": "text"
+      },
+      {
+        "id": "6b007f83cbca4f70f81a0e86",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "So ist die Feldgruppe aufgebaut",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Label → Eingabe → Hilfe → gegebenenfalls Fehler. Die Beschriftung bleibt über dem Feld; ein Fehler ergänzt die Hilfe direkt darunter.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Die Vorschau zeigt dasselbe Feld in zwei Zuständen: ausgefüllt oder leer mit einer Fehlermeldung nach erfolglosem Absenden. Beim Wechsel wird keine Eingabe geprüft.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "anatomy",
+        "blockType": "text"
+      },
+      {
+        "id": "6b007f83cbca4f70f81a0e87",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Drei Regeln für die Anordnung",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Ordne die Felder in einer Spalte an und begrenze das Formular auf 640 px Breite. Jede Feldgruppe folgt der Reihenfolge Label, Eingabe, Hilfe und gegebenenfalls Fehler. Lass zwischen mehreren Gruppen 24 px Abstand.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Text braucht Platz: Labels, Hilfe und Fehler dürfen mehrzeilig werden. Nachfolgende Inhalte rücken nach unten; die Reihenfolge bleibt auf schmalen Flächen erhalten.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Platziere die Aktionen nach dem Feld: «Änderungen speichern» steht vor «Abbrechen». Sind weniger als 640 px Formularbreite verfügbar, stehen beide untereinander und nutzen die volle Breite.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "type": "link",
+                    "fields": {
+                      "url": "/systems/shadcn/formulare-validierung",
+                      "newTab": false,
+                      "linkType": "custom"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "text": "Prüfzeitpunkt und Formularablauf: Formulare und Validierung",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "rules",
+        "blockType": "text"
+      },
+      {
+        "id": "6b007f83cbca4f70f81a0e88",
+        "body": {
+          "root": {
+            "type": "root",
+            "format": "",
+            "indent": 0,
+            "version": 1,
+            "children": [
+              {
+                "tag": "h2",
+                "type": "heading",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Quellen und Prüfgrenzen",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Grundlage: veröffentlichter CMS-Stand shadcn-content-layout-form-layout (20. November 2026, 13:30 UTC) und shadcn-formulare-validierung (20. November 2026, 08:04 UTC). Diese Seite beschreibt die Anordnung der Felder und verwendet die vorhandenen Beispieltexte. «Formulare und Validierung» erklärt das Formularverhalten: die Feldtexte, wann Eingaben geprüft werden, wohin der Fokus wechselt, wie Fehler korrigiert werden und welche Ergebnisse beim Speichern möglich sind.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Die maximale Formularbreite von 640 px und die untereinander angeordneten Aktionen bei weniger als 640 px verfügbarer Inhaltsbreite stammen aus der bestehenden lokalen Gestaltungsreferenz. Der Abstand von 24 px zwischen Feldgruppen stand bereits auf dieser Layoutseite. Diese Masse gelten für die hiesige Referenzgestaltung; sie sind keine allgemeine Vorgabe von shadcn.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "text": "Das Beispiel passt sich der verfügbaren Breite an und ersetzt die bisherigen getrennten Darstellungen für breite und schmale Flächen. Die Zustandsauswahl zeigt nur eine Vorschau. Das Feld lässt sich nicht bearbeiten, Eingaben werden nicht geprüft und die Formularaktionen lösen weder Navigation noch Speicherung aus. Daraus entstehen keine zusätzlichen fachlichen Regeln; ein allgemeiner Nachweis für Barrierefreiheit ist damit nicht erbracht.",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "type": "link",
+                    "fields": {
+                      "url": "/systems/shadcn/components/input",
+                      "newTab": false,
+                      "linkType": "custom"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "text": "Input",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                ],
+                "direction": "ltr"
+              },
+              {
+                "type": "paragraph",
+                "format": "",
+                "indent": 0,
+                "version": 1,
+                "children": [
+                  {
+                    "type": "link",
+                    "fields": {
+                      "url": "/systems/shadcn/components/button",
+                      "newTab": false,
+                      "linkType": "custom"
+                    },
+                    "format": "",
+                    "indent": 0,
+                    "version": 1,
+                    "children": [
+                      {
+                        "text": "Button",
+                        "type": "text",
+                        "version": 1
+                      }
+                    ],
+                    "direction": "ltr"
+                  }
+                ],
+                "direction": "ltr"
+              }
+            ],
+            "direction": "ltr"
+          }
+        },
+        "blockName": "sources",
+        "blockType": "text"
+      }
+    ],
+    "templateSections": [],
+    "resources": null,
+    "pageUrl": "http://localhost:3010/systems/shadcn/content-layout-form-layout"
+  }
+}

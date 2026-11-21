@@ -1,7 +1,9 @@
 'use client'
+import { SiteAnchor } from '../site-anchor'
+
 
 import { useId, useRef, useState } from 'react'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import type { Page } from '../../payload-types'
 import { blockAnchor, blockTitle } from '../content-outline'
 import { WorkflowStudy } from '../workflow-study'
@@ -37,7 +39,7 @@ export default function SearchFilter({ content }: { content: Page['content'] }) 
     <section id={blockAnchor(find('search-example')!)}>
       <h2>{e[0]}</h2><p>{e[1]}</p>
       <div className="sf-example">
-        <div className="sf-title"><h3>{e[3]}</h3><a className="sf-create" href="/systems/shadcn/formulare-validierung">{e[11]} <span aria-hidden="true">↗</span></a></div>
+        <div className="sf-title"><h3>{e[3]}</h3><SiteAnchor className="sf-create" href="/systems/shadcn/formulare-validierung">{e[11]} <span aria-hidden="true">↗</span></SiteAnchor></div>
         <div className="sf-controls">
           <label htmlFor={`${prefix}-q`}>{e[4]}<input type="search" id={`${prefix}-q`} value={q} aria-describedby={`${prefix}-hint`} onChange={event => { setQ(event.target.value); setSelected(null) }} /></label>
           <label htmlFor={`${prefix}-status`}>{e[5]}<select id={`${prefix}-status`} value={status} aria-describedby={`${prefix}-hint`} onChange={event => { setStatus(event.target.value); setSelected(null) }}><option value="">{e[6]}</option><option>{e[7]}</option><option>{e[8]}</option></select></label>
@@ -47,7 +49,7 @@ export default function SearchFilter({ content }: { content: Page['content'] }) 
         <h4 ref={heading} tabIndex={-1} className="sf-count" role="status" aria-live="polite">{results.length} {results.length === 1 ? e[15] : e[14]}</h4>
         <div className="sf-columns" aria-hidden="true"><span>{e[12]}</span><span>{e[13]}</span><span>{e[5]}</span></div>
         <ul className="sf-results" aria-label={e[3]}>{results.map(r => <li key={r.id}>
-          <span className="sf-id">{r.id}</span><a href={`#${prefix}-detail`} ref={el => { links.current[r.id] = el }} onClick={event => { event.preventDefault(); setSelected(r.id) }}>{r.name}</a><span className="sf-status">{r.state}</span>
+          <span className="sf-id">{r.id}</span><SiteAnchor href={`#${prefix}-detail`} ref={el => { links.current[r.id] = el }} onClick={event => { event.preventDefault(); setSelected(r.id) }}>{r.name}</SiteAnchor><span className="sf-status">{r.state}</span>
         </li>)}</ul>
         {!results.length && <div className="sf-empty"><strong>{e[16]}</strong><p>{e[17]}</p></div>}
         {current && <section className="sf-detail" id={`${prefix}-detail`} aria-label={e[19]}><p className="sf-hint">{e[19]}</p><h4>{current.name}</h4><p>{current.id} · {current.state}</p><p>{e[20]}</p><button type="button" onClick={() => { const id = selected; setSelected(null); requestAnimationFrame(() => { (id && links.current[id] || heading.current)?.focus() }) }}>{e[18]}</button></section>}
@@ -57,7 +59,7 @@ export default function SearchFilter({ content }: { content: Page['content'] }) 
     {region('search-rules')}
     <section id={blockAnchor(find('search-states')!)}><h2>{lines(find('search-states'))[0]}</h2><div className="sf-states">{lines(find('search-states')).slice(1).map(s => { const [title, ...rest] = s.split(' · '); return <article key={title}><h3>{title}</h3><p>{rest.join(' · ')}</p></article> })}</div></section>
     {region('search-context')}{region('search-patterns')}
-    <nav className="sf-next" aria-label={e[24]}><a href="/systems/shadcn/detailseite">{e[21]}</a><a href="/systems/shadcn/formulare-validierung">{e[22]}</a><a href="/systems/shadcn/patterns">{e[23]}</a></nav>
+    <nav className="sf-next" aria-label={e[24]}><SiteAnchor href="/systems/shadcn/detailseite">{e[21]}</SiteAnchor><SiteAnchor href="/systems/shadcn/formulare-validierung">{e[22]}</SiteAnchor><SiteAnchor href="/systems/shadcn/patterns">{e[23]}</SiteAnchor></nav>
     <div className="sf-contracts">{originals.map((b, i) => <details id={blockAnchor(b)} key={b.id ?? i}><summary>{blockTitle(b)}</summary>{b.blockType === 'text' ? <RichText data={b.body} /> : b.blockType === 'workflowStudy' ? <WorkflowStudy {...b} /> : b.blockType === 'messageComparison' ? <MessageComparison {...b} /> : null}</details>)}</div>
   </div>
 }

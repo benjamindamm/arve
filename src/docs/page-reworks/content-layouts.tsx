@@ -1,3 +1,4 @@
+import { SiteAnchor } from '../site-anchor'
 import type { Page } from '../../payload-types'
 import { Content } from '../content'
 import './content-layouts.css'
@@ -37,7 +38,7 @@ export default function ContentLayouts({ content }: { content: Page['content'] }
               <div className="clo-body-slot">{c[6]}</div>
             </div>}
           </figure>
-          <div className="clo-copy"><h2>{c[0]}</h2><p>{c[1]}</p><a href={href}>{label}<span aria-hidden="true"> →</span></a></div>
+          <div className="clo-copy"><h2>{c[0]}</h2><p>{c[1]}</p><SiteAnchor href={href}>{label}<span aria-hidden="true"> →</span></SiteAnchor></div>
         </section>
       })}
     </div>

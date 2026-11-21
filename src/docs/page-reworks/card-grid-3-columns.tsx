@@ -1,7 +1,12 @@
+import { SiteAnchor } from '../site-anchor'
+import { LayoutWidthDiagram } from './layout-width-diagram'
+import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './card-grid-3-columns.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Einsatz", "Breite und Umbruch", "Reihen und Höhe", "Reihenfolge und Interaktion"]}
 
 type Block = NonNullable<Page['content']>[number]
 type Text = Extract<Block, { blockType: 'text' }>
@@ -27,7 +32,7 @@ export default function ThreeColumnCardGrid({ content }: { content: Page['conten
                 <article id={blockAnchor(card)}>
                   <h3>{v[0]}</h3>
                   {v.slice(1, link ? -1 : undefined).map((paragraph, i) => <p key={i}>{paragraph}</p>)}
-                  {link?.fields?.url && <a href={link.fields.url}>{flatten(link)} <span aria-hidden="true">→</span></a>}
+                  {link?.fields?.url && <SiteAnchor href={link.fields.url}>{flatten(link)} <span aria-hidden="true">→</span></SiteAnchor>}
                 </article>
               </li>
             })}
@@ -35,8 +40,9 @@ export default function ThreeColumnCardGrid({ content }: { content: Page['conten
         </div>
         <figcaption>{lines(example).slice(1).join(' ')}</figcaption>
       </figure>
+      <LayoutWidthDiagram note="CSS des Beispiels · Breite des Inhaltscontainers, keine Fensteransichten. Fünf vorhandene Cards in unveränderter Reihenfolge." ranges={[{ label: "Unter 30 rem · 1 Spalte", columns: 1, spans: [1,1,1,1,1] }, { label: "30 bis unter 48 rem · 2 Spalten", columns: 2, spans: [1,1,1,1,1] }, { label: "Ab 48 rem · 3 Spalten", columns: 3, spans: [1,1,1,1,1] }]} />
     </section>}
-    {blocks.filter(b => b !== example && !cards.includes(b)).map(b => b.blockName === 'sources'
+    {blocks.filter(b => b !== example && !cards.includes(b)).map(b => ["rules", "choice"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
       ? <details key={b.blockName} id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section key={b.id ?? b.blockName} id={blockAnchor(b)}><RichText data={b.body}/></section>)}
   </div>

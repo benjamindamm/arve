@@ -1,4 +1,4 @@
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import type { Page } from '../../payload-types'
 import { blockAnchor } from '../content-outline'
 

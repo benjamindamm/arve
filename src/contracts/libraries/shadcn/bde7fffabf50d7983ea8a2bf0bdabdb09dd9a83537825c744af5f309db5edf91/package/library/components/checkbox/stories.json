@@ -1,0 +1,184 @@
+{
+  "format": "ui-contract-stories-draft",
+  "purpose": "Six inspected binary checkbox specimens. Focus is a visual fixture.",
+  "stories": [
+    {
+      "id": "unchecked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": false,
+        "disabled": false
+      },
+      "view": {
+        "state": "default",
+        "figmaNode": "1939:2182"
+      }
+    },
+    {
+      "id": "checked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": true,
+        "disabled": false
+      },
+      "view": {
+        "state": "default",
+        "figmaNode": "1939:2179"
+      }
+    },
+    {
+      "id": "focus-unchecked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": false,
+        "disabled": false
+      },
+      "view": {
+        "state": "focus",
+        "figmaNode": "1939:2178"
+      }
+    },
+    {
+      "id": "focus-checked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": true,
+        "disabled": false
+      },
+      "view": {
+        "state": "focus",
+        "figmaNode": "1939:2185"
+      }
+    },
+    {
+      "id": "disabled-unchecked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": false,
+        "disabled": true
+      },
+      "view": {
+        "state": "disabled",
+        "figmaNode": "1939:2180"
+      }
+    },
+    {
+      "id": "disabled-checked",
+      "inputs": {
+        "label": "Benachrichtigungen",
+        "checked": true,
+        "disabled": true
+      },
+      "view": {
+        "state": "disabled",
+        "figmaNode": "1939:2175"
+      }
+    }
+  ],
+  "contractProtocol": "Source React callbacks; native editing/activation is normalized before SCXML. Static Figma story inputs remain source-design observations, not a declaration of the complete React prop API.",
+  "contractCases": [
+    {
+      "id": "source-default",
+      "initial": {},
+      "events": [
+        {
+          "event": "CHECKED_CHANGE",
+          "data": {
+            "checked": true,
+            "value": "Edited",
+            "isCanceled": false
+          },
+          "expectState": "enabled"
+        }
+      ]
+    },
+    {
+      "id": "disabled-suppresses-user-event",
+      "events": [
+        {
+          "event": "DISABLE"
+        },
+        {
+          "event": "CHECKED_CHANGE",
+          "data": {
+            "checked": true,
+            "value": "Edited",
+            "isCanceled": false
+          },
+          "expectState": "enabled"
+        }
+      ],
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "escape-preserves-value",
+      "events": [
+        {
+          "event": "ESCAPE"
+        }
+      ],
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "readonly-veto",
+      "events": [
+        {
+          "event": "SET_READONLY",
+          "data": {
+            "readOnly": true
+          }
+        },
+        {
+          "event": "CHECKED_CHANGE",
+          "data": {
+            "checked": true,
+            "value": "Edited",
+            "isCanceled": false
+          },
+          "expectState": "enabled"
+        }
+      ],
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "callback-cancel",
+      "events": [
+        {
+          "event": "CHECKED_CHANGE",
+          "data": {
+            "checked": true,
+            "isCanceled": true
+          }
+        }
+      ],
+      "expectChecked": false
+    },
+    {
+      "id": "controlled-prop-authority",
+      "events": [
+        {
+          "event": "SET_CONTROLLED",
+          "data": {
+            "controlled": true
+          }
+        },
+        {
+          "event": "CHECKED_CHANGE",
+          "data": {
+            "checked": true,
+            "value": "Edited",
+            "isCanceled": false
+          },
+          "expectState": "enabled"
+        },
+        {
+          "event": "SET_CHECKED",
+          "data": {
+            "checked": true
+          }
+        }
+      ],
+      "expectChecked": true
+    }
+  ]
+}

@@ -1,7 +1,10 @@
+import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './wide-single-card.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Einsatz", "Card, Text und Feld", "Schmale Fläche", "Breite Tabellen", "Narrow vergleichen"]}
 
 type Block = NonNullable<Page['content']>[number]
 type Text = Extract<Block, { blockType: 'text' }>
@@ -40,7 +43,7 @@ export default function WideSingleCard({ content }: { content: Page['content'] }
       </div>
       <p className="wsc-caption">{v[15]}</p>
     </section>}
-    {rules && <section id={blockAnchor(rules)}><RichText data={rules.body}/></section>}
+    {rules && <LayoutRuleBlock block={rules} labels={ruleLabels.rules} />}
     {css && <details id={blockAnchor(css)}>
       <summary>{lines(css)[0]}</summary><p>{lines(css)[1]}</p><pre><code>{lines(css)[2]}</code></pre>
     </details>}

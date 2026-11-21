@@ -12,7 +12,10 @@
     "typecheck": "tsc --noEmit",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
-    "seed:system": "node scripts/seed-system.mjs"
+    "seed:system": "node scripts/seed-system.mjs",
+    "build:static": "node scripts/build-static-site.mjs",
+    "check:static": "node --import tsx scripts/check-static-site.ts",
+    "preview:static": "node scripts/serve-static-site.mjs"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",
@@ -40,6 +43,8 @@
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "parse5": "8.1.1",
+    "tsx": "4.23.15",
     "typescript": "~5.9.3"
   }
 }

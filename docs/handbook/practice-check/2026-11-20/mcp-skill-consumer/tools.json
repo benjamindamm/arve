@@ -1,0 +1,193 @@
+{
+  "tools": [
+    {
+      "name": "list_library_skills",
+      "description": "Discover read-only skills bundled with an explicitly selected contract library (library is required, e.g. shadcn). Returns export revisions, skill IDs, mainResourcePath and an allowlist of package-relative resources with SHA256. Choose a revision and skill, then use get_library_skill to read the main instructions and relevant references. No authoring or validation runtime is provided.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "library": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "library"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "get_library_skill",
+      "description": "Read a portable skill or one allowlisted reference unchanged, pinned to library + export revision + skill ID from list_library_skills. Omit resourcePath to read SKILL.md first; then pass exact package-relative resourcePath values from discovery to read guidance, manifest or library index. Resolve relative links against the current resourcePath within that package; never against a source repository. Component contracts remain available through get_component_page. Every call verifies the full package manifest and SHA256 integrity. Read-only; no authoring tools.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "library": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "skill": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "resourcePath": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "required": [
+          "library",
+          "revision",
+          "skill"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "list_documentation_tree",
+      "description": "List the published documentation hierarchy for a design system, including layout examples and components.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          }
+        },
+        "required": [
+          "system"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "search_documentation",
+      "description": "Search published documentation titles and text. Use get_documentation_page for sections and layout examples, or get_component_page for components.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "query": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "limit": {
+            "default": 10,
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30
+          }
+        },
+        "required": [
+          "system",
+          "query"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "get_documentation_page",
+      "description": "Read a published section or a layout example. To retrieve a layout example, pass section \"layout\" and the example slug.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "section": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "example": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          }
+        },
+        "required": [
+          "system",
+          "section"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "get_component_page",
+      "description": "Read a published design-system component page and its pinned technical contract.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "system": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          },
+          "component": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{0,79}$"
+          }
+        },
+        "required": [
+          "system",
+          "component"
+        ],
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ]
+}

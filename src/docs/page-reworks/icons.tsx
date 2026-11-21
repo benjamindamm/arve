@@ -1,7 +1,9 @@
 'use client'
+import { SiteAnchor } from '../site-anchor'
+
 import { useId, useState } from 'react'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './icons.css'
 
@@ -37,7 +39,7 @@ export default function IconsPage({ content }: { content: Page['content'] }) {
     <section id={find('examples') ? blockAnchor(find('examples')!) : undefined}>
       <h2>{examples[0]}</h2>
       <div className="ic-examples">
-        <article><h3>{label[0]}</h3><div className="ic-specimen"><a className="ic-text-link" href="/systems/shadcn/content-design">{label[1]}<Icon kind="arrow"/></a></div><p>{label[2]}</p></article>
+        <article><h3>{label[0]}</h3><div className="ic-specimen"><SiteAnchor className="ic-text-link" href="/systems/shadcn/content-design">{label[1]}<Icon kind="arrow"/></SiteAnchor></div><p>{label[2]}</p></article>
         <article><h3>{only[0]}</h3><div className="ic-specimen"><button type="button" aria-label={only[open ? 2 : 1]} aria-expanded={open} aria-controls={hintId} onClick={() => setOpen(!open)}><Icon kind="info"/></button></div><p>{only[3]}</p><p id={hintId} className="ic-hint" hidden={!open}>{only[4]}</p></article>
         <article><h3>{status[0]}</h3><div className="ic-status-list"><div><Icon kind="check"/><strong>{status[1]}</strong></div><div><Icon kind="warning"/><span><strong>{status[2]}</strong><br/>{status[3]}</span></div></div><p>{status[4]}</p></article>
         <article><h3>{decoration[0]}</h3><div className="ic-specimen ic-decoration"><Icon kind="spark"/><strong>{decoration[1]}</strong></div><p>{decoration[2]}</p></article>

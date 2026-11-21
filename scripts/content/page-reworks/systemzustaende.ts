@@ -92,20 +92,20 @@ const original: {content:Block[]} = {
   ]
 }
 export const release = {
-  expectedUpdatedAt: '2026-11-17T22:33:55.422Z',
+  expectedUpdatedAt: '2026-11-20T14:36:42.077Z',
   summary: 'Die Zustandsbeispiele und Regeln stehen unter «Laden, leer und Fehler».',
   content: [
     destination('state-guide', 'Laden, leer und Fehler', '/systems/shadcn/laden-leer-fehler',
-      'Zustand wählen: Laden, Erstleere, Nulltreffer, Fehler, Nichtverfügbarkeit oder unklarer Speicherausgang.'),
+      'Laden, «Noch keine Daten», «Keine Suchtreffer», Fehler, Nichtverfügbarkeit und «Speicherung nicht bestätigt» unterscheiden.'),
     destination('state-form', 'Formulare und Validierung', '/systems/shadcn/formulare-validierung#abschnitt-ergebnis-unbekannt',
-      'Ergebnis unbekannt nach dem Senden und Verhalten beim Verlassen des Formulars.'),
+      'Umgang mit unbestätigter Speicherung nach dem Senden und Verhalten beim Verlassen des Formulars.'),
     destination('state-rows', 'Tabellen und Listen', '/systems/shadcn/tabellen-und-listen',
       'Status einzelner Einträge im Zusammenhang mit Spalten und Zeilenaktionen gestalten.'),
     { blockType: 'text', blockName: 'state-history', body: { root: {
       type: 'root', version: 1, direction: 'ltr', format: '', indent: 0,
       children: [
-        { type: 'paragraph', version: 1, children: [text('Bisheriger Inhalt und Quelle')] },
-        { type: 'paragraph', version: 1, children: [text('Historischer Stand dieser Seite. Die Zustandsunterscheidung und Auswege sind inzwischen auf «Laden, leer und Fehler» zusammengeführt; die ursprüngliche Empty-Referenz und Hinweise bleiben hier erhalten.')] },
+        { type: 'paragraph', version: 1, children: [text('Empty-Komponente und Quelle')] },
+        { type: 'paragraph', version: 1, children: [text('Die Hinweise zur Empty-Komponente ergänzen die ausführlichen Zustandsbeispiele unter «Laden, leer und Fehler».')] },
       ],
     } } },
     ...original.content as Block[],

@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:AspectRatio",
+  "referenceComposition": "<div data-slot=\"aspect-ratio\" style=\"aspect-ratio:16/9\"><img src=\"media.jpg\" alt=\"Mountain lake at sunrise\"></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The image alt conveys the meaningful media subject; a decorative image instead gets empty alt in its own context.",
+  "updatesAndDescendants": "The wrapper sets CSS --ratio from a required number and rerenders children on prop updates. It does not load, crop, label or announce media automatically. This reference requires a finite positive ratio as a caller precondition.",
+  "referenceDecision": "Positive ratio and meaningful alt are caller requirements. The upstream function itself supplies no runtime ratio validation.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

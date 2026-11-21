@@ -1,0 +1,51 @@
+{
+  "reference": {
+    "library": "shadcn",
+    "component": "switch",
+    "revision": "65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26"
+  },
+  "status": "draft",
+  "sources": {
+    "interface": "components/switch/interface.json",
+    "tokens": "tokens.json",
+    "css": "components/switch/layout.css",
+    "behavior": "components/switch/behavior.scxml",
+    "accessibility": "components/switch/accessibility.html",
+    "accessibilityRules": "components/switch/accessibility.rules.json",
+    "ux": "components/switch/ux.json",
+    "stories": "components/switch/stories.json"
+  },
+  "files": {
+    "components/switch/README.md": {
+      "path": "components/switch/README.md",
+      "sha256": "b14d4d386e6315b4758da37c57b29c36f5ccaa1ca2b4b191ba15e271376ea160",
+      "content": "# Switch\n\nDer Draft beschreibt einen Ein/Aus-Schalter für eine Einstellung. [CEM](interface.json) bindet den booleschen Wert, die Grösse und das native `change`-Ereignis. Die [HTML-Vorlage](accessibility.html) verwendet ein natives Checkbox-Eingabefeld mit `role=\"switch\"` und einer sichtbaren, gleichbleibenden Beschriftung.\n\nDas [SCXML-Modell](behavior.scxml) übernimmt den aktualisierten booleschen Wert nach der nativen Aktivierung und meldet eine Änderung einmal an den Host. Escape ändert den Wert nicht. Ein deaktivierter Schalter ignoriert Nutzeränderungen. Der Host kann den Wert weiterhin setzen. Diese Regeln sind Entscheidungen für die Übung. Die [Projektionsregeln](accessibility.rules.json) delegieren Tab und Leertaste an das native Eingabefeld.\n\n## Figma-Quelle und Vorschau\n\nDer [Importbeleg](figma/figma-observations.json) bindet `provenance://source/.figma-pool%2Fshadcn.fig` per SHA-256 und erfasst alle 16 Varianten aus Set `2004:1928`. Default misst 32 × 18 px, Small 24 × 14 px. Der Abstand zum Gehäuserand beträgt 1 px. Der Fokuszustand hat eine innenliegende Kontur. Die Dark-Farben stammen aus den Variablenmodi des Kits. Der ausgeschaltete Track hebt sich in Dark nur schwach vom Hintergrund ab.\n\nDie [Stories](stories.json), [editierbare FIG](switch.fig) und [PNG-Vorschau](preview.png) decken zwölf Varianten in beiden Farbmodi ab. Die vier Destructive-Varianten sind im Importbeleg erfasst. Ihre Bedeutung und Umsetzung bleiben offen. Der Labelabstand von 0,5 em in der [CSS-Projektion](layout.css) ist eine Übungsentscheidung. Der [OpenPencil-Export](provenance://source/tools%2Fopenpencil%2Fexport-shadcn-switch.mjs) bindet die gerenderte PNG über den [Prüfnachweis](validation/preview-check.json) an die FIG.\n\n## Prüfung\n\nDer [Coverage-Record](validation/completeness.json) bindet alle elf Kriterien des Profils. Der Entwurf bleibt bis zur Klärung der Destructive-Varianten und der Prüfung im Webziel im Draft. Geprüft wurden der Ordner, die FIG nach erneutem Einlesen und die gerenderte PNG. Der separat ausgeführte SCXML-Test deckte Umschalten, doppelte Meldungen, Escape, Deaktivierung und Wertänderungen durch den Host ab. Browser- und Assistenzbedienung stehen aus.\n"
+    },
+    "components/switch/accessibility.html": {
+      "path": "components/switch/accessibility.html",
+      "sha256": "60e8589ca1de05ac1b194bdde0832812d4fafdc6dc6f4d5bd49c613e743d6254",
+      "content": "<template data-component=\"Switch\">\n  <label class=\"figma-switch\" for=\"switch-setting\">\n    <input id=\"switch-setting\" type=\"checkbox\" role=\"switch\" data-part=\"control\">\n    <span class=\"figma-switch__track\" data-part=\"track\" aria-hidden=\"true\">\n      <span class=\"figma-switch__thumb\" data-part=\"thumb\"></span>\n    </span>\n    <span data-part=\"label\">Benachrichtigungen</span>\n  </label>\n</template>\n"
+    },
+    "components/switch/accessibility.rules.json": {
+      "path": "components/switch/accessibility.rules.json",
+      "sha256": "27493e483d598135fce90320d4d50ae8b7919a1f8ac87ae7a0fa3d0d406f26fd",
+      "content": "{\n  \"format\": \"ui-contract-a11y-projection-draft\",\n  \"labelSource\": \"Associate a stable visible label with the input through a unique id.\",\n  \"projections\": {\n    \"role\": \"switch\",\n    \"checked\": \"Expose the native checked property as the on/off state.\",\n    \"disabled\": \"Use the native disabled property.\"\n  },\n  \"focus\": \"The native input owns keyboard focus. Use its Space activation and sequential Tab order. The track and thumb are hidden from assistive technology.\"\n}\n"
+    },
+    "components/switch/behavior.scxml": {
+      "path": "components/switch/behavior.scxml",
+      "sha256": "cee3042b00cd295b8d55acb1b06a5d72ff3c6b58bc5258e6c4c1d44995ebd851",
+      "content": "<scxml xmlns=\"http://www.w3.org/2005/07/scxml\" version=\"1.0\"\n       datamodel=\"ecmascript\" name=\"Switch\" initial=\"switchControl\">\n  <!-- The host supplies the initial value and disabled state before exposing the control.\n       NATIVE_CHANGE carries the browser's checked boolean after native activation. -->\n  <datamodel>\n    <data id=\"checked\" expr=\"false\"/>\n  </datamodel>\n  <state id=\"switchControl\" initial=\"enabled\">\n    <transition event=\"SET_CHECKED\" cond=\"_event.data &amp;&amp; typeof _event.data.checked === 'boolean'\">\n      <assign location=\"checked\" expr=\"_event.data.checked\"/>\n    </transition>\n    <state id=\"enabled\">\n      <transition event=\"DISABLE\" target=\"disabled\"/>\n      <transition event=\"FOCUS_IN FOCUS_OUT ESCAPE\"/>\n      <transition event=\"NATIVE_CHANGE\"\n                  cond=\"_event.data &amp;&amp; typeof _event.data.checked === 'boolean' &amp;&amp; checked !== _event.data.checked\">\n        <assign location=\"checked\" expr=\"_event.data.checked\"/>\n        <send event=\"checked.changed\" target=\"#_parent\">\n          <param name=\"checked\" expr=\"checked\"/>\n        </send>\n      </transition>\n    </state>\n    <state id=\"disabled\">\n      <transition event=\"ENABLE\" target=\"enabled\"/>\n    </state>\n  </state>\n</scxml>\n"
+    },
+    "components/switch/interface.json": {
+      "path": "components/switch/interface.json",
+      "sha256": "6bbc5dcb7b22fe6452ab9cea3541dd3e2489b004f98d2fc4187b864326cb5f08",
+      "content": "{\n  \"schemaVersion\": \"2.1.0\",\n  \"modules\": [\n    {\n      \"kind\": \"javascript-module\",\n      \"path\": \"switch.js\",\n      \"declarations\": [\n        {\n          \"kind\": \"class\",\n          \"name\": \"Switch\",\n          \"description\": \"Binary setting switch with a stable visible label.\",\n          \"members\": [\n            {\n              \"kind\": \"field\",\n              \"name\": \"checked\",\n              \"type\": {\n                \"text\": \"boolean\"\n              },\n              \"default\": \"false\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"disabled\",\n              \"type\": {\n                \"text\": \"boolean\"\n              },\n              \"default\": \"false\"\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"label\",\n              \"type\": {\n                \"text\": \"string\"\n              }\n            },\n            {\n              \"kind\": \"field\",\n              \"name\": \"size\",\n              \"type\": {\n                \"text\": \"\\\"default\\\" | \\\"small\\\"\"\n              },\n              \"default\": \"\\\"default\\\"\"\n            }\n          ],\n          \"events\": [\n            {\n              \"name\": \"change\",\n              \"type\": {\n                \"text\": \"Event\"\n              },\n              \"description\": \"Native change event. Read the updated boolean from the input target.\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n"
+    },
+    "components/switch/ux.json": {
+      "path": "components/switch/ux.json",
+      "sha256": "42bdf9d1139b821627b7a204006cf98384060b3b7caf7008a391ef2065200237",
+      "content": "{\n  \"componentId\": \"shadcn:Switch\",\n  \"purpose\": \"Eine Einstellung unmittelbar ein- oder ausschalten, etwa Benachrichtigungen. Der sichtbare Name der Einstellung bleibt beim Umschalten gleich.\"\n}\n"
+    }
+  },
+  "implementations": []
+}

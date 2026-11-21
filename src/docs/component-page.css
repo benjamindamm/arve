@@ -1,0 +1,57 @@
+/* Scoped to component documentation; specimens and other handbook pages retain their metrics. */
+.article.component-documentation > h1 { margin-bottom: 16px; }
+.article.component-documentation > .lead { font-size: 16px; margin-bottom: 24px; max-width: 68ch; }
+.component-availability { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; line-height: 1.6; color: var(--muted-foreground); border-top: 1px solid var(--border); padding-top: 16px; }
+.component-availability strong { font-weight: 600; color: var(--foreground); }
+.article.component-documentation .component-jumps { margin: 20px 0 16px; padding-bottom: 20px; }
+.component-documentation .component-demo-note { font-size: 14px; color: var(--muted-foreground); max-width: 68ch; line-height: 1.6; margin: 0 0 28px; }
+.component-documentation .button-rework-example { border: 0; padding: 0; border-radius: 0; }
+.component-documentation .button-rework-example h2 { margin-top: 0; }
+.component-documentation .demo { max-width: 720px; border-radius: 8px; }
+.component-documentation .demo-stage { min-height: 104px; }
+.component-documentation .component-platforms { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 15px; line-height: 1.6; }
+.component-platforms caption { text-align: left; color: var(--muted-foreground); font-size: 14px; margin-bottom: 16px; }
+.component-platforms th, .component-platforms td { padding: 16px 0; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.component-platforms th:first-child { width: 100px; padding-right: 20px; }
+.component-platforms thead { font-size: 13px; color: var(--muted-foreground); }
+.component-platforms td p { margin: 6px 0; }
+.component-status { display: inline-block; font-size: 12px; line-height: 1.6; padding: 1px 7px; background: #f3f4f3; border: 1px solid var(--border); border-radius: 4px; vertical-align: middle; }
+.component-platforms .component-status { margin-left: 8px; }
+.component-evidence { margin-top: 12px; }
+.component-evidence summary { cursor: pointer; font-weight: 500; }
+.component-documentation .component-evidence p { max-width: 65ch; margin-block: 12px; }
+.article.component-documentation > #contract > .component-contract-meta { margin-bottom: 12px; }
+.article.component-documentation > #contract > .component-domain-list { font-size: 14px; color: var(--muted-foreground); line-height: 1.9; margin-bottom: 24px; }
+.article.component-documentation > #contract > .component-revision-note { font-size: 14px; line-height: 1.6; border-left: 2px solid var(--border); padding-left: 16px; }
+.component-documentation #contract > details > summary { font-weight: 500; }
+.component-export-details > details { margin-top: 16px; }
+.component-documentation .component-copy-value { max-width: 100%; margin-block: 20px; font-size: 13px; color: var(--muted-foreground); }
+.component-copy-value > div { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 8px; }
+.component-copy-value button { background: white; color: var(--foreground); border: 1px solid var(--border); border-radius: 4px; min-height: 32px; padding: 4px 10px; cursor: pointer; font: inherit; }
+.component-copy-value button:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+.component-copy-value > code { display: block; overflow-wrap: anywhere; user-select: all; line-height: 1.7; }
+.component-copy-feedback { display: block; margin-top: 4px; }
+.component-documentation .component-export-details li { overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .component-availability { gap: 6px 16px; }
+  .component-platforms th:first-child { width: 84px; padding-right: 12px; }
+  .component-documentation .component-platforms { font-size: 14px; }
+  .component-evidence summary { line-height: 1.6; }
+}
+.component-reference-scope { margin-block:20px 28px; font-size:14px; }
+.component-reference-scope summary,.component-design-preview summary,.component-frameworks summary { cursor:pointer; font-weight:600; }
+.component-reference-scope .handbook-block { margin-block:24px; }
+.component-reference-scope .rich-text h2 { font-size:20px; }
+.component-design-preview { margin-block:24px 40px; }
+.component-design-preview figure { margin:20px 0; }
+.component-preview-image { max-height:440px; overflow:auto; background:#f7f8f7; border:1px solid var(--border); border-radius:6px; }
+.component-preview-image:focus-visible { outline:3px solid var(--ring); outline-offset:3px; }
+.component-design-preview img { display:block; width:auto; max-width:100%; height:auto; margin-inline:auto; }
+.component-design-preview figcaption { margin-top:12px; font-size:13px; color:var(--muted-foreground); line-height:1.6; }
+.component-study-scope { font-size:12px; color:var(--muted-foreground); padding-top:20px; border-top:1px solid var(--border); }
+.component-frameworks { margin-top:24px; font-size:14px; }
+.component-frameworks p { max-width:68ch; line-height:1.7; }
+.component-frameworks ul { list-style:none; padding:0; }
+.component-frameworks li { margin-block:16px; line-height:1.6; }
+.component-frameworks li small { display:block; color:var(--muted-foreground); }
+.component-contract-release { max-width:68ch; font-size:14px; color:var(--muted-foreground); }

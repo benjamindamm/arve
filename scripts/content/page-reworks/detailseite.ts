@@ -1,9 +1,9 @@
 import type { Page } from '../../../src/payload-types'
 
-// Current published CMS read read-only with push:false; original project rules retained below.
+// Editorial revision of the current CMS page; project rules and source links retained.
 export const release = {
-  expectedUpdatedAt: "2026-11-20T13:30:59.882Z",
-  summary: 'Ein Objekt erkennen, seine Inhalte verstehen, passend handeln und den Rückweg behalten.',
+  expectedUpdatedAt: "2026-11-20T13:52:22.837Z",
+  summary: 'Zeige, um welches Projekt es geht, was damit möglich ist und wie man zur Übersicht zurückkehrt.',
   content: [
   {
     "blockType": "text",
@@ -41,7 +41,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Statisches Schema · die Links öffnen Erläuterungen, keine Projektaktionen."
+                "text": "Statisches Beispiel · die Links führen zu Erläuterungen. Sie lösen keine Projektaktionen aus."
               }
             ]
           },
@@ -153,7 +153,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Bearbeiten öffnet im Produkt das Namensformular für dieselbe ID. Dieses Schema speichert keine Daten."
+                "text": "«Projekt bearbeiten» öffnet im Produkt das Namensformular für dieselbe Projekt-ID. Dieses statische Beispiel speichert keine Daten."
               }
             ]
           },
@@ -167,7 +167,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Der Rückweg führt zur Projektübersicht. Eine mitgebrachte Suche und der Statusfilter bleiben erhalten; ein Direktaufruf ohne Kontext führt zur ungefilterten Übersicht."
+                "text": "Der Rücklink erhält Suche und Statusfilter in der Projektübersicht. Bei einem Direktaufruf ohne diese Angaben führt er zur ungefilterten Übersicht."
               }
             ]
           }
@@ -197,7 +197,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Der typische Regionsplan"
+                "text": "So ist die Seite aufgebaut"
               }
             ]
           },
@@ -225,7 +225,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Zur Übersicht oder zum bestätigten Einstieg zurück; die Detailidentität bleibt davon unabhängig."
+                "text": "«Zurück zu Projekten» führt zur Projektübersicht."
               }
             ]
           },
@@ -239,7 +239,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "2 · Objektkopf und Aktionen"
+                "text": "2 · Name, Kennung, Status und Aktionen"
               }
             ]
           },
@@ -253,7 +253,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Vollständiger Name, eindeutige ID und Status. Die wichtigste erlaubte Handlung steht beim Objekt."
+                "text": "Zeige den vollständigen Namen, die eindeutige ID und den Status zusammen. Platziere die wichtigste erlaubte Aktion direkt bei diesen Angaben."
               }
             ]
           },
@@ -281,7 +281,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Entscheidungsrelevante Angaben folgen vor ergänzenden Informationen. Bei diesem kleinen Projekt sind Name, ID und Status bereits der gesamte Inhalt."
+                "text": "Zeige zuerst, was für eine Entscheidung nötig ist, und danach ergänzende Informationen. Bei diesem kleinen Projekt gibt es nur Name, ID und Status."
               }
             ]
           },
@@ -295,7 +295,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "4 · Zusatzregion bei Bedarf"
+                "text": "4 · Ergänzende Angaben bei Bedarf"
               }
             ]
           },
@@ -309,7 +309,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Nur bei fachlich bestätigten Metadaten ergänzen. Im Projektpilot entfällt sie vollständig. Keine leere Sidebar, Card oder erfundene Verantwortung."
+                "text": "Im Projektpilot sind keine ergänzenden Angaben vorgesehen. Lasse deshalb Sidebar und zusätzliche Card weg und füge keine Zuständigkeiten hinzu."
               }
             ]
           },
@@ -323,7 +323,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Die Regionen beschreiben Aufgaben, keine Pflicht zu vier Kästen. Im Beispiel genügen Rückweg und Objektkopf. Bei reichhaltigeren Objekten kann eine Zusatzregion folgen; ihre Inhalte und Zustände müssen vorher fachlich entschieden sein."
+                "text": "Nicht jeder Seitenbereich braucht eine eigene Card. Hier genügen Rücklink und Projektangaben mit Aktion. Weitere Bereiche kommen nur hinzu, wenn ihre Inhalte und Zustände geklärt sind."
               }
             ]
           }
@@ -367,7 +367,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Identität zuerst: Vollständiger Name und stabile ID machen das Objekt eindeutig. Zeige den Status als Text und ordne die erlaubte Hauptaktion direkt zu."
+                "text": "Zeige den vollständigen Namen und die unveränderliche ID, damit das Objekt eindeutig erkennbar ist. Schreibe den Status aus und platziere die erlaubte Hauptaktion bei diesen Angaben."
               }
             ]
           },
@@ -381,7 +381,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Inhalt nach Bedeutung: Hauptinformationen vor Zusatzinformationen. Lasse Bereiche ohne fachlichen Inhalt weg; unbekannte Pflichtdaten brauchen einen erklärten Zustand."
+                "text": "Zeige Wichtiges vor Ergänzungen und lasse Bereiche ohne vorgesehene Inhalte weg. Sind Pflichtangaben unbekannt, erkläre das auf der Seite."
               }
             ]
           },
@@ -395,7 +395,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Rückkehr gestalten: Erhalte den angebotenen Suchkontext und mache das Ausgangsobjekt wieder auffindbar. Ein sichtbarer Rückweg bleibt auch bei fehlendem Objekt verfügbar."
+                "text": "Erhalte bei der Rückkehr zur Übersicht Suche und Statusfilter und mache das zuvor geöffnete Objekt wieder auffindbar. Der Rückweg bleibt auch bei einem fehlenden Objekt sichtbar."
               }
             ]
           }
@@ -425,7 +425,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Drei Situationen mit einem Ausweg"
+                "text": "Drei Situationen und der passende Rückweg"
               }
             ]
           },
@@ -551,7 +551,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Bestätigt nicht vorhanden: keine Bearbeitung. Ein unbekanntes Ladeergebnis ist damit nicht gleichzusetzen."
+                "text": "Steht fest, dass das Projekt nicht vorhanden ist, lässt es sich nicht bearbeiten. Ist noch unklar, ob es geladen werden konnte, darf die Seite es nicht als fehlend melden."
               }
             ]
           },
@@ -607,7 +607,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Suche «Alpen» + Status Aktiv bleiben erhalten. Ist P-101 danach kein Treffer mehr, erhält die Ergebnisüberschrift den Fokus."
+                "text": "Die Suche nach «Alpen» und der Statusfilter Aktiv bleiben erhalten. Gehört P-101 nach der Namensänderung nicht mehr zu den Treffern, erhält die Ergebnisüberschrift den Fokus."
               }
             ]
           },
@@ -635,7 +635,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Die Karten sind Gestaltungsvarianten; sie lesen und ändern keine Projektdaten."
+                "text": "Die Karten zeigen mögliche Darstellungen. Sie lesen und ändern keine Projektdaten."
               }
             ]
           }
@@ -679,7 +679,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Das Projekt bleibt einspaltig. Ab 640 CSS-Pixeln verfügbarer Inhaltsbreite darf die Aktion neben dem Objektkopf stehen, wenn beide vollständig Platz finden. In diesem Schema sitzt sie wegen des langen Aktionsnamens erst ab 48rem daneben; darunter folgt sie auf Name, ID und Status. Die Schwelle ist ein Demonstrationswert, kein Systemtoken."
+                "text": "Die Projektangaben stehen in einer Spalte. Ab 640 CSS-Pixeln verfügbarer Inhaltsbreite darf die Aktion daneben stehen, wenn für die Angaben und die vollständige Aktionsbeschriftung genug Platz ist. Dieses Beispiel ordnet die lange Aktionsbeschriftung erst ab 48rem daneben an. Darunter folgt sie auf Name, ID und Status. Die hier verwendete Schwelle dient der Demonstration und ist kein Systemtoken."
               }
             ]
           },
@@ -693,7 +693,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Name und ID dürfen umbrechen. Keine Kürzung, feste Höhe oder haftende Aktion. Bei vergrössertem Text hat vollständiger Inhalt Vorrang vor einer Zeile. Die Zusatzregion des generischen Plans wird dem Pilotobjekt nicht hinzugefügt."
+                "text": "Lasse Name und ID auf mehrere Zeilen umbrechen, statt sie zu kürzen oder die Höhe festzulegen. Die Aktion scrollt mit der Seite. Auch bei vergrössertem Text muss alles vollständig lesbar bleiben. Der zusätzliche Bereich aus der allgemeinen Seitengliederung entfällt bei diesem Projekt."
               }
             ]
           }
@@ -723,7 +723,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Projektvertrag, Zustände und Prüfgrenzen"
+                "text": "Projektregeln, Zustände und offene Prüfungen"
               }
             ]
           },
@@ -754,7 +754,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Diese redaktionell entschiedene Vorlage gilt für den neutralen Projektdatensatz im shadcn-Referenzimplementierung: Web auf Desktop und in schmalen Ansichten, Deutsch (Schweiz), höchstens 50 Datensätze und eine Rolle. Der Gestaltungs-Pilot führt die gemeinsame visuelle Referenz, Zuständigkeiten und Nachweisgrenzen. Veröffentlichung und fachliche Entscheidung sind kein Implementierungsnachweis.",
+                "text": "Diese aktuelle Erläuterung beschreibt die Vorlage für den neutralen Projektdatensatz in der shadcn-Referenzimplementierung. Sie gilt für das Web auf Desktop und in schmalen Ansichten, für Deutsch (Schweiz), höchstens 50 Datensätze und eine Rolle. Der Gestaltungs-Pilot benennt die gemeinsame visuelle Referenz, die Zuständigkeiten und den Umfang der Nachweise. Die veröffentlichte Vorlage belegt noch keine Umsetzung.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -772,7 +772,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Ein Projekt besitzt genau drei Pflichtangaben: eine systemgesetzte unveränderliche ID, einen Projektnamen und den systemgesetzten Status Aktiv oder Archiviert. Der Name umfasst nach Entfernen äusserer Leerzeichen 1–80 Graphemcluster; innere Leerzeichen bleiben erhalten. Die ID unterscheidet auch gleichnamige Projekte. Erstellen erzeugt ein aktives Projekt; nur dessen Name ist bearbeitbar. Es gibt keine Archivierungsaktion, keine Löschung und keinen Download im Projektpilot.",
+                "text": "Für jedes Projekt sind genau drei Angaben vorgeschrieben: die vom System vergebene, unveränderliche ID, der Projektname und der vom System gesetzte Status Aktiv oder Archiviert. Für den Namen gilt: Nach dem Entfernen äusserer Leerzeichen muss er 1–80 Graphemcluster lang sein. Innere Leerzeichen bleiben erhalten. Anhand der ID lassen sich auch gleichnamige Projekte unterscheiden. Neue Projekte erhalten den Status Aktiv; bearbeiten lässt sich nur ihr Name. Der Projektpilot bietet keine Aktionen zum Archivieren, Löschen oder Herunterladen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -807,7 +807,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Annotierte Gestaltungsfolge für Projekt P-101 mit dem Namen «Alpen» und Status Aktiv. Die Inhalte sind Beispiele für eine statische Vorlage; die Darstellung führt keine Projektaktionen aus."
+                "text": "Die folgenden Schritte zeigen die Detailseite für Projekt P-101, «Alpen», mit dem Status Aktiv. Die Erläuterungen beziehen sich auf eine statische Vorlage, die keine Projektaktionen ausführt."
               }
             ]
           },
@@ -821,7 +821,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "1 · Rückweg vor dem Objektkopf"
+                "text": "1 · Rückweg vor den Projektangaben"
               }
             ]
           },
@@ -849,7 +849,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Objekt anhand von Name, ID und Status erkennen."
+                "text": "Danach lässt sich das Projekt anhand von Name, ID und Status erkennen."
               }
             ]
           },
@@ -877,7 +877,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Seitentitel «Alpen», darunter «Projekt-ID: P-101» und «Status: Aktiv». Status immer als Text zeigen. Name und ID vollständig lesbar lassen; die ID ist keine Eingabe."
+                "text": "Der Seitentitel lautet «Alpen». Darunter stehen «Projekt-ID: P-101» und «Status: Aktiv». Schreibe den Status immer aus und zeige Name und ID vollständig. Die ID wird nur angezeigt und lässt sich nicht eingeben."
               }
             ]
           },
@@ -891,7 +891,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Die zum Status passende Handlung lesen."
+                "text": "Der Status bestimmt, welche Aktion angeboten wird."
               }
             ]
           },
@@ -919,7 +919,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Eine Hauptaktion öffnet das Formular für denselben Projektnamen. ID, Status und Suchkontext werden mitgeführt. Nach bestätigtem Speichern zeigt dieselbe Detailseite den gespeicherten Namen."
+                "text": "«Projekt bearbeiten» ist die Hauptaktion und öffnet das Namensformular für dieses Projekt. ID, Status sowie die bisherige Suche und der Statusfilter bleiben erhalten. Sobald das Speichern bestätigt ist, zeigt dieselbe Detailseite den gespeicherten Namen."
               }
             ]
           },
@@ -989,7 +989,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Diese Reihenfolge bildet zugleich die Lese- und Fokusreihenfolge. Den gespeicherten Namen nicht zusätzlich in einer leeren Haupt-Card wiederholen. Für dieses kleine Objekt genügt der Objektkopf mit Aktion und Rückweg."
+                "text": "Die Reihenfolge der Darstellung gilt auch für das Lesen und die Fokusführung. Für dieses kleine Projekt genügen Name, ID, Status, Aktion und Rückweg. Eine weitere Card, die nur den gespeicherten Namen wiederholt, ist nicht nötig."
               }
             ]
           },
@@ -1003,7 +1003,7 @@ export const release = {
               {
                 "type": "text",
                 "version": 1,
-                "text": "Lokale Pilotentscheidung zu DETAIL-01/02/03/06/07; Grundlage: Detailhandbuch und docs/handbook/team-readiness/detail.md, Stand 18.11.2026. Keine ausgeführte Bedienungsprüfung."
+                "text": "Aktuelle Erläuterung der lokalen Pilotentscheidungen zu DETAIL-01/02/03/06/07. Grundlage sind das Detailhandbuch und docs/handbook/team-readiness/detail.md, Stand 18.11.2026. Der Ablauf wurde damit festgelegt; eine Bedienungsprüfung wurde nicht ausgeführt."
               }
             ]
           },
@@ -1034,7 +1034,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Aktiv: Name, ID und Status sind sichtbar. «Projekt bearbeiten» ist die einzige Hauptaktion und ändert ausschliesslich den Namen. Der Rücklink ist eine Navigationshandlung. Archiviert: dieselben Angaben bleiben sichtbar; es gibt keine Bearbeitungsaktion. Der Satz «Archivierte Projekte sind nur lesbar.» erklärt die Grenze direkt beim Status, ohne einen unbedienbaren Button zu benötigen.",
+                "text": "Bei aktiven Projekten sind Name, ID und Status sichtbar. Die einzige Hauptaktion «Projekt bearbeiten» erlaubt ausschliesslich, den Namen zu ändern. Der Rücklink dient der Navigation. Archivierte Projekte zeigen dieselben Angaben, aber keine Bearbeitungsaktion. Erkläre dies direkt beim Status mit «Archivierte Projekte sind nur lesbar.», statt einen nicht bedienbaren Button anzuzeigen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1052,7 +1052,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Die eine Pilotrolle sieht beide Status. Das ist eine begrenzte Aufgabenentscheidung und kein umfassendes Rechtemodell. Ein Zustand «kein Zugriff» gehört nicht zum vereinbarten Rollenmodell. Sobald ein Produkt Zugriffsbeschränkungen ergänzt, müssen Sichtbarkeitsgrenzen und Ausweg eigens entschieden werden.",
+                "text": "Die einzige Rolle im Pilot kann aktive und archivierte Projekte sehen. Diese Festlegung deckt die Pilotaufgabe ab, beschreibt aber kein umfassendes Rechtemodell. Der Zustand «kein Zugriff» ist darin nicht vorgesehen. Wenn ein Produkt später den Zugriff beschränkt, muss es festlegen, welche Informationen dann sichtbar bleiben und wie Nutzerinnen und Nutzer weiterkommen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1070,7 +1070,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Verantwortung, Beschreibung, Frist, Datum und weitere Metadaten gehören nicht zum Pilotobjekt. Deshalb entfallen Zusatzregion und Sidebar vollständig. Keine leere Card und kein Strich suggerieren fehlende Daten. Fehlende Pflichtangaben sind ein Datenproblem, nicht eine optionale Leere; keinen Namen oder Status erfinden. Eine spätere fachliche Erweiterung muss fehlend, unbekannt und nicht anwendbar ausdrücklich definieren, bevor neue Regionen entstehen.",
+                "text": "Für die Pilotprojekte sind weder Zuständigkeit, Beschreibung, Frist oder Datum noch weitere ergänzende Angaben vorgesehen. Deshalb gibt es dafür keinen zusätzlichen Bereich und keine Sidebar. Zeige auch keine leere Card oder einen Strich, der fehlende Daten vermuten lässt. Fehlt dagegen eine Pflichtangabe, liegt ein Datenproblem vor: Name und Status dürfen nicht erfunden werden. Bevor später neue Bereiche hinzukommen, muss fachlich geklärt sein, wie sie fehlende, unbekannte und nicht anwendbare Angaben unterscheiden.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1089,7 +1089,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Rückkehrvertrag für Liste, Direktlink und Bearbeitung",
+                "text": "Zur Übersicht und aus dem Formular zurückkehren",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1107,7 +1107,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Die Übersicht sucht sofort lokal in ID und Projektname und verknüpft die Suche mit dem Statusfilter durch UND. Führend sind die URL-Parameter q und status; ihre gültigen Werte und die Normalisierung beschreibt Suchen und Filtern. Detail- und Bearbeitungsadresse tragen diesen Kontext mit. Nicht angebotene Sortierung, Pagination oder Mehrfachauswahl werden nicht als Rückkehrzustand ergänzt.",
+                "text": "Die Übersicht durchsucht ID und Projektname sofort lokal. Ein Treffer muss sowohl zur Suche als auch zum Statusfilter passen (UND). Massgeblich sind die URL-Parameter q und status. Die Seite «Suchen und Filtern» beschreibt ihre gültigen Werte und deren Normalisierung. Die Adressen der Detailseite und des Bearbeitungsformulars übernehmen beide Parameter. Sortierung, Pagination und Mehrfachauswahl werden nicht angeboten und müssen deshalb auch bei der Rückkehr nicht wiederhergestellt werden.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1125,7 +1125,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Der explizite Rücklink rekonstruiert die Übersicht aus q und status. Ein Direktlink ohne diese Parameter führt zur ungefilterten Übersicht. Nach Rückkehr erhält der Link des Ausgangsprojekts, identifiziert durch seine unveränderliche ID, den Fokus und wird bei Bedarf in die sichtbare Fläche gescrollt. Fehlt das Projekt im Ergebnis, erhält die Ergebnisüberschrift den Fokus. Es wird keine exakte Scrollpixelposition zugesagt.",
+                "text": "«Zurück zu Projekten» öffnet die Übersicht mit der Suche und dem Statusfilter aus q und status. Wurde die Detailseite ohne diese Parameter direkt geöffnet, führt der Link zur ungefilterten Übersicht. Bei der Rückkehr erhält der Link des zuvor geöffneten Projekts den Fokus; die unveränderliche ID bestimmt, welcher Link gemeint ist. Bei Bedarf wird er in den sichtbaren Bereich gescrollt. Gehört das Projekt nicht mehr zu den Treffern, erhält die Ergebnisüberschrift den Fokus. Eine bestimmte Scrollposition in Pixeln wird nicht zugesagt.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1143,7 +1143,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Lokale Präzisierung vom 20.11.2026: Beim Öffnen eines Details oder des Formulars erhält die neue Seitenüberschrift den Fokus. Sauberes Abbrechen und bestätigtes Verwerfen vor einer Übermittlung führen zum Detailtitel; beim Erstellen zur Ergebnisüberschrift der Liste. Der spezielle Rückweg Detail → Liste behält sein ID-basiertes Fokusziel.",
+                "text": "Die lokale Festlegung vom 20.11.2026 präzisiert die Fokusführung: Beim Öffnen einer Detailseite oder eines Formulars erhält die neue Seitenüberschrift den Fokus. Wird ein unverändertes Formular abgebrochen oder werden Änderungen vor dem Übermitteln nach Bestätigung verworfen, erhält der Detailtitel den Fokus. Beim Erstellen ist das Ziel stattdessen die Ergebnisüberschrift der Liste. Für die Rückkehr von der Detailseite zur Liste gilt weiterhin: zuerst der Projektlink mit derselben ID, ersatzweise die Ergebnisüberschrift.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1161,7 +1161,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Browser-Zurück bleibt ein eigener Rückweg: Der vorherige Eintrag im Browserverlauf samt URL wird wiederhergestellt; bei Rückkehr zur Projektübersicht gilt dasselbe Fokusziel. Einzelne Suchänderungen sollen den Verlauf nicht mit Zwischenständen füllen. Diese Rückkehr muss separat von einem angeklickten Rücklink geprüft werden. Abbrechen und Speichern des Formulars führen zum Detail derselben ID mit erhaltenem Suchkontext; der Formularweg regelt ungespeicherte Änderungen und unklaren Speicherausgang.",
+                "text": "«Zurück» im Browser stellt den vorherigen Verlaufseintrag mit seiner URL wieder her. Führt dieser Weg zur Projektübersicht, gelten dieselben Fokusziele wie beim Rücklink. Einzelne Änderungen der Suche sollen keine Zwischenstände im Browserverlauf erzeugen. Prüfe Browser-Zurück gesondert vom Rücklink auf der Seite. Abbrechen und Speichern im Formular führen zur Detailseite derselben ID und erhalten Suche und Statusfilter. Der Formularablauf regelt den Umgang mit ungespeicherten Änderungen und den Fall, dass unklar ist, ob gespeichert wurde.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1180,7 +1180,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Zustandsvorlagen mit einem konkreten Ausweg",
+                "text": "Was die Seite beim Laden und bei Fehlern zeigt",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1198,7 +1198,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Laden: «Projekt wird geladen …». Rückweg bleibt verfügbar, eine bekannte ID aus der Adresse darf als «Angeforderte Projekt-ID» erscheinen. Unbestätigten Namen oder Status nicht als geladenen Inhalt zeigen; Bearbeiten erst nach vorliegenden Pflichtangaben anbieten. Für die statische Gestaltung ist dies eine Zustandsvariante, keine Behauptung einer vorhandenen Lade-API.",
+                "text": "Während des Ladens steht «Projekt wird geladen …» auf der Seite. Der Rückweg bleibt verfügbar. Ist die ID aus der Adresse bekannt, darf sie als «Angeforderte Projekt-ID» angezeigt werden. Zeige Name und Status erst, wenn sie bestätigt sind, und biete Bearbeiten erst an, wenn alle Pflichtangaben vorliegen. Die statische Vorlage beschreibt diese Darstellung; sie belegt keine vorhandene Lade-API.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1216,7 +1216,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Bestätigt nicht vorhanden: «Projekt nicht gefunden.» mit «Zurück zu Projekten». Die angeforderte ID kann den Bezug erhalten. Kein Bearbeiten und kein automatischer Wiederholungsversuch. Ein unbekanntes Ladeergebnis ist nicht mit diesem bestätigten Fehlen gleichzusetzen.",
+                "text": "Steht fest, dass das Projekt nicht vorhanden ist, zeigt die Seite «Projekt nicht gefunden.» und «Zurück zu Projekten». Die angeforderte ID kann zusätzlich verdeutlichen, welches Projekt gesucht wurde. Bearbeiten und automatische Wiederholungsversuche entfallen. Solange unklar ist, ob das Projekt geladen werden konnte, darf es nicht als fehlend gemeldet werden.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1234,7 +1234,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Laden fehlgeschlagen oder Pflichtdaten unvollständig: «Projekt konnte nicht vollständig geladen werden.» Der Rückweg bleibt sichtbar. «Erneut laden» bedeutet eine erneute Leseabfrage derselben ID und ist nur in einer Umsetzung mit dieser Fähigkeit anzubieten. Kein Bearbeiten, solange Name oder Status nicht verlässlich vorliegen. Die statische Vorlage zeigt Meldung, Wiederholungsplatz und Rückweg; sie belegt keinen Dienstfehler.",
+                "text": "Schlägt das Laden fehl oder sind Pflichtangaben unvollständig, zeigt die Seite «Projekt konnte nicht vollständig geladen werden.» Der Rückweg bleibt sichtbar. «Erneut laden» fragt die Daten derselben ID erneut ab. Biete diese Aktion nur an, wenn die Umsetzung das unterstützt. Solange Name oder Status nicht verlässlich vorliegen, ist Bearbeiten nicht möglich. Die statische Vorlage zeigt die Meldung, den Platz für die erneute Abfrage und den Rückweg. Sie weist keinen tatsächlich aufgetretenen Dienstfehler nach.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1252,7 +1252,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Teilfehler einer Zusatzregion entfallen, weil der Pilot keine solche Region besitzt. Erst bei einer bestätigten Erweiterung gilt: verfügbare Hauptinformationen erhalten, Fehler am betroffenen Zusatzbereich erklären und nur diesen erneut laden. Kein Zugriff und Zusatzteilfehler werden nicht als bereits unterstützte Projektzustände dargestellt.",
+                "text": "Im Pilot gibt es keinen zusätzlichen Inhaltsbereich und deshalb auch keine Fehler, die nur einen solchen Bereich betreffen. Wird ein solcher Bereich später fachlich beschlossen, bleiben bei einem dortigen Fehler die verfügbaren Hauptinformationen sichtbar. Erkläre den Fehler am betroffenen Bereich und lade nur diesen erneut. Weder «kein Zugriff» noch Fehler in ergänzenden Bereichen gehören bereits zu den unterstützten Projektzuständen.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1289,7 +1289,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Für diesen Pilot bleibt das Detail auch auf Desktop einspaltig im Inhaltscontainer der gemeinsamen visuellen Referenz. Name, ID, Status, Erklärung und Aktion folgen derselben Reihenfolge. Das vorhandene 2:1-Demolayout wird nicht auf drei kurze Pflichtangaben angewendet. Alle Bereiche laufen normal mit; keine Sticky-Positionierung.",
+                "text": "Auch auf Desktop zeigt die Detailseite die Projektangaben in einer Spalte. Sie nutzt den Inhaltscontainer der gemeinsamen visuellen Referenz. Die Reihenfolge bleibt: Name, ID, Status, Erklärung und Aktion. Für diese drei kurzen Pflichtangaben wird das vorhandene 2:1-Demolayout nicht verwendet. Alle Bereiche scrollen mit der Seite; keiner bleibt am Fensterrand haften.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1307,7 +1307,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Ab 640 CSS-Pixeln verfügbarer Inhaltsbreite darf die Aktion neben dem Objektkopf stehen, sofern der vollständige Name und der Aktionsname ohne Abschneiden Platz finden. Unter 640 CSS-Pixeln oder sobald der Inhalt mehr Platz benötigt, steht sie unter Status und Erklärung; im schmalen Entwurf wird diese gestapelte Variante verwendet. Die 640 CSS-Pixel sind eine Pilotentscheidung für die Inhaltsbreite, kein allgemeiner Systemtoken. Massgebend ist die tatsächlich verfügbare Inhaltsbreite inklusive Textvergrösserung. Die 639 px und 24 px der bestehenden Demo sind keine Systemtokens. Abstände und Grössen stammen aus der im Gestaltungs-Pilot benannten Referenz.",
+                "text": "Ab 640 CSS-Pixeln verfügbarer Inhaltsbreite darf die Aktion neben den Projektangaben stehen. Voraussetzung ist, dass der vollständige Name und die vollständige Aktionsbeschriftung Platz finden. Unter 640 CSS-Pixeln oder bei höherem Platzbedarf steht die Aktion unter Status und Erklärung. So ist auch der schmale Entwurf angeordnet. Die Schwelle von 640 CSS-Pixeln wurde für den Pilot festgelegt und ist kein allgemeiner Systemtoken. Entscheidend ist die tatsächlich verfügbare Inhaltsbreite, auch bei vergrössertem Text. Die Werte 639 px und 24 px aus der bestehenden Demo sind ebenfalls keine Systemtokens. Abstände und Grössen richten sich nach der im Gestaltungs-Pilot benannten Referenz.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1325,7 +1325,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Als wiederverwendbare statische Varianten dieselbe Reihenfolge mit «Alpen» sowie einem zulässigen 80-Graphemcluster-Namen, einer langen untrennbaren ID, Aktiv und Archiviert bestücken. Titel und Kennung müssen umbrechen dürfen und vollständig lesbar bleiben. Ergänzend Laden, fehlendes Projekt und Ladefehler darstellen. Eine Zusatzregion wird nicht künstlich zum Belastungstest erfunden.",
+                "text": "Erstelle statische Varianten in derselben Reihenfolge: mit «Alpen», mit einem zulässigen Namen von 80 Graphemclustern, mit einer langen untrennbaren ID sowie mit den Status Aktiv und Archiviert. Titel und Kennung müssen auf mehrere Zeilen umbrechen können und vollständig lesbar bleiben. Zeige ausserdem die Varianten für Laden, ein fehlendes Projekt und einen Ladefehler. Füge für diesen Belastungstest keinen zusätzlichen Inhaltsbereich hinzu, den das Projekt fachlich nicht vorsieht.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1343,7 +1343,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Noch zu prüfen: breite und schmale Ansicht, niedrige Fensterhöhe, vergrösserter Text, mehrzeilige Aktion sowie Rückkehr nach einer Namensänderung, die den Treffer entfernt. Die statischen Varianten und dieser Ablauf sind eine Gestaltungsvorgabe; unabhängige Wiederverwendung, Tastatur-/Screenreaderbedienung und tatsächlicher Fokus-/Scrollverlauf sind damit nicht nachgewiesen.",
+                "text": "Offen sind die Prüfungen in breiten und schmalen Ansichten, bei niedriger Fensterhöhe, vergrössertem Text und mehrzeiliger Aktionsbeschriftung. Zu prüfen ist auch die Rückkehr nach einer Namensänderung, durch die das Projekt nicht mehr zu den Treffern gehört. Die statischen Varianten und der beschriebene Ablauf legen die Gestaltung fest. Sie belegen weder die unabhängige Wiederverwendung noch die Bedienung mit Tastatur und Screenreader oder den tatsächlichen Fokus- und Scrollverlauf.",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1374,7 +1374,7 @@ export const release = {
             "children": [
               {
                 "mode": "normal",
-                "text": "Führende Entscheidungen und begrenzte Beispiele",
+                "text": "Grundlagen und Grenzen der verlinkten Beispiele",
                 "type": "text",
                 "style": "",
                 "detail": 0,
@@ -1403,7 +1403,7 @@ export const release = {
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Gestaltungs-Pilot · Objektmodell, visuelle Referenz, Zuständigkeit und Nachweisgrenze",
+                    "text": "Gestaltungs-Pilot · Projektangaben, visuelle Referenz, Zuständigkeiten und Umfang der Nachweise",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -1499,7 +1499,7 @@ export const release = {
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Rechnungsdetail RE-1048 · anderer Objektfall; begrenzter Beleg für Identität und q/status-Rücklink, keine fertige Projektvorlage",
+                    "text": "Rechnungsdetail RE-1048 · zeigt die eindeutige Zuordnung einer Rechnung und einen Rücklink mit q/status; keine fertige Projektvorlage",
                     "type": "text",
                     "style": "",
                     "detail": 0,
@@ -1531,7 +1531,7 @@ export const release = {
                 "children": [
                   {
                     "mode": "normal",
-                    "text": "Layoutdemo Detail · begrenzte Illustration von Haupt-/Zusatzregion; keine freigegebene Projektvorlage oder Sticky-Regel",
+                    "text": "Layoutdemo Detail · veranschaulicht Hauptinhalt und ergänzenden Bereich; keine freigegebene Projektvorlage und keine Vorgabe für haftende Bereiche",
                     "type": "text",
                     "style": "",
                     "detail": 0,

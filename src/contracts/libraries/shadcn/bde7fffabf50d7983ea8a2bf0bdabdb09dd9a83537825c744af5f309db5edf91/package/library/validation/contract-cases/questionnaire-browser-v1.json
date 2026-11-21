@@ -1,0 +1,647 @@
+{
+  "result": "PASS",
+  "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification.",
+  "cases": [
+    {
+      "component": "questionnaire",
+      "name": "real native form starts required plan with disabled Enterprise",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BODY",
+          "text": "Report preferencesControlled current questionIgnore current question requestPrevent choice changeQuestion 1 of 3Choose a planEnterprise is unavailable. Choose Plus or Pro.PlusAProBEnterpriseChoose a plan before continuing.Choose report signalsSelect any signals, or explicitly skip.ProgressARisksBSelect a signal or use Skip.Contact addressEnter an email address for the report.Enter a contact email before submitting.PreviousSkipNextSubmitReset answersplannoneSubmission remains local to this reference.\n"
+        },
+        "checks": [
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "required unanswered cannot advance and actual error is announced",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "error": "Choose a plan before continuing.",
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": "true",
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "native choice defaultPrevented vetoes source internal answer change",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "error": "Choose a plan before continuing.",
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": "true",
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "letter shortcut selects enabled real native choice without advancing",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "confirm advances to optional question and focuses fieldset",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "FIELDSET",
+          "text": "Choose report signalsSelect any signals, or explicitly skip.ProgressARisksBSelect a signal or use Skip."
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Choose report signals"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "signals",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "optional unanswered requires explicit answer or Skip",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "error": "Select a signal or use Skip.",
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": "true",
+            "title": "Choose report signals"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "signals",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "explicit optional Skip advances and omits its answer participation",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "FIELDSET",
+          "text": "Contact addressEnter an email address for the report.Enter a contact email before submitting."
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Contact address"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "contact",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "native email constraints block valid-submit callback",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Contact email",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Contact address"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "contact",
+          "Submitted answers": "none"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "valid source form submits actual FormData without skipped answers",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Contact email",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Contact address"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "contact",
+          "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "native reset restores initial question and default answers",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "FIELDSET",
+          "text": "Choose a planEnterprise is unavailable. Choose Plus or Pro.PlusAProBEnterpriseChoose a plan before continuing."
+        },
+        "checks": [
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "questionnaire",
+      "name": "ignored controlled item request does not secretly advance",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Next"
+        },
+        "checks": [
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "plan",
+            "value": "plus"
+          },
+          {
+            "checked": true,
+            "disabled": false,
+            "name": "plan",
+            "value": "pro"
+          },
+          {
+            "checked": false,
+            "disabled": true,
+            "name": "plan",
+            "value": "enterprise"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "progress"
+          },
+          {
+            "checked": false,
+            "disabled": false,
+            "name": "signals",
+            "value": "risks"
+          }
+        ],
+        "fieldset": [
+          {
+            "inert": false,
+            "invalid": null,
+            "title": "Choose a plan"
+          }
+        ],
+        "outputs": {
+          "Requested current question": "plan",
+          "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+        },
+        "rows": [],
+        "statusColumn": false,
+        "viewport": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "chart.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ChartContainer",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  config: ChartConfig\n  children: React.ComponentProps<\n    typeof RechartsPrimitive.ResponsiveContainer\n  >[\"children\"]\n  initialDimension?: {\n    width: number\n    height: number\n  }\n}"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source:41; defaults: {\"initialDimension\": \"INITIAL_DIMENSION\"}."
+            },
+            {
+              "kind": "field",
+              "name": "config",
+              "type": {
+                "text": "ChartConfig"
+              },
+              "description": "ChartConfig = Record<string, {label?:React.ReactNode;icon?:React.ComponentType} & ({color?:string;theme?:never}|{color?:never;theme:Record<\"light\"|\"dark\",string>})>. Config and data are intentionally separate."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "chart",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ChartTooltipContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof RechartsPrimitive.Tooltip> &\n  React.ComponentProps<\"div\"> & {\n    hideLabel?: boolean\n    hideIndicator?: boolean\n    indicator?: \"line\" | \"dot\" | \"dashed\"\n    nameKey?: string\n    labelKey?: string\n  } & Omit<\n    RechartsPrimitive.DefaultTooltipContentProps<\n      TooltipValueType,\n      TooltipNameType\n    >,\n    \"accessibilityLayer\"\n  >"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source:118; defaults: {\"indicator\": \"\\\"dot\\\"\", \"hideLabel\": \"false\", \"hideIndicator\": \"false\"}."
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ChartLegendContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  hideIcon?: boolean\n  nameKey?: string\n} & RechartsPrimitive.DefaultLegendContentProps"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source:271; defaults: {\"hideIcon\": \"false\", \"verticalAlign\": \"\\\"bottom\\\"\"}."
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ChartStyle",
+          "description": "Exact exported arrow component/alias from pinned chart.tsx; ChartTooltip and ChartLegend preserve Recharts3.8 public prop types.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "{ id: string; config: ChartConfig }"
+              }
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ChartTooltip",
+          "description": "Exact exported arrow component/alias from pinned chart.tsx; ChartTooltip and ChartLegend preserve Recharts3.8 public prop types.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof RechartsPrimitive.Tooltip>"
+              }
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ChartLegend",
+          "description": "Exact exported arrow component/alias from pinned chart.tsx; ChartTooltip and ChartLegend preserve Recharts3.8 public prop types.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof RechartsPrimitive.Legend>"
+              }
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "chartReferenceComposition",
+          "description": "Explicit reference-only composition/data shape, not an upstream shadcn export. Original example may carry additional fill colors; dataKey maps these actual category/series properties.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "readonly { month: string; desktop: number }[]"
+              },
+              "description": "Compose Recharts plots with scoped series configuration, tooltip and legend content; the wrapper does not itself choose a chart type. Unit: Visitors (count)"
+            }
+          ],
+          "cssParts": []
+        }
+      ]
+    }
+  ]
+}

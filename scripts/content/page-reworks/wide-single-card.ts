@@ -10,7 +10,7 @@ const text = (key: string, title: string, paragraphs: string[], link?: [string, 
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T08:39:34.023Z',
+  expectedUpdatedAt: '2026-11-20T14:04:01.528Z',
   summary: 'Eine Card füllt den Inhaltscontainer; Text und Felder behalten ihre passende Breite.',
   content: [
     text('example', 'Eine Fläche, unterschiedliche Inhaltsbreiten', [

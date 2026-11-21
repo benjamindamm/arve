@@ -1,0 +1,26 @@
+{
+  "result": "UPSTREAM_DEFECT_OBSERVED",
+  "source": "sources/shadcn/apps/v4/registry/bases/base/ui/calendar.tsx.source",
+  "sourceLines": [
+    215,
+    243
+  ],
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "installedPrimitive": "react-day-picker9.14.0",
+  "observations": [
+    {
+      "gesture": "Focus November12; ArrowRight",
+      "internalFocusedDay": 14,
+      "actualActiveDay": 12,
+      "selectedDay": 12
+    },
+    {
+      "gesture": "Then ArrowDown",
+      "internalFocusedDay": 21,
+      "actualActiveDay": 12,
+      "selectedDay": 12
+    }
+  ],
+  "cause": "CalendarDayButton creates ref and effect but no ref={ref} is attached to actual Button. Primitive DayButton does attach its ref.",
+  "referenceRepair": "Supported Calendar components.DayButton override delegates to exported CalendarDayButton and explicitly forwards attached focus ref; original frozen source untouched. Positive real keyboard checks required before completion."
+}

@@ -17,7 +17,7 @@ function firstLink(block?: Block): string | undefined {
 function Preview({ kind }: { kind: string }) {
   return <div className={`fo-preview fo-preview-${kind}`} aria-hidden="true">
     {kind === 'colors' && <><span>Aa</span><span>Aa</span><span>Aa</span></>}
-    {kind === 'typography' && <div><b>Eine klare Aufgabe</b><span>Erklärung im Lesetext</span><small>Hilfe bei der Angabe</small></div>}
+    {kind === 'typography' && <div><b>Eine klare Aufgabe</b><span>Erklärung im Lesetext</span><small>Hilfe zum Feld</small></div>}
     {kind === 'spacing' && <><div><b>Name</b><i/><small>So erscheint dein Name.</small></div><div><b>E-Mail</b><i/><small>Für unsere Antwort.</small></div></>}
     {kind === 'shape' && <><span/><span/><span/></>}
     {kind === 'icons' && <><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><span>Suchen</span></>}
@@ -38,8 +38,8 @@ export function FoundationsOverview({ content }: { content: Page['content'] }) {
     <div className="fo-grid">{cards.map(({ block, href }) => <Link key={block.kind} href={href} className="fo-card">
       <Preview kind={block.kind}/><div className="fo-card-copy"><h2>{block.title}<span aria-hidden="true">→</span></h2><p>{block.explanation}</p></div>
     </Link>)}</div>
-    <p className="fo-caption">Schematische Vorschauen · Beispiele und vorhandene Werte auf den Themenseiten.</p>
-    <details className="fo-study"><summary>Zusammenspiel ansehen: eine Oberfläche lesen</summary><Content blocks={rest.filter(block => block.blockType === 'study')}/></details>
+    <p className="fo-caption">Die Vorschauen sind schematisch. Beispiele und vorhandene Werte findest du auf den Themenseiten.</p>
+    <details className="fo-study"><summary>Beispiel: Informationen ordnen und die nächste Aktion hervorheben</summary><Content blocks={rest.filter(block => block.blockType === 'study')}/></details>
     <details className="fo-sources"><summary>Quelle und Geltungsbereich</summary><Content blocks={rest.filter(block => block.blockType !== 'study')}/></details>
   </div>
 }

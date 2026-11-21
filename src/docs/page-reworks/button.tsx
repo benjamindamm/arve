@@ -1,5 +1,5 @@
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { ComponentDemo } from '../demo'
 import { ComponentStudy } from '../component-studies'
 import { blockAnchor, blockTitle } from '../content-outline'

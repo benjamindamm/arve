@@ -1,4 +1,6 @@
 'use client'
+import { SiteAnchor } from './site-anchor'
+
 
 import { useState } from 'react'
 import type { getComponentPage } from './component-pages'
@@ -71,7 +73,7 @@ export function McpDemo({ system, component }: { system: string; component: stri
               </li>)}</ul> : 'Keine Implementierung veröffentlicht.'}</dd></div>
           </dl>
           {behavior && <details><summary>SCXML aus der MCP-Antwort lesen</summary><pre className="contract-code"><code>{behavior.content}</code></pre></details>}
-          <a href={result.path}>Komponentenseite öffnen ↗</a>
+          <SiteAnchor href={result.path}>Komponentenseite öffnen ↗</SiteAnchor>
         </>}
       </div>
     </section>

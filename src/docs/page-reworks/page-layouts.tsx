@@ -1,5 +1,7 @@
+import { SiteAnchor } from '../site-anchor'
+import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './page-layouts.css'
 
@@ -16,6 +18,7 @@ export default function PageLayouts({ content }: { content: Page['content'] }) {
   const region = (name: string, collapsible = false) => {
     const b = get(name)
     if (!b) return null
+    if (["questions"].includes(name)) return <LayoutRuleBlock block={b} />
     return collapsible ? <details id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section id={blockAnchor(b)}><RichText data={b.body}/></section>
   }
@@ -35,7 +38,7 @@ export default function PageLayouts({ content }: { content: Page['content'] }) {
           </div>
           <p className="plo-choice">{v[1]}</p>
           <p className="plo-rule">{v[2]}</p>
-          {link?.fields?.url && <a href={link.fields.url}>{flatten(link)} <span aria-hidden="true">→</span></a>}
+          {link?.fields?.url && <SiteAnchor href={link.fields.url}>{flatten(link)} <span aria-hidden="true">→</span></SiteAnchor>}
         </article>
       })}</div>
       {intro && <p className="plo-caption">{lines(intro)[1]}</p>}

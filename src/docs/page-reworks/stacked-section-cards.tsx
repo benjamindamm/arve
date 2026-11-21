@@ -1,7 +1,11 @@
+import { LayoutRuleBlock } from './layout-rule-block'
+import { HandbookPreview } from '../handbook-preview'
 import type { Page } from '../../payload-types'
-import { RichText } from '@payloadcms/richtext-lexical/react'
+import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
 import './stacked-section-cards.css'
+
+const ruleLabels: Record<string, string[]> = {"rules": ["Zusammengehörige Themen", "Reihenfolge und Breite", "Wachsende Inhalte"]}
 
 type Block = NonNullable<Page['content']>[number]
 function strings(block?: Block) {
@@ -36,10 +40,11 @@ export default function StackedSectionCards({ content }: { content: Page['conten
   function section(key: string, disclosure = false) {
     const b = find(key)
     if (b?.blockType !== 'text') return null
+    if (["rules"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return disclosure ? <details id={blockAnchor(b)} className="ssc-sources"><summary>{strings(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }} /></details> : <section id={blockAnchor(b)}><RichText data={b.body} /></section>
   }
   return <div className="stacked-section-cards-rework">
-    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2>{demo(false)}{demo(true)}<p className="ssc-note">{e[6]}</p></section>}
+    {example && <section id={blockAnchor(example)}><h2>{e[0]}</h2><HandbookPreview wide={demo(false)} narrow={demo(true)} /><p className="ssc-note">{e[6]}</p></section>}
     {section('rules')}{section('sources', true)}
   </div>
 }

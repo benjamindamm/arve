@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "input-group.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InputGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:11; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-group",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputGroupAddon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & VariantProps<typeof inputGroupAddonVariants>"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:44; defaults {\"align\": \"\\\"inline-start\\\"\"}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-group-addon",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputGroupButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "Omit<React.ComponentProps<typeof Button>, \"size\" | \"type\"> &\n  VariantProps<typeof inputGroupButtonVariants> & {\n    type?: \"button\" | \"submit\" | \"reset\"\n  }"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:83; defaults {\"type\": \"\\\"button\\\"\", \"variant\": \"\\\"ghost\\\"\", \"size\": \"\\\"xs\\\"\"}."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "InputGroupText",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:104; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "InputGroupInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"input\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:116; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-group-control",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputGroupTextarea",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"textarea\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source:129; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-group-control",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

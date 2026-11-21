@@ -1,0 +1,13 @@
+# Redaktion: 3-column Card Grid
+
+Vollständig gelesen: Zusammenfassung und alle neun Blöcke der eigenen Release, einschliesslich fünf Themen-Cards, Einsatz- und Anordnungsregeln, Alternativen sowie der aufklappbaren Quellen und Prüfgrenzen. Der eigene Renderer enthält keine zusätzlichen redaktionellen Texte. Grundlage waren PAGE-BRIEF.md, report.md und Abschnitt 24 in pages.md.
+
+Die bestehende Sprache ist konkret und verständlich; der Auditbefund «keine · 0 Befunde» hat sich bestätigt. Deshalb keine künstlichen Vorher/Nachher-Änderungen: «Die letzte Reihe bleibt linksbündig und erhält keine gestreckten Cards» und «Nur der Link ist interaktiv; die übrige Card hat keinen eigenen Klickbereich» bleiben beispielsweise erhalten. Die technische Vertiefung erklärt Herkunft, lokale Entscheidungen und Grenzen ausreichend genau.
+
+Titel, Summary, sämtliche Texte, Beispiele, Linkziele, Quellen, Blockstruktur und Renderer bleiben unverändert. Damit bleiben auch drei gleich breite Spalten, variable Reihen, 30/48-rem-Grenzen, 1-rem-Abstände, Umbruch, Lese- und Fokusreihenfolge sowie die Beschränkung auf Linkinteraktion erhalten. Tatsächlich vorhanden sind fünf Themen-Cards; keine zusätzliche Card wurde erfunden.
+
+Read-only-Abgleich über MCP am 20.11.2026: get_documentation_page(system: shadcn, section: card-grid-3-columns) liefert updatedAt 2026-11-20T14:07:52.070Z. Summary und alle Inhalte stimmen nach Ausklammern vergebener Daten-IDs und leerer optionaler Felder mit der bisherigen Release überein. Nur expectedUpdatedAt wurde auf diesen frischen Stand gesetzt. Suche nach eingehenden Fragmentlinks auf card-grid-3-columns in scripts, src und docs (ohne den veränderlichen Snapshot): keine Treffer. Keine Überschrift und kein Anker geändert.
+
+Prüfungen: npm run typecheck erfolgreich; git diff --check für die eigenen Dateien erfolgreich; node scripts/check-page-rework.ts card-grid-3-columns bestätigt identische Release-/MCP-Inhalte, HTTP 200 und neutrale Quellenbezeichnung.
+
+Browser-QA am 20.11.2026 nach Root-Bestätigung, dass bei unverändertem Inhalt der Abgleich genügt: veröffentlichte ganze Seite mit BrowserOS neo gelesen, einschliesslich tatsächlicher fünf Themen-Cards und geöffneter «Quellen und Prüfgrenzen». Vollseitige Screenshots bei echten 1440×1000 und 390×844 CSS-Pixeln visuell gelesen. Titel, Card-Texte und Links, Bildunterschrift, Regeln, Alternativen und Quellen bleiben lesbar; insbesondere der lange Barrierefreiheitstitel bricht ohne Abschneiden um. Keine sprachlichen Restbefunde. Keine erneuten Geometrie-, Funktions- oder Quellenprüfungen. Viewport-Override zurückgesetzt und eigenen Prüftab geschlossen.

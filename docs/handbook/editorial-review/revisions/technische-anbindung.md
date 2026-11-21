@@ -1,0 +1,11 @@
+# Technische Anbindung und MCP
+
+Vollständig gelesen: eigene Release und Renderer, einschliesslich Agentenfrage, drei Lesezugriffen, Entscheidungsregeln, Patternsuche mit Tags, Originaldateien, SDK-Beispiel sowie Quellen und erhaltenem Ausgangstext. Grundlage waren der Redaktionsauftrag, der Gesamtbericht und der eigene Auditabschnitt 49 (keine konkreten Befunde).
+
+Die Formulierungen bleiben erhalten. Die Seite erklärt ihre technische Aufgabe bereits klar; Werkzeugnamen und Revisionsvergleiche sind hier nötig. Es gibt daher keine künstlichen Vorher/Nachher-Ersetzungen. Insbesondere bleiben die drei Lesezugriffe, die getrennten Seiten- und Implementierungsrevisionen, der Previewstand und die offenen Prüfungen, das Filtern von Tags im Client sowie die Grenzen lesender MCP-Werkzeuge und gebündelter Skills unverändert. SDK-Code, Hashes, Dateipfade, URLs, Tagkeys, die Zahl von 21 Buttondateien und der wörtlich erhaltene Ausgangsblock wurden nicht bearbeitet.
+
+Frischer lesender MCP-Abruf am 20. November 2026: `updatedAt` ist `2026-11-20T15:22:23.849Z`. Vor der Redaktion bestätigte `node scripts/check-page-rework.ts technische-anbindung` die Übereinstimmung von Inhalt, Zusammenfassung und Titel zwischen Release und veröffentlichtem MCP-Stand; öffentliche Seite HTTP 200. Nur `expectedUpdatedAt` wurde an diesen Stand angepasst. Keine Überschrift wurde geändert. Die Suche nach eingehenden `technische-anbindung#`-Verweisen in `src`, `scripts/content` und `docs/handbook` ergab keine Treffer.
+
+Prüfungen: `npm run typecheck`, `git diff --check` und abschliessender Abgleich mit `node scripts/check-page-rework.ts technische-anbindung` bestanden.
+
+Nach Root-Abgleich abschliessend in BrowserOS neo gelesen: gesamte veröffentlichte Seite einschliesslich aller drei geöffneten Vertiefungen, SDK-Code, Quellen und Ausgangsblock. Tatsächliche vollständige Screenshots mit CDP-Gerätemassen 1440 × 1000 und 390 × 844 aufgenommen und visuell angesehen. Überschriften, Anleitung und Prosa umbrechen in beiden Breiten lesbar; die drei Schritte stehen mobil untereinander. Lange Hashes umbrechen, das SDK-Beispiel bleibt als Codebereich begrenzt. Kein sprachlicher Restbefund und kein neuer Umbruchfehler festgestellt. Die bestehende Prosa bleibt unverändert. Anschliessend Geräteemulation zurückgesetzt und eigenen Prüftab geschlossen.
