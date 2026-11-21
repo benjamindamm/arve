@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - name: Check progressive MCP reads and search
         run: npm run check:mcp:unit
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6.0.0
         id: pages
       - name: Check component documentation reference
         run: npm run check:component-template
@@ -39,9 +39,10 @@ jobs:
       - run: npm run check:static
         env:
           ARVE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: .runtime/static-site/out
+          include-hidden-files: true
   deploy:
     needs: build
     runs-on: ubuntu-latest
