@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "select.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Select",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "SelectPrimitive.Root.Props<Value, Multiple>[\"value\"]"
+              },
+              "description": "Select is a direct alias of SelectPrimitive.Root, not a native select wrapper. Generic value/defaultValue and onValueChange distinguish single Value|null from multiple arrays. open/defaultOpen/onOpenChange/onOpenChangeComplete are independent of selected value; default modal=true. Root name/form/required/autoComplete use its hidden form control; object labels/form values use itemToStringLabel/itemToStringValue and comparison uses isItemEqualToValue. SelectValue resolves labels from Root items or registered ItemText; it is not a label for the field. Trigger defaults native button role=combobox with size sm|default. Content defaults bottom/center, offsets4/0 and alignItemWithTrigger=true; it inserts scroll arrows and List automatically. Items are role=option; disabled entries can be focused but cannot commit, while closed typeahead skips disabled choices. Single commit requests closing separately, even if the value callback is canceled; multiple toggles array values and normally stays open. readOnly locks changes but deliberately allows opening/browsing. GroupLabel/Separator are actual primitive parts; no text-query input, filter, server fetch or custom command event is invented."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Root.Props<Value, Multiple>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:9."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "NonNullable<SelectPrimitive.Root.Props<Value, Multiple>[\"onValueChange\"]>"
+              },
+              "description": "Actual source selected-value callback; canceled candidate and controlled props preserve selected authority, independent of closing/query transactions."
+            },
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: SelectPrimitive.Root.OpenChangeEventDetails) => void"
+              },
+              "description": "Actual independently cancellable popup request."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual source transition lifecycle completion."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Direct primitive Root alias owns selected/open and form control; no wrapper DOM. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "field",
+              "description": "Chosen wrapper for native label/help and actual hidden source form input. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "form-input",
+              "description": "Actual Root validation/form input; visually hidden, tabindex=-1, value follows selected serialization. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "form-values",
+              "description": "Actual multiple-mode repeated hidden values, distinct from unnamed validation proxy. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Group.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:11."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Source Group/GroupLabel relationship. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectValue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Value.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:21."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "value",
+              "description": "Actual value label output, separate from the field label. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Trigger.Props & {\n  size?: \"sm\" | \"default\"\n}"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"size\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:31."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Real native Button role combobox; public data-size sm/default. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "trigger-icon",
+              "description": "Actual private indicator render SVG itself, not a fabricated extra span wrapper. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Popup.Props &\n  Pick<\n    SelectPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\" | \"alignItemWithTrigger\"\n  >"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"4\", \"align\": \"\\\"center\\\"\", \"alignOffset\": \"0\", \"alignItemWithTrigger\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:66."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popup",
+              "description": "Actual Popup is presentation because this wrapper inserts List. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "list",
+              "description": "Actual private List owns listbox semantics and trigger aria-controls target. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.GroupLabel.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:108."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "label",
+              "description": "Actual GroupLabel, not a field label. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Item.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:121."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Actual option; disabled remains focusable but cannot commit. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "item-text",
+              "description": "Actual private ItemText label. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "indicator",
+              "description": "Actual private selected ItemIndicator. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SelectPrimitive.Separator.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:154."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Actual separator inside source List. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectScrollUpButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof SelectPrimitive.ScrollUpArrow>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:167."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "scroll-up",
+              "description": "Actual decorative pointer-scroll arrow; name does not promise native Button role. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SelectScrollDownButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof SelectPrimitive.ScrollDownArrow>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source:188."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "scroll-down",
+              "description": "Actual decorative pointer-scroll arrow; rendered/placed by primitive overflow. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

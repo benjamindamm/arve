@@ -1,0 +1,110 @@
+@import "../../../libraries/shadcn/components/tabs/layout.css";
+@import "../../../libraries/shadcn/components/toggle-group/layout.css";
+@import "../../../libraries/shadcn/components/radio-group/layout.css";
+@import "../../../libraries/shadcn/components/slider/layout.css";
+@import "../../../libraries/shadcn/components/attachment/layout.css";
+@import "../../../libraries/shadcn/components/trace/layout.css";
+@import "../../../libraries/shadcn/components/code-block/layout.css";
+@import "../../../libraries/shadcn/components/avatar/layout.css";
+@import "../../../libraries/shadcn/components/progress/layout.css";
+@import '../../../libraries/shadcn/components/button/layout.css';
+@import '../../../libraries/shadcn/components/checkbox/layout.css';
+@import '../../../libraries/shadcn/components/switch/layout.css';
+@import '../../../libraries/shadcn/components/input/layout.css';
+@import '../../../libraries/shadcn/components/accordion/layout.css';
+@import '../../../libraries/shadcn/components/card/layout.css';
+@import '../../../libraries/shadcn/components/badge/layout.css';
+@import '../../../libraries/shadcn/components/separator/layout.css';
+@import '../../../libraries/shadcn/components/kbd/layout.css';
+@import '../../../libraries/shadcn/components/skeleton/layout.css';
+@import '../../../libraries/shadcn/components/spinner/layout.css';
+@import '../../../libraries/shadcn/components/label/layout.css';
+@import '../../../libraries/shadcn/components/aspect-ratio/layout.css';
+@import '../../../libraries/shadcn/components/empty/layout.css';
+@import '../../../libraries/shadcn/components/alert/layout.css';
+@import '../../../libraries/shadcn/components/table/layout.css';
+@import '../../../libraries/shadcn/components/field/layout.css';
+@import '../../../libraries/shadcn/components/item/layout.css';
+@import '../../../libraries/shadcn/components/bubble/layout.css';
+@import '../../../libraries/shadcn/components/marker/layout.css';
+@import '../../../libraries/shadcn/components/message/layout.css';
+@import '../../../libraries/shadcn/components/textarea/layout.css';
+@import '../../../libraries/shadcn/components/native-select/layout.css';
+@import '../../../libraries/shadcn/components/breadcrumb/layout.css';
+@import '../../../libraries/shadcn/components/pagination/layout.css';
+@import '../../../libraries/shadcn/components/button-group/layout.css';
+@import '../../../libraries/shadcn/components/input-group/layout.css';
+@import "../../../libraries/shadcn/components/collapsible/layout.css";
+@import "../../../libraries/shadcn/components/dialog/layout.css";
+@import "../../../libraries/shadcn/components/alert-dialog/layout.css";
+@import "../../../libraries/shadcn/components/sheet/layout.css";
+@import "../../../libraries/shadcn/components/drawer/layout.css";
+@import "../../../libraries/shadcn/components/popover/layout.css";
+@import "../../../libraries/shadcn/components/tooltip/layout.css";
+@import "../../../libraries/shadcn/components/hover-card/layout.css";
+@import url("../../../libraries/shadcn/components/chart/layout.css");
+@import url("../../../libraries/shadcn/components/chart-area/layout.css");
+@import url("../../../libraries/shadcn/components/chart-bar/layout.css");
+@import url("../../../libraries/shadcn/components/chart-line/layout.css");
+@import url("../../../libraries/shadcn/components/chart-pie/layout.css");
+@import url("../../../libraries/shadcn/components/chart-radar/layout.css");
+@import url("../../../libraries/shadcn/components/chart-radial/layout.css");
+@import url("../../../libraries/shadcn/components/chart-tooltip/layout.css");
+
+/* Actual source wrappers consume the leading component CSS without node IDs. */
+
+
+
+
+
+
+html[data-semantic-lab] body { margin:0; }
+[data-semantic-family] { box-sizing:border-box; max-inline-size:60rem; margin:2.5rem auto; padding:1.5rem; font-family:var(--ui-font-family),var(--ui-font-fallback),sans-serif; font-size:var(--ui-font-size-body); line-height:var(--ui-line-height-body); color:var(--ui-color-foreground); background:var(--ui-color-background); }
+[data-semantic-family] section { margin-block:1rem; }
+[data-semantic-family] [data-part="input-field"] { max-inline-size:25rem; }
+/* Gallery spacing belongs to the host, not to reusable control geometry. */
+[data-semantic-family] > [data-part="checkbox-field"],
+[data-semantic-family] > [data-part="switch-field"] { display:flex; margin-block:.75rem; }
+[data-semantic-family] > [data-slot="switch"] { margin-inline-end:.75rem; }
+[data-semantic-family] section > .cn-button { margin-inline-end:.5rem; margin-block-end:.5rem; }
+
+[data-semantic-family="card"] > section { max-inline-size:30rem; }
+[data-semantic-family="badge"] [data-slot="badge"] { margin-inline-end:.5rem; margin-block-end:.5rem; }
+[data-lab-vertical-separator] { display:flex; gap:1rem; block-size:6rem; align-items:center; }
+[data-lab-skeletons] { display:grid; gap:1rem; max-inline-size:25rem; }
+[data-semantic-family="spinner"] [data-slot="spinner"] { margin-inline-end:1rem; }
+
+[data-semantic-family="label"] [data-part="label-field"] { max-inline-size:25rem; margin-block:1rem; }
+[data-lab-media-fixture] { max-inline-size:24rem; }
+[data-semantic-family="empty"] [data-slot="empty"] { max-inline-size:40rem; margin-block:1rem; }
+
+[data-semantic-family="field"] [data-slot="field-set"] { max-inline-size:40rem; margin-block:1rem; }
+[data-lab-orientation-controls] { display:flex; flex-wrap:wrap; gap:.5rem; margin-block:1rem; }
+[data-semantic-family="item"] [data-slot="item-group"] { max-inline-size:40rem; margin-block:1rem; }
+
+[data-semantic-family="bubble"] > [data-slot="bubble-group"],
+[data-semantic-family="message"] > [data-slot="message-group"],
+[data-lab-markers] { max-inline-size:40rem; margin-block:1.5rem; }
+[data-semantic-family="bubble"] > [data-slot="bubble"] { margin-block:2rem; }
+[data-lab-markers] { display:grid; gap:1rem; }
+
+[data-semantic-family="textarea"] [data-part="textarea-field"] { max-inline-size:30rem; margin-block:1rem; }
+[data-semantic-family="native-select"] section > label { display:block; }
+[data-semantic-family="button-group"] > [data-slot="button-group"] { margin-block:1rem; }
+[data-semantic-family="input-group"] > [data-slot="input-group"] { max-inline-size:40rem; margin-block:.5rem; }
+[data-semantic-family="input-group"] > [data-part="input-group-label"] { margin-block-start:1rem; }
+
+
+[data-lab-avatar-sizes] { display:flex;flex-wrap:wrap;gap:1rem; }
+[data-lab-avatar-sizes] > div { display:flex;align-items:center;gap:.5rem; }
+[data-semantic-family="progress"] > [data-slot="progress"] { margin-block:1rem;max-inline-size:35rem; }
+
+[data-semantic-family="attachment"] > [data-slot="attachment"] { max-inline-size:32rem;margin-block:1rem; }
+[data-semantic-family="attachment"] > [data-slot="attachment-group"] { max-inline-size:25rem;margin-block:1rem; }
+[data-semantic-family="trace"] > [data-slot="trace"] { max-inline-size:32rem;margin-block:1rem; }
+[data-semantic-family="code-block"] > [data-slot="code-block"] { max-inline-size:40rem;margin-block:1rem; }
+
+[data-semantic-family="tabs"] > [data-slot="tabs"] { max-inline-size:40rem;margin-block:1rem; }
+[data-semantic-family="toggle-group"] > [data-slot="toggle-group"], [data-semantic-family="toggle-group"] > [data-slot="toggle"] { margin-block:1rem; }
+[data-semantic-family="radio-group"] form { max-inline-size:32rem;margin-block:1rem; }
+[data-semantic-family="slider"] > [data-part="slider-field"] { max-inline-size:35rem;margin-block:1.5rem; }

@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Field",
+  "referenceComposition": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\">Contact details</legend><div role=\"group\" data-slot=\"field\"><label data-slot=\"field-label\" for=\"field-email\">Email</label><input id=\"field-email\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></fieldset>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Legend, native label, description and error are text with explicit IDs. Orientation and error styling supplement these relations.",
+  "updatesAndDescendants": "Field is role=group; FieldSet/Legend are native fieldset/legend. FieldError renders nothing without content, gives explicit children precedence over errors, deduplicates errors by message, and otherwise renders one message or a list with role=alert. It does not validate inputs or associate error IDs automatically.",
+  "referenceDecision": "This reference supplies label-for and describedby IDs and requires readable error messages. Validation remains caller-owned. Group keyboard behavior comes from the child Input rather than a fabricated Field state machine.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

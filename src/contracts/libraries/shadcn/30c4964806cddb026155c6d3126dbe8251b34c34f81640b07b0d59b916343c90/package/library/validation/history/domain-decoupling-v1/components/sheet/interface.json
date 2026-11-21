@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "sheet.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Sheet",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Sheet is a Dialog composition. Content side defaults right and accepts top/right/bottom/left; showCloseButton defaults true. A task commits only through its actual child action; simply closing, Escape or outside press does not invent an application result."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:10."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: SheetPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "sheet",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:14."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetClose",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Close.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:18."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-close",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Popup.Props & {\n  side?: \"top\" | \"right\" | \"bottom\" | \"left\"\n  showCloseButton?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"side\": \"\\\"right\\\"\", \"showCloseButton\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:39."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-content",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "sheet-close",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:88."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-header",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:98."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-footer",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:108."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-title",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "SheetDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SheetPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source:118."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "sheet-description",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

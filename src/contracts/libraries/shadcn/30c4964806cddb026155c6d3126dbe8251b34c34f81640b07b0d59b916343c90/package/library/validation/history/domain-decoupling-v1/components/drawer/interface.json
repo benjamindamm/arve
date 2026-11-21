@@ -1,0 +1,295 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "drawer.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Drawer",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Root.Props & {\n  showSwipeHandle?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"modal\": \"true\", \"showSwipeHandle\": \"false\", \"swipeDirection\": \"\\\"down\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:26."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: DrawerPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            },
+            {
+              "name": "onSnapPointChange",
+              "type": {
+                "text": "(snapPoint: DrawerPrimitive.Root.SnapPoint | null, eventDetails: DrawerPrimitive.Root.SnapPointChangeEventDetails) => void"
+              },
+              "description": "Source snap update distinct from open/dismissal."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "drawer",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:54."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerPortal",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Portal.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:58."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-portal",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerClose",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Close.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:62."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-close",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerOverlay",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Backdrop.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:66."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-overlay",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerSwipeHandle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:82."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-swipe-handle",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Popup.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:99."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-portal",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "drawer-viewport",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "drawer-popup",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "drawer-content",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:166."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-header",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:179."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-footer",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:192."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-title",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:202."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "drawer-description",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

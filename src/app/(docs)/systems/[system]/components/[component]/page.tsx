@@ -13,6 +13,7 @@ import { readSystem } from '../../../../../../docs/systems'
 import { getComponentPage } from '../../../../../../docs/component-pages'
 import { Content } from '../../../../../../docs/content'
 import { ComponentDemo } from '../../../../../../docs/demo'
+import { componentTemplateCoverage } from '../../../../../../docs/component-standard'
 
 
 const domains = [
@@ -36,6 +37,7 @@ export default async function ComponentPage({ params }: {
   const contract = page.contract
   const scopeNote = page.content.find(block => block.blockName === 'complete-reference-scope')
   const editorialContent = page.content.filter(block => block !== scopeNote)
+  const usesComponentStandard = componentTemplateCoverage(editorialContent as unknown as Page['content']).every(section=>section.blocks.length===1)
   const platformLabels = { web: 'Web', ios: 'iOS', android: 'Android' } as const
   const ReworkedPage = system === 'shadcn' ? await loadPageRework(component) : undefined
 
@@ -57,12 +59,12 @@ export default async function ComponentPage({ params }: {
           <SiteAnchor href="#plattformstand">Plattformstand</SiteAnchor>
           <SiteAnchor href="#contract">Contract</SiteAnchor>
         </nav>
-        {page.demo && <p className="component-demo-note">{page.implementations.length ? (page.implementations.every(entry => entry.releaseStatus === 'preview') ? 'Der veröffentlichte Stand ist eine Preview. Prüfumfang und Contractbezug stehen im Plattformstand.' : 'Das lokale Beispiel ist bedienbar. Veröffentlichte Implementierungen und ihre Prüfgrenzen stehen im Plattformstand.') : 'Das Live-Beispiel dient dem Ausprobieren; es ist kein veröffentlichter Implementierungsnachweis.'}</p>}
+        {page.demo && !usesComponentStandard && <p className="component-demo-note">{page.implementations.length ? (page.implementations.every(entry => entry.releaseStatus === 'preview') ? 'Der veröffentlichte Stand ist eine Preview. Prüfumfang und Contractbezug stehen im Plattformstand.' : 'Das lokale Beispiel ist bedienbar. Veröffentlichte Implementierungen und ihre Prüfgrenzen stehen im Plattformstand.') : 'Das Live-Beispiel dient dem Ausprobieren; es ist kein veröffentlichter Implementierungsnachweis.'}</p>}
         {scopeNote && <details className="component-reference-scope"><summary>Referenz und Prüfstand einordnen</summary><Content blocks={[scopeNote]} /></details>}
         {page.designPreview && <details className="component-design-preview" open={!page.demo}>
           <summary>Designvorschau der Quellenreferenz</summary><figure id="design-vorschau"><div className="component-preview-image" tabIndex={0} role="region" aria-label="Quellenvorschau, bei Bedarf scrollbar"><img src={page.designPreview.url} alt={`Statische Designvorschau: ${page.title}`}/></div><figcaption>Statische Vorschau aus dem gewählten Export. <SiteAnchor href={page.designPreview.url} target="_blank" rel="noreferrer">In Originalgrösse öffnen ↗</SiteAnchor></figcaption></figure>
         </details>}
-        {ReworkedPage ? <><p className="component-study-scope">Spartan · Angular-Referenz und vorhandene Gestaltungsstudie</p><ReworkedPage content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} /></> : <>
+        {ReworkedPage ? <>{!usesComponentStandard && <p className="component-study-scope">Spartan · Angular-Referenz und vorhandene Gestaltungsstudie</p>}<ReworkedPage content={editorialContent as unknown as Page['content']} demo={page.demo ?? undefined} contract={contract ?? undefined} /></> : <>
         <TemplateContent sections={page.templateSections} />
         <Content blocks={editorialContent} />
         </>}
@@ -126,6 +128,11 @@ export default async function ComponentPage({ params }: {
                 </details>
               )}
               </details>
+              {!!page.styleAssets.length && <details className="component-export-details">
+                <summary>CSS und Schriftdateien</summary>
+                <p>Die CSS-Importkette und ihre lokalen Dateien gehören zu dieser Revision. Die Ordnerstruktur bleibt erhalten, damit relative Verweise aufgelöst werden können.</p>
+                <ul>{page.styleAssets.map(file=><li key={file.path}><SiteAnchor href={file.url} download><code>{file.path}</code></SiteAnchor>{file.kind==='font'?' · Schriftdatei':''}</li>)}</ul>
+              </details>}
               {domains.map(([domain, title, language]) => {
                 const source = contract.files[contract.sources[domain]]
                 if (!source && (domain === 'ux' || domain === 'stories')) return null

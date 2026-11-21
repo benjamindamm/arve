@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "native-select.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "NativeSelect",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string | number | readonly string[]"
+              },
+              "description": "NativeSelectProps omits the native numeric size prop and replaces it with sm|default (default). Other native select props, including multiple, value/defaultValue, disabled, name and onChange are passed through. NativeSelectOption/OptGroup are option/optgroup. The extra ChevronDown is aria-hidden. className styles the surrounding wrapper, not the select."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "NativeSelectProps"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source:10; defaults {\"size\": \"\\\"default\\\"\"}."
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "React.ChangeEventHandler<HTMLSelectElement>"
+              },
+              "description": "Actual React native change handler, with currentTarget.value/selectedOptions. Not a CustomEvent or cancellable BaseUI value transaction."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "wrapper",
+              "description": "Actual div owns className and visual size. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "control",
+              "description": "Actual native select; platform owns popup/multiple selection. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "icon",
+              "description": "Actual aria-hidden chevron SVG. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NativeSelectOption",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"option\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source:44; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "option",
+              "description": "Actual native option; disabled options remain native. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "NativeSelectOptGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"optgroup\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source:57; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "option-group",
+              "description": "Actual labelled native optgroup. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

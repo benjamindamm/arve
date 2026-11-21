@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "bubble.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Bubble",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof bubbleVariants> & {\n    align?: \"start\" | \"end\"\n  }"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source:37; defaults: {\"variant\": \"\\\"default\\\"\", \"align\": \"\\\"start\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"secondary\" | \"muted\" | \"tinted\" | \"outline\" | \"ghost\" | \"destructive\""
+              },
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "align",
+              "type": {
+                "text": "\"start\" | \"end\""
+              },
+              "default": "\"start\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "bubble",
+              "description": "Actual variant/alignment-controlled message bubble. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BubbleGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source:7; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Vertical group; spacing preserves room for reaction overhang. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BubbleContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source:57; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual content wrapper or explicit native render override. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BubbleReactions",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  align?: \"start\" | \"end\"\n  side?: \"top\" | \"bottom\"\n}"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source:100; defaults: {\"side\": \"\\\"bottom\\\"\", \"align\": \"\\\"end\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "reactions",
+              "description": "Actual positioned caller reaction controls/content; no built-in reaction state. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

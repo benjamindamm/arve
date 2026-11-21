@@ -1,0 +1,140 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "frame": {
+      "declaration": "AspectRatio",
+      "selector": "[data-slot=\"aspect-ratio\"]",
+      "ownership": "actual wrapper"
+    },
+    "media": {
+      "declaration": "AspectRatio",
+      "selector": "[data-slot=\"aspect-ratio\"] > img",
+      "ownership": "caller children"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1862:994",
+      "observationPath": "width,height,cornerRadius,fills",
+      "observed": {
+        "width": 384,
+        "height": 216,
+        "radius": 10,
+        "surface": "#D9D9D9"
+      },
+      "semanticTokens": [
+        "components.aspect-ratio.radius",
+        "components.aspect-ratio.surface"
+      ],
+      "decision": "Keep width fluid, ratio caller-controlled, native clipping/radius/surface semantic."
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1862:849",
+      "sourcePartId": "1862:812",
+      "sourceName": "Frame 2",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2459:8074",
+      "sourcePartId": "1862:812",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1862:856",
+      "sourcePartId": "1862:812",
+      "sourceName": "Frame 3",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2459:8073",
+      "sourcePartId": "1862:812",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1862:861",
+      "sourcePartId": "1862:812",
+      "sourceName": "Frame 4",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2459:8072",
+      "sourcePartId": "1862:812",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "frame",
+        "media"
+      ],
+      "canonicalFixtures": [
+        "landscape",
+        "square",
+        "portrait",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The actual wrapper sets --ratio from its required number prop. Caller precondition is finite positive ratio; there is no invented runtime validation/default. Native384×216 is one16:9 specimen, not a fixed output width.10px clipped corners and gray/6 preview surface retain observed visual values; the neutral surface is deliberately fixed rather than pretending it is a theme mode. Source docs explicitly show16:9,1:1 and9:16 examples and caller object-cover media. This reference adopts cover cropping with meaningful alt; the small vector image is independently authored test media, not native kit imagery. Intrinsic parent width controls both dimensions; child loading and announcements remain caller-owned.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 1098:924 (Aspect Ratio), observed anatomy and examples."
+  }
+}

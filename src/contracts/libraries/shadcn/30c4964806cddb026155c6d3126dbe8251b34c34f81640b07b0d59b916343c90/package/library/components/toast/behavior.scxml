@@ -1,0 +1,106 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Toast" initial="absent">
+  <datamodel>
+    <data id="id" expr="''" />
+    <data id="type" expr="null" />
+    <data id="timeout" expr="5000" />
+    <data id="hovered" expr="false" />
+    <data id="focused" expr="false" />
+    <data id="windowFocused" expr="true" />
+    <data id="limited" expr="false" />
+    <data id="actionDisabled" expr="false" />
+    <data id="expanded" expr="false" />
+    <data id="closeFocused" expr="false" />
+    <data id="closeAriaHidden" expr="true" />
+  </datamodel>
+  <state id="absent">
+    <transition event="SOURCE_ADDED" target="visible">
+      <assign location="id" expr="_event.data.id" />
+      <assign location="type" expr="_event.data.type === undefined ? null : _event.data.type" />
+      <assign location="timeout" expr="_event.data.timeout == null ? 5000 : _event.data.timeout" />
+      <assign location="hovered" expr="false" />
+      <assign location="focused" expr="false" />
+      <assign location="limited" expr="false" />
+      <assign location="actionDisabled" expr="false" />
+      <assign location="expanded" expr="false" />
+      <assign location="closeFocused" expr="false" />
+      <assign location="closeAriaHidden" expr="true" />
+    </transition>
+  </state>
+  <state id="visible">
+    <transition event="POINTER_ENTER">
+      <assign location="hovered" expr="true" />
+    </transition>
+    <transition event="POINTER_LEAVE">
+      <assign location="hovered" expr="false" />
+    </transition>
+    <transition event="FOCUS_ENTER">
+      <assign location="focused" expr="true" />
+    </transition>
+    <transition event="FOCUS_LEAVE">
+      <assign location="focused" expr="false" />
+    </transition>
+    <transition event="WINDOW_BLUR">
+      <assign location="windowFocused" expr="false" />
+    </transition>
+    <transition event="WINDOW_FOCUS">
+      <assign location="windowFocused" expr="true" />
+    </transition>
+    <transition event="SOURCE_LIMIT">
+      <assign location="limited" expr="!!_event.data.limited" />
+    </transition>
+    <transition event="SET_ACTION_DISABLED">
+      <assign location="actionDisabled" expr="!!_event.data.disabled" />
+    </transition>
+    <transition event="SOURCE_UPDATE">
+      <assign location="type" expr="Object.prototype.hasOwnProperty.call(_event.data, 'type') ? (_event.data.type === undefined ? null : _event.data.type) : type" />
+      <assign location="timeout" expr="_event.data.timeout == null ? timeout : _event.data.timeout" />
+    </transition>
+    <transition event="ACTION_CLICK" cond="!limited &amp;&amp; !actionDisabled &amp;&amp; !!_event.data.event">
+      <send event="onClick" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+    </transition>
+    <transition event="ESCAPE" cond="focused &amp;&amp; !limited">
+      <send event="_effect.sourceCloseRequest" target="#_parent">
+        <param name="reason" expr="'escape'" />
+      </send>
+    </transition>
+    <transition event="TIMER_EXPIRED" cond="timeout &gt; 0 &amp;&amp; type !== 'loading' &amp;&amp; !hovered &amp;&amp; !focused &amp;&amp; windowFocused">
+      <send event="_effect.sourceCloseRequest" target="#_parent">
+        <param name="reason" expr="'timeout'" />
+      </send>
+    </transition>
+    <transition event="CLOSE_CLICK SWIPE_DISMISS" cond="!limited">
+      <send event="_effect.sourceCloseRequest" target="#_parent">
+        <param name="reason" expr="_event.data.reason || 'explicit-close'" />
+      </send>
+    </transition>
+    <transition event="SOURCE_CLOSED" target="ending">
+      <send event="onClose" target="#_parent" />
+    </transition>
+    <transition event="SOURCE_PRESENTATION_OBSERVED" cond="typeof _event.data.expanded === 'boolean' &amp;&amp; typeof _event.data.closeFocused === 'boolean'">
+      <assign location="expanded" expr="_event.data.expanded" />
+      <assign location="closeFocused" expr="_event.data.closeFocused" />
+      <assign location="closeAriaHidden" expr="!expanded &amp;&amp; !closeFocused" />
+    </transition>
+  </state>
+  <state id="ending">
+    <transition event="SOURCE_REMOVED" target="removed">
+      <send event="onRemove" target="#_parent" />
+    </transition>
+  </state>
+  <state id="removed">
+    <transition event="SOURCE_ADDED" target="visible">
+      <assign location="id" expr="_event.data.id" />
+      <assign location="type" expr="_event.data.type === undefined ? null : _event.data.type" />
+      <assign location="timeout" expr="_event.data.timeout == null ? 5000 : _event.data.timeout" />
+      <assign location="hovered" expr="false" />
+      <assign location="focused" expr="false" />
+      <assign location="limited" expr="false" />
+      <assign location="actionDisabled" expr="false" />
+      <assign location="expanded" expr="false" />
+      <assign location="closeFocused" expr="false" />
+      <assign location="closeAriaHidden" expr="true" />
+    </transition>
+  </state>
+</scxml>

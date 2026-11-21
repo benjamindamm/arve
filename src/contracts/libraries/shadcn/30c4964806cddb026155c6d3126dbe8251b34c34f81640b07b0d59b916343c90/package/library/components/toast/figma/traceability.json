@@ -1,0 +1,125 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "provider": {
+      "declaration": "ToastProvider",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "toaster": {
+      "declaration": "Toaster",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "portal": {
+      "declaration": "ToastPortal",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "manager": {
+      "declaration": "createToastManager",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "manager-context": {
+      "declaration": "useToastManager",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "viewport": {
+      "declaration": "ToastViewport",
+      "selector": "[data-slot=\"toast-viewport\"]",
+      "ownership": "actual source wrapper"
+    },
+    "root": {
+      "declaration": "Toast",
+      "selector": "[data-slot=\"toast\"]",
+      "ownership": "actual source wrapper"
+    },
+    "content": {
+      "declaration": "ToastContent",
+      "selector": "[data-slot=\"toast-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "title": {
+      "declaration": "ToastTitle",
+      "selector": "[data-slot=\"toast-title\"]",
+      "ownership": "actual source wrapper"
+    },
+    "description": {
+      "declaration": "ToastDescription",
+      "selector": "[data-slot=\"toast-description\"]",
+      "ownership": "actual source wrapper"
+    },
+    "action": {
+      "declaration": "ToastAction",
+      "selector": "[data-slot=\"toast-action\"]",
+      "ownership": "actual source wrapper"
+    },
+    "close": {
+      "declaration": "ToastClose",
+      "selector": "[data-slot=\"toast-close\"]",
+      "ownership": "actual source wrapper"
+    },
+    "icon": {
+      "declaration": "Toaster",
+      "selector": "[data-slot=\"toast-icon\"]",
+      "ownership": "private source child"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2011:2331",
+      "observed": "382×72 specimen,18px corners,16px inset,12px gap; shadows0/4/6/-4 and0/10/15/-3 at10% black.",
+      "decision": "Width is responsive maximum, height source-measured, source stack/swipe transforms preserved and reduced-motion lifecycle explicit."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:2896 (Toast), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2011:2331",
+      "sourcePartId": "2011:2331",
+      "sourceName": "Toast",
+      "semanticParts": [
+        "provider",
+        "toaster",
+        "portal",
+        "manager",
+        "manager-context",
+        "viewport",
+        "root",
+        "content",
+        "title",
+        "description",
+        "action",
+        "close",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "persistent",
+        "stack-collapsed",
+        "stack-expanded",
+        "limited",
+        "typed-icon",
+        "disabled-action",
+        "opening",
+        "closing",
+        "swipe-down",
+        "swipe-left",
+        "swipe-right",
+        "swipe-up",
+        "root-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Native toast 18px corners,16px inset,12px gap and double 10% black shadow offsets are retained.382px native width is a preferred maximum rather than a fixed sample box; viewport margin 16px bounds narrow screens. The pinned source collapsed/expanded stack is translated into readable component rules: measured height/offset/index,12px peek,0.1 index scale step, native pointer swipe movement and source 500ms transform/opacity,150ms height and 250ms content opacity. Source limited objects stay inert/transparent, source behind content is hidden until expanded, and close/removal remain distinct after actual CSS transition. Reduced motion chooses 0.01ms finite transition rather than waiting on invisible 500ms motion. Native natural-height measurement temporarily sets Root height auto, preserving longer text/actions without fixed 72px clipping. Source Close is aria-hidden while the stack is collapsed and Close itself lacks focus; actual F6 viewport focus expands the stack and exposes its name. The canonical default is the expanded low-priority state; collapsed fixtures retain that source distinction. Static 118px heights/offsets illustrate the measured default recipe at382px width; actual source measurement grows with wrapping. Source Toaster private content/text wrapper and type Icon are mapped explicitly; Button source styles apply to Action/Close, with meaningful names and no fabricated onOpenChange. Default low-priority Toast Root is genuinely nonmodal role dialog/aria-modal=false, with labelled/described title and polite viewport; higher urgency remains separately documented source behavior. Document theme/dir is caller context for source private portal; actions and timeout 0 persistent task feedback retain actual manager semantics. No page/node coordinate or arbitrary per-notification CSS identity is used.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

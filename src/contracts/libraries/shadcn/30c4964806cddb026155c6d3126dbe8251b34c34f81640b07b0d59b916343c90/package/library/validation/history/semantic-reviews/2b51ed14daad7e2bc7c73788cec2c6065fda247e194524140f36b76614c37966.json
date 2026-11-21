@@ -1,0 +1,73 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Progress",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "value-0",
+      "name": "Value 0",
+      "inputs": {
+        "value": 0
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"0\" aria-valuetext=\"0%\" data-progressing=\"\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\">0%</span><div data-slot=\"progress-track\" data-progressing=\"\"><div data-slot=\"progress-indicator\" data-progressing=\"\" style=\"inset-inline-start:0;height:inherit;width:0%\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "value-40",
+      "name": "Value 40",
+      "inputs": {
+        "value": 40
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"40\" aria-valuetext=\"40%\" data-progressing=\"\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\">40%</span><div data-slot=\"progress-track\" data-progressing=\"\"><div data-slot=\"progress-indicator\" data-progressing=\"\" style=\"inset-inline-start:0;height:inherit;width:40%\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "value-100",
+      "name": "Value 100",
+      "inputs": {
+        "value": 100
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"100\" aria-valuetext=\"100%\" data-complete=\"\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\">100%</span><div data-slot=\"progress-track\" data-complete=\"\"><div data-slot=\"progress-indicator\" data-complete=\"\" style=\"inset-inline-start:0;height:inherit;width:100%\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "indeterminate",
+      "name": "Indeterminate",
+      "inputs": {
+        "value": null
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuetext=\"indeterminate progress\" data-indeterminate=\"\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\"></span><div data-slot=\"progress-track\" data-indeterminate=\"\"><div data-slot=\"progress-indicator\" data-indeterminate=\"\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "value": 40,
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"40\" aria-valuetext=\"40%\" data-progressing=\"\" dir=\"rtl\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\">40%</span><div data-slot=\"progress-track\" data-progressing=\"\"><div data-slot=\"progress-indicator\" data-progressing=\"\" style=\"inset-inline-start:0;height:inherit;width:40%\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    }
+  ]
+}

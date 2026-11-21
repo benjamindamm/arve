@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Bubble",
+  "referenceComposition": "<div data-slot=\"bubble\" data-align=\"start\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\"><button type=\"button\" aria-label=\"Like Alex’s message\">Like</button></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Speaker attribution and message content are readable text. Alignment and tint are redundant cues.",
+  "updatesAndDescendants": "Bubble is a div composition with start/end alignment. BubbleContent can useRender a native action/link. BubbleReactions positions caller-provided controls; the component has no built-in reaction state, persistence or callback.",
+  "referenceDecision": "The example reaction is an ordinary labelled Button owned by the caller; no fabricated like API is attached to Bubble.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

@@ -1,0 +1,85 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Badge",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "badge": "Default informative span or explicit caller native render override.",
+    "icon": "Optional supplementary caller icon."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "badge": {
+      "kind": "element",
+      "declaration": "Badge",
+      "selector": "[data-slot=\"badge\"]",
+      "description": "Default informative span or explicit caller native render override.",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "kind": "element",
+      "declaration": "Badge",
+      "selector": "[data-slot=\"badge\"] > svg",
+      "description": "Optional supplementary caller icon.",
+      "ownership": "caller children"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "badge-font-size": "components.badge.fontSize",
+      "badge-gap": "components.badge.gap",
+      "badge-height": "components.badge.height",
+      "badge-icon-size": "components.badge.iconSize",
+      "badge-line-height": "components.badge.lineHeight",
+      "badge-padding-block": "components.badge.paddingBlock",
+      "badge-padding-inline": "components.badge.paddingInline",
+      "badge-radius": "components.badge.radius",
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border",
+      "color-destructive": "semantic.color.destructive",
+      "color-destructive-subtle": "semantic.color.destructiveSubtle",
+      "color-foreground": "semantic.color.foreground",
+      "color-primary": "semantic.color.primary",
+      "color-primary-foreground": "semantic.color.primaryForeground",
+      "color-ring": "semantic.color.ring",
+      "color-secondary": "semantic.color.secondary",
+      "color-secondary-foreground": "semantic.color.secondaryForeground",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "focus-width": "semantic.focus.width",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-weight-medium": "semantic.typography.mediumWeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Badge uses the actual six CVA variant classes and native22px minimum height,8/2px insets,4px gap,12/16px medium text and12px optional glyph. Native sample widths depend on wording and are never fixed. Borders are included in the22px box; content may enlarge it. The default informative span is not focusable or activatable. Only explicit caller anchor rendering gets hover/focus link rules and a real destination; variant=link alone does not invent link semantics.",
+    "variants": {
+      "variant": {
+        "prop": "variant",
+        "classes": [
+          "cn-badge-variant-default",
+          "cn-badge-variant-secondary",
+          "cn-badge-variant-destructive",
+          "cn-badge-variant-outline",
+          "cn-badge-variant-ghost",
+          "cn-badge-variant-link"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

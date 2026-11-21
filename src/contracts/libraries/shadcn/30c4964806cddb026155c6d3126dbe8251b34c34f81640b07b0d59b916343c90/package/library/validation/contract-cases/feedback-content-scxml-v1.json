@@ -1,0 +1,84 @@
+{
+  "result": "PASS",
+  "scope": "Finite source-internal/caller-prop/delegated-disclosure protocol cases; actual React behavior is separately browser checked.",
+  "components": [
+    {
+      "component": "avatar",
+      "behaviorSha256": "9650c3c8511e2ff537a052091a553c94337a4443d2bec3c938f902188c83c065",
+      "cases": [
+        {
+          "name": "source loading/error/retry/loaded callback statuses remain distinct",
+          "result": "pass"
+        },
+        {
+          "name": "duplicate and unknown source status do not invent callbacks",
+          "result": "pass"
+        },
+        {
+          "name": "fallback delay is separate from actual image success",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "progress",
+      "behaviorSha256": "ffb1bc1f9541150cf76b3c47546b9ed2309009f72d31246bec2dbe7cb8ce6d88",
+      "cases": [
+        {
+          "name": "finite progress clamps to bounds and complete is derived",
+          "result": "pass"
+        },
+        {
+          "name": "null and nonfinite values remain indeterminate",
+          "result": "pass"
+        },
+        {
+          "name": "changed bounds immediately recompute same authoritative value",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "scroll-area",
+      "behaviorSha256": "7cd1769945098b3271f8298e41d958ec3e745ac260eb619719a3946678339a59",
+      "cases": [
+        {
+          "name": "source measurements and native position update without fabricated Root callback",
+          "result": "pass"
+        },
+        {
+          "name": "keyboard intent is not equated with a fabricated scroll distance",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "attachment",
+      "behaviorSha256": "f7131c88badf9e31f80c6be20c7f8db2f683d76b20dc95515a7e689237c3d022",
+      "cases": [
+        {
+          "name": "caller state changes, not child activation, govern upload status",
+          "result": "pass"
+        },
+        {
+          "name": "unknown upload state does not silently pass the bounded reference API",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "trace",
+      "behaviorSha256": "e69d3826714fac58339448590ddae1cc946e8949ee0cf90b476325887af58084",
+      "cases": [
+        {
+          "name": "real composed Collapsible retains cancellation and controlled authority",
+          "result": "pass"
+        },
+        {
+          "name": "disabled suppresses delegated trigger changes",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

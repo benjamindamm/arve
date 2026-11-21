@@ -2,7 +2,7 @@ import { createServer } from 'node:http'
 import { readFile, stat } from 'node:fs/promises'
 import path from 'node:path'
 const root=path.resolve('.runtime/static-site/out'), base=process.env.ARVE_BASE_PATH??'/arve'
-const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.txt':'text/plain','.png':'image/png','.svg':'image/svg+xml','.pdf':'application/pdf','.scxml':'application/xml'}
+const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.txt':'text/plain','.png':'image/png','.svg':'image/svg+xml','.pdf':'application/pdf','.scxml':'application/xml','.woff':'font/woff','.woff2':'font/woff2','.ttf':'font/ttf','.otf':'font/otf'}
 createServer(async(req,res)=>{
   try {
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return}

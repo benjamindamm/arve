@@ -1,0 +1,85 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "73:1989"
+  },
+  "stories": [
+    {
+      "id": "figma-2015-1044",
+      "name": "Skeleton / Skeleton=Avatar",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2015:1044",
+        "part": "2015:1045"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2015-1043",
+      "name": "Skeleton / Skeleton=Text",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2015:1043",
+        "part": "2015:1045"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2015-1042",
+      "name": "Skeleton / Skeleton=Card",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2015:1042",
+        "part": "2015:1045"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "referenceScope": "Pinned native/default content composition; original static Figma variants remain in stories. Source wrapper APIs and optional native render semantics are described in CEM/README.",
+  "contractCases": [
+    {
+      "id": "default-content-semantic-projection",
+      "html": "accessibility.html",
+      "expectSelector": "provenance://source/%2F%2F%2A[@role=\"status\"]"
+    },
+    {
+      "id": "prop-update-keeps-passive-contract",
+      "events": [
+        {
+          "event": "PROPS_CHANGED"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "unmount-remount",
+      "events": [
+        {
+          "event": "UNMOUNT"
+        },
+        {
+          "event": "MOUNT"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "no-fabricated-activation",
+      "events": [
+        {
+          "event": "ACTIVATE"
+        },
+        {
+          "event": "ESCAPE"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    }
+  ]
+}

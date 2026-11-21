@@ -1,0 +1,27 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Breadcrumb" initial="active">
+  <datamodel>
+    <data id="destination" expr="''" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT" />
+    <transition event="ESCAPE" />
+    <transition event="UNMOUNT" target="removed" />
+    <transition event="LINK_CLICK" cond="!!_event.data.event &amp;&amp; !!_event.data.href">
+      <send event="onClick" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!_event.data.event.defaultPrevented">
+        <send event="_effect.nativeNavigation" target="#_parent">
+          <param name="href" expr="_event.data.href" />
+        </send>
+      </if>
+    </transition>
+    <transition event="ROUTE_PROPS_CHANGED">
+      <assign location="destination" expr="_event.data.href" />
+    </transition>
+    <transition event="ARROW_LEFT ARROW_RIGHT HOME END" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="active" />
+  </state>
+</scxml>

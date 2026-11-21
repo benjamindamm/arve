@@ -1,0 +1,136 @@
+{
+  "format": "shadcn-executed-regressions/1",
+  "overall": "PASS_LIMITED",
+  "release": false,
+  "checks": [
+    {
+      "command": "node provenance://source/tools%2Fshadcn%2Fcheck-reference.mjs",
+      "result": "PASS",
+      "counts": {
+        "completenessUnitTests": 40,
+        "sourceProtocols": 311,
+        "semanticAndCounterexampleCases": 156,
+        "actualSourceSSR": 96
+      },
+      "log": "logs/family-regressions.txt",
+      "sha256": "9b7040e72abc0a40e96af92fa1736a18d1678ad08bb27d5e5b8053271231fc6b"
+    },
+    {
+      "command": "provenance://source/tools%2Fvalidation%2F.venv%2Fbin%2Fpython -m unittest discover -s provenance://source/tools%2Flibraries -p 'test_*.py'",
+      "result": "PASS",
+      "tests": 59,
+      "log": "logs/library-regressions.txt",
+      "sha256": "072711ef1446c1a1bb18ce5984cd9d5b29dce5b4197b97450e5b3a17e8114afd"
+    },
+    {
+      "command": "npm run build --prefix provenance://source/apps%2Fshadcn-reference-lab",
+      "result": "PASS",
+      "notes": [
+        "Normal Vite entry compiled all actual source routes.",
+        "Expected client-directive warnings in browser-only bundle and large shared validation chunk; no production application optimization claimed."
+      ]
+    },
+    {
+      "command": "node provenance://source/tools%2Fopenpencil%2Ftest-render-isolation.mjs",
+      "result": "PASS",
+      "evidence": "geometry-regression/result.json"
+    },
+    {
+      "command": "python3 provenance://source/tools%2Ffigma-reader%2Fcheck-shadcn-coverage.py",
+      "result": "PASS_LIMITED",
+      "evidence": "source-coverage.json"
+    },
+    {
+      "command": "python3 provenance://source/tools%2Fshadcn%2Faudit-completion.py",
+      "result": "PASS_LIMITED",
+      "evidence": "completion-audit.json"
+    }
+  ],
+  "browserEvidence": {
+    "method": "BrowserOS native actions with read-only AX/DOM observations; source-normal entry targets; representative cases, no synthetic event dispatch or universal AT claim.",
+    "cases": 312,
+    "reports": [
+      {
+        "path": "contract-cases/calendar-focus-browser-v2.json",
+        "cases": 2,
+        "sha256": "89bfbb18a0595e4237c4c62e50bea2cf0e99ba4311dd5bb72849a3eed0f6c13b"
+      },
+      {
+        "path": "contract-cases/charts-browser-v1.json",
+        "cases": 35,
+        "sha256": "6597dd5617de01c25c6e55e9ffe40404831c3e444dd355e4506149accad62592"
+      },
+      {
+        "path": "contract-cases/data-table-browser-v1.json",
+        "cases": 8,
+        "sha256": "e4d0d780e57b1ee42b22e8fb26a9dd208b9dd6d463505d9d4ea12000ea2f7d8f"
+      },
+      {
+        "path": "contract-cases/dates-browser-v2.json",
+        "cases": 12,
+        "sha256": "7a039901f40693d4760c96cde796e16260df8fa0854d8702d98040764965de4a"
+      },
+      {
+        "path": "contract-cases/disclosure-browser-v1.json",
+        "cases": 35,
+        "sha256": "406a141eada9e6c1dddef24d64c009eb9a0e8d7f36e53890f4524de65e1b5fca"
+      },
+      {
+        "path": "contract-cases/feedback-content-browser-v1.json",
+        "cases": 18,
+        "sha256": "3ef5fffe00f93414a385a10c84e4d95cfe61390e16f10e128dc5a30c96f9e7e6"
+      },
+      {
+        "path": "contract-cases/layers-browser-v1.json",
+        "cases": 23,
+        "sha256": "e037976d882fa5a65493975ddb519b4db73f37beb663d1f387627a1328c99730"
+      },
+      {
+        "path": "contract-cases/menus-browser-v1.json",
+        "cases": 30,
+        "sha256": "f0f0d0ba9dcbc0389024b0daf519414c5076845600b35826a7f649fc7ff8b07a"
+      },
+      {
+        "path": "contract-cases/message-scroller-browser-v1.json",
+        "cases": 8,
+        "sha256": "105846c7f4462f59695dc39c94a177524d592aac6f1180af66d8b926351f7bd6"
+      },
+      {
+        "path": "contract-cases/native-navigation-browser-v1.json",
+        "cases": 23,
+        "sha256": "9ec97e064114e8944bba8c2ec88f6afe9022c9af236fab9c094cec9c95c0d666"
+      },
+      {
+        "path": "contract-cases/pickers-browser-v1.json",
+        "cases": 37,
+        "sha256": "d4262b7dae18ab15cd2be1d28c0a5a6fff6072e2737f5a4433ff32796b6a0798"
+      },
+      {
+        "path": "contract-cases/questionnaire-browser-v1.json",
+        "cases": 11,
+        "sha256": "c4329ec0241b3e29e795cde19dca3f62bedaf7d71c05ba43d48be37c95ef9741"
+      },
+      {
+        "path": "contract-cases/selection-browser-v1.json",
+        "cases": 36,
+        "sha256": "3c1ec90029fb4e29be0c1017436ed4823fe88899637fd1b6bca3b75198dc6997"
+      },
+      {
+        "path": "contract-cases/selection-fallback-browser-v1.json",
+        "cases": 2,
+        "sha256": "96ee6ac08e6fd2cf80f003b8ecc9ec514e88f8a14daffb591aaab16704607746"
+      },
+      {
+        "path": "contract-cases/utilities-browser-v1.json",
+        "cases": 19,
+        "sha256": "f721028789a5c92ff8be86c3b049bc86ec2ffe71d52ed8fd8eb0e8f5bad40d4e"
+      },
+      {
+        "path": "core-controls-browser-v1.json",
+        "cases": 13,
+        "sha256": "c5f215010417b4bbe05a9df111b24de27840d9bfa3643d662cb312f82a88ec2c"
+      }
+    ]
+  },
+  "evidenceReportHashesUnchangedOnAggregateRerun": true
+}

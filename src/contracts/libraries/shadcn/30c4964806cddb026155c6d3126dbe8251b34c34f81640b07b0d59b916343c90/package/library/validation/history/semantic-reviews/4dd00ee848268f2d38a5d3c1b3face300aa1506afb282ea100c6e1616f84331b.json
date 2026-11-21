@@ -1,0 +1,55 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Empty",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "empty-with-recovery",
+      "name": "Empty with recovery",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"empty\"><div data-slot=\"empty-header\"><div data-slot=\"empty-icon\" data-variant=\"icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 7h16v13H4zM8 7V4h8v3\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"empty-title\"><h2>No documents</h2></div><div data-slot=\"empty-description\">Upload a document to begin.</div></div><div data-slot=\"empty-content\"><button type=\"button\">Upload document</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "text-only",
+      "name": "Text only",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"empty\"><div data-slot=\"empty-header\"><div data-slot=\"empty-title\"><h2>No documents</h2></div><div data-slot=\"empty-description\">Upload a document to begin.</div></div><div data-slot=\"empty-content\"><button type=\"button\">Upload document</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "default-media",
+      "name": "Default media",
+      "inputs": {
+        "mediaVariant": "default"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"empty\"><div data-slot=\"empty-header\"><div data-slot=\"empty-icon\" data-variant=\"default\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 7h16v13H4zM8 7V4h8v3\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"empty-title\"><h2>No documents</h2></div><div data-slot=\"empty-description\">Upload a document to begin.</div></div><div data-slot=\"empty-content\"><button type=\"button\">Upload document</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"empty\" dir=\"rtl\"><div data-slot=\"empty-header\"><div data-slot=\"empty-icon\" data-variant=\"icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 7h16v13H4zM8 7V4h8v3\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"empty-title\"><h2>No documents</h2></div><div data-slot=\"empty-description\">Upload a document to begin.</div></div><div data-slot=\"empty-content\"><button type=\"button\">Upload document</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    }
+  ]
+}

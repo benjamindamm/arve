@@ -1,0 +1,93 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-slot="alert-dialog-overlay"] {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgb(0 0 0/var(--ui-alert-dialog-backdrop-opacity));
+}
+
+[data-slot="alert-dialog-content"] {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 51;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-alert-dialog-gap);
+  min-inline-size: 0;
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-alert-dialog-radius);
+  outline: none;
+  max-block-size: calc(100dvh - 32px);
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="alert-dialog-content"] {
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%,-50%);
+  inline-size: calc(100vw - 32px);
+  max-inline-size: var(--ui-alert-dialog-max-width);
+  padding: var(--ui-alert-dialog-padding);
+}
+
+[data-slot="alert-dialog-content"][dir="rtl"] {
+  inset-inline-start: auto;
+  left: 50%;
+}
+
+[data-slot="alert-dialog-content"][data-size="sm"] {
+  max-inline-size: 320px;
+}
+
+[data-slot="alert-dialog-media"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 40px;
+  block-size: 40px;
+  flex: none;
+  border-radius: 6px;
+  background: var(--ui-color-muted);
+}
+
+[data-slot="alert-dialog-header"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-alert-dialog-header-gap);
+  min-inline-size: 0;
+}
+
+[data-slot="alert-dialog-title"] {
+  margin: 0;
+  font-size: var(--ui-alert-dialog-title-size);
+  line-height: var(--ui-alert-dialog-title-line-height);
+  font-weight: var(--ui-alert-dialog-title-weight);
+}
+
+[data-slot="alert-dialog-description"] {
+  margin: 0;
+  color: var(--ui-color-muted-foreground);
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="alert-dialog-footer"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+[data-slot="alert-dialog-trigger"]:disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "dialog.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Dialog",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "modal=true also locks outside pointer interaction and page scroll; modal=false permits the page. trap-focus contains focus without the full modal outside/scroll policy. disablePointerDismissal blocks outside press (and nonmodal focus-out), not the explicit Close control. Popup title/description supply accessible relations."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:10."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: DialogPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "dialog",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:14."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogPortal",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Portal.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:18."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-portal",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogClose",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Close.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:22."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-close",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogOverlay",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Backdrop.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:26."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-overlay",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Popup.Props & {\n  showCloseButton?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"showCloseButton\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:39."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-content",
+              "description": "Actual emitted data-slot."
+            },
+            {
+              "name": "dialog-close",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:85."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-header",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  showCloseButton?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"showCloseButton\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:95."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-footer",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:122."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-title",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:132."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dialog-description",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Carousel" initial="mounted">
+  <datamodel>
+    <data id="apiReady" expr="false" />
+    <data id="selectedIndex" expr="0" />
+    <data id="canPrev" expr="false" />
+    <data id="canNext" expr="false" />
+  </datamodel>
+  <state id="mounted">
+    <transition event="ESCAPE FOCUS_IN FOCUS_OUT" />
+    <transition event="SOURCE_API_READY" cond="!!_event.data.api">
+      <assign location="apiReady" expr="true" />
+      <send event="setApi" target="#_parent">
+        <param name="api" expr="_event.data.api" />
+      </send>
+    </transition>
+    <transition event="SOURCE_SELECT SOURCE_REINIT" cond="apiReady">
+      <assign location="selectedIndex" expr="_event.data.index" />
+      <assign location="canPrev" expr="!!_event.data.canPrev" />
+      <assign location="canNext" expr="!!_event.data.canNext" />
+    </transition>
+    <transition event="PREVIOUS_CLICK" cond="apiReady &amp;&amp; canPrev">
+      <send event="_effect.emblaScroll" target="#_parent">
+        <param name="direction" expr="'prev'" />
+      </send>
+    </transition>
+    <transition event="NEXT_CLICK" cond="apiReady &amp;&amp; canNext">
+      <send event="_effect.emblaScroll" target="#_parent">
+        <param name="direction" expr="'next'" />
+      </send>
+    </transition>
+    <transition event="ARROW_LEFT" cond="apiReady">
+      <send event="_effect.emblaScroll" target="#_parent">
+        <param name="direction" expr="'prev'" />
+      </send>
+    </transition>
+    <transition event="ARROW_RIGHT" cond="apiReady">
+      <send event="_effect.emblaScroll" target="#_parent">
+        <param name="direction" expr="'next'" />
+      </send>
+    </transition>
+    <transition event="ARROW_UP ARROW_DOWN" />
+    <transition event="UNMOUNT" target="removed" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="mounted" />
+  </state>
+</scxml>

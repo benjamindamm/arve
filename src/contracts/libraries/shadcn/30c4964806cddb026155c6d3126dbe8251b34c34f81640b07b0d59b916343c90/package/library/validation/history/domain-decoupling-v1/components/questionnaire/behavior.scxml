@@ -1,0 +1,75 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Questionnaire" initial="active">
+  <datamodel>
+    <data id="item" expr="'plan'" />
+    <data id="controlled" expr="false" />
+    <data id="statuses" expr="({plan:'unanswered',signals:'unanswered',contact:'unanswered'})" />
+    <data id="required" expr="true" />
+    <data id="disabled" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="HOST_ITEM">
+      <assign location="item" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_CONTROLLED">
+      <assign location="controlled" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_REQUIRED">
+      <assign location="required" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_ITEM_CHANGE">
+      <send event="onItemChange" target="#_parent">
+        <param name="item" expr="_event.data.item" />
+      </send>
+      <if cond="!controlled">
+        <assign location="item" expr="_event.data.item" />
+      </if>
+    </transition>
+    <transition event="SOURCE_STATUS_CHANGE" cond="!!_event.data.item">
+      <assign location="statuses" expr="({...statuses, [_event.data.item]: _event.data.status})" />
+      <send event="onStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_CHOICE_CHANGE" cond="!disabled &amp;&amp; !!_event.data.event">
+      <send event="onChange" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!_event.data.event.defaultPrevented">
+        <send event="_effect.sourceAnswerAuthority" target="#_parent">
+          <param name="policy" expr="'individual-controlled-or-native-answer-authority'" />
+        </send>
+      </if>
+    </transition>
+    <transition event="NEXT" cond="!disabled">
+      <send event="_effect.sourceValidateActiveThenRequestNext" target="#_parent" />
+    </transition>
+    <transition event="SKIP" cond="!disabled &amp;&amp; !required">
+      <send event="_effect.sourceSkipThenNextOrSubmit" target="#_parent" />
+    </transition>
+    <transition event="SOURCE_SUBMIT" cond="!!_event.data.event &amp;&amp; !!_event.data.allValid">
+      <send event="onSubmit" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!_event.data.event.defaultPrevented">
+        <send event="_effect.nativeFormSubmission" target="#_parent" />
+      </if>
+    </transition>
+    <transition event="SOURCE_RESET" cond="!!_event.data.event">
+      <send event="onReset" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <if cond="!_event.data.event.defaultPrevented">
+        <send event="_effect.sourceResetAnswersAndRequestInitial" target="#_parent" />
+      </if>
+    </transition>
+    <transition event="ARROW_UP ARROW_DOWN ARROW_LEFT ARROW_RIGHT ENTER CTRL_META_ENTER SHORTCUT">
+      <send event="_effect.delegateQuestionnaireKeyboard" target="#_parent">
+        <param name="policy" expr="'source-target-type-composition-repeat-validation-and-focus-rules'" />
+      </send>
+    </transition>
+    <transition event="TAB SHIFT_TAB FOCUS_IN FOCUS_OUT ESCAPE" />
+  </state>
+</scxml>

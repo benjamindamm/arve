@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "calendar.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Calendar",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DayPicker> & {\n  buttonVariant?: React.ComponentProps<typeof Button>[\"variant\"]\n}"
+              },
+              "description": "Actual complete wrapper type, exact defaults/source lines in react-api-inventory; DayPicker union and original package declarations are frozen."
+            }
+          ],
+          "events": [
+            {
+              "name": "onSelect",
+              "type": {
+                "text": "DayPickerProps[\"onSelect\"]"
+              },
+              "description": "Actual mode-specific selection callback, not a cancellable Base UI eventDetails transaction."
+            },
+            {
+              "name": "onDayClick",
+              "type": {
+                "text": "DayEventHandler<React.MouseEvent>"
+              }
+            },
+            {
+              "name": "onMonthChange",
+              "type": {
+                "text": "MonthChangeEventHandler"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "calendar",
+              "description": "Named local-date calendar root Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "months",
+              "description": "One or more month layout container Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "month",
+              "description": "Independent displayed month Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "navigation",
+              "description": "Month navigation landmark Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "previous",
+              "description": "Native previous-month boundary control Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "next",
+              "description": "Native next-month boundary control Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "month-caption",
+              "description": "Caption layout container Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "caption-label",
+              "description": "Live displayed-month label Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "grid",
+              "description": "Named native month table/grid Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "weekday-row",
+              "description": "Weekday header row Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "weekday",
+              "description": "Column weekday heading Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "weeks",
+              "description": "Month body Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "week",
+              "description": "Seven-day row Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "day-cell",
+              "description": "Date gridcell with real selection/modifier classes Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "footer",
+              "description": "Polite primitive status footer Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "dropdowns",
+              "description": "Optional caption dropdown layout Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "dropdown-root",
+              "description": "Native select with visible label overlay Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "dropdown",
+              "description": "Actual accessible month select Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "dropdown-label",
+              "description": "Decorative select display label Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "week-number-header",
+              "description": "Optional week-number column header Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "week-number",
+              "description": "Optional week number cell Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CalendarDayButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DayButton> & { locale?: Partial<Locale> }"
+              },
+              "description": "Actual complete wrapper type, exact defaults/source lines in react-api-inventory; DayPicker union and original package declarations are frozen."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "day-button",
+              "description": "Exported source Button with local-date label and modifiers; explicit attached-ref adapter repairs source focus omission Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

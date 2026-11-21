@@ -1,0 +1,74 @@
+@import "../../tokens.css";
+
+[data-slot="scroll-area"] {
+  box-sizing: border-box;
+  position: relative;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  block-size: var(--ui-scroll-area-height);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-scroll-area-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="scroll-area-viewport"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: inherit;
+  outline: none;
+}
+
+[data-slot="scroll-area-viewport"]:focus-visible {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-part="scroll-area-content"] {
+  box-sizing: border-box;
+  padding: var(--ui-scroll-area-inset);
+  min-inline-size: 0;
+}
+
+[data-part="scroll-area-content"] ul {
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
+[data-slot="scroll-area-scrollbar"] {
+  box-sizing: border-box;
+  display: flex;
+  touch-action: none;
+  user-select: none;
+  padding: 1px;
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"] {
+  inline-size: var(--ui-scroll-area-bar-width);
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"] {
+  block-size: var(--ui-scroll-area-bar-width);
+  flex-direction: column;
+}
+
+[data-slot="scroll-area-thumb"] {
+  position: relative;
+  flex: 1;
+  border-radius: 9999px;
+  background: var(--ui-color-border);
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="vertical"]>[data-slot="scroll-area-thumb"] {
+  block-size: var(--scroll-area-thumb-height);
+  min-block-size: var(--ui-scroll-area-thumb-minimum);
+}
+
+[data-slot="scroll-area-scrollbar"][data-orientation="horizontal"]>[data-slot="scroll-area-thumb"] {
+  inline-size: var(--scroll-area-thumb-width);
+  min-inline-size: var(--ui-scroll-area-thumb-minimum);
+}

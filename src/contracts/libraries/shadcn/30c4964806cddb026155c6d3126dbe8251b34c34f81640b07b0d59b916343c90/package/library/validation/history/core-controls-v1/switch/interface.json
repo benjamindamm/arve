@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "switch.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Switch",
+          "description": "Binary setting switch with a stable visible label.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"default\" | \"small\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "events": [
+            {
+              "name": "change",
+              "type": {
+                "text": "Event"
+              },
+              "description": "Native change event. Read the updated boolean from the input target."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Card",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "default-with-action",
+      "name": "Default with action",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"card\" data-size=\"default\"><div data-slot=\"card-header\"><div data-slot=\"card-title\"><h2>Project overview</h2></div><div data-slot=\"card-description\">Current project status</div><div data-slot=\"card-action\"><button type=\"button\">More actions</button></div></div><div data-slot=\"card-content\"><p>Three tasks remain.</p></div><div data-slot=\"card-footer\"><button type=\"button\">View project</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "compact",
+      "name": "Compact",
+      "inputs": {
+        "size": "sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"card\" data-size=\"sm\"><div data-slot=\"card-header\"><div data-slot=\"card-title\"><h2>Project overview</h2></div><div data-slot=\"card-description\">Current project status</div><div data-slot=\"card-action\"><button type=\"button\">More actions</button></div></div><div data-slot=\"card-content\"><p>Three tasks remain.</p></div><div data-slot=\"card-footer\"><button type=\"button\">View project</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "without-action",
+      "name": "Without action",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"card\" data-size=\"default\"><div data-slot=\"card-header\"><div data-slot=\"card-title\"><h2>Project overview</h2></div><div data-slot=\"card-description\">Current project status</div></div><div data-slot=\"card-content\"><p>Three tasks remain.</p></div><div data-slot=\"card-footer\"><button type=\"button\">View project</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"card\" data-size=\"default\" dir=\"rtl\"><div data-slot=\"card-header\"><div data-slot=\"card-title\"><h2>Project overview</h2></div><div data-slot=\"card-description\">Current project status</div><div data-slot=\"card-action\"><button type=\"button\">More actions</button></div></div><div data-slot=\"card-content\"><p>Three tasks remain.</p></div><div data-slot=\"card-footer\"><button type=\"button\">View project</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

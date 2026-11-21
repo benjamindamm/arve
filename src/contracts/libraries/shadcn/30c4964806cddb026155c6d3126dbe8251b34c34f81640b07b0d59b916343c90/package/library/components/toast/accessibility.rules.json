@@ -1,0 +1,92 @@
+{
+  "componentId": "shadcn:Toast",
+  "projectionState": "Open site disclosure / expanded desktop navigation / expanded low-priority toast, respectively. Mobile sidebar delegates actual Sheet; high-priority toasts use the separate source announcement branch.",
+  "sourceRule": "Toast Root requires an actual ToastObject. Public Toaster wraps Provider/Portal/Viewport/List and defaults to the exported singleton toast manager; createToastManager/useToastManager are actual public exports. A mounted provider/Toaster is required to display manager events; the manager is an event emitter, not a promised pre-mount queue. Manager add(options)->id, update(id,object|updater), close(id?) and promise(promise,{loading,success,error}) retain their exact generic types. Duplicate id updates in place and refreshes timer. Provider defaults timeout5000ms, limit3; timeout0 disables auto-dismiss. Loading type has no timer; promise transitions that same toast to success/error, preserving promise resolve/reject for caller handling. Exceeding limit marks older objects limited/inert rather than immediately removing them. Closing and final removal are separate ToastObject onClose()/onRemove() callbacks, not fabricated Root onOpenChange. Root defaults nonmodal role=dialog (priority low), tabindex0, aria-modal=false and registered h2 Title/p Description relations. High priority uses alertdialog hidden from accessibility until focused, with a separate urgent alert mirror in Viewport; Viewport is labelled Notifications, region with polite/additions-text live behavior. No generic role=status is falsely attached to every toast. Timers pause during hover, focus and window blur, then resume remaining time. F6 enters notification viewport; Shift+Tab from viewport restores prior focus, and focus guards skip limited/ending entries. Escape closes only a toast containing actual focus. Close uses source native Button with default name Close toast; Action renders only with meaningful children, merges actionProps and does not automatically close. Swipe dismissal uses configured directions (default down/right), not a different confirmation event. This reference uses explicit persistent feedback for essential task outcomes, low priority by default, timeout0 for important actionable messages, named actions/Close and finite timed examples; disappearing notification text is never the only durable result.",
+  "keyboardAndFocus": "Toasts do not trap focus or steal it when added. Actual F6/Tab focus routing reaches the viewport/toast/action/Close; Escape works when focus is inside that toast, not as a global close-all shortcut. Native Action/Close Enter/Space and disabled behavior are preserved. Action execution is independent from dismissal and onClose differs from onRemove after animation. High urgency, visible limits, pausing and source live-region branching remain explicit; this bounded reference is not a cross-AT announcement certificate.",
+  "referenceComposition": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-expanded=\"\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-expanded=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"false\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>",
+  "protocol": "Observed source callbacks and normalized primitive/native intent remain separate; _effect.* is internal source work, never a new DOM/public callback. Controlled props are not silently rewritten. Sidebar callback existence, controlled open and cookie write are distinct; Toast object close/remove callbacks belong to one actual toast id, and timer intents cannot manufacture completion. Existing Sheet/Tooltip/Button/Input/Skeleton actors keep their own contracts.",
+  "semanticParts": {
+    "provider": {
+      "kind": "controller",
+      "description": "Actual provider/event manager context; no fabricated DOM."
+    },
+    "toaster": {
+      "kind": "controller",
+      "description": "Actual Provider/Portal/Viewport/private List composition; manager event emitter requires mounted provider."
+    },
+    "portal": {
+      "kind": "controller",
+      "description": "Actual source portal context; document theme/dir reaches its viewport."
+    },
+    "manager": {
+      "kind": "controller",
+      "description": "Actual event-emitter manager factory; add/update/close/promise remain distinct typed operations."
+    },
+    "manager-context": {
+      "kind": "controller",
+      "description": "Actual manager/provider hook; not an adjustable Root value."
+    },
+    "viewport": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-viewport\"]",
+      "description": "Actual source toast-viewport; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast\"]",
+      "description": "Actual source toast; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-content\"]",
+      "description": "Actual source toast-content; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-title\"]",
+      "description": "Actual source toast-title; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-description\"]",
+      "description": "Actual source toast-description; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "action": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-action\"]",
+      "description": "Actual source toast-action; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "close": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-close\"]",
+      "description": "Actual source toast-close; low-priority dialog/live announcement/lifecycle remain primitive-owned."
+    },
+    "icon": {
+      "kind": "element",
+      "selector": "[data-slot=\"toast-icon\"]",
+      "description": "Private ToastIcon chosen by source type; not a new public export."
+    }
+  },
+  "visualStateMapping": {
+    "type": {
+      "source": "ToastObject.type",
+      "values": [
+        "success",
+        "info",
+        "warning",
+        "error",
+        "loading"
+      ]
+    },
+    "stack": {
+      "source": "actual expanded/limited/behind/index/height state"
+    },
+    "priority": {
+      "source": "ToastObject.priority",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  }
+}

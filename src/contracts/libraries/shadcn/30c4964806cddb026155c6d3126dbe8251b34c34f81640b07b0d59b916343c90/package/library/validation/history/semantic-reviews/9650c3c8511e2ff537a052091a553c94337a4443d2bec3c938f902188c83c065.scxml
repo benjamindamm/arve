@@ -1,0 +1,138 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Avatar" initial="idle">
+  <datamodel>
+    <data id="loadingStatus" expr="'idle'" />
+    <data id="fallbackReady" expr="true" />
+  </datamodel>
+  <state id="idle">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SOURCE_LOADING_STATUS" target="idle" cond="_event.data.status === 'idle' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loading" cond="_event.data.status === 'loading' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loaded" cond="_event.data.status === 'loaded' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="error" cond="_event.data.status === 'error' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="FALLBACK_DELAY_STARTED">
+      <assign location="fallbackReady" expr="false" />
+    </transition>
+    <transition event="FALLBACK_DELAY_ELAPSED">
+      <assign location="fallbackReady" expr="true" />
+    </transition>
+  </state>
+  <state id="loading">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SOURCE_LOADING_STATUS" target="idle" cond="_event.data.status === 'idle' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loading" cond="_event.data.status === 'loading' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loaded" cond="_event.data.status === 'loaded' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="error" cond="_event.data.status === 'error' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="FALLBACK_DELAY_STARTED">
+      <assign location="fallbackReady" expr="false" />
+    </transition>
+    <transition event="FALLBACK_DELAY_ELAPSED">
+      <assign location="fallbackReady" expr="true" />
+    </transition>
+  </state>
+  <state id="loaded">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SOURCE_LOADING_STATUS" target="idle" cond="_event.data.status === 'idle' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loading" cond="_event.data.status === 'loading' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loaded" cond="_event.data.status === 'loaded' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="error" cond="_event.data.status === 'error' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="FALLBACK_DELAY_STARTED">
+      <assign location="fallbackReady" expr="false" />
+    </transition>
+    <transition event="FALLBACK_DELAY_ELAPSED">
+      <assign location="fallbackReady" expr="true" />
+    </transition>
+  </state>
+  <state id="error">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SOURCE_LOADING_STATUS" target="idle" cond="_event.data.status === 'idle' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loading" cond="_event.data.status === 'loading' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="loaded" cond="_event.data.status === 'loaded' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="SOURCE_LOADING_STATUS" target="error" cond="_event.data.status === 'error' &amp;&amp; loadingStatus !== _event.data.status">
+      <assign location="loadingStatus" expr="_event.data.status" />
+      <send event="onLoadingStatusChange" target="#_parent">
+        <param name="status" expr="_event.data.status" />
+      </send>
+    </transition>
+    <transition event="FALLBACK_DELAY_STARTED">
+      <assign location="fallbackReady" expr="false" />
+    </transition>
+    <transition event="FALLBACK_DELAY_ELAPSED">
+      <assign location="fallbackReady" expr="true" />
+    </transition>
+  </state>
+</scxml>

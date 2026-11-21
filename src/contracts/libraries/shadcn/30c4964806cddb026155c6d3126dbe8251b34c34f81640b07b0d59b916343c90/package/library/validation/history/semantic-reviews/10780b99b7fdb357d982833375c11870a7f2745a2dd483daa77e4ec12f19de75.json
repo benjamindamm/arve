@@ -1,0 +1,193 @@
+{
+  "componentId": "shadcn:Sidebar",
+  "projectionState": "Open site disclosure / expanded desktop navigation / expanded low-priority toast, respectively. Mobile sidebar delegates actual Sheet; high-priority toasts use the separate source announcement branch.",
+  "sourceRule": "All exported Sidebar parts are preserved. SidebarProvider defaults defaultOpen=true and supplies desktop open/state, openMobile, isMobile, setOpen/setOpenMobile and toggleSidebar through useSidebar; Sidebar itself accepts side left|right, variant sidebar|floating|inset and collapsible offcanvas|icon|none. Desktop widths are16rem, icon3rem, mobile18rem. The pinned use-mobile hook is false during SSR/initial render and tracks window.innerWidth<768 using matchMedia afterward. Desktop openProp and onOpenChange should be supplied as a pair: setOpen calls the handler instead of internal state whenever a handler exists, even without an openProp. The callback is boolean-only, not cancellable eventDetails. Every desktop setOpen request writes sidebar_state=true|false, path=/, max-age604800; the provider does not read that cookie automatically, and a rejected/ignored controlled request can still write its candidate. Mobile toggle only changes openMobile, with no desktop onOpenChange or cookie write. The two states are not synchronized/reset on breakpoint changes. collapsible=none bypasses responsive Sheet/collapse rendering even though provider state can still change. Trigger calls caller onClick then always toggles (defaultPrevented is not a veto); Rail is native button tabindex=-1 and needs explicit type=button in a form-safe reference. Provider always registers lowercase Ctrl/Meta+b globally while mounted, including editable targets; there is no disable-shortcut prop, so this reference uses one provider and documents that application constraint. SidebarInset is main; avoid nested main landmarks. Header/Footer/Group/Content are containers, Menu/Sub are native lists, and MenuButton defaults button via useRender: actual navigation deliberately renders anchors. isActive only supplies appearance/data-active, not aria-current; caller supplies current-page semantics. GroupLabel requires caller heading choice. Skeleton has random50–89% width and no loading announcement; use the completed Skeleton usage policy. Optional tooltip is visual-only and shown collapsed desktop, so native names remain complete. Mobile Sidebar composes Sheet with fixed title Sidebar/description Displays the mobile sidebar and hides its direct default Close button in source CSS; this reference supplies an explicit nested Close navigation control. Desktop icon collapse is chosen to keep intended navigation available; offcanvas CSS alone does not supply an inert/focus-removal guarantee.",
+  "keyboardAndFocus": "Native Trigger Enter/Space and registered Ctrl/Meta+b toggle the appropriate viewport state. Desktop collapse does not become a dialog or trap focus. Mobile uses the real Sheet/Dialog focus, Escape and restoration policy; its trigger aria-expanded uses openMobile, not the desktop state. Navigation links retain native Tab/Enter and readable names when icon-collapsed. Rail is an optional pointer duplicate, not the sole keyboard access. Names, landmark label, heading and active-page relation are explicit caller composition.",
+  "referenceComposition": "<div data-slot=\"sidebar-wrapper\" style=\"--sidebar-width:var(--ui-sidebar-width);--sidebar-width-icon:var(--ui-sidebar-icon-width)\"><div data-slot=\"sidebar\" data-state=\"expanded\" data-collapsible=\"\" data-variant=\"sidebar\" data-side=\"left\"><div data-slot=\"sidebar-gap\"></div><div data-slot=\"sidebar-container\" data-side=\"left\"><div data-slot=\"sidebar-inner\"><div data-slot=\"sidebar-header\"><h2>Reports</h2><input data-slot=\"sidebar-input\" aria-label=\"Find report\" type=\"text\"/></div><div data-slot=\"sidebar-separator\" role=\"separator\"></div><div data-slot=\"sidebar-content\"><nav id=\"primary-navigation\" aria-label=\"Report sections\"><div data-slot=\"sidebar-group\"><div data-slot=\"sidebar-group-label\">Reports</div><button type=\"button\" data-slot=\"sidebar-group-action\" aria-label=\"Add report\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3h10l4 4v14H5zM9 11h6M9 15h6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><div data-slot=\"sidebar-group-content\"><ul data-slot=\"sidebar-menu\"><li data-slot=\"sidebar-menu-item\"><a data-slot=\"sidebar-menu-button\" data-size=\"default\" data-active=\"true\" href=\"#overview\" aria-current=\"page\" aria-label=\"Overview\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><span>Overview</span></a><div data-slot=\"sidebar-menu-badge\">12</div><button type=\"button\" data-slot=\"sidebar-menu-action\" aria-label=\"Report options\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3h10l4 4v14H5zM9 11h6M9 15h6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><ul data-slot=\"sidebar-menu-sub\"><li data-slot=\"sidebar-menu-sub-item\"><a data-slot=\"sidebar-menu-sub-button\" data-size=\"md\" href=\"#revenue\">Revenue</a></li></ul></li><li data-slot=\"sidebar-menu-item\"><button type=\"button\" data-slot=\"sidebar-menu-button\" disabled data-size=\"default\" aria-label=\"Unavailable report\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 3h10l4 4v14H5zM9 11h6M9 15h6\" fill=\"none\" stroke=\"currentColor\"/></svg><span>Unavailable report</span></button></li></ul></div></div></nav></div><div data-slot=\"sidebar-footer\">Account navigation</div><button data-slot=\"sidebar-rail\" type=\"button\" aria-label=\"Toggle Sidebar\" tabindex=\"-1\"></button></div></div></div><main data-slot=\"sidebar-inset\"><h1 id=\"overview\">Report overview</h1><button data-slot=\"sidebar-trigger\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-label=\"Toggle report navigation\" aria-expanded=\"true\" aria-controls=\"primary-navigation\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><section id=\"revenue\"><h2>Revenue</h2></section></main></div>",
+  "protocol": "Observed source callbacks and normalized primitive/native intent remain separate; _effect.* is internal source work, never a new DOM/public callback. Controlled props are not silently rewritten. Sidebar callback existence, controlled open and cookie write are distinct; Toast object close/remove callbacks belong to one actual toast id, and timer intents cannot manufacture completion. Existing Sheet/Tooltip/Button/Input/Skeleton actors keep their own contracts.",
+  "semanticParts": {
+    "wrapper": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-wrapper\"]",
+      "description": "Actual source sidebar-wrapper element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "sidebar": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar\"]",
+      "description": "Actual source sidebar element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-trigger\"]",
+      "description": "Actual source sidebar-trigger element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "rail": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-rail\"]",
+      "description": "Actual source sidebar-rail element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "inset": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-inset\"]",
+      "description": "Actual source sidebar-inset element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "input": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-input\"]",
+      "description": "Actual source sidebar-input element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-header\"]",
+      "description": "Actual source sidebar-header element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-footer\"]",
+      "description": "Actual source sidebar-footer element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-separator\"]",
+      "description": "Actual source sidebar-separator element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-content\"]",
+      "description": "Actual source sidebar-content element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-group\"]",
+      "description": "Actual source sidebar-group element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "group-label": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-group-label\"]",
+      "description": "Actual source sidebar-group-label element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "group-action": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-group-action\"]",
+      "description": "Actual source sidebar-group-action element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "group-content": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-group-content\"]",
+      "description": "Actual source sidebar-group-content element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu\"]",
+      "description": "Actual source sidebar-menu element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-item": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-item\"]",
+      "description": "Actual source sidebar-menu-item element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-button": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-button\"]",
+      "description": "Actual source sidebar-menu-button element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-action": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-action\"]",
+      "description": "Actual source sidebar-menu-action element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-badge": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-badge\"]",
+      "description": "Actual source sidebar-menu-badge element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-skeleton": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-skeleton\"]",
+      "description": "Actual source sidebar-menu-skeleton element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-sub": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-sub\"]",
+      "description": "Actual source sidebar-menu-sub element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-sub-item": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-sub-item\"]",
+      "description": "Actual source sidebar-menu-sub-item element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "menu-sub-button": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-menu-sub-button\"]",
+      "description": "Actual source sidebar-menu-sub-button element; rendered tags/selection/native labels retain caller/source ownership."
+    },
+    "gap": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-gap\"]",
+      "description": "Actual private structural child; no new public export."
+    },
+    "container": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-container\"]",
+      "description": "Actual private structural child; no new public export."
+    },
+    "inner": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar-inner\"]",
+      "description": "Actual private structural child; no new public export."
+    },
+    "skeleton-icon": {
+      "kind": "element",
+      "selector": ".cn-sidebar-menu-skeleton-icon",
+      "description": "Actual private structural child; no new public export."
+    },
+    "skeleton-text": {
+      "kind": "element",
+      "selector": ".cn-sidebar-menu-skeleton-text",
+      "description": "Actual private structural child; no new public export."
+    },
+    "mobile-header": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar\"][data-mobile=\"true\"]>[data-slot=\"sheet-header\"]",
+      "description": "Actual delegated Sheet registered title/description wrapper, visually hidden by source sidebar usage."
+    },
+    "mobile-default-close": {
+      "kind": "element",
+      "selector": "[data-slot=\"sidebar\"][data-mobile=\"true\"]>[data-slot=\"sheet-close\"]",
+      "description": "Actual default Sheet Close hidden by source sidebar; reference supplies another visible native SheetClose."
+    },
+    "context": {
+      "kind": "controller",
+      "description": "Actual provider context hook; desktop open and mobile open are separate source state."
+    }
+  },
+  "visualStateMapping": {
+    "state": {
+      "source": "useSidebar state",
+      "attribute": "data-state"
+    },
+    "collapsible": {
+      "prop": "collapsible",
+      "values": [
+        "none",
+        "icon",
+        "offcanvas"
+      ]
+    },
+    "side": {
+      "prop": "side",
+      "values": [
+        "left",
+        "right"
+      ]
+    },
+    "size": {
+      "prop": "SidebarMenuButton.size",
+      "values": [
+        "sm",
+        "default",
+        "lg"
+      ]
+    }
+  }
+}

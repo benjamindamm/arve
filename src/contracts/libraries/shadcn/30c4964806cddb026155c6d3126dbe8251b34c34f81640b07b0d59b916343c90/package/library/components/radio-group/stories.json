@@ -1,0 +1,104 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:RadioGroup",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "inputs": {
+        "value": "basic"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "inputs": {
+        "value": "pro"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-basic\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"basic\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-pro\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"pro\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "inputs": {
+        "aria-invalid": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><p id=\"plan-error\">A delivery plan is required.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help plan-error\" aria-invalid=\"true\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\" aria-disabled=\"true\" data-disabled=\"\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"pro\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "readonly",
+      "name": "Readonly",
+      "inputs": {
+        "readOnly": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\" aria-readonly=\"true\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "directionProvider": "rtl",
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\" dir=\"rtl\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "index": 0,
+          "keyboard": true
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    }
+  ]
+}

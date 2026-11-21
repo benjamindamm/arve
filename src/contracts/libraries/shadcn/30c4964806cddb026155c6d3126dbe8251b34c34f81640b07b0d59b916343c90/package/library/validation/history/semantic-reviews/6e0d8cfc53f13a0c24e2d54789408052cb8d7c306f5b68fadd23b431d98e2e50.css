@@ -1,0 +1,173 @@
+@import "../../tokens.css";
+
+[data-part="chart-figure"] {
+  box-sizing: border-box;
+  display: grid;
+  gap: var(--ui-chart-gap);
+  margin: 0;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  padding: var(--ui-chart-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-part="chart-caption"] {
+  font-weight: var(--ui-chart-title-weight);
+}
+
+[data-part="chart-summary"] {
+  margin: 0;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="chart"] {
+  display: flex;
+  justify-content: center;
+  min-inline-size: 0;
+  inline-size: 100%;
+  block-size: var(--ui-chart-height);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-chart-text-size);
+  line-height: var(--ui-chart-text-line-height);
+  --chart-series-primary: var(--ui-chart-series-primary);
+  --chart-series-secondary: var(--ui-chart-series-secondary);
+}
+
+[data-slot="chart"]>svg {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+[data-slot="chart"] .recharts-cartesian-axis-tick text {
+  fill: var(--ui-color-muted-foreground);
+}
+
+[data-slot="chart"] .recharts-cartesian-grid line {
+  stroke: var(--ui-color-border);
+}
+
+[data-part="chart-table-scroll"] {
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+[data-part="chart-table"] {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  text-align: start;
+}
+
+[data-part="chart-table"] caption {
+  font-weight: var(--ui-font-weight-medium);
+  text-align: start;
+  padding-block-end: var(--ui-control-label-gap);
+}
+
+[data-part="chart-table"] th,
+[data-part="chart-table"] td {
+  padding: var(--ui-control-label-gap);
+  border-block-end: var(--ui-border-width) solid var(--ui-color-border);
+  text-align: start;
+}
+
+[data-part="chart-feedback"] {
+  margin: 0;
+  color: var(--ui-color-muted-foreground);
+}
+
+.cn-chart-tooltip {
+  display: grid;
+  min-inline-size: 128px;
+  gap: var(--ui-control-label-gap);
+  padding: var(--ui-chart-tooltip-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-chart-tooltip-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-size: var(--ui-chart-text-size);
+  line-height: var(--ui-chart-text-line-height);
+  box-shadow: 0 2px 8px var(--ui-focus-shadow);
+}
+
+.cn-chart-tooltip>div:first-child {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.cn-chart-tooltip>div:last-child {
+  display: grid;
+  gap: 6px;
+}
+
+.cn-chart-tooltip>div:last-child>div {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-control-label-gap);
+}
+
+.cn-chart-tooltip [style*="--color-bg"] {
+  flex: none;
+  inline-size: var(--ui-chart-indicator-size);
+  block-size: var(--ui-chart-indicator-size);
+  border-radius: var(--ui-chart-indicator-radius);
+  background: var(--color-bg);
+  border-color: var(--color-border);
+}
+
+.cn-chart-tooltip [style*="--color-bg"].w-1 {
+  inline-size: 4px;
+  align-self: stretch;
+  block-size: auto;
+}
+
+.cn-chart-tooltip [style*="--color-bg"].w-0 {
+  inline-size: 0;
+  align-self: stretch;
+  block-size: auto;
+  border-width: 1.5px;
+  border-style: dashed;
+  background: transparent;
+}
+
+.cn-chart-tooltip>div:last-child>div>div:last-child {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--ui-control-label-gap);
+}
+
+.cn-chart-tooltip span:last-child {
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-chart-legend-gap);
+  padding-block: var(--ui-chart-gap);
+  font-size: var(--ui-chart-text-size);
+  line-height: var(--ui-chart-text-line-height);
+}
+
+.chart-legend>div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chart-legend>div>div {
+  inline-size: 8px;
+  block-size: 8px;
+  border-radius: var(--ui-chart-indicator-radius);
+}
+
+[data-part="chart-figure"][data-chart-kind="chart"] {
+  border-radius: var(--ui-chart-frame-radius);
+}

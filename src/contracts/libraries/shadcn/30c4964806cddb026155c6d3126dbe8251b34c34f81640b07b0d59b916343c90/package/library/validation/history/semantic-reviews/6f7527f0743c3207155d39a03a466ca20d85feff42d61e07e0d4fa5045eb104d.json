@@ -1,0 +1,79 @@
+{
+  "componentId": "shadcn:Drawer",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+  "keyboardAndFocus": "The default modal drawer contains focus, supports Escape/Close and restores the trigger focus. Pointer swipes use the configured direction and primitive gesture logic; keyboard access remains available through explicit controls.",
+  "sourceRule": "The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Owns open/modal state without a DOM root."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-trigger\"]",
+      "description": "Actual primitive native trigger."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-popup\"]",
+      "description": "Actual focus-managed popup surface."
+    },
+    "overlay": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-overlay\"]",
+      "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-header\"]",
+      "description": "Intrinsic heading stack."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-footer\"]",
+      "description": "Actions, kept in caller order."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-title\"]",
+      "description": "Actual heading named by primitive relation."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-description\"]",
+      "description": "Actual descriptive paragraph."
+    },
+    "portal": {
+      "kind": "controller",
+      "description": "Portal ownership, not a styled anatomy element."
+    },
+    "close": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-close\"]",
+      "description": "Native close action, including optional internal icon close."
+    },
+    "viewport": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-viewport\"]",
+      "description": "Primitive viewport, separate from focus popup."
+    },
+    "body": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-content\"]",
+      "description": "Primitive content container, not the outer popup."
+    },
+    "swipe-handle": {
+      "kind": "element",
+      "selector": "[data-slot=\"drawer-swipe-handle\"]",
+      "description": "Optional hidden grip; no independent button behavior."
+    }
+  },
+  "visualStateMapping": {
+    "placement": "Actual public swipeDirection"
+  }
+}

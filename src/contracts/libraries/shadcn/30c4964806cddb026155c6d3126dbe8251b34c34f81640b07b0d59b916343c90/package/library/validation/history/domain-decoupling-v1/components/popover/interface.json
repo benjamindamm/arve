@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "popover.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Popover",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Content defaults side=bottom, align=center, sideOffset=4 and alignOffset=0. The wrapper exposes no PopoverClose component; source Root actionsRef.close or a caller-composed control closes it. Title/Description are actual exported primitive registration parts that supply the Popup name/description; the reference uses explicit IDs to make ownership auditable. Positioning/collision work belongs to the primitive, not a guessed CSS-only interaction."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PopoverPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:7."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: PopoverPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "popover",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PopoverTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PopoverPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:11."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popover-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PopoverContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PopoverPrimitive.Popup.Props &\n  Pick<\n    PopoverPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >"
+              },
+              "description": "Exact public prop type and defaults {\"align\": \"\\\"center\\\"\", \"alignOffset\": \"0\", \"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"4\"}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:15."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popover-content",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PopoverHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:49."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popover-header",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PopoverTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PopoverPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:59."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popover-title",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "PopoverDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PopoverPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source:69."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popover-description",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

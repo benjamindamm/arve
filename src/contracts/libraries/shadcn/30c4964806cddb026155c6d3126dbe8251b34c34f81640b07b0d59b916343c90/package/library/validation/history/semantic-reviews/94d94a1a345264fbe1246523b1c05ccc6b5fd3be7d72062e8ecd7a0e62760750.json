@@ -1,0 +1,211 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Dialog",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "DialogTrigger",
+      "selector": "[data-slot=\"dialog-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "DialogContent",
+      "selector": "[data-slot=\"dialog-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "overlay": {
+      "declaration": "DialogOverlay",
+      "selector": "[data-slot=\"dialog-overlay\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "declaration": "DialogHeader",
+      "selector": "[data-slot=\"dialog-header\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "footer": {
+      "declaration": "DialogFooter",
+      "selector": "[data-slot=\"dialog-footer\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "declaration": "DialogTitle",
+      "selector": "[data-slot=\"dialog-title\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "declaration": "DialogDescription",
+      "selector": "[data-slot=\"dialog-description\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "portal": {
+      "declaration": "DialogPortal",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "close": {
+      "declaration": "DialogClose",
+      "selector": "[data-slot=\"dialog-close\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2137:552",
+      "property": "width",
+      "value": 448,
+      "semanticRole": "selected surface width evidence"
+    },
+    {
+      "sourceNodeId": "2137:552",
+      "property": "layout.gap",
+      "value": 16,
+      "semanticRole": "content gap"
+    },
+    {
+      "sourceNodeId": "2136:6740",
+      "property": "text",
+      "value": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "align": "RIGHT",
+        "autoResize": "HEIGHT"
+      },
+      "semanticRole": "title typography"
+    },
+    {
+      "sourceNodeId": "2136:6738",
+      "property": "layout",
+      "value": {
+        "mode": "VERTICAL",
+        "gap": 8,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "semanticRole": "header layout"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:227 (Dialog), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2136:6737",
+      "sourcePartId": "2136:6736",
+      "sourceName": "Dialog header / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2136:6993",
+      "sourcePartId": "2136:6736",
+      "sourceName": "Dialog header / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2136:7034",
+      "sourcePartId": "2136:7033",
+      "sourceName": "DialogFooter / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2136:7010",
+      "sourcePartId": "2136:7033",
+      "sourceName": "DialogFooter / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The pinned Dialog wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. Content is centered with a native 14px corner and 16px inset/gap; 448px (Dialog) or 424px (AlertDialog) is a selected maximum, shrinking to viewport minus 32px. AlertDialog sm uses the native 320px compact surface and actual 40px media tile. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

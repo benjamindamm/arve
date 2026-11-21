@@ -1,0 +1,25 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Progress" initial="active">
+  <datamodel>
+    <data id="value" expr="null" />
+    <data id="min" expr="0" />
+    <data id="max" expr="100" />
+    <data id="normalized" expr="null" />
+    <data id="status" expr="'indeterminate'" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SET_BOUNDS" cond="Number.isFinite(_event.data.min) &amp;&amp; Number.isFinite(_event.data.max) &amp;&amp; _event.data.min &lt; _event.data.max">
+      <assign location="min" expr="_event.data.min" />
+      <assign location="max" expr="_event.data.max" />
+    </transition>
+    <transition event="SET_VALUE">
+      <assign location="value" expr="_event.data.value" />
+      <assign location="normalized" expr="value == null || !Number.isFinite(value) ? null : Math.min(max, Math.max(min,value))" />
+      <assign location="status" expr="normalized === null ? 'indeterminate' : normalized === max ? 'complete' : 'progressing'" />
+    </transition>
+    <transition event="RECOMPUTE_AFTER_BOUNDS">
+      <assign location="normalized" expr="value == null || !Number.isFinite(value) ? null : Math.min(max, Math.max(min,value))" />
+      <assign location="status" expr="normalized === null ? 'indeterminate' : normalized === max ? 'complete' : 'progressing'" />
+    </transition>
+  </state>
+</scxml>

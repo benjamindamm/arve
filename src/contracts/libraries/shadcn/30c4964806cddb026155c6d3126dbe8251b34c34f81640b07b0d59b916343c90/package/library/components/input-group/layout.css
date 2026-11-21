@@ -1,0 +1,147 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-part="input-group-label"] {
+  display: block;
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  font-weight: var(--ui-font-weight-medium);
+}
+
+[data-slot="input-group"] {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-inline-size: 0;
+  inline-size: 100%;
+  min-block-size: var(--ui-input-group-height);
+  border: var(--ui-border-width) solid var(--ui-color-input);
+  border-radius: var(--ui-input-group-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="input-group-control"] {
+  box-sizing: border-box;
+  flex: 1;
+  min-inline-size: 0;
+  min-block-size: calc(var(--ui-input-group-height) - 2*var(--ui-border-width));
+  padding: var(--ui-input-group-control-block-inset) var(--ui-input-group-control-inset);
+  border: 0;
+  border-radius: inherit;
+  outline: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+[data-slot="input-group-control"]::placeholder {
+  color: var(--ui-color-muted-foreground);
+  opacity: 1;
+}
+
+textarea[data-slot="input-group-control"] {
+  min-block-size: var(--ui-textarea-min-height);
+  field-sizing: content;
+  resize: none;
+}
+
+[data-slot="input-group-addon"] {
+  display: flex;
+  flex: none;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 0;
+  min-block-size: calc(var(--ui-input-group-height) - 2*var(--ui-border-width));
+  gap: var(--ui-input-group-gap);
+  cursor: text;
+}
+
+[data-slot="input-group-addon"][data-align="inline-start"] {
+  order: -1;
+  padding-inline-start: calc(var(--ui-input-group-addon-inset) - var(--ui-border-width));
+}
+
+[data-slot="input-group-addon"][data-align="inline-end"] {
+  order: 1;
+  padding-inline-end: calc(var(--ui-input-group-addon-inset) - var(--ui-border-width));
+}
+
+[data-slot="input-group-addon"][data-align="block-start"],
+[data-slot="input-group-addon"][data-align="block-end"] {
+  flex-basis: 100%;
+  inline-size: 100%;
+  justify-content: flex-start;
+  padding-inline: calc(var(--ui-input-group-addon-inset) - var(--ui-border-width));
+}
+
+[data-slot="input-group-addon"][data-align="block-start"] {
+  order: -1;
+}
+
+[data-slot="input-group-addon"][data-align="block-end"] {
+  order: 1;
+}
+
+.cn-input-group-text {
+  display: flex;
+  align-items: center;
+  color: var(--ui-color-muted-foreground);
+  font: inherit;
+}
+
+[data-slot="input-group-addon"] .cn-input-group-text {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.cn-input-group-button {
+  flex: none;
+  box-shadow: none;
+  border-radius: var(--ui-button-radius-sm);
+}
+
+.cn-input-group-button-size-xs,
+.cn-input-group-button-size-icon-xs {
+  min-block-size: var(--ui-input-group-button-xs-height);
+  font-size: var(--ui-button-font-size-small);
+  line-height: var(--ui-button-line-height-small);
+  padding-inline: var(--ui-button-padding-xs);
+}
+
+.cn-input-group-button-size-sm,
+.cn-input-group-button-size-icon-sm {
+  min-block-size: var(--ui-input-group-button-sm-height);
+}
+
+.cn-input-group-button-size-icon-xs {
+  inline-size: var(--ui-input-group-button-xs-height);
+  padding: 0;
+}
+
+.cn-input-group-button-size-icon-sm {
+  inline-size: var(--ui-input-group-button-sm-height);
+  padding: 0;
+}
+
+[data-slot="input-group"]:focus-within {
+  border-color: var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="input-group"]:has(>[data-slot="input-group-control"][aria-invalid="true"]) {
+  border-color: var(--ui-color-destructive);
+}
+
+[data-slot="input-group"]:has(>[data-slot="input-group-control"]:disabled) {
+  opacity: var(--ui-input-group-disabled-opacity);
+}

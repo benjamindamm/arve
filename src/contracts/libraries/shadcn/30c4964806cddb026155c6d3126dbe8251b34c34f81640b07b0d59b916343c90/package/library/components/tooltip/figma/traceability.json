@@ -1,0 +1,149 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Tooltip",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "TooltipTrigger",
+      "selector": "[data-slot=\"tooltip-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "TooltipContent",
+      "selector": "[data-slot=\"tooltip-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "provider": {
+      "declaration": "TooltipProvider",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "arrow": {
+      "declaration": "TooltipContent",
+      "selector": ".cn-tooltip-arrow",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1984:2993",
+      "property": "cornerRadius.0",
+      "value": 8,
+      "semanticRole": "radius"
+    },
+    {
+      "sourceNodeId": "1984:2993",
+      "property": "layout.padding",
+      "value": [
+        8,
+        12,
+        8,
+        12
+      ],
+      "semanticRole": "insets"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:2904 (Tooltip), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1987:1466",
+      "sourcePartId": "1987:1467",
+      "sourceName": "Tooltip / Placement=Top",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "provider",
+        "arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1987:1463",
+      "sourcePartId": "1987:1467",
+      "sourceName": "Tooltip / Placement=Bottom",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "provider",
+        "arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1987:1461",
+      "sourcePartId": "1987:1467",
+      "sourceName": "Tooltip / Placement=Left",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "provider",
+        "arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1987:1462",
+      "sourcePartId": "1987:1467",
+      "sourceName": "Tooltip / Placement=Right",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "provider",
+        "arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual Tooltip portal positioning, collision handling and defaults remain primitive-owned; CSS does not recreate anchor coordinates. Native radius/insets are adopted as semantic popup metrics, while width is fluid with an explicit bounded maximum. Tooltip uses native 8px corners and 8/12px insets, inverse foreground/background colors, and its actual internal Arrow class. The chosen usage hides duplicate visual tooltip text from accessibility and provides essential help persistently with a real aria-describedby relation; this is an explicit accessible usage, not a claim the pinned source automatically creates that relation.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

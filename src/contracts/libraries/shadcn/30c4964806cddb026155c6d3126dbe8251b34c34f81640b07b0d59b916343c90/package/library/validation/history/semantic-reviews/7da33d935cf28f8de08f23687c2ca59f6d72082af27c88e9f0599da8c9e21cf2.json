@@ -1,0 +1,119 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:ChartArea",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "source-data",
+      "name": "Source data",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "ready",
+        "indicator": null,
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "empty",
+      "name": "Empty",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "empty",
+        "indicator": null,
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><p data-part=\"chart-feedback\" role=\"status\">No chart data available.</p><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody></tbody></table></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "error",
+        "indicator": null,
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><p data-part=\"chart-feedback\" role=\"status\">Chart data could not be loaded. Retry the request.</p><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody></tbody></table></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "ready",
+        "indicator": null,
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" dir=\"rtl\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "tooltip-dot",
+      "name": "Tooltip dot",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "ready",
+        "indicator": "dot",
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"cn-chart-tooltip\"><div>January</div><div><div><div class=\"h-2.5 w-2.5\" style=\"--color-bg:var(--ui-chart-series-primary);--color-border:var(--ui-chart-series-primary)\"></div><div><span>Desktop</span><span>186</span></div></div></div></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "tooltip-line",
+      "name": "Tooltip line",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "ready",
+        "indicator": "line",
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"cn-chart-tooltip\"><div>January</div><div><div><div class=\"w-1\" style=\"--color-bg:var(--ui-chart-series-primary);--color-border:var(--ui-chart-series-primary)\"></div><div><span>Desktop</span><span>186</span></div></div></div></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    },
+    {
+      "id": "tooltip-dashed",
+      "name": "Tooltip dashed",
+      "inputs": {
+        "referenceData": "chart-area",
+        "mode": "ready",
+        "indicator": "dashed",
+        "dir": "ltr"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"cn-chart-tooltip\"><div>January</div><div><div><div class=\"w-0\" style=\"--color-bg:var(--ui-chart-series-primary);--color-border:var(--ui-chart-series-primary)\"></div><div><span>Desktop</span><span>186</span></div></div></div></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>"
+      },
+      "steps": [],
+      "expectation": "Complete exact source table is continuously available in ready state; explicit empty/error replaces both data and supplementary graph. Static SVG is a straight-segment/scaled data illustration, not a claim to reproduce Recharts interpolation."
+    }
+  ]
+}

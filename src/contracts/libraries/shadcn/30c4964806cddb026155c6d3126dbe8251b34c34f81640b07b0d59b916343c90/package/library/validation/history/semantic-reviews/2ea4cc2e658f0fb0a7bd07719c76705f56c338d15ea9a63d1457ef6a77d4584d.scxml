@@ -1,0 +1,90 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="SidebarProvider" initial="active">
+  <datamodel>
+    <data id="internalOpen" expr="true" />
+    <data id="propOpen" expr="true" />
+    <data id="openControlled" expr="false" />
+    <data id="hasChangeHandler" expr="false" />
+    <data id="effectiveOpen" expr="true" />
+    <data id="openMobile" expr="false" />
+    <data id="isMobile" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="SET_CONTROLLED">
+      <assign location="openControlled" expr="_event.data.value" />
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="SET_CHANGE_HANDLER">
+      <assign location="hasChangeHandler" expr="_event.data.value" />
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="HOST_OPEN">
+      <assign location="propOpen" expr="_event.data.value" />
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="SOURCE_MEDIA_CHANGE">
+      <assign location="isMobile" expr="_event.data.value" />
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="HOST_MOBILE_OPEN">
+      <assign location="openMobile" expr="_event.data.value" />
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="DESKTOP_SET_OPEN" cond="true">
+      <if cond="hasChangeHandler">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="_event.data.value" />
+        </send>
+        <else />
+        <assign location="internalOpen" expr="_event.data.value" />
+      </if>
+      <send event="_effect.writeSidebarCookie" target="#_parent">
+        <param name="name" expr="'sidebar_state'" />
+        <param name="value" expr="_event.data.value" />
+        <param name="maxAge" expr="604800" />
+      </send>
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="TOGGLE" cond="!isMobile">
+      <if cond="hasChangeHandler">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="!effectiveOpen" />
+        </send>
+        <else />
+        <assign location="internalOpen" expr="!effectiveOpen" />
+      </if>
+      <send event="_effect.writeSidebarCookie" target="#_parent">
+        <param name="name" expr="'sidebar_state'" />
+        <param name="value" expr="!effectiveOpen" />
+        <param name="maxAge" expr="604800" />
+      </send>
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="SHORTCUT_CTRL_META_B" cond="!isMobile">
+      <if cond="hasChangeHandler">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="!effectiveOpen" />
+        </send>
+        <else />
+        <assign location="internalOpen" expr="!effectiveOpen" />
+      </if>
+      <send event="_effect.writeSidebarCookie" target="#_parent">
+        <param name="name" expr="'sidebar_state'" />
+        <param name="value" expr="!effectiveOpen" />
+        <param name="maxAge" expr="604800" />
+      </send>
+      <assign location="effectiveOpen" expr="openControlled ? propOpen : internalOpen" />
+    </transition>
+    <transition event="TOGGLE SHORTCUT_CTRL_META_B" cond="isMobile">
+      <assign location="openMobile" expr="!openMobile" />
+    </transition>
+    <transition event="SOURCE_SHEET_OPEN_CHANGE">
+      <assign location="openMobile" expr="!!_event.data.open" />
+    </transition>
+    <transition event="ESCAPE" cond="isMobile &amp;&amp; openMobile">
+      <send event="_effect.delegateSheetEscape" target="#_parent">
+        <param name="policy" expr="'existing-Sheet-cancellation-and-focus-contract'" />
+      </send>
+    </transition>
+    <transition event="TAB SHIFT_TAB FOCUS_IN FOCUS_OUT" />
+  </state>
+</scxml>

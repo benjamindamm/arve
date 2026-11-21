@@ -1,0 +1,257 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Drawer" initial="control">
+  <datamodel>
+    <data id="controlled" expr="false" />
+    <data id="disabled" expr="false" />
+    <data id="open" expr="false" />
+    <data id="preventUnmount" expr="false" />
+    <data id="modal" expr="true" />
+    <data id="disablePointerDismissal" expr="false" />
+    <data id="snapPoint" expr="null" />
+    <data id="snapControlled" expr="false" />
+  </datamodel>
+  <state id="control" initial="closed">
+    <transition event="SET_CONTROLLED" cond="typeof _event.data.controlled === 'boolean'">
+      <assign location="controlled" expr="_event.data.controlled" />
+    </transition>
+    <transition event="SET_DISABLED" cond="typeof _event.data.disabled === 'boolean'">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <state id="closed">
+      <transition event="TRIGGER_PRESS" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="true" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="TRIGGER_PRESS" target="opening" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="true" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="true" />
+        <send event="_effect.initialFocus" target="#_parent">
+          <param name="target" expr="'source-popup-default-or-explicit-initialFocus'" />
+        </send>
+      </transition>
+    </state>
+    <state id="opening">
+      <transition event="ESCAPE" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="ESCAPE" target="closing" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="CLOSE_PRESS" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="CLOSE_PRESS" target="closing" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="OUTSIDE_PRESS" cond="(!disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="OUTSIDE_PRESS" target="closing" cond="(!disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="FOCUS_OUT" cond="(modal === false &amp;&amp; !disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="FOCUS_OUT" target="closing" cond="(modal === false &amp;&amp; !disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="TAB SHIFT_TAB" cond="modal !== false">
+        <send event="_effect.containFocus" target="#_parent">
+          <param name="target" expr="'source-focus-manager'" />
+        </send>
+      </transition>
+      <transition event="SWIPE_DISMISS" cond="(_event.data.dismiss === true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="SWIPE_DISMISS" target="closing" cond="(_event.data.dismiss === true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="SNAP_POINT_CHANGE" cond="!!_event.data.eventDetails">
+        <send event="onSnapPointChange" target="#_parent">
+          <param name="snapPoint" expr="_event.data.snapPoint" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <if cond="!snapControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+          <assign location="snapPoint" expr="_event.data.snapPoint" />
+        </if>
+      </transition>
+      <transition event="ANIMATION_COMPLETE" target="expanded" cond="_event.data.open === true">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="true" />
+        </send>
+      </transition>
+    </state>
+    <state id="expanded">
+      <transition event="ESCAPE" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="ESCAPE" target="closing" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="CLOSE_PRESS" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="CLOSE_PRESS" target="closing" cond="(true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="OUTSIDE_PRESS" cond="(!disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="OUTSIDE_PRESS" target="closing" cond="(!disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="FOCUS_OUT" cond="(modal === false &amp;&amp; !disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="FOCUS_OUT" target="closing" cond="(modal === false &amp;&amp; !disablePointerDismissal) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="TAB SHIFT_TAB" cond="modal !== false">
+        <send event="_effect.containFocus" target="#_parent">
+          <param name="target" expr="'source-focus-manager'" />
+        </send>
+      </transition>
+      <transition event="SWIPE_DISMISS" cond="(_event.data.dismiss === true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="SWIPE_DISMISS" target="closing" cond="(_event.data.dismiss === true) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+      <transition event="SNAP_POINT_CHANGE" cond="!!_event.data.eventDetails">
+        <send event="onSnapPointChange" target="#_parent">
+          <param name="snapPoint" expr="_event.data.snapPoint" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <if cond="!snapControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+          <assign location="snapPoint" expr="_event.data.snapPoint" />
+        </if>
+      </transition>
+    </state>
+    <state id="closing">
+      <transition event="ANIMATION_COMPLETE" target="closed" cond="_event.data.open === false &amp;&amp; !preventUnmount">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="false" />
+        </send>
+        <send event="_effect.finalFocus" target="#_parent">
+          <param name="target" expr="'source-trigger-or-explicit-finalFocus'" />
+        </send>
+      </transition>
+      <transition event="UNMOUNT_ACTION" target="closed" cond="true">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="false" />
+        </send>
+        <send event="_effect.finalFocus" target="#_parent">
+          <param name="target" expr="'source-trigger-or-explicit-finalFocus'" />
+        </send>
+      </transition>
+    </state>
+    <transition event="SET_OPEN" target="closing" cond="typeof _event.data.open === 'boolean' &amp;&amp; _event.data.open === false &amp;&amp; open !== _event.data.open">
+      <assign location="open" expr="false" />
+      <assign location="preventUnmount" expr="false" />
+    </transition>
+    <transition event="SET_OPEN" target="opening" cond="typeof _event.data.open === 'boolean' &amp;&amp; _event.data.open === true &amp;&amp; open !== _event.data.open">
+      <assign location="open" expr="true" />
+      <assign location="preventUnmount" expr="false" />
+      <send event="_effect.initialFocus" target="#_parent">
+        <param name="target" expr="'source-popup-default-or-explicit-initialFocus'" />
+      </send>
+    </transition>
+    <transition event="FOCUS_SETTLED" />
+    <transition event="SET_MODAL" cond="typeof _event.data.modal === 'boolean' || _event.data.modal === 'trap-focus'">
+      <assign location="modal" expr="_event.data.modal" />
+    </transition>
+    <transition event="SET_POINTER_DISMISSAL" cond="typeof _event.data.prevent === 'boolean'">
+      <assign location="disablePointerDismissal" expr="_event.data.prevent" />
+    </transition>
+    <transition event="SET_SNAP_POINT">
+      <assign location="snapPoint" expr="_event.data.snapPoint" />
+    </transition>
+    <transition event="SET_SNAP_CONTROLLED">
+      <assign location="snapControlled" expr="!!_event.data.controlled" />
+    </transition>
+  </state>
+</scxml>

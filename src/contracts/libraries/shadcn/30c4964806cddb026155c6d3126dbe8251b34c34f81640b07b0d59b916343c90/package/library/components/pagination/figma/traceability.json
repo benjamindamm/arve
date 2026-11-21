@@ -1,0 +1,194 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "navigation": {
+      "declaration": "Pagination",
+      "selector": "[data-slot=\"pagination\"]",
+      "ownership": "actual wrapper"
+    },
+    "list": {
+      "declaration": "PaginationContent",
+      "selector": "[data-slot=\"pagination-content\"]",
+      "ownership": "actual wrapper"
+    },
+    "item": {
+      "declaration": "PaginationItem",
+      "selector": "[data-slot=\"pagination-item\"]",
+      "ownership": "actual wrapper"
+    },
+    "link": {
+      "declaration": "PaginationLink",
+      "selector": "[data-slot=\"pagination-link\"]",
+      "ownership": "actual wrapper"
+    },
+    "ellipsis": {
+      "declaration": "PaginationEllipsis",
+      "selector": "[data-slot=\"pagination-ellipsis\"]",
+      "ownership": "actual wrapper"
+    },
+    "previous": {
+      "declaration": "PaginationPrevious",
+      "selector": ".cn-pagination-previous",
+      "ownership": "actual wrapper"
+    },
+    "next": {
+      "declaration": "PaginationNext",
+      "selector": ".cn-pagination-next",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2074:1052",
+      "observationPath": "layout.gap",
+      "semanticTokens": [
+        "components.pagination.gap"
+      ]
+    },
+    {
+      "sourceNodeId": "2074:1053",
+      "observationPath": "height",
+      "semanticTokens": [
+        "components.pagination.itemSize"
+      ]
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1981 (Pagination), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2073:1631",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Frame 18",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:22811",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2073:1645",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Frame 13",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:22812",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2073:1657",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Frame 22",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:22822",
+      "sourcePartId": "2073:1613",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "ellipsis",
+        "previous",
+        "next"
+      ],
+      "canonicalFixtures": [
+        "middle-page",
+        "first-boundary",
+        "last-boundary",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Pagination binds all seven actual exports and explicitly imports its real Button styling dependency. Native 32px square page actions and 2px gap are retained; destination wording does not become fixed previous/next widths. The selected pinned Button primitive renders these anchors with role=button and tabindex=0 because nativeButton=false, and intentionally supplies Space activation while Enter uses native href activation. The reference faithfully describes page actions backed by href, rather than incorrectly claiming plain link roles or Enter-only behavior. isActive supplies aria-current=page, data-active and the source outline variant; it does not change a stored page index. Previous/Next text and accessible names are caller-localizable; the reference follows the source hide/show text recipe at explicit 40rem. Unavailable boundary actions are omitted, not fake-disabled anchors. Ellipsis remains hidden and does not imply a menu. All page computation, routing/fetching and isActive updates remain caller-owned.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,20 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="ScrollArea" initial="active">
+  <datamodel>
+    <data id="x" expr="0" />
+    <data id="y" expr="0" />
+    <data id="overflowX" expr="false" />
+    <data id="overflowY" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SOURCE_MEASURE">
+      <assign location="overflowX" expr="!!_event.data.overflowX" />
+      <assign location="overflowY" expr="!!_event.data.overflowY" />
+    </transition>
+    <transition event="NATIVE_VIEWPORT_SCROLL" cond="Number.isFinite(_event.data.x) &amp;&amp; Number.isFinite(_event.data.y)">
+      <assign location="x" expr="_event.data.x" />
+      <assign location="y" expr="_event.data.y" />
+    </transition>
+    <transition event="KEYBOARD_SCROLL WHEEL TOUCH THUMB_DRAG PROPS_CHANGED" />
+  </state>
+</scxml>

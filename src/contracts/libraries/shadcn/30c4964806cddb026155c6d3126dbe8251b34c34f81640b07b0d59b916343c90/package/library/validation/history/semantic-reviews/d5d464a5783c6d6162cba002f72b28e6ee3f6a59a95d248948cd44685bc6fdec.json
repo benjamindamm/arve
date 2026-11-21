@@ -1,0 +1,46 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Skeleton",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "loading-text",
+      "name": "Loading text",
+      "inputs": {
+        "className": "ui-skeleton-text"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<section aria-busy=\"true\" aria-labelledby=\"skeleton-heading\"><h2 id=\"skeleton-heading\">Contacts</h2><div role=\"status\">Loading contacts</div><div data-slot=\"skeleton\" class=\"ui-skeleton-text\" aria-hidden=\"true\"></div></section>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "loading-avatar",
+      "name": "Loading avatar",
+      "inputs": {
+        "className": "ui-skeleton-avatar"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<section aria-busy=\"true\" aria-labelledby=\"skeleton-heading\"><h2 id=\"skeleton-heading\">Contacts</h2><div role=\"status\">Loading contacts</div><div data-slot=\"skeleton\" class=\"ui-skeleton-avatar\" aria-hidden=\"true\"></div></section>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "loading-card",
+      "name": "Loading card",
+      "inputs": {
+        "className": "ui-skeleton-card"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<section aria-busy=\"true\" aria-labelledby=\"skeleton-heading\"><h2 id=\"skeleton-heading\">Contacts</h2><div role=\"status\">Loading contacts</div><div data-slot=\"skeleton\" class=\"ui-skeleton-card\" aria-hidden=\"true\"></div></section>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+@import "../../tokens.css";
+
+@import url(../button/layout.css);
+
+[data-slot="questionnaire"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-questionnaire-gap);
+  inline-size: 100%;
+  max-inline-size: var(--ui-questionnaire-width);
+  min-inline-size: 0;
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="questionnaire-progress"] {
+  min-block-size: 1lh;
+  min-inline-size: 14ch;
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-muted-foreground);
+  font-variant-numeric: tabular-nums;
+}
+
+[data-slot="questionnaire-item"] {
+  min-inline-size: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+[data-slot="questionnaire-item"][hidden] {
+  display: none;
+}
+
+[data-slot="questionnaire-title"] {
+  padding: 0;
+  font-size: var(--ui-questionnaire-title-size);
+  line-height: var(--ui-questionnaire-title-line);
+  font-weight: var(--ui-questionnaire-title-weight);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="questionnaire-description"] {
+  margin: 8px 0;
+  color: var(--ui-color-muted-foreground);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="questionnaire-choices"] {
+  display: grid;
+  gap: var(--ui-questionnaire-gap);
+  min-inline-size: 0;
+}
+
+[data-slot="questionnaire-choice"] {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-questionnaire-gap);
+  min-block-size: var(--ui-questionnaire-choice-min);
+  padding: var(--ui-questionnaire-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-questionnaire-radius);
+  background: var(--ui-color-background);
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+
+[data-slot="questionnaire-choice-input"] {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+[data-slot="questionnaire-choice"]:hover,
+[data-slot="questionnaire-choice"][data-checked] {
+  background: var(--ui-color-muted);
+}
+
+[data-slot="questionnaire-choice"][data-disabled] {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+[data-slot="questionnaire-choice"]:has([data-slot="questionnaire-choice-input"]:focus-visible) {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="questionnaire-choice-indicator"] {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-questionnaire-indicator);
+  block-size: var(--ui-questionnaire-indicator);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: 4px;
+}
+
+[data-slot="questionnaire-choice"][data-type="radio"] [data-slot="questionnaire-choice-indicator"] {
+  border-radius: 50%;
+}
+
+[data-slot="questionnaire-choice-indicator-dot"] {
+  display: none;
+  inline-size: var(--ui-questionnaire-dot);
+  block-size: var(--ui-questionnaire-dot);
+  border-radius: 50%;
+  background: var(--ui-color-foreground);
+}
+
+[data-slot="questionnaire-choice-indicator-check"] {
+  display: none;
+  inline-size: 12px;
+  block-size: 12px;
+}
+
+[data-slot="questionnaire-choice"][data-type="radio"][data-checked] [data-slot="questionnaire-choice-indicator-dot"],
+[data-slot="questionnaire-choice"][data-type="checkbox"][data-checked] [data-slot="questionnaire-choice-indicator-check"] {
+  display: block;
+}
+
+[data-slot="questionnaire-choice-label"] {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="questionnaire-choice-description"] {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="questionnaire-choice-shortcut"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-questionnaire-shortcut);
+  block-size: var(--ui-questionnaire-shortcut);
+  margin-inline-start: auto;
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-questionnaire-shortcut-radius);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="questionnaire-choice-shortcut"][hidden] {
+  display: none;
+}
+
+[data-slot="questionnaire-input-wrapper"] {
+  min-inline-size: 0;
+}
+
+[data-slot="questionnaire-input"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 44px;
+  padding: 10px 12px;
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-questionnaire-radius);
+  background: var(--ui-color-background);
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+[data-slot="questionnaire-input"]:focus-visible {
+  border-color: var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="questionnaire-input"][aria-invalid="true"] {
+  border-color: var(--ui-color-destructive);
+}
+
+[data-slot="questionnaire-error"] {
+  margin: 8px 0;
+  color: var(--ui-color-destructive);
+}
+
+[data-slot="questionnaire-error"][hidden] {
+  display: none;
+}
+
+[data-slot="questionnaire-actions"] {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto;
+  align-items: center;
+  gap: 8px;
+  min-block-size: 44px;
+}
+
+[data-slot="questionnaire-previous"] {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+}
+
+[data-slot="questionnaire-skip"] {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+
+[data-slot="questionnaire-next"],
+[data-slot="questionnaire-submit"] {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+[data-slot="questionnaire-actions"] button {
+  min-block-size: 44px;
+}
+
+[data-slot="questionnaire-actions"] button[hidden] {
+  display: none;
+}

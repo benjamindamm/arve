@@ -1,0 +1,140 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:InputGroup",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "inline",
+      "name": "Inline",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "textarea",
+      "name": "Textarea",
+      "inputs": {
+        "control": "textarea",
+        "align": "block-start"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"block-start\" class=\"cn-input-group-addon cn-input-group-addon-align-block-start\"><span class=\"cn-input-group-text\">Find</span></div><textarea id=\"query\" data-slot=\"input-group-control\" class=\"cn-textarea cn-input-group-textarea\" aria-describedby=\"query-help\">Project notes</textarea><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "block-end",
+      "name": "Block end",
+      "inputs": {
+        "align": "block-end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"block-end\" class=\"cn-input-group-addon cn-input-group-addon-align-block-end\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "inline-end",
+      "name": "Inline end",
+      "inputs": {
+        "align": "inline-end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "invalid",
+      "name": "Invalid",
+      "inputs": {
+        "controlInvalid": true
+      },
+      "visualState": "invalid",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help query-error\" aria-invalid=\"true\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span><p id=\"query-error\">Enter a valid report title.</p>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "controlDisabled": true
+      },
+      "visualState": "disabled",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" disabled value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\" disabled data-disabled>Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "inputs": {},
+      "visualState": "focused",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "input",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "button-sm",
+      "name": "Button sm",
+      "inputs": {
+        "buttonSize": "sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"sm\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-sm\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "button-icon-xs",
+      "name": "Button icon xs",
+      "inputs": {
+        "buttonSize": "icon-xs"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"icon-xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-icon-xs\" aria-label=\"Clear search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 6 12 12M18 6 6 18\" stroke=\"currentColor\"/></svg></button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "button-icon-sm",
+      "name": "Button icon sm",
+      "inputs": {
+        "buttonSize": "icon-sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"icon-sm\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-icon-sm\" aria-label=\"Clear search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 6 12 12M18 6 6 18\" stroke=\"currentColor\"/></svg></button></div></div><span id=\"query-help\">Enter a report title.</span>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    }
+  ]
+}

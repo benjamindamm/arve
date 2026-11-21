@@ -1,0 +1,76 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Collapsible",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Primitive root layout.",
+    "trigger": "Actual native disclosure button.",
+    "content": "Mounted primitive panel; absence on closed state is intentional."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "Collapsible",
+      "selector": "[data-slot=\"collapsible\"]",
+      "description": "Primitive root layout.",
+      "ownership": "actual pinned wrapper"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "CollapsibleTrigger",
+      "selector": "[data-slot=\"collapsible-trigger\"]",
+      "description": "Actual native disclosure button.",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "CollapsibleContent",
+      "selector": "[data-slot=\"collapsible-content\"]",
+      "description": "Mounted primitive panel; absence on closed state is intentional.",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "collapsible-gap": "components.collapsible.gap",
+      "collapsible-trigger-inset": "components.collapsible.triggerInset",
+      "collapsible-trigger-min-height": "components.collapsible.triggerMinHeight",
+      "color-accent": "semantic.color.accent",
+      "color-foreground": "semantic.color.foreground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "The three pinned wrappers are unstyled primitives. This reference adopts the native compact 32px header, 16px inline inset and 8px stack gap; content height and width remain intrinsic. No card, chevron, animation, invented variant or fixed source instance width is implied. A composed Button may replace the trigger through the actual render API; its own chrome then belongs to that composition.",
+    "variants": {},
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

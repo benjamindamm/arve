@@ -1,0 +1,23 @@
+{
+  "purpose": "Present selectable plain code and an independently operable copy-to-clipboard action.",
+  "avoid": "Syntax color alone must not carry the explanation.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 2712:2 (Code Block), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful content or content container; not classified as decorative. Any interactive descendants need separate behavior and accessibility contracts.",
+  "componentId": "shadcn:CodeBlock",
+  "sourceRule": "Root variant=default|destructive and size=default|sm only style div content. Content is native pre with nested code, dir=ltr and tabIndex0; wrap defaultsfalse, lineNumbersfalse, startLine1 controls the CSS line counter. With string children and numbering, one trailing newline is removed before splitting; empty CodeBlockLine deliberately emits a newline. No syntax highlighter or executable code engine is built in. CopyButton requires value:string, defaults ghost/icon-xs, calls caller onClick before navigator.clipboard.writeText(value), and does not inspect defaultPrevented. Successful promise sets copied=true, aria-label=Copied and a polite live text; first copied=true schedules reset after2000ms. Repeated success while already copied does not restart that effect timer. Rejected promises are swallowed, preserving the previous copied state; no onCopied/onCopyError event exists. Missing navigator.clipboard can throw synchronously before the promise catch. This reference requires a supported secure clipboard context for Copy and provides persistent native text-selection instructions as the fallback. The copy value is exact caller text, not inferred from formatted/numbered DOM.",
+  "keyboardAndFocus": "Native Copy Button supports Enter/Space; disabled suppresses its click. The focusable pre supports native selection/scrolling and Tab leaves it. Escape does not revert code or cancel a clipboard write already requested. Copy does not move focus. A descriptive code heading/instructions are caller supplied, not automatic CodeBlockTitle semantics.",
+  "contentAlternative": "Full code text/native input value/labelled slide text remains available without icon, fake caret, motion or hover. Caller owns exact help/error/recovery wording.",
+  "updatesAndDescendants": "Root variant=default|destructive and size=default|sm only style div content. Content is native pre with nested code, dir=ltr and tabIndex0; wrap defaultsfalse, lineNumbersfalse, startLine1 controls the CSS line counter. With string children and numbering, one trailing newline is removed before splitting; empty CodeBlockLine deliberately emits a newline. No syntax highlighter or executable code engine is built in. CopyButton requires value:string, defaults ghost/icon-xs, calls caller onClick before navigator.clipboard.writeText(value), and does not inspect defaultPrevented. Successful promise sets copied=true, aria-label=Copied and a polite live text; first copied=true schedules reset after2000ms. Repeated success while already copied does not restart that effect timer. Rejected promises are swallowed, preserving the previous copied state; no onCopied/onCopyError event exists. Missing navigator.clipboard can throw synchronously before the promise catch. This reference requires a supported secure clipboard context for Copy and provides persistent native text-selection instructions as the fallback. The copy value is exact caller text, not inferred from formatted/numbered DOM. Native Copy Button supports Enter/Space; disabled suppresses its click. The focusable pre supports native selection/scrolling and Tab leaves it. Escape does not revert code or cancel a clipboard write already requested. Copy does not move focus. A descriptive code heading/instructions are caller supplied, not automatic CodeBlockTitle semantics.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/code-block.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/code-block-example.tsx.source"
+  ],
+  "sourcePackages": [
+    "React19.3.1 and native Clipboard API"
+  ],
+  "referenceDecision": "Concrete content, labels, OTP digit policy, carousel positional/live text and clipboard fallback instructions are explicit caller composition; source-specific limitations are retained."
+}

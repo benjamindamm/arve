@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "dropdown-menu.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DropdownMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Actual menu Root open/defaultOpen; each menu/submenu instance owns its state. Menubar container itself exposes no selected menu value."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Root.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:9."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: MenuPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual cancellable source request with native event/reason; controlled props remain authoritative."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual source callback after the transition lifecycle."
+            },
+            {
+              "name": "onItemHighlighted",
+              "type": {
+                "text": "(highlightedItem: HTMLElement | undefined, eventDetails: MenuPrimitive.Root.HighlightEventDetails) => void"
+              },
+              "description": "Actual inherited source callback, not command activation; context menu inherits the Menu highlight details."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Controlled/uncontrolled menu ownership and cancellable requests; not a CSS root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuPortal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Portal.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:13."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Portal mounting context; positioner and popup remain source-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Trigger.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:17."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Popup.Props &\n  Pick<\n    MenuPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >"
+              },
+              "description": "Exact source props/defaults {\"align\": \"\\\"start\\\"\", \"alignOffset\": \"0\", \"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"4\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:21."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popup",
+              "description": "Popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Group.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:55."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.GroupLabel.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:59."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "label",
+              "description": "Label uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Item.Props & {\n  inset?: boolean\n  variant?: \"default\" | \"destructive\"\n}"
+              },
+              "description": "Exact source props/defaults {\"variant\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:76."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "MenuPrimitive.Item.Props[\"onClick\"]"
+              },
+              "description": "Actual native item activation handler inherited from primitive Item props."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Item uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuSub",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.SubmenuRoot.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:99."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuSubTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.SubmenuTrigger.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:103."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "submenu-trigger",
+              "description": "Submenu trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuSubContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof DropdownMenuContent>"
+              },
+              "description": "Exact source props/defaults {\"align\": \"\\\"start\\\"\", \"alignOffset\": \"-3\", \"side\": \"\\\"right\\\"\", \"sideOffset\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:134."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "submenu-popup",
+              "description": "Submenu popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuCheckboxItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:158."
+            }
+          ],
+          "events": [
+            {
+              "name": "onCheckedChange",
+              "type": {
+                "text": "(checked: boolean, eventDetails: MenuPrimitive.CheckboxItem.ChangeEventDetails) => void"
+              },
+              "description": "Actual source menu setting callback; defaults closeOnClick=false."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "checkbox",
+              "description": "Checkbox uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "checkbox-indicator",
+              "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuRadioGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.RadioGroup.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:197."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: any, eventDetails: MenuPrimitive.RadioGroup.ChangeEventDetails) => void"
+              },
+              "description": "Actual generic source radio setting callback; item activation does not automatically dismiss by default."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "radio-group",
+              "description": "Radio group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuRadioItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:206."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "radio",
+              "description": "Radio uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "radio-indicator",
+              "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "MenuPrimitive.Separator.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:243."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Separator uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DropdownMenuShortcut",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dropdown-menu.tsx.source:256."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "shortcut",
+              "description": "Shortcut uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

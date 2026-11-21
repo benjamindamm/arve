@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "scope": "Actual pinned primitives and normal-entry composition render, including complete SSR collections, v9 feature output, native contexts and caller semantics. Dynamic algorithms separately tested in real browser.",
+  "cases": [
+    {
+      "component": "questionnaire",
+      "name": "Root default noValidate is explicit native form behavior, not email verification",
+      "result": "pass"
+    },
+    {
+      "component": "questionnaire",
+      "name": "SSR items determine full progress and exclude disabled definitions",
+      "result": "pass"
+    },
+    {
+      "component": "questionnaire",
+      "name": "Item without actual Root context fails",
+      "result": "pass"
+    },
+    {
+      "component": "message-scroller",
+      "name": "native default viewport/log and stable item identity are actual primitive output",
+      "result": "pass"
+    },
+    {
+      "component": "message-scroller",
+      "name": "scroll hook requires provider instead of making invisible fallback state",
+      "result": "pass"
+    },
+    {
+      "component": "message-scroller",
+      "name": "provider renders no extra semantic container",
+      "result": "pass"
+    },
+    {
+      "component": "data-table",
+      "name": "normal entry uses actual v9 feature model, caption and first-page literal data",
+      "result": "pass"
+    },
+    {
+      "component": "questionnaire",
+      "name": "normal entry includes complete collection and local submit authority",
+      "result": "pass"
+    },
+    {
+      "component": "message-scroller",
+      "name": "normal entry contains all14 stable message rows and actual empty-geometry inert buttons",
+      "result": "pass"
+    }
+  ]
+}

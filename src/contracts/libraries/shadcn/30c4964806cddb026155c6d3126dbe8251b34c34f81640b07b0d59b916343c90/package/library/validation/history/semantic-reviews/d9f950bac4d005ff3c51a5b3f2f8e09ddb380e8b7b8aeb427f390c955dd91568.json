@@ -1,0 +1,364 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Sidebar",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "wrapper": "Actual source sidebar-wrapper element; rendered tags/selection/native labels retain caller/source ownership.",
+    "sidebar": "Actual source sidebar element; rendered tags/selection/native labels retain caller/source ownership.",
+    "trigger": "Actual source sidebar-trigger element; rendered tags/selection/native labels retain caller/source ownership.",
+    "rail": "Actual source sidebar-rail element; rendered tags/selection/native labels retain caller/source ownership.",
+    "inset": "Actual source sidebar-inset element; rendered tags/selection/native labels retain caller/source ownership.",
+    "input": "Actual source sidebar-input element; rendered tags/selection/native labels retain caller/source ownership.",
+    "header": "Actual source sidebar-header element; rendered tags/selection/native labels retain caller/source ownership.",
+    "footer": "Actual source sidebar-footer element; rendered tags/selection/native labels retain caller/source ownership.",
+    "separator": "Actual source sidebar-separator element; rendered tags/selection/native labels retain caller/source ownership.",
+    "content": "Actual source sidebar-content element; rendered tags/selection/native labels retain caller/source ownership.",
+    "group": "Actual source sidebar-group element; rendered tags/selection/native labels retain caller/source ownership.",
+    "group-label": "Actual source sidebar-group-label element; rendered tags/selection/native labels retain caller/source ownership.",
+    "group-action": "Actual source sidebar-group-action element; rendered tags/selection/native labels retain caller/source ownership.",
+    "group-content": "Actual source sidebar-group-content element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu": "Actual source sidebar-menu element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-item": "Actual source sidebar-menu-item element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-button": "Actual source sidebar-menu-button element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-action": "Actual source sidebar-menu-action element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-badge": "Actual source sidebar-menu-badge element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-skeleton": "Actual source sidebar-menu-skeleton element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-sub": "Actual source sidebar-menu-sub element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-sub-item": "Actual source sidebar-menu-sub-item element; rendered tags/selection/native labels retain caller/source ownership.",
+    "menu-sub-button": "Actual source sidebar-menu-sub-button element; rendered tags/selection/native labels retain caller/source ownership.",
+    "gap": "Actual private structural child; no new public export.",
+    "container": "Actual private structural child; no new public export.",
+    "inner": "Actual private structural child; no new public export.",
+    "skeleton-icon": "Actual private structural child; no new public export.",
+    "skeleton-text": "Actual private structural child; no new public export.",
+    "mobile-header": "Actual delegated Sheet registered title/description wrapper, visually hidden by source sidebar usage.",
+    "mobile-default-close": "Actual default Sheet Close hidden by source sidebar; reference supplies another visible native SheetClose.",
+    "context": "Actual provider context hook; desktop open and mobile open are separate source state."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    },
+    "input": {
+      "component": "../input/component.json"
+    },
+    "separator": {
+      "component": "../separator/component.json"
+    },
+    "sheet": {
+      "component": "../sheet/component.json"
+    },
+    "skeleton": {
+      "component": "../skeleton/component.json"
+    },
+    "tooltip": {
+      "component": "../tooltip/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "wrapper": {
+      "kind": "element",
+      "declaration": "SidebarProvider",
+      "selector": "[data-slot=\"sidebar-wrapper\"]",
+      "description": "Actual source sidebar-wrapper element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "sidebar": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar\"]",
+      "description": "Actual source sidebar element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "SidebarTrigger",
+      "selector": "[data-slot=\"sidebar-trigger\"]",
+      "description": "Actual source sidebar-trigger element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "rail": {
+      "kind": "element",
+      "declaration": "SidebarRail",
+      "selector": "[data-slot=\"sidebar-rail\"]",
+      "description": "Actual source sidebar-rail element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "inset": {
+      "kind": "element",
+      "declaration": "SidebarInset",
+      "selector": "[data-slot=\"sidebar-inset\"]",
+      "description": "Actual source sidebar-inset element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "input": {
+      "kind": "element",
+      "declaration": "SidebarInput",
+      "selector": "[data-slot=\"sidebar-input\"]",
+      "description": "Actual source sidebar-input element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "header": {
+      "kind": "element",
+      "declaration": "SidebarHeader",
+      "selector": "[data-slot=\"sidebar-header\"]",
+      "description": "Actual source sidebar-header element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "footer": {
+      "kind": "element",
+      "declaration": "SidebarFooter",
+      "selector": "[data-slot=\"sidebar-footer\"]",
+      "description": "Actual source sidebar-footer element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "kind": "element",
+      "declaration": "SidebarSeparator",
+      "selector": "[data-slot=\"sidebar-separator\"]",
+      "description": "Actual source sidebar-separator element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "SidebarContent",
+      "selector": "[data-slot=\"sidebar-content\"]",
+      "description": "Actual source sidebar-content element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "group": {
+      "kind": "element",
+      "declaration": "SidebarGroup",
+      "selector": "[data-slot=\"sidebar-group\"]",
+      "description": "Actual source sidebar-group element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "group-label": {
+      "kind": "element",
+      "declaration": "SidebarGroupLabel",
+      "selector": "[data-slot=\"sidebar-group-label\"]",
+      "description": "Actual source sidebar-group-label element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "group-action": {
+      "kind": "element",
+      "declaration": "SidebarGroupAction",
+      "selector": "[data-slot=\"sidebar-group-action\"]",
+      "description": "Actual source sidebar-group-action element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "group-content": {
+      "kind": "element",
+      "declaration": "SidebarGroupContent",
+      "selector": "[data-slot=\"sidebar-group-content\"]",
+      "description": "Actual source sidebar-group-content element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu": {
+      "kind": "element",
+      "declaration": "SidebarMenu",
+      "selector": "[data-slot=\"sidebar-menu\"]",
+      "description": "Actual source sidebar-menu element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-item": {
+      "kind": "element",
+      "declaration": "SidebarMenuItem",
+      "selector": "[data-slot=\"sidebar-menu-item\"]",
+      "description": "Actual source sidebar-menu-item element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-button": {
+      "kind": "element",
+      "declaration": "SidebarMenuButton",
+      "selector": "[data-slot=\"sidebar-menu-button\"]",
+      "description": "Actual source sidebar-menu-button element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-action": {
+      "kind": "element",
+      "declaration": "SidebarMenuAction",
+      "selector": "[data-slot=\"sidebar-menu-action\"]",
+      "description": "Actual source sidebar-menu-action element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-badge": {
+      "kind": "element",
+      "declaration": "SidebarMenuBadge",
+      "selector": "[data-slot=\"sidebar-menu-badge\"]",
+      "description": "Actual source sidebar-menu-badge element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-skeleton": {
+      "kind": "element",
+      "declaration": "SidebarMenuSkeleton",
+      "selector": "[data-slot=\"sidebar-menu-skeleton\"]",
+      "description": "Actual source sidebar-menu-skeleton element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-sub": {
+      "kind": "element",
+      "declaration": "SidebarMenuSub",
+      "selector": "[data-slot=\"sidebar-menu-sub\"]",
+      "description": "Actual source sidebar-menu-sub element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-sub-item": {
+      "kind": "element",
+      "declaration": "SidebarMenuSubItem",
+      "selector": "[data-slot=\"sidebar-menu-sub-item\"]",
+      "description": "Actual source sidebar-menu-sub-item element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "menu-sub-button": {
+      "kind": "element",
+      "declaration": "SidebarMenuSubButton",
+      "selector": "[data-slot=\"sidebar-menu-sub-button\"]",
+      "description": "Actual source sidebar-menu-sub-button element; rendered tags/selection/native labels retain caller/source ownership.",
+      "ownership": "actual source wrapper"
+    },
+    "gap": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar-gap\"]",
+      "description": "Actual private structural child; no new public export.",
+      "ownership": "private source child"
+    },
+    "container": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar-container\"]",
+      "description": "Actual private structural child; no new public export.",
+      "ownership": "private source child"
+    },
+    "inner": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar-inner\"]",
+      "description": "Actual private structural child; no new public export.",
+      "ownership": "private source child"
+    },
+    "skeleton-icon": {
+      "kind": "element",
+      "declaration": "SidebarMenuSkeleton",
+      "selector": ".cn-sidebar-menu-skeleton-icon",
+      "description": "Actual private structural child; no new public export.",
+      "ownership": "private source child"
+    },
+    "skeleton-text": {
+      "kind": "element",
+      "declaration": "SidebarMenuSkeleton",
+      "selector": ".cn-sidebar-menu-skeleton-text",
+      "description": "Actual private structural child; no new public export.",
+      "ownership": "private source child"
+    },
+    "mobile-header": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar\"][data-mobile=\"true\"]>[data-slot=\"sheet-header\"]",
+      "description": "Actual delegated Sheet registered title/description wrapper, visually hidden by source sidebar usage.",
+      "ownership": "private delegated Sheet parts"
+    },
+    "mobile-default-close": {
+      "kind": "element",
+      "declaration": "Sidebar",
+      "selector": "[data-slot=\"sidebar\"][data-mobile=\"true\"]>[data-slot=\"sheet-close\"]",
+      "description": "Actual default Sheet Close hidden by source sidebar; reference supplies another visible native SheetClose.",
+      "ownership": "private delegated Sheet parts"
+    },
+    "context": {
+      "kind": "controller",
+      "declaration": "useSidebar",
+      "source": "Actual provider context hook; desktop open and mobile open are separate source state.",
+      "description": "Actual provider context hook; desktop open and mobile open are separate source state."
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "sidebar-gap": "components.sidebar.gap",
+      "sidebar-group-label-height": "components.sidebar.groupLabelHeight",
+      "sidebar-icon-width": "components.sidebar.iconWidth",
+      "sidebar-inset": "components.sidebar.inset",
+      "sidebar-item-height": "components.sidebar.itemHeight",
+      "sidebar-mobile-inset": "components.sidebar.mobileInset",
+      "sidebar-mobile-width": "components.sidebar.mobileWidth",
+      "sidebar-radius": "components.sidebar.radius",
+      "sidebar-width": "components.sidebar.width"
+    },
+    "runtimeProperties": {
+      "--sidebar-width": {
+        "source": "SidebarProvider style default16rem, public style override",
+        "purpose": "Adapter binds this actual source runtime width to semantic sidebar.width."
+      },
+      "--sidebar-width-icon": {
+        "source": "SidebarProvider style default3rem, public style override",
+        "purpose": "Adapter binds collapsed width to semantic sidebar.iconWidth."
+      },
+      "--skeleton-width": {
+        "source": "SidebarMenuSkeleton initial random50..89% width inline on Skeleton",
+        "purpose": "Actual source per-instance loading text width; static fixture70% is an example, not a fixed identity."
+      }
+    },
+    "layoutPolicy": "SidebarProvider has a real wrapper and separate desktop/mobile state; useSidebar is context, not DOM. Desktop source widths 16rem/3rem are bound through the public style override to semantic tokens; native 255px inner+border and 48px collapsed examples remain evidence. Mobile uses source 18rem preferred Sheet width capped to viewport clearance; its data-slot is sidebar, so generic SheetContent slot rules alone do not style it. Source hardcoded hidden default Close is retained and target supplies a real visible SheetClose inside navigation content. Desktop physical left/right container, gap, icon/offcanvas state and mobile modal ownership remain distinct. Pinned Sidebar consumes dir but forwards it only to mobile SheetContent; the reference keeps the provider layout LTR for physical gap order and explicitly sets dir on Header/Content/Footer/Inset text regions. Right desktop inner border faces content. Native menu 8px corner role is retained;32/28/48 button sizes, group inset/captions, badges/actions/submenus and skeleton geometry are explicit bounded reference roles. Collapsed labels may be visually hidden only when each icon link has a persistent aria-label; optional Tooltip is supplementary, not sole naming. The reference composes Rail only on desktop; mobile has real Trigger/Close controls. Source Shortcut Ctrl/Meta+B still intercepts even editable descendants; preventDefault on SidebarTrigger callback does not cancel its subsequent internal toggle. Controlled desktop callback can be ignored while source cookie still records the requested state; no new cancellable event is invented. Mobile open state is independent, and the source 767px breakpoint is retained. Source variants/API stay in CEM/UX; no fixed native page height/position or source-id anatomy remains.",
+    "variants": {
+      "state": {
+        "source": "useSidebar state",
+        "attribute": "data-state"
+      },
+      "collapsible": {
+        "prop": "collapsible",
+        "values": [
+          "none",
+          "icon",
+          "offcanvas"
+        ]
+      },
+      "side": {
+        "prop": "side",
+        "values": [
+          "left",
+          "right"
+        ]
+      },
+      "size": {
+        "prop": "SidebarMenuButton.size",
+        "values": [
+          "sm",
+          "default",
+          "lg"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

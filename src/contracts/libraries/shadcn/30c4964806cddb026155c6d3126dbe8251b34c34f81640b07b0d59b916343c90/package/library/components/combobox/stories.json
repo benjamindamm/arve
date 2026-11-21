@@ -1,0 +1,157 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Combobox",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open-highlighted",
+      "name": "Open highlighted",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "selected-clear",
+      "name": "Selected clear",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" value=\"Apple\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><button type=\"button\" data-part=\"combobox-clear\" tabindex=\"0\" aria-label=\"Clear fruit selection\">Clear</button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"true\">Apple<span class=\"cn-combobox-item-indicator\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"false\" aria-describedby=\"fruit-help\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"false\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "empty",
+      "name": "Empty",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-describedby=\"fruit-help\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\">No fruits found.</div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "multiple-chips",
+      "name": "Multiple chips",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Multiple fruits</label><div data-slot=\"combobox-chips\" role=\"toolbar\" aria-label=\"Selected fruits\"><div data-slot=\"combobox-chip\" aria-label=\"Apple\">Apple<button data-part=\"combobox-chip-remove\" type=\"button\" aria-label=\"Remove Apple\" tabindex=\"0\">Remove</button></div><input data-slot=\"combobox-chip-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" value=\"\"/></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\" aria-multiselectable=\"true\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help fruit-error\" aria-invalid=\"true\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><p id=\"fruit-error\">Choose a listed fruit.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "readonly",
+      "name": "Readonly",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" readonly value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"false\" aria-describedby=\"fruit-help\" disabled value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"false\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"rtl\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "named-trigger-focus",
+      "name": "Named trigger focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" value=\"\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "named-clear-focus",
+      "name": "Named clear focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Search fruit</label><div data-slot=\"input-group\" class=\"cn-combobox-input\" role=\"group\"><input data-slot=\"input-group-control\" class=\"cn-input-group-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" aria-activedescendant=\"fruit-banana\" aria-describedby=\"fruit-help\" value=\"Apple\"/><div data-slot=\"input-group-addon\" data-align=\"inline-end\"></div><button data-slot=\"combobox-trigger\" type=\"button\" tabindex=\"0\" aria-label=\"Show fruit options\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"fruit-list\">Show options<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><button type=\"button\" data-part=\"combobox-clear\" tabindex=\"0\" aria-label=\"Clear fruit selection\">Clear</button></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"true\">Apple<span class=\"cn-combobox-item-indicator\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "clear",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "named-remove-focus",
+      "name": "Named remove focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label id=\"search-fruit-label\" for=\"search-fruit\">Multiple fruits</label><div data-slot=\"combobox-chips\" role=\"toolbar\" aria-label=\"Selected fruits\"><div data-slot=\"combobox-chip\" aria-label=\"Apple\">Apple<button data-part=\"combobox-chip-remove\" type=\"button\" aria-label=\"Remove Apple\" tabindex=\"0\">Remove</button></div><input data-slot=\"combobox-chip-input\" id=\"search-fruit\" aria-labelledby=\"search-fruit-label\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"fruit-list\" value=\"\"/></div><p id=\"fruit-help\">Type to filter available fruits.</p><div data-slot=\"combobox-content\" class=\"cn-menu-target\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px;--anchor-width:256px\"><div data-slot=\"combobox-empty\" role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><div data-slot=\"combobox-list\" role=\"listbox\" aria-label=\"Fruit options\" id=\"fruit-list\" aria-multiselectable=\"true\"><div data-slot=\"combobox-group\" role=\"group\" aria-labelledby=\"fruit-group-label\"><div data-slot=\"combobox-label\" id=\"fruit-group-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-apple\" aria-selected=\"false\">Apple</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-banana\" aria-selected=\"false\" data-highlighted=\"\">Banana</div><div data-slot=\"combobox-item\" role=\"option\" id=\"fruit-unavailable\" aria-selected=\"false\" aria-disabled=\"true\">Unavailable</div></div><div data-slot=\"combobox-separator\" role=\"presentation\"></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "chip-remove",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    }
+  ]
+}

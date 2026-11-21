@@ -1,0 +1,85 @@
+@import "../../tokens.css";
+
+[data-slot="radio-group"] {
+  display: grid;
+  inline-size: 100%;
+  min-inline-size: 0;
+  gap: var(--ui-radio-group-option-gap);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  color: var(--ui-color-foreground);
+}
+
+[data-part="radio-option"] {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-radio-group-label-gap);
+  min-inline-size: 0;
+}
+
+[data-part="radio-label"] {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+  font-weight: var(--ui-font-weight-medium);
+}
+
+[data-slot="radio-group-item"] {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-radio-group-size);
+  block-size: var(--ui-radio-group-size);
+  border: var(--ui-border-width) solid var(--ui-color-input);
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+}
+
+[data-slot="radio-group-item"][aria-checked="true"] {
+  border-color: var(--ui-color-primary);
+  background: var(--ui-color-primary);
+}
+
+[data-slot="radio-group-indicator"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.cn-radio-group-indicator-icon {
+  inline-size: var(--ui-radio-group-dot-size);
+  block-size: var(--ui-radio-group-dot-size);
+  border-radius: 50%;
+  background: var(--ui-color-primary-foreground);
+}
+
+[data-slot="radio-group-item"]>input[type="radio"] {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+
+[data-slot="radio-group-item"]:focus-visible {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="radio-group-item"][data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+[data-slot="radio-group"][aria-invalid="true"] [data-slot="radio-group-item"] {
+  border-color: var(--ui-color-destructive);
+}

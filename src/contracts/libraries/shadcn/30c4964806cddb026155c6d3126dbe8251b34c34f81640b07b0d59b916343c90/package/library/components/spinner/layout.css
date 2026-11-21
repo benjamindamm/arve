@@ -1,0 +1,40 @@
+@import "../../tokens.css";
+
+[data-slot="spinner"] {
+  display: inline-block;
+  flex: none;
+  inline-size: var(--ui-spinner-size);
+  block-size: var(--ui-spinner-size);
+  color: var(--ui-color-foreground);
+  vertical-align: middle;
+  animation: ui-spinner-turn var(--ui-spinner-duration) linear infinite;
+}
+
+[data-slot="spinner"].ui-spinner-small {
+  inline-size: var(--ui-spinner-small-size);
+  block-size: var(--ui-spinner-small-size);
+}
+
+[data-slot="spinner"].ui-spinner-large {
+  inline-size: var(--ui-spinner-large-size);
+  block-size: var(--ui-spinner-large-size);
+}
+
+[data-slot="spinner"].ui-spinner-extra-large {
+  inline-size: var(--ui-spinner-extra-large-size);
+  block-size: var(--ui-spinner-extra-large-size);
+}
+
+@keyframes ui-spinner-turn {
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-slot="spinner"] {
+    animation: none;
+  }
+
+}

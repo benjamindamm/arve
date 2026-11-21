@@ -1,0 +1,47 @@
+{
+  "componentId": "shadcn:RadioGroup",
+  "sourceRule": "RadioGroup uses a generic value/defaultValue and onValueChange(value,eventDetails), plus disabled/readOnly/required/name/form. RadioGroupItem inherits the exact Radio.Root props including value and disabled. The default visible root is span role=radio with a hidden native radio input, not a visible native radio. Checked value is singular; choosing the checked item does not clear the group. Disabled/readOnly suppress user changes; callback cancellation can veto and controlled props stay authoritative.",
+  "keyboardAndFocus": "Tab enters the current/enabled radio; arrows navigate/select enabled items using the source composite and wrap behavior. Space selects a radio. Enter does not toggle (the source prevents its button activation; form context remains separate). Home/End are disabled by the RadioGroup composite; Escape does not clear selection.",
+  "referenceComposition": "<span id=\"plan-label\">Delivery plan</span><p id=\"plan-help\">Choose one delivery plan.</p><div data-slot=\"radio-group\" role=\"radiogroup\" aria-labelledby=\"plan-label\" aria-describedby=\"plan-help\"><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"true\" aria-labelledby=\"label-basic\" tabindex=\"0\"><span data-slot=\"radio-group-indicator\"><span class=\"cn-radio-group-indicator-icon\"></span></span><input type=\"radio\" name=\"plan\" value=\"basic\" checked=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-basic\">Basic</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-pro\" tabindex=\"-1\"><input type=\"radio\" name=\"plan\" value=\"pro\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-pro\">Pro</span></label><label data-part=\"radio-option\"><span data-slot=\"radio-group-item\" role=\"radio\" aria-checked=\"false\" aria-labelledby=\"label-unavailable\" tabindex=\"-1\" data-disabled=\"\" aria-disabled=\"true\"><input type=\"radio\" name=\"plan\" value=\"unavailable\" disabled=\"\" aria-hidden=\"true\" tabindex=\"-1\"/></span><span data-part=\"radio-label\" id=\"label-unavailable\">Unavailable</span></label></div>",
+  "protocol": "SCXML consumes actual source callback transactions and source focus observations after native pointer/keyboard normalization, preserving original eventDetails. Sends document observed React callbacks, never duplicate DOM dispatches. Canceled user requests preserve value; controlled SET_VALUE does not emit a change. Tabs automatic consistency updates are separate and uncancelable. Source owns quantization, collision, focus wrapping and native form integration.",
+  "semanticParts": {
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"radio-group\"]",
+      "description": "Actual named mutually exclusive composite."
+    },
+    "control": {
+      "kind": "element",
+      "selector": "[data-slot=\"radio-group-item\"]",
+      "description": "Visible source span role radio, not a second native radio."
+    },
+    "indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"radio-group-indicator\"]",
+      "description": "Actual checked-only internal Indicator."
+    },
+    "dot": {
+      "kind": "element",
+      "selector": ".cn-radio-group-indicator-icon",
+      "description": "Actual internal empty dot span."
+    },
+    "form-input": {
+      "kind": "element",
+      "selector": "[data-slot=\"radio-group-item\"]>input[type=\"radio\"]",
+      "description": "Actual hidden native radio form proxy."
+    },
+    "option": {
+      "kind": "element",
+      "selector": "[data-part=\"radio-option\"]",
+      "description": "Caller native label row."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-part=\"radio-label\"]",
+      "description": "Caller readable option text explicitly names the visible custom radio."
+    }
+  },
+  "visualStateMapping": {
+    "state": "actual checked, disabled, readOnly and caller invalid semantics; not invented variant props"
+  }
+}

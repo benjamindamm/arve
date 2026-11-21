@@ -1,0 +1,26 @@
+{
+  "purpose": "Visually and semantically group related independently operable controls.",
+  "avoid": "Avoid grouping unrelated or indistinguishable actions.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:ButtonGroup",
+  "sourceRule": "ButtonGroup renders div role=group; orientation horizontal is the visual default, vertical stacks controls. ButtonGroupSeparator defaults vertical and composes Separator. ButtonGroupText uses useRender default div. Neither group orientation nor borders register toolbar roving focus, a radio choice or shared disabled/value state.",
+  "keyboardAndFocus": "Each actual Button/link/input keeps its native keyboard, focus, disabled and callback contract. Tab visits enabled controls in DOM order. The reference supplies a group label identifying their relationship; group orientation changes layout without intercepting arrow keys.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "ButtonGroup renders div role=group; orientation horizontal is the visual default, vertical stacks controls. ButtonGroupSeparator defaults vertical and composes Separator. ButtonGroupText uses useRender default div. Neither group orientation nor borders register toolbar roving focus, a radio choice or shared disabled/value state. Each actual Button/link/input keeps its native keyboard, focus, disabled and callback contract. Tab visits enabled controls in DOM order. The reference supplies a group label identifying their relationship; group orientation changes layout without intercepting arrow keys.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/button-group.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/button-group.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/button-group-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "ButtonGroup maps all three actual exports and imports its real Button styling dependency. Native grouped-button outer corners come from the measured 10px default master; connected edges are logical rather than tied to specimen position labels. The source default horizontal CVA class exists even when data-orientation is omitted, so CSS follows actual orientation classes. Source Separator 1.9 uses data-orientation, not the data-horizontal/data-vertical utility names left in the pinned wrapper. Text addon chrome is an explicit reference with intrinsic height stretched to adjacent buttons and 10px inset; no fake Group size prop is added. Buttons retain their own sizes, states and keyboard/focus semantics. The group has no roving tabindex, toolbar role, group disabled state or selection API. Callers name the group and disable individual children; logical connected corners support explicit RTL.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

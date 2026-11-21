@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "checkbox.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Checkbox",
+          "description": "Source-bound React reference surface; callback entries describe React handlers, not newly dispatched DOM CustomEvents.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Controlled checked value; indeterminate is a separate boolean visual/semantic state."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "CheckboxPrimitive.Root.Props"
+              },
+              "description": "Complete inherited public React prop surface; exact pinned declaration and native event types are retained in sources/manifest.json."
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "indeterminate",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"on\""
+            },
+            {
+              "kind": "field",
+              "name": "uncheckedValue",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "onCheckedChange",
+              "type": {
+                "text": "(checked: boolean, details: CheckboxPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Pinned React callback. Checkbox/switch callback details may cancel the proposed update; controlled props remain authoritative."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "field",
+              "description": "Optional labelled field arrangement; not emitted by Checkbox itself. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "control",
+              "description": "Actual span role=checkbox source root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "indicator",
+              "description": "Actual checked/mixed source indicator. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

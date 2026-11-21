@@ -1,0 +1,122 @@
+{
+  "result": "PASS",
+  "scope": "Finite source callback authority, cancellation, automatic consistency and commit cases. Native focus/key behavior is browser tested separately.",
+  "components": [
+    {
+      "component": "radio-group",
+      "behaviorSha256": "8063cdbcdccae589333f0c8439e255b8f82f3701a10925b60396c5dc84f138e9",
+      "cases": [
+        {
+          "name": "source candidate retains exact event details; canceled request preserves authoritative value",
+          "result": "pass"
+        },
+        {
+          "name": "controlled candidate reports callback but waits for prop authority",
+          "result": "pass"
+        },
+        {
+          "name": "accepted source change and Escape preserve actual selected value",
+          "result": "pass"
+        },
+        {
+          "name": "actual Root disabled suppresses user callback",
+          "result": "pass"
+        },
+        {
+          "name": "readonly and disabled item block native candidate",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "toggle-group",
+      "behaviorSha256": "5ab81ea3bf29f9d7885c7f419f78aa911d813395dea656c0722195a4d0f2d11c",
+      "cases": [
+        {
+          "name": "source candidate retains exact event details; canceled request preserves authoritative value",
+          "result": "pass"
+        },
+        {
+          "name": "controlled candidate reports callback but waits for prop authority",
+          "result": "pass"
+        },
+        {
+          "name": "accepted source change and Escape preserve actual selected value",
+          "result": "pass"
+        },
+        {
+          "name": "actual Root disabled suppresses user callback",
+          "result": "pass"
+        },
+        {
+          "name": "single versus multiple array constraints are not collapsed to scalar values",
+          "result": "pass"
+        },
+        {
+          "name": "standalone Toggle has independent actual pressed callback and cancellation",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "tabs",
+      "behaviorSha256": "e42281a4d971ccb2bad0d547b8901e5356d0bf05d937bee3838a12e0b44020f3",
+      "cases": [
+        {
+          "name": "source candidate retains exact event details; canceled request preserves authoritative value",
+          "result": "pass"
+        },
+        {
+          "name": "controlled candidate reports callback but waits for prop authority",
+          "result": "pass"
+        },
+        {
+          "name": "accepted source change and Escape preserve actual selected value",
+          "result": "pass"
+        },
+        {
+          "name": "source focus including disabled tab is distinct from selection",
+          "result": "pass"
+        },
+        {
+          "name": "automatic consistency fallback cannot be canceled and can yield null",
+          "result": "pass"
+        },
+        {
+          "name": "controlled roots never auto-fallback without caller props",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "slider",
+      "behaviorSha256": "17d090a2f4ddbbedfbc3e0045446a18d27cd1669bc7a35b4b386831c5040e158",
+      "cases": [
+        {
+          "name": "source candidate retains exact event details; canceled request preserves authoritative value",
+          "result": "pass"
+        },
+        {
+          "name": "controlled candidate reports callback but waits for prop authority",
+          "result": "pass"
+        },
+        {
+          "name": "accepted source change and Escape preserve actual selected value",
+          "result": "pass"
+        },
+        {
+          "name": "actual Root disabled suppresses user callback",
+          "result": "pass"
+        },
+        {
+          "name": "commit is distinct generic callback and does not fire for unchanged or canceled source interaction",
+          "result": "pass"
+        },
+        {
+          "name": "source drag state is distinct from final commit and committed value",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Badge",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "default",
+      "name": "Default",
+      "inputs": {
+        "variant": "default"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-default\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "secondary",
+      "name": "Secondary",
+      "inputs": {
+        "variant": "secondary"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-secondary\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "destructive",
+      "name": "Destructive",
+      "inputs": {
+        "variant": "destructive"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-destructive\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "outline",
+      "name": "Outline",
+      "inputs": {
+        "variant": "outline"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-outline\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "inputs": {
+        "variant": "ghost"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-ghost\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "link",
+      "name": "Link",
+      "inputs": {
+        "variant": "link"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-link\">Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "with-icon",
+      "name": "With icon",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<span data-slot=\"badge\" class=\"cn-badge cn-badge-variant-default\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M12 5v14M5 12h14\" stroke=\"currentColor\"/></svg>Pending review</span>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "native-link-hover",
+      "name": "Native link hover",
+      "inputs": {
+        "variant": "link",
+        "render": "a"
+      },
+      "visualState": "hovered",
+      "fixture": {
+        "html": "<a href=\"#review-details\" data-slot=\"badge\" class=\"cn-badge cn-badge-variant-link\">Pending review</a><p id=\"review-details\">Review details</p>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "badge"
+        }
+      ],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "native-link-focus",
+      "name": "Native link focus",
+      "inputs": {
+        "variant": "link",
+        "render": "a"
+      },
+      "visualState": "focused",
+      "fixture": {
+        "html": "<a href=\"#review-details\" data-slot=\"badge\" class=\"cn-badge cn-badge-variant-link\">Pending review</a><p id=\"review-details\">Review details</p>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "badge",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "result": "PASS",
+  "scope": "Actual frozen wrapper modules and pinned Base UI1.9.0 in owned BrowserOS neo pages. Native DOM observations supplement the accessibility tree; no generic accessibility certification.",
+  "cases": [
+    {
+      "component": "navigation-menu",
+      "name": "Down opens disclosure while retaining trigger focus",
+      "result": "pass",
+      "observed": {
+        "active": "Reports ",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "true",
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "none",
+          "Open navigation item": "reports"
+        },
+        "slot": "navigation-menu-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "navigation-menu",
+      "name": "native Tab enters first real destination",
+      "result": "pass",
+      "observed": {
+        "active": "Analytics report",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "true",
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "none",
+          "Open navigation item": "reports"
+        },
+        "slot": "navigation-menu-link",
+        "toast": []
+      }
+    },
+    {
+      "component": "navigation-menu",
+      "name": "Escape restores trigger and closed completion false",
+      "result": "pass",
+      "observed": {
+        "active": "Reports ",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "false",
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "false",
+          "Open navigation item": "none"
+        },
+        "slot": "navigation-menu-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "navigation-menu",
+      "name": "canceled controlled source request does not open",
+      "result": "pass",
+      "observed": {
+        "active": "Reports ",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "false",
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "false",
+          "Open navigation item": "none"
+        },
+        "slot": "navigation-menu-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "navigation-menu",
+      "name": "focusable disabled trigger cannot open",
+      "result": "pass",
+      "observed": {
+        "active": "Unavailable ",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "false",
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "false",
+          "Open navigation item": "none"
+        },
+        "slot": "navigation-menu-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "navigation-menu",
+      "name": "native href and explicit closeOnClick retain route/open distinction",
+      "result": "pass",
+      "observed": {
+        "active": "Reports ",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "expanded": "false",
+        "hash": "#analytics",
+        "main": 1,
+        "outputs": {
+          "Navigation completion": "false",
+          "Open navigation item": "none"
+        },
+        "slot": "navigation-menu-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "caller preventDefault does not veto desktop toggle/cookie",
+      "result": "pass",
+      "observed": {
+        "active": "Toggle Sidebar",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "false",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "desktop"
+        },
+        "slot": "sidebar-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "global shortcut applies even within editable target",
+      "result": "pass",
+      "observed": {
+        "active": "",
+        "cookie": "sidebar_state=true",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "desktop"
+        },
+        "slot": null,
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "ignored controlled callback keeps prop but writes candidate cookie",
+      "result": "pass",
+      "observed": {
+        "active": "Toggle Sidebar",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "1",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "desktop"
+        },
+        "slot": "sidebar-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "fresh provider does not automatically read desktop cookie",
+      "result": "pass",
+      "observed": {
+        "active": "Controlled sidebarIgnore desktop callback0ReportsOverviewRevenueReport overviewToggle SidebarCtrl or Meta plus B toggles navigation.desktoptruefalseEditable shortcut targetRevenue\n",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "desktop"
+        },
+        "slot": null,
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "mobile opens actual Sheet and focuses native navigation",
+      "result": "pass",
+      "observed": {
+        "active": "Overview",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "true",
+          "Sidebar viewport": "mobile"
+        },
+        "slot": "sidebar-menu-button",
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "mobile Escape restores trigger without desktop cookie/callback mutation",
+      "result": "pass",
+      "observed": {
+        "active": "Toggle Sidebar",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "mobile"
+        },
+        "slot": "sidebar-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "sidebar",
+      "name": "explicit nested Close navigation uses Sheet closure",
+      "result": "pass",
+      "observed": {
+        "active": "Toggle Sidebar",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Desktop callback count": "0",
+          "Desktop sidebar state": "true",
+          "Mobile sidebar state": "false",
+          "Sidebar viewport": "mobile"
+        },
+        "slot": "sidebar-trigger",
+        "toast": []
+      }
+    },
+    {
+      "component": "toast",
+      "name": "low priority nonmodal dialog does not steal focus",
+      "result": "pass",
+      "observed": {
+        "active": "Add persistent toast",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "disabledAction": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "0",
+          "Toast remove count": "0",
+          "Undo count": "0"
+        },
+        "slot": null,
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report saved"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "F6 focuses notification viewport",
+      "result": "pass",
+      "observed": {
+        "active": "Report savedThe report changes are available.Undo report change",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "disabledAction": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "0",
+          "Toast remove count": "0",
+          "Undo count": "0"
+        },
+        "slot": "toast-viewport",
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report saved"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "Tab enters actual toast root",
+      "result": "pass",
+      "observed": {
+        "active": "Report savedThe report changes are available.Undo report change",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "disabledAction": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "0",
+          "Toast remove count": "0",
+          "Undo count": "0"
+        },
+        "slot": "toast",
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report saved"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "Action executes without automatic close",
+      "result": "pass",
+      "observed": {
+        "active": "Undo report change",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "disabledAction": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "0",
+          "Toast remove count": "0",
+          "Undo count": "1"
+        },
+        "slot": "toast-action",
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report saved"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "focused Escape emits separate close/remove callbacks",
+      "result": "pass",
+      "observed": {
+        "active": "Add persistent toast",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "1",
+          "Toast remove count": "1",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": []
+      }
+    },
+    {
+      "component": "toast",
+      "name": "actionProps disabled reaches actual native control",
+      "result": "pass",
+      "observed": {
+        "active": "Add disabled action",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "disabledAction": true,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "1",
+          "Toast remove count": "1",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report saved"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "finite timeout closes unfocused toast",
+      "result": "pass",
+      "observed": {
+        "active": "Update report toast",
+        "cookie": "sidebar_state=false",
+        "dialog": false,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "3",
+          "Toast remove count": "3",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": []
+      }
+    },
+    {
+      "component": "toast",
+      "name": "promise starts actual loading toast",
+      "result": "pass",
+      "observed": {
+        "active": "Start save promise",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "none",
+          "Toast close count": "3",
+          "Toast remove count": "3",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Saving report"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "rejected promise changes same toast and rejects to caller",
+      "result": "pass",
+      "observed": {
+        "active": "Reject save",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "rejected",
+          "Toast close count": "3",
+          "Toast remove count": "3",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Report promise failed"
+          }
+        ]
+      }
+    },
+    {
+      "component": "toast",
+      "name": "limit makes old toast inert rather than deleting it",
+      "result": "pass",
+      "observed": {
+        "active": "Add four toasts",
+        "cookie": "sidebar_state=false",
+        "dialog": true,
+        "hash": "",
+        "main": 1,
+        "outputs": {
+          "Promise result": "rejected",
+          "Toast close count": "3",
+          "Toast remove count": "3",
+          "Undo count": "1"
+        },
+        "slot": null,
+        "toast": [
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Queued report 3"
+          },
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Queued report 2"
+          },
+          {
+            "inert": false,
+            "limited": false,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Queued report 1"
+          },
+          {
+            "inert": true,
+            "limited": true,
+            "modal": "false",
+            "role": "dialog",
+            "title": "Queued report 0"
+          }
+        ]
+      }
+    }
+  ]
+}

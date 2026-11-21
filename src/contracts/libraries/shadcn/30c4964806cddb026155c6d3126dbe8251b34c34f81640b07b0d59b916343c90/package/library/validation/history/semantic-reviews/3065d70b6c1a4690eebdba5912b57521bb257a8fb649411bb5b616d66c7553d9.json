@@ -1,0 +1,136 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:NavigationMenu",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"false\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "opening-content",
+      "name": "Opening content",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\" data-starting-style=\"\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "closing-content",
+      "name": "Closing content",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\" data-ending-style=\"\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"false\" aria-disabled=\"true\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"rtl\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "optional-indicator",
+      "name": "Optional indicator",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><span data-slot=\"navigation-menu-indicator\" aria-hidden=\"true\"><div class=\"cn-navigation-menu-indicator-arrow\"></div></span></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "content-link-hover",
+      "name": "Content link hover",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "link",
+          "index": 1
+        }
+      ],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "trigger-keyboard-focus",
+      "name": "Trigger keyboard focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"false\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "link-keyboard-focus",
+      "name": "Link keyboard focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "link",
+          "index": 1,
+          "keyboard": true
+        }
+      ],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    }
+  ]
+}

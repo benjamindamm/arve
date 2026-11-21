@@ -1,0 +1,553 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Select",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "field": {
+      "declaration": "Select",
+      "selector": "[data-part=\"select-field\"]",
+      "ownership": "caller composition"
+    },
+    "form-input": {
+      "declaration": "Select",
+      "selector": "[data-part=\"select-field\"]>input[aria-hidden=\"true\"]",
+      "ownership": "private primitive child"
+    },
+    "trigger": {
+      "declaration": "SelectTrigger",
+      "selector": "[data-slot=\"select-trigger\"]",
+      "ownership": "actual source wrapper"
+    },
+    "form-values": {
+      "declaration": "Select",
+      "selector": "[data-part=\"select-field\"]>input[type=\"hidden\"][name]",
+      "ownership": "private primitive child"
+    },
+    "value": {
+      "declaration": "SelectValue",
+      "selector": "[data-slot=\"select-value\"]",
+      "ownership": "actual source wrapper"
+    },
+    "trigger-icon": {
+      "declaration": "SelectTrigger",
+      "selector": ".cn-select-trigger-icon",
+      "ownership": "actual source wrapper"
+    },
+    "popup": {
+      "declaration": "SelectContent",
+      "selector": "[data-slot=\"select-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "declaration": "SelectContent",
+      "selector": "[data-slot=\"select-content\"]>[role=\"listbox\"]",
+      "ownership": "private primitive child"
+    },
+    "group": {
+      "declaration": "SelectGroup",
+      "selector": "[data-slot=\"select-group\"]",
+      "ownership": "actual source wrapper"
+    },
+    "label": {
+      "declaration": "SelectLabel",
+      "selector": "[data-slot=\"select-label\"]",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "declaration": "SelectItem",
+      "selector": "[data-slot=\"select-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "item-text": {
+      "declaration": "SelectItem",
+      "selector": ".cn-select-item-text",
+      "ownership": "actual source wrapper"
+    },
+    "indicator": {
+      "declaration": "SelectItem",
+      "selector": ".cn-select-item-indicator",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "declaration": "SelectSeparator",
+      "selector": "[data-slot=\"select-separator\"]",
+      "ownership": "actual source wrapper"
+    },
+    "scroll-up": {
+      "declaration": "SelectScrollUpButton",
+      "selector": "[data-slot=\"select-scroll-up-button\"]",
+      "ownership": "actual source wrapper"
+    },
+    "scroll-down": {
+      "declaration": "SelectScrollDownButton",
+      "selector": "[data-slot=\"select-scroll-down-button\"]",
+      "ownership": "actual source wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2270:2535",
+      "observed": "32px native trigger/10px corners;2270:2536 list10px corners/4px inset.",
+      "decision": "Fluid width and actual inner List ownership, smaller28px explicit role; source Positioner/scroll geometry retained."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1986 (Select), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2058:1186",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 2",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23042",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2058:1195",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 3",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23161",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2058:1202",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 10",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23162",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2058:1209",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 11",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23167",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2058:1223",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 13",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23256",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2058:1257",
+      "sourcePartId": "2058:943",
+      "sourceName": "Frame 18",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23257",
+      "sourcePartId": "2058:943",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "field",
+        "form-input",
+        "trigger",
+        "form-values",
+        "value",
+        "trigger-icon",
+        "popup",
+        "list",
+        "group",
+        "label",
+        "item",
+        "item-text",
+        "indicator",
+        "separator",
+        "scroll-up",
+        "scroll-down"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "small",
+        "disabled",
+        "readonly",
+        "multiple",
+        "long-list",
+        "rtl",
+        "highlighted",
+        "trigger-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The source Trigger is a Button role combobox, with 32px default/10px corner observed in the native outline Button and 10px popup/4px inset list. Public sm uses an explicit 28px smaller reference role; instance widths 192/256px are not forced. Source Content always inserts a List, so Popup is presentational and the inner List is the actual listbox/aria-controls target; labels remain native field/GroupLabel identities. The Root actual hidden text input is a form/validation proxy, not a second accessible combobox or native select. Default alignItemWithTrigger=true, source collision/scroll-arrow geometry and closing-on-window-resize remain authoritative; fixed mock overlay coordinates are absent. Shared popup surface CSS is explicitly delegated to the common cn-menu-target rule, while option/value/trigger/indicator styles are Select-specific. Source scroll arrows remain decorative pointer affordances rather than invented Buttons. Text/selected arrays, readonly, disabled focusability and independent cancelable value/open transactions retain source behavior; no query input or filtering is invented. Portal direction and theme are supplied on the actual Content element in the adapter.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

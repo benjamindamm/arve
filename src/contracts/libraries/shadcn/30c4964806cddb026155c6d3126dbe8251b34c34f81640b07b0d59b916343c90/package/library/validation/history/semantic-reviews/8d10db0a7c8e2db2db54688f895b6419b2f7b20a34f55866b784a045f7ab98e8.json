@@ -1,0 +1,109 @@
+{
+  "componentId": "shadcn:DropdownMenu",
+  "projectionState": "Open owned menu, child submenu closed; closed popup is normally unmounted or explicitly hidden under keepMounted.",
+  "sourceRule": "Root defaults modal=true, vertical orientation and loopFocus=true. Trigger defaults native button aria-haspopup=menu and expanded/controls relations. Content defaults side=bottom, align=start, alignOffset0 and sideOffset4; Popup props remain distinct from Positioner props. Root does not render an element. Native command clicks and onOpenChange are different callbacks; no fictitious onSelect or selected-value Root is introduced. All exported wrappers retain exact source types. Menu Item uses div role=menuitem, CheckboxItem role=menuitemcheckbox with boolean checked/defaultChecked and cancellable onCheckedChange, RadioGroup uses role=group with any value/defaultValue and cancellable onValueChange; RadioItem uses menuitemradio. Item closeOnClick defaults true, but CheckboxItem and RadioItem closeOnClick default false in Base UI1.9. Command onClick is the native React/Base UI synthetic handler, not an onValueChange. Its event.preventBaseUIHandler() can prevent remaining internal primitive handling such as default closing; this is distinct from callback eventDetails.cancel() on Root or setting changes. Source useButton makes disabled items focusable in the composite while blocking activation; do not promise they are skipped by arrows. Labels/Groups/Separators supply native primitive relations, and Shortcut is only displayed text: it registers no shortcut. SubmenuRoot/Trigger/Content form an independently owned child menu; Root closeParentOnEsc=false normally limits Escape to the child, while context-menu nested Escape follows its specialized source policy. Canceled callbacks preserve the relevant open/checked/radio state; controlled props remain authoritative. onItemHighlighted reports actual element|undefined and reason/label details. Root open transitions, onOpenChangeComplete and externally deferred unmount are distinct. Positioning, pointer safe zones, typeahead, focus management and automatic sibling closing belong to the primitive.",
+  "keyboardAndFocus": "Native trigger Enter/Space or supported opening arrows enter the menu. Within a vertical menu Up/Down, Home/End and label typeahead highlight items; disabled entries may be focused but cannot activate. Enter/Space activate an enabled command or setting. Focus/highlight is not a command commit. Right opens an appropriate submenu and Left returns according to source direction/orientation. Escape dismisses the applicable menu level unless the source change callback is canceled, normally returning to its owning trigger; an outside press/focus transition follows the actual modality and finalFocus policy rather than a universal focus jump. Tab follows the primitive dismissal/focus-manager policy and never becomes a Dialog-style fabricated trap. Menubar parent keyboard navigation is separate from child vertical navigation. Essential instructions and command alternatives stay visible outside hover/long-press alone.",
+  "referenceComposition": "<button data-slot=\"dropdown-menu-trigger\" type=\"button\" id=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"true\" aria-controls=\"dropdown-menu-popup\">Report actions</button><div class=\"cn-menu-target cn-dropdown-menu-content\" data-slot=\"dropdown-menu-content\" role=\"menu\" id=\"dropdown-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"dropdown-menu-group\" role=\"group\" aria-labelledby=\"dropdown-menu-label\"><div data-slot=\"dropdown-menu-label\" id=\"dropdown-menu-label\" data-menu-label>Report</div><div data-slot=\"dropdown-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"dropdown-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"dropdown-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"dropdown-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"dropdown-menu-separator\" role=\"separator\"></div><div data-slot=\"dropdown-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span data-slot=\"dropdown-menu-checkbox-item-indicator\"></span>Show grid</div><div data-slot=\"dropdown-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"dropdown-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span data-slot=\"dropdown-menu-radio-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"dropdown-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span data-slot=\"dropdown-menu-radio-item-indicator\"></span>Comfortable</div></div><div data-slot=\"dropdown-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>",
+  "protocol": "Each real Menu or Submenu Root is a separate SCXML protocol instance. SOURCE_* events observe actual source callbacks/normalized native transactions, retaining original objects; sends are not additional DOM dispatches. Escape/Tab/typeahead intentions do not themselves invent a command, close or setting change: source callbacks specify the accepted instance transaction. Checkbox/radio controls own independent controlled/cancellation authority. Source animation/focus/deferred-unmount lifecycle stays separate. No blanket aria-modal attribute or Dialog focus trap is invented.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Controlled/uncontrolled menu ownership and cancellable requests; not a CSS root."
+    },
+    "portal": {
+      "kind": "controller",
+      "description": "Portal mounting context; positioner and popup remain source-owned."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-trigger\"]",
+      "description": "Trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "popup": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-content\"]",
+      "description": "Popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-group\"]",
+      "description": "Group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-label\"]",
+      "description": "Label uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-item\"]",
+      "description": "Item uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "checkbox": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-checkbox-item\"]",
+      "description": "Checkbox uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "radio-group": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-radio-group\"]",
+      "description": "Radio group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "radio": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-radio-item\"]",
+      "description": "Radio uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-separator\"]",
+      "description": "Separator uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "shortcut": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-shortcut\"]",
+      "description": "Shortcut uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "submenu-trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-sub-trigger\"]",
+      "description": "Submenu trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "submenu-popup": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-sub-content\"]",
+      "description": "Submenu popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "checkbox-indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-checkbox-item-indicator\"]",
+      "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned."
+    },
+    "radio-indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"dropdown-menu-radio-item-indicator\"]",
+      "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned."
+    }
+  },
+  "visualStateMapping": {
+    "itemVariant": {
+      "prop": "variant",
+      "values": [
+        "default",
+        "destructive"
+      ]
+    },
+    "inset": {
+      "prop": "inset",
+      "attribute": "data-inset"
+    },
+    "highlighted": {
+      "source": "BaseUI composite highlight",
+      "attribute": "data-highlighted"
+    },
+    "checked": {
+      "source": "actual CheckboxItem/RadioItem",
+      "nativeAttribute": "aria-checked"
+    }
+  }
+}

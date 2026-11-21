@@ -1,0 +1,41 @@
+{
+  "result": "PASS",
+  "scope": "Actual pinned Calendar/DayPicker9.14 source modes, semantics and supported customization. DatePicker is separately documented composition; client focus repair proven in BrowserOS.",
+  "cases": [
+    {
+      "component": "calendar",
+      "name": "noninteractive calendar omits day buttons but preserves actual month table",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "single selected and disabled matchers generate actual native semantics",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "multiple mode preserves actual multiselectable grid and two selected dates",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "range exposes concrete start/end/middle modifiers",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "outside days can be hidden independently of default source true",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "supported components.DayButton customization reaches actual day projection",
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "frozen upstream focus defect remains explicit rather than silently patched",
+      "result": "pass"
+    }
+  ]
+}

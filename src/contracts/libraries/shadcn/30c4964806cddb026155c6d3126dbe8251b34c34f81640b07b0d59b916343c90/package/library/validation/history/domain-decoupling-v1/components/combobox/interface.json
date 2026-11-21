@@ -1,0 +1,384 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "combobox.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Combobox",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "ComboboxPrimitive.Root.Props<Value, Multiple, Item>[\"value\"]"
+              },
+              "description": "Combobox is a direct alias of ComboboxPrimitive.Root. Its generic selected value/defaultValue and onValueChange are distinct from inputValue/defaultInputValue/onInputValueChange, highlight and open callbacks. multiple changes values to arrays. Root items supplies filtering/Collection/Empty; default filtering is source locale-aware matching, autoHighlight=false, modal=false, and query changes alone do not commit a value. filteredItems/filter=null support explicit caller filtering; object values use itemToStringLabel/itemToStringValue and Object.is comparison unless overridden. Root autoComplete is a browser autofill hint (mapped to formAutoComplete), not the internal list/inline autocompletion mode. Input wraps the actual primitive input in InputGroup, defaults showTrigger=true/showClear=false and disabled=false; Content defaults bottom/start, offsets6/0 with optional anchor. List is listbox, Item is option, and virtual focus remains on input via aria-activedescendant. Empty requires Root items and keeps a polite status element mounted while changing its children. Group/Collection/Separator and useComboboxAnchor are concrete public parts. In multiple mode an accepted item press stays open when not filtering; filtering with input outside the popup closes it, while input-inside-popup clears the query with input-clear/isItemPress details. Multiple mode uses Chips/Chip/ChipsInput and source chip keyboard/removal behavior; showRemove defaults true. The private icon-only Clear/automatic trigger and automatic chip-remove wrappers expose no instance-specific label props. The chosen reference sets showTrigger=false/showClear=false and showRemove=false, composing explicitly named exported Trigger and named Base UI Clear/ChipRemove where needed. These are transparent caller compositions, not fictitious new shadcn exports. The reference opts auxiliary actions into native Tab order with explicit tabIndex=0; their source defaults are -1. Disabled/readOnly block value edits but readOnly still allows popup browsing. A canceled Combobox item-selection transaction returns before its dependent close, unlike Select which separately requests closing. Clearing selected/query state and popup dismissal use distinct cancellable source callback transactions; host-controlled props remain authoritative."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Root.Props<Value, Multiple, Item>"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:16."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "NonNullable<ComboboxPrimitive.Root.Props<Value, Multiple, Item>[\"onValueChange\"]>"
+              },
+              "description": "Actual source selected-value callback; canceled candidate and controlled props preserve selected authority, independent of closing/query transactions."
+            },
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: ComboboxPrimitive.Root.OpenChangeEventDetails) => void"
+              },
+              "description": "Actual independently cancellable popup request."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual source transition lifecycle completion."
+            },
+            {
+              "name": "onInputValueChange",
+              "type": {
+                "text": "(inputValue: string, eventDetails: ComboboxPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual query/display-input request, distinct from selected value."
+            },
+            {
+              "name": "onItemHighlighted",
+              "type": {
+                "text": "(highlightedValue: Value | undefined, eventDetails: ComboboxPrimitive.Root.HighlightEventDetails) => void"
+              },
+              "description": "Actual virtual focus/highlight observation, not a commit."
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxValue",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Value.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:18."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-value",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Trigger.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:22."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-trigger",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Input.Props & {\n  showTrigger?: boolean\n  showClear?: boolean\n}"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"disabled\": \"false\", \"showTrigger\": \"true\", \"showClear\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:66."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-group-button",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Popup.Props &\n  Pick<\n    ComboboxPrimitive.Positioner.Props,\n    \"side\" | \"align\" | \"sideOffset\" | \"alignOffset\" | \"anchor\"\n  >"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"6\", \"align\": \"\\\"start\\\"\", \"alignOffset\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:101."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-content",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.List.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:138."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-list",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Item.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:151."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-item",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Group.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:182."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.GroupLabel.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:192."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-label",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxCollection",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Collection.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:205."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-collection",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxEmpty",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Empty.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:211."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-empty",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Separator.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:221."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-separator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxChips",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentPropsWithRef<typeof ComboboxPrimitive.Chips> &\n  ComboboxPrimitive.Chips.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:234."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-chips",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxChip",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Chip.Props & {\n  showRemove?: boolean\n}"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {\"showRemove\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:248."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-chip",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "combobox-chip-remove",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ComboboxChipsInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ComboboxPrimitive.Input.Props"
+              },
+              "description": "Exact source wrapper/alias surface, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/combobox.tsx.source:286."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "combobox-chip-input",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "useComboboxAnchor",
+          "description": "Actual public useRef hook, not a widget.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "React.RefObject<HTMLDivElement | null>"
+              },
+              "description": "Pass the returned ref to Chips/anchor as shown by source composition."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

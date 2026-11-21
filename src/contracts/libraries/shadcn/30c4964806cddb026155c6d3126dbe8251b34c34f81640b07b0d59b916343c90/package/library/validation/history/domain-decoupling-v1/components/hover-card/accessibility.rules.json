@@ -1,0 +1,11 @@
+{
+  "componentId": "shadcn:HoverCard",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<a id=\"hover-card-trigger\" href=\"#author-profile\">Alex profile</a><div data-slot=\"hover-card-content\"><p>Alex writes reports.</p></div><section id=\"author-profile\"><h2>Alex profile</h2><p>Full author information is available here.</p></section>",
+  "keyboardAndFocus": "The actual PreviewCard Trigger is an anchor. Hover and focus use its configurable delay (600ms default) and closeDelay (300ms). Escape/outside press dismiss. There is no modal focus trap, and native Enter still follows the link rather than committing a preview selection.",
+  "sourceRule": "HoverCard wraps PreviewCard. Its content is a plain div, not a fabricated dialog or tooltip role; full information remains available at the link destination. Content defaults side=bottom, sideOffset=4, align=center, alignOffset=4. The reference lab explicitly sets delay/closeDelay to 0 to exercise the same source interaction promptly.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups."
+}

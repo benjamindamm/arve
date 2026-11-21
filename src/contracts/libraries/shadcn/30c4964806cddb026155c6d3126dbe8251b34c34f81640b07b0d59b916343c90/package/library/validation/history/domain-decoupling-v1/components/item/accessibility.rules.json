@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Item",
+  "referenceComposition": "<div data-slot=\"item\"><div data-slot=\"item-content\"><div data-slot=\"item-title\"><h3>Annual report</h3></div><p data-slot=\"item-description\">PDF, 2 MB</p></div><div data-slot=\"item-actions\"><button type=\"button\">Download annual report</button></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The item heading, metadata and action identify the content without relying on its media icon.",
+  "updatesAndDescendants": "The default Item is a native content container; useRender can choose a native link/button. ItemActions contains independently named controls. Updates are parent React rerenders; Item itself has no selection, loading or command state.",
+  "referenceDecision": "The supplied heading and download action are concrete reference children. Nested whole-item and secondary interactive targets must not create invalid nested buttons/anchors.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

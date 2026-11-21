@@ -1,0 +1,104 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "figure": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-figure\"]",
+      "ownership": "caller composition"
+    },
+    "caption": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-caption\"]",
+      "ownership": "caller composition"
+    },
+    "summary": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-summary\"]",
+      "ownership": "caller composition"
+    },
+    "plot": {
+      "declaration": "ChartContainer",
+      "selector": "[data-slot=\"chart\"]",
+      "ownership": "actual source wrapper"
+    },
+    "data-scroll": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-table-scroll\"]",
+      "ownership": "caller composition"
+    },
+    "data-table": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-table\"]",
+      "ownership": "caller composition"
+    },
+    "feedback": {
+      "declaration": "chartReferenceComposition",
+      "selector": "[data-part=\"chart-feedback\"]",
+      "ownership": "caller composition"
+    },
+    "tooltip": {
+      "declaration": "ChartTooltipContent",
+      "selector": ".cn-chart-tooltip",
+      "ownership": "actual source wrapper"
+    },
+    "tooltip-indicator": {
+      "declaration": "ChartTooltipContent",
+      "selector": ".cn-chart-tooltip [style*=\"--color-bg\"]",
+      "ownership": "actual source inline variable binding"
+    },
+    "legend": {
+      "declaration": "ChartLegendContent",
+      "selector": ".chart-legend",
+      "ownership": "caller className on actual source wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1937:478",
+      "observed": "Native selected Card corner 14px and1px border; catalog framing excluded.",
+      "decision": "Fluid figure/plot and exact source data, explicit caller typography/tooltip/layout choices.",
+      "semanticTokens": [
+        "components.chart-frame.radius"
+      ]
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 296:42 (Chart), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2122:116",
+      "sourcePartId": "1937:478",
+      "sourceName": "Area Chart - Interactive",
+      "semanticParts": [
+        "figure",
+        "caption",
+        "summary",
+        "plot",
+        "data-scroll",
+        "data-table",
+        "feedback",
+        "tooltip",
+        "tooltip-indicator",
+        "legend"
+      ],
+      "canonicalFixtures": [
+        "source-data",
+        "empty",
+        "error",
+        "rtl",
+        "tooltip-dot",
+        "tooltip-line",
+        "tooltip-dashed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Each family is an explicit Recharts composition using the real ChartContainer, Tooltip and Legend wrappers. The chosen native example Card corner is retained; catalog page dimensions and individual bar/path node coordinates are not layout contracts. Plot width is fluid with a chosen 260px block extent,12/16px ticks and a complete captioned data table. Static fixtures derive geometry from source data; straight segments stand in for runtime natural interpolation and are identified as illustrations. The actual React target preserves source chart type and dataset. Radar uses an explicit 70% outer radius to leave room between its April label and the real legend. Figure gap 12/inset 16, tooltip 8px radius/10px inset and accessible scrollable table are explicit reference choices, not invented universal Figma measurements. Source tooltip actual cn-chart-tooltip class and inline --color-bg/--color-border, including dot/line/dashed, are retained; transient content remains supplementary. Source legend receives a caller className. Series colors are explicit semantic roles; no color alone conveys data. ChartStyle theme selectors require .dark context, while semantic token aliases use data-theme; the target supplies both. The reference passes Pie rootTabIndex=-1 because Recharts Pie otherwise emits a tab stop even with chart accessibilityLayer=false; this prevents an aria-hidden focus target while preserving supplementary pointer hints. No chart role slider/progressbar or focusable graph is invented. Full exact table remains primary, SVG hidden, no animation required; empty/error states never imply zero data.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

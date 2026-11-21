@@ -1,0 +1,27 @@
+{
+  "purpose": "Choose one or multiple values from a noneditable labelled listbox, with actual form integration.",
+  "avoid": "Active option and committed value remain distinct decisions.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Select",
+  "sourceRule": "Select is a direct alias of SelectPrimitive.Root, not a native select wrapper. Generic value/defaultValue and onValueChange distinguish single Value|null from multiple arrays. open/defaultOpen/onOpenChange/onOpenChangeComplete are independent of selected value; default modal=true. Root name/form/required/autoComplete use its hidden form control; object labels/form values use itemToStringLabel/itemToStringValue and comparison uses isItemEqualToValue. SelectValue resolves labels from Root items or registered ItemText; it is not a label for the field. Trigger defaults native button role=combobox with size sm|default. Content defaults bottom/center, offsets4/0 and alignItemWithTrigger=true; it inserts scroll arrows and List automatically. Items are role=option; disabled entries can be focused but cannot commit, while closed typeahead skips disabled choices. Single commit requests closing separately, even if the value callback is canceled; multiple toggles array values and normally stays open. readOnly locks changes but deliberately allows opening/browsing. GroupLabel/Separator are actual primitive parts; no text-query input, filter, server fetch or custom command event is invented.",
+  "keyboardAndFocus": "Trigger Enter/Space/opening arrows operate the source popup. Open Up/Down/Home/End and label typeahead move highlight; Enter/Space choose an enabled option. Closed-trigger typeahead can commit a single value, but is disabled for readOnly or multiple. Escape dismisses without selecting a highlighted candidate; controlled open/value callbacks remain separately authoritative. Disabled Root suppresses interaction. Named visible label and error/help relations belong to the caller, not the placeholder.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/select.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/select.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/select-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/select.md.source"
+  ],
+  "referenceDecision": "Stable primitive fruit/command values, visible names, exact instance relations, named clear/remove compositions and explicit error/no-results text are caller reference choices. Popup, query and selected/highlighted value do not share one invented authority; command execution remains an actual Item callback.",
+  "visualContract": {
+    "layoutPolicy": "The source Trigger is a Button role combobox, with 32px default/10px corner observed in the native outline Button and 10px popup/4px inset list. Public sm uses an explicit 28px smaller reference role; instance widths 192/256px are not forced. Source Content always inserts a List, so Popup is presentational and the inner List is the actual listbox/aria-controls target; labels remain native field/GroupLabel identities. The Root actual hidden text input is a form/validation proxy, not a second accessible combobox or native select. Default alignItemWithTrigger=true, source collision/scroll-arrow geometry and closing-on-window-resize remain authoritative; fixed mock overlay coordinates are absent. Shared popup surface CSS is explicitly delegated to the common cn-menu-target rule, while option/value/trigger/indicator styles are Select-specific. Source scroll arrows remain decorative pointer affordances rather than invented Buttons. Text/selected arrays, readonly, disabled focusability and independent cancelable value/open transactions retain source behavior; no query input or filtering is invented. Portal direction and theme are supplied on the actual Content element in the adapter.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

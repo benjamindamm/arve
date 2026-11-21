@@ -1,0 +1,65 @@
+{
+  "componentId": "shadcn:InputOtp",
+  "sourceRule": "InputOTP forwards input-otp1.4.2 OTPInputProps, maxLength:number is required, value/defaultValue are strings, onChange(newValue:string) is not a native event callback. onComplete receives the complete value when a previously observed shorter value becomes exactly maxLength; initial full value is not an automatic completion request. It does not submit, verify, store or resend codes. The underlying library defaults inputMode=numeric and autoComplete=one-time-code, but only a supplied pattern enforces characters. This reference explicitly selects maxLength6 and REGEXP_ONLY_DIGITS, complete six slots indexed0..5, and a pasteTransformer removing spaces/hyphens. Pattern failure rejects the whole candidate rather than sanitizing arbitrary letters. Underlying selection, paste insertion, length truncation and fake caret use one actual input; slots/groups are visual divs. The reference explicitly hides visual slots and the separator from assistive technology while the real input remains labelled/exposed. Wrapper spellCheck=false can be overridden by native props. Disabled suppresses native user editing; controlled props remain authoritative and caller owns verification errors, cooldown and server response. The input-otp implementation also forwards native defaultValue alongside its internal value when supplied; React19 can warn about both. This reference deliberately uses the controlled string form.",
+  "keyboardAndFocus": "The actual native input provides arrows, selection, Backspace/Delete, paste and one-time-code autofill. Tab enters one input, not six fake controls. Do not invent per-slot roving focus or automatic submission. Enter is ordinary native form behavior; onComplete only reports a filled code. Escape does not clear the code. Error text is explicit aria-describedby/aria-invalid; never identify codes only by color.",
+  "referenceComposition": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"\" aria-describedby=\"verification-help\"/></div>",
+  "projectionState": "Ready API/nonlooping first slide for Carousel; raw SSR disables both buttons until Embla initializes. Other projections show their stated native content/value.",
+  "protocol": "SCXML projects observed actual source/native transactions. Public callback names/payloads are real; _effect.* entries identify internal browser/primitive effects. It does not dispatch extra DOM events. Caller-controlled props remain authoritative, source result observations determine completion. Normal React target runs pinned original wrappers, not semantic HTML/CSS alone.",
+  "semanticParts": {
+    "container": {
+      "kind": "element",
+      "selector": ".cn-input-otp",
+      "description": "Actual OTPInput containerClassName receives source cn-input-otp class; not six real inputs."
+    },
+    "input": {
+      "kind": "element",
+      "selector": "input[data-slot=\"input-otp\"]",
+      "description": "Single actual native input owns value, name, focus, paste and completion."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-otp-group\"]",
+      "description": "Decorative connected slots; group is aria-hidden in this usage."
+    },
+    "slot": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-otp-slot\"]",
+      "description": "Actual context slot char/isActive, no per-slot textbox role."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-otp-separator\"]",
+      "description": "Actual source separator; caller aria-hidden because visual grouping is redundant."
+    },
+    "caret": {
+      "kind": "element",
+      "selector": ".cn-input-otp-caret",
+      "description": "Actual private optional fake caret wrapper."
+    },
+    "caret-line": {
+      "kind": "element",
+      "selector": ".cn-input-otp-caret-line",
+      "description": "Actual private optional fake caret line."
+    }
+  },
+  "visualStateMapping": {
+    "codePolicy": {
+      "callerProps": [
+        "maxLength",
+        "pattern",
+        "pasteTransformer",
+        "pushPasswordManagerStrategy"
+      ]
+    },
+    "active": {
+      "source": "InputOTPContext.slots[index].isActive",
+      "attribute": "data-active"
+    },
+    "disabled": {
+      "prop": "disabled"
+    },
+    "invalid": {
+      "nativeAttribute": "aria-invalid"
+    }
+  }
+}

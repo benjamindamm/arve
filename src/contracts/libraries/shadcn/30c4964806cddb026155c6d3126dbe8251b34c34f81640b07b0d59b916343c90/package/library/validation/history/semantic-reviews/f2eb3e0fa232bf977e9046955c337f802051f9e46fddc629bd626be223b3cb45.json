@@ -1,0 +1,29 @@
+{
+  "componentId": "shadcn:Collapsible",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>",
+  "keyboardAndFocus": "The native trigger uses Enter/Space and normal Tab order. Escape/outside press do not close a bare Collapsible. There is no modal focus trap or automatic focus-return contract.",
+  "sourceRule": "open/defaultOpen control one panel. Disabled suppresses toggling. onOpenChange carries the boolean and cancellable source details. Closing changes panel presence according to Panel keepMounted/transition options; the caller restores focus before programmatically hiding a currently focused descendant if required.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"collapsible\"]",
+      "description": "Primitive root layout."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"collapsible-trigger\"]",
+      "description": "Actual native disclosure button."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"collapsible-content\"]",
+      "description": "Mounted primitive panel; absence on closed state is intentional."
+    }
+  },
+  "visualStateMapping": {}
+}

@@ -1,0 +1,140 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="MenubarMenu" initial="active">
+  <datamodel>
+    <data id="open" expr="false" />
+    <data id="openControlled" expr="false" />
+    <data id="disabled" expr="false" />
+    <data id="highlighted" expr="null" />
+    <data id="checked" expr="false" />
+    <data id="checkedControlled" expr="false" />
+    <data id="radioValue" expr="'compact'" />
+    <data id="radioControlled" expr="false" />
+    <data id="disabledItems" expr="['unavailable']" />
+    <data id="preventUnmount" expr="false" />
+  </datamodel>
+  <state id="active" initial="closed">
+    <state id="closed" />
+    <state id="opening">
+      <transition event="SOURCE_ANIMATION_COMPLETE" cond="_event.data.open === true" target="expanded">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="true" />
+        </send>
+      </transition>
+    </state>
+    <state id="expanded" />
+    <state id="closing">
+      <transition event="SOURCE_ANIMATION_COMPLETE" cond="_event.data.open === false &amp;&amp; !preventUnmount" target="closed">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="false" />
+        </send>
+        <send event="_effect.sourceFinalFocus" target="#_parent">
+          <param name="policy" expr="'actual-owner-reason-and-finalFocus-prop'" />
+        </send>
+      </transition>
+      <transition event="UNMOUNT_ACTION" cond="true" target="closed">
+        <send event="onOpenChangeComplete" target="#_parent">
+          <param name="open" expr="false" />
+        </send>
+        <send event="_effect.sourceFinalFocus" target="#_parent">
+          <param name="policy" expr="'actual-owner-reason-and-finalFocus-prop'" />
+        </send>
+      </transition>
+    </state>
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <transition event="SET_OPEN_CONTROLLED">
+      <assign location="openControlled" expr="_event.data.openControlled" />
+    </transition>
+    <transition event="SET_CHECKED_CONTROLLED">
+      <assign location="checkedControlled" expr="_event.data.checkedControlled" />
+    </transition>
+    <transition event="SET_RADIO_CONTROLLED">
+      <assign location="radioControlled" expr="_event.data.radioControlled" />
+    </transition>
+    <transition event="SET_CHECKED">
+      <assign location="checked" expr="_event.data.checked" />
+    </transition>
+    <transition event="SET_RADIO_VALUE">
+      <assign location="radioValue" expr="_event.data.radioValue" />
+    </transition>
+    <transition event="SET_DISABLED_ITEMS">
+      <assign location="disabledItems" expr="_event.data.disabledItems" />
+    </transition>
+    <transition event="SET_OPEN" cond="typeof _event.data.open === &quot;boolean&quot; &amp;&amp; _event.data.open === false &amp;&amp; open !== _event.data.open" target="closing">
+      <assign location="open" expr="_event.data.open" />
+      <assign location="preventUnmount" expr="false" />
+      <send event="_effect.sourceFocusLifecycle" target="#_parent">
+        <param name="phase" expr="'final-after-close-completion'" />
+      </send>
+    </transition>
+    <transition event="SOURCE_OPEN_CHANGE" cond="!!_event.data.eventDetails &amp;&amp; _event.data.open === false &amp;&amp; !openControlled &amp;&amp; !_event.data.eventDetails.isCanceled" target="closing">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <assign location="open" expr="_event.data.open" />
+      <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+    </transition>
+    <transition event="SOURCE_OPEN_CHANGE" cond="!!_event.data.eventDetails &amp;&amp; _event.data.open === false &amp;&amp; (openControlled || _event.data.eventDetails.isCanceled)">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+    </transition>
+    <transition event="SET_OPEN" cond="typeof _event.data.open === &quot;boolean&quot; &amp;&amp; _event.data.open === true &amp;&amp; open !== _event.data.open" target="opening">
+      <assign location="open" expr="_event.data.open" />
+      <assign location="preventUnmount" expr="false" />
+      <send event="_effect.sourceFocusLifecycle" target="#_parent">
+        <param name="phase" expr="'initial'" />
+      </send>
+    </transition>
+    <transition event="SOURCE_OPEN_CHANGE" cond="!disabled &amp;&amp; !!_event.data.eventDetails &amp;&amp; _event.data.open === true &amp;&amp; !openControlled &amp;&amp; !_event.data.eventDetails.isCanceled" target="opening">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <assign location="open" expr="_event.data.open" />
+      <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      <send event="_effect.sourceFocusLifecycle" target="#_parent">
+        <param name="phase" expr="'initial'" />
+      </send>
+    </transition>
+    <transition event="SOURCE_OPEN_CHANGE" cond="!disabled &amp;&amp; !!_event.data.eventDetails &amp;&amp; _event.data.open === true &amp;&amp; (openControlled || _event.data.eventDetails.isCanceled)">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+    </transition>
+    <transition event="ESCAPE TAB SHIFT_TAB ARROW_UP ARROW_DOWN ARROW_LEFT ARROW_RIGHT HOME END TYPEAHEAD FOCUS_IN FOCUS_OUT" />
+    <transition event="SOURCE_HIGHLIGHT" cond="!!_event.data.eventDetails &amp;&amp; (open || _event.data.item == null)">
+      <assign location="highlighted" expr="_event.data.item" />
+      <send event="onItemHighlighted" target="#_parent">
+        <param name="highlightedItem" expr="_event.data.element" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+    </transition>
+    <transition event="SOURCE_COMMAND_CLICK" cond="open &amp;&amp; !disabled &amp;&amp; !disabledItems.includes(_event.data.item) &amp;&amp; !!_event.data.event">
+      <send event="onClick" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+    </transition>
+    <transition event="SOURCE_CHECKED_CHANGE" cond="open &amp;&amp; !disabled &amp;&amp; !disabledItems.includes(_event.data.item) &amp;&amp; !!_event.data.eventDetails &amp;&amp; typeof _event.data.value === &quot;boolean&quot;">
+      <send event="onCheckedChange" target="#_parent">
+        <param name="checked" expr="_event.data.value" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!checkedControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="checked" expr="_event.data.value" />
+      </if>
+    </transition>
+    <transition event="SOURCE_RADIO_CHANGE" cond="open &amp;&amp; !disabled &amp;&amp; !disabledItems.includes(_event.data.item) &amp;&amp; !!_event.data.eventDetails">
+      <send event="onValueChange" target="#_parent">
+        <param name="value" expr="_event.data.value" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!radioControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="radioValue" expr="_event.data.value" />
+      </if>
+    </transition>
+  </state>
+</scxml>

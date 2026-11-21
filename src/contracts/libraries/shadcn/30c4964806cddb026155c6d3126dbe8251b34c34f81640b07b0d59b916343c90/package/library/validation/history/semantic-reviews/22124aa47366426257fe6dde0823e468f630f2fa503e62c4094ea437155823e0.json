@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "kbd.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Kbd",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"kbd\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/kbd.tsx.source:3; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "key",
+              "description": "Native keyboard-input notation, not shortcut registration. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "KbdGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/kbd.tsx.source:16; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Native kbd grouping of the notation. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

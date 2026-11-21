@@ -1,0 +1,189 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Drawer",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Owns open/modal state without a DOM root.",
+    "trigger": "Actual primitive native trigger.",
+    "content": "Actual focus-managed popup surface.",
+    "overlay": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content.",
+    "header": "Intrinsic heading stack.",
+    "footer": "Actions, kept in caller order.",
+    "title": "Actual heading named by primitive relation.",
+    "description": "Actual descriptive paragraph.",
+    "portal": "Portal ownership, not a styled anatomy element.",
+    "close": "Native close action, including optional internal icon close.",
+    "viewport": "Primitive viewport, separate from focus popup.",
+    "body": "Primitive content container, not the outer popup.",
+    "swipe-handle": "Optional hidden grip; no independent button behavior."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "controller",
+      "declaration": "Drawer",
+      "description": "Owns open/modal state without a DOM root.",
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "DrawerTrigger",
+      "selector": "[data-slot=\"drawer-trigger\"]",
+      "description": "Actual primitive native trigger.",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-popup\"]",
+      "description": "Actual focus-managed popup surface.",
+      "ownership": "actual pinned wrapper"
+    },
+    "overlay": {
+      "kind": "element",
+      "declaration": "DrawerOverlay",
+      "selector": "[data-slot=\"drawer-overlay\"]",
+      "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content.",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "kind": "element",
+      "declaration": "DrawerHeader",
+      "selector": "[data-slot=\"drawer-header\"]",
+      "description": "Intrinsic heading stack.",
+      "ownership": "actual pinned wrapper"
+    },
+    "footer": {
+      "kind": "element",
+      "declaration": "DrawerFooter",
+      "selector": "[data-slot=\"drawer-footer\"]",
+      "description": "Actions, kept in caller order.",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "DrawerTitle",
+      "selector": "[data-slot=\"drawer-title\"]",
+      "description": "Actual heading named by primitive relation.",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "DrawerDescription",
+      "selector": "[data-slot=\"drawer-description\"]",
+      "description": "Actual descriptive paragraph.",
+      "ownership": "actual pinned wrapper"
+    },
+    "portal": {
+      "kind": "controller",
+      "declaration": "DrawerPortal",
+      "description": "Portal ownership, not a styled anatomy element.",
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "close": {
+      "kind": "element",
+      "declaration": "DrawerClose",
+      "selector": "[data-slot=\"drawer-close\"]",
+      "description": "Native close action, including optional internal icon close.",
+      "ownership": "actual pinned wrapper"
+    },
+    "viewport": {
+      "kind": "element",
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-viewport\"]",
+      "description": "Primitive viewport, separate from focus popup.",
+      "ownership": "actual pinned wrapper"
+    },
+    "body": {
+      "kind": "element",
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-content\"]",
+      "description": "Primitive content container, not the outer popup.",
+      "ownership": "actual pinned wrapper"
+    },
+    "swipe-handle": {
+      "kind": "element",
+      "declaration": "DrawerSwipeHandle",
+      "selector": "[data-slot=\"drawer-swipe-handle\"]",
+      "description": "Optional hidden grip; no independent button behavior.",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "drawer-backdrop-opacity": "components.drawer.backdropOpacity",
+      "drawer-footer-padding": "components.drawer.footerPadding",
+      "drawer-gap": "components.drawer.gap",
+      "drawer-header-gap": "components.drawer.headerGap",
+      "drawer-max-width": "components.drawer.maxWidth",
+      "drawer-padding": "components.drawer.padding",
+      "drawer-radius": "components.drawer.radius",
+      "drawer-title-line-height": "components.drawer.titleLineHeight",
+      "drawer-title-size": "components.drawer.titleSize",
+      "drawer-title-weight": "components.drawer.titleWeight",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {
+      "--nested-drawers": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive count of currently open nested drawers."
+      },
+      "--drawer-height": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive measured popup height."
+      },
+      "--drawer-frontmost-height": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive frontmost popup height in the nested stack."
+      },
+      "--drawer-swipe-movement-x": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive gesture displacement on physical X axis."
+      },
+      "--drawer-swipe-movement-y": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive gesture displacement on physical Y axis."
+      },
+      "--drawer-snap-point-offset": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive active snap offset; not a static token."
+      },
+      "--drawer-swipe-strength": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive release duration scalar between0.1 and1."
+      },
+      "--drawer-swipe-progress": {
+        "source": "../../sources/base-ui-1.9.0/docs/drawer.md.source#DrawerPopupCssVariables",
+        "purpose": "Primitive gesture progress for stack interpolation and backdrop fading."
+      }
+    },
+    "layoutPolicy": "The pinned Drawer wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual swipeDirection values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions. The pinned Drawer motion utilities bind the documented live primitive swipe, measured height, snap offset and nested-stack variables. These are real runtime inputs, not DTCG observations. Upstream 450ms easing,400ms release scalar,16px stack peek,0.05 scale step and 96px vertical clearance are explicit source-code decisions. Reduced motion disables transitions without disabling gestures or closing. All lifecycle attributes remain primitive output, never new public state props.",
+    "variants": {
+      "placement": "Actual public swipeDirection"
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

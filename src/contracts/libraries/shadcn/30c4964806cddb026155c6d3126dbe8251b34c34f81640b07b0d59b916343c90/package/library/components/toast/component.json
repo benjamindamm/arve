@@ -1,0 +1,202 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Toast",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "provider": "Actual provider/event manager context; no fabricated DOM.",
+    "toaster": "Actual Provider/Portal/Viewport/private List composition; manager event emitter requires mounted provider.",
+    "portal": "Actual source portal context; document theme/dir reaches its viewport.",
+    "manager": "Actual event-emitter manager factory; add/update/close/promise remain distinct typed operations.",
+    "manager-context": "Actual manager/provider hook; not an adjustable Root value.",
+    "viewport": "Actual source toast-viewport; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "root": "Actual source toast; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "content": "Actual source toast-content; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "title": "Actual source toast-title; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "description": "Actual source toast-description; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "action": "Actual source toast-action; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "close": "Actual source toast-close; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+    "icon": "Private ToastIcon chosen by source type; not a new public export."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "provider": {
+      "kind": "controller",
+      "declaration": "ToastProvider",
+      "source": "Actual provider/event manager context; no fabricated DOM.",
+      "description": "Actual provider/event manager context; no fabricated DOM."
+    },
+    "toaster": {
+      "kind": "controller",
+      "declaration": "Toaster",
+      "source": "Actual Provider/Portal/Viewport/private List composition; manager event emitter requires mounted provider.",
+      "description": "Actual Provider/Portal/Viewport/private List composition; manager event emitter requires mounted provider."
+    },
+    "portal": {
+      "kind": "controller",
+      "declaration": "ToastPortal",
+      "source": "Actual source portal context; document theme/dir reaches its viewport.",
+      "description": "Actual source portal context; document theme/dir reaches its viewport."
+    },
+    "manager": {
+      "kind": "controller",
+      "declaration": "createToastManager",
+      "source": "Actual event-emitter manager factory; add/update/close/promise remain distinct typed operations.",
+      "description": "Actual event-emitter manager factory; add/update/close/promise remain distinct typed operations."
+    },
+    "manager-context": {
+      "kind": "controller",
+      "declaration": "useToastManager",
+      "source": "Actual manager/provider hook; not an adjustable Root value.",
+      "description": "Actual manager/provider hook; not an adjustable Root value."
+    },
+    "viewport": {
+      "kind": "element",
+      "declaration": "ToastViewport",
+      "selector": "[data-slot=\"toast-viewport\"]",
+      "description": "Actual source toast-viewport; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "root": {
+      "kind": "element",
+      "declaration": "Toast",
+      "selector": "[data-slot=\"toast\"]",
+      "description": "Actual source toast; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "ToastContent",
+      "selector": "[data-slot=\"toast-content\"]",
+      "description": "Actual source toast-content; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "ToastTitle",
+      "selector": "[data-slot=\"toast-title\"]",
+      "description": "Actual source toast-title; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "ToastDescription",
+      "selector": "[data-slot=\"toast-description\"]",
+      "description": "Actual source toast-description; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "action": {
+      "kind": "element",
+      "declaration": "ToastAction",
+      "selector": "[data-slot=\"toast-action\"]",
+      "description": "Actual source toast-action; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "close": {
+      "kind": "element",
+      "declaration": "ToastClose",
+      "selector": "[data-slot=\"toast-close\"]",
+      "description": "Actual source toast-close; low-priority dialog/live announcement/lifecycle remain primitive-owned.",
+      "ownership": "actual source wrapper"
+    },
+    "icon": {
+      "kind": "element",
+      "declaration": "Toaster",
+      "selector": "[data-slot=\"toast-icon\"]",
+      "description": "Private ToastIcon chosen by source type; not a new public export.",
+      "ownership": "private source child"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "toast-gap": "components.toast.gap",
+      "toast-inset": "components.toast.inset",
+      "toast-max-width": "components.toast.maxWidth",
+      "toast-peek": "components.toast.peek",
+      "toast-radius": "components.toast.radius",
+      "toast-shadow-color": "components.toast.shadowColor"
+    },
+    "runtimeProperties": {
+      "--toast-index": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual visible/dom stack index."
+      },
+      "--toast-offset-y": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual measured cumulative expanded offset."
+      },
+      "--toast-height": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual Root natural-height measurement."
+      },
+      "--toast-frontmost-height": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual viewport/frontmost measured height."
+      },
+      "--toast-swipe-movement-x": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual native pointer horizontal displacement."
+      },
+      "--toast-swipe-movement-y": {
+        "source": "BaseUI Toast Root/Viewport inline measured runtime property; pinned source toast.tsx consumes it",
+        "purpose": "Actual native pointer vertical displacement."
+      }
+    },
+    "layoutPolicy": "Native toast 18px corners,16px inset,12px gap and double 10% black shadow offsets are retained.382px native width is a preferred maximum rather than a fixed sample box; viewport margin 16px bounds narrow screens. The pinned source collapsed/expanded stack is translated into readable component rules: measured height/offset/index,12px peek,0.1 index scale step, native pointer swipe movement and source 500ms transform/opacity,150ms height and 250ms content opacity. Source limited objects stay inert/transparent, source behind content is hidden until expanded, and close/removal remain distinct after actual CSS transition. Reduced motion chooses 0.01ms finite transition rather than waiting on invisible 500ms motion. Native natural-height measurement temporarily sets Root height auto, preserving longer text/actions without fixed 72px clipping. Source Close is aria-hidden while the stack is collapsed and Close itself lacks focus; actual F6 viewport focus expands the stack and exposes its name. The canonical default is the expanded low-priority state; collapsed fixtures retain that source distinction. Static 118px heights/offsets illustrate the measured default recipe at382px width; actual source measurement grows with wrapping. Source Toaster private content/text wrapper and type Icon are mapped explicitly; Button source styles apply to Action/Close, with meaningful names and no fabricated onOpenChange. Default low-priority Toast Root is genuinely nonmodal role dialog/aria-modal=false, with labelled/described title and polite viewport; higher urgency remains separately documented source behavior. Document theme/dir is caller context for source private portal; actions and timeout 0 persistent task feedback retain actual manager semantics. No page/node coordinate or arbitrary per-notification CSS identity is used.",
+    "variants": {
+      "type": {
+        "source": "ToastObject.type",
+        "values": [
+          "success",
+          "info",
+          "warning",
+          "error",
+          "loading"
+        ]
+      },
+      "stack": {
+        "source": "actual expanded/limited/behind/index/height state"
+      },
+      "priority": {
+        "source": "ToastObject.priority",
+        "values": [
+          "low",
+          "high"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

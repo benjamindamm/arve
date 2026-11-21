@@ -1,0 +1,90 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Checkbox",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "unchecked",
+      "name": "Unchecked",
+      "visualState": "default",
+      "inputs": {
+        "checked": false
+      },
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"false\" aria-labelledby=\"checkbox-label\" tabindex=\"0\"></span><span id=\"checkbox-label\">Notifications</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "checked",
+      "name": "Checked",
+      "visualState": "checked",
+      "inputs": {
+        "checked": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"true\" aria-labelledby=\"checkbox-label\" tabindex=\"0\" data-checked><span data-slot=\"checkbox-indicator\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m20 6-11 11-5-5\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span><span id=\"checkbox-label\">Notifications</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "mixed",
+      "name": "Mixed",
+      "visualState": "mixed",
+      "inputs": {
+        "checked": false,
+        "indeterminate": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"mixed\" aria-labelledby=\"checkbox-label\" tabindex=\"0\" data-indeterminate><span data-slot=\"checkbox-indicator\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m20 6-11 11-5-5\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span><span id=\"checkbox-label\">Notifications</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"false\" aria-labelledby=\"checkbox-label\" tabindex=\"-1\" data-disabled aria-disabled=\"true\"></span><span id=\"checkbox-label\">Notifications</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "invalid",
+      "name": "Invalid",
+      "visualState": "invalid",
+      "inputs": {
+        "aria-invalid": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"false\" aria-labelledby=\"checkbox-label\" tabindex=\"0\" aria-invalid=\"true\" aria-describedby=\"checkbox-error\"></span><span id=\"checkbox-label\">Notifications</span></div><p id=\"checkbox-error\">Confirm your notification preference.</p>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "visualState": "focused",
+      "inputs": {},
+      "fixture": {
+        "html": "<div data-part=\"checkbox-field\"><span data-slot=\"checkbox\" role=\"checkbox\" aria-checked=\"false\" aria-labelledby=\"checkbox-label\" tabindex=\"0\"></span><span id=\"checkbox-label\">Notifications</span></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    }
+  ]
+}

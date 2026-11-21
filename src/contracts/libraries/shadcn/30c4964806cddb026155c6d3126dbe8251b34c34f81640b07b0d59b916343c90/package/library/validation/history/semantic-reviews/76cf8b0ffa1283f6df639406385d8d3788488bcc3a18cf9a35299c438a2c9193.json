@@ -1,0 +1,62 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:AspectRatio",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "frame": "Actual source ratio frame; ratio prop supplies --ratio.",
+    "media": "Explicit caller image with meaningful alt and crop policy."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "frame": {
+      "kind": "element",
+      "declaration": "AspectRatio",
+      "selector": "[data-slot=\"aspect-ratio\"]",
+      "description": "Actual source ratio frame; ratio prop supplies --ratio.",
+      "ownership": "actual wrapper"
+    },
+    "media": {
+      "kind": "element",
+      "declaration": "AspectRatio",
+      "selector": "[data-slot=\"aspect-ratio\"] > img",
+      "description": "Explicit caller image with meaningful alt and crop policy.",
+      "ownership": "caller children"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "aspect-ratio-radius": "components.aspect-ratio.radius",
+      "aspect-ratio-surface": "components.aspect-ratio.surface"
+    },
+    "runtimeProperties": {
+      "--ratio": {
+        "source": "AspectRatio ratio prop; pinned aspect-ratio.tsx.source sets style[--ratio]",
+        "purpose": "Dimensionless required aspect ratio, evaluated by CSS aspect-ratio."
+      }
+    },
+    "layoutPolicy": "The actual wrapper sets --ratio from its required number prop. Caller precondition is finite positive ratio; there is no invented runtime validation/default. Native384×216 is one16:9 specimen, not a fixed output width.10px clipped corners and gray/6 preview surface retain observed visual values; the neutral surface is deliberately fixed rather than pretending it is a theme mode. Source docs explicitly show16:9,1:1 and9:16 examples and caller object-cover media. This reference adopts cover cropping with meaningful alt; the small vector image is independently authored test media, not native kit imagery. Intrinsic parent width controls both dimensions; child loading and announcements remain caller-owned.",
+    "variants": {
+      "ratio": {
+        "prop": "ratio",
+        "runtimeProperty": "--ratio",
+        "precondition": "finite positive number"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

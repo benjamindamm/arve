@@ -1,0 +1,60 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Table",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "native-data-table",
+      "name": "Native data table",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Quarterly report availability</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Document</th><th data-slot=\"table-head\" scope=\"col\">Pages</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Annual report</th><td data-slot=\"table-cell\">24</td></tr></tbody><tfoot data-slot=\"table-footer\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Total</th><td data-slot=\"table-cell\">24</td></tr></tfoot></table></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "caller-selected-row",
+      "name": "Caller selected row",
+      "inputs": {
+        "rowState": "selected"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Quarterly report availability</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Document</th><th data-slot=\"table-head\" scope=\"col\">Pages</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\" data-state=\"selected\"><th data-slot=\"table-head\" scope=\"row\">Annual report</th><td data-slot=\"table-cell\">24</td></tr></tbody><tfoot data-slot=\"table-footer\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Total</th><td data-slot=\"table-cell\">24</td></tr></tfoot></table></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "row-hover",
+      "name": "Row hover",
+      "inputs": {},
+      "visualState": "hovered",
+      "fixture": {
+        "html": "<div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Quarterly report availability</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Document</th><th data-slot=\"table-head\" scope=\"col\">Pages</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Annual report</th><td data-slot=\"table-cell\">24</td></tr></tbody><tfoot data-slot=\"table-footer\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Total</th><td data-slot=\"table-cell\">24</td></tr></tfoot></table></div>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "row"
+        }
+      ],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"table-container\" dir=\"rtl\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Quarterly report availability</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Document</th><th data-slot=\"table-head\" scope=\"col\">Pages</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Annual report</th><td data-slot=\"table-cell\">24</td></tr></tbody><tfoot data-slot=\"table-footer\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"row\">Total</th><td data-slot=\"table-cell\">24</td></tr></tfoot></table></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    }
+  ]
+}

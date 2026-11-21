@@ -1,0 +1,307 @@
+{
+  "format": "shadcn-semantic-content-browser/1",
+  "records": [
+    {
+      "action": "1",
+      "checks": [
+        "Seven actual Card slots; native14px corners/16px spacing",
+        "Explicit compact choice12px gap/14px title",
+        "Native descendant action executes once",
+        "Fluid320px host without horizontal overflow"
+      ],
+      "family": "card",
+      "geometry": [
+        {
+          "gap": "16px",
+          "padding": "16px",
+          "parts": [
+            "card-header",
+            "card-title",
+            "card-description",
+            "card-action",
+            "card-content",
+            "card-footer"
+          ],
+          "radius": "14px",
+          "size": "default",
+          "title": "16px"
+        },
+        {
+          "gap": "12px",
+          "padding": "12px",
+          "parts": [
+            "card-header",
+            "card-title",
+            "card-description",
+            "card-action",
+            "card-content",
+            "card-footer"
+          ],
+          "radius": "14px",
+          "size": "sm",
+          "title": "14px"
+        }
+      ],
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          272,
+          272
+        ]
+      },
+      "url": "http://localhost:5175/?family=card"
+    },
+    {
+      "checks": [
+        "Six informative variants22px/12px/2×8px",
+        "Dark semantic colors resolve",
+        "Only explicit native render anchor is a link and follows destination"
+      ],
+      "dark": {
+        "destructive": "rgb(255, 127, 110)",
+        "secondary": "rgb(38, 38, 38)"
+      },
+      "destination": "#review-details",
+      "family": "badge",
+      "geometry": [
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": -1,
+          "tag": "SPAN"
+        },
+        {
+          "fontSize": "12px",
+          "height": 22,
+          "padding": "2px 8px",
+          "tabIndex": 0,
+          "tag": "A"
+        }
+      ],
+      "url": "http://localhost:5175/?family=badge"
+    },
+    {
+      "checks": [
+        "Actual1.9 data-orientation binds CSS despite pinned utility mismatch",
+        "Horizontal1px and vertical1×96px in chosen host",
+        "ARIA orientation and no invented tabstop"
+      ],
+      "family": "separator",
+      "geometry": [
+        {
+          "aria": "horizontal",
+          "height": 1,
+          "orientation": "horizontal",
+          "tabIndex": -1,
+          "width": 912
+        },
+        {
+          "aria": "vertical",
+          "height": 96,
+          "orientation": "vertical",
+          "tabIndex": -1,
+          "width": 1
+        }
+      ],
+      "url": "http://localhost:5175/?family=separator"
+    },
+    {
+      "checks": [
+        "Actual native kbd/group,20px/12px/4px geometry",
+        "No fabricated focus/action/shortcut registration"
+      ],
+      "family": "kbd",
+      "keys": [
+        {
+          "fontSize": "12px",
+          "height": 20,
+          "padding": "0px 4px",
+          "role": null,
+          "tabIndex": -1,
+          "tag": "KBD"
+        },
+        {
+          "fontSize": "12px",
+          "height": 20,
+          "padding": "0px 4px",
+          "role": null,
+          "tabIndex": -1,
+          "tag": "KBD"
+        },
+        {
+          "fontSize": "12px",
+          "height": 20,
+          "padding": "0px 4px",
+          "role": null,
+          "tabIndex": -1,
+          "tag": "KBD"
+        }
+      ],
+      "url": "http://localhost:5175/?family=kbd"
+    },
+    {
+      "checks": [
+        "Native40/16/125px shapes; fluid text/card width",
+        "Meaningful host loading status, decorative hidden geometry",
+        "Caller data update replaces shapes without fabricated Skeleton events",
+        "Chosen timing separate from static measurements; reduced-motion stops movement",
+        "Fluid320px host without horizontal overflow"
+      ],
+      "family": "skeleton",
+      "loaded": {
+        "busy": "false",
+        "shapes": 0,
+        "status": "Contacts loaded"
+      },
+      "motion": [
+        {
+          "animation": "ui-skeleton-pulse",
+          "duration": "2s"
+        },
+        {
+          "animation": "ui-skeleton-pulse",
+          "duration": "2s"
+        },
+        {
+          "animation": "ui-skeleton-pulse",
+          "duration": "2s"
+        }
+      ],
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          40,
+          272,
+          272
+        ]
+      },
+      "reduced": [
+        {
+          "animation": "none",
+          "height": 40,
+          "hidden": "true",
+          "name": null,
+          "role": null,
+          "width": 40
+        },
+        {
+          "animation": "none",
+          "height": 16,
+          "hidden": "true",
+          "name": null,
+          "role": null,
+          "width": 400
+        },
+        {
+          "animation": "none",
+          "height": 125,
+          "hidden": "true",
+          "name": null,
+          "role": null,
+          "width": 400
+        }
+      ],
+      "url": "http://localhost:5175/?family=skeleton"
+    },
+    {
+      "checks": [
+        "Native16/12/20/24px caller size adaptation",
+        "Actual SVG status names retained under reduced motion",
+        "Chosen timing separate from static measurements; reduced-motion stops movement"
+      ],
+      "family": "spinner",
+      "motion": [
+        {
+          "animation": "ui-spinner-turn",
+          "duration": "1s"
+        },
+        {
+          "animation": "ui-spinner-turn",
+          "duration": "1s"
+        },
+        {
+          "animation": "ui-spinner-turn",
+          "duration": "1s"
+        },
+        {
+          "animation": "ui-spinner-turn",
+          "duration": "1s"
+        }
+      ],
+      "reduced": [
+        {
+          "animation": "none",
+          "height": 16,
+          "hidden": null,
+          "name": "Loading default contacts",
+          "role": "status",
+          "width": 16
+        },
+        {
+          "animation": "none",
+          "height": 12,
+          "hidden": null,
+          "name": "Loading small contacts",
+          "role": "status",
+          "width": 12
+        },
+        {
+          "animation": "none",
+          "height": 20,
+          "hidden": null,
+          "name": "Loading large contacts",
+          "role": "status",
+          "width": 20
+        },
+        {
+          "animation": "none",
+          "height": 24,
+          "hidden": null,
+          "name": "Loading extra-large contacts",
+          "role": "status",
+          "width": 24
+        }
+      ],
+      "url": "http://localhost:5175/?family=spinner"
+    }
+  ],
+  "result": "PASS"
+}

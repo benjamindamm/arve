@@ -1,0 +1,125 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:HoverCard",
+  "componentSha256": "ce2ad77c4b93b47228f50a5e85d7e34d2f4360efc27e41f31507a79fdaaaf0ee",
+  "profile": "interactive-control/1",
+  "profileSha256": "643e8814e78bd44e5cdbe1eb88797957a4e543b71064014b8f10b08307eb556c",
+  "requirements": {
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "97a1db585a79ec396d8ea8cee5275e3fe5304f571e46f523ba344bb2f18df278",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fmembers%2F0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "97a1db585a79ec396d8ea8cee5275e3fe5304f571e46f523ba344bb2f18df278",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fevents%2F0"
+          }
+        }
+      ]
+    },
+    "VIS-001": {
+      "status": "open",
+      "note": "Domain migration required: semantic tokens/component-level parts, variants and state CSS must replace source-node visual dumps."
+    },
+    "VIS-002": {
+      "status": "open",
+      "note": "Domain migration required: semantic tokens/component-level parts, variants and state CSS must replace source-node visual dumps."
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "76e1e5a6f576e18a87bab023d9c8097a306b183404d1bdaa62135c383b38f41f",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Ascxml%2F%40initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "76e1e5a6f576e18a87bab023d9c8097a306b183404d1bdaa62135c383b38f41f",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[@event=\"OPEN_DELAY_ELAPSED\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "76e1e5a6f576e18a87bab023d9c8097a306b183404d1bdaa62135c383b38f41f",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "38a8b623d806b0d1caae17d38c7a8f1701cf6e0c8944c46daba456eb31156b9c",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fa[@href]"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "38a8b623d806b0d1caae17d38c7a8f1701cf6e0c8944c46daba456eb31156b9c",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fa[@id=\"hover-card-trigger\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "76e1e5a6f576e18a87bab023d9c8097a306b183404d1bdaa62135c383b38f41f",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"FOCUS_IN\")]"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "23117c7b96a1cad1ae3a78d89c372f8bed9a9024bcc5ace95a7c097efb970c50",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fpurpose"
+          }
+        }
+      ]
+    }
+  }
+}

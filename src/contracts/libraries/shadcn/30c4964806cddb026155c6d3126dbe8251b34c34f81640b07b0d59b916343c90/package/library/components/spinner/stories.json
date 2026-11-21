@@ -1,0 +1,59 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Spinner",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "loading-default",
+      "name": "Loading default",
+      "inputs": {
+        "className": "ui-spinner-default"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<svg data-slot=\"spinner\" class=\"ui-spinner-default\" role=\"status\" aria-label=\"Loading contacts\" viewBox=\"0 0 24 24\"><path d=\"M20 12a8 8 0 1 1-8-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "loading-small",
+      "name": "Loading small",
+      "inputs": {
+        "className": "ui-spinner-small"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<svg data-slot=\"spinner\" class=\"ui-spinner-small\" role=\"status\" aria-label=\"Loading contacts\" viewBox=\"0 0 24 24\"><path d=\"M20 12a8 8 0 1 1-8-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "loading-large",
+      "name": "Loading large",
+      "inputs": {
+        "className": "ui-spinner-large"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<svg data-slot=\"spinner\" class=\"ui-spinner-large\" role=\"status\" aria-label=\"Loading contacts\" viewBox=\"0 0 24 24\"><path d=\"M20 12a8 8 0 1 1-8-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "loading-extra-large",
+      "name": "Loading extra large",
+      "inputs": {
+        "className": "ui-spinner-extra-large"
+      },
+      "visualState": "loading",
+      "fixture": {
+        "html": "<svg data-slot=\"spinner\" class=\"ui-spinner-extra-large\" role=\"status\" aria-label=\"Loading contacts\" viewBox=\"0 0 24 24\"><path d=\"M20 12a8 8 0 1 1-8-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

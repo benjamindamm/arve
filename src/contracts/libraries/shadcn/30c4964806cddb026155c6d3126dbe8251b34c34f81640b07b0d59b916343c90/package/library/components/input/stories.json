@@ -1,0 +1,108 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Input",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "empty",
+      "name": "Empty",
+      "visualState": "default",
+      "inputs": {
+        "placeholder": "Project name"
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "filled",
+      "name": "Filled",
+      "visualState": "default",
+      "inputs": {
+        "value": "Roadmap"
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" value=\"Roadmap\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" disabled value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "invalid",
+      "name": "Invalid",
+      "visualState": "invalid",
+      "inputs": {
+        "aria-invalid": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" aria-invalid=\"true\" value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Use a project name.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "rounded-caller-shape",
+      "name": "Rounded caller shape",
+      "visualState": "default",
+      "inputs": {
+        "className": "ui-input-rounded"
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" class=\"ui-input-rounded\" value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "focused-empty",
+      "name": "Focused empty",
+      "visualState": "focused",
+      "inputs": {},
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" value=\"\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "focused-filled",
+      "name": "Focused filled",
+      "visualState": "focused",
+      "inputs": {
+        "value": "Roadmap"
+      },
+      "fixture": {
+        "html": "<div data-part=\"input-field\"><label for=\"reference-input\" data-part=\"input-label\">Project name</label><input id=\"reference-input\" data-slot=\"input\" type=\"text\" value=\"Roadmap\" placeholder=\"Project name\" aria-describedby=\"input-help\"><p id=\"input-help\" data-part=\"input-help\">Enter the project name.</p></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    }
+  ]
+}

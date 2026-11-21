@@ -1,0 +1,266 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Questionnaire",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "form": "Native form with independent active-question and answer state",
+    "progress": "Actual labelled polite progressbar",
+    "item": "Native fieldset, hidden/inert when inactive",
+    "title": "Native question legend",
+    "description": "Registered persistent description",
+    "choices": "Answer collection",
+    "choice": "Actual label containing native radio/checkbox",
+    "choice-input": "Native answer input; private compound wrapper output",
+    "choice-indicator": "Decorative checked/radio/checkbox indicator",
+    "choice-dot": "Decorative selected radio dot",
+    "choice-check": "Decorative selected checkbox glyph",
+    "choice-label": "Native answer label text",
+    "choice-shortcut": "Source shortcut badge, hidden when absent",
+    "choice-description": "Optional readable choice detail",
+    "input-wrapper": "Private native input positioning wrapper",
+    "input": "Native text/email answer",
+    "error": "Actual hidden or announced item error",
+    "actions": "Question navigation controls",
+    "previous": "Native previous question button",
+    "skip": "Native optional skip button",
+    "next": "Validating native next button",
+    "submit": "Actual native form submit control"
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "form": {
+      "kind": "element",
+      "declaration": "Questionnaire",
+      "selector": "[data-slot=\"questionnaire\"]",
+      "description": "Native form with independent active-question and answer state",
+      "ownership": "actual source output"
+    },
+    "progress": {
+      "kind": "element",
+      "declaration": "QuestionnaireProgress",
+      "selector": "[data-slot=\"questionnaire-progress\"]",
+      "description": "Actual labelled polite progressbar",
+      "ownership": "actual source output"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "QuestionnaireItem",
+      "selector": "[data-slot=\"questionnaire-item\"]",
+      "description": "Native fieldset, hidden/inert when inactive",
+      "ownership": "actual source output"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "QuestionnaireTitle",
+      "selector": "[data-slot=\"questionnaire-title\"]",
+      "description": "Native question legend",
+      "ownership": "actual source output"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "QuestionnaireDescription",
+      "selector": "[data-slot=\"questionnaire-description\"]",
+      "description": "Registered persistent description",
+      "ownership": "actual source output"
+    },
+    "choices": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoices",
+      "selector": "[data-slot=\"questionnaire-choices\"]",
+      "description": "Answer collection",
+      "ownership": "actual source output"
+    },
+    "choice": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice\"]",
+      "description": "Actual label containing native radio/checkbox",
+      "ownership": "actual source output"
+    },
+    "choice-input": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-input\"]",
+      "description": "Native answer input; private compound wrapper output",
+      "ownership": "actual source output"
+    },
+    "choice-indicator": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-indicator\"]",
+      "description": "Decorative checked/radio/checkbox indicator",
+      "ownership": "actual source output"
+    },
+    "choice-dot": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-indicator-dot\"]",
+      "description": "Decorative selected radio dot",
+      "ownership": "actual source output"
+    },
+    "choice-check": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-indicator-check\"]",
+      "description": "Decorative selected checkbox glyph",
+      "ownership": "actual source output"
+    },
+    "choice-label": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-label\"]",
+      "description": "Native answer label text",
+      "ownership": "actual source output"
+    },
+    "choice-shortcut": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoice",
+      "selector": "[data-slot=\"questionnaire-choice-shortcut\"]",
+      "description": "Source shortcut badge, hidden when absent",
+      "ownership": "actual source output"
+    },
+    "choice-description": {
+      "kind": "element",
+      "declaration": "QuestionnaireChoiceDescription",
+      "selector": "[data-slot=\"questionnaire-choice-description\"]",
+      "description": "Optional readable choice detail",
+      "ownership": "actual source output"
+    },
+    "input-wrapper": {
+      "kind": "element",
+      "declaration": "QuestionnaireInput",
+      "selector": "[data-slot=\"questionnaire-input-wrapper\"]",
+      "description": "Private native input positioning wrapper",
+      "ownership": "actual source output"
+    },
+    "input": {
+      "kind": "element",
+      "declaration": "QuestionnaireInput",
+      "selector": "[data-slot=\"questionnaire-input\"]",
+      "description": "Native text/email answer",
+      "ownership": "actual source output"
+    },
+    "error": {
+      "kind": "element",
+      "declaration": "QuestionnaireError",
+      "selector": "[data-slot=\"questionnaire-error\"]",
+      "description": "Actual hidden or announced item error",
+      "ownership": "actual source output"
+    },
+    "actions": {
+      "kind": "element",
+      "declaration": "QuestionnaireActions",
+      "selector": "[data-slot=\"questionnaire-actions\"]",
+      "description": "Question navigation controls",
+      "ownership": "actual source output"
+    },
+    "previous": {
+      "kind": "element",
+      "declaration": "QuestionnairePrevious",
+      "selector": "[data-slot=\"questionnaire-previous\"]",
+      "description": "Native previous question button",
+      "ownership": "actual source output"
+    },
+    "skip": {
+      "kind": "element",
+      "declaration": "QuestionnaireSkip",
+      "selector": "[data-slot=\"questionnaire-skip\"]",
+      "description": "Native optional skip button",
+      "ownership": "actual source output"
+    },
+    "next": {
+      "kind": "element",
+      "declaration": "QuestionnaireNext",
+      "selector": "[data-slot=\"questionnaire-next\"]",
+      "description": "Validating native next button",
+      "ownership": "actual source output"
+    },
+    "submit": {
+      "kind": "element",
+      "declaration": "QuestionnaireSubmit",
+      "selector": "[data-slot=\"questionnaire-submit\"]",
+      "description": "Actual native form submit control",
+      "ownership": "actual source output"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-destructive": "semantic.color.destructive",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "questionnaire-choice-min": "components.questionnaire.choiceMin",
+      "questionnaire-dot": "components.questionnaire.dot",
+      "questionnaire-gap": "components.questionnaire.gap",
+      "questionnaire-indicator": "components.questionnaire.indicator",
+      "questionnaire-inset": "components.questionnaire.inset",
+      "questionnaire-radius": "components.questionnaire.radius",
+      "questionnaire-shortcut": "components.questionnaire.shortcut",
+      "questionnaire-shortcut-radius": "components.questionnaire.shortcutRadius",
+      "questionnaire-title-line": "components.questionnaire.titleLine",
+      "questionnaire-title-size": "components.questionnaire.titleSize",
+      "questionnaire-title-weight": "components.questionnaire.titleWeight",
+      "questionnaire-width": "components.questionnaire.width"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Every actual exported form wrapper and private native Choice subpart has stable slot identity. Native 64px minimum answer card,10px corner,16px indicator/8px dot and 20px shortcut role remain semantic tokens; preferred 448px form width is capped by its parent and answers grow for longer text. Radio/checkbox decoration follows actual data-type/data-checked; invisible native input still owns focus, labels, selection and FormData. Focus-visible is projected on the actual containing label, not an invented role. Inactive Item and inapplicable action hidden/inert states remain hidden despite flex/grid layout; errors use actual registered alert/description semantics. Source-independent fixtures include required/optional, single/multiple, text/error and focus. Source active item, native answers, skip participation and submission validity are separate authorities. Source Ctrl/Meta+Enter and optional letter shortcuts remain real primitive behavior, never generic value transitions. Preferred spacing/type sizes and 44px form actions are explicit readable reference decisions. No page coordinates, source ID anatomy or hidden native answer replacement.",
+    "variants": {
+      "type": {
+        "source": "QuestionnaireItem.multiple",
+        "attribute": "data-type=radio|checkbox"
+      },
+      "answer": {
+        "source": "native answer state",
+        "attributes": [
+          "data-checked",
+          "data-unchecked",
+          "data-disabled"
+        ]
+      },
+      "active": {
+        "source": "item context",
+        "attributes": [
+          "data-active",
+          "hidden",
+          "inert"
+        ]
+      },
+      "invalid": {
+        "source": "source validation",
+        "attribute": "aria-invalid"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

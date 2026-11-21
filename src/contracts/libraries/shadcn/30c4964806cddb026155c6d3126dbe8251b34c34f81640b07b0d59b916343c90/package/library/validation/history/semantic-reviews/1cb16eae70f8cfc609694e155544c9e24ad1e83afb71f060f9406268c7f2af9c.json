@@ -1,0 +1,183 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Trace",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "status-default",
+      "name": "Status default",
+      "inputs": {
+        "line": {
+          "status": null
+        },
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation finished</span><span data-slot=\"trace-description\">2 seconds</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "status-running",
+      "name": "Status running",
+      "inputs": {
+        "line": {
+          "status": "running"
+        },
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"running\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation running</span><span data-slot=\"trace-description\">2 seconds</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "status-error",
+      "name": "Status error",
+      "inputs": {
+        "line": {
+          "status": "error"
+        },
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "status-pending",
+      "name": "Status pending",
+      "inputs": {
+        "line": {
+          "status": "pending"
+        },
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"pending\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation pending</span><span data-slot=\"trace-description\">2 seconds</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "collapsible": {
+          "defaultOpen": false
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"false\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "collapsible": {
+          "disabled": true,
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\" disabled=\"\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "inputs": {
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation finished</span><span data-slot=\"trace-description\">2 seconds</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "trigger"
+        }
+      ],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "starting",
+      "name": "Starting",
+      "inputs": {
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "starting",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" data-starting-style=\"\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>",
+        "primitiveOutputState": "starting"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "ending",
+      "name": "Ending",
+      "inputs": {
+        "collapsible": {
+          "defaultOpen": true
+        }
+      },
+      "visualState": "ending",
+      "fixture": {
+        "html": "<div data-slot=\"trace\"><div data-slot=\"trace-collapsible\"><button type=\"button\" data-slot=\"trace-collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"trace-panel\"><span data-slot=\"trace-line\" data-status=\"error\"><span data-slot=\"trace-icon\" aria-hidden=\"true\">!</span><span data-slot=\"trace-title\">Report generation failed</span><span data-slot=\"trace-description\">Connection unavailable</span></span><span data-slot=\"trace-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span></button><div data-slot=\"trace-collapsible-content\" data-ending-style=\"\" id=\"trace-panel\"><div data-slot=\"trace-collapsible-content-inner\"><p>Check the connection, then retry from the report action.</p><button type=\"button\">Trace detail action</button></div></div></div></div>",
+        "primitiveOutputState": "ending"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    }
+  ]
+}

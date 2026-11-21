@@ -1,0 +1,24 @@
+@import "../../tokens.css";
+
+[data-slot="label"] {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-control-label-gap);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  font-weight: var(--ui-font-weight-medium);
+  user-select: none;
+}
+
+[data-part="label-field"] {
+  display: grid;
+  gap: var(--ui-control-label-gap);
+  min-inline-size: 0;
+}
+
+[data-part="label-field"][data-disabled="true"] [data-slot="label"] {
+  opacity: var(--ui-label-disabled-opacity);
+  cursor: default;
+}

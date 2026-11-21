@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "item.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Item",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"div\"> & VariantProps<typeof itemVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:59; defaults: {\"variant\": \"\\\"default\\\"\", \"size\": \"\\\"default\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"outline\" | \"muted\""
+              },
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"default\" | \"sm\" | \"xs\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Actual default div or explicit native render override. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:9; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Actual role=list; caller supplies listitem roles on noninteractive rows. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemSeparator",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Separator>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:23; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Actual composed horizontal Separator; decorative in this list usage. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemMedia",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & VariantProps<typeof itemMediaVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:99; defaults: {\"variant\": \"\\\"default\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "media",
+              "description": "Actual default/icon/image media variant wrapper. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:114; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Flexible title/description stack. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemTitle",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:127; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Title wrapper with explicit caller heading. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemDescription",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"p\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:140; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "description",
+              "description": "Native description paragraph. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemActions",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:153; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "actions",
+              "description": "Independent caller actions; omitted from a whole-row anchor. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemHeader",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:163; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Full-row optional header content. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemFooter",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:176; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Full-row optional footer content. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

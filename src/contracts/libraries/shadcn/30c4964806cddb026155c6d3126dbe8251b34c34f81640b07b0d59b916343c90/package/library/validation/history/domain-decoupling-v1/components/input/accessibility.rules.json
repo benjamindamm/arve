@@ -1,0 +1,9 @@
+{
+  "componentId": "shadcn:Input",
+  "basis": "Pinned shadcn Base UI wrapper + Base UI 1.9.0 primitive implementation/types.",
+  "name": "Button uses native non-hidden text; icon-only buttons use aria-label/labelledby. Custom checkbox/switch span roots require the primitive-generated or explicitly associated label relation. Input uses native label-for.",
+  "keyboard": "Native button: Enter/Space activate; checkbox: Space toggles, Enter does not toggle (it may submit its containing form); switch: source useButton Space/Enter activation; input: native text editing and IME. Tab follows native order; disabled controls are skipped unless Button focusableWhenDisabled is explicitly chosen.",
+  "disabled": "Ignore activation; readonly checkbox/switch/input preserve value. Disabled/readOnly are distinct.",
+  "errors": "Parent/Field supplies aria-invalid and aria-describedby for error text. The wrapper does not invent validation rules.",
+  "adapter": "For Base UI 1.9 checkbox/switch default roots are span role controls plus a hidden native form input, not a visible native input or button. The HTML is a semantic projection of that structure."
+}

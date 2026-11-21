@@ -1,0 +1,66 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="ToggleGroup" initial="active">
+  <datamodel>
+    <data id="value" expr="[]" />
+    <data id="controlled" expr="false" />
+    <data id="focusedItem" expr="null" />
+    <data id="items" expr="['basic','pro','summary','details','bold','italic']" />
+    <data id="disabledItems" expr="[]" />
+    <data id="disabled" expr="false" />
+    <data id="multiple" expr="false" />
+    <data id="standalonePressed" expr="false" />
+    <data id="standaloneControlled" expr="false" />
+    <data id="standaloneDisabled" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="ESCAPE" />
+    <transition event="FOCUS_OUT" />
+    <transition event="SET_CONTROLLED">
+      <assign location="controlled" expr="_event.data.controlled" />
+    </transition>
+    <transition event="SET_ITEMS">
+      <assign location="items" expr="_event.data.items" />
+    </transition>
+    <transition event="SET_DISABLED_ITEMS">
+      <assign location="disabledItems" expr="_event.data.disabledItems" />
+    </transition>
+    <transition event="SET_VALUE">
+      <assign location="value" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <transition event="SET_MULTIPLE">
+      <assign location="multiple" expr="_event.data.multiple" />
+    </transition>
+    <transition event="SOURCE_FOCUS" cond="items.includes(_event.data.item) &amp;&amp; !disabledItems.includes(_event.data.item)">
+      <assign location="focusedItem" expr="_event.data.item" />
+    </transition>
+    <transition event="SOURCE_VALUE_CHANGE" cond="!!_event.data.eventDetails &amp;&amp; !disabled &amp;&amp; Array.isArray(_event.data.value) &amp;&amp; (multiple || _event.data.value.length &lt;= 1) &amp;&amp; _event.data.value.every(v =&gt; items.includes(v) &amp;&amp; !disabledItems.includes(v))">
+      <send event="onValueChange" target="#_parent">
+        <param name="value" expr="_event.data.value" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="value" expr="_event.data.value" />
+      </if>
+    </transition>
+    <transition event="SET_PRESSED">
+      <assign location="standalonePressed" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_TOGGLE_CONTROLLED">
+      <assign location="standaloneControlled" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_TOGGLE_DISABLED">
+      <assign location="standaloneDisabled" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_TOGGLE_CHANGE" cond="!standaloneDisabled &amp;&amp; typeof _event.data.pressed === 'boolean' &amp;&amp; !!_event.data.eventDetails">
+      <send event="onPressedChange" target="#_parent">
+        <param name="pressed" expr="_event.data.pressed" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!standaloneControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="standalonePressed" expr="_event.data.pressed" />
+      </if>
+    </transition>
+  </state>
+</scxml>

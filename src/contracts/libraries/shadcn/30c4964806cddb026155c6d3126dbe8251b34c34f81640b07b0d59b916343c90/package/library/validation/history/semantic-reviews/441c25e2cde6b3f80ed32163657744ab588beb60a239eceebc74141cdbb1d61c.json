@@ -1,0 +1,70 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "marker": {
+      "declaration": "Marker",
+      "selector": "[data-slot=\"marker\"]",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "declaration": "MarkerIcon",
+      "selector": "[data-slot=\"marker-icon\"]",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "declaration": "MarkerContent",
+      "selector": "[data-slot=\"marker-content\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2388:3036",
+      "observationPath": "layout.gap",
+      "semanticTokens": [
+        "components.marker.gap"
+      ]
+    },
+    {
+      "sourceNodeId": "2388:3038",
+      "observationPath": "width",
+      "semanticTokens": [
+        "components.marker.iconSize"
+      ]
+    },
+    {
+      "sourceNodeId": "2388:3041",
+      "observationPath": "text",
+      "semanticTokens": [
+        "components.marker.fontSize",
+        "components.marker.lineHeight"
+      ]
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2388:3047",
+      "sourcePartId": "2388:3047",
+      "sourceName": "Marker",
+      "semanticParts": [
+        "marker",
+        "icon",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "separator",
+        "border",
+        "caller-status"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Marker maps all three actual wrappers. Native 8px spacing, 16px icon and 14/20px muted text remain semantic roles; native separator lines become flexible pseudo-elements and the border variant adds a logical bottom boundary after 8px separation. The guide shows inline notes, labeled separators and bordered rows; variant alone does not add ARIA separator/status or control semantics. MarkerIcon is actually aria-hidden, so essential meaning stays in text. A caller may explicitly choose role=status for changing work feedback or render a native action. The native guide says asChild, while the pinned selected BaseUI wrapper exposes render; the contract follows the actual render API and retains the guide as source evidence. Optional shimmer is an external caller style utility, not an invented Marker prop or required animation.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

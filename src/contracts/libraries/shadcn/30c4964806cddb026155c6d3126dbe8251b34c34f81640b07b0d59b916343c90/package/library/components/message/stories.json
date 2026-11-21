@@ -1,0 +1,58 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Message",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "start",
+      "name": "Start",
+      "inputs": {
+        "align": "start"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"message-group\"><div data-slot=\"message\" data-align=\"start\"><div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div><div data-slot=\"message-content\"><div data-slot=\"message-header\">Alex · <time datetime=\"2026-11-21T10:24:00Z\">10:24</time></div><p>The report is ready.</p><div data-slot=\"message-footer\">Delivered</div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "end",
+      "name": "End",
+      "inputs": {
+        "align": "end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"message-group\"><div data-slot=\"message\" data-align=\"end\"><div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div><div data-slot=\"message-content\"><div data-slot=\"message-header\">Alex · <time datetime=\"2026-11-21T10:24:00Z\">10:24</time></div><p>The report is ready.</p><div data-slot=\"message-footer\">Delivered</div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "align": "end",
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"message-group\" dir=\"rtl\"><div data-slot=\"message\" data-align=\"end\"><div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div><div data-slot=\"message-content\"><div data-slot=\"message-header\">Alex · <time datetime=\"2026-11-21T10:24:00Z\">10:24</time></div><p>The report is ready.</p><div data-slot=\"message-footer\">Delivered</div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "long-message",
+      "name": "Long message",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"message-group\"><div data-slot=\"message\" data-align=\"start\"><div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div><div data-slot=\"message-content\"><div data-slot=\"message-header\">Alex · <time datetime=\"2026-11-21T10:24:00Z\">10:24</time></div><p>The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. The quarterly report contains a detailed review of outstanding tasks, ownership and next steps. </p><div data-slot=\"message-footer\">Delivered</div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    }
+  ]
+}

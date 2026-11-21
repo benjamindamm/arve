@@ -1,0 +1,123 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Select",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"false\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "small",
+      "name": "Small",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"sm\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"false\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"false\" disabled aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\" disabled/></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "readonly",
+      "name": "Readonly",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-readonly=\"true\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\" aria-readonly=\"true\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "multiple",
+      "name": "Multiple",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/><input type=\"hidden\" name=\"fruit\" value=\"Apple\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\" aria-multiselectable=\"true\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "long-list",
+      "name": "Long list",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 0</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 1</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 2</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 3</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 4</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 5</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 6</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 7</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 8</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 9</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 10</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 11</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 12</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 13</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 14</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 15</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 16</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 17</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 18</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Fruit 19</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"rtl\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "highlighted",
+      "name": "Highlighted",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\" data-highlighted=\"\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    },
+    {
+      "id": "trigger-focus",
+      "name": "Trigger focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"false\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Real source semantics/query/highlight/selected authority remain distinct. Static fixtures describe finite visual states; actual native keyboard and callbacks are checked separately."
+    }
+  ]
+}

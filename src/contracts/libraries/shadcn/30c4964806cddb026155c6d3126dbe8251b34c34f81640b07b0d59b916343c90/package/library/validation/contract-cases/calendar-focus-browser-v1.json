@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "scope": "Real BrowserOS source-vs-reference month-boundary regression; rawCalendar chooses unchanged source component.",
+  "adapter": "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fdates.jsx",
+  "adapterSha256": "4f59addd0aff32532ddbb338c88ac5bac771da6e6a0913056c139316eef11a80",
+  "cases": [
+    {
+      "component": "calendar",
+      "name": "raw upstream has lost DOM focus after month boundary",
+      "result": "pass",
+      "observed": {
+        "active": null,
+        "focused": [
+          "2026-12-01"
+        ],
+        "month": "December 2026"
+      }
+    },
+    {
+      "component": "calendar",
+      "name": "attached reference ref restores actual next-month focus",
+      "result": "pass",
+      "observed": {
+        "active": "Tuesday, December 1st, 2026",
+        "focused": [
+          "2026-12-01"
+        ],
+        "month": "December 2026"
+      }
+    }
+  ]
+}

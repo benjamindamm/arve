@@ -1,0 +1,25 @@
+{
+  "purpose": "Group conversational content by speaker.",
+  "avoid": "Do not use position or color as the sole speaker indication.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Bubble",
+  "contentAlternative": "Speaker attribution and message content are readable text. Alignment and tint are redundant cues.",
+  "updatesAndDescendants": "Bubble is a div composition with start/end alignment. BubbleContent can useRender a native action/link. BubbleReactions positions caller-provided controls; the component has no built-in reaction state, persistence or callback.",
+  "referenceDecision": "The example reaction is an ordinary labelled Button owned by the caller; no fabricated like API is attached to Bubble.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/bubble.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/bubble-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Bubble binds all four actual wrappers. The native Primary depiction maps to the selected React API variant=default, not an invented primary prop. Native 22px corners, 10/12px insets, 14/20px text and 32px representative group spacing become reusable roles; the short primary text uses a Light face while longer specimens use Regular, and this reference explicitly selects Regular consistently. Native widths/heights remain text-dependent. All seven actual variant classes are described, including source-supported ghost without a separate native master. The unbound #C7E8FF tinted surface keeps its observed #0A0A0A text as a fixed pair across modes rather than inventing an unseen dark tint. Outline uses an inset stroke without increasing native intrinsic height. Reactions retain 2/6px insets, 4px gap and rounded surface; top/bottom half-overlap and 12px inline inset are explicit positioning decisions. Native passive reactions are 24px; an interactive child Button may enlarge this intrinsic surface. Speaker text is mandatory in this usage. Reaction state and native content actions belong to callers, not Bubble callbacks.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "Show or hide supplementary content through its owning trigger.",
+  "avoid": "Avoid concealing essential task instructions.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Collapsible",
+  "sourceRule": "open/defaultOpen control one panel. Disabled suppresses toggling. onOpenChange carries the boolean and cancellable source details. Closing changes panel presence according to Panel keepMounted/transition options; the caller restores focus before programmatically hiding a currently focused descendant if required.",
+  "keyboardAndFocus": "The native trigger uses Enter/Space and normal Tab order. Escape/outside press do not close a bare Collapsible. There is no modal focus trap or automatic focus-return contract.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/collapsible.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/collapsible.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/collapsible-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/collapsible.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "The three pinned wrappers are unstyled primitives. This reference adopts the native compact 32px header, 16px inline inset and 8px stack gap; content height and width remain intrinsic. No card, chevron, animation, invented variant or fixed source instance width is implied. A composed Button may replace the trigger through the actual render API; its own chrome then belongs to that composition.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

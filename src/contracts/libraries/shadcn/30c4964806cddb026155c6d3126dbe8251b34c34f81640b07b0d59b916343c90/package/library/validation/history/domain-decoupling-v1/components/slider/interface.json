@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "slider.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Slider",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number | readonly number[]"
+              },
+              "description": "Root accepts scalar or array value/defaultValue, min0/max100, step1, largeStep10, orientation horizontal|vertical, disabled/name/form, minStepsBetweenValues and thumbCollisionBehavior push|swap|none. Wrapper thumbAlignment defaults edge but {...props} can override it. onValueChange has cancellable ChangeEventDetails with reason and activeThumbIndex; onValueCommitted has generic CommitEventDetails and only reports a changed, uncanceled commit. Source quantizes/clamps pointer/keyboard changes and enforces range collision policy. IMPORTANT wrapper quirk: thumb count is array value length, else array defaultValue length, else2; scalar props still create two Thumb instances. This reference explicitly uses value={[40]} for one thumb and arrays for ranges. Wrapper does not expose per-thumb naming/index props; Root aria-labelledby is propagated through primitive context to its internal range inputs."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SliderPrimitive.Root.Props"
+              },
+              "description": "Exact public source type, defaults {\"min\": \"0\", \"max\": \"100\"}; sources/shadcn/apps/v4/registry/bases/base/ui/slider.tsx.source:4."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: number | readonly number[], eventDetails: SliderPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual cancellable source React callback, preserving eventDetails and native event. Controlled props remain authoritative."
+            },
+            {
+              "name": "onValueCommitted",
+              "type": {
+                "text": "(value: number | readonly number[], eventDetails: SliderPrimitive.Root.CommitEventDetails) => void"
+              },
+              "description": "Actual generic commit callback after changed, uncanceled interaction; not another cancellable value request."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "slider",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "slider-track",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "slider-range",
+              "description": "Actual source data-slot."
+            },
+            {
+              "name": "slider-thumb",
+              "description": "Actual source data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "purpose": "Identify a point, entity or status with a compact marker.",
+  "avoid": "Do not encode identity solely by marker appearance.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 2360:4844 (Marker), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Marker",
+  "contentAlternative": "MarkerContent contains the actual boundary/status text. MarkerIcon is hidden by the source and cannot be the only meaning.",
+  "updatesAndDescendants": "Marker defaults to a div through useRender; variants change appearance without creating selection or navigation state. Parent content changes update the text. If a caller supplies a native interactive render, its native contract applies.",
+  "referenceDecision": "Unread messages is a concrete textual boundary label, not a value protocol inferred from the icon name.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/marker.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/marker.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/marker-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Marker maps all three actual wrappers. Native 8px spacing, 16px icon and 14/20px muted text remain semantic roles; native separator lines become flexible pseudo-elements and the border variant adds a logical bottom boundary after 8px separation. The guide shows inline notes, labeled separators and bordered rows; variant alone does not add ARIA separator/status or control semantics. MarkerIcon is actually aria-hidden, so essential meaning stays in text. A caller may explicitly choose role=status for changing work feedback or render a native action. The native guide says asChild, while the pinned selected BaseUI wrapper exposes render; the contract follows the actual render API and retains the guide as source evidence. Optional shimmer is an external caller style utility, not an invented Marker prop or required animation.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

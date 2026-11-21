@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "separator.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Separator",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SeparatorPrimitive.Props"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/separator.tsx.source:6; defaults: {\"orientation\": \"\\\"horizontal\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "orientation",
+              "type": {
+                "text": "\"horizontal\" | \"vertical\""
+              },
+              "default": "\"horizontal\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Nonfocusable orientation-aware content boundary. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

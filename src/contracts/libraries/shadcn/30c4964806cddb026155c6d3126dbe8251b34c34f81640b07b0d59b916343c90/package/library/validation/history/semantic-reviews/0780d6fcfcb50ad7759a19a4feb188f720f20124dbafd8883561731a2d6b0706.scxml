@@ -1,0 +1,22 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="InputGroup" initial="active">
+  <datamodel>
+    <data id="callerAddonHandler" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT" />
+    <transition event="ESCAPE" />
+    <transition event="UNMOUNT" target="removed" />
+    <transition event="SET_ADDON_HANDLER">
+      <assign location="callerAddonHandler" expr="!!_event.data.present" />
+    </transition>
+    <transition event="ADDON_CLICK" cond="!callerAddonHandler &amp;&amp; !_event.data.closestButton &amp;&amp; !!_event.data.firstInput">
+      <send event="_effect.focusFirstInput" target="#_parent">
+        <param name="target" expr="_event.data.firstInput" />
+      </send>
+    </transition>
+    <transition event="CHILD_CHANGE CHILD_ACTION PROPS_CHANGED" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="active" />
+  </state>
+</scxml>

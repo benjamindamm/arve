@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "component": "calendar",
+      "name": "raw upstream retains wrong DOM focus while internal month advances",
+      "observed": {
+        "active": null,
+        "focused": [
+          "2026-12-01"
+        ],
+        "month": "December 2026"
+      },
+      "result": "pass"
+    },
+    {
+      "component": "calendar",
+      "name": "supported adapter moves actual focus across month boundary",
+      "observed": {
+        "active": "Tuesday, December 1st, 2026",
+        "focused": [
+          "2026-12-01"
+        ],
+        "month": "December 2026"
+      },
+      "result": "pass"
+    }
+  ],
+  "result": "PASS",
+  "scope": "Actual source-vs-reference month-boundary regression. rawCalendar retains unchanged upstream; attached ref is explicit caller repair.",
+  "adapter": "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fdates.jsx",
+  "adapterSha256": "5c42b51e832d5cf306aeee59e543e5694b86870e7c3a240caacc5e4595df3346"
+}

@@ -25,7 +25,7 @@ await rm(path.join(stage,'src/app/(payload)'),{recursive:true})
 await rm(path.join(stage,'src/app/mcp'),{recursive:true})
 await rm(path.join(stage,'src/app/(docs)/docs'),{recursive:true})
 // Dynamic download endpoints become immutable files in public/.
-for(const suffix of ['systems/[system]/components/[component]/files','systems/[system]/resources','systems/shadcn/beispiele/rechnungen/[id]/pdf']) await rm(path.join(stage,'src/app/(docs)',suffix),{recursive:true})
+for(const suffix of ['systems/[system]/components/[component]/files','systems/[system]/components/[component]/assets','systems/[system]/resources','systems/shadcn/beispiele/rechnungen/[id]/pdf']) await rm(path.join(stage,'src/app/(docs)',suffix),{recursive:true})
 const home = path.join(stage,'src/app/(docs)/page.tsx')
 const homeSource = await readFile(home,'utf8')
 if(!homeSource.includes("export const dynamic = 'force-dynamic'"))throw Error('Review static home route configuration')

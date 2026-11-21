@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "dialog.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Dialog",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "modal=true also locks outside pointer interaction and page scroll; modal=false permits the page. trap-focus contains focus without the full modal outside/scroll policy. disablePointerDismissal blocks outside press (and nonmodal focus-out), not the explicit Close control. Popup title/description supply accessible relations."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:10."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: DialogPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Owns open/modal state without a DOM root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:14."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Actual primitive native trigger. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogPortal",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Portal.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:18."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Portal ownership, not a styled anatomy element. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogClose",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Close.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:22."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "close",
+              "description": "Native close action, including optional internal icon close. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogOverlay",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Backdrop.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:26."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "overlay",
+              "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Popup.Props & {\n  showCloseButton?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"showCloseButton\": \"true\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:39."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual focus-managed popup surface. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:85."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Intrinsic heading stack. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  showCloseButton?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"showCloseButton\": \"false\"}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:95."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Actions, kept in caller order. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:122."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Actual heading named by primitive relation. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DialogDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DialogPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source:132."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "description",
+              "description": "Actual descriptive paragraph. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

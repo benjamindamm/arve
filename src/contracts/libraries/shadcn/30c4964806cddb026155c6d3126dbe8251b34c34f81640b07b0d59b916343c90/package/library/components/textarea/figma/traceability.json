@@ -1,0 +1,168 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "control": {
+      "declaration": "Textarea",
+      "selector": "[data-slot=\"textarea\"]",
+      "ownership": "actual wrapper"
+    },
+    "field": {
+      "declaration": "Textarea",
+      "selector": "[data-part=\"textarea-field\"]",
+      "ownership": "caller composition"
+    },
+    "label": {
+      "declaration": "Textarea",
+      "selector": "[data-part=\"textarea-label\"]",
+      "ownership": "caller composition"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1984:1853",
+      "observationPath": "height,layout.padding,cornerRadius",
+      "semanticTokens": [
+        "components.textarea.minHeight",
+        "components.textarea.paddingBlock",
+        "components.textarea.paddingInline",
+        "components.textarea.radius"
+      ]
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:2900 (Textarea), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1984:1853",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Default, Dir=LTR",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "empty",
+        "filled",
+        "readonly",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1984:1852",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Focus, Dir=LTR",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1984:1851",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Destructive, Dir=LTR",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "empty",
+        "filled",
+        "readonly",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1984:1850",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Disabled, Dir=LTR",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2274:16472",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Default, Dir=RTL",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "empty",
+        "filled",
+        "readonly",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2274:16477",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Focus, Dir=RTL",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2274:16482",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Destructive, Dir=RTL",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "empty",
+        "filled",
+        "readonly",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2274:16487",
+      "sourcePartId": "1984:1854",
+      "sourceName": "Textarea / State=Disabled, Dir=RTL",
+      "semanticParts": [
+        "control",
+        "field",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Textarea is the actual native textarea export. Native 64px minimum height, 8/10px padding and 10px corners become semantic roles; the 360px sample width does not become a runtime constraint. Source field-sizing-content is represented directly, with a minimum-height fallback and native vertical resizing. Content can grow instead of clipping to a specimen height. Native label/help/error IDs are caller decisions, while readOnly, disabled, multiline value/selection/IME and native events remain browser-owned. Readonly stays focusable and selectable; disabled prevents user edits and is skipped in Tab order. Invalid styling supplements a linked readable error and does not invent validation.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

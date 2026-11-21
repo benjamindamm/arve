@@ -1,0 +1,41 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="CodeBlock" initial="mounted">
+  <datamodel>
+    <data id="copied" expr="false" />
+    <data id="pendingCopies" expr="0" />
+    <data id="disabled" expr="false" />
+  </datamodel>
+  <state id="mounted">
+    <transition event="ESCAPE FOCUS_IN FOCUS_OUT" />
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="!!_event.data.disabled" />
+    </transition>
+    <transition event="COPY_CLICK" cond="!disabled &amp;&amp; !!_event.data.event">
+      <send event="onClick" target="#_parent">
+        <param name="event" expr="_event.data.event" />
+      </send>
+      <send event="_effect.clipboardWrite" target="#_parent">
+        <param name="value" expr="_event.data.value" />
+      </send>
+      <assign location="pendingCopies" expr="pendingCopies + 1" />
+    </transition>
+    <transition event="CLIPBOARD_SUCCESS" cond="pendingCopies &gt; 0">
+      <assign location="pendingCopies" expr="pendingCopies - 1" />
+      <if cond="!copied">
+        <send event="_effect.armCopyResetTimer" target="#_parent">
+          <param name="milliseconds" expr="2000" />
+        </send>
+      </if>
+      <assign location="copied" expr="true" />
+    </transition>
+    <transition event="CLIPBOARD_REJECTION CLIPBOARD_UNAVAILABLE" cond="pendingCopies &gt; 0">
+      <assign location="pendingCopies" expr="pendingCopies - 1" />
+    </transition>
+    <transition event="COPY_RESET_TIMEOUT">
+      <assign location="copied" expr="false" />
+    </transition>
+    <transition event="UNMOUNT" target="removed" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="mounted" />
+  </state>
+</scxml>

@@ -1,0 +1,114 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "field": {
+      "declaration": "Checkbox",
+      "selector": "[data-part=\"checkbox-field\"]",
+      "ownership": "explicit caller composition"
+    },
+    "control": {
+      "declaration": "Checkbox",
+      "selector": "[data-slot=\"checkbox\"]",
+      "ownership": "actual wrapper"
+    },
+    "indicator": {
+      "declaration": "Checkbox",
+      "selector": "[data-slot=\"checkbox-indicator\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1939:2182",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1939:2179",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1939:2178",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1939:2185",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1939:2180",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1939:2175",
+      "sourcePartId": null,
+      "sourceName": "",
+      "semanticParts": [
+        "field",
+        "control",
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "unchecked"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The source span role control has a 16px square and14px indicator. Explicit caller field layout owns8px label spacing; this wrapper is not falsely attributed to upstream. Checked/mixed/disabled/error reflect actual native/ARIA/data attributes. No separate native mixed specimen is present in the pinned page; mixed is supported by the React API. Mixed state retains checked=false as separate authority; a deliberately chosen half-indicator-width CSS minus replaces the source check glyph for the source-supported indeterminate presentation, without changing the native event/value contract.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual source aliases/parts, native output, required contexts and explicit auxiliary composition. Client focus/query/selection and Dialog lifecycle are separately browser tested.",
+  "cases": [
+    {
+      "component": "select",
+      "name": "public Root alias preserves exact primitive generic implementation",
+      "result": "pass"
+    },
+    {
+      "component": "select",
+      "name": "items map supplies selected label; trigger sizing and native form name survive SSR",
+      "result": "pass"
+    },
+    {
+      "component": "combobox",
+      "name": "public Root alias preserves actual primitive and named input native id/error props",
+      "result": "pass"
+    },
+    {
+      "component": "combobox",
+      "name": "explicit named primitive Clear/ChipRemove remain real buttons without unnamed duplicate wrapper controls",
+      "result": "pass"
+    },
+    {
+      "component": "command",
+      "name": "cmdk native combobox/listbox/options and root-generated input label are real source output",
+      "result": "pass"
+    },
+    {
+      "component": "command",
+      "name": "actual fuzzy filter returns ranked matches/zero; Shortcut registers no global keyboard hook",
+      "result": "pass"
+    },
+    {
+      "component": "command",
+      "name": "raw CommandDialog keeps sibling header outside closed portal; reference mounts actor only during usage",
+      "result": "pass"
+    },
+    {
+      "component": "combobox",
+      "name": "item cannot be rendered outside actual primitive Root context",
+      "result": "pass"
+    }
+  ]
+}

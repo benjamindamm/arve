@@ -1,0 +1,466 @@
+{
+  "behavior": {
+    "cases": [
+      {
+        "component": "calendar",
+        "name": "named month grid, one roving day and actual disabled day",
+        "observed": {
+          "active": null,
+          "activeText": "Calendar referenceDark themeRight to leftCalendar densityCompactDefaultLargeIgnore selected callbackSelect date rangeNovember 2026SuMoTuWeThFrSa12345678910111213141516171819202122232425262728293012345November 12th, 20262026-11-12none0Dates are local calendar dates; no server submission or timezone conversion occurs.\n",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "2026-11-12",
+            "Selected range": "none",
+            "Selection callback count": "0"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "12"
+          ],
+          "tabbable": [
+            "12"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "Right skips disabled day without selection change",
+        "observed": {
+          "active": "Saturday, November 14th, 2026",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "2026-11-12",
+            "Selected range": "none",
+            "Selection callback count": "0"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "12"
+          ],
+          "tabbable": [
+            "14"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "native Enter selects actual focused date",
+        "observed": {
+          "active": "Saturday, November 14th, 2026, selected",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "2026-11-14",
+            "Selected range": "none",
+            "Selection callback count": "1"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "14"
+          ],
+          "tabbable": [
+            "14"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "optional single can clear same date",
+        "observed": {
+          "active": "Saturday, November 14th, 2026",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "none",
+            "Selection callback count": "2"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [],
+          "tabbable": [
+            "14"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "onSelect presence leaves selected prop authoritative when ignored",
+        "observed": {
+          "active": "Monday, November 16th, 2026",
+          "activeText": "16",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "none",
+            "Selection callback count": "3"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [],
+          "tabbable": [
+            "14"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "month navigation changes view independently of selected date",
+        "observed": {
+          "active": "Go to the Next Month",
+          "activeText": "",
+          "disabled": [],
+          "grid": "December 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "none",
+            "Selection callback count": "3"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [],
+          "tabbable": [
+            "1"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "first range day creates source single-day range with default min0",
+        "observed": {
+          "active": "Thursday, November 12th, 2026, selected",
+          "activeText": "12",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "2026-11-12 / 2026-11-12",
+            "Selection callback count": "4"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "12"
+          ],
+          "tabbable": [
+            "16"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "excludeDisabled resets crossing range to new start",
+        "observed": {
+          "active": "Saturday, November 14th, 2026, selected",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "2026-11-14 / pending",
+            "Selection callback count": "5"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "14"
+          ],
+          "tabbable": [
+            "12"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "inline Escape has no invented dismissal",
+        "observed": {
+          "active": "Saturday, November 14th, 2026, selected",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "none",
+            "Selected range": "2026-11-14 / pending",
+            "Selection callback count": "5"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [
+            "14"
+          ],
+          "tabbable": [
+            "12"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "date-picker",
+        "name": "actual Popover opens independently of selected calendar value",
+        "observed": {
+          "active": "Go to the Next Month",
+          "activeText": "",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "2026-11-12",
+            "Selected range": "none",
+            "Selection callback count": "0"
+          },
+          "popup": true,
+          "popupName": "Delivery date: November 12th, 2026",
+          "selected": [
+            "12"
+          ],
+          "tabbable": [
+            "12"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "date-picker",
+        "name": "source basic recipe selection keeps popup open",
+        "observed": {
+          "active": "Saturday, November 14th, 2026, selected",
+          "activeText": "14",
+          "disabled": [
+            "13"
+          ],
+          "grid": "November 2026",
+          "outputs": {
+            "Selected date": "2026-11-14",
+            "Selected range": "none",
+            "Selection callback count": "1"
+          },
+          "popup": true,
+          "popupName": "Delivery date: November 14th, 2026",
+          "selected": [
+            "14"
+          ],
+          "tabbable": [
+            "14"
+          ]
+        },
+        "result": "pass"
+      },
+      {
+        "component": "date-picker",
+        "name": "Popover Escape restores trigger and preserves chosen date",
+        "observed": {
+          "active": null,
+          "activeText": "Delivery date: November 14th, 2026",
+          "disabled": [],
+          "outputs": {
+            "Selected date": "2026-11-14",
+            "Selected range": "none",
+            "Selection callback count": "1"
+          },
+          "popup": false,
+          "popupName": "",
+          "selected": [],
+          "tabbable": []
+        },
+        "result": "pass"
+      }
+    ],
+    "result": "PASS",
+    "scope": "Actual React DayPicker9.14.0/shadcn Calendar plus actual Base UI Popover recipe. Read-only DOM focus/modifier observations supplement accessibility snapshots."
+  },
+  "focusRegression": {
+    "cases": [
+      {
+        "component": "calendar",
+        "name": "raw upstream retains wrong DOM focus while internal month advances",
+        "observed": {
+          "active": null,
+          "focused": [
+            "2026-12-01"
+          ],
+          "month": "December 2026"
+        },
+        "result": "pass"
+      },
+      {
+        "component": "calendar",
+        "name": "supported adapter moves actual focus across month boundary",
+        "observed": {
+          "active": "Tuesday, December 1st, 2026",
+          "focused": [
+            "2026-12-01"
+          ],
+          "month": "December 2026"
+        },
+        "result": "pass"
+      }
+    ],
+    "result": "PASS",
+    "scope": "Actual source-vs-reference month-boundary regression. rawCalendar retains unchanged upstream; attached ref is explicit caller repair."
+  },
+  "format": "shadcn-semantic-browser-run/1",
+  "records": [
+    {
+      "checks": [
+        "Actual source day38/28/48px roles,10px corner,6px navigation corner and8px intrinsic inset",
+        "Actual selected semantic colors update with document theme; RTL native arrow skips unavailable date",
+        "320px actual calendar/popover containment with separate caller identity and zero duplicate padding",
+        "Existing source-native local-date selection, controlled ignore, range exclusion, month focus boundary and raw-wrapper negative regression rerun"
+      ],
+      "default": {
+        "day": {
+          "bottom": 248.515625,
+          "height": 38,
+          "left": 24,
+          "right": 62,
+          "top": 210.515625,
+          "width": 38,
+          "x": 24,
+          "y": 210.515625
+        },
+        "navRadius": "6px",
+        "padding": "8px",
+        "popupPadding": null,
+        "radius": "10px",
+        "root": {
+          "bottom": 454.515625,
+          "height": 320,
+          "left": 16,
+          "right": 298,
+          "top": 134.515625,
+          "width": 282,
+          "x": 16,
+          "y": 134.515625
+        },
+        "selectedBackground": "rgb(23, 23, 23)",
+        "selectedColor": "rgb(250, 250, 250)",
+        "tabstops": 1
+      },
+      "family": "calendar",
+      "narrow": {
+        "bg": "rgb(10, 10, 10)",
+        "box": {
+          "bottom": 496.515625,
+          "height": 320,
+          "left": 22,
+          "right": 304,
+          "top": 176.515625,
+          "width": 282,
+          "x": 22,
+          "y": 176.515625
+        },
+        "client": 320,
+        "dir": "rtl",
+        "scroll": 320,
+        "selectedBg": "rgb(229, 229, 229)",
+        "selectedColor": "rgb(23, 23, 23)"
+      },
+      "rtlFocus": "Saturday, November 14th, 2026",
+      "url": "http://localhost:5175/?family=calendar"
+    },
+    {
+      "checks": [
+        "Actual source day38/28/48px roles,10px corner,6px navigation corner and8px intrinsic inset",
+        "Actual selected semantic colors update with document theme; RTL native arrow skips unavailable date",
+        "320px actual calendar/popover containment with separate caller identity and zero duplicate padding",
+        "Existing source-native local-date selection, controlled ignore, range exclusion, month focus boundary and raw-wrapper negative regression rerun"
+      ],
+      "default": {
+        "day": {
+          "bottom": 337.5,
+          "height": 28,
+          "left": 49,
+          "right": 77,
+          "top": 309.5,
+          "width": 28,
+          "x": 49,
+          "y": 309.5
+        },
+        "navRadius": "6px",
+        "padding": "8px",
+        "popup": {
+          "bottom": 504.5,
+          "height": 262,
+          "left": 40,
+          "right": 254,
+          "top": 242.5,
+          "width": 214,
+          "x": 40,
+          "y": 242.5
+        },
+        "popupPadding": "0px",
+        "radius": "10px",
+        "root": {
+          "bottom": 503.5,
+          "height": 260,
+          "left": 41,
+          "right": 253,
+          "top": 243.5,
+          "width": 212,
+          "x": 41,
+          "y": 243.5
+        },
+        "selectedBackground": "rgb(23, 23, 23)",
+        "selectedColor": "rgb(250, 250, 250)",
+        "tabstops": 1
+      },
+      "family": "date-picker",
+      "narrow": {
+        "bg": "rgb(10, 10, 10)",
+        "box": {
+          "bottom": 606,
+          "height": 260,
+          "left": 67,
+          "right": 279,
+          "top": 346,
+          "width": 212,
+          "x": 67,
+          "y": 346
+        },
+        "client": 320,
+        "dir": "rtl",
+        "scroll": 320,
+        "selectedBg": "rgb(229, 229, 229)",
+        "selectedColor": "rgb(23, 23, 23)"
+      },
+      "rtlFocus": "Saturday, November 14th, 2026",
+      "url": "http://localhost:5175/?family=date-picker"
+    }
+  ],
+  "result": "PASS",
+  "scope": "Actual pinned DayPicker/Popover and explicit caller ref repair, finite semantic-style reference recipes; no universal date/AT certification."
+}

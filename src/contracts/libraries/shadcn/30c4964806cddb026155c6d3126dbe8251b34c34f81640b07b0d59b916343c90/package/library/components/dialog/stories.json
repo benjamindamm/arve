@@ -1,0 +1,70 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Dialog",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "open": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open dialog</button><div data-slot=\"dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"dialog-content\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\"><div data-slot=\"dialog-header\"><h2 data-slot=\"dialog-title\" id=\"overlay-title\">Project dialog</h2><p data-slot=\"dialog-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"dialog-footer\"><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close dialog</button></div><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-dialog-close cn-button cn-button-variant-ghost cn-button-size-icon-sm\" aria-label=\"Close\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg><span class=\"sr-only\">Close</span></button></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open dialog</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open dialog</button><div data-slot=\"dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"dialog-content\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" dir=\"rtl\"><div data-slot=\"dialog-header\"><h2 data-slot=\"dialog-title\" id=\"overlay-title\">Project dialog</h2><p data-slot=\"dialog-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"dialog-footer\"><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close dialog</button></div><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-dialog-close cn-button cn-button-variant-ghost cn-button-size-icon-sm\" aria-label=\"Close\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg><span class=\"sr-only\">Close</span></button></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "disabled-trigger",
+      "name": "Disabled trigger",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" disabled=\"\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open dialog</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "without-icon-close",
+      "name": "Without icon close",
+      "inputs": {
+        "showCloseButton": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open dialog</button><div data-slot=\"dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"dialog-content\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\"><div data-slot=\"dialog-header\"><h2 data-slot=\"dialog-title\" id=\"overlay-title\">Project dialog</h2><p data-slot=\"dialog-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"dialog-footer\"><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close dialog</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

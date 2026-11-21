@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "message.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Message",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & { align?: \"start\" | \"end\" }"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:14; defaults: {\"align\": \"\\\"start\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "align",
+              "type": {
+                "text": "\"start\" | \"end\""
+              },
+              "default": "\"start\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "message",
+              "description": "Actual align-controlled avatar/content row. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MessageGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:4; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Actual vertical message grouping; no automatic log semantics. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MessageAvatar",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:32; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "avatar",
+              "description": "Optional supplementary visual identity; readable speaker remains in header. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MessageContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:45; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Flexible intrinsic-height message content stack. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MessageHeader",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:58; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Actual metadata row containing explicit speaker/time text. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "MessageFooter",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/message.tsx.source:71; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Actual metadata/action row, not automatic delivery state. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

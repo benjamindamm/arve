@@ -1,0 +1,300 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual clipboard success/timer and real iframe permission-policy rejection, one native OTP input/pattern/completion, and Embla boundary/navigation behavior including vertical wrapper key policy.",
+  "caseCount": 19,
+  "families": [
+    {
+      "cases": [
+        {
+          "name": "real Clipboard API promise success produces source label and polite feedback",
+          "result": "pass",
+          "state": {
+            "clicks": "1",
+            "copied": "true",
+            "label": "Copied",
+            "lines": 2,
+            "live": "Copied",
+            "preTab": 0
+          }
+        },
+        {
+          "name": "actual two-second effect resets success feedback",
+          "result": "pass",
+          "state": {
+            "clicks": "1",
+            "copied": null,
+            "label": "Copy",
+            "lines": 2,
+            "live": "",
+            "preTab": 0
+          }
+        },
+        {
+          "name": "caller preventDefault does not veto pinned wrapper clipboard request; native Enter works",
+          "result": "pass",
+          "state": {
+            "clicks": "2",
+            "copied": "true",
+            "label": "Copied",
+            "lines": 2,
+            "live": "Copied",
+            "preTab": 0
+          }
+        },
+        {
+          "name": "native pre remains focusable/selectable and Tab leaves it",
+          "result": "pass",
+          "state": {
+            "clicks": "2",
+            "copied": "true",
+            "label": "Copied",
+            "lines": 2,
+            "live": "Copied",
+            "preTab": 0
+          }
+        },
+        {
+          "name": "real iframe policy rejects Clipboard API; source swallows rejection without false success and persistent manual selection help remains",
+          "result": "pass",
+          "state": {
+            "clicks": "1",
+            "copied": null,
+            "fallback": "Copy the code, or select the text manually if clipboard access is unavailable.",
+            "label": "Copy",
+            "live": "",
+            "policyAllows": false
+          }
+        }
+      ],
+      "family": "code-block"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "complete": "0",
+            "value": ""
+          },
+          "name": "explicit digit pattern rejects whole invalid candidate",
+          "result": "pass",
+          "state": {
+            "complete": "0",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": ""
+          }
+        },
+        {
+          "expected": {
+            "complete": "0",
+            "value": "12345"
+          },
+          "name": "partial code does not request completion",
+          "result": "pass",
+          "state": {
+            "complete": "0",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": "12345"
+          }
+        },
+        {
+          "expected": {
+            "complete": "1",
+            "value": "123456"
+          },
+          "name": "short-to-full transition emits actual completion callback",
+          "result": "pass",
+          "state": {
+            "complete": "1",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": "123456"
+          }
+        },
+        {
+          "expected": {
+            "complete": "1",
+            "value": "123456"
+          },
+          "name": "Escape does not erase code or fabricate completion",
+          "result": "pass",
+          "state": {
+            "complete": "1",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": "123456"
+          }
+        },
+        {
+          "expected": {
+            "complete": "1",
+            "value": "12345"
+          },
+          "name": "native selected-slot deletion produces one real input change",
+          "result": "pass",
+          "state": {
+            "complete": "1",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": "12345"
+          }
+        },
+        {
+          "expected": {
+            "complete": "2",
+            "value": "123456"
+          },
+          "name": "refilling after deletion emits completion again",
+          "result": "pass",
+          "state": {
+            "complete": "2",
+            "described": "verification-help verification-error",
+            "focus": "verification",
+            "inputs": 1,
+            "value": "123456"
+          }
+        },
+        {
+          "expected": {
+            "focus": "After demo",
+            "inputs": 1
+          },
+          "name": "single input Tab order skips disabled code",
+          "result": "pass",
+          "state": {
+            "complete": "2",
+            "described": "verification-help verification-error",
+            "focus": "After demo",
+            "inputs": 1,
+            "value": "123456"
+          }
+        }
+      ],
+      "family": "input-otp"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "index": "0",
+            "next": false,
+            "previous": true,
+            "slides": 3
+          },
+          "name": "ready Embla API derives true nonlooping initial boundary",
+          "result": "pass",
+          "state": {
+            "index": "0",
+            "next": false,
+            "orientation": "horizontal",
+            "previous": true,
+            "slides": 3,
+            "status": "Slide 1 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "1",
+            "status": "Slide 2 of 3"
+          },
+          "name": "actual Next invokes Embla and updates subscribed slide status",
+          "result": "pass",
+          "state": {
+            "index": "1",
+            "next": false,
+            "orientation": "horizontal",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 2 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "2",
+            "next": true
+          },
+          "name": "native Enter advances to final slide and disables Next",
+          "result": "pass",
+          "state": {
+            "index": "2",
+            "next": true,
+            "orientation": "horizontal",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 3 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "1"
+          },
+          "name": "capture Left scrolls previous without invented slide focus jump",
+          "result": "pass",
+          "state": {
+            "index": "1",
+            "next": false,
+            "orientation": "horizontal",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 2 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "1"
+          },
+          "name": "Escape preserves current snap",
+          "result": "pass",
+          "state": {
+            "index": "1",
+            "next": false,
+            "orientation": "horizontal",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 2 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "1",
+            "orientation": "vertical"
+          },
+          "name": "vertical source has no Down handler",
+          "result": "pass",
+          "state": {
+            "index": "1",
+            "next": false,
+            "orientation": "vertical",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 2 of 3"
+          }
+        },
+        {
+          "expected": {
+            "index": "2",
+            "next": true
+          },
+          "name": "pinned source still uses Right to advance vertical axis",
+          "result": "pass",
+          "state": {
+            "index": "2",
+            "next": true,
+            "orientation": "vertical",
+            "previous": false,
+            "slides": 3,
+            "status": "Slide 3 of 3"
+          }
+        }
+      ],
+      "family": "carousel"
+    }
+  ]
+}

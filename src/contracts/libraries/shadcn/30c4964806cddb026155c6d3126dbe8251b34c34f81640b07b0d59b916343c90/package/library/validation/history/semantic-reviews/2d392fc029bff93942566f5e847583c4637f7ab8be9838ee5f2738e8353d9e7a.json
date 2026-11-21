@@ -1,0 +1,52 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Separator",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "separator": "Nonfocusable orientation-aware content boundary."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "separator": {
+      "kind": "element",
+      "declaration": "Separator",
+      "selector": "[data-slot=\"separator\"]",
+      "description": "Nonfocusable orientation-aware content boundary.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Actual selected BaseUI1.9 state is data-orientation=horizontal/vertical. The pinned wrapper utility text targets data-horizontal/data-vertical, which this runtime does not emit; the semantic adapter deliberately binds the observed actual orientation attribute without modifying upstream bytes. The native0px path dimensions describe a stroked line, not an invisible runtime element: the pinned wrapper explicitly supplies1px thickness, mapped to the semantic border width. Horizontal stretches across available width; vertical stretches to its flex/grid host block extent. Native100/120px specimen lengths remain host examples. No drag/resize or keyboard focus semantics are invented.",
+    "variants": {
+      "orientation": {
+        "prop": "orientation",
+        "attribute": "data-orientation",
+        "values": [
+          "horizontal",
+          "vertical"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

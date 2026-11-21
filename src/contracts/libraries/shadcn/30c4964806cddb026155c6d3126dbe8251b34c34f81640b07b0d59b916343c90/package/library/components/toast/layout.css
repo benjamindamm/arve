@@ -1,0 +1,168 @@
+@import "../../tokens.css";
+
+@import url(../button/layout.css);
+
+[data-slot="toast-viewport"] {
+  position: fixed;
+  inset-inline-end: 16px;
+  bottom: 16px;
+  z-index: 60;
+  inline-size: calc(100vw - 32px);
+  max-inline-size: var(--ui-toast-max-width);
+  pointer-events: none;
+  outline: none;
+}
+
+[data-slot="toast"] {
+  --gap: var(--ui-toast-gap);
+  --height: var(--toast-frontmost-height,var(--toast-height));
+  --offset-y: calc(var(--toast-offset-y)*-1 + var(--toast-index)*var(--gap)*-1 + var(--toast-swipe-movement-y));
+  --peek: var(--ui-toast-peek);
+  --scale: calc(max(0,1 - var(--toast-index)*0.1));
+  --shrink: calc(1 - var(--scale));
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: calc(1000 - var(--toast-index));
+  inline-size: 100%;
+  block-size: var(--height);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-toast-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  box-shadow: 0 4px 6px -4px var(--ui-toast-shadow-color),0 10px 15px -3px var(--ui-toast-shadow-color);
+  transform-origin: bottom;
+  transform: translateX(var(--toast-swipe-movement-x)) translateY(calc(var(--toast-swipe-movement-y) - var(--toast-index)*var(--peek) - var(--shrink)*var(--height))) scale(var(--scale));
+  transition: transform 500ms cubic-bezier(.22,1,.36,1),opacity 500ms,height 150ms;
+  outline: none;
+  pointer-events: auto;
+  user-select: none;
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="toast"]::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  inline-size: 100%;
+  block-size: calc(var(--gap) + 1px);
+}
+
+[data-slot="toast"][data-expanded] {
+  block-size: var(--toast-height);
+  transform: translateX(var(--toast-swipe-movement-x)) translateY(var(--offset-y));
+}
+
+[data-slot="toast"][data-limited] {
+  opacity: 0;
+}
+
+[data-slot="toast"][data-starting-style] {
+  transform: translateY(150%);
+}
+
+[data-slot="toast"][data-ending-style]:not([data-limited]):not([data-swipe-direction]) {
+  transform: translateY(150%);
+}
+
+[data-slot="toast"][data-ending-style][data-swipe-direction="down"] {
+  transform: translateY(calc(var(--toast-swipe-movement-y) + 150%));
+}
+
+[data-slot="toast"][data-ending-style][data-swipe-direction="left"] {
+  transform: translateX(calc(var(--toast-swipe-movement-x) - 150%)) translateY(var(--offset-y));
+}
+
+[data-slot="toast"][data-ending-style][data-swipe-direction="right"] {
+  transform: translateX(calc(var(--toast-swipe-movement-x) + 150%)) translateY(var(--offset-y));
+}
+
+[data-slot="toast"][data-ending-style][data-swipe-direction="up"] {
+  transform: translateY(calc(var(--toast-swipe-movement-y) - 150%));
+}
+
+[data-slot="toast"]:focus-visible {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="toast-content"] {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-toast-gap);
+  block-size: 100%;
+  padding: var(--ui-toast-inset);
+  overflow: hidden;
+  transition: opacity 250ms cubic-bezier(.22,1,.36,1);
+}
+
+[data-slot="toast-content"][data-behind] {
+  opacity: 0;
+}
+
+[data-slot="toast-content"][data-expanded] {
+  opacity: 1;
+}
+
+[data-slot="toast-content"]>div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-inline-size: 0;
+}
+
+[data-slot="toast-title"],
+[data-slot="toast-description"] {
+  margin: 0;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="toast-title"] {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+[data-slot="toast-description"] {
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="toast-action"],
+[data-slot="toast-close"] {
+  flex: none;
+}
+
+[data-slot="toast-close"] {
+  position: relative;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="toast-close"]::after {
+  position: absolute;
+  content: "";
+  inset: -8px;
+}
+
+[data-slot="toast-icon"] {
+  display: flex;
+  flex: none;
+}
+
+[data-slot="toast-icon"] svg {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-slot="toast"],
+  [data-slot="toast-content"] {
+    transition-duration: 0.01ms;
+  }
+
+}

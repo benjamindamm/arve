@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "item.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Item",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"div\"> & VariantProps<typeof itemVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:59; defaults: {\"variant\": \"\\\"default\\\"\", \"size\": \"\\\"default\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"outline\" | \"muted\""
+              },
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"default\" | \"sm\" | \"xs\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ItemGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:9; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-group",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemSeparator",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Separator>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:23; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-separator",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemMedia",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & VariantProps<typeof itemMediaVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:99; defaults: {\"variant\": \"\\\"default\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-media",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:114; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-content",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemTitle",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:127; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-title",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemDescription",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"p\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:140; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-description",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemActions",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:153; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-actions",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemHeader",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:163; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-header",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ItemFooter",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source:176; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item-footer",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Marker",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "marker": "Native informative div or explicit caller native render override.",
+    "icon": "Actual supplementary aria-hidden icon span.",
+    "content": "Actual readable status/system-note text."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "marker": {
+      "kind": "element",
+      "declaration": "Marker",
+      "selector": "[data-slot=\"marker\"]",
+      "description": "Native informative div or explicit caller native render override.",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "kind": "element",
+      "declaration": "MarkerIcon",
+      "selector": "[data-slot=\"marker-icon\"]",
+      "description": "Actual supplementary aria-hidden icon span.",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "MarkerContent",
+      "selector": "[data-slot=\"marker-content\"]",
+      "description": "Actual readable status/system-note text.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "focus-width": "semantic.focus.width",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-weight-normal": "semantic.typography.normalWeight",
+      "marker-font-size": "components.marker.fontSize",
+      "marker-gap": "components.marker.gap",
+      "marker-icon-size": "components.marker.iconSize",
+      "marker-line-height": "components.marker.lineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Marker maps all three actual wrappers. Native 8px spacing, 16px icon and 14/20px muted text remain semantic roles; native separator lines become flexible pseudo-elements and the border variant adds a logical bottom boundary after 8px separation. The guide shows inline notes, labeled separators and bordered rows; variant alone does not add ARIA separator/status or control semantics. MarkerIcon is actually aria-hidden, so essential meaning stays in text. A caller may explicitly choose role=status for changing work feedback or render a native action. The native guide says asChild, while the pinned selected BaseUI wrapper exposes render; the contract follows the actual render API and retains the guide as source evidence. Optional shimmer is an external caller style utility, not an invented Marker prop or required animation.",
+    "variants": {
+      "variant": {
+        "prop": "variant",
+        "classes": [
+          "cn-marker-variant-default",
+          "cn-marker-variant-separator",
+          "cn-marker-variant-border"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

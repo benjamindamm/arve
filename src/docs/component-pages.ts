@@ -1,6 +1,6 @@
 import { readTemplate } from './page-templates'
 import { documentationData } from './documentation-data'
-import { contractFileUrl } from './site-path'
+import { contractFileUrl, contractAssetUrl } from './site-path'
 import { pagePath, readSystem } from './systems'
 import type { Page } from '../payload-types'
 import { getContract } from '../contracts/catalog'
@@ -34,6 +34,7 @@ export async function getComponentPage(system: string, component: string) {
       path, sha256, url: contractFileUrl(contract.library, component, contract.revision, path),
     })) : [],
     demo,
+    styleAssets: contract?.styleAssets?.map(asset=>({...asset,url:contractAssetUrl(system, component, contract.library, contract.revision, asset.path)})) ?? [],
     referenceFrameworks: references,
     designPreview: previewHash ? { path: previewPath, sha256: previewHash, kind: 'static-design' as const, url: contractFileUrl(contract!.library, component, contract!.revision, previewPath, true) } : null,
     implementations: implementations.map(({ id, name, platform, releaseStatus, packageName, packageVersion, owner, contexts, contract, verification }) => ({

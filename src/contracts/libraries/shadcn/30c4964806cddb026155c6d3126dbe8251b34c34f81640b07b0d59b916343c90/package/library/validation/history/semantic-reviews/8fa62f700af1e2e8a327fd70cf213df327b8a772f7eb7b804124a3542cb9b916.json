@@ -1,0 +1,120 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Tabs",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "manual",
+      "name": "Manual",
+      "inputs": {
+        "value": "summary",
+        "list": {
+          "activateOnFocus": false
+        },
+        "panels": {
+          "keepMounted": true
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "details-selected",
+      "name": "Details selected",
+      "inputs": {
+        "value": "details"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"false\" tabindex=\"-1\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\" hidden=\"\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "line",
+      "name": "Line",
+      "inputs": {
+        "list": {
+          "variant": "line"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"line\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "directionProvider": "rtl",
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\" dir=\"rtl\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div></div>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "trigger"
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "index": 0,
+          "keyboard": true
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "panel-focus",
+      "name": "Panel focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "panel",
+          "index": 0,
+          "keyboard": true
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    }
+  ]
+}

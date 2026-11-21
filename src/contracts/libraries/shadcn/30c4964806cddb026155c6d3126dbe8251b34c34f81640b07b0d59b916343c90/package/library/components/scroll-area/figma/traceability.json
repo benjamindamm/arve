@@ -1,0 +1,109 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "ScrollArea",
+      "selector": "[data-slot=\"scroll-area\"]",
+      "ownership": "actual source wrapper"
+    },
+    "viewport": {
+      "declaration": "ScrollArea",
+      "selector": "[data-slot=\"scroll-area-viewport\"]",
+      "ownership": "actual source wrapper"
+    },
+    "scrollbar": {
+      "declaration": "ScrollBar",
+      "selector": "[data-slot=\"scroll-area-scrollbar\"]",
+      "ownership": "actual source wrapper"
+    },
+    "thumb": {
+      "declaration": "ScrollBar",
+      "selector": "[data-slot=\"scroll-area-thumb\"]",
+      "ownership": "actual source wrapper"
+    },
+    "content": {
+      "declaration": "ScrollArea",
+      "selector": "[data-part=\"scroll-area-content\"]",
+      "ownership": "caller children"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2068:331",
+      "observed": "288px constrained height,8px corner,16px inset;2072:253 thumb6px thickness.",
+      "decision": "Fluid width, source-driven scrollbar length; native viewport keyboard keeps content accessible."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1985 (Scroll-area), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2070:217",
+      "sourcePartId": "2070:219",
+      "sourceName": "Scrollbar / Orientation=Vertical",
+      "semanticParts": [
+        "root",
+        "viewport",
+        "scrollbar",
+        "thumb",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "overflow",
+        "fits-without-scroll",
+        "both-axes",
+        "rtl",
+        "viewport-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2070:218",
+      "sourcePartId": "2070:219",
+      "sourceName": "Scrollbar / Orientation=Horizontal",
+      "semanticParts": [
+        "root",
+        "viewport",
+        "scrollbar",
+        "thumb",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "overflow",
+        "fits-without-scroll",
+        "both-axes",
+        "rtl",
+        "viewport-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2269:2200",
+      "sourcePartId": "2070:219",
+      "sourceName": "Scrollbar / Orientation=Orientation3",
+      "semanticParts": [
+        "root",
+        "viewport",
+        "scrollbar",
+        "thumb",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "overflow",
+        "fits-without-scroll",
+        "both-axes",
+        "rtl",
+        "viewport-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The selected native scroll specimen supplies 288px extent,8px corner,16px content inset and 6px rounded thumb thickness. Width remains fluid. Source Scrollbar padding 1px makes an8px total bar; actual primitive absolute placement, overflow, proportional thumb length/translation and Corner remain authoritative. Content padding is caller-owned because the wrapper exports no Viewport; Root props do not become Viewport callbacks or labels. The outer section supplies a real heading; Root stays presentational. Viewport becomes a native tab destination only when overflowing. Horizontal ScrollBar is explicitly added in caller children, which this wrapper places inside its Viewport; the wrapper vertical bar remains a Root sibling of that Viewport. Horizontal scrollbar uses column flex flow so flex-1 fills its thickness rather than overriding source-measured thumb width. Focus outline and native links remain meaningful without a draggable visual scrollbar; all text/list content is retained. No fake ARIA scrollbar or Root value/onValueChange is invented. Static thumb dimensions are finite illustrative runtime measurements, not copied node identities.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

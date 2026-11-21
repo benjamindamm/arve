@@ -1,0 +1,79 @@
+@import "../../tokens.css";
+
+[data-slot="card"] {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: var(--ui-card-gap);
+  padding-block-start: var(--ui-card-padding);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-card-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="card-header"] {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: var(--ui-card-header-gap);
+  padding-inline: var(--ui-card-padding);
+}
+
+[data-slot="card-title"] {
+  grid-column: 1;
+  font-size: var(--ui-card-title-size);
+  line-height: var(--ui-card-title-line);
+  font-weight: var(--ui-font-weight-medium);
+}
+
+[data-slot="card-title"]>h2 {
+  margin: 0;
+  font: inherit;
+}
+
+[data-slot="card-description"] {
+  grid-column: 1;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="card-action"] {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  justify-self: end;
+}
+
+[data-slot="card-content"] {
+  min-inline-size: 0;
+  padding-inline: var(--ui-card-padding);
+}
+
+[data-slot="card-content"]>p {
+  margin: 0;
+}
+
+[data-slot="card-footer"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ui-card-header-gap);
+  padding: var(--ui-card-padding);
+  border-radius: 0 0 var(--ui-card-radius) var(--ui-card-radius);
+  background: var(--ui-color-muted);
+}
+
+[data-slot="card"][data-size="sm"] {
+  gap: var(--ui-card-compact-gap);
+  padding-block-start: var(--ui-card-compact-gap);
+}
+
+[data-slot="card"][data-size="sm"] [data-slot="card-title"] {
+  font-size: var(--ui-card-compact-title);
+  line-height: var(--ui-card-compact-title-line);
+}

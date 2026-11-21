@@ -1,0 +1,46 @@
+{
+  "result": "PASS",
+  "scope": "Pinned wrapper and primitive aliases, SSR contexts, native anatomy and explicit caller semantics. Client responsive/focus/timer/manager behavior separately browser checked.",
+  "cases": [
+    {
+      "component": "navigation-menu",
+      "name": "actual nav/ul/li/button/anchor output preserves current page and disabled source",
+      "result": "pass"
+    },
+    {
+      "component": "navigation-menu",
+      "name": "Trigger requires actual Root/Item context",
+      "result": "pass"
+    },
+    {
+      "component": "sidebar",
+      "name": "SSR defaults desktop; SidebarInset is main, MenuButton anchor needs explicit aria-current",
+      "result": "pass"
+    },
+    {
+      "component": "sidebar",
+      "name": "isActive alone supplies styling, never automatic current-page semantics",
+      "result": "pass"
+    },
+    {
+      "component": "sidebar",
+      "name": "useSidebar outside provider fails instead of creating silent state",
+      "result": "pass"
+    },
+    {
+      "component": "toast",
+      "name": "manager aliases preserve actual primitive constructor/hook",
+      "result": "pass"
+    },
+    {
+      "component": "toast",
+      "name": "closed server Toaster has no fabricated visible notification or pre-mount manager queue",
+      "result": "pass"
+    },
+    {
+      "component": "toast",
+      "name": "hook requires provider context",
+      "result": "pass"
+    }
+  ]
+}

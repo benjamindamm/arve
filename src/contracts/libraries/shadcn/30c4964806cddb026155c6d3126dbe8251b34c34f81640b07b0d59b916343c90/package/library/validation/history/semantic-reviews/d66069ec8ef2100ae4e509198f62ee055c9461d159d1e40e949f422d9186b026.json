@@ -1,0 +1,106 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Button",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "version": "0.4.2",
+  "anatomy": {
+    "control": "Native source action button; base CVA class survives render-prop composition.",
+    "icon": "Optional caller icon, supplementary to an accessible action name."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "targetScope": {
+    "openpencil": "Eight static specimens in Light and Dark.",
+    "web": "Native action-button contract. The React registry comparison implements the reference activation pattern."
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "control": {
+      "kind": "element",
+      "declaration": "Button",
+      "selector": ".cn-button",
+      "description": "Native source action button; base CVA class survives render-prop composition.",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "kind": "element",
+      "declaration": "Button",
+      "selector": ".cn-button > svg",
+      "description": "Optional caller icon, supplementary to an accessible action name.",
+      "ownership": "caller children"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "button-border-width": "button.borderWidth",
+      "button-destructive-background": "components.button.destructiveBackground",
+      "button-destructive-foreground": "components.button.destructiveForeground",
+      "button-disabled-opacity": "button.disabledOpacity",
+      "button-focus-shadow": "button.focusShadow",
+      "button-focus-spread": "button.focusSpread",
+      "button-font": "button.font",
+      "button-font-size": "button.fontSize",
+      "button-font-size-small": "button.fontSizeSmall",
+      "button-font-weight": "button.fontWeight",
+      "button-gap": "button.gap",
+      "button-height-default": "button.heightDefault",
+      "button-height-lg": "button.heightLg",
+      "button-height-sm": "button.heightSm",
+      "button-height-xs": "button.heightXs",
+      "button-hover-opacity": "button.hoverOpacity",
+      "button-icon-size": "components.button.iconSize",
+      "button-line-height": "button.lineHeight",
+      "button-line-height-small": "button.lineHeightSmall",
+      "button-padding": "button.padding",
+      "button-padding-xs": "button.paddingXs",
+      "button-pill-radius": "components.button.pillRadius",
+      "button-radius": "button.radius",
+      "button-radius-sm": "button.radiusSm",
+      "button-secondary-background": "components.button.secondaryBackground",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-primary": "semantic.color.primary",
+      "color-primary-foreground": "semantic.color.primaryForeground",
+      "color-ring": "semantic.color.ring",
+      "font-fallback": "semantic.typography.fallbackFamily"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Action controls size intrinsically from content and semantic height/padding; no imported sample width is imposed. Source CVA emphasis/size classes are actual runtime variants. Focus/hover/disabled are native states. Icon-only squares center a 16px glyph with zero CSS padding: the native 32px square/16px glyph and conflicting 10px horizontal auto-layout padding are retained in evidence, not converted into a shrinking/clipping constraint. Rounded shape is an explicit caller className, not an invented upstream prop.",
+    "variants": {
+      "emphasis": {
+        "prop": "variant",
+        "values": [
+          "default",
+          "outline",
+          "secondary",
+          "ghost",
+          "destructive",
+          "link"
+        ],
+        "binding": "cn-button-variant-<value>"
+      },
+      "size": {
+        "prop": "size",
+        "binding": "cn-button-size-<value>"
+      },
+      "shape": {
+        "source": "caller className",
+        "rounded": "ui-button-rounded"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

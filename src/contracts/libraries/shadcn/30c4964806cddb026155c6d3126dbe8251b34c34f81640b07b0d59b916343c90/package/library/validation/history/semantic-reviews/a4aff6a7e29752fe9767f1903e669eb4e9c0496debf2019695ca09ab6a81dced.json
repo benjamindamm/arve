@@ -1,0 +1,90 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Avatar",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "fallback",
+      "name": "Fallback",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar\" data-size=\"default\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "loaded-image",
+      "name": "Loaded image",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar\" data-size=\"default\"><img data-slot=\"avatar-image\" src=\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23c7e8ff%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2212%22%20r%3D%226%22%20fill%3D%22%23345%22%2F%3E%3Cpath%20d%3D%22M4%2032a12%2012%200%200%201%2024%200%22%20fill%3D%22%23345%22%2F%3E%3C%2Fsvg%3E\" alt=\"Alex Morgan\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "group",
+      "name": "Group",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar-group\" role=\"group\" aria-label=\"Report collaborators\"><div data-slot=\"avatar\" data-size=\"default\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span></div><div data-slot=\"avatar\" data-size=\"default\"><img data-slot=\"avatar-image\" src=\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23c7e8ff%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2212%22%20r%3D%226%22%20fill%3D%22%23345%22%2F%3E%3Cpath%20d%3D%22M4%2032a12%2012%200%200%201%2024%200%22%20fill%3D%22%23345%22%2F%3E%3C%2Fsvg%3E\" alt=\"Alex Morgan\"/></div><div data-slot=\"avatar-group-count\" aria-label=\"Four additional collaborators\">+4</div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "rtl-group",
+      "name": "Rtl group",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar-group\" role=\"group\" aria-label=\"Report collaborators\" dir=\"rtl\"><div data-slot=\"avatar\" data-size=\"default\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span></div><div data-slot=\"avatar\" data-size=\"default\"><img data-slot=\"avatar-image\" src=\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23c7e8ff%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2212%22%20r%3D%226%22%20fill%3D%22%23345%22%2F%3E%3Cpath%20d%3D%22M4%2032a12%2012%200%200%201%2024%200%22%20fill%3D%22%23345%22%2F%3E%3C%2Fsvg%3E\" alt=\"Alex Morgan\"/></div><div data-slot=\"avatar-group-count\" aria-label=\"Four additional collaborators\">+4</div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "badge-sm",
+      "name": "Badge sm",
+      "inputs": {
+        "size": "sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar\" data-size=\"sm\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span><span data-slot=\"avatar-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 8 8\" aria-hidden=\"true\"><path d=\"m1 4 2 2 4-4\"/></svg></span></div><span data-part=\"avatar-status\">Alex Morgan — available</span>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "badge-default",
+      "name": "Badge default",
+      "inputs": {
+        "size": "default"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar\" data-size=\"default\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span><span data-slot=\"avatar-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 8 8\" aria-hidden=\"true\"><path d=\"m1 4 2 2 4-4\"/></svg></span></div><span data-part=\"avatar-status\">Alex Morgan — available</span>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    },
+    {
+      "id": "badge-lg",
+      "name": "Badge lg",
+      "inputs": {
+        "size": "lg"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"avatar\" data-size=\"lg\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span><span data-slot=\"avatar-badge\" aria-hidden=\"true\"><svg viewBox=\"0 0 8 8\" aria-hidden=\"true\"><path d=\"m1 4 2 2 4-4\"/></svg></span></div><span data-part=\"avatar-status\">Alex Morgan — available</span>"
+      },
+      "steps": [],
+      "expectation": "Actual source slots, public variants and caller-provided meaning match the fixture; lifecycle changes are checked separately through the real source target."
+    }
+  ]
+}

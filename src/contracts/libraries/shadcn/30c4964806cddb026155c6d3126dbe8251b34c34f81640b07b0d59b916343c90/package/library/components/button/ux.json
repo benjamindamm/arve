@@ -1,0 +1,25 @@
+{
+  "componentId": "shadcn:Button",
+  "purpose": "Trigger the named action through the source Button. All six emphasis variants and eight sizes share native action semantics; icon sizes still require an explicit accessible name. Native form submit/reset semantics follow the selected type and form, not a synthetic value event.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "primitiveVersion": "1.9.0",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/button.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/button.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/button-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/button.md.source"
+  ],
+  "decisions": {
+    "scope": "Sufficient source-bound React reference description; no certification of every consumer or native platform.",
+    "normalizedProtocol": "SCXML events project source callbacks/native interactions. Send entries document the observed callback and are not additional DOM dispatches. The adapter supplies isCanceled after the source callback transaction. Controlled SET_VALUE/SET_CHECKED props remain authoritative.",
+    "visual": "Native FIG observations and DTCG values remain visual truth. React styles may differ; no unverified pixel equivalence is assumed."
+  },
+  "visualContract": {
+    "layoutPolicy": "Action controls size intrinsically from content and semantic height/padding; no imported sample width is imposed. Source CVA emphasis/size classes are actual runtime variants. Focus/hover/disabled are native states. Icon-only squares center a 16px glyph with zero CSS padding: the native 32px square/16px glyph and conflicting 10px horizontal auto-layout padding are retained in evidence, not converted into a shrinking/clipping constraint. Rounded shape is an explicit caller className, not an invented upstream prop.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

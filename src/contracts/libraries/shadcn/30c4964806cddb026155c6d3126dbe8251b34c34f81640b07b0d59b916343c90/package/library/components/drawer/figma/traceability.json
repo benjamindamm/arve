@@ -1,0 +1,218 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Drawer",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "DrawerTrigger",
+      "selector": "[data-slot=\"drawer-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-popup\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "overlay": {
+      "declaration": "DrawerOverlay",
+      "selector": "[data-slot=\"drawer-overlay\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "declaration": "DrawerHeader",
+      "selector": "[data-slot=\"drawer-header\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "footer": {
+      "declaration": "DrawerFooter",
+      "selector": "[data-slot=\"drawer-footer\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "declaration": "DrawerTitle",
+      "selector": "[data-slot=\"drawer-title\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "declaration": "DrawerDescription",
+      "selector": "[data-slot=\"drawer-description\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "portal": {
+      "declaration": "DrawerPortal",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "close": {
+      "declaration": "DrawerClose",
+      "selector": "[data-slot=\"drawer-close\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "viewport": {
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-viewport\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "body": {
+      "declaration": "DrawerContent",
+      "selector": "[data-slot=\"drawer-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "swipe-handle": {
+      "declaration": "DrawerSwipeHandle",
+      "selector": "[data-slot=\"drawer-swipe-handle\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2138:1363",
+      "property": "width",
+      "value": 384,
+      "semanticRole": "selected surface width evidence"
+    },
+    {
+      "sourceNodeId": "2138:1363",
+      "property": "layout.gap",
+      "value": 0,
+      "semanticRole": "content gap"
+    },
+    {
+      "sourceNodeId": "2138:1345",
+      "property": "text",
+      "value": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "autoResize": "HEIGHT"
+      },
+      "semanticRole": "title typography"
+    },
+    {
+      "sourceNodeId": "2138:1917",
+      "property": "layout",
+      "value": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "semanticRole": "header layout"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:228 (Drawer), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2138:1343",
+      "sourcePartId": "2138:1342",
+      "sourceName": "DrawerHeader / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close",
+        "viewport",
+        "body",
+        "swipe-handle"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-up",
+        "side-right",
+        "side-down",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2138:1349",
+      "sourcePartId": "2138:1342",
+      "sourceName": "DrawerHeader / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close",
+        "viewport",
+        "body",
+        "swipe-handle"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-up",
+        "side-right",
+        "side-down",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2138:1928",
+      "sourcePartId": "2138:1342",
+      "sourceName": "DrawerHeader / Dir=None",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "portal",
+        "close",
+        "viewport",
+        "body",
+        "swipe-handle"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-up",
+        "side-right",
+        "side-down",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The pinned Drawer wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual swipeDirection values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions. The pinned Drawer motion utilities bind the documented live primitive swipe, measured height, snap offset and nested-stack variables. These are real runtime inputs, not DTCG observations. Upstream 450ms easing,400ms release scalar,16px stack peek,0.05 scale step and 96px vertical clearance are explicit source-code decisions. Reduced motion disables transitions without disabling gestures or closing. All lifecycle attributes remain primitive output, never new public state props.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

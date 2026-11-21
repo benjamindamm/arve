@@ -1,0 +1,87 @@
+{
+  "componentId": "shadcn:ChartArea",
+  "referenceComposition": "<figure data-part=\"chart-figure\" data-chart-kind=\"chart-area\" aria-labelledby=\"chart-area-title\" aria-describedby=\"chart-area-summary\"><figcaption data-part=\"chart-caption\" id=\"chart-area-title\">chart-area source sample</figcaption><p data-part=\"chart-summary\" id=\"chart-area-summary\">Show the ordered monthly visitor trend with filled area under the Desktop series. The official sample uses natural interpolation; intermediate curve points are interpolation, not additional observations. Exact values and category order follow the bound official sample. Unit: Visitors (count)</p><div data-slot=\"chart\" aria-hidden=\"true\"><svg viewBox=\"0 0 320 200\" class=\"recharts-surface\" aria-hidden=\"true\"><path class=\"recharts-curve\" d=\"M24.0,92.84053651266765 L78.4,39.636363636363654 L132.8,70.0387481371088 L187.2,143.36214605067065 L241.6,82.55737704918032 L296.0,80.32190760059613 L296,176 L24,176 Z\" stroke=\"var(--chart-series-primary)\" fill=\"var(--chart-series-primary)\" fill-opacity=\"0.25\"/><g class=\"recharts-cartesian-grid\"><line x1=\"24\" y1=\"176\" x2=\"296\" y2=\"176\"/></g><g class=\"recharts-cartesian-axis-tick\"><text x=\"24\" y=\"196\">January</text></g></svg></div><div data-part=\"chart-table-scroll\"><table data-part=\"chart-table\"><caption>Complete source sample data</caption><thead><tr><th scope=\"col\">month</th><th scope=\"col\">desktop</th></tr></thead><tbody><tr><th scope=\"row\">January</th><td>186</td></tr><tr><th scope=\"row\">February</th><td>305</td></tr><tr><th scope=\"row\">March</th><td>237</td></tr><tr><th scope=\"row\">April</th><td>73</td></tr><tr><th scope=\"row\">May</th><td>209</td></tr><tr><th scope=\"row\">June</th><td>214</td></tr></tbody></table></div><div class=\"chart-legend\"><div><div style=\"background:var(--ui-chart-series-primary)\"></div>Desktop</div></div></figure>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Full captioned table with column headers, row headers, exact values and category order; visible summary explicitly states units/unknown units and the chart-specific interpretation. Every category/series survives without color, geometry, pointer hover or transient tooltip.",
+  "updatesAndDescendants": "ChartContainer is a div/context/ResponsiveContainer composition, not a plot API. It requires config:ChartConfig and a Recharts-compatible child, initialDimension defaults320x200; caller gives a nonzero constrained chart size. Config keys map optional ReactNode labels/icons and either color or complete light/dark theme values; generated --color-key variables are scoped to the chart id. ChartStyle returns null without color/theme entries. ChartTooltip and ChartLegend are direct Recharts aliases. ChartTooltipContent requires chart context, returns null when inactive/empty, filters payload type=none, resolves series/nameKey/labelKey and supports formatter, labelFormatter, hideLabel/hideIndicator and dot/line/dashed indicators. ChartLegendContent requires context, returns null with no payload, supports nameKey/hideIcon/verticalAlign. For one payload item with a non-dot indicator, the label nests inside the default row; a custom formatter replaces that row and owns the nested label as well. Neither tooltip nor legend fabricates source data, performs aggregation or automatically makes a complete text alternative. The actual source custom tooltip is a plain div, not a separately focusable ARIA tooltip widget. Recharts3.8 accessibilityLayer keyboard behavior and TooltipBoundingBox Escape dismissal are separately pinned. This reference offers the entire native table and summary continuously; its SVG is explicitly redundant aria-hidden with accessibilityLayer=false. Thus every value is readable without hover, chart focus or a particular screen reader mode. Pointer tooltip remains supplemental and Escape dismisses at the current coordinate until the source coordinate changes. Reference updates replace graph/table/summary from the same dataset; empty and failure are explicit caller feedback instead of a fabricated zero chart. Interactive application filters and legends, if composed, require their own Button/selection contract.",
+  "referenceDecision": "The source Base UI chart wrapper remains the public foundation. The named chart family is an explicit Recharts composition, not a new exported upstream component. The supplemental official new-york-v4 example supplies its actual plot shape and literal dataset only; it does not replace the chosen Base UI wrapper. Dataset counts, accessible figure/table, redundant hidden SVG, units, zero-baseline bar policy and reduced-motion/no-animation reference usage are explicit caller decisions. Figma supplies all native visual measurements; no claim equates this React sample with every Figma raster.",
+  "keyboard": "The chosen redundant graph has aria-hidden=true and accessibilityLayer=false. Native table reading and surrounding links/controls remain available. This does not claim the source Recharts accessibilityLayer lacks keyboard support: its own Left/Right/Enter interactions are in the pinned keyboard middleware, but are not required to obtain any reference data. The supplemental pointer tooltip has no independent focus target. Escape dismisses at the source coordinate; it does not erase data.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "protocol": "SCXML consumes observed Recharts tooltip index/coordinate/payload changes, not fabricated shadcn Root callbacks. DATA_PROPS_CHANGED is this reference composition transaction and clears stale supplemental hint while graph/table/summary are updated atomically from the same dataset; error/empty feedback remains caller-owned.",
+  "semanticParts": {
+    "figure": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-figure\"]",
+      "description": "Figure; no native document identity participates in the runtime binding."
+    },
+    "caption": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-caption\"]",
+      "description": "Caption; no native document identity participates in the runtime binding."
+    },
+    "summary": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-summary\"]",
+      "description": "Summary; no native document identity participates in the runtime binding."
+    },
+    "plot": {
+      "kind": "element",
+      "selector": "[data-slot=\"chart\"]",
+      "description": "Plot; no native document identity participates in the runtime binding."
+    },
+    "data-scroll": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-table-scroll\"]",
+      "description": "Data scroll; no native document identity participates in the runtime binding."
+    },
+    "data-table": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-table\"]",
+      "description": "Data table; no native document identity participates in the runtime binding."
+    },
+    "feedback": {
+      "kind": "element",
+      "selector": "[data-part=\"chart-feedback\"]",
+      "description": "Feedback; no native document identity participates in the runtime binding."
+    },
+    "tooltip": {
+      "kind": "element",
+      "selector": ".cn-chart-tooltip",
+      "description": "Tooltip; no native document identity participates in the runtime binding."
+    },
+    "tooltip-indicator": {
+      "kind": "element",
+      "selector": ".cn-chart-tooltip [style*=\"--color-bg\"]",
+      "description": "Tooltip indicator; no native document identity participates in the runtime binding."
+    },
+    "legend": {
+      "kind": "element",
+      "selector": ".chart-legend",
+      "description": "Legend; no native document identity participates in the runtime binding."
+    }
+  },
+  "visualStateMapping": {
+    "chartKind": {
+      "callerAttribute": "data-chart-kind",
+      "value": "chart-area"
+    },
+    "dataState": {
+      "callerState": [
+        "ready",
+        "empty",
+        "error"
+      ]
+    },
+    "indicator": {
+      "prop": "indicator",
+      "values": [
+        "dot",
+        "line",
+        "dashed"
+      ]
+    },
+    "theme": {
+      "source": "ChartStyle uses .dark ancestor; host must provide it for config.theme and data-theme for semantic tokens."
+    }
+  }
+}

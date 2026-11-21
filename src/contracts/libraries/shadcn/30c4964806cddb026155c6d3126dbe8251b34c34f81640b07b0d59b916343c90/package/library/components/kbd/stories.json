@@ -1,0 +1,40 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Kbd",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "shortcut-group",
+      "name": "Shortcut group",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<p>Save with <kbd data-slot=\"kbd-group\"><kbd data-slot=\"kbd\">Ctrl</kbd> + <kbd data-slot=\"kbd\">S</kbd></kbd>.</p>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "single-key",
+      "name": "Single key",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<kbd data-slot=\"kbd\">Enter</kbd>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "long-key",
+      "name": "Long key",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<kbd data-slot=\"kbd\">Page Down</kbd>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

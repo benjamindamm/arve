@@ -1,0 +1,19 @@
+{
+  "purpose": "Group conversational content by speaker.",
+  "avoid": "Do not use position or color as the sole speaker indication.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 2360:4701 (Bubble), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Bubble",
+  "contentAlternative": "Speaker attribution and message content are readable text. Alignment and tint are redundant cues.",
+  "updatesAndDescendants": "Bubble is a div composition with start/end alignment. BubbleContent can useRender a native action/link. BubbleReactions positions caller-provided controls; the component has no built-in reaction state, persistence or callback.",
+  "referenceDecision": "The example reaction is an ordinary labelled Button owned by the caller; no fabricated like API is attached to Bubble.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/bubble.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/bubble.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/bubble-example.tsx.source"
+  ],
+  "primitiveDocs": []
+}

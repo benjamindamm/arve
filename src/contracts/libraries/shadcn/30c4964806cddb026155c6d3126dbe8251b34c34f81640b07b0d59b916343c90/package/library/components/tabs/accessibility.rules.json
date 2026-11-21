@@ -1,0 +1,37 @@
+{
+  "componentId": "shadcn:Tabs",
+  "sourceRule": "Root value/defaultValue uses the primitive generic Tab.Value (including null; default implicit0). List defaults activateOnFocus=false and loopFocus=true; variant default|line only styles it. Trigger value identifies a matching Panel, disabled triggers cannot activate; keepMounted is explicit on Panels (the shown inactive-panel projection chooses it). Automatic tab/panel ID relations register in client effects and are not present in raw static server markup; the reference HTML shows the registered client state. User onValueChange(value,eventDetails) is cancellable. Automatic uncontrolled selection/fallback reasons initial/disabled/missing cannot be canceled and may yield null when no enabled tab remains. Controlled values never automatically fall back. Callback details include activationDirection. Tab focus and active panel are distinct in manual mode.",
+  "keyboardAndFocus": "Tab enters the selected/enabled tab and then its panel. The source horizontal tablist uses Left/Right, Home/End to move focus, including source-focusable disabled triggers that cannot activate; default manual mode requires Enter/Space to activate. activateOnFocus=true also changes selection on arrow focus. Escape leaves selection unchanged. IMPORTANT pinned wrapper limitation: Root orientation is consumed for CSS/data attributes and not forwarded to TabsPrimitive.Root; primitive ARIA and keyboard behavior remain horizontal even when visual orientation=vertical. This reference chooses horizontal layout and makes the upstream discrepancy explicit.",
+  "referenceComposition": "<div data-slot=\"tabs\" data-orientation=\"horizontal\"><div data-slot=\"tabs-list\" data-variant=\"default\" role=\"tablist\" aria-label=\"Report views\" aria-orientation=\"horizontal\"><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-summary\" aria-controls=\"panel-summary\" aria-selected=\"true\" tabindex=\"0\" data-active=\"\">Summary</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-details\" aria-controls=\"panel-details\" aria-selected=\"false\" tabindex=\"-1\">Details</button><button type=\"button\" data-slot=\"tabs-trigger\" role=\"tab\" id=\"tab-unavailable\" aria-controls=\"panel-unavailable\" aria-selected=\"false\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable tab</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-summary\" aria-labelledby=\"tab-summary\" tabindex=\"0\"><p>Report summary</p><button type=\"button\">Summary action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-details\" aria-labelledby=\"tab-details\" tabindex=\"0\" hidden=\"\"><p>Report details</p><button type=\"button\">Details action</button></div><div data-slot=\"tabs-content\" role=\"tabpanel\" id=\"panel-unavailable\" aria-labelledby=\"tab-unavailable\" tabindex=\"0\" hidden=\"\"><p>Report unavailable</p><button type=\"button\">Unavailable tab action</button></div></div>",
+  "protocol": "SCXML consumes actual source callback transactions and source focus observations after native pointer/keyboard normalization, preserving original eventDetails. Sends document observed React callbacks, never duplicate DOM dispatches. Canceled user requests preserve value; controlled SET_VALUE does not emit a change. Tabs automatic consistency updates are separate and uncancelable. Source owns quantization, collision, focus wrapping and native form integration.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"tabs\"]",
+      "description": "Actual raw Root; supported reference orientation is horizontal."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"tabs-list\"]",
+      "description": "Named tablist with actual default/line variant."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"tabs-trigger\"]",
+      "description": "Native focusable Tab, including focusable aria-disabled source tabs."
+    },
+    "panel": {
+      "kind": "element",
+      "selector": "[data-slot=\"tabs-content\"]",
+      "description": "Actual associated panel; inactive keepMounted projections remain hidden."
+    }
+  },
+  "visualStateMapping": {
+    "list.variant": [
+      "default",
+      "line"
+    ],
+    "supportedReferenceOrientation": "horizontal",
+    "upstreamLimitation": "Root orientation does not reach primitive context."
+  }
+}

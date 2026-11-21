@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "breadcrumb.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Breadcrumb",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"nav\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:8; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "navigation",
+              "description": "Actual named nav; caller can localize its label. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"ol\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:19; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "list",
+              "description": "Actual wrapping ordered hierarchy list. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"li\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:32; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Actual native list item. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbLink",
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "type": {
+                "text": "string"
+              },
+              "description": "Actual anchor destination supplied by the caller."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"a\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:42; defaults {}."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "React.MouseEventHandler<HTMLAnchorElement>"
+              },
+              "description": "Actual native link click handler; preventDefault delegates navigation to the caller/router."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "link",
+              "description": "Actual native ancestor anchor with real destination. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbPage",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:62; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "page",
+              "description": "Actual nonfocusable current-page span with source role=link/aria-disabled/page. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"li\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:75; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Actual hidden presentation list item and separator glyph. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "BreadcrumbEllipsis",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source:102; defaults {}."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "ellipsis",
+              "description": "Actual hidden presentation span; no automatic overflow action. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

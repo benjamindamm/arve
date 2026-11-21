@@ -1,0 +1,52 @@
+{
+  "componentId": "shadcn:Message",
+  "referenceComposition": "<div data-slot=\"message-group\"><div data-slot=\"message\" data-align=\"start\"><div data-slot=\"message-avatar\" aria-hidden=\"true\">AL</div><div data-slot=\"message-content\"><div data-slot=\"message-header\">Alex · <time datetime=\"2026-11-21T10:24:00Z\">10:24</time></div><p>The report is ready.</p><div data-slot=\"message-footer\">Delivered</div></div></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Speaker, time and message body are text. Alignment or avatar alone must not identify the speaker.",
+  "updatesAndDescendants": "MessageGroup/Message and slots are native div wrappers; align=end reverses visual direction. They do not store messages, send replies, announce streams or manage scrolling. MessageScroller or a caller-owned log region controls those behaviors.",
+  "referenceDecision": "Speaker/time markup and reply Button are caller-supplied reference children. A live log is a separate context decision, not an unconditional role added to every message.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"message-group\"]",
+      "description": "Actual vertical message grouping; no automatic log semantics."
+    },
+    "message": {
+      "kind": "element",
+      "selector": "[data-slot=\"message\"]",
+      "description": "Actual align-controlled avatar/content row."
+    },
+    "avatar": {
+      "kind": "element",
+      "selector": "[data-slot=\"message-avatar\"]",
+      "description": "Optional supplementary visual identity; readable speaker remains in header."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"message-content\"]",
+      "description": "Flexible intrinsic-height message content stack."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"message-header\"]",
+      "description": "Actual metadata row containing explicit speaker/time text."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"message-footer\"]",
+      "description": "Actual metadata/action row, not automatic delivery state."
+    }
+  },
+  "visualStateMapping": {
+    "align": {
+      "prop": "align",
+      "attribute": "data-align",
+      "values": [
+        "start",
+        "end"
+      ]
+    }
+  }
+}

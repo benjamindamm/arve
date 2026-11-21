@@ -1,0 +1,28 @@
+{
+  "componentId": "shadcn:Spinner",
+  "referenceComposition": "<svg data-slot=\"spinner\" class=\"ui-spinner-default\" role=\"status\" aria-label=\"Loading contacts\" viewBox=\"0 0 24 24\"><path d=\"M20 12a8 8 0 1 1-8-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The actual wrapper has role=status and default aria-label=Loading; this reference supplies a task-specific localized name. Animation is supplementary.",
+  "updatesAndDescendants": "Spinner renders the selected icon with an animation class; it does not start tasks, calculate progress or determine completion. The task owner removes/replaces the status on completion/failure. Reduced motion may stop rotation while keeping the accessible status.",
+  "referenceDecision": "The task-specific label and reduced-motion policy are explicit usage decisions. The icon-family picker on the registry website is outside the component API.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"spinner\"]",
+      "description": "Actual named role=status SVG, with caller naming for task context."
+    }
+  },
+  "visualStateMapping": {
+    "size": {
+      "callerClassNames": [
+        "ui-spinner-default",
+        "ui-spinner-small",
+        "ui-spinner-large",
+        "ui-spinner-extra-large"
+      ],
+      "publicProp": false
+    }
+  }
+}

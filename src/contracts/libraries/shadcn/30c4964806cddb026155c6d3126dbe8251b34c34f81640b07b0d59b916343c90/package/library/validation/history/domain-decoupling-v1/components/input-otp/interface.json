@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "input-otp.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "InputOTP",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "InputOTP forwards input-otp1.4.2 OTPInputProps, maxLength:number is required, value/defaultValue are strings, onChange(newValue:string) is not a native event callback. onComplete receives the complete value when a previously observed shorter value becomes exactly maxLength; initial full value is not an automatic completion request. It does not submit, verify, store or resend codes. The underlying library defaults inputMode=numeric and autoComplete=one-time-code, but only a supplied pattern enforces characters. This reference explicitly selects maxLength6 and REGEXP_ONLY_DIGITS, complete six slots indexed0..5, and a pasteTransformer removing spaces/hyphens. Pattern failure rejects the whole candidate rather than sanitizing arbitrary letters. Underlying selection, paste insertion, length truncation and fake caret use one actual input; slots/groups are visual divs. The reference explicitly hides visual slots and the separator from assistive technology while the real input remains labelled/exposed. Wrapper spellCheck=false can be overridden by native props. Disabled suppresses native user editing; controlled props remain authoritative and caller owns verification errors, cooldown and server response. The input-otp implementation also forwards native defaultValue alongside its internal value when supplied; React19 can warn about both. This reference deliberately uses the controlled string form."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof OTPInput> & {\n  containerClassName?: string\n}"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/input-otp.tsx.source:9."
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "(newValue: string) => unknown"
+              },
+              "description": "Actual input-otp string callback, not a DOM event or cancellable BaseUI transaction."
+            },
+            {
+              "name": "onComplete",
+              "type": {
+                "text": "(...args: any[]) => unknown"
+              },
+              "description": "Exact upstream declaration; implementation passes the full string on the shorter-to-full transition, without verification or automatic submission."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "input-otp",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputOTPGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/input-otp.tsx.source:33."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-otp-group",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputOTPSlot",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & {\n  index: number\n}"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/input-otp.tsx.source:43."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-otp-slot",
+              "description": "Actual source data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "InputOTPSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/input-otp.tsx.source:73."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "input-otp-separator",
+              "description": "Actual source data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+@import "../../tokens.css";
+
+[data-slot="badge"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  inline-size: fit-content;
+  min-block-size: var(--ui-badge-height);
+  gap: var(--ui-badge-gap);
+  padding: var(--ui-badge-padding-block) var(--ui-badge-padding-inline);
+  border: var(--ui-border-width) solid transparent;
+  border-radius: var(--ui-badge-radius);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-badge-font-size);
+  line-height: var(--ui-badge-line-height);
+  font-weight: var(--ui-font-weight-medium);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+[data-slot="badge"]>svg {
+  inline-size: var(--ui-badge-icon-size);
+  block-size: var(--ui-badge-icon-size);
+  flex: none;
+}
+
+.cn-badge-variant-default {
+  background: var(--ui-color-primary);
+  color: var(--ui-color-primary-foreground);
+}
+
+.cn-badge-variant-secondary {
+  background: var(--ui-color-secondary);
+  color: var(--ui-color-secondary-foreground);
+}
+
+.cn-badge-variant-destructive {
+  background: var(--ui-color-destructive-subtle);
+  color: var(--ui-color-destructive);
+}
+
+.cn-badge-variant-outline {
+  border-color: var(--ui-color-border);
+  background: transparent;
+  color: var(--ui-color-foreground);
+}
+
+.cn-badge-variant-ghost {
+  background: transparent;
+  color: var(--ui-color-foreground);
+}
+
+.cn-badge-variant-link {
+  background: transparent;
+  color: var(--ui-color-primary);
+}
+
+a[data-slot="badge"]:hover {
+  text-decoration: underline;
+}
+
+a[data-slot="badge"]:focus-visible {
+  outline: var(--ui-focus-width) solid var(--ui-color-ring);
+  outline-offset: var(--ui-focus-width);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}

@@ -1,0 +1,30 @@
+{
+  "purpose": "Adjust a bounded numeric value or ordered range, with separate change and committed-value callbacks.",
+  "avoid": "Provide suitable precision and a usable alternative for exact values.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Slider",
+  "sourceRule": "Root accepts scalar or array value/defaultValue, min0/max100, step1, largeStep10, orientation horizontal|vertical, disabled/name/form, minStepsBetweenValues and thumbCollisionBehavior push|swap|none. Wrapper thumbAlignment defaults edge but {...props} can override it. onValueChange has cancellable ChangeEventDetails with reason and activeThumbIndex; onValueCommitted has generic CommitEventDetails and only reports a changed, uncanceled commit. Source quantizes/clamps pointer/keyboard changes and enforces range collision policy. IMPORTANT wrapper quirk: thumb count is array value length, else array defaultValue length, else2; scalar props still create two Thumb instances. This reference explicitly uses value={[40]} for one thumb and arrays for ranges, with format={style:unit,unit:percent}. Wrapper does not expose per-thumb naming/index props; Root aria-labelledby is propagated through primitive context to its internal range inputs. Root aria-describedby is a div prop, not forwarded to private Thumb input props. The selected real Base UI Field.Root/Label/Description/Error composition supplies native input help/error context; the shadcn Field wrapper itself is presentation-only.",
+  "keyboardAndFocus": "The actual focusable controls are native input type=range nested inside thumb divs. Arrow keys step, PageUp/PageDown and Shift+arrows use largeStep, Home/End choose limits; horizontal direction respects RTL, vertical Up increases. Disabled inputs leave Tab order. Pointer drag/track press and keyboard changes have distinct change/commit lifecycle; Escape does not restore an earlier committed value. Range thumbs retain DOM order with collision policy owned by the primitive. This reference provides finite min<max and positive step, a shared explicit label and described units.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/slider.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/slider.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/slider-example.tsx.source",
+    "sources/base-ui-1.9.0/field/root/FieldRoot.mjs.source",
+    "sources/base-ui-1.9.0/field/description/FieldDescription.mjs.source",
+    "sources/base-ui-1.9.0/direction-provider/DirectionProvider.mjs.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/slider.md.source"
+  ],
+  "referenceDecision": "Array values deliberately control wrapper Thumb cardinality. Actual Base UI Field context supplies input descriptions/errors and format unit=percent supplies meaningful native value text; raw Root aria-describedby alone does not propagate to private Thumb inputs. Both DirectionProvider and HTML dir enable actual RTL geometry/keys. Caller-forced invalid state explicitly uses Field.Error match=true; invalid styling alone does not manufacture validityData errors.",
+  "visualContract": {
+    "layoutPolicy": "Native track 4px/thumb 12px and full track corner are reusable visual roles; fixed native 100/140/320px track examples are not runtime widths. Thumb uses native fixed white surface and ring role; primitive inline position, translate, range percentage and clipping remain authoritative. Static edge-alignment fixtures use the equivalent thumb-size/available-travel calculation rather than a misleading center-aligned raw percentage. The hidden native range input remains the actual focus/keyboard control; parent :has(input:focus-visible) displays the ring without inventing a second slider role. This reference uses explicit arrays: raw wrapper creates two Thumb instances for scalar props, a documented limitation. It uses Root format unit=percent so single/range native value text conveys units and source start/end range suffixes. Root aria-labelledby is propagated, but Root aria-describedby is not a Thumb prop: actual Base UI Field.Root/Label/Description/Error context supplies the native input help/error instead. These primitives are explicit caller composition, not behavior attributed to the presentation-only shadcn Field. Both HTML dir and actual DirectionProvider are necessary for RTL primitive geometry/keys. True vertical Slider is forwarded by this wrapper and uses a selected 160px extent. Source stepping, Home/End/Page/Shift behavior, array collision policy, disabled input Tab order, candidate cancellation and separate committed callbacks remain unchanged.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

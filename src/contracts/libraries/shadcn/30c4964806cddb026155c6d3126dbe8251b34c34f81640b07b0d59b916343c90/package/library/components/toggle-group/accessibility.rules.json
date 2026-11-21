@@ -1,0 +1,38 @@
+{
+  "componentId": "shadcn:ToggleGroup",
+  "sourceRule": "ToggleGroup value/defaultValue are arrays even when multiple=false. multiple=false permits one pressed item and pressing it again clears the array; multiple=true toggles independent items. Items are native buttons aria-pressed. Group disabled and item disabled suppress changes; group size/variant context overrides item appearance when set, spacing defaults2. Standalone Toggle has pressed/defaultPressed boolean and onPressedChange(pressed,eventDetails), disabled, variant default|outline and size default|sm|lg. It is included from its own pinned source module, not lost as an unindexed dependency.",
+  "keyboardAndFocus": "Native Enter/Space activates a toggle. ToggleGroup source composite uses horizontal arrows, Home/End and loopFocus=true by default; focus navigation alone does not press a toggle. IMPORTANT pinned wrapper limitation: orientation is consumed for visual/data layout and not forwarded to ToggleGroupPrimitive, so a requested vertical layout does not establish vertical primitive keyboard orientation. This reference uses horizontal groups and records the actual limitation instead of claiming vertical parity. Standalone Toggle has normal native Tab order.",
+  "referenceComposition": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>",
+  "protocol": "SCXML consumes actual source callback transactions and source focus observations after native pointer/keyboard normalization, preserving original eventDetails. Sends document observed React callbacks, never duplicate DOM dispatches. Canceled user requests preserve value; controlled SET_VALUE does not emit a change. Tabs automatic consistency updates are separate and uncancelable. Source owns quantization, collision, focus wrapping and native form integration.",
+  "semanticParts": {
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"toggle-group\"]",
+      "description": "Named actual composite; values remain arrays in single/multiple mode."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"toggle-group-item\"]",
+      "description": "Actual native pressed button using source toggleVariants classes/context."
+    },
+    "standalone": {
+      "kind": "element",
+      "selector": "[data-slot=\"toggle\"]",
+      "description": "Actual standalone Toggle from its own pinned module; independent boolean pressed state."
+    }
+  },
+  "visualStateMapping": {
+    "variant": [
+      "default",
+      "outline"
+    ],
+    "size": [
+      "sm",
+      "default",
+      "lg"
+    ],
+    "spacing": "finite nonnegative spacing units; default2",
+    "supportedReferenceOrientation": "horizontal",
+    "standalone": "Own Toggle module, pressed:boolean"
+  }
+}

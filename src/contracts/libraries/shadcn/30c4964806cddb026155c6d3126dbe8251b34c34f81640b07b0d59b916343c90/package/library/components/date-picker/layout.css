@@ -1,0 +1,30 @@
+@import "../../tokens.css";
+
+@import url(../button/layout.css);
+
+@import url(../popover/layout.css);
+
+@import url(../calendar/layout.css);
+
+[data-part="date-picker"] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--ui-date-picker-gap);
+  min-inline-size: 0;
+}
+
+[data-part="date-picker-trigger"] {
+  box-sizing: border-box;
+  min-block-size: var(--ui-date-picker-trigger-min);
+  max-inline-size: 100%;
+  white-space: normal;
+  text-align: start;
+}
+
+[data-part="date-picker"]>[data-slot="popover-content"],
+[data-slot="popover-content"][data-date-picker-popup] {
+  inline-size: max-content;
+  max-inline-size: calc(100vw - 16px);
+  padding: 0;
+}

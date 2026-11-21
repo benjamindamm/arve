@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "button.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Button",
+          "description": "Source-bound React reference surface; callback entries describe React handlers, not newly dispatched DOM CustomEvents.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Native content names the requested action; icon-only instances provide aria-label or labelledby."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ButtonPrimitive.Props"
+              },
+              "description": "Complete inherited public React prop surface; exact pinned declaration and native event types are retained in sources/manifest.json."
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "focusableWhenDisabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "nativeButton",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"default\" | \"outline\" | \"secondary\" | \"ghost\" | \"destructive\" | \"link\""
+              },
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"default\" | \"xs\" | \"sm\" | \"lg\" | \"icon\" | \"icon-xs\" | \"icon-sm\" | \"icon-lg\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "React.MouseEventHandler<HTMLElement>"
+              },
+              "description": "Inherited native React handler; source event identity and payload are preserved."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "control",
+              "description": "Native source action button; base CVA class survives render-prop composition. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "icon",
+              "description": "Optional caller icon, supplementary to an accessible action name. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

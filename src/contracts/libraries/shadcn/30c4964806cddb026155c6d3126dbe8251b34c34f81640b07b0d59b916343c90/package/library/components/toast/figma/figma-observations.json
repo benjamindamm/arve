@@ -1,0 +1,2438 @@
+{
+  "format": "shadcn-figma-observations/1",
+  "source": "provenance://source/.figma-pool%2Fshadcn.fig",
+  "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "classification": "observation",
+  "reader": "@leogcode/figma-reader 0.4.2",
+  "page": {
+    "id": "73:2896",
+    "name": "Toast",
+    "kind": "component",
+    "slug": "toast",
+    "top": [
+      {
+        "id": "2353:18779",
+        "name": "Be in the loop",
+        "type": "INSTANCE"
+      },
+      {
+        "id": "2011:2382",
+        "name": "Toast",
+        "type": "FRAME"
+      }
+    ],
+    "componentSets": [],
+    "components": [
+      {
+        "id": "2011:2331",
+        "name": "Toast",
+        "page": "Toast",
+        "size": "382x72",
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Button#1",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Toast description",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Button#2",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Toast title",
+            "type": "BOOL",
+            "default": true
+          }
+        ],
+        "instances": 6,
+        "swapInstances": 0
+      }
+    ]
+  },
+  "frames": [
+    {
+      "id": "2011:2382",
+      "name": "Toast",
+      "type": "FRAME",
+      "x": -162,
+      "y": -140,
+      "width": 550,
+      "height": 2236,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "padding": [
+          56,
+          56,
+          56,
+          56
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-12",
+        "stack_padding_left": "p-14",
+        "stack_padding_top": "p-14",
+        "stack_padding_right": "p-14",
+        "stack_padding_bottom": "p-14",
+        "rectangle_top_left_corner_radius": "radius-xl",
+        "rectangle_top_right_corner_radius": "radius-xl",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border"
+      },
+      "children": [
+        {
+          "id": "2011:2383",
+          "name": "Title",
+          "type": "FRAME",
+          "x": 56,
+          "y": 56,
+          "width": 438,
+          "height": 92,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-4"
+          },
+          "children": [
+            {
+              "id": "2011:2384",
+              "name": "Component description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 273,
+              "height": 92,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2011:2385",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 273,
+                  "height": 36,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Toast",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 30,
+                    "lineHeight": 36,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-3xl/Semi Bold"
+                },
+                {
+                  "id": "2011:2386",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 44,
+                  "width": 273,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "A succinct message that is displayed temporarily.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2011:2387",
+              "name": "Buttons",
+              "type": "FRAME",
+              "x": 289,
+              "y": 0,
+              "width": 149,
+              "height": 32,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    1
+                  ],
+                  "radius": 2
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-xs",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  12,
+                  0,
+                  12
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-3",
+                "stack_padding_right": "px-3",
+                "rectangle_top_left_corner_radius": "rounded-xl",
+                "rectangle_top_right_corner_radius": "rounded-xl",
+                "rectangle_bottom_left_corner_radius": "rounded-xl",
+                "rectangle_bottom_right_corner_radius": "rounded-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2011:2388",
+                  "name": "Text",
+                  "type": "FRAME",
+                  "x": 12,
+                  "y": 6,
+                  "width": 103,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "counterSizing": "HUG"
+                  },
+                  "childCount": 1
+                },
+                {
+                  "id": "2011:2390",
+                  "name": "lucide/arrow-up-right",
+                  "type": "INSTANCE",
+                  "x": 121,
+                  "y": 8,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/arrow-up-right",
+                    "mainComponentId": "128:198"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2011:2391",
+          "name": "Frame 9",
+          "type": "FRAME",
+          "x": 56,
+          "y": 196,
+          "width": 382,
+          "height": 212,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 40,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-10"
+          },
+          "children": [
+            {
+              "id": "2467:23966",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 382,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Components",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 24,
+                "lineHeight": 32
+              },
+              "textStyle": "Text-2xl/Semi Bold"
+            },
+            {
+              "id": "2011:2392",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 72,
+              "width": 382,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Toast",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2011:2331",
+              "name": "Toast",
+              "type": "COMPONENT",
+              "x": 0,
+              "y": 140,
+              "width": 382,
+              "height": 72,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "kind": "COMPONENT",
+                "propertyDefinitions": [
+                  {
+                    "name": "Icon",
+                    "type": "BOOL",
+                    "default": false
+                  },
+                  {
+                    "name": "Button#1",
+                    "type": "BOOL",
+                    "default": false
+                  },
+                  {
+                    "name": "Toast description",
+                    "type": "BOOL",
+                    "default": true
+                  },
+                  {
+                    "name": "Button#2",
+                    "type": "BOOL",
+                    "default": true
+                  },
+                  {
+                    "name": "Toast title",
+                    "type": "BOOL",
+                    "default": true
+                  }
+                ]
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2011:1648",
+                  "name": "lucide/circle-check",
+                  "type": "INSTANCE",
+                  "visible": false,
+                  "x": 16,
+                  "y": 28,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/circle-check",
+                    "mainComponentId": "128:638",
+                    "overrides": 1
+                  },
+                  "boundVariables": {
+                    "border_top_weight": "stroke-2",
+                    "border_bottom_weight": "stroke-2",
+                    "border_left_weight": "stroke-2",
+                    "border_right_weight": "stroke-2"
+                  }
+                },
+                {
+                  "id": "2469:24067",
+                  "name": "Toast content",
+                  "type": "FRAME",
+                  "x": 16,
+                  "y": 16,
+                  "width": 310,
+                  "height": 40,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 4,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "MIN"
+                  },
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-1"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2011:2325",
+                  "name": "Button",
+                  "type": "INSTANCE",
+                  "visible": false,
+                  "x": 275,
+                  "y": 22,
+                  "width": 51,
+                  "height": 28,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "background"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    6,
+                    6,
+                    6,
+                    6
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 4,
+                    "padding": [
+                      0,
+                      10,
+                      0,
+                      10
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER"
+                  },
+                  "component": {
+                    "mainComponent": "Variant=Outline, Size=sm, State=Default, Roudness=Default",
+                    "mainComponentId": "1872:3192",
+                    "componentSet": "Button",
+                    "properties": {
+                      "Variant": "Outline",
+                      "Size": "sm",
+                      "State": "Default",
+                      "Roudness": "Default"
+                    },
+                    "overrides": 4
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-1",
+                    "stack_padding_left": "px-2,5",
+                    "stack_padding_right": "px-2,5",
+                    "height": "h-7",
+                    "rectangle_top_left_corner_radius": "radius-sm",
+                    "rectangle_top_right_corner_radius": "radius-sm",
+                    "rectangle_bottom_left_corner_radius": "radius-sm",
+                    "rectangle_bottom_right_corner_radius": "radius-sm",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                },
+                {
+                  "id": "2469:24098",
+                  "name": "Icon Button",
+                  "type": "INSTANCE",
+                  "x": 338,
+                  "y": 22,
+                  "width": 28,
+                  "height": 28,
+                  "cornerRadius": [
+                    6,
+                    6,
+                    6,
+                    6
+                  ],
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      10,
+                      0,
+                      10
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "component": {
+                    "mainComponent": "Variant=Ghost, Size=sm, State=Default, Roundness=Default",
+                    "mainComponentId": "1892:2111",
+                    "componentSet": "Icon Button",
+                    "properties": {
+                      "Variant": "Ghost",
+                      "Size": "sm",
+                      "State": "Default",
+                      "Roundness": "Default"
+                    },
+                    "overrides": 2
+                  },
+                  "boundVariables": {
+                    "stack_padding_left": "px-2,5",
+                    "stack_padding_right": "px-2,5",
+                    "width": "w-7",
+                    "height": "h-7",
+                    "rectangle_top_left_corner_radius": "radius-sm",
+                    "rectangle_top_right_corner_radius": "radius-sm",
+                    "rectangle_bottom_left_corner_radius": "radius-sm",
+                    "rectangle_bottom_right_corner_radius": "radius-sm",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2467:23968",
+          "name": "Seperator",
+          "type": "LINE",
+          "x": 56,
+          "y": 456,
+          "width": 438,
+          "height": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": 2,
+          "strokeAlign": "CENTER",
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stroke_weight": "border-2"
+          }
+        },
+        {
+          "id": "2011:2426",
+          "name": "Frame 18",
+          "type": "FRAME",
+          "x": 56,
+          "y": 504,
+          "width": 438,
+          "height": 80,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2011:2427",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 438,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Examples",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2011:2428",
+              "name": "Frame 3",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 438,
+              "height": 52,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 0,
+                "padding": [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-6"
+              },
+              "children": [
+                {
+                  "id": "2011:2429",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 24,
+                  "width": 438,
+                  "height": 28,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Types",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 18,
+                    "lineHeight": 28,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-lg/Semi Bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:23586",
+          "name": "Heading",
+          "type": "TEXT",
+          "x": 56,
+          "y": 632,
+          "width": 438,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "foreground"
+            }
+          ],
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "characters": "Default",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "autoResize": "HEIGHT"
+          },
+          "textStyle": "Text-lg/Semi Bold"
+        },
+        {
+          "id": "2463:23353",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 708,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2011:2499",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": false,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2463:23588",
+          "name": "Heading",
+          "type": "TEXT",
+          "x": 56,
+          "y": 898,
+          "width": 438,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "foreground"
+            }
+          ],
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "characters": "Success",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "autoResize": "HEIGHT"
+          },
+          "textStyle": "Text-lg/Semi Bold"
+        },
+        {
+          "id": "2463:23577",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 974,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2463:23578",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": true,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 3
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2463:23591",
+          "name": "Heading",
+          "type": "TEXT",
+          "x": 56,
+          "y": 1164,
+          "width": 438,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "foreground"
+            }
+          ],
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "characters": "Info",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "autoResize": "HEIGHT"
+          },
+          "textStyle": "Text-lg/Semi Bold"
+        },
+        {
+          "id": "2463:23592",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1240,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2463:23593",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": true,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 4
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2463:23603",
+          "name": "Heading",
+          "type": "TEXT",
+          "x": 56,
+          "y": 1430,
+          "width": 438,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "foreground"
+            }
+          ],
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "characters": "Warning",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "autoResize": "HEIGHT"
+          },
+          "textStyle": "Text-lg/Semi Bold"
+        },
+        {
+          "id": "2463:23604",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1506,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2463:23605",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": true,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 4
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2463:23615",
+          "name": "Heading",
+          "type": "TEXT",
+          "x": 56,
+          "y": 1696,
+          "width": 438,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "foreground"
+            }
+          ],
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "characters": "Error",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "autoResize": "HEIGHT"
+          },
+          "textStyle": "Text-lg/Semi Bold"
+        },
+        {
+          "id": "2463:23616",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1772,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2463:23617",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": true,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 5
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        },
+        {
+          "id": "2011:2435",
+          "name": "Frame 3",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1962,
+          "width": 438,
+          "height": 28,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2011:2436",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 438,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Promise",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            }
+          ]
+        },
+        {
+          "id": "2463:23627",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2038,
+          "width": 438,
+          "height": 142,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2463:23628",
+              "name": "Toast",
+              "type": "INSTANCE",
+              "x": 28,
+              "y": 41,
+              "width": 382,
+              "height": 60,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#FFFFFF",
+                  "variable": "popover"
+                }
+              ],
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                18,
+                18,
+                18,
+                18
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    4
+                  ],
+                  "radius": 6,
+                  "spread": -4
+                },
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    10
+                  ],
+                  "radius": 15,
+                  "spread": -3
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-lg",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 12,
+                "padding": [
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "mainComponent": "Toast",
+                "mainComponentId": "2011:2331",
+                "properties": {
+                  "Icon": true,
+                  "Button#1": false,
+                  "Toast description": true,
+                  "Toast title": false
+                },
+                "overrides": 4
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-3",
+                "stack_padding_left": "p-4",
+                "stack_padding_top": "p-4",
+                "stack_padding_right": "p-4",
+                "stack_padding_bottom": "p-4",
+                "rectangle_top_left_corner_radius": "radius-2xl",
+                "rectangle_top_right_corner_radius": "radius-2xl",
+                "rectangle_bottom_left_corner_radius": "radius-2xl",
+                "rectangle_bottom_right_corner_radius": "radius-2xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "2011:2331",
+      "name": "Toast",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 140,
+      "width": 382,
+      "height": 72,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "popover"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "color": "#0000001A",
+          "offset": [
+            0,
+            4
+          ],
+          "radius": 6,
+          "spread": -4
+        },
+        {
+          "type": "DROP_SHADOW",
+          "color": "#0000001A",
+          "offset": [
+            0,
+            10
+          ],
+          "radius": 15,
+          "spread": -3
+        }
+      ],
+      "effectStyle": "Box Shadow/shadow-lg",
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 12,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Button#1",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Toast description",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Button#2",
+            "type": "BOOL",
+            "default": true
+          },
+          {
+            "name": "Toast title",
+            "type": "BOOL",
+            "default": true
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-3",
+        "stack_padding_left": "p-4",
+        "stack_padding_top": "p-4",
+        "stack_padding_right": "p-4",
+        "stack_padding_bottom": "p-4",
+        "rectangle_top_left_corner_radius": "radius-2xl",
+        "rectangle_top_right_corner_radius": "radius-2xl",
+        "rectangle_bottom_left_corner_radius": "radius-2xl",
+        "rectangle_bottom_right_corner_radius": "radius-2xl",
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "2011:1648",
+          "name": "lucide/circle-check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 16,
+          "y": 28,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/circle-check",
+            "mainComponentId": "128:638",
+            "overrides": 1
+          },
+          "boundVariables": {
+            "border_top_weight": "stroke-2",
+            "border_bottom_weight": "stroke-2",
+            "border_left_weight": "stroke-2",
+            "border_right_weight": "stroke-2"
+          }
+        },
+        {
+          "id": "2469:24067",
+          "name": "Toast content",
+          "type": "FRAME",
+          "x": 16,
+          "y": 16,
+          "width": 310,
+          "height": 40,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 4,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "grow": 1
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1"
+          },
+          "children": [
+            {
+              "id": "2469:24052",
+              "name": "Toast title",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 310,
+              "height": 20,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2469:24053",
+                  "name": "Toast title",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 310,
+                  "height": 20,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Toast title",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-sm/Medium"
+                }
+              ]
+            },
+            {
+              "id": "2011:1642",
+              "name": "Toast description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 24,
+              "width": 310,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "children": [
+                {
+                  "id": "2011:1643",
+                  "name": "Toast description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 310,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Toast description",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2011:2325",
+          "name": "Button",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 275,
+          "y": 22,
+          "width": 51,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#FFFFFF",
+              "variable": "background"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 4,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "component": {
+            "mainComponent": "Variant=Outline, Size=sm, State=Default, Roudness=Default",
+            "mainComponentId": "1872:3192",
+            "componentSet": "Button",
+            "properties": {
+              "Variant": "Outline",
+              "Size": "sm",
+              "State": "Default",
+              "Roudness": "Default"
+            },
+            "overrides": 4
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1",
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "height": "h-7",
+            "rectangle_top_left_corner_radius": "radius-sm",
+            "rectangle_top_right_corner_radius": "radius-sm",
+            "rectangle_bottom_left_corner_radius": "radius-sm",
+            "rectangle_bottom_right_corner_radius": "radius-sm",
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        },
+        {
+          "id": "2469:24098",
+          "name": "Icon Button",
+          "type": "INSTANCE",
+          "x": 338,
+          "y": 22,
+          "width": 28,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED"
+          },
+          "component": {
+            "mainComponent": "Variant=Ghost, Size=sm, State=Default, Roundness=Default",
+            "mainComponentId": "1892:2111",
+            "componentSet": "Icon Button",
+            "properties": {
+              "Variant": "Ghost",
+              "Size": "sm",
+              "State": "Default",
+              "Roundness": "Default"
+            },
+            "overrides": 2
+          },
+          "boundVariables": {
+            "stack_padding_left": "px-2,5",
+            "stack_padding_right": "px-2,5",
+            "width": "w-7",
+            "height": "h-7",
+            "rectangle_top_left_corner_radius": "radius-sm",
+            "rectangle_top_right_corner_radius": "radius-sm",
+            "rectangle_bottom_left_corner_radius": "radius-sm",
+            "rectangle_bottom_right_corner_radius": "radius-sm",
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "All reported sets and standalone components on this page. Normalized visual trees are limited to depth 3; native FIG export retains deeper editable trees. Hidden source variants are included in the component inventory.",
+  "unestablished": [
+    "runtime public API and event payloads",
+    "state transitions and commitment/cancellation",
+    "native or ARIA semantics, names, keyboard and focus",
+    "responsive adaptation and runtime contrast",
+    "full token variable-to-DTCG mapping"
+  ]
+}

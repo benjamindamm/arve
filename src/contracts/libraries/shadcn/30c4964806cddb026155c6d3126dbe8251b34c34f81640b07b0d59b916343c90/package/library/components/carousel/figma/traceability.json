@@ -1,0 +1,110 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Carousel",
+      "selector": "[data-slot=\"carousel\"]",
+      "ownership": "actual source wrapper"
+    },
+    "viewport": {
+      "declaration": "CarouselContent",
+      "selector": "[data-slot=\"carousel-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "track": {
+      "declaration": "CarouselContent",
+      "selector": "[data-slot=\"carousel-content\"]>div",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "declaration": "CarouselItem",
+      "selector": "[data-slot=\"carousel-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "slide": {
+      "declaration": "CarouselItem",
+      "selector": "[data-part=\"carousel-slide\"]",
+      "ownership": "caller children"
+    },
+    "previous": {
+      "declaration": "CarouselPrevious",
+      "selector": "[data-slot=\"carousel-previous\"]",
+      "ownership": "actual source wrapper"
+    },
+    "next": {
+      "declaration": "CarouselNext",
+      "selector": "[data-slot=\"carousel-next\"]",
+      "ownership": "actual source wrapper"
+    },
+    "status": {
+      "declaration": "Carousel",
+      "selector": "[data-part=\"carousel-status\"]",
+      "ownership": "caller composition"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1936:599",
+      "observed": "165px example height;1936:600 rounded28px Button; native slide inset16px.",
+      "decision": "Fluid single-snap slide, reserved40px internal control lane instead of source external offsets; chosen vertical240px."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 72:2722 (Carousel), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1936:551",
+      "sourcePartId": "1936:552",
+      "sourceName": "Card / Layout=Vertical",
+      "semanticParts": [
+        "root",
+        "viewport",
+        "track",
+        "item",
+        "slide",
+        "previous",
+        "next",
+        "status"
+      ],
+      "canonicalFixtures": [
+        "horizontal",
+        "last-boundary",
+        "vertical",
+        "rtl",
+        "native-next-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1936:550",
+      "sourcePartId": "1936:552",
+      "sourceName": "Card / Layout=Horizontal",
+      "semanticParts": [
+        "root",
+        "viewport",
+        "track",
+        "item",
+        "slide",
+        "previous",
+        "next",
+        "status"
+      ],
+      "canonicalFixtures": [
+        "horizontal",
+        "last-boundary",
+        "vertical",
+        "rtl",
+        "native-next-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual source viewport/inner-track/slide identity remains distinct; Embla owns track transform and snap positions. Source 16px slide gutters map to native selected horizontal specimen 165px height and 28px full-round controls. Reference chooses one complete slide per snap; native multi-card samples remain evidence, not forced runtime widths. Controls are placed in reserved 40px internal lanes so320px views retain both navigation controls; this explicitly differs from source external 48px offsets. Vertical reference uses 240px constrained viewport and top/bottom control lanes; orientation is forwarded to Embla axis, while caller data-orientation binds visual CSS because wrapper emits no orientation attribute. Actual source capture still intercepts Left/Right in both orientations, not Up/Down, and does not exclude editable descendants; chosen slides contain no editable controls. RTL passes Embla opts.direction and HTML dir; Left still invokes scrollPrev and Right scrollNext per pinned wrapper, rather than invented physical-key reversal. Button source default outline/icon-sm is retained with native 28px circle override. External status is caller setApi select/reInit state, not an upstream onIndexChange API. No autoplay, fake slide tabindex, automatic focus movement or undocumented pause behavior.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

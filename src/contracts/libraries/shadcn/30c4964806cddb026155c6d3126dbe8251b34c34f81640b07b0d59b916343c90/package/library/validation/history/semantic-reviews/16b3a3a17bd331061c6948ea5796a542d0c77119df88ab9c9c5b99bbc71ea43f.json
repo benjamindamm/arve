@@ -1,0 +1,51 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "key": {
+      "declaration": "Kbd",
+      "selector": "[data-slot=\"kbd\"]",
+      "ownership": "actual wrapper"
+    },
+    "group": {
+      "declaration": "KbdGroup",
+      "selector": "[data-slot=\"kbd-group\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1986:1863",
+      "observationPath": "height",
+      "semanticToken": "components.kbd.height"
+    },
+    {
+      "sourceNodeId": "1986:1604",
+      "observationPath": "text",
+      "semanticToken": "components.kbd.fontSize"
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1986:1863",
+      "sourcePartId": "1986:1863",
+      "sourceName": "Kbd",
+      "semanticParts": [
+        "key",
+        "group"
+      ],
+      "canonicalFixtures": [
+        "shortcut-group",
+        "single-key",
+        "long-key"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The actual two exports render native kbd elements.20px minimum keycap height,6px corners,4px inline inset and12/16px text retain native metrics. The21px specimen width is glyph-dependent and stays in evidence. Group notation wraps at its host boundary, while no tabstop, role=button or automatic shortcut handling is added.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

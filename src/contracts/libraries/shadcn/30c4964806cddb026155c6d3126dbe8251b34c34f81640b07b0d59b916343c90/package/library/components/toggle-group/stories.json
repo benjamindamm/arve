@@ -1,0 +1,142 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:ToggleGroup",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "single",
+      "name": "Single",
+      "inputs": {
+        "value": []
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "pressed",
+      "name": "Pressed",
+      "inputs": {
+        "value": [
+          "bold"
+        ]
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"true\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "multiple",
+      "name": "Multiple",
+      "inputs": {
+        "multiple": true,
+        "value": [
+          "bold",
+          "italic"
+        ]
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"true\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"true\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "outline-connected",
+      "name": "Outline connected",
+      "inputs": {
+        "variant": "outline",
+        "spacing": 0
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"0\" style=\"--gap:0\" data-variant=\"outline\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "rtl-connected",
+      "name": "Rtl connected",
+      "inputs": {
+        "variant": "outline",
+        "spacing": 0,
+        "directionProvider": "rtl",
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"0\" style=\"--gap:0\" data-variant=\"outline\" dir=\"rtl\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"outline\" data-size=\"default\" data-spacing=\"0\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "small",
+      "name": "Small",
+      "inputs": {
+        "size": "sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\" data-size=\"sm\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"sm\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-sm\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"sm\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-sm\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"sm\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-sm\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "large",
+      "name": "Large",
+      "inputs": {
+        "size": "lg"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\" data-size=\"lg\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"lg\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-lg\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"lg\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-lg\" aria-pressed=\"false\">Italic</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"lg\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-lg\" aria-pressed=\"false\" disabled=\"\">Unavailable formatting</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Italic</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "item"
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toggle-group\" role=\"group\" aria-label=\"Text formatting\" data-orientation=\"horizontal\" data-spacing=\"2\" style=\"--gap:2\"><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Bold</button><button type=\"button\" data-slot=\"toggle-group-item\" data-variant=\"default\" data-size=\"default\" data-spacing=\"2\" class=\"cn-toggle cn-toggle-variant-default cn-toggle-size-default\" aria-pressed=\"false\">Italic</button></div><button type=\"button\" data-slot=\"toggle\" class=\"cn-toggle cn-toggle-variant-outline cn-toggle-size-default\" aria-pressed=\"false\">Pin report</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "item",
+          "index": 0,
+          "keyboard": true
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    }
+  ]
+}

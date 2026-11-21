@@ -1,0 +1,56 @@
+{
+  "format": "shadcn-semantic-review/1",
+  "result": "PASS",
+  "families": [
+    "navigation-menu"
+  ],
+  "normalComponentChecks": {
+    "navigation-menu": {
+      "status": "complete",
+      "missingBindings": [],
+      "coverage": "COVERAGE_RECORDED",
+      "questions": [],
+      "semanticContract": {
+        "convention": "semantic-component/1",
+        "parts": 14,
+        "fixtures": 10,
+        "matchedSelectors": 27,
+        "resolvedTokenProperties": 22,
+        "runtimeProperties": 6,
+        "cssImportFiles": 3
+      }
+    }
+  },
+  "targetBindings": {
+    "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fmain.jsx": "053da0bb424359580305d6a2333af0aa5388b7cbea98d6a551d6d8343bc26d49",
+    "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fstyle.css": "392c25da3fd9e23c56d9fe9415ad9f5bb38a7028add17aeee2834bef9332a3ac",
+    "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fsemantic-components.css": "3ad595a72dad6d019847cf8fc71ac0a56ec1086000ac1a648662110afb85d1ab",
+    "provenance://source/apps%2Fshadcn-reference-lab%2Fsrc%2Fsemantic-layers.jsx": "0f2d0cdc05d10ebe72546e09fafd9fdb47721e0d40df6b48f80aef854371bc0f",
+    "provenance://source/apps%2Fshadcn-reference-lab%2Fvite.config.js": "738975306219cde16656b9fd2c9df4e703753c115810fe02d7d1c3b540f0b32e"
+  },
+  "bindings": {
+    "components/navigation-menu/component.json": "688d54e10cc162e41af7587b586d6ac98a6b67d6fb21e6099b00407b36540b18",
+    "components/navigation-menu/interface.json": "5a8e904df8dafe64b010e854b51d0ae40d6c6064e34de8b60399113636d44b5b",
+    "components/navigation-menu/layout.css": "92e7cfc5ad4c6e1c54ec82522ff59e7216c50fdc0b166ac5377bc24c50e2c6fb",
+    "components/navigation-menu/stories.json": "3065d70b6c1a4690eebdba5912b57521bb257a8fb649411bb5b616d66c7553d9",
+    "components/navigation-menu/accessibility.html": "166e9bffa186d9e7e507a2f7bd1bfb1bd27ba03e54ca8175c5f41c5934728989",
+    "components/navigation-menu/accessibility.rules.json": "bd813b98938b0c8204018b07b6ef3d58f1db95ca2f5ac9b770943f58c135f7ef",
+    "components/navigation-menu/behavior.scxml": "4cd942b7649915e37517441bf62d938e794ba0e8eaf8c9b6b400c87233e82a6f",
+    "components/navigation-menu/ux.json": "5a4cb7989ece9f3052e843d61165235f265e80c7669ce827380df1a98e4a0f0c",
+    "components/navigation-menu/figma/traceability.json": "24cbae7ba7b55790090f208822710499e4fd6a52cad4cd162ce05e9ad66f8e23",
+    "tokens.json": "beda703fe136aba193494c1f277f91c656def6a8d29cc764356bb124eeaae035",
+    "tokens.css": "2ef736b8a570fa94f4d0d38a471162c1046fcdb71afe8950a9de9a1b6fd69b77",
+    "fonts.css": "c6392ef3b3bbee85b301d0cb4f6aaa9f3417ce4fb17a481a9d63ed8ae0c3df46"
+  },
+  "browserEvidence": "semantic-layers-browser-run.json",
+  "supplementalEvidence": {},
+  "supplementalRunners": {},
+  "browserEvidenceSha256": "0d78e67e5fb8b8c11de873a6f96140db6edb0bf5bb9f40b9a993f3ed576e49d0",
+  "runner": "provenance://source/tools%2Fshadcn%2Fsemantic-layers-browser.js",
+  "runnerSha256": "53e61637f1d1ad504f393a000833da11397a1ef6949eb0e4bc7939d794e918c2",
+  "review": "Source-specific parts, CSS states, public variants, native measurements/explicit decisions, actual source DOM bindings and visual outputs reviewed. Existing API, SCXML, UX and ARIA rules retained and checked; native provenance remains separate.",
+  "notChecked": [
+    "Universal runtime/framework/platform or assistive-technology certification",
+    "Pixel identity between browser and native Figma"
+  ]
+}

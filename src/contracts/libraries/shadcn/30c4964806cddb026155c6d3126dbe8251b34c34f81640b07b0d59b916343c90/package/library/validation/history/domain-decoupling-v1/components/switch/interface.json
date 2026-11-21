@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "switch.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Switch",
+          "description": "Source-bound React reference surface; callback entries describe React handlers, not newly dispatched DOM CustomEvents.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Controlled on/off value; the visible label remains stable across changes."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "SwitchPrimitive.Root.Props"
+              },
+              "description": "Complete inherited public React prop surface; exact pinned declaration and native event types are retained in sources/manifest.json."
+            },
+            {
+              "kind": "field",
+              "name": "defaultChecked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"on\""
+            },
+            {
+              "kind": "field",
+              "name": "uncheckedValue",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"sm\" | \"default\""
+              },
+              "default": "\"default\""
+            }
+          ],
+          "events": [
+            {
+              "name": "onCheckedChange",
+              "type": {
+                "text": "(checked: boolean, details: SwitchPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Pinned React callback. Checkbox/switch callback details may cancel the proposed update; controlled props remain authoritative."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "control",
+              "description": "Native button/input or Base UI span role control."
+            },
+            {
+              "name": "label",
+              "description": "Visible naming content or separately associated label."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

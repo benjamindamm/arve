@@ -200,10 +200,25 @@ export interface Page {
       accessibility?: string | null;
     };
     component?: {
+      /**
+       * Für diesen Bereich ausarbeiten: Einsatz und Alternativen; Beispiel und sein Umfang. Die Button-Seite zeigt den Aufbau. Nicht zutreffende Punkte kurz begründen. Quellenregel, Empfehlung und Beispiel unterscheiden.
+       */
       usage?: string | null;
+      /**
+       * Für diesen Bereich ausarbeiten: Aufbau und Teile; Varianten und Grössen. Die Button-Seite zeigt den Aufbau. Nicht zutreffende Punkte kurz begründen. Quellenregel, Empfehlung und Beispiel unterscheiden.
+       */
       anatomy?: string | null;
+      /**
+       * Für diesen Bereich ausarbeiten: Zustände und Interaktion. Die Button-Seite zeigt den Aufbau. Nicht zutreffende Punkte kurz begründen. Quellenregel, Empfehlung und Beispiel unterscheiden.
+       */
       states?: string | null;
+      /**
+       * Für diesen Bereich ausarbeiten: Beschriftung und gute Anwendung; Tastatur und Fokus; Semantik und besondere Einbindungen. Die Button-Seite zeigt den Aufbau. Nicht zutreffende Punkte kurz begründen. Quellenregel, Empfehlung und Beispiel unterscheiden.
+       */
       accessibility?: string | null;
+      /**
+       * Für diesen Bereich ausarbeiten: Quellen und belegter Stand. Die Button-Seite zeigt den Aufbau. Nicht zutreffende Punkte kurz begründen. Quellenregel, Empfehlung und Beispiel unterscheiden.
+       */
       verification?: string | null;
     };
   };

@@ -1,0 +1,139 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "badge": {
+      "declaration": "Badge",
+      "selector": "[data-slot=\"badge\"]",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "declaration": "Badge",
+      "selector": "[data-slot=\"badge\"] > svg",
+      "ownership": "caller children"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1868:494",
+      "observationPath": "height",
+      "semanticToken": "components.badge.height"
+    },
+    {
+      "sourceNodeId": "1868:494",
+      "observationPath": "layout.padding",
+      "semanticToken": "components.badge.paddingInline"
+    },
+    {
+      "sourceNodeId": "1868:310",
+      "observationPath": "text",
+      "semanticToken": "components.badge.fontSize"
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1868:494",
+      "sourcePartId": "1868:495",
+      "sourceName": "Badge / State=Default",
+      "semanticParts": [
+        "badge",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "with-icon"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1868:488",
+      "sourcePartId": "1868:495",
+      "sourceName": "Badge / State=Secondary",
+      "semanticParts": [
+        "badge",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "with-icon"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1868:490",
+      "sourcePartId": "1868:495",
+      "sourceName": "Badge / State=Destructive",
+      "semanticParts": [
+        "badge",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "with-icon"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1868:486",
+      "sourcePartId": "1868:495",
+      "sourceName": "Badge / State=Outline",
+      "semanticParts": [
+        "badge",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "with-icon"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1868:491",
+      "sourcePartId": "1868:495",
+      "sourceName": "Badge / State=Ghost",
+      "semanticParts": [
+        "badge",
+        "icon"
+      ],
+      "canonicalFixtures": [
+        "default",
+        "secondary",
+        "destructive",
+        "outline",
+        "ghost",
+        "link",
+        "with-icon"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Badge uses the actual six CVA variant classes and native22px minimum height,8/2px insets,4px gap,12/16px medium text and12px optional glyph. Native sample widths depend on wording and are never fixed. Borders are included in the22px box; content may enlarge it. The default informative span is not focusable or activatable. Only explicit caller anchor rendering gets hover/focus link rules and a real destination; variant=link alone does not invent link semantics.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 72:2718 (Badge), observed anatomy and examples."
+  }
+}

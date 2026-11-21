@@ -1,0 +1,139 @@
+@import "../../tokens.css";
+
+@import url(../dialog/layout.css);
+
+@import url(../input-group/layout.css);
+
+[data-slot="command"] {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  overflow: hidden;
+  padding: var(--ui-command-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-command-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="command-input-wrapper"] {
+  padding: 4px;
+}
+
+.cn-command-input-group {
+  min-block-size: var(--ui-command-input-height);
+}
+
+[data-slot="command-input"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--ui-command-input-height);
+  padding: 0 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+[data-slot="command-list"] {
+  min-block-size: 0;
+  max-block-size: var(--ui-command-list-height);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+[data-slot="command-item"] {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-command-gap);
+  min-block-size: var(--ui-command-item-height);
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+  cursor: default;
+  user-select: none;
+}
+
+[data-slot="command-item"][data-selected="true"] {
+  background: var(--ui-color-muted);
+}
+
+[data-slot="command-item"][data-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+[data-slot="command-group"] [cmdk-group-heading] {
+  padding: 4px 8px;
+  color: var(--ui-color-muted-foreground);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+[data-slot="command-empty"] {
+  padding: 24px 8px;
+  text-align: center;
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="command-separator"] {
+  block-size: var(--ui-border-width);
+  margin-block: 4px;
+  background: var(--ui-color-border);
+}
+
+[data-slot="command-shortcut"] {
+  margin-inline-start: auto;
+  color: var(--ui-color-muted-foreground);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cn-command-item-indicator {
+  inline-size: 16px;
+  block-size: 16px;
+  margin-inline-start: auto;
+  opacity: 0;
+}
+
+[data-slot="command-item"][data-checked="true"] .cn-command-item-indicator {
+  opacity: 1;
+}
+
+[data-slot="command-item"]:has([data-slot="command-shortcut"]) .cn-command-item-indicator {
+  display: none;
+}
+
+[data-slot="dialog-content"].cn-command-dialog {
+  inset-block-start: 33.333%;
+  inset-inline-start: auto;
+  left: 50%;
+  transform: translate(-50%,0);
+  max-inline-size: var(--ui-command-dialog-width);
+  padding: 0;
+  gap: 0;
+}
+
+[data-slot="dialog-content"].cn-command-dialog>[data-slot="command"] {
+  border: 0;
+}
+
+[data-slot="dialog-header"].sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

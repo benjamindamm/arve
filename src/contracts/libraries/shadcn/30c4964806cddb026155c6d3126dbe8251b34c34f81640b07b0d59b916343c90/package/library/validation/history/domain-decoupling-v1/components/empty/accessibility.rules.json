@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Empty",
+  "referenceComposition": "<div data-slot=\"empty\"><div data-slot=\"empty-header\"><div data-slot=\"empty-title\"><h2>No documents</h2></div><p data-slot=\"empty-description\">Upload a document to begin.</p></div><div data-slot=\"empty-content\"><button type=\"button\">Upload document</button></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The reason for absence and recovery action are text; a decorative empty-state icon is optional.",
+  "updatesAndDescendants": "The native wrappers do not distinguish loading, empty and failure automatically. The caller chooses this empty state after successful loading with zero items, replaces it when items arrive, and retains focus on an invoking action where possible.",
+  "referenceDecision": "A caller-owned empty/data decision is explicit. Error and loading use their own feedback rather than being mislabeled as an empty collection.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

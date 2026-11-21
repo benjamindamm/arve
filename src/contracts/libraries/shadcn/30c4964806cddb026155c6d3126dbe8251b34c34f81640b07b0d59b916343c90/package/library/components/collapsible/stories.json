@@ -1,0 +1,88 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Collapsible",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"false\">Project details</button><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "trigger"
+        }
+      ],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" disabled=\"\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\" dir=\"rtl\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"collapsible\"><button type=\"button\" data-slot=\"collapsible-trigger\" aria-expanded=\"true\" aria-controls=\"details\">Project details</button><div data-slot=\"collapsible-content\" id=\"details\"><p>Additional project information.</p><a href=\"#details-help\">Read project help</a></div><p id=\"details-help\">Help remains available in the document.</p></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

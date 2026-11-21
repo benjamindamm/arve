@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "tooltip.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Tooltip",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "The source TooltipProvider wrapper defaults delay=0, while trigger/provider props can configure hover delay. disableHoverablePopup=false permits moving the pointer into the popup through the primitive safe-region logic. Disabled Root suppresses opening. Popup side=top, sideOffset=4, align=center, alignOffset=0. The package documentation calls tooltips visual-only and requires an appropriately named trigger; essential information uses inline text or an accessible Popover. This reference explicitly hides the redundant visual popup from assistive technology. Required help is persistent inline text; the trigger describedby relation points to that help, never solely to the visual popup."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TooltipPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source:19."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: TooltipPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "tooltip",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TooltipProvider",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TooltipPrimitive.Provider.Props"
+              },
+              "description": "Exact public prop type and defaults {\"delay\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source:6."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "tooltip-provider",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TooltipTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TooltipPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source:23."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "tooltip-trigger",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TooltipContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TooltipPrimitive.Popup.Props &\n  Pick<\n    TooltipPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >"
+              },
+              "description": "Exact public prop type and defaults {\"side\": \"\\\"top\\\"\", \"sideOffset\": \"4\", \"align\": \"\\\"center\\\"\", \"alignOffset\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/tooltip.tsx.source:27."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "tooltip-content",
+              "description": "Actual emitted data-slot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

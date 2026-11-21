@@ -1,0 +1,25 @@
+@import "../../tokens.css";
+
+[data-slot="hover-card-content"] {
+  box-sizing: border-box;
+  z-index: 50;
+  inline-size: max-content;
+  max-inline-size: min(var(--ui-hover-card-max-width),calc(100vw - 16px));
+  padding: var(--ui-hover-card-padding-block) var(--ui-hover-card-padding-inline);
+  border-radius: var(--ui-hover-card-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  overflow-wrap: anywhere;
+  outline: none;
+}
+
+[data-slot="hover-card-content"] {
+  border: var(--ui-border-width) solid var(--ui-color-border);
+}
+
+[data-slot="hover-card-content"] p {
+  margin: 0;
+}

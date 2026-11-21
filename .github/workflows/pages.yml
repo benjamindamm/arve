@@ -26,6 +26,8 @@ jobs:
       - run: npm ci
       - uses: actions/configure-pages@v5
         id: pages
+      - name: Check component documentation reference
+        run: npm run check:component-template
       - name: Build published snapshot without a database
         run: npm run build:static
         env:

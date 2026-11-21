@@ -1,0 +1,46 @@
+@import "../../tokens.css";
+
+[data-slot="tooltip-content"] {
+  box-sizing: border-box;
+  z-index: 50;
+  inline-size: max-content;
+  max-inline-size: min(var(--ui-tooltip-max-width),calc(100vw - 16px));
+  padding: var(--ui-tooltip-padding-block) var(--ui-tooltip-padding-inline);
+  border-radius: var(--ui-tooltip-radius);
+  background: var(--ui-color-foreground);
+  color: var(--ui-color-background);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  overflow-wrap: anywhere;
+  outline: none;
+}
+
+.cn-tooltip-arrow {
+  inline-size: 8px;
+  block-size: 8px;
+  position: absolute;
+  background: var(--ui-color-foreground);
+  fill: var(--ui-color-foreground);
+  transform: rotate(45deg);
+}
+
+[data-slot="tooltip-content"][data-side="top"] .cn-tooltip-arrow {
+  bottom: -4px;
+  left: calc(50% - 4px);
+}
+
+[data-slot="tooltip-content"][data-side="bottom"] .cn-tooltip-arrow {
+  top: -4px;
+  left: calc(50% - 4px);
+}
+
+[data-slot="tooltip-content"][data-side="left"] .cn-tooltip-arrow {
+  right: -4px;
+  top: calc(50% - 4px);
+}
+
+[data-slot="tooltip-content"][data-side="right"] .cn-tooltip-arrow {
+  left: -4px;
+  top: calc(50% - 4px);
+}

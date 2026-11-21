@@ -1,0 +1,21 @@
+{
+  "purpose": "Complete a focused task in a labelled modal or explicitly nonmodal surface.",
+  "avoid": "Avoid nested modals without an explicit focus strategy.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 73:227 (Dialog), observed anatomy and examples.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Dialog",
+  "sourceRule": "modal=true also locks outside pointer interaction and page scroll; modal=false permits the page. trap-focus contains focus without the full modal outside/scroll policy. disablePointerDismissal blocks outside press (and nonmodal focus-out), not the explicit Close control. Popup title/description supply accessible relations.",
+  "keyboardAndFocus": "Default modal=true contains Tab/Shift+Tab, moves focus into the popup, and restores focus to the trigger on closing. Escape and the supplied close button dismiss unless callback cancellation vetoes. Popup initialFocus/finalFocus may deliberately override the default targets.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/dialog.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/dialog.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/dialog-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/dialog.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification."
+}

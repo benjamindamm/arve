@@ -1,0 +1,27 @@
+{
+  "componentId": "shadcn:Separator",
+  "referenceComposition": "<div role=\"separator\" aria-orientation=\"horizontal\" data-orientation=\"horizontal\" data-slot=\"separator\"></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The separator role conveys a meaningful content boundary; surrounding section headings/text provide the boundary context. No fictitious label is required for a non-focusable separator.",
+  "updatesAndDescendants": "Base UI renders a non-focusable div role=separator and derives orientation from props. It has no adjustable value, keyboard operation or action callback. A purely decorative line can instead be hidden deliberately in its own context.",
+  "referenceDecision": "This reference chooses an informative non-focusable separator. It does not silently classify all separators as decorative or turn the line into a splitter.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"separator\"]",
+      "description": "Nonfocusable orientation-aware content boundary."
+    }
+  },
+  "visualStateMapping": {
+    "orientation": {
+      "prop": "orientation",
+      "attribute": "data-orientation",
+      "values": [
+        "horizontal",
+        "vertical"
+      ]
+    }
+  }
+}

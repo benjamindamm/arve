@@ -1,0 +1,218 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:DropdownMenu",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Controlled/uncontrolled menu ownership and cancellable requests; not a CSS root.",
+    "portal": "Portal mounting context; positioner and popup remain source-owned.",
+    "trigger": "Trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "popup": "Popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "group": "Group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "label": "Label uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "item": "Item uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "checkbox": "Checkbox uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "radio-group": "Radio group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "radio": "Radio uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "separator": "Separator uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "shortcut": "Shortcut uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "submenu-trigger": "Submenu trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "submenu-popup": "Submenu popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements.",
+    "checkbox-indicator": "Actual non-exported indicator wrapper; checked glyph is primitive-owned.",
+    "radio-indicator": "Actual non-exported indicator wrapper; checked glyph is primitive-owned."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "controller",
+      "declaration": "DropdownMenu",
+      "source": "Actual context-only Root; data-slot prop does not create a DOM element.",
+      "description": "Controlled/uncontrolled menu ownership and cancellable requests; not a CSS root."
+    },
+    "portal": {
+      "kind": "controller",
+      "declaration": "DropdownMenuPortal",
+      "source": "Actual Portal container ownership; not a stable styled source element.",
+      "description": "Portal mounting context; positioner and popup remain source-owned."
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "DropdownMenuTrigger",
+      "selector": "[data-slot=\"dropdown-menu-trigger\"]",
+      "ownership": "actual source wrapper",
+      "description": "Trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "popup": {
+      "kind": "element",
+      "declaration": "DropdownMenuContent",
+      "selector": "[data-slot=\"dropdown-menu-content\"]",
+      "ownership": "actual source wrapper",
+      "description": "Popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "group": {
+      "kind": "element",
+      "declaration": "DropdownMenuGroup",
+      "selector": "[data-slot=\"dropdown-menu-group\"]",
+      "ownership": "actual source wrapper",
+      "description": "Group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "label": {
+      "kind": "element",
+      "declaration": "DropdownMenuLabel",
+      "selector": "[data-slot=\"dropdown-menu-label\"]",
+      "ownership": "actual source wrapper",
+      "description": "Label uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "DropdownMenuItem",
+      "selector": "[data-slot=\"dropdown-menu-item\"]",
+      "ownership": "actual source wrapper",
+      "description": "Item uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "checkbox": {
+      "kind": "element",
+      "declaration": "DropdownMenuCheckboxItem",
+      "selector": "[data-slot=\"dropdown-menu-checkbox-item\"]",
+      "ownership": "actual source wrapper",
+      "description": "Checkbox uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "radio-group": {
+      "kind": "element",
+      "declaration": "DropdownMenuRadioGroup",
+      "selector": "[data-slot=\"dropdown-menu-radio-group\"]",
+      "ownership": "actual source wrapper",
+      "description": "Radio group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "radio": {
+      "kind": "element",
+      "declaration": "DropdownMenuRadioItem",
+      "selector": "[data-slot=\"dropdown-menu-radio-item\"]",
+      "ownership": "actual source wrapper",
+      "description": "Radio uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "separator": {
+      "kind": "element",
+      "declaration": "DropdownMenuSeparator",
+      "selector": "[data-slot=\"dropdown-menu-separator\"]",
+      "ownership": "actual source wrapper",
+      "description": "Separator uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "shortcut": {
+      "kind": "element",
+      "declaration": "DropdownMenuShortcut",
+      "selector": "[data-slot=\"dropdown-menu-shortcut\"]",
+      "ownership": "actual source wrapper",
+      "description": "Shortcut uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "submenu-trigger": {
+      "kind": "element",
+      "declaration": "DropdownMenuSubTrigger",
+      "selector": "[data-slot=\"dropdown-menu-sub-trigger\"]",
+      "ownership": "actual source wrapper",
+      "description": "Submenu trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "submenu-popup": {
+      "kind": "element",
+      "declaration": "DropdownMenuSubContent",
+      "selector": "[data-slot=\"dropdown-menu-sub-content\"]",
+      "ownership": "actual source wrapper",
+      "description": "Submenu popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements."
+    },
+    "checkbox-indicator": {
+      "kind": "element",
+      "declaration": "DropdownMenuCheckboxItem",
+      "selector": "[data-slot=\"dropdown-menu-checkbox-item-indicator\"]",
+      "ownership": "private source child",
+      "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned."
+    },
+    "radio-indicator": {
+      "kind": "element",
+      "declaration": "DropdownMenuRadioItem",
+      "selector": "[data-slot=\"dropdown-menu-radio-item-indicator\"]",
+      "ownership": "private source child",
+      "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned."
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-destructive": "semantic.color.destructive",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "menu-gap": "components.menu.gap",
+      "menu-icon-size": "components.menu.iconSize",
+      "menu-indicator-lane": "components.menu.indicatorLane",
+      "menu-inset": "components.menu.inset",
+      "menu-item-height": "components.menu.itemHeight",
+      "menu-item-inset": "components.menu.itemInset",
+      "menu-maximum-width": "components.menu.maximumWidth",
+      "menu-minimum-width": "components.menu.minimumWidth",
+      "menu-radius": "components.menu.radius",
+      "menu-separator-gap": "components.menu.separatorGap",
+      "menu-shadow-color": "components.menu.shadowColor"
+    },
+    "runtimeProperties": {
+      "--available-width": {
+        "source": "BaseUI Menu.Positioner CSS geometry",
+        "purpose": "Current collision-constrained inline popup space."
+      },
+      "--available-height": {
+        "source": "BaseUI Menu.Positioner CSS geometry",
+        "purpose": "Current collision-constrained popup block space."
+      },
+      "--menu-corner": {
+        "source": "Reference ContextMenu popup override in its leading CSS",
+        "purpose": "Shared menu surface default10px can be explicitly overridden by native context8px corner."
+      }
+    },
+    "layoutPolicy": "Menu Root/Sub/Portal are context controllers, not fabricated DOM anatomy. Popup, trigger, item roles, public variants and actual private indicator wrappers remain source-bound. Common surface/item rules are deliberately delegated to the shared source menu class cn-menu-target; independent ContextMenu 8px and Dropdown/Menubar 10px corners retain native measurements. Standard rows have a28px minimum,14/20 text and source-backed 4px popup inset; content width is intrinsic with 128px minimum/320px chosen maximum further constrained by actual Positioner available width/height. Native specimen widths are not forced on long localized commands. Source highlight/disabled/checked attributes style real states; destructive text is accompanied by an explicit Delete command name. Label/shortcut helper attributes are caller additions on actual slots, with shortcut hidden from accessible name and not an invented keyboard handler. Positioner owns collision, submenu placement and available space. Portals receive direction and theme explicitly in the target; no inherited main-only styling assumption. Checkbox and radio semantics remain genuine menuitems, and indicator ownership differs between Dropdown slots and private Context/Menubar classes. Source closing/focus/cancellation authority remains in existing SCXML/API; controls are not reduced to CSS transitions. Context trigger is a passive pointer region with a real visible DropdownMenu keyboard equivalent; no unsupported ShiftF10 claim. No menu/modal/tooltip ARIA is added beyond actual primitive semantics.",
+    "variants": {
+      "itemVariant": {
+        "prop": "variant",
+        "values": [
+          "default",
+          "destructive"
+        ]
+      },
+      "inset": {
+        "prop": "inset",
+        "attribute": "data-inset"
+      },
+      "highlighted": {
+        "source": "BaseUI composite highlight",
+        "attribute": "data-highlighted"
+      },
+      "checked": {
+        "source": "actual CheckboxItem/RadioItem",
+        "nativeAttribute": "aria-checked"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

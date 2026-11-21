@@ -1,0 +1,67 @@
+{
+  "componentId": "shadcn:Slider",
+  "sourceRule": "Root accepts scalar or array value/defaultValue, min0/max100, step1, largeStep10, orientation horizontal|vertical, disabled/name/form, minStepsBetweenValues and thumbCollisionBehavior push|swap|none. Wrapper thumbAlignment defaults edge but {...props} can override it. onValueChange has cancellable ChangeEventDetails with reason and activeThumbIndex; onValueCommitted has generic CommitEventDetails and only reports a changed, uncanceled commit. Source quantizes/clamps pointer/keyboard changes and enforces range collision policy. IMPORTANT wrapper quirk: thumb count is array value length, else array defaultValue length, else2; scalar props still create two Thumb instances. This reference explicitly uses value={[40]} for one thumb and arrays for ranges. Wrapper does not expose per-thumb naming/index props; Root aria-labelledby is propagated through primitive context to its internal range inputs.",
+  "keyboardAndFocus": "The actual focusable controls are native input type=range nested inside thumb divs. Arrow keys step, PageUp/PageDown and Shift+arrows use largeStep, Home/End choose limits; horizontal direction respects RTL, vertical Up increases. Disabled inputs leave Tab order. Pointer drag/track press and keyboard changes have distinct change/commit lifecycle; Escape does not restore an earlier committed value. Range thumbs retain DOM order with collision policy owned by the primitive. This reference provides finite min<max and positive step, a shared explicit label and described units.",
+  "referenceComposition": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+  "protocol": "SCXML consumes actual source callback transactions and source focus observations after native pointer/keyboard normalization, preserving original eventDetails. Sends document observed React callbacks, never duplicate DOM dispatches. Canceled user requests preserve value; controlled SET_VALUE does not emit a change. Tabs automatic consistency updates are separate and uncancelable. Source owns quantization, collision, focus wrapping and native form integration.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"slider\"]",
+      "description": "Actual source Root, with deliberate one-value/range array cardinality."
+    },
+    "control": {
+      "kind": "element",
+      "selector": ".cn-slider",
+      "description": "Actual private SliderPrimitive.Control, identified by the source cn-slider class."
+    },
+    "track": {
+      "kind": "element",
+      "selector": "[data-slot=\"slider-track\"]",
+      "description": "Actual private Track; orientation is primitive output."
+    },
+    "range": {
+      "kind": "element",
+      "selector": "[data-slot=\"slider-range\"]",
+      "description": "Actual private Indicator; position/extent are primitive inline style."
+    },
+    "thumb": {
+      "kind": "element",
+      "selector": "[data-slot=\"slider-thumb\"]",
+      "description": "Actual source Thumb div with primitive position/translate; not the focusable control itself."
+    },
+    "input": {
+      "kind": "element",
+      "selector": "[data-slot=\"slider-thumb\"]>input[type=\"range\"]",
+      "description": "Actual nested native range input, with source min/max/value/keyboard behavior."
+    },
+    "field": {
+      "kind": "element",
+      "selector": "[data-part=\"slider-field\"]",
+      "description": "Caller Base UI Field.Root context; not a claim shadcn Field automatically provides this context."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-part=\"slider-label\"]",
+      "description": "Caller associated Field.Label."
+    },
+    "help": {
+      "kind": "element",
+      "selector": "[data-part=\"slider-help\"]",
+      "description": "Caller Field.Description registered with actual input validation context."
+    },
+    "error": {
+      "kind": "element",
+      "selector": "[data-part=\"slider-error\"]",
+      "description": "Caller Field.Error for concrete validation/recovery."
+    }
+  },
+  "visualStateMapping": {
+    "orientation": [
+      "horizontal",
+      "vertical"
+    ],
+    "cardinality": "Explicit arrays; scalar wrapper quirk retained",
+    "thumbAlignment": "Source default edge; source props may override"
+  }
+}

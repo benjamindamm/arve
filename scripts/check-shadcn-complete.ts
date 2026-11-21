@@ -3,10 +3,12 @@ import { createHash } from 'node:crypto'
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { Client } from '@modelcontextprotocol/sdk/client/index.js'
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js'
-import { completeRevision, referenceComponents } from './content/shadcn-complete'
+import { referenceComponents } from './content/shadcn-complete'
+import { shadcnReferenceRevision as completeRevision } from '../src/contracts/current-reference'
 import { getContract } from '../src/contracts/catalog'
 const client=new Client({name:'complete-shadcn-check',version:'1'})
 const results:Record<string,unknown>[]=[]
+const checkedAssets=new Set<string>()
 const digest=(v:string)=>createHash('sha256').update(v).digest('hex')
 try {
  await client.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
@@ -25,6 +27,19 @@ try {
   const page=await call('get_component_page',{system:'shadcn',component:item.slug})
   assert.equal(page.contractReference.revision,completeRevision)
   assert.equal(page.contract.status,'complete')
+  const expected=getContract({library:'shadcn',component:item.slug,revision:completeRevision})!.styleAssets!
+  assert.equal(page.styleAssets.length,expected.length)
+  assert(page.styleAssets.some((asset:any)=>asset.path==='tokens.css'))
+  assert(page.styleAssets.some((asset:any)=>asset.kind==='font'))
+  for(const asset of page.styleAssets){
+   assert(expected.some(e=>e.path===asset.path&&e.sha256===asset.sha256&&e.kind===asset.kind))
+   if(checkedAssets.has(asset.path))continue
+   const response=await fetch(asset.url);assert.equal(response.status,200,asset.url)
+   const bytes=Buffer.from(await response.arrayBuffer());assert.equal(createHash('sha256').update(bytes).digest('hex'),asset.sha256,asset.path)
+   if(asset.kind==='stylesheet')assert(response.headers.get('content-type')?.startsWith('text/css'))
+   if(asset.kind==='font')assert(response.headers.get('content-type')?.startsWith('font/'))
+   checkedAssets.add(asset.path)
+  }
   for(const [domain,sourcePath] of Object.entries(page.contract.sources)){
    const source=page.contract.files[sourcePath as string];assert(source,`${item.slug}: ${domain}`);assert.equal(digest(source.content),source.sha256)
   }
@@ -41,12 +56,12 @@ try {
   assert.equal(response.status,200,item.slug)
   const body=await response.text();assert(body.includes(page.title.replaceAll('&','&amp;'))||body.includes(page.title),item.slug)
   assert(body.length<2_000_000,'Unexpected eager source rendering: '+item.slug)
-  results.push({component:item.slug,status:'PASS',contractStatus:page.contract.status,domains:Object.keys(page.contract.sources).length,artifactCount:page.contractArtifacts.length,htmlBytes:Buffer.byteLength(body)})
+  results.push({component:item.slug,status:'PASS',contractStatus:page.contract.status,domains:Object.keys(page.contract.sources).length,artifactCount:page.contractArtifacts.length,styleAssets:page.styleAssets.length,htmlBytes:Buffer.byteLength(body)})
   console.log(`${item.slug}: published, pinned, complete sources, PNG binding, frameworks, HTTP200`)
  }
  const guide=await call('get_documentation_page',{system:'shadcn',section:'frameworks'});assert(guide.content.length===8)
  for(const rev of ['65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26','fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d'])assert(getContract({library:'shadcn',component:'button',revision:rev}))
- await mkdir('docs/handbook/complete-shadcn',{recursive:true})
- await writeFile('docs/handbook/complete-shadcn/verification.json',JSON.stringify({revision:completeRevision,componentCount:69,status:'PASS',results},null,2)+'\n')
+ await mkdir('docs/handbook/semantic-shadcn',{recursive:true})
+ await writeFile('docs/handbook/semantic-shadcn/verification.json',JSON.stringify({revision:completeRevision,componentCount:69,uniqueStyleAssetsChecked:checkedAssets.size,status:'PASS',results},null,2)+'\n')
  console.log('PASS: 69 components; current skill export; historical pins retained; editable framework guide')
 }finally{await client.close()}

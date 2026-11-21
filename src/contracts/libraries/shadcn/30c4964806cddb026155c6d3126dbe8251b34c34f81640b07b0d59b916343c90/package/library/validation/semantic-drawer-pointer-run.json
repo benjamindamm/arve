@@ -1,0 +1,101 @@
+{
+  "format": "shadcn-semantic-pointer-cases/1",
+  "result": "PASS",
+  "family": "drawer",
+  "operation": "BrowserOS documented native drag_at; no scripted DOM events or state mutation",
+  "initial": {
+    "handle": {
+      "bottom": 492,
+      "height": 4,
+      "left": 500,
+      "right": 540,
+      "top": 488,
+      "width": 40,
+      "x": 500,
+      "y": 488
+    },
+    "popup": {
+      "bottom": 1102,
+      "height": 623,
+      "left": 0,
+      "right": 1040,
+      "top": 479,
+      "width": 1040,
+      "x": 0,
+      "y": 479
+    },
+    "vars": "--drawer-swipe-movement-x: 0px; --drawer-swipe-movement-y: 0px; --drawer-swipe-progress: 0; --nested-drawers: 0; --drawer-snap-point-offset: 383px; --drawer-swipe-strength: 1; --drawer-frontmost-height: 623px;",
+    "viewport": [
+      1040,
+      719
+    ]
+  },
+  "steps": [
+    {
+      "action": "drag_at",
+      "start": [
+        520,
+        490
+      ],
+      "end": [
+        520,
+        130
+      ],
+      "readback": {
+        "handle": {
+          "bottom": 109,
+          "height": 4,
+          "left": 500,
+          "right": 540,
+          "top": 105,
+          "width": 40,
+          "x": 500,
+          "y": 105
+        },
+        "open": "true",
+        "popup": {
+          "bottom": 719,
+          "height": 623,
+          "left": 0,
+          "right": 1040,
+          "top": 96,
+          "width": 1040,
+          "x": 0,
+          "y": 96
+        },
+        "snap": "1",
+        "snapTransactions": "1",
+        "vars": "--drawer-swipe-movement-x: 0px; --drawer-swipe-movement-y: 0px; --drawer-swipe-progress: 0; --nested-drawers: 0; --drawer-snap-point-offset: 0px; --drawer-swipe-strength: 1; --drawer-frontmost-height: 623px;"
+      },
+      "assertions": [
+        "Actual primitive snap callback selects1 once",
+        "Popup expands to viewport clearance96px without closing"
+      ]
+    },
+    {
+      "action": "drag_at",
+      "start": [
+        520,
+        107
+      ],
+      "end": [
+        520,
+        715
+      ],
+      "readback": {
+        "active": "Open drawer",
+        "open": "false",
+        "popupCount": 0,
+        "reason": "swipe",
+        "snap": "240px",
+        "snapTransactions": "3",
+        "transactions": "2"
+      },
+      "assertions": [
+        "Actual source onOpenChange reason swipe dismisses",
+        "Popup unmounts and focus returns to Open drawer"
+      ]
+    }
+  ],
+  "scope": "Bounded real pointer example on current desktop browser; no universal touch/assistive-technology certification."
+}

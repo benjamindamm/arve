@@ -1,0 +1,17 @@
+@import "../../tokens.css";
+
+[data-slot="aspect-ratio"] {
+  position: relative;
+  min-inline-size: 0;
+  aspect-ratio: var(--ratio);
+  overflow: hidden;
+  border-radius: var(--ui-aspect-ratio-radius);
+  background: var(--ui-aspect-ratio-surface);
+}
+
+[data-slot="aspect-ratio"]>img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}

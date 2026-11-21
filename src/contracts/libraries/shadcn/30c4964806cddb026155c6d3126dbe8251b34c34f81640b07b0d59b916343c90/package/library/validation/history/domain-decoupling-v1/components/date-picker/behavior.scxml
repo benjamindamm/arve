@@ -1,0 +1,78 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="DatePickerComposition" initial="active">
+  <datamodel>
+    <data id="selected" expr="undefined" />
+    <data id="selectionCallback" expr="true" />
+    <data id="month" expr="undefined" />
+    <data id="monthControlled" expr="false" />
+    <data id="disabledDates" expr="['2026-11-13']" />
+    <data id="open" expr="false" />
+    <data id="openControlled" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="HOST_SELECTED">
+      <assign location="selected" expr="_event.data.value" />
+    </transition>
+    <transition event="HOST_MONTH">
+      <assign location="month" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_SELECTION_CALLBACK">
+      <assign location="selectionCallback" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_MONTH_CONTROLLED">
+      <assign location="monthControlled" expr="_event.data.value" />
+    </transition>
+    <transition event="HOST_OPEN">
+      <assign location="open" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_OPEN_CONTROLLED">
+      <assign location="openControlled" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_SELECT" cond="!_event.data.modifiers?.disabled &amp;&amp; !!_event.data.event">
+      <if cond="selectionCallback">
+        <send event="onSelect" target="#_parent">
+          <param name="selected" expr="_event.data.selected" />
+          <param name="triggerDate" expr="_event.data.triggerDate" />
+          <param name="modifiers" expr="_event.data.modifiers" />
+          <param name="event" expr="_event.data.event" />
+        </send>
+        <else />
+        <assign location="selected" expr="_event.data.selected" />
+      </if>
+    </transition>
+    <transition event="SOURCE_DAY_CLICK" cond="!_event.data.modifiers?.disabled &amp;&amp; !!_event.data.event">
+      <send event="onDayClick" target="#_parent">
+        <param name="date" expr="_event.data.date" />
+        <param name="modifiers" expr="_event.data.modifiers" />
+        <param name="event" expr="_event.data.event" />
+      </send>
+    </transition>
+    <transition event="SOURCE_MONTH_CHANGE">
+      <send event="onMonthChange" target="#_parent">
+        <param name="month" expr="_event.data.month" />
+      </send>
+      <if cond="!monthControlled">
+        <assign location="month" expr="_event.data.month" />
+      </if>
+    </transition>
+    <transition event="ARROW_LEFT ARROW_RIGHT ARROW_UP ARROW_DOWN SHIFT_ARROW PAGE_UP PAGE_DOWN SHIFT_PAGE HOME END">
+      <send event="_effect.delegateDayPickerFocus" target="#_parent">
+        <param name="policy" expr="'pinned-DayPicker9.14.0-modifiers-and-navigation-bounds'" />
+      </send>
+    </transition>
+    <transition event="TAB SHIFT_TAB FOCUS_IN FOCUS_OUT" />
+    <transition event="SOURCE_POPOVER_OPEN_CHANGE" cond="!!_event.data.eventDetails">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!openControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="open" expr="_event.data.open" />
+      </if>
+    </transition>
+    <transition event="ESCAPE" cond="open">
+      <send event="_effect.delegatePopoverEscape" target="#_parent">
+        <param name="policy" expr="'existing-Popover-cancellation-and-focus-restoration-contract'" />
+      </send>
+    </transition>
+  </state>
+</scxml>

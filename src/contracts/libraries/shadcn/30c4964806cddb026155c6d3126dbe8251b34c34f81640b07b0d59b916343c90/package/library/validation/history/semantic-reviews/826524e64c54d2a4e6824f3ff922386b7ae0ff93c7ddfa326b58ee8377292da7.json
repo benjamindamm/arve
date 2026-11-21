@@ -1,0 +1,25 @@
+{
+  "purpose": "Name a control or related field group.",
+  "avoid": "Do not infer association from visual proximity.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Label",
+  "contentAlternative": "The nonempty visible label text names the actual native control through for/id; placeholders do not replace it.",
+  "updatesAndDescendants": "Label is a native label wrapper. Pointer activation delegates native focus to its associated control, while keyboard navigation targets the control itself. Text/for changes rerender normally; disabled appearance is styling, not a separate disabled label API.",
+  "referenceDecision": "The reference chooses one explicit for/id relationship. A real native input must own that ID; custom controls use the corresponding primitive label integration.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/label.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/label.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/label-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Label is the actual native label wrapper, not an inferred FieldLabel primitive or automatic ARIA association. The source Label page itself depicts a FieldLabel instance from the same kit; its20px row and8px gap support the shared14/20px medium text and8px arrangement role. Optional field spacing and disabled opacity are explicitly caller context; no disabled prop is invented for Label. The host must bind htmlFor to a real labelable control and disable that control separately. Source instance widths are not runtime label widths. Logical layout supports RTL.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

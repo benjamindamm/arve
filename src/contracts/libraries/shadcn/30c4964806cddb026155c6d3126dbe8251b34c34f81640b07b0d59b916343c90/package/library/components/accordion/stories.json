@@ -1,0 +1,105 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Accordion",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "expanded",
+      "name": "Expanded",
+      "visualState": "expanded",
+      "inputs": {
+        "value": [
+          "alpha"
+        ]
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3><div data-slot=\"accordion-content\" id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><div class=\"cn-accordion-content-inner\"><p>First panel content</p></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "collapsed",
+      "name": "Collapsed",
+      "visualState": "default",
+      "inputs": {
+        "value": []
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"false\">First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3></div></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"false\" disabled data-disabled>First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3></div></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "visualState": "expanded",
+      "inputs": {
+        "dir": "rtl",
+        "value": [
+          "alpha"
+        ]
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\" dir=\"rtl\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">القسم الأول<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3><div data-slot=\"accordion-content\" id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><div class=\"cn-accordion-content-inner\"><p>First panel content</p></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "value": [
+          "alpha"
+        ]
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3><div data-slot=\"accordion-content\" id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><div class=\"cn-accordion-content-inner\"><p>First panel content</p></div></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "trigger"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "visualState": "focused",
+      "inputs": {
+        "value": [
+          "alpha"
+        ]
+      },
+      "fixture": {
+        "html": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3><div data-slot=\"accordion-content\" id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><div class=\"cn-accordion-content-inner\"><p>First panel content</p></div></div></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "trigger",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    }
+  ]
+}

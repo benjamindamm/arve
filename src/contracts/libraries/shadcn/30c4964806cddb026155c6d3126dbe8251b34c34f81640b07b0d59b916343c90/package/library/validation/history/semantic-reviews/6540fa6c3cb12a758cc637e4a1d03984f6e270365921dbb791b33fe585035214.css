@@ -1,0 +1,50 @@
+@import "../../tokens.css";
+
+[data-slot="collapsible"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-collapsible-gap);
+  min-inline-size: 0;
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  color: var(--ui-color-foreground);
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="collapsible-trigger"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-block-size: var(--ui-collapsible-trigger-min-height);
+  padding: 0 var(--ui-collapsible-trigger-inset);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: var(--ui-font-weight-medium);
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="collapsible-trigger"]:hover:not(:disabled) {
+  background: var(--ui-color-accent);
+}
+
+[data-slot="collapsible-trigger"]:focus-visible {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="collapsible-trigger"]:disabled {
+  opacity: 0.5;
+}
+
+[data-slot="collapsible-content"] {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="collapsible-content"] p {
+  margin: 0;
+}

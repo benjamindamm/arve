@@ -1,0 +1,36 @@
+/* Actual source wrappers consume the leading component CSS without node IDs. */
+@import '../../../libraries/shadcn/components/button/layout.css';
+@import '../../../libraries/shadcn/components/checkbox/layout.css';
+@import '../../../libraries/shadcn/components/switch/layout.css';
+@import '../../../libraries/shadcn/components/input/layout.css';
+@import '../../../libraries/shadcn/components/accordion/layout.css';
+
+@import '../../../libraries/shadcn/components/card/layout.css';
+@import '../../../libraries/shadcn/components/badge/layout.css';
+@import '../../../libraries/shadcn/components/separator/layout.css';
+@import '../../../libraries/shadcn/components/kbd/layout.css';
+@import '../../../libraries/shadcn/components/skeleton/layout.css';
+@import '../../../libraries/shadcn/components/spinner/layout.css';
+
+@import '../../../libraries/shadcn/components/label/layout.css';
+@import '../../../libraries/shadcn/components/aspect-ratio/layout.css';
+@import '../../../libraries/shadcn/components/empty/layout.css';
+
+[data-semantic-family] { box-sizing:border-box; max-inline-size:60rem; margin:2.5rem auto; padding:1.5rem; font-family:var(--ui-font-family),var(--ui-font-fallback),sans-serif; font-size:var(--ui-font-size-body); line-height:var(--ui-line-height-body); color:var(--ui-color-foreground); background:var(--ui-color-background); }
+[data-semantic-family] section { margin-block:1rem; }
+[data-semantic-family] [data-part="input-field"] { max-inline-size:25rem; }
+/* Gallery spacing belongs to the host, not to reusable control geometry. */
+[data-semantic-family] > [data-part="checkbox-field"],
+[data-semantic-family] > [data-part="switch-field"] { display:flex; margin-block:.75rem; }
+[data-semantic-family] > [data-slot="switch"] { margin-inline-end:.75rem; }
+[data-semantic-family] section > .cn-button { margin-inline-end:.5rem; margin-block-end:.5rem; }
+
+[data-semantic-family="card"] > section { max-inline-size:30rem; }
+[data-semantic-family="badge"] [data-slot="badge"] { margin-inline-end:.5rem; margin-block-end:.5rem; }
+[data-lab-vertical-separator] { display:flex; gap:1rem; block-size:6rem; align-items:center; }
+[data-lab-skeletons] { display:grid; gap:1rem; max-inline-size:25rem; }
+[data-semantic-family="spinner"] [data-slot="spinner"] { margin-inline-end:1rem; }
+
+[data-semantic-family="label"] [data-part="label-field"] { max-inline-size:25rem; margin-block:1rem; }
+[data-lab-media-fixture] { max-inline-size:24rem; }
+[data-semantic-family="empty"] [data-slot="empty"] { max-inline-size:40rem; margin-block:1rem; }

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "data-table.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "DataTableRecipe",
+          "description": "Actual documented generic recipe, no universal upstream DataTable primitive. Public data/columns match the guide; remaining feature options/callbacks belong to actual TanStack useTable caller composition.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "columns",
+              "type": {
+                "text": "ColumnDef<DataTableFeatures,TData>[]"
+              },
+              "description": "Guide DataTableProps generic column definitions."
+            },
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "TData[]"
+              },
+              "description": "Guide DataTableProps typed rows."
+            },
+            {
+              "kind": "field",
+              "name": "features",
+              "type": {
+                "text": "typeof tableFeatures(...)"
+              },
+              "description": "Only explicitly registered v9 features exist."
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "type": {
+                "text": "{sorting?:SortingState;columnFilters?:ColumnFiltersState;columnVisibility?:VisibilityState;rowSelection?:RowSelectionState;pagination?:PaginationState}"
+              },
+              "description": "Independent actual TanStack useTable controlled feature states, not a new DataTable root prop."
+            }
+          ],
+          "events": [
+            {
+              "name": "onSortingChange",
+              "type": {
+                "text": "OnChangeFn<SortingState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onColumnFiltersChange",
+              "type": {
+                "text": "OnChangeFn<ColumnFiltersState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onColumnVisibilityChange",
+              "type": {
+                "text": "OnChangeFn<VisibilityState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onRowSelectionChange",
+              "type": {
+                "text": "OnChangeFn<RowSelectionState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            },
+            {
+              "name": "onPaginationChange",
+              "type": {
+                "text": "OnChangeFn<PaginationState>"
+              },
+              "description": "Actual useTable callback: value/updater, not eventDetails."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "recipe",
+              "description": "Caller Table/TanStack composition boundary Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "toolbar",
+              "description": "Named native filter/visibility controls Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "filter",
+              "description": "Controlled native email filter input Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "table",
+              "description": "Native Table delegates all table head/body/row/cell/caption geometry Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "sort",
+              "description": "Native column action, separate from aria-sort on header Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "selection",
+              "description": "Native named row selection checkbox keyed by stable payment ID Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "empty",
+              "description": "Real empty cell spans visible columns Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "pages",
+              "description": "Named native page actions with actual boundary disabled Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "status",
+              "description": "Polite derived filtered count Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "error",
+              "description": "Caller data failure feedback, separate from empty model Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DashboardDataTableBlock",
+          "description": "Separately frozen concrete dashboard-01 DataTable export with its own zod schema/application actions; supplementary block composition, not a universal table API.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "z.infer<typeof schema>[]"
+              },
+              "description": "Exact dashboard DataTable signature; source/schema remain frozen."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "dashboard-block",
+              "description": "Frozen dashboard-01 application block, source inventory retained; no generic extra DataTable widget or implicit drag/detail requirement. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

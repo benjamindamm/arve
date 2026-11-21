@@ -1,0 +1,57 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Spinner",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "indicator": "Actual named role=status SVG, with caller naming for task context."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "indicator": {
+      "kind": "element",
+      "declaration": "Spinner",
+      "selector": "[data-slot=\"spinner\"]",
+      "description": "Actual named role=status SVG, with caller naming for task context.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "color-foreground": "semantic.color.foreground",
+      "spinner-duration": "components.spinner.duration",
+      "spinner-extra-large-size": "components.spinner.extraLargeSize",
+      "spinner-large-size": "components.spinner.largeSize",
+      "spinner-size": "components.spinner.size",
+      "spinner-small-size": "components.spinner.smallSize"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "The actual source indicator is a role=status SVG with a default Loading name. Reference usage supplies the task-specific Loading contacts name. The default16px size and12/20/24px source specimens map to explicit caller classes, not an invented public size prop. The source icon adapter chooses a vendor glyph; canonical SVG is a semantic icon projection, not a claim that native path bytes match all vendors. A chosen1s rotation expresses animate-spin; reduced-motion removes movement while preserving named status.",
+    "variants": {
+      "size": {
+        "callerClassNames": [
+          "ui-spinner-default",
+          "ui-spinner-small",
+          "ui-spinner-large",
+          "ui-spinner-extra-large"
+        ],
+        "publicProp": false
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

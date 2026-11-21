@@ -1,0 +1,39 @@
+{
+  "componentId": "shadcn:Progress",
+  "referenceComposition": "<div data-slot=\"progress\" role=\"progressbar\" aria-labelledby=\"task-label\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"40\" aria-valuetext=\"40%\" data-progressing=\"\"><span data-slot=\"progress-label\" id=\"task-label\">Uploading report</span><span data-slot=\"progress-value\" aria-hidden=\"true\">40%</span><div data-slot=\"progress-track\" data-progressing=\"\"><div data-slot=\"progress-indicator\" data-progressing=\"\" style=\"inset-inline-start:0;height:inherit;width:40%\"></div></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "ProgressLabel registers the task name; Root reports min/max/value/value text. ProgressValue visible text is aria-hidden because Root conveys it. Caller supplies explicit failure and completion messages outside the progressbar; color and width are supplementary.",
+  "updatesAndDescendants": "Root value is required number|null; null or nonfinite is indeterminate with no aria-valuenow. Finite values are clamped to min/max, normalized for indicator width, formatted by locale/format, and complete when clamped value equals max. getAriaValueText(formattedValue,rawValue) or aria-valuetext supplies meaningful units. This reference requires finite min<max. The wrapper always inserts Track/Indicator after children; passing another Track in children duplicates the track. There is no timer, request, cancellation or onValueChange. The caller updates props and announces task completion/error separately.",
+  "referenceDecision": "The upload task, finite increasing bounds precondition, textual completion/error feedback and localized units are explicit caller policies. This informative progress display has no user-adjustable value or slider keyboard protocol.",
+  "keyboard": "Root value is required number|null; null or nonfinite is indeterminate with no aria-valuenow. Finite values are clamped to min/max, normalized for indicator width, formatted by locale/format, and complete when clamped value equals max. getAriaValueText(formattedValue,rawValue) or aria-valuetext supplies meaningful units. This reference requires finite min<max. The wrapper always inserts Track/Indicator after children; passing another Track in children duplicates the track. There is no timer, request, cancellation or onValueChange. The caller updates props and announces task completion/error separately.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "protocol": "Source-normalized observations project real internal image/scroll state, derived progress, caller-owned upload props or the composed Collapsible protocol. No generic activation callback is invented. Internal lifecycle observations are not public Root events.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"progress\"]",
+      "description": "Actual named native progressbar; primitive clamps numeric state."
+    },
+    "track": {
+      "kind": "element",
+      "selector": "[data-slot=\"progress-track\"]",
+      "description": "Actual full-width track automatically included by Progress."
+    },
+    "indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"progress-indicator\"]",
+      "description": "Actual primitive inline width, not a fixed specimen width."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-slot=\"progress-label\"]",
+      "description": "Actual primitive-associated task label."
+    },
+    "value": {
+      "kind": "element",
+      "selector": "[data-slot=\"progress-value\"]",
+      "description": "Primitive localized/clamped visible value; empty for indeterminate."
+    }
+  },
+  "visualStateMapping": {}
+}

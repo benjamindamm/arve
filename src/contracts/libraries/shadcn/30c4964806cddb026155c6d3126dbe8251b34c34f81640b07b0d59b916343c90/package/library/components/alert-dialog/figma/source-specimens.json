@@ -1,0 +1,102 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "72:2675"
+  },
+  "stories": [
+    {
+      "id": "figma-2192-483",
+      "name": "AlertDialogHeader / Dir=None",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:483",
+        "part": "2192:484"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2192-482",
+      "name": "AlertDialogHeader / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:482",
+        "part": "2192:484"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2192-481",
+      "name": "AlertDialogHeader / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:481",
+        "part": "2192:484"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2192-907",
+      "name": "Alertdialogfooter / Dir=None",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:907",
+        "part": "2192:908"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2192-909",
+      "name": "Alertdialogfooter / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:909",
+        "part": "2192:908"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2192-906",
+      "name": "Alertdialogfooter / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2192:906",
+        "part": "2192:908"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1861-670",
+      "name": "Alert Dialog",
+      "kind": "standalone-component",
+      "view": {
+        "figmaNode": "1861:670",
+        "part": "1861:670"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractProtocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "contractCases": [
+    {
+      "id": "source-default-and-accepted-change",
+      "event": "TRIGGER_PRESS",
+      "expected": "The source callback and documented state policy apply; controlled props remain authoritative."
+    },
+    {
+      "id": "callback-cancellation",
+      "expected": "The proposed callback can be observed while the public state remains unchanged."
+    },
+    {
+      "id": "keyboard-and-dismissal",
+      "expected": "The alert dialog is modal. This reference chooses Cancel as initialFocus using the actual Popup prop. Tab remains inside; Escape/Cancel dismiss without confirming and return focus. Outside press is ignored by the primitive."
+    },
+    {
+      "id": "instance-semantic-relations",
+      "html": "accessibility.html",
+      "state": "open"
+    }
+  ]
+}

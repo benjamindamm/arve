@@ -1,0 +1,165 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "73:226"
+  },
+  "stories": [
+    {
+      "id": "figma-2132-2718",
+      "name": "Frame 2",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2718",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15401",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15401",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2729",
+      "name": "Frame 4",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2729",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15402",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15402",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2738",
+      "name": "Frame 5",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2738",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15403",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15403",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2751",
+      "name": "Frame 7",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2751",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15404",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15404",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2774",
+      "name": "Frame 8",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2774",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15405",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15405",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2786",
+      "name": "Frame 9",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2786",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15406",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15406",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2132-2821",
+      "name": "Frame 6",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2132:2821",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-15409",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:15409",
+        "part": "2132:2615"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "actual-source-contract",
+      "expected": "Calendar forwards the full React DayPicker9.14.0 discriminated prop union (mode absent|single|multiple|range, required variants) plus buttonVariant. shadcn defaults showOutsideDays=true, captionLayout=label, buttonVariant=ghost; locale, formatters, classNames and components are explicit overrides. CalendarDayButton is the exported native shadcn Button adapter, attempting to synchronize focus when modifiers.focused changes, but the pinned wrapper omits attaching its ref: raw keyboard focus is broken while internal focused modifiers advance; data-day is locale-formatted, never a stable ISO identifier. DayPicker selection is Date|Date[]|DateRange|undefined according to mode/required. Supplying onSelect makes the selected prop authoritative even when undefined; without onSelect the primitive owns internal selection. onSelect(selected,triggerDate,modifiers,event) is separate from onDayClick(date,modifiers,event); the source calls selection first, onDayClick afterward. DayPicker itself prevents default and propagation on day click; defaultPrevented is not a generic veto/cancellable eventDetails API. Optional single may clear by selecting the same date; required single does not clear. Multiple min/max and range min/max/excludeDisabled/resetOnSelect are source algorithms, not assumed to be the same toggle. excludeDisabled resets a candidate range crossing a disabled date to its new start. disabled is a Matcher or Matcher[], hidden differs from disabled, and no synthetic root disabled boolean is invented. Displayed month/defaultMonth/onMonthChange is independent from selected date; startMonth/endMonth bound month navigation, not selection by themselves. Selection need not submit a form. Root is a named div by default, each month table is the source named grid, with native day buttons, registered roving tabIndex and labelled selected/today dates. Noninteractive mode omits day buttons. Footer is the primitive polite status; essential validation instructions remain persistent outside it. Date Picker is explicitly the documented Popover + Calendar composition, with no upstream DatePicker root. The basic official onSelect only sets date and leaves the popup open; no automatic close-on-select is invented. Trigger text includes the current formatted date or Pick a date. Popover nonmodal dialog naming, Escape, outside dismissal, controlled cancellation, Presence and focus restoration retain the already complete Popover contract. Range and date-of-birth presets are optional Calendar compositions, not a new Root value type."
+    },
+    {
+      "id": "keyboard-focus-disabled-error",
+      "expected": "The explicit reference components.DayButton adapter forwards an attached ref through exported CalendarDayButton rest props and focuses it on modifiers.focused, preserving original styling and handlers. This repairs the observed pinned source omission; raw wrapper behavior is preserved as a negative browser regression. The active day has one tabIndex=0; source focus navigation skips disabled/hidden dates. Left/Right move a day (RTL reverses), Up/Down a week; Shift+Left/Right move a month and Shift+Up/Down a year. PageUp/PageDown move month, Shift adds year; Home/End move to week boundaries. Native Enter/Space selects the focused eligible day. Keyboard focus can move without selection. Navigation arrows have source native disabled boundaries. Calendar alone has no Escape dismissal or focus trap. Caller-provided components/labels must preserve the source refs, event handlers, names and native semantics."
+    },
+    {
+      "id": "explicit-instance-composition",
+      "expected": "Reference locale is en-US with local dates (no UTC string conversion), fixed November2026 and today November21, selected November12, disabled November13, November–December navigation bounds. The attached focus-ref components.DayButton adapter is an explicit caller repair, not falsely attributed to unchanged upstream. These concrete values and Delivery date name are chosen reference usage, separate from native FIG visual samples. Single and range are exercised, required/multiple remain exact source-described API variants. A typed date input, time, natural-language parsing, remote availability and submit persistence are separate optional application compositions, not promised Calendar or DatePicker exports."
+    }
+  ]
+}

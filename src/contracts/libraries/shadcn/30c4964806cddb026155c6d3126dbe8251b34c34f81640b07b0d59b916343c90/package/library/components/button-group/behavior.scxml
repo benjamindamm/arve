@@ -1,0 +1,12 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="ButtonGroup" initial="active">
+  <datamodel />
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT" />
+    <transition event="ESCAPE" />
+    <transition event="UNMOUNT" target="removed" />
+    <transition event="CHILD_ACTION PROPS_CHANGED ARROW_LEFT ARROW_RIGHT" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="active" />
+  </state>
+</scxml>

@@ -1,0 +1,27 @@
+{
+  "purpose": "Choose one value from a labelled mutually exclusive set with native form integration.",
+  "avoid": "Independent yes/no choices require different semantics.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:RadioGroup",
+  "sourceRule": "RadioGroup uses a generic value/defaultValue and onValueChange(value,eventDetails), plus disabled/readOnly/required/name/form. RadioGroupItem inherits the exact Radio.Root props including value and disabled. The default visible root is span role=radio with a hidden native radio input, not a visible native radio. Checked value is singular; choosing the checked item does not clear the group. Disabled/readOnly suppress user changes; callback cancellation can veto and controlled props stay authoritative.",
+  "keyboardAndFocus": "Tab enters the current/enabled radio; arrows navigate/select enabled items using the source composite and wrap behavior. Space selects a radio. Enter does not toggle (the source prevents its button activation; form context remains separate). Home/End are disabled by the RadioGroup composite; Escape does not clear selection.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/radio-group.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/radio-group.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/radio-group-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/radio-group.md.source"
+  ],
+  "referenceDecision": "Named mutually exclusive delivery options retain native hidden form values. Concrete group help/error and readonly/disabled examples are caller composition; actual DirectionProvider enables RTL composite navigation.",
+  "visualContract": {
+    "layoutPolicy": "Actual visible 16px source radios contain the checked-only 8px primary-foreground dot and the real hidden native form input. No duplicate synthetic native control or decorative classification is introduced. Native control/label gap 8px is retained;12px option spacing is an explicit caller layout decision because Root supplies no option layout. The selected background/border follows native primary roles; invalid styling changes border while readable group help/error describes the issue. Checked value stays singular, native form name/value remains plan, and labels explicitly name the actual visible roles. Disabled fades the control; readOnly stays focusable and visually distinct from disabled. Arrow/Space selection, Enter nonactivation, Home/End nonhandling and controlled cancellation follow actual source composite behavior. RTL keyboard composition requires the real DirectionProvider plus HTML direction.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../tokens.css";
+
+[data-part="textarea-field"] {
+  display: grid;
+  gap: var(--ui-control-label-gap);
+  min-inline-size: 0;
+}
+
+[data-part="textarea-label"] {
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-foreground);
+}
+
+[data-slot="textarea"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--ui-textarea-min-height);
+  field-sizing: content;
+  resize: vertical;
+  padding: var(--ui-textarea-padding-block) var(--ui-textarea-padding-inline);
+  border: var(--ui-border-width) solid var(--ui-color-input);
+  border-radius: var(--ui-textarea-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  font-weight: var(--ui-font-weight-normal);
+}
+
+[data-slot="textarea"]::placeholder {
+  color: var(--ui-color-muted-foreground);
+  opacity: 1;
+}
+
+[data-slot="textarea"]:focus-visible {
+  outline: 0;
+  border-color: var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="textarea"]:disabled {
+  opacity: var(--ui-textarea-disabled-opacity);
+  cursor: default;
+}
+
+[data-slot="textarea"][aria-invalid="true"] {
+  border-color: var(--ui-color-destructive);
+}

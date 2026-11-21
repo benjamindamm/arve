@@ -1,0 +1,11 @@
+{
+  "componentId": "shadcn:AlertDialog",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"alert-dialog-panel\">Open confirmation</button><div id=\"alert-dialog-panel\" role=\"alertdialog\" aria-labelledby=\"alert-dialog-title\" aria-describedby=\"alert-dialog-description\"><h2 id=\"alert-dialog-title\">Delete project?</h2><p id=\"alert-dialog-description\">This action cannot be undone.</p><button type=\"button\" data-part=\"cancel\">Cancel deletion</button><button type=\"button\" data-part=\"action\">Confirm deletion</button></div>",
+  "keyboardAndFocus": "The alert dialog is modal. This reference chooses Cancel as initialFocus using the actual Popup prop. Tab remains inside; Escape/Cancel dismiss without confirming and return focus. Outside press is ignored by the primitive.",
+  "sourceRule": "The pinned AlertDialogAction is an ordinary Button, not a Close wrapper. Its onClick invokes the caller action and does not automatically close the alert dialog. AlertDialogCancel wraps the primitive Close. The caller explicitly closes after successful work when desired; cancellation never emits a destructive confirmation.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups."
+}

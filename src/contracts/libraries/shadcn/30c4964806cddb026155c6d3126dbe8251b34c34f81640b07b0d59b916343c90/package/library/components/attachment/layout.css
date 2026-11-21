@@ -1,0 +1,163 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-slot="attachment"] {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  gap: var(--ui-attachment-gap);
+  padding: var(--ui-attachment-padding);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-attachment-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="attachment"][data-state="idle"] {
+  border-style: dashed;
+}
+
+[data-slot="attachment"][data-state="error"] {
+  border-color: color-mix(in srgb,var(--ui-color-destructive) 30%,transparent);
+}
+
+[data-slot="attachment"]:has(>[data-slot="attachment-trigger"]):hover {
+  background: var(--ui-color-muted);
+}
+
+[data-slot="attachment"]:has(>[data-slot="attachment-trigger"]:focus-visible) {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="attachment-media"] {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-attachment-media);
+  block-size: var(--ui-attachment-media);
+  overflow: hidden;
+  border-radius: var(--ui-attachment-media-radius);
+  background: var(--ui-color-muted);
+}
+
+[data-slot="attachment"][data-size="sm"] [data-slot="attachment-media"] {
+  inline-size: var(--ui-attachment-media-sm);
+  block-size: var(--ui-attachment-media-sm);
+}
+
+[data-slot="attachment"][data-size="xs"] [data-slot="attachment-media"] {
+  inline-size: var(--ui-attachment-media-xs);
+  block-size: var(--ui-attachment-media-xs);
+}
+
+[data-slot="attachment-media"] svg {
+  inline-size: 20px;
+  block-size: 20px;
+  pointer-events: none;
+}
+
+[data-slot="attachment-media"] img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+[data-slot="attachment"][data-state="error"] [data-slot="attachment-media"] {
+  background: var(--ui-color-destructive-subtle);
+  color: var(--ui-color-destructive);
+}
+
+[data-slot="attachment-content"] {
+  flex: 1;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+[data-slot="attachment-title"],
+[data-slot="attachment-description"] {
+  display: block;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[data-slot="attachment-title"] {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+[data-slot="attachment-description"] {
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="attachment"][data-state="error"] [data-slot="attachment-description"] {
+  color: var(--ui-color-destructive);
+}
+
+[data-slot="attachment"][data-size="xs"] [data-slot="attachment-content"],
+[data-slot="attachment"][data-size="sm"] [data-slot="attachment-content"] {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+[data-slot="attachment-trigger"] {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+[data-slot="attachment-actions"] {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-slot="attachment-action"] {
+  position: relative;
+  z-index: 2;
+}
+
+[data-slot="attachment"][data-orientation="vertical"] {
+  flex-direction: column;
+  align-items: stretch;
+  inline-size: min(100%,var(--ui-attachment-tile-width));
+}
+
+[data-slot="attachment"][data-orientation="vertical"] [data-slot="attachment-media"][data-variant="image"] {
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 1;
+}
+
+[data-slot="attachment-group"] {
+  display: flex;
+  min-inline-size: 0;
+  gap: var(--ui-attachment-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+[data-slot="attachment-group"]>[data-slot="attachment"] {
+  flex: none;
+  scroll-snap-align: start;
+}

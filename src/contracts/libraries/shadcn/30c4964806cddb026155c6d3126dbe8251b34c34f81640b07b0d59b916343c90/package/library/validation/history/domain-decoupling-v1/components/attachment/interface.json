@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "attachment.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Attachment",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof attachmentVariants> & {\n    state?: \"idle\" | \"uploading\" | \"processing\" | \"error\" | \"done\"\n  }"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:26; defaults: {\"state\": \"\\\"done\\\"\", \"size\": \"\\\"default\\\"\", \"orientation\": \"\\\"horizontal\\\"\"}."
+            },
+            {
+              "kind": "field",
+              "name": "state",
+              "type": {
+                "text": "\"idle\" | \"uploading\" | \"processing\" | \"error\" | \"done\""
+              },
+              "default": "\"done\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "\"default\" | \"sm\" | \"xs\""
+              },
+              "default": "\"default\""
+            },
+            {
+              "kind": "field",
+              "name": "orientation",
+              "type": {
+                "text": "\"horizontal\" | \"vertical\""
+              },
+              "default": "\"horizontal\""
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentMedia",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & VariantProps<typeof attachmentMediaVariants>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:64; defaults: {\"variant\": \"\\\"icon\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-media",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentContent",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:79; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-content",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentTitle",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:95; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-title",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentDescription",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:111; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-description",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentActions",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:128; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-actions",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentAction",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:144; defaults: {\"size\": \"\\\"icon-xs\\\"\"}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-action",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentTrigger",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "useRender.ComponentProps<\"button\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:161; defaults: {}."
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "AttachmentGroup",
+          "description": "Exact exported React wrapper API; native markup is documented separately from TypeScript inheritance.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Rendered caller content, inherited from the exact source React prop type."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Complete public source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source:186; defaults: {}."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "attachment-group",
+              "description": "Actual data-slot emitted by this source wrapper, not a Web Components shadow part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

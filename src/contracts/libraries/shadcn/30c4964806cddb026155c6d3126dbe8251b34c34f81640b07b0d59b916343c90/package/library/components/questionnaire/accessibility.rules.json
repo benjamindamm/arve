@@ -1,0 +1,146 @@
+{
+  "componentId": "shadcn:Questionnaire",
+  "projectionState": "actual-normal-entry-source-SSR",
+  "sourceRule": "Questionnaire is the actual shadcn @shadcn/react0.3.1 form wrapper, not a generic wizard value controller. Root props are native form props excluding value/defaultValue plus item/defaultItem/items/onItemChange/shortcuts. items provides complete ordered collection state on SSR; stable unique names and matching enabled rendered Item/Choice definitions are caller requirements. Controlled item is authoritative, onItemChange(string) is a request with no cancellable eventDetails; answers are separate native input state and FormData. Item is fieldset, Title legend, Description p, native ChoiceInput radio or checkbox when Item.multiple, with a label wrapping real input. Disabled choices cannot answer; disabled items are excluded from navigation. Inactive items remain mounted hidden/inert, preserving previous answers for FormData rather than disabling all inactive answers. Skip clears answer participation/name and marks skipped; only optional questions may skip. Optional unanswered is still invalid until answered or explicitly skipped. Item onStatusChange observes unanswered|answered|skipped, independently from active item. Choice checked/defaultChecked and Input value/defaultValue have their own controlled authority. Choice onChange can preventDefault before source internal selection; controlled choices require caller update. Selecting a single answer does not auto-advance. Next validates active item; invalid focuses its eligible answer, keeps current item and shows Item error (role=alert with registered fieldset error description). Root submit validates all registered items and goes to the first invalid one; only valid form submission reaches onSubmit(event). Root defaults noValidate=true and validates answer presence/external invalid, not arbitrary email patterns. Explicit noValidate=false enables native constraint checking/reportValidity in addition. Reference selects this mode for email. Error children and persistent descriptions explain the required answer; native invalid email uses browser constraint feedback. Root onReset is called first, preventDefault vetoes internal reset; otherwise answers reset to defaults, skipped/invalid attempts clear and initial valid question is requested. Progress is actual labelled progressbar with polite Question n of total text. Previous/Skip/Next/Submit are native buttons with hidden/inert/-1 states when inapplicable, not mere CSS opacity.",
+  "keyboardAndFocus": "Tab uses actual form controls. Up/Down move eligible answer focus; native radio Left/Right keep their browser selection behavior. Outside radio/text entry, Left requests previous; Right requests next only after answered/skipped. Enter on a filled answer confirms active item, validating and requesting next or native requestSubmit on last; Ctrl/Meta+Enter confirms from the active question, ignores repeat/composition and conflicting modifiers. Optional letters/numbers shortcuts target enabled choices, focus then click, and do not run in text inputs. Active question changes focus its fieldset or invalid answer, including accepted controlled host updates; ignored controlled requests do not secretly advance. Escape is passive unless a separately composed Dialog owns it.",
+  "referenceDecision": "Three explicitly chosen questions: required Plus/Pro plan (Enterprise disabled), optional multiple Progress/Risks with explicit Skip, required contact email. Root has a visible heading/native form name; final FormData and result stay local, no message is sent. The exact source form and individual answer authorities are preserved. No fictitious Root disabled, onValueChange, asynchronous submission or automatic backend persistence is added.",
+  "protocol": "SCXML observes actual public callbacks and delegates native/source effects, retaining original event/updater identity. SOURCE_GEOMETRY/STATUS and _effect.* are internal reference observations/work, never new DOM events or public props. Independent item/answer, geometry/focus, and table feature authorities are not collapsed into one fake value. HTML comes from the exact normal-entry reference composition using pinned runtime packages; client registrations/observer effects are separately browser tested.",
+  "semanticParts": {
+    "form": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire\"]",
+      "description": "Native form with independent active-question and answer state"
+    },
+    "progress": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-progress\"]",
+      "description": "Actual labelled polite progressbar"
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-item\"]",
+      "description": "Native fieldset, hidden/inert when inactive"
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-title\"]",
+      "description": "Native question legend"
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-description\"]",
+      "description": "Registered persistent description"
+    },
+    "choices": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choices\"]",
+      "description": "Answer collection"
+    },
+    "choice": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice\"]",
+      "description": "Actual label containing native radio/checkbox"
+    },
+    "choice-input": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-input\"]",
+      "description": "Native answer input; private compound wrapper output"
+    },
+    "choice-indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-indicator\"]",
+      "description": "Decorative checked/radio/checkbox indicator"
+    },
+    "choice-dot": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-indicator-dot\"]",
+      "description": "Decorative selected radio dot"
+    },
+    "choice-check": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-indicator-check\"]",
+      "description": "Decorative selected checkbox glyph"
+    },
+    "choice-label": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-label\"]",
+      "description": "Native answer label text"
+    },
+    "choice-shortcut": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-shortcut\"]",
+      "description": "Source shortcut badge, hidden when absent"
+    },
+    "choice-description": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-choice-description\"]",
+      "description": "Optional readable choice detail"
+    },
+    "input-wrapper": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-input-wrapper\"]",
+      "description": "Private native input positioning wrapper"
+    },
+    "input": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-input\"]",
+      "description": "Native text/email answer"
+    },
+    "error": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-error\"]",
+      "description": "Actual hidden or announced item error"
+    },
+    "actions": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-actions\"]",
+      "description": "Question navigation controls"
+    },
+    "previous": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-previous\"]",
+      "description": "Native previous question button"
+    },
+    "skip": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-skip\"]",
+      "description": "Native optional skip button"
+    },
+    "next": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-next\"]",
+      "description": "Validating native next button"
+    },
+    "submit": {
+      "kind": "element",
+      "selector": "[data-slot=\"questionnaire-submit\"]",
+      "description": "Actual native form submit control"
+    }
+  },
+  "visualStateMapping": {
+    "type": {
+      "source": "QuestionnaireItem.multiple",
+      "attribute": "data-type=radio|checkbox"
+    },
+    "answer": {
+      "source": "native answer state",
+      "attributes": [
+        "data-checked",
+        "data-unchecked",
+        "data-disabled"
+      ]
+    },
+    "active": {
+      "source": "item context",
+      "attributes": [
+        "data-active",
+        "hidden",
+        "inert"
+      ]
+    },
+    "invalid": {
+      "source": "source validation",
+      "attribute": "aria-invalid"
+    }
+  }
+}

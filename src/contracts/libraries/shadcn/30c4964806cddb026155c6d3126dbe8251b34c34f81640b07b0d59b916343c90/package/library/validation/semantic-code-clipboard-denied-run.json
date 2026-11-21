@@ -1,0 +1,22 @@
+{
+  "actual": {
+    "active": true,
+    "allow": "clipboard-write 'none'",
+    "copied": false,
+    "count": "1",
+    "fallback": "Select the code and copy manually if clipboard copying is unavailable.",
+    "label": "Copy",
+    "live": "",
+    "policy": false,
+    "preTab": 0
+  },
+  "checks": [
+    "Real native Enter reaches caller callback exactly once inside actual denied iframe",
+    "Browser permissions policy denies clipboard write; source keeps Copy and empty success live text",
+    "Actual focus retained and persistent native selection fallback remains available"
+  ],
+  "family": "code-block",
+  "format": "shadcn-semantic-clipboard-denied/1",
+  "result": "PASS",
+  "scope": "Bounded actual rejected promise path with supported secure-context Clipboard API; missing API synchronous throws remain a documented source limitation."
+}

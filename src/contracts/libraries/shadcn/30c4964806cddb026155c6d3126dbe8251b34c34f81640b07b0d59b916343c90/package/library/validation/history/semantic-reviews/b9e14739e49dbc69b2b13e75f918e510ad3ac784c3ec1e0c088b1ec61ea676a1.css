@@ -1,0 +1,28 @@
+@import "../../tokens.css";
+
+[data-slot="kbd"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 0;
+  min-block-size: var(--ui-kbd-height);
+  padding-inline: var(--ui-kbd-padding);
+  border-radius: var(--ui-kbd-radius);
+  background: var(--ui-color-muted);
+  color: var(--ui-color-muted-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-kbd-font-size);
+  line-height: var(--ui-kbd-line-height);
+  font-weight: var(--ui-font-weight-normal);
+  user-select: none;
+  pointer-events: none;
+}
+
+[data-slot="kbd-group"] {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ui-kbd-gap);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+}

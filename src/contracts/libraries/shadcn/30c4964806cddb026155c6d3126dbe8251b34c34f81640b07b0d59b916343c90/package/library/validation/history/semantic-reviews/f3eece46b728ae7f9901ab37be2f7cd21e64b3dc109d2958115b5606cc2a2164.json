@@ -1,0 +1,43 @@
+{
+  "componentId": "shadcn:Popover",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"bottom\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>",
+  "keyboardAndFocus": "Default modal=false allows outside interaction and focus-out dismissal. Escape/outside press close; the popup focuses an eligible descendant and normally restores the trigger. Modal/trap-focus are explicit Root choices with the documented Close-control requirements for touch screen readers.",
+  "sourceRule": "Content defaults side=bottom, align=center, sideOffset=4 and alignOffset=0. The wrapper exposes no PopoverClose component; source Root actionsRef.close or a caller-composed control closes it. Title/Description are actual exported primitive registration parts that supply the Popup name/description; the reference uses explicit IDs to make ownership auditable. Positioning/collision work belongs to the primitive, not a guessed CSS-only interaction.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Primitive open state/controller with no stable DOM root."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"popover-trigger\"]",
+      "description": "Actual native trigger; caller provides its complete accessible name."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"popover-content\"]",
+      "description": "Actual portal popup, positioned by the primitive."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"popover-header\"]",
+      "description": "Actual named popup header."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"popover-title\"]",
+      "description": "Actual named popup title."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"popover-description\"]",
+      "description": "Actual named popup description."
+    }
+  },
+  "visualStateMapping": {}
+}

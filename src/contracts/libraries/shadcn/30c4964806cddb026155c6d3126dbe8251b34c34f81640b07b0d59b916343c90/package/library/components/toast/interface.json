@@ -1,0 +1,419 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "toast.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Toast",
+          "members": [
+            {
+              "kind": "field",
+              "name": "toast",
+              "type": {
+                "text": "ToastPrimitive.Root.ToastObject<any>"
+              },
+              "description": "Toast Root requires an actual ToastObject. Public Toaster wraps Provider/Portal/Viewport/List and defaults to the exported singleton toast manager; createToastManager/useToastManager are actual public exports. A mounted provider/Toaster is required to display manager events; the manager is an event emitter, not a promised pre-mount queue. Manager add(options)->id, update(id,object|updater), close(id?) and promise(promise,{loading,success,error}) retain their exact generic types. Duplicate id updates in place and refreshes timer. Provider defaults timeout5000ms, limit3; timeout0 disables auto-dismiss. Loading type has no timer; promise transitions that same toast to success/error, preserving promise resolve/reject for caller handling. Exceeding limit marks older objects limited/inert rather than immediately removing them. Closing and final removal are separate ToastObject onClose()/onRemove() callbacks, not fabricated Root onOpenChange. Root defaults nonmodal role=dialog (priority low), tabindex0, aria-modal=false and registered h2 Title/p Description relations. High priority uses alertdialog hidden from accessibility until focused, with a separate urgent alert mirror in Viewport; Viewport is labelled Notifications, region with polite/additions-text live behavior. No generic role=status is falsely attached to every toast. Timers pause during hover, focus and window blur, then resume remaining time. F6 enters notification viewport; Shift+Tab from viewport restores prior focus, and focus guards skip limited/ending entries. Escape closes only a toast containing actual focus. Close uses source native Button with default name Close toast; Action renders only with meaningful children, merges actionProps and does not automatically close. Swipe dismissal uses configured directions (default down/right), not a different confirmation event. This reference uses explicit persistent feedback for essential task outcomes, low priority by default, timeout0 for important actionable messages, named actions/Close and finite timed examples; disappearing notification text is never the only durable result."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Root.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:33."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Actual source toast; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastProvider",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Provider.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:12."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "provider",
+              "description": "Actual provider/event manager context; no fabricated DOM. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastPortal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Portal.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:16."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Actual source portal context; document theme/dir reaches its viewport. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastViewport",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Viewport.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:20."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "viewport",
+              "description": "Actual source toast-viewport; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Content.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:60."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual source toast-content; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastTitle",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Title.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:73."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Actual source toast-title; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastDescription",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Description.Props"
+              },
+              "description": "Exact public source type/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:83."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "description",
+              "description": "Actual source toast-description; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastAction",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Action.Props"
+              },
+              "description": "Exact public source type/defaults {\"render\": \"<Button variant=\\\"outline\\\" size=\\\"sm\\\" />\"}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:96."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "ToastPrimitive.Action.Props[\"onClick\"]"
+              },
+              "description": "Actual inherited native/React Button callback; wrapper-specific follow-up behavior is explicitly documented."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "action",
+              "description": "Actual source toast-action; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastClose",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Close.Props"
+              },
+              "description": "Exact public source type/defaults {\"render\": \"<Button variant=\\\"ghost\\\" size=\\\"icon-sm\\\" />\"}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:111."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "ToastPrimitive.Close.Props[\"onClick\"]"
+              },
+              "description": "Actual inherited native/React Button callback; wrapper-specific follow-up behavior is explicitly documented."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "close",
+              "description": "Actual source toast-close; low-priority dialog/live announcement/lifecycle remain primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "Toaster",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ToastPrimitive.Provider.Props"
+              },
+              "description": "Exact public source type/defaults {\"toastManager\": \"toast\"}; sources/shadcn/apps/v4/registry/bases/base/ui/toast.tsx.source:244."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "toaster",
+              "description": "Actual Provider/Portal/Viewport/private List composition; manager event emitter requires mounted provider. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "icon",
+              "description": "Private ToastIcon chosen by source type; not a new public export. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "toast",
+          "description": "Actual singleton/constructor/hook alias, with public manager operations; private leading-space subscribe belongs to Provider integration.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "ReturnType<typeof ToastPrimitive.createToastManager>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "add",
+              "type": {
+                "text": "<T extends Data>(options: ToastManagerAddOptions<T>) => string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "update",
+              "type": {
+                "text": "<T extends Data>(id: string, updates: ToastManagerUpdateOptions<T> | ((previous: ToastObject<T>) => ToastManagerUpdateOptions<T>)) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "close",
+              "type": {
+                "text": "(id?: string) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "promise",
+              "type": {
+                "text": "<Value,T extends Data>(promise: Promise<Value>, options: ToastManagerPromiseOptions<Value,T>) => Promise<Value>"
+              }
+            }
+          ],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "createToastManager",
+          "description": "Actual singleton/constructor/hook alias, with public manager operations; private leading-space subscribe belongs to Provider integration.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "ReturnType<typeof ToastPrimitive.createToastManager<Data>>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "add",
+              "type": {
+                "text": "<T extends Data>(options: ToastManagerAddOptions<T>) => string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "update",
+              "type": {
+                "text": "<T extends Data>(id: string, updates: ToastManagerUpdateOptions<T> | ((previous: ToastObject<T>) => ToastManagerUpdateOptions<T>)) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "close",
+              "type": {
+                "text": "(id?: string) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "promise",
+              "type": {
+                "text": "<Value,T extends Data>(promise: Promise<Value>, options: ToastManagerPromiseOptions<Value,T>) => Promise<Value>"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "manager",
+              "description": "Actual event-emitter manager factory; add/update/close/promise remain distinct typed operations. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "useToastManager",
+          "description": "Actual singleton/constructor/hook alias, with public manager operations; private leading-space subscribe belongs to Provider integration.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "ReturnType<typeof ToastPrimitive.useToastManager<Data>>"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "add",
+              "type": {
+                "text": "<T extends Data>(options: ToastManagerAddOptions<T>) => string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "update",
+              "type": {
+                "text": "<T extends Data>(id: string, updates: ToastManagerUpdateOptions<T> | ((previous: ToastObject<T>) => ToastManagerUpdateOptions<T>)) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "close",
+              "type": {
+                "text": "(id?: string) => void"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "promise",
+              "type": {
+                "text": "<Value,T extends Data>(promise: Promise<Value>, options: ToastManagerPromiseOptions<Value,T>) => Promise<Value>"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "manager-context",
+              "description": "Actual manager/provider hook; not an adjustable Root value. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ToastObjectLifecycle",
+          "description": "Actual ToastObject callback options supplied through manager.add/update; these callbacks are not DOM events or new Root props.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "Parameters<ReturnType<typeof ToastPrimitive.createToastManager<Data>>[\"add\"]>[0]"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "onClose",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "Actual option callback when close starts."
+            },
+            {
+              "name": "onRemove",
+              "type": {
+                "text": "() => void"
+              },
+              "description": "Actual option callback after ending transition and removal."
+            }
+          ],
+          "cssParts": []
+        }
+      ]
+    }
+  ]
+}

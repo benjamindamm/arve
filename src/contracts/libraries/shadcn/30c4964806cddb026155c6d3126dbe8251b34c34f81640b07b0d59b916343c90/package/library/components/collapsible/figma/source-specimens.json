@@ -1,0 +1,92 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "72:2724"
+  },
+  "stories": [
+    {
+      "id": "figma-2124-439",
+      "name": "Collapsible / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:439",
+        "part": "2124:440"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2124-438",
+      "name": "Collapsible / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:438",
+        "part": "2124:440"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2124-2671",
+      "name": "CollapsibleContent / Dir=LTR, Variant=Key-value",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:2671",
+        "part": "2124:2672"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2124-2673",
+      "name": "CollapsibleContent / Dir=LTR, Variant=Title-description",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:2673",
+        "part": "2124:2672"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2124-2670",
+      "name": "CollapsibleContent / Dir=RTL, Variant=Key-value",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:2670",
+        "part": "2124:2672"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2124-2678",
+      "name": "CollapsibleContent / Dir=RTL, Variant=Title-description",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2124:2678",
+        "part": "2124:2672"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractProtocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "contractCases": [
+    {
+      "id": "source-default-and-accepted-change",
+      "event": "TRIGGER_PRESS",
+      "expected": "The source callback and documented state policy apply; controlled props remain authoritative."
+    },
+    {
+      "id": "callback-cancellation",
+      "expected": "The proposed callback can be observed while the public state remains unchanged."
+    },
+    {
+      "id": "keyboard-and-dismissal",
+      "expected": "The native trigger uses Enter/Space and normal Tab order. Escape/outside press do not close a bare Collapsible. There is no modal focus trap or automatic focus-return contract."
+    },
+    {
+      "id": "instance-semantic-relations",
+      "html": "accessibility.html",
+      "state": "open"
+    }
+  ]
+}

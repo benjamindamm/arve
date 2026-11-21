@@ -1,0 +1,27 @@
+{
+  "purpose": "Preview supplementary information for a genuine navigable link.",
+  "avoid": "Essential information needs an available non-hover route.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:HoverCard",
+  "sourceRule": "HoverCard wraps PreviewCard. Its content is a plain div, not a fabricated dialog or tooltip role; full information remains available at the link destination. Content defaults side=bottom, sideOffset=4, align=center, alignOffset=4. The reference lab explicitly sets delay/closeDelay to 0 to exercise the same source interaction promptly.",
+  "keyboardAndFocus": "The actual PreviewCard Trigger is an anchor. Hover and focus use its configurable delay (600ms default) and closeDelay (300ms). Escape/outside press dismiss. There is no modal focus trap, and native Enter still follows the link rather than committing a preview selection.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/hover-card.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/hover-card.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/hover-card-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/preview-card.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "Actual HoverCard portal positioning, collision handling and defaults remain primitive-owned; CSS does not recreate anchor coordinates. Native radius/insets are adopted as semantic popup metrics, while width is fluid with an explicit bounded maximum. HoverCard keeps native 10px corners, 12/16px insets and 272px maximum; the real trigger remains an anchor and essential profile information is available outside the hover card. No invented Title/Description exports or automatic dialog role.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

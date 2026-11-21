@@ -1,0 +1,89 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "73:223"
+  },
+  "stories": [
+    {
+      "id": "figma-1970-1231",
+      "name": "CommandItem / State=Default, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1231",
+        "part": "1970:1232"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1970-1230",
+      "name": "CommandItem / State=Hover, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1230",
+        "part": "1970:1232"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1970-1401",
+      "name": "CommandItem / State=Default, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1401",
+        "part": "1970:1232"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1970-1407",
+      "name": "CommandItem / State=Hover, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1407",
+        "part": "1970:1232"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1970-1399",
+      "name": "CMDKGroupHeading / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1399",
+        "part": "1970:1400"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1970-1398",
+      "name": "CMDKGroupHeading / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1970:1398",
+        "part": "1970:1400"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "query-versus-highlight-versus-selection-or-command",
+      "expected": "Command wraps cmdk1.1.1. Root value/defaultValue is the active/highlighted item string, not a completed operation; Root onValueChange is that highlight callback. In this pinned implementation that callback is emitted in the controlled Root path, so this reference supplies controlled value/onValueChange and always mirrors the returned value. This is not a cancellable request; ignoring it is not promised to veto cmdk internal transient highlight. Item onSelect(value:string) is the actual invocation callback. Input has its own value/onValueChange(search:string). Item values and keywords are trimmed; supply stable unique values rather than relying on changing text content. Default fuzzy filtering/scoring sorts matches; shouldFilter=false transfers filtering/rendering to the caller, forceMount bypasses an item/group filter, loop defaults false, disablePointerSelection controls pointer highlight and vimBindings defaults true. Disabled items are excluded from enabled navigation/activation; there is no whole-Root disabled prop. List is listbox, input is combobox with active-descendant relation, items are option (not menuitem), group headings supply source relations. Empty is presentation; this reference supplies explicit status text for no results. Shortcut is only displayed text and registers no global shortcut. CommandDialog composes the existing Base UI Dialog contract, defaults title Command Palette/description Search for a command to run and showCloseButton=false. Its title/description are registered sibling parts before DialogContent; this reference mounts that composed actor on opening and removes it after onOpenChangeComplete(false), avoiding stray closed-state sibling headings while retaining the source closing lifecycle. The reference explicitly sets showCloseButton=true, so cancel is available without a physical Escape key or executing a command. It does not register a global Meta+K listener or automatically close after onSelect; caller invocation may close it explicitly."
+    },
+    {
+      "id": "keyboard-disabled-and-escape",
+      "expected": "Inline cmdk uses Up/Down, Home/End, Enter invocation and source Ctrl+n/j/p/k bindings when vimBindings=true. Typing filters and may change highlight but never executes a command. Native input focus stays in the combobox while active-descendant identifies the selected option. Inline Escape does not automatically close or clear the component. CommandDialog delegates initial/return focus, modal ownership and Escape/cancellation to the actual Dialog primitive; the reference provides an explicit external Open command palette button and closes on successful caller action. Search, highlight, action and Dialog open are independent authorities."
+    },
+    {
+      "id": "independent-cancellation-and-controlled-props",
+      "expected": "Each applicable actual callback preserves its own authority; canceling value need not cancel independent popup closing."
+    },
+    {
+      "id": "named-native-instance",
+      "html": "accessibility.html"
+    }
+  ]
+}

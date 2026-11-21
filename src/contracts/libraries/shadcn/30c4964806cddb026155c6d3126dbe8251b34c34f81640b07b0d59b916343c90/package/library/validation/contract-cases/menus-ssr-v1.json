@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual wrapper native/closed server projections and required contexts; live popup settings/focus/commands are independently browser checked.",
+  "cases": [
+    {
+      "component": "dropdown-menu",
+      "name": "actual default trigger is button with menu popup semantics; closed portal is absent",
+      "result": "pass"
+    },
+    {
+      "component": "dropdown-menu",
+      "name": "Shortcut text does not create a command or register keyboard shortcut semantics",
+      "result": "pass"
+    },
+    {
+      "component": "context-menu",
+      "name": "source default trigger stays div without invented focusability or button role",
+      "result": "pass"
+    },
+    {
+      "component": "context-menu",
+      "name": "explicit reference surface may use native named section while visible entry is separately composed",
+      "result": "pass"
+    },
+    {
+      "component": "menubar",
+      "name": "source container forwards actual orientation and top-level trigger role",
+      "result": "pass"
+    },
+    {
+      "component": "menubar",
+      "name": "menu item wrappers retain required real menu context",
+      "result": "pass"
+    }
+  ]
+}

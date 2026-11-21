@@ -1,0 +1,75 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-slot="button-group"] {
+  display: flex;
+  align-items: stretch;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+}
+
+.cn-button-group-orientation-horizontal {
+  flex-direction: row;
+}
+
+.cn-button-group-orientation-vertical {
+  flex-direction: column;
+}
+
+.cn-button-group-orientation-horizontal>:not(:last-child) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.cn-button-group-orientation-horizontal>:not(:first-child) {
+  border-inline-start: 0;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+
+.cn-button-group-orientation-vertical>:not(:last-child) {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.cn-button-group-orientation-vertical>:not(:first-child) {
+  border-block-start: 0;
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+
+[data-slot="button-group"]>:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+[data-slot="button-group-text"] {
+  display: flex;
+  align-items: center;
+  min-inline-size: 0;
+  padding-inline: var(--ui-button-group-text-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-button-group-text-radius);
+  background: var(--ui-color-muted);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="button-group-separator"] {
+  flex: none;
+  align-self: stretch;
+  background: var(--ui-color-border);
+}
+
+[data-slot="button-group-separator"][data-orientation="vertical"] {
+  inline-size: var(--ui-border-width);
+}
+
+[data-slot="button-group-separator"][data-orientation="horizontal"] {
+  block-size: var(--ui-border-width);
+}

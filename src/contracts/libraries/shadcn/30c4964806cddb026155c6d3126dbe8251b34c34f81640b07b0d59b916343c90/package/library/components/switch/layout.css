@@ -1,0 +1,69 @@
+@import "../../tokens.css";
+
+[data-part="switch-field"] {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ui-control-label-gap);
+}
+
+[data-slot="switch"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  inline-size: var(--ui-switch-width);
+  block-size: var(--ui-switch-height);
+  padding: var(--ui-switch-inset);
+  border: 0;
+  border-radius: var(--ui-switch-radius);
+  background: var(--ui-color-input);
+  vertical-align: middle;
+}
+
+[data-slot="switch-thumb"] {
+  display: block;
+  inline-size: var(--ui-switch-thumb);
+  block-size: var(--ui-switch-thumb);
+  flex: none;
+  border-radius: var(--ui-switch-radius);
+  background: var(--ui-color-background);
+}
+
+[data-slot="switch"][data-checked] {
+  background: var(--ui-color-primary);
+}
+
+[data-slot="switch"][data-checked] [data-slot="switch-thumb"] {
+  transform: translateX(calc(var(--ui-switch-width) - var(--ui-switch-thumb) - 2*var(--ui-switch-inset)));
+}
+
+[data-slot="switch"][dir="rtl"][data-checked] [data-slot="switch-thumb"] {
+  transform: translateX(calc(-1*(var(--ui-switch-width) - var(--ui-switch-thumb) - 2*var(--ui-switch-inset))));
+}
+
+[data-slot="switch"][data-size="sm"] {
+  inline-size: var(--ui-switch-small-width);
+  block-size: var(--ui-switch-small-height);
+}
+
+[data-slot="switch"][data-size="sm"] [data-slot="switch-thumb"] {
+  inline-size: var(--ui-switch-small-thumb);
+  block-size: var(--ui-switch-small-thumb);
+}
+
+[data-slot="switch"][data-size="sm"][data-checked] [data-slot="switch-thumb"] {
+  transform: translateX(calc(var(--ui-switch-small-width) - var(--ui-switch-small-thumb) - 2*var(--ui-switch-inset)));
+}
+
+[data-slot="switch"][data-size="sm"][dir="rtl"][data-checked] [data-slot="switch-thumb"] {
+  transform: translateX(calc(-1*(var(--ui-switch-small-width) - var(--ui-switch-small-thumb) - 2*var(--ui-switch-inset))));
+}
+
+[data-slot="switch"]:focus-visible {
+  outline: var(--ui-switch-focus-width) solid var(--ui-color-ring);
+  outline-offset: var(--ui-switch-focus-width);
+}
+
+[data-slot="switch"][data-disabled] {
+  opacity: var(--ui-switch-disabled-opacity);
+}

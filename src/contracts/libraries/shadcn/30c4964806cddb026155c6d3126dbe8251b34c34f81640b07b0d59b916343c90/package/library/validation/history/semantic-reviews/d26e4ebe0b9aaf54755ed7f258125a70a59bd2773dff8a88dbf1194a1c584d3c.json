@@ -1,0 +1,25 @@
+{
+  "purpose": "Explain that a collection or task area has no content.",
+  "avoid": "Distinguish empty, unavailable and failed loading.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Empty",
+  "contentAlternative": "The reason for absence and recovery action are text; a decorative empty-state icon is optional.",
+  "updatesAndDescendants": "The native wrappers do not distinguish loading, empty and failure automatically. The caller chooses this empty state after successful loading with zero items, replaces it when items arrive, and retains focus on an invoking action where possible.",
+  "referenceDecision": "A caller-owned empty/data decision is explicit. Error and loading use their own feedback rather than being mislabeled as an empty collection.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/empty.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/empty.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/empty-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Empty uses all six actual wrappers. Runtime EmptyDescription is a div even though its TypeScript props inherit p; the HTML projection follows runtime output. Native24px padding,16px section gap,14px corners,8px header gap,32px icon surface/16px glyph and10px icon corners are retained.384px text stack is an upper bound rather than fixed specimen width. A deeper native read finds18/28px title text inside a20px frame: the reference preserves text metrics and intrinsic height, avoiding native frame clipping. Title is a caller-supplied heading. Dashed outline is this chosen empty-collection composition, not a new public variant. Loading/error decisions and recovery actions belong to the caller; no automatic fetch/upload lifecycle is invented.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

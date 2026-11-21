@@ -1,0 +1,17 @@
+# Drawer · semantische Komponentenreferenz
+
+Present an edge task surface with optional source-supported swipe and snap-point behavior.
+
+Status der neuen Domänenmigration: **complete** im begrenzten Referenzumfang. Stabile Teile, tatsächlich passende Source-Selektoren, semantische Tokenwerte und nutzbare Zustands-Fixtures wurden mit dem normalen Komponentenprüfpfad und der echten React-Verwendung geprüft. [Browsernachweis](../../validation/semantic-overlays-browser-run.json); keine allgemeine Anwendungsfreigabe.
+
+The pinned Drawer wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual swipeDirection values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions. The pinned Drawer motion utilities bind the documented live primitive swipe, measured height, snap offset and nested-stack variables. These are real runtime inputs, not DTCG observations. Upstream 450ms easing,400ms release scalar,16px stack peek,0.05 scale step and 96px vertical clearance are explicit source-code decisions. Reduced motion disables transitions without disabling gestures or closing. All lifecycle attributes remain primitive output, never new public state props.
+
+[Stabile Anatomie und tatsächliche Source-/Caller-Bindungen](component.json), [CEM](interface.json), [semantische Zustands-/Variantenregeln](layout.css), [brauchbare Fixtures](stories.json). Native Muster, Hashes und Messwerte bleiben vollständig separat in [Quellmustern](figma/source-specimens.json) und [Traceability](figma/traceability.json).
+
+Die veröffentlichten Props/Callbacks und der [führende SCXML-Aktor](behavior.scxml) bleiben die Quelle des tatsächlichen Verhaltens. [HTML/ARIA](accessibility.html) und [Projektionsregeln](accessibility.rules.json) benennen die konkrete Verwendung, einschließlich notwendiger Caller-Beschriftung. Selectorbindungen sind ein expliziter React-/DOM-Adaptervertrag, keine erfundenen automatischen Shadow-DOM-Exports.
+
+The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance.
+
+The default modal drawer contains focus, supports Escape/Close and restores the trigger focus. Pointer swipes use the configured direction and primitive gesture logic; keyboard access remains available through explicit controls.
+
+[Originale React-Quellen und Versionen](../../sources/manifest.json), [nativer FIG-/PNG-Beleg](figma/figma-observations.json) und [tatsächliches Source-Prüfziel](provenance://source/apps%2Fshadcn-reference-lab%2FREADME.md). `release:false`; kein allgemeines Pixel-/Framework-/AT-Zertifikat.

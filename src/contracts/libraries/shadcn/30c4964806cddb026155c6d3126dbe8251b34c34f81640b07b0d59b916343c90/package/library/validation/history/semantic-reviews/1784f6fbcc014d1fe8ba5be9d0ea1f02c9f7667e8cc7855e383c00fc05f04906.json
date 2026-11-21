@@ -1,0 +1,26 @@
+{
+  "purpose": "Navigate an explicitly supplied set of result-page destinations while identifying the current page.",
+  "avoid": "Do not invent total counts when the backend cannot provide them.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Pagination",
+  "sourceRule": "Root nav role=navigation is named pagination; Content/Item are ul/li. PaginationLink renders Button as anchor with nativeButton=false; isActive sets aria-current=page and outline instead of ghost, size defaults icon. Previous/Next default text and accessible English labels can be overridden for localization. Ellipsis is aria-hidden. The wrapper does not calculate page count, clamp indices, fetch results or implement a disabled prop on PaginationLink. Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state.",
+  "keyboardAndFocus": "Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state. The caller omits unavailable boundary actions and owns router cancellation/isActive updates.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "Root nav role=navigation is named pagination; Content/Item are ul/li. PaginationLink renders Button as anchor with nativeButton=false; isActive sets aria-current=page and outline instead of ghost, size defaults icon. Previous/Next default text and accessible English labels can be overridden for localization. Ellipsis is aria-hidden. The wrapper does not calculate page count, clamp indices, fetch results or implement a disabled prop on PaginationLink. Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state. Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state. The caller omits unavailable boundary actions and owns router cancellation/isActive updates.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/pagination.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/pagination.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/pagination-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "Pagination binds all seven actual exports and explicitly imports its real Button styling dependency. Native 32px square page actions and 2px gap are retained; destination wording does not become fixed previous/next widths. The selected pinned Button primitive renders these anchors with role=button and tabindex=0 because nativeButton=false, and intentionally supplies Space activation while Enter uses native href activation. The reference faithfully describes page actions backed by href, rather than incorrectly claiming plain link roles or Enter-only behavior. isActive supplies aria-current=page, data-active and the source outline variant; it does not change a stored page index. Previous/Next text and accessible names are caller-localizable; the reference follows the source hide/show text recipe at explicit 40rem. Unavailable boundary actions are omitted, not fake-disabled anchors. Ellipsis remains hidden and does not imply a menu. All page computation, routing/fetching and isActive updates remain caller-owned.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

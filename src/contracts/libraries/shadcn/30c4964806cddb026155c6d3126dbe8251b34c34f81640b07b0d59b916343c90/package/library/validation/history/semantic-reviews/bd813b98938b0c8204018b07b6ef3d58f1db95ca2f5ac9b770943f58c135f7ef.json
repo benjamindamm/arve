@@ -1,0 +1,81 @@
+{
+  "componentId": "shadcn:NavigationMenu",
+  "projectionState": "Open site disclosure / expanded desktop navigation / expanded low-priority toast, respectively. Mobile sidebar delegates actual Sheet; high-priority toasts use the separate source announcement branch.",
+  "sourceRule": "Root is native nav (nested primitive Roots use div), not role=menu or menubar. Generic value/defaultValue is the currently open item or null; it is distinct from the destination/current-page link. onValueChange carries cancellable details, and controlled props remain authoritative. Source delay/closeDelay default50ms, orientation defaults horizontal. The wrapper align defaults start and automatically appends one NavigationMenuPositioner: do not add a second one to this wrapper. Its built-in Positioner defaults bottom/start and offsets8/0; custom default-positioner side/offset composition needs the direct primitive Root, not fictitious Root props. Content moves into the active popup/viewport; the private source Popup itself is another native nav without an exposed label prop, while accessible destination links remain related to the named outer navigation in the client accessibility tree. Trigger is native button with expanded/controls, no invented menuitem role; disabled triggers may focus but cannot open. List/Item remain ul/li with primitive composite navigation (loopFocus=false on the top list). Link is a real anchor, active sets aria-current=page, closeOnClick defaultsfalse. This reference explicitly selects closeOnClick=true for actual destination links. NavigationMenuIndicator wraps primitive Icon (a decorative disclosure indicator), not an independent selected-item controller. onOpenChangeComplete is emitted with false after closing/unmount, not an invented opening callback. Deferred closing uses eventDetails.preventUnmountOnClose and actionsRef.unmount.",
+  "keyboardAndFocus": "Native links keep normal navigation and modified clicks. Horizontal trigger navigation uses source Left/Right; Down opens an eligible disclosure while retaining trigger focus; native Tab enters its first destination, vertical orientation uses its direction-aware opening key. Focus and open item are separate from route/current-page state. Escape dismisses the applicable popup and restores its owner when source reason/focus policy permits; outside/focus-out/actual navigation need not forcibly steal focus back. Hover is supplemental and has source delay/safe-region behavior. Disabled triggers cannot activate; essential destinations are real named links.",
+  "referenceComposition": "<nav data-slot=\"navigation-menu\" aria-label=\"Report sections\" dir=\"ltr\"><ul data-slot=\"navigation-menu-list\"><li data-slot=\"navigation-menu-item\"><button data-slot=\"navigation-menu-trigger\" id=\"nav-reports\" type=\"button\" aria-expanded=\"true\" aria-controls=\"nav-popup\">Reports <svg class=\"cn-navigation-menu-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></li><li data-slot=\"navigation-menu-item\"><a data-slot=\"navigation-menu-link\" href=\"#home\" aria-current=\"page\" data-active=\"\">Home</a></li></ul></nav><div class=\"cn-navigation-menu-positioner\" style=\"--positioner-width:298px;--positioner-height:136px;--popup-width:298px;--popup-height:136px;--available-width:320px;--transform-origin:top left\"><nav class=\"cn-navigation-menu-popup\" id=\"nav-popup\"><div><div data-slot=\"navigation-menu-content\"><a data-slot=\"navigation-menu-link\" href=\"#analytics\"><span data-part=\"navigation-link-title\">Analytics report</span><span data-part=\"navigation-link-description\">View visitor and revenue trends.</span></a><a data-slot=\"navigation-menu-link\" href=\"#costs\"><span data-part=\"navigation-link-title\">Costs report</span><span data-part=\"navigation-link-description\">Review operating costs.</span></a></div></div></nav></div><section id=\"home\"><h2>Home</h2></section><section id=\"analytics\"><h2>Analytics report</h2></section><section id=\"costs\"><h2>Costs report</h2></section>",
+  "protocol": "Observed source callbacks and normalized primitive/native intent remain separate; _effect.* is internal source work, never a new DOM/public callback. Controlled props are not silently rewritten. Sidebar callback existence, controlled open and cookie write are distinct; Toast object close/remove callbacks belong to one actual toast id, and timer intents cannot manufacture completion. Existing Sheet/Tooltip/Button/Input/Skeleton actors keep their own contracts.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu\"]",
+      "description": "Actual named native nav, not a menu role."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-list\"]",
+      "description": "Actual ul composite list."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-item\"]",
+      "description": "Actual li item context."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-trigger\"]",
+      "description": "Actual native disclosure button; aria-controls points to the private native nav Popup, not Content."
+    },
+    "trigger-icon": {
+      "kind": "element",
+      "selector": ".cn-navigation-menu-trigger-icon",
+      "description": "Actual private decorative SVG."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-content\"]",
+      "description": "Actual selected content reparented into popup viewport."
+    },
+    "positioner": {
+      "kind": "element",
+      "selector": ".cn-navigation-menu-positioner",
+      "description": "One built-in auto-appended source positioner; no second default instance."
+    },
+    "popup": {
+      "kind": "element",
+      "selector": ".cn-navigation-menu-popup",
+      "description": "Actual private native nav popup, no exposed label prop."
+    },
+    "viewport": {
+      "kind": "element",
+      "selector": ".cn-navigation-menu-popup>div",
+      "description": "Actual private viewport, not a fabricated export."
+    },
+    "link": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-link\"]",
+      "description": "Actual destination/current-page link, distinct from open item."
+    },
+    "link-title": {
+      "kind": "element",
+      "selector": "[data-part=\"navigation-link-title\"]",
+      "description": "Caller title content."
+    },
+    "link-description": {
+      "kind": "element",
+      "selector": "[data-part=\"navigation-link-description\"]",
+      "description": "Caller persistent description content."
+    },
+    "indicator": {
+      "kind": "element",
+      "selector": "[data-slot=\"navigation-menu-indicator\"]",
+      "description": "Actual optional primitive Icon, decorative."
+    },
+    "indicator-arrow": {
+      "kind": "element",
+      "selector": ".cn-navigation-menu-indicator-arrow",
+      "description": "Actual private rotated square."
+    }
+  },
+  "visualStateMapping": {}
+}

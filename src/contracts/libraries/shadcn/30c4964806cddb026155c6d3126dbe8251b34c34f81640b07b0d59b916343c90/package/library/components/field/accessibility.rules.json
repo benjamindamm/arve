@@ -1,0 +1,92 @@
+{
+  "componentId": "shadcn:Field",
+  "referenceComposition": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"vertical\" class=\"cn-field cn-field-orientation-vertical\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Legend, native label, description and error are text with explicit IDs. Orientation and error styling supplement these relations.",
+  "updatesAndDescendants": "Field is role=group; FieldSet/Legend are native fieldset/legend. FieldError renders nothing without content, gives explicit children precedence over errors, deduplicates errors by message, and otherwise renders one message or a list with role=alert. It does not validate inputs or associate error IDs automatically.",
+  "referenceDecision": "This reference supplies label-for and describedby IDs and requires readable error messages. Validation remains caller-owned. Group keyboard behavior comes from the child Input rather than a fabricated Field state machine.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "set": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-set\"]",
+      "description": "Native fieldset grouping."
+    },
+    "legend": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-legend\"]",
+      "description": "Native legend; source legend/label visual variants keep native semantics."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-group\"]",
+      "description": "Actual named container-query layout scope."
+    },
+    "field": {
+      "kind": "element",
+      "selector": "[data-slot=\"field\"]",
+      "description": "Actual role=group and orientation-controlled layout."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-content\"]",
+      "description": "Flexible control/help/error stack."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-description\"]",
+      "description": "Native supporting paragraph."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-separator\"]",
+      "description": "Relative separator/text composition."
+    },
+    "separator-text": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-separator-content\"]",
+      "description": "Actual conditional explanatory separator span."
+    },
+    "error": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-error\"]",
+      "description": "Actual conditional role=alert; caller supplies readable content/IDs."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-label\"].cn-field-label",
+      "description": "Actual native Label composition; htmlFor belongs to caller."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-label\"].cn-field-title",
+      "description": "Actual div shares field-label slot; stable source class distinguishes it from the real Label."
+    },
+    "divider": {
+      "kind": "element",
+      "selector": "[data-slot=\"field-separator\"] > [data-slot=\"separator\"]",
+      "description": "Actual composed Separator child with selected runtime data-orientation."
+    }
+  },
+  "visualStateMapping": {
+    "orientation": {
+      "prop": "orientation",
+      "attribute": "data-orientation",
+      "values": [
+        "vertical",
+        "horizontal",
+        "responsive"
+      ]
+    },
+    "legend": {
+      "declaration": "FieldLegend",
+      "prop": "variant",
+      "attribute": "data-variant",
+      "values": [
+        "legend",
+        "label"
+      ]
+    }
+  }
+}

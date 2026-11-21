@@ -1,0 +1,57 @@
+{
+  "componentId": "shadcn:Pagination",
+  "sourceRule": "Root nav role=navigation is named pagination; Content/Item are ul/li. PaginationLink renders Button as anchor with nativeButton=false; isActive sets aria-current=page and outline instead of ghost, size defaults icon. Previous/Next default text and accessible English labels can be overridden for localization. Ellipsis is aria-hidden. The wrapper does not calculate page count, clamp indices, fetch results or implement a disabled prop on PaginationLink. Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state.",
+  "keyboardAndFocus": "Real links retain Tab/Enter and normal modified click navigation. There is no roving arrow selection. This reference omits unavailable Previous/Next links at boundaries instead of attaching a fake disabled attribute to an anchor. A router may prevent default onClick and navigate itself; the component does not commit a page index before the caller updates isActive.",
+  "referenceComposition": "<nav role=\"navigation\" aria-label=\"pagination\" data-slot=\"pagination\"><ul data-slot=\"pagination-content\"><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-previous\" aria-label=\"Go to previous page\" data-active=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m15 5-7 7 7 7\" fill=\"none\" stroke=\"currentColor\"/></svg><span class=\"cn-pagination-previous-text\">Previous</span></a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">1</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-outline cn-button-size-icon cn-pagination-link\" aria-current=\"page\" data-active=\"true\">2</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">3</a></li><li data-slot=\"pagination-item\"><span data-slot=\"pagination-ellipsis\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More pages</span></span></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-next\" aria-label=\"Go to next page\" data-active=\"false\"><span class=\"cn-pagination-next-text\">Next</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></a></li></ul></nav><section id=\"page-1\"><h2>Page 1</h2></section><section id=\"page-2\"><h2>Page 2</h2></section><section id=\"page-3\"><h2>Page 3</h2></section>",
+  "protocol": "SCXML consumes actual source/native transaction observations; callback objects remain original. Sends document observed callbacks, not second DOM dispatches. Parent-controlled props alone synchronize authoritative values. HTML/CSS is a semantic projection; executable behavior uses actual pinned React wrappers.",
+  "semanticParts": {
+    "navigation": {
+      "kind": "element",
+      "selector": "[data-slot=\"pagination\"]",
+      "description": "Actual named navigation surface."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"pagination-content\"]",
+      "description": "Actual native unordered action list."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"pagination-item\"]",
+      "description": "Actual native list item."
+    },
+    "link": {
+      "kind": "element",
+      "selector": "[data-slot=\"pagination-link\"]",
+      "description": "Actual Button-rendered anchor: selected primitive exposes role=button and Space activation."
+    },
+    "ellipsis": {
+      "kind": "element",
+      "selector": "[data-slot=\"pagination-ellipsis\"]",
+      "description": "Actual hidden omitted-page glyph, not an action."
+    },
+    "previous": {
+      "kind": "element",
+      "selector": ".cn-pagination-previous",
+      "description": "Actual previous-page anchor distinguished by its source class."
+    },
+    "next": {
+      "kind": "element",
+      "selector": ".cn-pagination-next",
+      "description": "Actual next-page anchor distinguished by its source class."
+    }
+  },
+  "visualStateMapping": {
+    "active": {
+      "declaration": "PaginationLink",
+      "prop": "isActive",
+      "attribute": "data-active"
+    },
+    "size": {
+      "declaration": "PaginationLink",
+      "prop": "size",
+      "dependency": "Button"
+    }
+  },
+  "keyboard": "Selected Base UI1.9 Button nativeButton=false supplies role=button and tabindex=0 on the source href anchor. Space activates on keyup; Enter uses native link activation. Modified pointer clicks still carry native href/modifiers. There is no roving arrow selection or automatic page state. The caller omits unavailable boundary actions and owns router cancellation/isActive updates."
+}

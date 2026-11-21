@@ -1,0 +1,555 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "ContextMenu",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "portal": {
+      "declaration": "ContextMenuPortal",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "trigger": {
+      "declaration": "ContextMenuTrigger",
+      "selector": "[data-slot=\"context-menu-trigger\"]",
+      "ownership": "actual source wrapper"
+    },
+    "popup": {
+      "declaration": "ContextMenuContent",
+      "selector": "[data-slot=\"context-menu-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "group": {
+      "declaration": "ContextMenuGroup",
+      "selector": "[data-slot=\"context-menu-group\"]",
+      "ownership": "actual source wrapper"
+    },
+    "label": {
+      "declaration": "ContextMenuLabel",
+      "selector": "[data-slot=\"context-menu-label\"]",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "declaration": "ContextMenuItem",
+      "selector": "[data-slot=\"context-menu-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "checkbox": {
+      "declaration": "ContextMenuCheckboxItem",
+      "selector": "[data-slot=\"context-menu-checkbox-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "radio-group": {
+      "declaration": "ContextMenuRadioGroup",
+      "selector": "[data-slot=\"context-menu-radio-group\"]",
+      "ownership": "actual source wrapper"
+    },
+    "radio": {
+      "declaration": "ContextMenuRadioItem",
+      "selector": "[data-slot=\"context-menu-radio-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "declaration": "ContextMenuSeparator",
+      "selector": "[data-slot=\"context-menu-separator\"]",
+      "ownership": "actual source wrapper"
+    },
+    "shortcut": {
+      "declaration": "ContextMenuShortcut",
+      "selector": "[data-slot=\"context-menu-shortcut\"]",
+      "ownership": "actual source wrapper"
+    },
+    "submenu-trigger": {
+      "declaration": "ContextMenuSubTrigger",
+      "selector": "[data-slot=\"context-menu-sub-trigger\"]",
+      "ownership": "actual source wrapper"
+    },
+    "submenu-popup": {
+      "declaration": "ContextMenuSubContent",
+      "selector": "[data-slot=\"context-menu-sub-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "keyboard-actions": {
+      "declaration": "ContextMenuTrigger",
+      "selector": "[data-part=\"context-actions\"]",
+      "ownership": "caller composition using DropdownMenu"
+    },
+    "checkbox-indicator": {
+      "declaration": "ContextMenuCheckboxItem",
+      "selector": "[data-slot=\"context-menu-checkbox-item\"]>.cn-context-menu-item-indicator",
+      "ownership": "private source child"
+    },
+    "radio-indicator": {
+      "declaration": "ContextMenuRadioItem",
+      "selector": "[data-slot=\"context-menu-radio-item\"]>.cn-context-menu-item-indicator",
+      "ownership": "private source child"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2128:2309",
+      "observed": "Native popup corner10/8/10px,4px padded examples and28px menu rows; Menubar2163:1692 is32px high/3px inset/2px gap.",
+      "decision": "Semantic source parts with fluid content/collision-constrained popup; independent pointer/keyboard equivalent for context usage."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:224 (Contex Menu), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2127:1964",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1963",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Disabled, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1961",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Destructive, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1959",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1956",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Disabled, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1957",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Destructive, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1962",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1955",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Disabled, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1960",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Default, State=Destructive, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1958",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1953",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Disabled, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2127:1954",
+      "sourcePartId": "2127:1965",
+      "sourceName": "Menuitem / Variant=Hover, State=Destructive, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2128:2306",
+      "sourcePartId": "2128:2308",
+      "sourceName": "Context-menu-label / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2128:2307",
+      "sourcePartId": "2128:2308",
+      "sourceName": "Context-menu-label / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "portal",
+        "trigger",
+        "popup",
+        "group",
+        "label",
+        "item",
+        "checkbox",
+        "radio-group",
+        "radio",
+        "separator",
+        "shortcut",
+        "submenu-trigger",
+        "submenu-popup",
+        "keyboard-actions",
+        "checkbox-indicator",
+        "radio-indicator"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "inset-label",
+        "highlighted",
+        "highlighted-checkbox",
+        "highlighted-radio",
+        "checked-comfortable",
+        "submenu-open",
+        "destructive",
+        "rtl-submenu"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Menu Root/Sub/Portal are context controllers, not fabricated DOM anatomy. Popup, trigger, item roles, public variants and actual private indicator wrappers remain source-bound. Common surface/item rules are deliberately delegated to the shared source menu class cn-menu-target; independent ContextMenu 8px and Dropdown/Menubar 10px corners retain native measurements. Standard rows have a28px minimum,14/20 text and source-backed 4px popup inset; content width is intrinsic with 128px minimum/320px chosen maximum further constrained by actual Positioner available width/height. Native specimen widths are not forced on long localized commands. Source highlight/disabled/checked attributes style real states; destructive text is accompanied by an explicit Delete command name. Label/shortcut helper attributes are caller additions on actual slots, with shortcut hidden from accessible name and not an invented keyboard handler. Positioner owns collision, submenu placement and available space. Portals receive direction and theme explicitly in the target; no inherited main-only styling assumption. Checkbox and radio semantics remain genuine menuitems, and indicator ownership differs between Dropdown slots and private Context/Menubar classes. Source closing/focus/cancellation authority remains in existing SCXML/API; controls are not reduced to CSS transitions. Context trigger is a passive pointer region with a real visible DropdownMenu keyboard equivalent; no unsupported ShiftF10 claim. No menu/modal/tooltip ARIA is added beyond actual primitive semantics.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

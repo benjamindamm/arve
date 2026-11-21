@@ -2,12 +2,16 @@ import { createHash } from 'node:crypto'
 import { constants } from 'node:fs'
 import { lstat, open, readdir, realpath } from 'node:fs/promises'
 import path from 'node:path'
+import { shadcnReferenceRevision } from './current-reference'
 
 export type LibrarySkillPackage = { library: string; revision: string; packageRoot: string; documentationSystem?: string }
 
 // Explicitly registered portable packages only. No repository fallback or folder discovery.
 const shadcnRevision = '65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26'
 export const librarySkillPackages: readonly LibrarySkillPackage[] = [{
+  library: 'shadcn', revision: shadcnReferenceRevision, documentationSystem: 'shadcn',
+  packageRoot: path.join(process.cwd(), 'src/contracts/libraries/shadcn', shadcnReferenceRevision, 'package'),
+}, {
   library: 'shadcn', revision: 'bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91', documentationSystem: 'shadcn',
   packageRoot: path.join(process.cwd(), 'src/contracts/libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/package'),
 }, {

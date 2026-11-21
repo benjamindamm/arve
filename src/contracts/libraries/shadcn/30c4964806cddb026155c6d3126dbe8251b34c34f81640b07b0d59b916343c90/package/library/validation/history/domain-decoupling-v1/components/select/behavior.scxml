@@ -1,0 +1,80 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Select" initial="active">
+  <datamodel>
+    <data id="value" expr="null" />
+    <data id="valueControlled" expr="false" />
+    <data id="query" expr="''" />
+    <data id="queryControlled" expr="false" />
+    <data id="highlighted" expr="null" />
+    <data id="open" expr="false" />
+    <data id="openControlled" expr="false" />
+    <data id="disabledItems" expr="['unavailable']" />
+    <data id="disabled" expr="false" />
+    <data id="readOnly" expr="false" />
+    <data id="phase" expr="'closed'" />
+  </datamodel>
+  <state id="active">
+    <transition event="SET_VALUE">
+      <assign location="value" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_QUERY">
+      <assign location="query" expr="_event.data.query" />
+    </transition>
+    <transition event="SET_VALUE_CONTROLLED">
+      <assign location="valueControlled" expr="_event.data.valueControlled" />
+    </transition>
+    <transition event="SET_QUERY_CONTROLLED">
+      <assign location="queryControlled" expr="_event.data.queryControlled" />
+    </transition>
+    <transition event="SET_DISABLED_ITEMS">
+      <assign location="disabledItems" expr="_event.data.disabledItems" />
+    </transition>
+    <transition event="SET_OPEN">
+      <assign location="open" expr="_event.data.open" />
+      <assign location="phase" expr="open ? 'opening' : 'closing'" />
+    </transition>
+    <transition event="SET_OPEN_CONTROLLED">
+      <assign location="openControlled" expr="_event.data.openControlled" />
+    </transition>
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <transition event="SET_READONLY">
+      <assign location="readOnly" expr="_event.data.readOnly" />
+    </transition>
+    <transition event="TAB SHIFT_TAB ARROW_UP ARROW_DOWN HOME END FOCUS_IN FOCUS_OUT" />
+    <transition event="ESCAPE" cond="open &amp;&amp; !disabled">
+      <send event="_effect.sourceDismissRequest" target="#_parent">
+        <param name="reason" expr="'escape-key'" />
+      </send>
+    </transition>
+    <transition event="ESCAPE" cond="!open" />
+    <transition event="SOURCE_VALUE_CHANGE" cond="!disabled &amp;&amp; !readOnly &amp;&amp; !disabledItems.includes(_event.data.item) &amp;&amp; !!_event.data.eventDetails">
+      <send event="onValueChange" target="#_parent">
+        <param name="value" expr="_event.data.value" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!valueControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="value" expr="_event.data.value" />
+      </if>
+    </transition>
+    <transition event="SOURCE_OPEN_CHANGE" cond="!!_event.data.eventDetails &amp;&amp; (!_event.data.open || !disabled)">
+      <send event="onOpenChange" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+        <param name="eventDetails" expr="_event.data.eventDetails" />
+      </send>
+      <if cond="!openControlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <assign location="open" expr="_event.data.open" />
+        <assign location="phase" expr="open ? 'opening' : 'closing'" />
+      </if>
+    </transition>
+    <transition event="SOURCE_OPEN_COMPLETE" cond="typeof _event.data.open === 'boolean' &amp;&amp; _event.data.open === open">
+      <assign location="phase" expr="open ? 'open' : 'closed'" />
+      <send event="onOpenChangeComplete" target="#_parent">
+        <param name="open" expr="_event.data.open" />
+      </send>
+    </transition>
+    <transition event="SOURCE_HIGHLIGHT">
+      <assign location="highlighted" expr="_event.data.value" />
+    </transition>
+  </state>
+</scxml>

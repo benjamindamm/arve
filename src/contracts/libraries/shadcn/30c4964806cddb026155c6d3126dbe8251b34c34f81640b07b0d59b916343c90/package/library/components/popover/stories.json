@@ -1,0 +1,96 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Popover",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "open": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"bottom\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Project options</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"bottom\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\" dir=\"rtl\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-top",
+      "name": "Side top",
+      "inputs": {
+        "side": "top"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"top\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-right",
+      "name": "Side right",
+      "inputs": {
+        "side": "right"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"right\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-bottom",
+      "name": "Side bottom",
+      "inputs": {
+        "side": "bottom"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"bottom\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-left",
+      "name": "Side left",
+      "inputs": {
+        "side": "left"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"popover-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"options-popup\">Project options</button><div data-slot=\"popover-content\" data-side=\"left\" role=\"dialog\" id=\"options-popup\" tabindex=\"-1\" aria-labelledby=\"popup-title\" aria-describedby=\"popup-description\"><div data-slot=\"popover-header\"><h2 data-slot=\"popover-title\" id=\"popup-title\">Project options</h2><p data-slot=\"popover-description\" id=\"popup-description\">Choose a project setting.</p></div><label>Project name <input type=\"text\" value=\"Report\"/></label></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

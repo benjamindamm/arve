@@ -1,0 +1,86 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "101:2"
+  },
+  "stories": [
+    {
+      "id": "figma-1871-360",
+      "name": "BreadcrumbItem / State=Default, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1871:360",
+        "part": "1871:361"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1871-382",
+      "name": "BreadcrumbItem / State=Hover/Active, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1871:382",
+        "part": "1871:361"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2198-2514",
+      "name": "BreadcrumbItem / State=Default, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2198:2514",
+        "part": "1871:361"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2198-2518",
+      "name": "BreadcrumbItem / State=Hover/Active, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2198:2518",
+        "part": "1871:361"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2198-2611",
+      "name": "Breadcrumb separator / Type=chevron-right",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2198:2611",
+        "part": "2198:2610"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2198-2613",
+      "name": "Breadcrumb separator / Type=dot",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2198:2613",
+        "part": "2198:2610"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "source-default",
+      "html": "accessibility.html",
+      "expected": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed."
+    },
+    {
+      "id": "keyboard-and-focus",
+      "expected": "Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation."
+    },
+    {
+      "id": "source-updates-and-caller-authority",
+      "expected": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed. Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation."
+    }
+  ]
+}

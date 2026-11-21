@@ -1,0 +1,541 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Button",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "default-default",
+      "name": "Default default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "default",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "default-hovered",
+      "name": "Default hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "default",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "default-focused",
+      "name": "Default focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "default",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "default-disabled",
+      "name": "Default disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "default",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "outline-default",
+      "name": "Outline default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "outline",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "outline-hovered",
+      "name": "Outline hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "outline",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "outline-focused",
+      "name": "Outline focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "outline",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "outline-disabled",
+      "name": "Outline disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "outline",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "secondary-default",
+      "name": "Secondary default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "secondary",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-secondary cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "secondary-hovered",
+      "name": "Secondary hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "secondary",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-secondary cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "secondary-focused",
+      "name": "Secondary focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "secondary",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-secondary cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "secondary-disabled",
+      "name": "Secondary disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "secondary",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-secondary cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "ghost-default",
+      "name": "Ghost default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "ghost",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-ghost cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "ghost-hovered",
+      "name": "Ghost hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "ghost",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-ghost cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "ghost-focused",
+      "name": "Ghost focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "ghost",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-ghost cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "ghost-disabled",
+      "name": "Ghost disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "ghost",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-ghost cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "destructive-default",
+      "name": "Destructive default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "destructive",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "destructive-hovered",
+      "name": "Destructive hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "destructive",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "destructive-focused",
+      "name": "Destructive focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "destructive",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "destructive-disabled",
+      "name": "Destructive disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "destructive",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "link-default",
+      "name": "Link default",
+      "visualState": "default",
+      "inputs": {
+        "variant": "link",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-link cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "link-hovered",
+      "name": "Link hovered",
+      "visualState": "hovered",
+      "inputs": {
+        "variant": "link",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-link cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "control"
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "link-focused",
+      "name": "Link focused",
+      "visualState": "focused",
+      "inputs": {
+        "variant": "link",
+        "size": "default",
+        "disabled": false
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-link cn-button-size-default\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "link-disabled",
+      "name": "Link disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "variant": "link",
+        "size": "default",
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-link cn-button-size-default\" data-slot=\"button\" disabled data-disabled>Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-xs",
+      "name": "Size xs",
+      "visualState": "default",
+      "inputs": {
+        "size": "xs"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-xs\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-sm",
+      "name": "Size sm",
+      "visualState": "default",
+      "inputs": {
+        "size": "sm"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-sm\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-lg",
+      "name": "Size lg",
+      "visualState": "default",
+      "inputs": {
+        "size": "lg"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-lg\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-icon",
+      "name": "Size icon",
+      "visualState": "default",
+      "inputs": {
+        "size": "icon",
+        "aria-label": "Save document"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-icon\" data-slot=\"button\" aria-label=\"Save document\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-icon-xs",
+      "name": "Size icon xs",
+      "visualState": "default",
+      "inputs": {
+        "size": "icon-xs",
+        "aria-label": "Save document"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-icon-xs\" data-slot=\"button\" aria-label=\"Save document\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-icon-sm",
+      "name": "Size icon sm",
+      "visualState": "default",
+      "inputs": {
+        "size": "icon-sm",
+        "aria-label": "Save document"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-icon-sm\" data-slot=\"button\" aria-label=\"Save document\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "size-icon-lg",
+      "name": "Size icon lg",
+      "visualState": "default",
+      "inputs": {
+        "size": "icon-lg",
+        "aria-label": "Save document"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-icon-lg\" data-slot=\"button\" aria-label=\"Save document\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "rounded-caller-shape",
+      "name": "Rounded caller shape",
+      "visualState": "default",
+      "inputs": {
+        "className": "ui-button-rounded"
+      },
+      "fixture": {
+        "html": "<button type=\"button\" class=\"cn-button cn-button-variant-default cn-button-size-default ui-button-rounded\" data-slot=\"button\">Run action</button>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    }
+  ]
+}

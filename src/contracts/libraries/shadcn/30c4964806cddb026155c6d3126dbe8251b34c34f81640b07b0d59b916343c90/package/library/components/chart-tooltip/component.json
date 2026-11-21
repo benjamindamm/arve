@@ -1,0 +1,145 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:ChartTooltip",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "figure": "Figure; no native document identity participates in the runtime binding.",
+    "caption": "Caption; no native document identity participates in the runtime binding.",
+    "summary": "Summary; no native document identity participates in the runtime binding.",
+    "plot": "Plot; no native document identity participates in the runtime binding.",
+    "data-scroll": "Data scroll; no native document identity participates in the runtime binding.",
+    "data-table": "Data table; no native document identity participates in the runtime binding.",
+    "feedback": "Feedback; no native document identity participates in the runtime binding.",
+    "tooltip": "Tooltip; no native document identity participates in the runtime binding.",
+    "tooltip-indicator": "Tooltip indicator; no native document identity participates in the runtime binding.",
+    "legend": "Legend; no native document identity participates in the runtime binding."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "table": {
+      "component": "../table/component.json"
+    },
+    "chart": {
+      "component": "../chart/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "figure": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-figure\"]",
+      "ownership": "caller composition",
+      "description": "Figure; no native document identity participates in the runtime binding."
+    },
+    "caption": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-caption\"]",
+      "ownership": "caller composition",
+      "description": "Caption; no native document identity participates in the runtime binding."
+    },
+    "summary": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-summary\"]",
+      "ownership": "caller composition",
+      "description": "Summary; no native document identity participates in the runtime binding."
+    },
+    "plot": {
+      "kind": "element",
+      "declaration": "ChartContainer",
+      "selector": "[data-slot=\"chart\"]",
+      "ownership": "actual source wrapper",
+      "description": "Plot; no native document identity participates in the runtime binding."
+    },
+    "data-scroll": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-table-scroll\"]",
+      "ownership": "caller composition",
+      "description": "Data scroll; no native document identity participates in the runtime binding."
+    },
+    "data-table": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-table\"]",
+      "ownership": "caller composition",
+      "description": "Data table; no native document identity participates in the runtime binding."
+    },
+    "feedback": {
+      "kind": "element",
+      "declaration": "chart_tooltipReferenceComposition",
+      "selector": "[data-part=\"chart-feedback\"]",
+      "ownership": "caller composition",
+      "description": "Feedback; no native document identity participates in the runtime binding."
+    },
+    "tooltip": {
+      "kind": "element",
+      "declaration": "ChartTooltipContent",
+      "selector": ".cn-chart-tooltip",
+      "ownership": "actual source wrapper",
+      "description": "Tooltip; no native document identity participates in the runtime binding."
+    },
+    "tooltip-indicator": {
+      "kind": "element",
+      "declaration": "ChartTooltipContent",
+      "selector": ".cn-chart-tooltip [style*=\"--color-bg\"]",
+      "ownership": "actual source inline variable binding",
+      "description": "Tooltip indicator; no native document identity participates in the runtime binding."
+    },
+    "legend": {
+      "kind": "element",
+      "declaration": "ChartLegendContent",
+      "selector": ".chart-legend",
+      "ownership": "caller className on actual source wrapper",
+      "description": "Legend; no native document identity participates in the runtime binding."
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "chart-tooltip-frame-radius": "components.chart-tooltip-frame.radius"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Each family is an explicit Recharts composition using the real ChartContainer, Tooltip and Legend wrappers. The chosen native example Card corner is retained; catalog page dimensions and individual bar/path node coordinates are not layout contracts. Plot width is fluid with a chosen 260px block extent,12/16px ticks and a complete captioned data table. Static fixtures derive geometry from source data; straight segments stand in for runtime natural interpolation and are identified as illustrations. The actual React target preserves source chart type and dataset. Radar uses an explicit 70% outer radius to leave room between its April label and the real legend. Figure gap 12/inset 16, tooltip 8px radius/10px inset and accessible scrollable table are explicit reference choices, not invented universal Figma measurements. Source tooltip actual cn-chart-tooltip class and inline --color-bg/--color-border, including dot/line/dashed, are retained; transient content remains supplementary. Source legend receives a caller className. Series colors are explicit semantic roles; no color alone conveys data. ChartStyle theme selectors require .dark context, while semantic token aliases use data-theme; the target supplies both. The reference passes Pie rootTabIndex=-1 because Recharts Pie otherwise emits a tab stop even with chart accessibilityLayer=false; this prevents an aria-hidden focus target while preserving supplementary pointer hints. No chart role slider/progressbar or focusable graph is invented. Full exact table remains primary, SVG hidden, no animation required; empty/error states never imply zero data.",
+    "variants": {
+      "chartKind": {
+        "callerAttribute": "data-chart-kind",
+        "value": "chart-tooltip"
+      },
+      "dataState": {
+        "callerState": [
+          "ready",
+          "empty",
+          "error"
+        ]
+      },
+      "indicator": {
+        "prop": "indicator",
+        "values": [
+          "dot",
+          "line",
+          "dashed"
+        ]
+      },
+      "theme": {
+        "source": "ChartStyle uses .dark ancestor; host must provide it for config.theme and data-theme for semantic tokens."
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "componentId": "shadcn:Attachment",
+  "referenceComposition": "<div data-slot=\"attachment\" data-state=\"error\" data-size=\"default\" data-orientation=\"horizontal\"><div data-slot=\"attachment-media\" data-variant=\"icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6 2h8l4 4v16H6z\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"attachment-content\"><span data-slot=\"attachment-title\">annual-report.pdf</span><span data-slot=\"attachment-description\">Upload failed. Check the connection and retry.</span></div><button type=\"button\" data-slot=\"attachment-trigger\" aria-label=\"Open annual-report.pdf\"></button><div data-slot=\"attachment-actions\"><button type=\"button\" data-slot=\"attachment-action\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-xs\" aria-describedby=\"code-help\" aria-label=\"Retry annual-report.pdf\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M4 10a8 8 0 1 1 1 9M4 4v6h6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><p role=\"status\">annual-report.pdf upload failed.</p>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "Filename, type/size where relevant and upload state/error are text. Decorative media icon is explicitly hidden. Action labels include the actual attachment name; thumbnails need useful alt when conveying content.",
+  "updatesAndDescendants": "Attachment state is a caller-supplied styling prop, default done; it does not upload, select files, retry, cancel or progress through states. Title/Description are spans, Content/Actions/Group are divs. AttachmentAction composes Button, ghost/icon-xs defaults. AttachmentTrigger uses native button default type=button, or an explicit native render such as anchor. Group supplies horizontal overflow/snap, not selection state. Caller owns async request transitions and focus after removal. Do not nest Trigger buttons/anchors inside other interactive elements or cover secondary actions with an unnamed trigger.",
+  "referenceDecision": "The error wording, status text and Retry Button are explicit caller composition. A real async operation determines state; no synthetic timeout is attached to make the visual upload states look operational.",
+  "keyboard": "Attachment state is a caller-supplied styling prop, default done; it does not upload, select files, retry, cancel or progress through states. Title/Description are spans, Content/Actions/Group are divs. AttachmentAction composes Button, ghost/icon-xs defaults. AttachmentTrigger uses native button default type=button, or an explicit native render such as anchor. Group supplies horizontal overflow/snap, not selection state. Caller owns async request transitions and focus after removal. Do not nest Trigger buttons/anchors inside other interactive elements or cover secondary actions with an unnamed trigger.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "protocol": "Source-normalized observations project real internal image/scroll state, derived progress, caller-owned upload props or the composed Collapsible protocol. No generic activation callback is invented. Internal lifecycle observations are not public Root events.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment\"]",
+      "description": "Passive file/state surface with actual size and orientation."
+    },
+    "media": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-media\"]",
+      "description": "Icon or image variant; caller supplies appropriate image alt."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-content\"]",
+      "description": "Flexible file metadata stack."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-title\"]",
+      "description": "Complete filename in text; visual truncation never removes its accessible text."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-description\"]",
+      "description": "File metadata or actionable error wording."
+    },
+    "actions": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-actions\"]",
+      "description": "Independent native actions above any whole-tile trigger."
+    },
+    "action": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-action\"]",
+      "description": "Actual delegated Button, ghost/icon-xs defaults."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-trigger\"]",
+      "description": "Actual useRender native button or explicit caller link; sibling to secondary actions."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"attachment-group\"]",
+      "description": "Native overflow/snap layout, never selection state."
+    }
+  },
+  "visualStateMapping": {
+    "state": [
+      "idle",
+      "uploading",
+      "processing",
+      "error",
+      "done"
+    ],
+    "size": [
+      "default",
+      "sm",
+      "xs"
+    ],
+    "orientation": [
+      "horizontal",
+      "vertical"
+    ],
+    "media.variant": [
+      "icon",
+      "image"
+    ]
+  }
+}

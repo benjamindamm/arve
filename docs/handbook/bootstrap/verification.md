@@ -83,3 +83,19 @@ Die weiter oben dokumentierten isolierten Datenbank- und Importer-Integrationste
 Aktueller Snapshot: 116 veröffentlichte Seiten, darunter 69 Komponenten, eine unveränderte Implementierung und keine Medien. SHA-256: `c09df3e1b574cd839e0b68ac953880bf291c8482f06d6936448a2795782dd30d`. Alle Komponentenseiten sind an `bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91` gebunden. Der historische Implementierungspin bleibt unverändert.
 
 Gesamtabgleich aller 116 Portal-Seiten und 115 MCP-Unterseiten PASS; alle 69 vollständigen Quellencontracts und Framework-Referenzen geprüft. Wiederholtes Apply der gesonderten Übernahme: null neue und null geänderte Seiten. Importer-/Skill-Tests (14), MCP-Skillprüfung beider Revisionen, Komponenten-Releaseprüfung, TypeScript und Produktionsbuild erfolgreich. Die früheren isolierten Bootstrap-Datenbanktests und die redaktionellen 50-Seiten-Reviews bleiben historische Nachweise und wurden nicht als Abnahme aller neuen Seiten fortgeschrieben. Umfang und Grenzen: [Vollständige Quellenreferenz](../complete-shadcn/README.md).
+
+## Button als Komponentenvorlage · 21. November 2026
+
+Lokaler Snapshot weiterhin 116 Seiten und eine unveränderte Implementierung. Der Button enthält neun aktuelle redaktionelle Abschnitte statt der bisherigen historischen Vertiefungen. SHA-256: `b0c7069839b89223acd8731b59eb0c554f7e67519b872b5391c9a47cfdf3b29a`. Alle 115 anderen veröffentlichten Seiten stimmen mit dem vorigen Inhaltsstand überein; der historische Implementierungspin bleibt erhalten.
+
+Komponentenvorlage: neun Abschnitte, 18 Quellen und 20 Aussagen mit geprüften Quellenreferenzen. CMS/Release/MCP-Abgleich, bestehende Komponentenprüfung, TypeScript, regulärer und statischer Build sowie statische Dateiprüfung erfolgreich. Die bisherigen Gesamt- und Datenbank-Importtests wurden nicht als vollständige Neuabnahme fortgeschrieben. [Nachweise und Grenzen](../component-template/verification.json). Dieser Stand ist lokal vorbereitet und noch nicht gepusht.
+
+## Semantischer Export und CSS-Abhängigkeiten · 21. November 2026
+
+ui-contracts ist mit Commit `8bc65e7b6abd003264d98b84c2ccd3b5c199d583` gepusht. Die umfangreichen Originalquellen und historischen Prüfläufe sind dort verlustfrei komprimiert; Wiederherstellung und Export erhalten sämtliche Dateien. Der neue eigenständige Export enthält 9.324 manifestierte Dateien und hat Revision `30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90`.
+
+Arve übernimmt alle 69 Komponentenpins. Die Inhalte der anderen 68 Komponenten und der 47 übrigen Seiten sowie der historische Implementierungsnachweis bleiben unverändert. Der Button ist mit dem neuen Contract abgeglichen: neun Abschnitte, 20 Quellen und 21 überprüfte Aussagen. Ein zweites Apply ändert null Seiten. Snapshot-SHA-256: `ea04b0dfb2341856e2e1b20b2cf97e774076de7e745409e5f08e75db5296a8d4`.
+
+Importer- und Skilltests jeweils acht bestanden; Button-MCP-Inhalte entsprechen der Release. Alle 69 Portal-/MCP-Komponenten sowie 77 unterschiedliche CSS-/Schriftdateien mit HTTP-Status, Hash und Medientyp geprüft. Auch die statische Vorschau liefert diese 77 Dateien korrekt. TypeScript, regulärer und datenbankfreier statischer Produktionsbuild bestanden. Statische Prüfung: 198 HTML-Dateien, 116 Handbuchseiten, 69 Komponenten, 57.348 interne Verweise und 2.955 Dateien mit geprüftem Hash. Button im Browser bei 1440/390 Pixeln geprüft; statische Demo mit Enter, Leertaste, Outline und disabled bedient.
+
+[Übernahme und Grenzen](../semantic-shadcn/README.md). Der Arve-Arbeitsstand ist lokal und noch nicht committet oder gepusht. Historische Nachweise bleiben unter ihren bisherigen Revisionen erhalten und gelten nicht als Neuabnahme aller Implementierungen.

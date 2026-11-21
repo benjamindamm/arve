@@ -1,0 +1,189 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Sheet",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "SheetTrigger",
+      "selector": "[data-slot=\"sheet-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "SheetContent",
+      "selector": "[data-slot=\"sheet-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "overlay": {
+      "declaration": "SheetContent",
+      "selector": "[data-slot=\"sheet-overlay\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "declaration": "SheetHeader",
+      "selector": "[data-slot=\"sheet-header\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "footer": {
+      "declaration": "SheetFooter",
+      "selector": "[data-slot=\"sheet-footer\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "declaration": "SheetTitle",
+      "selector": "[data-slot=\"sheet-title\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "declaration": "SheetDescription",
+      "selector": "[data-slot=\"sheet-description\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "close": {
+      "declaration": "SheetClose",
+      "selector": "[data-slot=\"sheet-close\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2055:995",
+      "property": "width",
+      "value": 384,
+      "semanticRole": "selected surface width evidence"
+    },
+    {
+      "sourceNodeId": "2055:995",
+      "property": "layout.gap",
+      "value": 16,
+      "semanticRole": "content gap"
+    },
+    {
+      "sourceNodeId": "2055:1022",
+      "property": "text",
+      "value": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "autoResize": "HEIGHT"
+      },
+      "semanticRole": "title typography"
+    },
+    {
+      "sourceNodeId": "2056:233",
+      "property": "layout",
+      "value": {
+        "mode": "VERTICAL",
+        "gap": 2,
+        "padding": [
+          16,
+          16,
+          16,
+          16
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "semanticRole": "header layout"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1988 (Sheet), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2055:1039",
+      "sourcePartId": "2055:1040",
+      "sourceName": "SheetHeader / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2055:1038",
+      "sourcePartId": "2055:1040",
+      "sourceName": "SheetHeader / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2055:1051",
+      "sourcePartId": "2055:1051",
+      "sourceName": "SheetFooter",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "overlay",
+        "header",
+        "footer",
+        "title",
+        "description",
+        "close"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "disabled-trigger",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left",
+        "without-icon-close"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The pinned Sheet wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual side values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "format": "shadcn-contract-cases/1",
+  "result": "PASS",
+  "scope": "Bounded SCXML transition/data/callback consistency cases cross-referenced to real browser cases; no complete SCXML conformance claim.",
+  "browserEvidence": "../core-controls-browser-v1.json",
+  "components": [
+    {
+      "component": "button",
+      "behaviorSha256": "d593e6bb70eedaa5eeeda020a01aa6931266213a18c4d1786494f4994888b37a",
+      "cases": [
+        {
+          "id": "normal pointer/keyboard click reports exactly one native handler",
+          "result": "pass"
+        },
+        {
+          "id": "disabled blocks click and reenable restores it",
+          "result": "pass"
+        },
+        {
+          "id": "Escape/focus do not fabricate value changes or action callbacks",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "checkbox",
+      "behaviorSha256": "ac20796e1ad6700f1603e337c5c3a10faedc7a94c2a32615a61d43f7e3f93550",
+      "cases": [
+        {
+          "id": "accepted uncontrolled change is boolean and reports callback",
+          "result": "pass"
+        },
+        {
+          "id": "callback cancellation preserves prior value while callback was observed",
+          "result": "pass"
+        },
+        {
+          "id": "controlled callback does not overwrite prop-authoritative value",
+          "result": "pass"
+        },
+        {
+          "id": "readonly and disabled guard both updates and callback",
+          "result": "pass"
+        },
+        {
+          "id": "string mixed is not a boolean checked payload",
+          "result": "pass"
+        },
+        {
+          "id": "Escape/focus do not fabricate value changes or action callbacks",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "switch",
+      "behaviorSha256": "840277ef1596b7636e358fa95079eafbd68398f5c87714d04568ca28a05ac0f7",
+      "cases": [
+        {
+          "id": "accepted uncontrolled change is boolean and reports callback",
+          "result": "pass"
+        },
+        {
+          "id": "callback cancellation preserves prior value while callback was observed",
+          "result": "pass"
+        },
+        {
+          "id": "controlled callback does not overwrite prop-authoritative value",
+          "result": "pass"
+        },
+        {
+          "id": "readonly and disabled guard both updates and callback",
+          "result": "pass"
+        },
+        {
+          "id": "string mixed is not a boolean checked payload",
+          "result": "pass"
+        },
+        {
+          "id": "Escape/focus do not fabricate value changes or action callbacks",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "input",
+      "behaviorSha256": "e9fe1dab0a2228e20f349a2cfbb49c756d6d7363ceb36b7d51da2ca0dcd9cf23",
+      "cases": [
+        {
+          "id": "uncontrolled string edit updates and reports candidate",
+          "result": "pass"
+        },
+        {
+          "id": "controlled edit reports but props own committed value",
+          "result": "pass"
+        },
+        {
+          "id": "disabled and readonly cannot change value",
+          "result": "pass"
+        },
+        {
+          "id": "wrong payload rejected rather than coerced as user input",
+          "result": "pass"
+        },
+        {
+          "id": "Escape/focus do not fabricate value changes or action callbacks",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

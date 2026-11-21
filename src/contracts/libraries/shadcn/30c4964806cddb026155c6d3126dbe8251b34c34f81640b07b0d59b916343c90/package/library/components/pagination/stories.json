@@ -1,0 +1,57 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Pagination",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "middle-page",
+      "name": "Middle page",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav role=\"navigation\" aria-label=\"pagination\" data-slot=\"pagination\"><ul data-slot=\"pagination-content\"><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-previous\" aria-label=\"Go to previous page\" data-active=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m15 5-7 7 7 7\" fill=\"none\" stroke=\"currentColor\"/></svg><span class=\"cn-pagination-previous-text\">Previous</span></a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">1</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-outline cn-button-size-icon cn-pagination-link\" aria-current=\"page\" data-active=\"true\">2</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">3</a></li><li data-slot=\"pagination-item\"><span data-slot=\"pagination-ellipsis\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More pages</span></span></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-next\" aria-label=\"Go to next page\" data-active=\"false\"><span class=\"cn-pagination-next-text\">Next</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></a></li></ul></nav><section id=\"page-1\"><h2>Page 1</h2></section><section id=\"page-2\"><h2>Page 2</h2></section><section id=\"page-3\"><h2>Page 3</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "first-boundary",
+      "name": "First boundary",
+      "inputs": {
+        "currentPage": 1
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav role=\"navigation\" aria-label=\"pagination\" data-slot=\"pagination\"><ul data-slot=\"pagination-content\"><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-outline cn-button-size-icon cn-pagination-link\" aria-current=\"page\" data-active=\"true\">1</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">2</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">3</a></li><li data-slot=\"pagination-item\"><span data-slot=\"pagination-ellipsis\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More pages</span></span></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-next\" aria-label=\"Go to next page\" data-active=\"false\"><span class=\"cn-pagination-next-text\">Next</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></a></li></ul></nav><section id=\"page-1\"><h2>Page 1</h2></section><section id=\"page-2\"><h2>Page 2</h2></section><section id=\"page-3\"><h2>Page 3</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "last-boundary",
+      "name": "Last boundary",
+      "inputs": {
+        "currentPage": 3
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav role=\"navigation\" aria-label=\"pagination\" data-slot=\"pagination\"><ul data-slot=\"pagination-content\"><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-previous\" aria-label=\"Go to previous page\" data-active=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m15 5-7 7 7 7\" fill=\"none\" stroke=\"currentColor\"/></svg><span class=\"cn-pagination-previous-text\">Previous</span></a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">1</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">2</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-outline cn-button-size-icon cn-pagination-link\" aria-current=\"page\" data-active=\"true\">3</a></li><li data-slot=\"pagination-item\"><span data-slot=\"pagination-ellipsis\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More pages</span></span></li></ul></nav><section id=\"page-1\"><h2>Page 1</h2></section><section id=\"page-2\"><h2>Page 2</h2></section><section id=\"page-3\"><h2>Page 3</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<nav role=\"navigation\" aria-label=\"pagination\" data-slot=\"pagination\" dir=\"rtl\"><ul data-slot=\"pagination-content\"><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-previous\" aria-label=\"Go to previous page\" data-active=\"false\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m15 5-7 7 7 7\" fill=\"none\" stroke=\"currentColor\"/></svg><span class=\"cn-pagination-previous-text\">Previous</span></a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-1\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">1</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-2\" class=\"cn-button cn-button-variant-outline cn-button-size-icon cn-pagination-link\" aria-current=\"page\" data-active=\"true\">2</a></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon cn-pagination-link\" data-active=\"false\">3</a></li><li data-slot=\"pagination-item\"><span data-slot=\"pagination-ellipsis\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More pages</span></span></li><li data-slot=\"pagination-item\"><a data-slot=\"pagination-link\" role=\"button\" tabindex=\"0\" href=\"#page-3\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-pagination-link cn-pagination-next\" aria-label=\"Go to next page\" data-active=\"false\"><span class=\"cn-pagination-next-text\">Next</span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></a></li></ul></nav><section id=\"page-1\"><h2>Page 1</h2></section><section id=\"page-2\"><h2>Page 2</h2></section><section id=\"page-3\"><h2>Page 3</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    }
+  ]
+}

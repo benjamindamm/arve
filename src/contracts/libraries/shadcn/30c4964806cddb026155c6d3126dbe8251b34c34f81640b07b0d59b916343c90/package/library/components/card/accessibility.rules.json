@@ -1,0 +1,64 @@
+{
+  "componentId": "shadcn:Card",
+  "referenceComposition": "<div data-slot=\"card\" data-size=\"default\"><div data-slot=\"card-header\"><div data-slot=\"card-title\"><h2>Project overview</h2></div><div data-slot=\"card-description\">Current project status</div><div data-slot=\"card-action\"><button type=\"button\">More actions</button></div></div><div data-slot=\"card-content\"><p>Three tasks remain.</p></div><div data-slot=\"card-footer\"><button type=\"button\">View project</button></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "A text heading, description and body identify the group; imagery or card color is not its sole meaning.",
+  "updatesAndDescendants": "Card and its slots are native div wrappers. CardTitle does not automatically become a heading, and the whole card is not inherently clickable. Parent content updates rerender normally; descendants own their actions.",
+  "referenceDecision": "The h2 is deliberately supplied as CardTitle children in this reference. Consumers choose heading level from document hierarchy.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "surface": {
+      "kind": "element",
+      "selector": "[data-slot=\"card\"]",
+      "description": "Content grouping surface, not an automatic landmark or action."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-header\"]",
+      "description": "Title/description grid and optional action placement."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-title\"]",
+      "description": "Title wrapper; caller supplies a real heading."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-description\"]",
+      "description": "Supporting text."
+    },
+    "action": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-action\"]",
+      "description": "Optional caller actions, with their own native semantics."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-content\"]",
+      "description": "Fluid body content."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"card-footer\"]",
+      "description": "Wrapped caller footer actions or text."
+    }
+  },
+  "visualStateMapping": {
+    "size": {
+      "prop": "size",
+      "attribute": "data-size",
+      "values": [
+        "default",
+        "sm"
+      ]
+    },
+    "direction": {
+      "prop": "dir",
+      "values": [
+        "ltr",
+        "rtl"
+      ]
+    }
+  }
+}

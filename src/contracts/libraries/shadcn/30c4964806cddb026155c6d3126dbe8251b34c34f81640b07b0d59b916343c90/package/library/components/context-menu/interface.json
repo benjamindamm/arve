@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "context-menu.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "ContextMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "Actual menu Root open/defaultOpen; each menu/submenu instance owns its state. Menubar container itself exposes no selected menu value."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Root.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:9."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: ContextMenuPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual cancellable source request with native event/reason; controlled props remain authoritative."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual source callback after the transition lifecycle."
+            },
+            {
+              "name": "onItemHighlighted",
+              "type": {
+                "text": "(highlightedItem: HTMLElement | undefined, eventDetails: MenuPrimitive.Root.HighlightEventDetails) => void"
+              },
+              "description": "Actual inherited source callback, not command activation; context menu inherits the Menu highlight details."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Controlled/uncontrolled menu ownership and cancellable requests; not a CSS root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuPortal",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Portal.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:13."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Portal mounting context; positioner and popup remain source-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Trigger.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:19."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "keyboard-actions",
+              "description": "Visible keyboard equivalent; its actual target is the separate DropdownMenu contract, not a fabricated ContextMenuTrigger keyboard feature. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Popup.Props &\n  Pick<\n    ContextMenuPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >"
+              },
+              "description": "Exact source props/defaults {\"align\": \"\\\"start\\\"\", \"alignOffset\": \"4\", \"side\": \"\\\"right\\\"\", \"sideOffset\": \"0\"}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:32."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "popup",
+              "description": "Popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Group.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:66."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "group",
+              "description": "Group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuLabel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.GroupLabel.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:72."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "label",
+              "description": "Label uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Item.Props & {\n  inset?: boolean\n  variant?: \"default\" | \"destructive\"\n}"
+              },
+              "description": "Exact source props/defaults {\"variant\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:89."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "ContextMenuPrimitive.Item.Props[\"onClick\"]"
+              },
+              "description": "Actual native item activation handler inherited from primitive Item props."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Item uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuSub",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.SubmenuRoot.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:112."
+            }
+          ],
+          "events": [],
+          "cssParts": []
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuSubTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.SubmenuTrigger.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:118."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "submenu-trigger",
+              "description": "Submenu trigger uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuSubContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof ContextMenuContent>"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:149."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "submenu-popup",
+              "description": "Submenu popup uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuCheckboxItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.CheckboxItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:162."
+            }
+          ],
+          "events": [
+            {
+              "name": "onCheckedChange",
+              "type": {
+                "text": "(checked: boolean, eventDetails: ContextMenuPrimitive.CheckboxItem.ChangeEventDetails) => void"
+              },
+              "description": "Actual source menu setting callback; defaults closeOnClick=false."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "checkbox",
+              "description": "Checkbox uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "checkbox-indicator",
+              "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuRadioGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.RadioGroup.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:198."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: any, eventDetails: ContextMenuPrimitive.RadioGroup.ChangeEventDetails) => void"
+              },
+              "description": "Actual generic source radio setting callback; item activation does not automatically dismiss by default."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "radio-group",
+              "description": "Radio group uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuRadioItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.RadioItem.Props & {\n  inset?: boolean\n}"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:209."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "radio",
+              "description": "Radio uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "radio-indicator",
+              "description": "Actual non-exported indicator wrapper; checked glyph is primitive-owned. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuSeparator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "ContextMenuPrimitive.Separator.Props"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:243."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "separator",
+              "description": "Separator uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "ContextMenuShortcut",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\">"
+              },
+              "description": "Exact source props/defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/context-menu.tsx.source:256."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "shortcut",
+              "description": "Shortcut uses actual source slot; caller label/shortcut helper attributes only style these same actual elements. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "purpose": "Present a dialog task from a chosen viewport edge.",
+  "avoid": "Edge position does not establish modality or close behavior.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Sheet",
+  "sourceRule": "Sheet is a Dialog composition. Content side defaults right and accepts top/right/bottom/left; showCloseButton defaults true. A task commits only through its actual child action; simply closing, Escape or outside press does not invent an application result.",
+  "keyboardAndFocus": "Sheet inherits the pinned Dialog primitive focus containment, Escape/Close and return-focus behavior. The default modal policy is true; side changes placement, not semantics or commit rules.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/sheet.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/sheet.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/sheet-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/dialog.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "The pinned Sheet wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual side values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

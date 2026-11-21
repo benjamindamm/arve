@@ -1,0 +1,78 @@
+@import "../../tokens.css";
+
+[data-slot="accordion"] {
+  min-inline-size: 0;
+  inline-size: 100%;
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+}
+
+[data-slot="accordion-item"] {
+  border-block-end: var(--ui-border-width) solid var(--ui-color-border);
+}
+
+[data-slot="accordion-item"]>h3 {
+  margin: 0;
+  font: inherit;
+}
+
+[data-slot="accordion-trigger"] {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--ui-accordion-trigger-min-height);
+  gap: var(--ui-accordion-trigger-gap);
+  padding: var(--ui-accordion-trigger-padding-block)0;
+  border: 0;
+  border-radius: var(--ui-accordion-trigger-radius);
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--ui-accordion-font-size);
+  line-height: var(--ui-accordion-line-height);
+  font-weight: var(--ui-font-weight-medium);
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="accordion-trigger-icon"] {
+  display: none;
+  flex: none;
+  inline-size: var(--ui-accordion-icon-size);
+  block-size: var(--ui-accordion-icon-size);
+}
+
+[data-slot="accordion-trigger"][aria-expanded="false"] [data-slot="accordion-trigger-icon"]:nth-last-child(2),
+[data-slot="accordion-trigger"][aria-expanded="true"] [data-slot="accordion-trigger-icon"]:last-child {
+  display: block;
+}
+
+[data-slot="accordion-trigger"]:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+[data-slot="accordion-trigger"]:focus-visible {
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  outline-offset: var(--ui-border-width);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+[data-slot="accordion-trigger"]:disabled,
+[data-slot="accordion-trigger"][data-disabled] {
+  opacity: var(--ui-accordion-disabled-opacity);
+}
+
+[data-slot="accordion-content"] {
+  overflow: hidden;
+  min-inline-size: 0;
+  padding-block-end: var(--ui-accordion-content-padding-end);
+  font-size: var(--ui-accordion-font-size);
+  line-height: var(--ui-accordion-line-height);
+}
+
+[data-slot="accordion-content"] p {
+  margin: 0;
+}

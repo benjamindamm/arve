@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "drawer.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Drawer",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Root.Props & {\n  showSwipeHandle?: boolean\n}"
+              },
+              "description": "Exact public prop type and defaults {\"modal\": \"true\", \"showSwipeHandle\": \"false\", \"swipeDirection\": \"\\\"down\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:26."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: DrawerPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            },
+            {
+              "name": "onSnapPointChange",
+              "type": {
+                "text": "(snapPoint: DrawerPrimitive.Root.SnapPoint | null, eventDetails: DrawerPrimitive.Root.SnapPointChangeEventDetails) => void"
+              },
+              "description": "Source snap update distinct from open/dismissal."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Owns open/modal state without a DOM root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:54."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Actual primitive native trigger. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerPortal",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Portal.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:58."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Portal ownership, not a styled anatomy element. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerClose",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Close.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:62."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "close",
+              "description": "Native close action, including optional internal icon close. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerOverlay",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Backdrop.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:66."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "overlay",
+              "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerSwipeHandle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:82."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "swipe-handle",
+              "description": "Optional hidden grip; no independent button behavior. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Popup.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:99."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual focus-managed popup surface. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "viewport",
+              "description": "Primitive viewport, separate from focus popup. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "body",
+              "description": "Primitive content container, not the outer popup. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:166."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Intrinsic heading stack. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:179."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Actions, kept in caller order. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Title.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:192."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Actual heading named by primitive relation. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "DrawerDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "DrawerPrimitive.Description.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source:202."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "description",
+              "description": "Actual descriptive paragraph. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

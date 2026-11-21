@@ -1,0 +1,109 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "recipe": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table\"]",
+      "ownership": "explicit documented guide recipe"
+    },
+    "toolbar": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-toolbar\"]",
+      "ownership": "actual source output"
+    },
+    "filter": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-filter\"]",
+      "ownership": "actual source output"
+    },
+    "table": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-slot=\"table\"]",
+      "ownership": "actual source output"
+    },
+    "sort": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-sort\"]",
+      "ownership": "actual source output"
+    },
+    "selection": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-selection\"]",
+      "ownership": "actual source output"
+    },
+    "empty": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-empty\"]",
+      "ownership": "actual source output"
+    },
+    "pages": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-pages\"]",
+      "ownership": "actual source output"
+    },
+    "status": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-status\"]",
+      "ownership": "actual source output"
+    },
+    "error": {
+      "declaration": "DataTableRecipe",
+      "selector": "[data-part=\"data-table-error\"]",
+      "ownership": "actual source output"
+    },
+    "dashboard-block": {
+      "declaration": "DashboardDataTableBlock",
+      "selector": null,
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2132:2222",
+      "observed": "Native558px×349px table sample with compact controls.",
+      "decision": "Native Table component visual roles delegate through explicit imports; intrinsic responsive width replaces fixed sample width, selected/empty/error fixtures cover actual feature state."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:225 (Data Table), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2131:504",
+      "sourcePartId": "2131:401",
+      "sourceName": "Frame 2",
+      "semanticParts": [
+        "recipe",
+        "toolbar",
+        "filter",
+        "table",
+        "sort",
+        "selection",
+        "empty",
+        "pages",
+        "status",
+        "error",
+        "dashboard-block"
+      ],
+      "canonicalFixtures": [
+        "payments",
+        "selected-stable-row",
+        "sort-ascending",
+        "sort-descending",
+        "empty-filtered",
+        "hidden-column-empty",
+        "data-error",
+        "sort-keyboard-focus",
+        "row-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "DataTable is the official Table+TanStack guide recipe, not an invented exported widget root. Caller semantic data-part marks only recipe-owned toolbar, filter, selection, sort action, empty/error/count and page navigation. Complete Table CSS explicitly owns all native table row/cell/head/caption geometry; Button/Input CSS own those actual source controls. The recipe retains native compact 16px selection affordance and uses bounded readable spacing/filter width decisions instead of558px native specimen width. Actual selected row data-state and native checkbox are independent from sorting/filtering/paging/visibility states. Stable getRowId binds checkbox names and state to records; current aria-sort belongs to real scoped header. Empty colSpan follows visible column count. Error is caller feedback and does not erase controlled feature state. DashboardDataTableBlock is explicitly a separate frozen application composition, not rendered extra anatomy. Native table semantics stay native; no fictitious ARIA grid navigation, record schema or backend lifecycle.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

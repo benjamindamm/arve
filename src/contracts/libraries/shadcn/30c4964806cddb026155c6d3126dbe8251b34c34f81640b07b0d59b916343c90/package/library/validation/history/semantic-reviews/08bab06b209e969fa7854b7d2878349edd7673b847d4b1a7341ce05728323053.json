@@ -1,0 +1,25 @@
+{
+  "purpose": "Indicate that work is in progress.",
+  "avoid": "Animation does not communicate purpose or completion by itself.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Spinner",
+  "contentAlternative": "The actual wrapper has role=status and default aria-label=Loading; this reference supplies a task-specific localized name. Animation is supplementary.",
+  "updatesAndDescendants": "Spinner renders the selected icon with an animation class; it does not start tasks, calculate progress or determine completion. The task owner removes/replaces the status on completion/failure. Reduced motion may stop rotation while keeping the accessible status.",
+  "referenceDecision": "The task-specific label and reduced-motion policy are explicit usage decisions. The icon-family picker on the registry website is outside the component API.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/spinner.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/spinner.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/spinner-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "The actual source indicator is a role=status SVG with a default Loading name. Reference usage supplies the task-specific Loading contacts name. The default16px size and12/20/24px source specimens map to explicit caller classes, not an invented public size prop. The source icon adapter chooses a vendor glyph; canonical SVG is a semantic icon projection, not a claim that native path bytes match all vendors. A chosen1s rotation expresses animate-spin; reduced-motion removes movement while preserving named status.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

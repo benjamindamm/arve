@@ -1,0 +1,814 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Combobox",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "input-frame": {
+      "declaration": "ComboboxInput",
+      "selector": ".cn-combobox-input",
+      "ownership": "actual source wrapper"
+    },
+    "input": {
+      "declaration": "ComboboxInput",
+      "selector": ".cn-combobox-input input[data-slot=\"input-group-control\"]",
+      "ownership": "actual source wrapper"
+    },
+    "trigger": {
+      "declaration": "ComboboxTrigger",
+      "selector": "[data-slot=\"combobox-trigger\"]",
+      "ownership": "actual source wrapper"
+    },
+    "clear": {
+      "declaration": "ComboboxInput",
+      "selector": "[data-part=\"combobox-clear\"]",
+      "ownership": "caller composition"
+    },
+    "popup": {
+      "declaration": "ComboboxContent",
+      "selector": "[data-slot=\"combobox-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "declaration": "ComboboxList",
+      "selector": "[data-slot=\"combobox-list\"]",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "declaration": "ComboboxItem",
+      "selector": "[data-slot=\"combobox-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "indicator": {
+      "declaration": "ComboboxItem",
+      "selector": ".cn-combobox-item-indicator",
+      "ownership": "actual source wrapper"
+    },
+    "group": {
+      "declaration": "ComboboxGroup",
+      "selector": "[data-slot=\"combobox-group\"]",
+      "ownership": "actual source wrapper"
+    },
+    "label": {
+      "declaration": "ComboboxLabel",
+      "selector": "[data-slot=\"combobox-label\"]",
+      "ownership": "actual source wrapper"
+    },
+    "empty": {
+      "declaration": "ComboboxEmpty",
+      "selector": "[data-slot=\"combobox-empty\"]",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "declaration": "ComboboxSeparator",
+      "selector": "[data-slot=\"combobox-separator\"]",
+      "ownership": "actual source wrapper"
+    },
+    "chips": {
+      "declaration": "ComboboxChips",
+      "selector": "[data-slot=\"combobox-chips\"]",
+      "ownership": "actual source wrapper"
+    },
+    "chip": {
+      "declaration": "ComboboxChip",
+      "selector": "[data-slot=\"combobox-chip\"]",
+      "ownership": "actual source wrapper"
+    },
+    "chip-input": {
+      "declaration": "ComboboxChipsInput",
+      "selector": "[data-slot=\"combobox-chip-input\"]",
+      "ownership": "actual source wrapper"
+    },
+    "chip-remove": {
+      "declaration": "ComboboxChip",
+      "selector": "[data-part=\"combobox-chip-remove\"]",
+      "ownership": "caller composition"
+    },
+    "value": {
+      "declaration": "ComboboxValue",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "collection": {
+      "declaration": "ComboboxCollection",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "anchor": {
+      "declaration": "useComboboxAnchor",
+      "selector": null,
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2216:1864",
+      "observed": "32px input group/10px corners;1962:1131 popup10px/4px inset;2216:5335 chips32px.",
+      "decision": "Fluid width, explicit named auxiliary actions, chosen wrapping24px tokens and actual input-group DOM slot."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:187 (Combobox), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1952:1632",
+      "sourcePartId": "1952:1633",
+      "sourceName": "ComboboxChip / Dir=LTR, State=Default",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1952:1631",
+      "sourcePartId": "1952:1633",
+      "sourceName": "ComboboxChip / Dir=LTR, State=Disabled",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2540",
+      "sourcePartId": "1952:1633",
+      "sourceName": "ComboboxChip / Dir=RTL, State=Default",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2543",
+      "sourcePartId": "1952:1633",
+      "sourceName": "ComboboxChip / Dir=RTL, State=Disabled",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2535",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2533",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Hover, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2534",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Disabled, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2591",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2598",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Hover, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1953:2605",
+      "sourcePartId": "1953:2539",
+      "sourceName": "ComboboxItem / State=Disabled, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1961:1117",
+      "sourcePartId": "1961:1118",
+      "sourceName": "ComboboxList / Type=Default",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1961:1116",
+      "sourcePartId": "1961:1118",
+      "sourceName": "ComboboxList / Type=Seperator",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1961:1114",
+      "sourcePartId": "1961:1118",
+      "sourceName": "ComboboxList / Type=Search",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1961:1115",
+      "sourcePartId": "1961:1118",
+      "sourceName": "ComboboxList / Type=Label",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1954:2618",
+      "sourcePartId": "1970:1343",
+      "sourceName": "ComboboxLabel / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1344",
+      "sourcePartId": "1970:1343",
+      "sourceName": "ComboboxLabel / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2215:1321",
+      "sourcePartId": "2215:1320",
+      "sourceName": "ComboboxLabel / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2215:1323",
+      "sourcePartId": "2215:1320",
+      "sourceName": "ComboboxLabel / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-frame",
+        "input",
+        "trigger",
+        "clear",
+        "popup",
+        "list",
+        "item",
+        "indicator",
+        "group",
+        "label",
+        "empty",
+        "separator",
+        "chips",
+        "chip",
+        "chip-input",
+        "chip-remove",
+        "value",
+        "collection",
+        "anchor"
+      ],
+      "canonicalFixtures": [
+        "open-highlighted",
+        "selected-clear",
+        "closed",
+        "empty",
+        "multiple-chips",
+        "error",
+        "readonly",
+        "disabled",
+        "rtl",
+        "named-trigger-focus",
+        "named-clear-focus",
+        "named-remove-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "ComboboxInput wraps InputGroup; its actual native input slot is input-group-control, not an invented combobox-input. Source defaults showTrigger=true/showClear=false, but this reference deliberately composes named exported Trigger and named BaseUI Clear/ChipRemove with tabIndex 0 and showTrigger/showClear/showRemove disabled, because private icon-only wrappers offer no instance label prop. These helpers are transparent caller compositions, not new shadcn exports. Native input/chips frames are 32px with 10px corners; source popup 10px corner/4px inset, standard 28px minimum rows. Chosen 24px chips/6px corners/4px gaps wrap and remain usable at320px. Shared popup surface/InputGroup styles are explicit transitive dependencies; actual SourceList/option/chip/clear styles remain family-specific. Query highlight and selection/open callbacks stay distinct; source native editing, closed-Escape clear, source no-results and filtering rules are preserved. Open dismissal may reset query to the current selected label; only closed Escape performs the separate selected-value clear transaction. Static fixtures keep primitive roles/active-descendant IDs, with Root/Value/Collection/hook context ownership separate from DOM anatomy. Explicit aria-labelledby points to the real native label because source open-state outside hiding can otherwise remove the implicit HTML-label accessible name; a meaningful error text is linked to the input; The reference passes disabled to both Root and ComboboxInput because the wrapper default disabled=false is passed to its rendered InputGroupInput and can otherwise leave the native input enabled despite the Root lock; readOnly and selected arrays retain source behavior. Portal dir/theme and optional chips anchor belong the real Content/Positioner composition, never native specimen coordinates.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

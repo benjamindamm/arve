@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "hover-card.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "HoverCard",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "HoverCard wraps PreviewCard. Its content is a plain div, not a fabricated dialog or tooltip role; full information remains available at the link destination. Content defaults side=bottom, sideOffset=4, align=center, alignOffset=4. The reference lab explicitly sets delay/closeDelay to 0 to exercise the same source interaction promptly."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PreviewCardPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/hover-card.tsx.source:6."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: PreviewCardPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Primitive open state/controller with no stable DOM root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "HoverCardTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PreviewCardPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/hover-card.tsx.source:10."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Actual native trigger; caller provides its complete accessible name. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "HoverCardContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "PreviewCardPrimitive.Popup.Props &\n  Pick<\n    PreviewCardPrimitive.Positioner.Props,\n    \"align\" | \"alignOffset\" | \"side\" | \"sideOffset\"\n  >"
+              },
+              "description": "Exact public prop type and defaults {\"side\": \"\\\"bottom\\\"\", \"sideOffset\": \"4\", \"align\": \"\\\"center\\\"\", \"alignOffset\": \"4\"}; sources/shadcn/apps/v4/registry/bases/base/ui/hover-card.tsx.source:16."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual portal popup, positioned by the primitive. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

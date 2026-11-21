@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "textarea.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Textarea",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string | number | readonly string[]"
+              },
+              "description": "The wrapper is exactly a native textarea with React.ComponentProps<textarea>. value/defaultValue, name, required, disabled, readOnly, maxLength, rows and onChange are native props. It adds field-sizing-content and a minimum height, not autosave, rich text, a submit-on-Enter handler or a new value callback."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"textarea\">"
+              },
+              "description": "Exact source prop surface at sources/shadcn/apps/v4/registry/bases/base/ui/textarea.tsx.source:4; defaults {}."
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "React.ChangeEventHandler<HTMLTextAreaElement>"
+              },
+              "description": "Actual React native change handler, with currentTarget.value/selectedOptions. Not a CustomEvent or cancellable BaseUI value transaction."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "textarea",
+              "description": "Source data-slot, not shadow DOM part."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

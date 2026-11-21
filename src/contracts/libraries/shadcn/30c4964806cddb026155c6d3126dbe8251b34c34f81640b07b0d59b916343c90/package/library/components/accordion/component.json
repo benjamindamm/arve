@@ -1,0 +1,121 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Accordion",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Accordion visual collection.",
+    "item": "Repeated item keyed by domain value, not document node.",
+    "heading": "Actual source native heading owner around the trigger.",
+    "trigger": "Native source disclosure button.",
+    "icon": "Actual alternative expand/collapse glyph set appended by the source; only the matching glyph is visible.",
+    "content": "Owned source panel with exact instance relation."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "Accordion",
+      "selector": "[data-slot=\"accordion\"]",
+      "description": "Accordion visual collection.",
+      "ownership": "actual wrapper"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "AccordionItem",
+      "selector": "[data-slot=\"accordion-item\"]",
+      "description": "Repeated item keyed by domain value, not document node.",
+      "ownership": "actual wrapper"
+    },
+    "heading": {
+      "kind": "element",
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-item\"] > h3",
+      "description": "Actual source native heading owner around the trigger.",
+      "ownership": "actual wrapper"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-trigger\"]",
+      "description": "Native source disclosure button.",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "kind": "element",
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-trigger-icon\"]",
+      "description": "Actual alternative expand/collapse glyph set appended by the source; only the matching glyph is visible.",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "AccordionContent",
+      "selector": "[data-slot=\"accordion-content\"]",
+      "description": "Owned source panel with exact instance relation.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "accordion-content-padding-end": "components.accordion.contentPaddingEnd",
+      "accordion-disabled-opacity": "components.accordion.disabledOpacity",
+      "accordion-font-size": "components.accordion.fontSize",
+      "accordion-icon-size": "components.accordion.iconSize",
+      "accordion-line-height": "components.accordion.lineHeight",
+      "accordion-trigger-gap": "components.accordion.triggerGap",
+      "accordion-trigger-min-height": "components.accordion.triggerMinHeight",
+      "accordion-trigger-padding-block": "components.accordion.triggerPaddingBlock",
+      "accordion-trigger-radius": "components.accordion.triggerRadius",
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-weight-medium": "semantic.typography.mediumWeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Accordion width is fluid; the 400px native specimen is not a runtime identity or imposed width. Trigger minimum40px,10px block padding,8px label/icon gap,16px icon and10px panel padding are meaningful native measures. Content height is intrinsic to its actual children. The source appends separate down/up icons; semantic CSS selects the correct source-appended glyph rather than rotating both. Its content wrapper is retained in the fixture so text resets match the actual DOM. aria-expanded/data-disabled/native focus/hover reflect real source state; no synthetic state prop, per-node selector or fixed content-height dump is introduced. Open/closed ownership and keyboard focus remain with the bound source actor.",
+    "variants": {
+      "expanded": {
+        "callback": "onValueChange",
+        "triggerAttribute": "aria-expanded",
+        "panel": "owned source Presence lifecycle"
+      },
+      "disabled": {
+        "prop": "disabled",
+        "triggerAttribute": "data-disabled"
+      },
+      "direction": {
+        "prop": "dir",
+        "values": [
+          "ltr",
+          "rtl"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

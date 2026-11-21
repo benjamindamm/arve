@@ -1,0 +1,46 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "separator": {
+      "declaration": "Separator",
+      "selector": "[data-slot=\"separator\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2056:1082",
+      "sourcePartId": "2056:1084",
+      "sourceName": "Seperator / Direction=Vertical",
+      "semanticParts": [
+        "separator"
+      ],
+      "canonicalFixtures": [
+        "horizontal",
+        "vertical"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2056:1083",
+      "sourcePartId": "2056:1084",
+      "sourceName": "Seperator / Direction=Horizontal",
+      "semanticParts": [
+        "separator"
+      ],
+      "canonicalFixtures": [
+        "horizontal",
+        "vertical"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual selected BaseUI1.9 state is data-orientation=horizontal/vertical. The pinned wrapper utility text targets data-horizontal/data-vertical, which this runtime does not emit; the semantic adapter deliberately binds the observed actual orientation attribute without modifying upstream bytes. The native0px path dimensions describe a stroked line, not an invisible runtime element: the pinned wrapper explicitly supplies1px thickness, mapped to the semantic border width. Horizontal stretches across available width; vertical stretches to its flex/grid host block extent. Native100/120px specimen lengths remain host examples. No drag/resize or keyboard focus semantics are invented.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

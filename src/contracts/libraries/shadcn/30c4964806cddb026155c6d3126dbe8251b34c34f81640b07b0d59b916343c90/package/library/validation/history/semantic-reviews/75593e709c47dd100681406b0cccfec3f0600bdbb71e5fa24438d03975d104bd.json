@@ -1,0 +1,139 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "group": {
+      "declaration": "MessageGroup",
+      "selector": "[data-slot=\"message-group\"]",
+      "ownership": "actual wrapper"
+    },
+    "message": {
+      "declaration": "Message",
+      "selector": "[data-slot=\"message\"]",
+      "ownership": "actual wrapper"
+    },
+    "avatar": {
+      "declaration": "MessageAvatar",
+      "selector": "[data-slot=\"message-avatar\"]",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "declaration": "MessageContent",
+      "selector": "[data-slot=\"message-content\"]",
+      "ownership": "actual wrapper"
+    },
+    "header": {
+      "declaration": "MessageHeader",
+      "selector": "[data-slot=\"message-header\"]",
+      "ownership": "actual wrapper"
+    },
+    "footer": {
+      "declaration": "MessageFooter",
+      "selector": "[data-slot=\"message-footer\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2394:984",
+      "observationPath": "layout.gap",
+      "semanticTokens": [
+        "components.message.rowGap"
+      ]
+    },
+    {
+      "sourceNodeId": "2394:1294",
+      "observationPath": "layout.gap",
+      "semanticTokens": [
+        "components.message.contentGap"
+      ]
+    },
+    {
+      "sourceNodeId": "2394:1265",
+      "observationPath": "width,cornerRadius",
+      "semanticTokens": [
+        "components.message.avatarSize",
+        "components.message.avatarRadius"
+      ]
+    },
+    {
+      "sourceNodeId": "2394:1311",
+      "observationPath": "text",
+      "semanticTokens": [
+        "components.message.footerSize",
+        "components.message.footerLine"
+      ]
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2394:1609",
+      "sourcePartId": "2394:2053",
+      "sourceName": "Message footer / Type=Text",
+      "semanticParts": [
+        "group",
+        "message",
+        "avatar",
+        "content",
+        "header",
+        "footer"
+      ],
+      "canonicalFixtures": [
+        "start",
+        "end",
+        "rtl",
+        "long-message"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2394:2052",
+      "sourcePartId": "2394:2053",
+      "sourceName": "Message footer / Type=Actions",
+      "semanticParts": [
+        "group",
+        "message",
+        "avatar",
+        "content",
+        "header",
+        "footer"
+      ],
+      "canonicalFixtures": [
+        "start",
+        "end",
+        "rtl",
+        "long-message"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2394:1608",
+      "sourcePartId": "2394:1608",
+      "sourceName": "Message header",
+      "semanticParts": [
+        "group",
+        "message",
+        "avatar",
+        "content",
+        "header",
+        "footer"
+      ],
+      "canonicalFixtures": [
+        "start",
+        "end",
+        "rtl",
+        "long-message"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Message maps all six actual wrappers. Visual frame names are not promoted to code identities: the native horizontal Message content example supplies the 8px avatar/row gap, while the actual MessageContent code wrapper is vertical and takes the observed 10px vertical gap. Representative group gap 24px,32px round avatar,12px metadata inset and 12/16px footer text are retained. Native header frame 16px conflicts with its actual 14/20px text; this reference retains 20px text height without clipping. Footer has 24px minimum and grows for native actions. Speaker/time and delivery text are explicit caller content, not inferred states or automatic announcements. Align=end reverses the row using actual data-align; logical layout works with direction. MessageGroup has no automatic live-log or pagination behavior. Optional Bubble children and new-message announcements remain explicit caller composition.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 2360:5131 (Message), observed anatomy and examples."
+  }
+}

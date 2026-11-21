@@ -1,0 +1,288 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Accordion",
+      "selector": "[data-slot=\"accordion\"]",
+      "ownership": "actual wrapper"
+    },
+    "item": {
+      "declaration": "AccordionItem",
+      "selector": "[data-slot=\"accordion-item\"]",
+      "ownership": "actual wrapper"
+    },
+    "heading": {
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-item\"] > h3",
+      "ownership": "actual wrapper"
+    },
+    "trigger": {
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-trigger\"]",
+      "ownership": "actual wrapper"
+    },
+    "icon": {
+      "declaration": "AccordionTrigger",
+      "selector": "[data-slot=\"accordion-trigger-icon\"]",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "declaration": "AccordionContent",
+      "selector": "[data-slot=\"accordion-content\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "token": "components.accordion.triggerMinHeight",
+      "nodeId": "1827:3335",
+      "property": "height",
+      "observed": 40
+    },
+    {
+      "token": "components.accordion.triggerPaddingBlock",
+      "nodeId": "1827:3325",
+      "property": "layout.padding.0",
+      "observed": 10
+    },
+    {
+      "token": "components.accordion.triggerGap",
+      "nodeId": "1827:3325",
+      "property": "layout.gap",
+      "observed": 8
+    },
+    {
+      "token": "components.accordion.triggerRadius",
+      "nodeId": "1827:3335",
+      "property": "cornerRadius.0",
+      "observed": 10
+    },
+    {
+      "token": "components.accordion.iconSize",
+      "nodeId": "1827:3354",
+      "property": "width",
+      "observed": 16
+    },
+    {
+      "token": "components.accordion.contentPaddingEnd",
+      "nodeId": "2179:585",
+      "property": "layout.padding.2",
+      "observed": 10
+    },
+    {
+      "token": "components.accordion.fontSize",
+      "nodeId": "1827:3327",
+      "property": "text.fontSize",
+      "observed": 14
+    },
+    {
+      "token": "components.accordion.lineHeight",
+      "nodeId": "1827:3327",
+      "property": "text.lineHeight",
+      "observed": 20
+    },
+    {
+      "token": "components.accordion.disabledOpacity",
+      "nodeId": "1827:3360",
+      "property": "opacity",
+      "observed": 0.5
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1827:3335",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Default, Dir=LTR",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1827:3338",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Default, Dir=RTL",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1827:3502",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Focus, Dir=LTR",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1827:3510",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Focus, Dir=RTL",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1827:3358",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Disabled, Dir=LTR",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1827:3366",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Disabled, Dir=RTL",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2179:623",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Hover, Dir=LTR",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "hovered"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2179:629",
+      "sourcePartId": "1827:3337",
+      "sourceName": "AccordionTrigger / State=Hover, Dir=RTL",
+      "semanticParts": [
+        "trigger",
+        "icon",
+        "heading"
+      ],
+      "canonicalFixtures": [
+        "hovered"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2179:580",
+      "sourcePartId": "2179:558",
+      "sourceName": "AccordionContent / Dir=LTR",
+      "semanticParts": [
+        "content"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2179:606",
+      "sourcePartId": "2179:558",
+      "sourceName": "AccordionContent / Dir=RTL",
+      "semanticParts": [
+        "content"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2182:520",
+      "sourcePartId": "2182:521",
+      "sourceName": "AccordionItem / Dir=LTR, Data State=Closed",
+      "semanticParts": [
+        "item",
+        "root"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2182:519",
+      "sourcePartId": "2182:521",
+      "sourceName": "AccordionItem / Dir=RTL, Data State=Closed",
+      "semanticParts": [
+        "item",
+        "root"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2185:289",
+      "sourcePartId": "2182:521",
+      "sourceName": "AccordionItem / Dir=LTR, Data State=Open",
+      "semanticParts": [
+        "item",
+        "root"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2185:293",
+      "sourcePartId": "2182:521",
+      "sourceName": "AccordionItem / Dir=RTL, Data State=Open",
+      "semanticParts": [
+        "item",
+        "root"
+      ],
+      "canonicalFixtures": [
+        "collapsed"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Accordion width is fluid; the 400px native specimen is not a runtime identity or imposed width. Trigger minimum40px,10px block padding,8px label/icon gap,16px icon and10px panel padding are meaningful native measures. Content height is intrinsic to its actual children. The source appends separate down/up icons; semantic CSS selects the correct source-appended glyph rather than rotating both. Its content wrapper is retained in the fixture so text resets match the actual DOM. aria-expanded/data-disabled/native focus/hover reflect real source state; no synthetic state prop, per-node selector or fixed content-height dump is introduced. Open/closed ownership and keyboard focus remain with the bound source actor.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

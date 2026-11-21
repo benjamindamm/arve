@@ -1,0 +1,286 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Command",
+      "selector": "[data-slot=\"command\"]",
+      "ownership": "actual source wrapper"
+    },
+    "input-label": {
+      "declaration": "Command",
+      "selector": "[cmdk-label]",
+      "ownership": "private source child"
+    },
+    "input-wrapper": {
+      "declaration": "CommandInput",
+      "selector": "[data-slot=\"command-input-wrapper\"]",
+      "ownership": "actual source wrapper"
+    },
+    "input-group": {
+      "declaration": "CommandInput",
+      "selector": ".cn-command-input-group",
+      "ownership": "actual source wrapper"
+    },
+    "input": {
+      "declaration": "CommandInput",
+      "selector": "[data-slot=\"command-input\"]",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "declaration": "CommandList",
+      "selector": "[data-slot=\"command-list\"]",
+      "ownership": "actual source wrapper"
+    },
+    "group": {
+      "declaration": "CommandGroup",
+      "selector": "[data-slot=\"command-group\"]",
+      "ownership": "actual source wrapper"
+    },
+    "group-heading": {
+      "declaration": "CommandGroup",
+      "selector": "[cmdk-group-heading]",
+      "ownership": "private source child"
+    },
+    "item": {
+      "declaration": "CommandItem",
+      "selector": "[data-slot=\"command-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "indicator": {
+      "declaration": "CommandItem",
+      "selector": ".cn-command-item-indicator",
+      "ownership": "actual source wrapper"
+    },
+    "empty": {
+      "declaration": "CommandEmpty",
+      "selector": "[data-slot=\"command-empty\"]",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "declaration": "CommandSeparator",
+      "selector": "[data-slot=\"command-separator\"]",
+      "ownership": "actual source wrapper"
+    },
+    "shortcut": {
+      "declaration": "CommandShortcut",
+      "selector": "[data-slot=\"command-shortcut\"]",
+      "ownership": "actual source wrapper"
+    },
+    "dialog": {
+      "declaration": "CommandDialog",
+      "selector": null,
+      "ownership": "actual wrapper"
+    },
+    "dialog-popup": {
+      "declaration": "CommandDialog",
+      "selector": "[data-slot=\"dialog-content\"].cn-command-dialog",
+      "ownership": "actual source wrapper"
+    },
+    "dialog-header": {
+      "declaration": "CommandDialog",
+      "selector": "[data-slot=\"dialog-header\"].sr-only",
+      "ownership": "private delegated Dialog parts"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2124:4454",
+      "observed": "384px native command specimen width,14px corners,4px inset.",
+      "decision": "Width becomes responsive palette maximum; source cmdk semantics and real delegated Dialog placement/focus, explicit row/search/scroll extents."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:223 (Command), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1970:1231",
+      "sourcePartId": "1970:1232",
+      "sourceName": "CommandItem / State=Default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "export-highlight",
+        "empty",
+        "optional-checked-indicator",
+        "dialog-palette",
+        "input-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1230",
+      "sourcePartId": "1970:1232",
+      "sourceName": "CommandItem / State=Hover, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1401",
+      "sourcePartId": "1970:1232",
+      "sourceName": "CommandItem / State=Default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "export-highlight",
+        "empty",
+        "optional-checked-indicator",
+        "dialog-palette",
+        "input-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1407",
+      "sourcePartId": "1970:1232",
+      "sourceName": "CommandItem / State=Hover, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1399",
+      "sourcePartId": "1970:1400",
+      "sourceName": "CMDKGroupHeading / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "export-highlight",
+        "empty",
+        "optional-checked-indicator",
+        "dialog-palette",
+        "input-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1970:1398",
+      "sourcePartId": "1970:1400",
+      "sourceName": "CMDKGroupHeading / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "input-label",
+        "input-wrapper",
+        "input-group",
+        "input",
+        "list",
+        "group",
+        "group-heading",
+        "item",
+        "indicator",
+        "empty",
+        "separator",
+        "shortcut",
+        "dialog",
+        "dialog-popup",
+        "dialog-header"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "export-highlight",
+        "empty",
+        "optional-checked-indicator",
+        "dialog-palette",
+        "input-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Command is cmdk, not a Menu or selected-value picker: Input query, active option highlight and Item onSelect execution remain distinct. Native command frame 14px corners/4px inset are retained with explicit 28px minimum row,36px search role,300px scroll maximum and 384px palette maximum. Actual Input wraps InputGroup and addon, List is listbox, Item is option, and cmdk Group heading selector is a stable upstream DOM attribute rather than a source-node identity. Highlight uses actual data-selected; optional caller data-checked check glyph is separate and source shortcut presence hides the glyph. No keyboard binding is created by shortcut text. The source CommandDialog places registered title/description siblings before Popup; this reference mounts on opening/unmounts after close completion, hides only that header visually and preserves its actual naming IDs. Modal focus/close/cancellation remain delegated to Dialog; command-specific popup has zero inset and one-third physical centered placement, with narrow viewport bounded by Dialog. Theme and direction are application document context in this adapter because CommandDialog exposes className but no Popup dir/data-theme prop; leading CSS remains component-owned and source-independent. No fake aria-modal attribute or invented Root disabled/value veto is added. No-results text is an explicit readable status, and caller chooses to close palette after execution.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -100,6 +100,7 @@ export async function POST(request: Request) {
       designPreview: page.designPreview ? { ...page.designPreview, url: new URL(page.designPreview.url, request.url).href } : null,
       pageUrl: new URL(page.path, request.url).href,
       contractArtifacts: page.contractArtifacts.map(file => ({ ...file, url: new URL(file.url, request.url).href })),
+      styleAssets: page.styleAssets.map(file=>({...file,url:new URL(file.url,request.url).href})),
       demo: page.demo ? { ...page.demo, url: new URL(page.path + '#live-beispiel', request.url).href } : null,
     }
     return success(result)

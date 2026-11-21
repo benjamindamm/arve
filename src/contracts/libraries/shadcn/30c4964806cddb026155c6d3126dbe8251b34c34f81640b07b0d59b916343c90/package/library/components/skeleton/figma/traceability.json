@@ -1,0 +1,75 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "placeholder": {
+      "declaration": "Skeleton",
+      "selector": "[data-slot=\"skeleton\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2015:1043",
+      "observationPath": "height",
+      "semanticToken": "components.skeleton.textHeight"
+    },
+    {
+      "sourceNodeId": "2015:1044",
+      "observationPath": "width",
+      "semanticToken": "components.skeleton.avatarSize"
+    },
+    {
+      "sourceNodeId": "2015:1042",
+      "observationPath": "height",
+      "semanticToken": "components.skeleton.cardHeight"
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2015:1044",
+      "sourcePartId": "2015:1045",
+      "sourceName": "Skeleton / Skeleton=Avatar",
+      "semanticParts": [
+        "placeholder"
+      ],
+      "canonicalFixtures": [
+        "loading-text"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2015:1043",
+      "sourcePartId": "2015:1045",
+      "sourceName": "Skeleton / Skeleton=Text",
+      "semanticParts": [
+        "placeholder"
+      ],
+      "canonicalFixtures": [
+        "loading-text"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2015:1042",
+      "sourcePartId": "2015:1045",
+      "sourceName": "Skeleton / Skeleton=Card",
+      "semanticParts": [
+        "placeholder"
+      ],
+      "canonicalFixtures": [
+        "loading-text"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Skeleton is a decorative div whose source accepts caller className; text/avatar/card here are explicit caller classes, not invented shape props. Native16px text height,40px avatar,125px card height and8px/round corners are retained. Text/card width fills caller space rather than fixing the290px specimen width. The host supplies aria-busy and readable loading status; decorative shape is hidden from accessibility. Static Figma has no timing; a chosen2s pulse to50% opacity expresses source animate-pulse, and reduced-motion removes the animation without removing status.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1989 (Skeleton), observed anatomy and examples."
+  }
+}

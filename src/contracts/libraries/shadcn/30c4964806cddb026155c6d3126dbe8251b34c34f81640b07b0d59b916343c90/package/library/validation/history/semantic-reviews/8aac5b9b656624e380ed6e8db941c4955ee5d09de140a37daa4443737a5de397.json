@@ -1,0 +1,27 @@
+{
+  "purpose": "Expand related sections while preserving independent item identity and a typed array of expanded values.",
+  "avoid": "Do not conceal information every reader must compare.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 72:2591 (Accordion), observed anatomy and examples.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Accordion",
+  "sourceRule": "multiple=false permits at most one expanded item; pressing that item closes it. multiple=true toggles items independently. Disabled root/items suppress changes. The callback candidate may be canceled; controlled value stays prop-authoritative.",
+  "keyboardAndFocus": "Base UI 1.9 uses normal Tab order and native Enter/Space on each trigger. Its orientation/loopFocus props are deprecated and no longer implement roving/arrow focus. Arrow/Home/End are not invented as accordion selection commands.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/accordion.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/accordion.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/accordion-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/accordion.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "Accordion width is fluid; the 400px native specimen is not a runtime identity or imposed width. Trigger minimum40px,10px block padding,8px label/icon gap,16px icon and10px panel padding are meaningful native measures. Content height is intrinsic to its actual children. The source appends separate down/up icons; semantic CSS selects the correct source-appended glyph rather than rotating both. Its content wrapper is retained in the fixture so text resets match the actual DOM. aria-expanded/data-disabled/native focus/hover reflect real source state; no synthetic state prop, per-node selector or fixed content-height dump is introduced. Open/closed ownership and keyboard focus remain with the bound source actor.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

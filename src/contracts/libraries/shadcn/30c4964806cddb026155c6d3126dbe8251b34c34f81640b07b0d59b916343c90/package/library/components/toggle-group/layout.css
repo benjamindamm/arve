@@ -1,0 +1,77 @@
+@import "../../tokens.css";
+
+[data-slot="toggle-group"] {
+  display: flex;
+  align-items: center;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  gap: calc(var(--gap,2)*var(--ui-toggle-group-spacing-unit));
+  overflow-x: auto;
+}
+
+.cn-toggle {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--ui-toggle-group-height);
+  block-size: var(--ui-toggle-group-height);
+  gap: var(--ui-toggle-group-gap);
+  padding: 0 var(--ui-toggle-group-padding);
+  border: 0;
+  border-radius: var(--ui-toggle-group-radius);
+  background: transparent;
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-weight: var(--ui-font-weight-medium);
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  white-space: nowrap;
+  outline: none;
+}
+
+.cn-toggle-variant-outline {
+  border: var(--ui-border-width) solid var(--ui-color-border);
+}
+
+.cn-toggle-size-sm {
+  min-inline-size: var(--ui-toggle-group-height-sm);
+  block-size: var(--ui-toggle-group-height-sm);
+  border-radius: var(--ui-toggle-group-radius-sm);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cn-toggle-size-lg {
+  min-inline-size: var(--ui-toggle-group-height-lg);
+  block-size: var(--ui-toggle-group-height-lg);
+}
+
+.cn-toggle:hover:not(:disabled),
+.cn-toggle[aria-pressed="true"] {
+  background: var(--ui-color-muted);
+}
+
+.cn-toggle:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+.cn-toggle:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+[data-slot="toggle-group"][data-spacing="0"]>.cn-toggle-variant-outline:not(:first-child) {
+  border-inline-start-width: 0;
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+
+[data-slot="toggle-group"][data-spacing="0"]>.cn-toggle-variant-outline:not(:last-child) {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+}

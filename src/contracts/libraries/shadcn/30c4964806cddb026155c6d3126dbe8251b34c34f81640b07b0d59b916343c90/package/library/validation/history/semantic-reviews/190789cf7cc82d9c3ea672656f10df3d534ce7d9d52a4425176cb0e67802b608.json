@@ -1,0 +1,25 @@
+{
+  "purpose": "Reserve layout space while content loads.",
+  "avoid": "Do not imply meaningful content or hide an indefinite failure.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 73:1989 (Skeleton), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Skeleton",
+  "contentAlternative": "The host supplies Loading contacts as the meaningful status; the source skeleton geometry is explicitly hidden in this reference.",
+  "updatesAndDescendants": "Skeleton itself is a div with animate-pulse and inherited props. The caller owns loading/data/error and aria-busy, replaces visual loading shapes with content after completion, and reports failure instead of pulsing forever. Reduced motion stops loading animation without removing status text.",
+  "referenceDecision": "The labelled busy region, status text, aria-hidden and motion policy are authorized reference composition decisions, not built-in behavior claimed for the bare Skeleton wrapper.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/skeleton.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/skeleton.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/skeleton-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Skeleton is a decorative div whose source accepts caller className; text/avatar/card here are explicit caller classes, not invented shape props. Native16px text height,40px avatar,125px card height and8px/round corners are retained. Text/card width fills caller space rather than fixing the290px specimen width. The host supplies aria-busy and readable loading status; decorative shape is hidden from accessibility. Static Figma has no timing; a chosen2s pulse to50% opacity expresses source animate-pulse, and reduced-motion removes the animation without removing status.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

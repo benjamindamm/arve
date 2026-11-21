@@ -1,0 +1,95 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "72:2633"
+  },
+  "stories": [
+    {
+      "id": "figma-1774-1993",
+      "name": "Alert / State=Default, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1774:1993",
+        "part": "1774:1994"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1774-2024",
+      "name": "Alert / State=Default, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1774:2024",
+        "part": "1774:1994"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1774-1995",
+      "name": "Alert / State=Destructive, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1774:1995",
+        "part": "1774:1994"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-1774-2045",
+      "name": "Alert / State=Destructive, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "1774:2045",
+        "part": "1774:1994"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "referenceScope": "Pinned native/default content composition; original static Figma variants remain in stories. Source wrapper APIs and optional native render semantics are described in CEM/README.",
+  "contractCases": [
+    {
+      "id": "default-content-semantic-projection",
+      "html": "accessibility.html",
+      "expectSelector": "provenance://source/%2F%2F%2A[@role=\"alert\"]"
+    },
+    {
+      "id": "prop-update-keeps-passive-contract",
+      "events": [
+        {
+          "event": "PROPS_CHANGED"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "unmount-remount",
+      "events": [
+        {
+          "event": "UNMOUNT"
+        },
+        {
+          "event": "MOUNT"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "no-fabricated-activation",
+      "events": [
+        {
+          "event": "ACTIVATE"
+        },
+        {
+          "event": "ESCAPE"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    }
+  ]
+}

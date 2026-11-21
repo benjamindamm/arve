@@ -1,0 +1,27 @@
+{
+  "purpose": "Expose anchored supplementary controls or content without assuming modal ownership.",
+  "avoid": "Do not infer modal focus behavior from placement.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Popover",
+  "sourceRule": "Content defaults side=bottom, align=center, sideOffset=4 and alignOffset=0. The wrapper exposes no PopoverClose component; source Root actionsRef.close or a caller-composed control closes it. Title/Description are actual exported primitive registration parts that supply the Popup name/description; the reference uses explicit IDs to make ownership auditable. Positioning/collision work belongs to the primitive, not a guessed CSS-only interaction.",
+  "keyboardAndFocus": "Default modal=false allows outside interaction and focus-out dismissal. Escape/outside press close; the popup focuses an eligible descendant and normally restores the trigger. Modal/trap-focus are explicit Root choices with the documented Close-control requirements for touch screen readers.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/popover.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/popover.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/popover-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/popover.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "Actual Popover portal positioning, collision handling and defaults remain primitive-owned; CSS does not recreate anchor coordinates. Native radius/insets are adopted as semantic popup metrics, while width is fluid with an explicit bounded maximum. Popover keeps native 10px corners/10px insets and the actual 288px source width maximum. Header gap is 2px with native 14/20 typography; Title/Description relations are explicitly supplied in the reference usage. The primitive owns opening, Escape, outside press, focus restoration and controlled callbacks.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

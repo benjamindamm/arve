@@ -1,0 +1,26 @@
+{
+  "purpose": "Compose a labelled native input or textarea with supplementary text and independent action buttons.",
+  "avoid": "Adornments must not become substitute labels.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:InputGroup",
+  "sourceRule": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation.",
+  "keyboardAndFocus": "Native input editing and Button activation remain with the composed components. Addon div is not keyboard focusable or a substitute for a label. This reference provides a real label and persistent described help; its clear Button is a caller action. Clicking decorative addon text can focus the input, but clicking its nested Button must preserve the Button interaction. Textarea compositions use their own visible label; addon does not promise textarea focusing.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation. Native input editing and Button activation remain with the composed components. Addon div is not keyboard focusable or a substitute for a label. This reference provides a real label and persistent described help; its clear Button is a caller action. Clicking decorative addon text can focus the input, but clicking its nested Button must preserve the Button interaction. Textarea compositions use their own visible label; addon does not promise textarea focusing.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/input-group.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/input-group.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/input-group-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "InputGroup maps six actual exports plus an explicit caller label. InputGroupText has no data-slot; Input/InputGroupTextarea share input-group-control, and actual cn-input-group-input/cn-input-group-textarea classes distinguish identity. InputGroupButton stays data-slot=button and carries cn-input-group-button plus custom size classes; it does not forward its size to Button, so the adapter explicitly maps the source group size classes while importing real Button styling. Native 32px outer height,10px corners,8px addon inset/gap and 24px xs action are retained. Flex control width with min-inline-size=0 replaces overspecified per-instance widths. Text addons center inside chrome so their native 6px outer text inset and 4px xs-button inset arise from content height rather than inflating the group. Four actual addon align values use order and full-row layout for block variants; textarea is intrinsically sized from the real Textarea dependency. Focus-within and actual child invalid/disabled states style the group; they do not invent Group validation/disabled logic. Caller disables both control/action if the whole group is unavailable. Native label/help/error IDs remain explicit. Default Addon pointer behavior focuses the first input only and skips nested buttons; textarea is not promised addon focus, and caller onClick can replace the default handler.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

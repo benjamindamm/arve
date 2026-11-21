@@ -1,0 +1,37 @@
+{
+  "componentId": "shadcn:Marker",
+  "referenceComposition": "<div data-slot=\"marker\" class=\"cn-marker cn-marker-variant-default\"><span data-slot=\"marker-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\" fill=\"none\" stroke=\"currentColor\"/></svg></span><span data-slot=\"marker-content\">Review complete</span></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "MarkerContent contains the actual boundary/status text. MarkerIcon is hidden by the source and cannot be the only meaning.",
+  "updatesAndDescendants": "Marker defaults to a div through useRender; variants change appearance without creating selection or navigation state. Parent content changes update the text. If a caller supplies a native interactive render, its native contract applies.",
+  "referenceDecision": "Unread messages is a concrete textual boundary label, not a value protocol inferred from the icon name.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "marker": {
+      "kind": "element",
+      "selector": "[data-slot=\"marker\"]",
+      "description": "Native informative div or explicit caller native render override."
+    },
+    "icon": {
+      "kind": "element",
+      "selector": "[data-slot=\"marker-icon\"]",
+      "description": "Actual supplementary aria-hidden icon span."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"marker-content\"]",
+      "description": "Actual readable status/system-note text."
+    }
+  },
+  "visualStateMapping": {
+    "variant": {
+      "prop": "variant",
+      "classes": [
+        "cn-marker-variant-default",
+        "cn-marker-variant-separator",
+        "cn-marker-variant-border"
+      ]
+    }
+  }
+}

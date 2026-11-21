@@ -1,0 +1,18 @@
+@import "../../tokens.css";
+
+[data-slot="separator"] {
+  box-sizing: border-box;
+  flex: none;
+  border: 0;
+  background: var(--ui-color-border);
+}
+
+[data-slot="separator"][data-orientation="horizontal"] {
+  block-size: var(--ui-border-width);
+  inline-size: 100%;
+}
+
+[data-slot="separator"][data-orientation="vertical"] {
+  inline-size: var(--ui-border-width);
+  align-self: stretch;
+}

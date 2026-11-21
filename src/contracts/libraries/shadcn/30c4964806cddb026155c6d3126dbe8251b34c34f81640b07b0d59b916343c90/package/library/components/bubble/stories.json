@@ -1,0 +1,219 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Bubble",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "default",
+      "name": "Default",
+      "inputs": {
+        "variant": "default"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "secondary",
+      "name": "Secondary",
+      "inputs": {
+        "variant": "secondary"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"secondary\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-secondary\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "muted",
+      "name": "Muted",
+      "inputs": {
+        "variant": "muted"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"muted\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-muted\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "tinted",
+      "name": "Tinted",
+      "inputs": {
+        "variant": "tinted"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"tinted\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-tinted\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "outline",
+      "name": "Outline",
+      "inputs": {
+        "variant": "outline"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"outline\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-outline\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "inputs": {
+        "variant": "ghost"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"ghost\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-ghost\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "destructive",
+      "name": "Destructive",
+      "inputs": {
+        "variant": "destructive"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"destructive\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-destructive\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "native-content-link",
+      "name": "Native content link",
+      "inputs": {
+        "contentRender": "a"
+      },
+      "visualState": "focused",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><a href=\"#bubble-report\" data-slot=\"bubble-content\"><span><span>Alex: </span>The report is ready.</span></a></div></div><p id=\"bubble-report\">Report destination</p>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "content",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "aligned-end",
+      "name": "Aligned end",
+      "inputs": {
+        "align": "end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"end\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "align": "end",
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\" dir=\"rtl\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"end\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "native-content-action",
+      "name": "Native content action",
+      "inputs": {
+        "contentRender": "button"
+      },
+      "visualState": "focused",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><button type=\"button\" data-slot=\"bubble-content\"><span><span>Alex: </span>The report is ready.</span></button></div></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "content",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "reactions-top-start",
+      "name": "Reactions top start",
+      "inputs": {
+        "reactionSide": "top",
+        "reactionAlign": "start"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"top\" data-align=\"start\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "reactions-top-end",
+      "name": "Reactions top end",
+      "inputs": {
+        "reactionSide": "top",
+        "reactionAlign": "end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"top\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "reactions-bottom-start",
+      "name": "Reactions bottom start",
+      "inputs": {
+        "reactionSide": "bottom",
+        "reactionAlign": "start"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"start\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    },
+    {
+      "id": "reactions-bottom-end",
+      "name": "Reactions bottom end",
+      "inputs": {
+        "reactionSide": "bottom",
+        "reactionAlign": "end"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"bubble-group\"><div data-slot=\"bubble\" data-variant=\"default\" data-align=\"start\" class=\"cn-bubble cn-bubble-variant-default\"><div data-slot=\"bubble-content\"><p><span>Alex: </span>The report is ready.</p></div><div data-slot=\"bubble-reactions\" data-side=\"bottom\" data-align=\"end\"><button type=\"button\" aria-label=\"Like Alex’s message\" aria-pressed=\"false\">Like</button></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Speaker/status meaning is readable text. Actual source parts and props bind semantic presentation; native caller actions keep independent behavior."
+    }
+  ]
+}

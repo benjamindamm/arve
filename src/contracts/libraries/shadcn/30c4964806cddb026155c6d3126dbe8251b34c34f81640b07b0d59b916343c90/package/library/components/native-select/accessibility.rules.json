@@ -1,0 +1,52 @@
+{
+  "componentId": "shadcn:NativeSelect",
+  "sourceRule": "NativeSelectProps omits the native numeric size prop and replaces it with sm|default (default). Other native select props, including multiple, value/defaultValue, disabled, name and onChange are passed through. NativeSelectOption/OptGroup are option/optgroup. The extra ChevronDown is aria-hidden. className styles the surrounding wrapper, not the select.",
+  "keyboardAndFocus": "The operating system/browser owns popup, arrow, typeahead, modifier selection and Escape behavior. This contract consumes the actual native change transaction; it does not equate every arrow key with a committed change. Escape may close a native picker, and does not fabricate an extra change/revert event. Disabled controls/options cannot be user-chosen; controlled value remains prop-authoritative.",
+  "referenceComposition": "<label for=\"region\">Region</label><div data-slot=\"native-select-wrapper\" data-size=\"default\"><select id=\"region\" name=\"region\" data-slot=\"native-select\" data-size=\"default\" aria-describedby=\"region-help\"><optgroup data-slot=\"native-select-optgroup\" label=\"Europe\"><option data-slot=\"native-select-option\" value=\"ch\" selected>Switzerland</option><option data-slot=\"native-select-option\" value=\"at\">Austria</option><option data-slot=\"native-select-option\" value=\"de\" disabled>Germany (unavailable)</option></optgroup><option data-slot=\"native-select-option\" value=\"us\">United States</option></select><svg data-slot=\"native-select-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><p id=\"region-help\">Choose an available region.</p>",
+  "protocol": "SCXML consumes actual source/native transaction observations; callback objects remain original. Sends document observed callbacks, not second DOM dispatches. Parent-controlled props alone synchronize authoritative values. HTML/CSS is a semantic projection; executable behavior uses actual pinned React wrappers.",
+  "semanticParts": {
+    "wrapper": {
+      "kind": "element",
+      "selector": "[data-slot=\"native-select-wrapper\"]",
+      "description": "Actual div owns className and visual size."
+    },
+    "control": {
+      "kind": "element",
+      "selector": "[data-slot=\"native-select\"]",
+      "description": "Actual native select; platform owns popup/multiple selection."
+    },
+    "icon": {
+      "kind": "element",
+      "selector": "[data-slot=\"native-select-icon\"]",
+      "description": "Actual aria-hidden chevron SVG."
+    },
+    "option": {
+      "kind": "element",
+      "selector": "[data-slot=\"native-select-option\"]",
+      "description": "Actual native option; disabled options remain native."
+    },
+    "option-group": {
+      "kind": "element",
+      "selector": "[data-slot=\"native-select-optgroup\"]",
+      "description": "Actual labelled native optgroup."
+    }
+  },
+  "visualStateMapping": {
+    "size": {
+      "prop": "size",
+      "attribute": "data-size",
+      "values": [
+        "default",
+        "sm"
+      ]
+    },
+    "multiple": {
+      "prop": "multiple",
+      "nativeAttribute": "multiple"
+    },
+    "disabled": {
+      "prop": "disabled",
+      "nativeAttribute": "disabled"
+    }
+  }
+}

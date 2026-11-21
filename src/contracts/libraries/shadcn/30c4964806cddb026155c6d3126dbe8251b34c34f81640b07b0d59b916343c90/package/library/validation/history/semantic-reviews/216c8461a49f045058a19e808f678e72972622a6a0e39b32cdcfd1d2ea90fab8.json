@@ -1,0 +1,112 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Popover",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "PopoverTrigger",
+      "selector": "[data-slot=\"popover-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "PopoverContent",
+      "selector": "[data-slot=\"popover-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "declaration": "PopoverHeader",
+      "selector": "[data-slot=\"popover-header\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "declaration": "PopoverTitle",
+      "selector": "[data-slot=\"popover-title\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "declaration": "PopoverDescription",
+      "selector": "[data-slot=\"popover-description\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2174:1481",
+      "property": "cornerRadius.0",
+      "value": 10,
+      "semanticRole": "radius"
+    },
+    {
+      "sourceNodeId": "2174:1481",
+      "property": "layout.padding",
+      "value": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "semanticRole": "insets"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1982 (Popover), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2174:551",
+      "sourcePartId": "2174:552",
+      "sourceName": "PopoverHeader / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "header",
+        "title",
+        "description"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2174:550",
+      "sourcePartId": "2174:552",
+      "sourceName": "PopoverHeader / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content",
+        "header",
+        "title",
+        "description"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "rtl",
+        "side-top",
+        "side-right",
+        "side-bottom",
+        "side-left"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual Popover portal positioning, collision handling and defaults remain primitive-owned; CSS does not recreate anchor coordinates. Native radius/insets are adopted as semantic popup metrics, while width is fluid with an explicit bounded maximum. Popover keeps native 10px corners/10px insets and the actual 288px source width maximum. Header gap is 2px with native 14/20 typography; Title/Description relations are explicitly supplied in the reference usage. The primitive owns opening, Escape, outside press, focus restoration and controlled callbacks.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

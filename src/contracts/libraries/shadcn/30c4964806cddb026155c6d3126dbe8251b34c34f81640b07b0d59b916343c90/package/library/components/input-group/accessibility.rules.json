@@ -1,0 +1,67 @@
+{
+  "componentId": "shadcn:InputGroup",
+  "sourceRule": "Root/Addon are div role=group. Addon align defaults inline-start and accepts inline-end/block-start/block-end. Its default onClick focuses the first descendant input in its parent, except when target.closest(button) exists. It does not target textarea. Because {...props} is spread after onClick, a caller onClick replaces this default handler. Input/Textarea delegate actual Input/Textarea. InputGroupButton defaults type=button, variant=ghost, size=xs; sizes xs/sm/icon-xs/icon-sm. InputGroupText is span, not an automatic label or describedby relation.",
+  "keyboardAndFocus": "Native input editing and Button activation remain with the composed components. Addon div is not keyboard focusable or a substitute for a label. This reference provides a real label and persistent described help; its clear Button is a caller action. Clicking decorative addon text can focus the input, but clicking its nested Button must preserve the Button interaction. Textarea compositions use their own visible label; addon does not promise textarea focusing.",
+  "referenceComposition": "<label data-part=\"input-group-label\" for=\"query\">Search reports</label><div role=\"group\" aria-label=\"Report search\" data-slot=\"input-group\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-start\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-start\"><span class=\"cn-input-group-text\">Find</span></div><input id=\"query\" type=\"text\" data-slot=\"input-group-control\" class=\"cn-input cn-input-group-input\" aria-describedby=\"query-help query-error\" aria-invalid=\"true\" value=\"Annual report\"><div role=\"group\" data-slot=\"input-group-addon\" data-align=\"inline-end\" class=\"cn-input-group-addon cn-input-group-addon-align-inline-end\"><button type=\"button\" data-slot=\"button\" data-size=\"xs\" class=\"cn-button cn-button-variant-ghost cn-button-size-default cn-input-group-button cn-input-group-button-size-xs\">Clear search</button></div></div><span id=\"query-help\">Enter a report title.</span><p id=\"query-error\">Enter a valid report title.</p>",
+  "protocol": "SCXML consumes actual source/native transaction observations; callback objects remain original. Sends document observed callbacks, not second DOM dispatches. Parent-controlled props alone synchronize authoritative values. HTML/CSS is a semantic projection; executable behavior uses actual pinned React wrappers.",
+  "semanticParts": {
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-group\"]",
+      "description": "Actual role=group chrome; caller names it."
+    },
+    "addon": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-group-addon\"]",
+      "description": "Actual alignment-controlled addon; default pointer behavior focuses input only."
+    },
+    "input": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-group-control\"].cn-input-group-input",
+      "description": "Actual composed Input; class distinguishes shared control slot."
+    },
+    "textarea": {
+      "kind": "element",
+      "selector": "[data-slot=\"input-group-control\"].cn-input-group-textarea",
+      "description": "Actual composed Textarea; same slot, distinct source class."
+    },
+    "button": {
+      "kind": "element",
+      "selector": ".cn-input-group-button",
+      "description": "Actual composed Button remains data-slot=button; stable source class binds custom group sizes."
+    },
+    "text": {
+      "kind": "element",
+      "selector": ".cn-input-group-text",
+      "description": "Actual span has no data-slot; stable source class is authoritative."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-part=\"input-group-label\"]",
+      "description": "Explicit caller native label, not automatic InputGroupText behavior."
+    }
+  },
+  "visualStateMapping": {
+    "align": {
+      "declaration": "InputGroupAddon",
+      "prop": "align",
+      "attribute": "data-align",
+      "values": [
+        "inline-start",
+        "inline-end",
+        "block-start",
+        "block-end"
+      ]
+    },
+    "buttonSize": {
+      "declaration": "InputGroupButton",
+      "prop": "size",
+      "classes": [
+        "cn-input-group-button-size-xs",
+        "cn-input-group-button-size-sm",
+        "cn-input-group-button-size-icon-xs",
+        "cn-input-group-button-size-icon-sm"
+      ]
+    }
+  }
+}

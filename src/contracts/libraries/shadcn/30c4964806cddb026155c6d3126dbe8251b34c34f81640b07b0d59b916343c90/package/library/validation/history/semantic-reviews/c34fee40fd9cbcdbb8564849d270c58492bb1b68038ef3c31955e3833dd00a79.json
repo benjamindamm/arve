@@ -1,0 +1,64 @@
+{
+  "componentId": "shadcn:Dialog",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" data-slot=\"dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open dialog</button><div data-slot=\"dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"dialog-content\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\"><div data-slot=\"dialog-header\"><h2 data-slot=\"dialog-title\" id=\"overlay-title\">Project dialog</h2><p data-slot=\"dialog-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"dialog-footer\"><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close dialog</button></div><button type=\"button\" data-slot=\"dialog-close\" class=\"cn-dialog-close cn-button cn-button-variant-ghost cn-button-size-icon-sm\" aria-label=\"Close\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg><span class=\"sr-only\">Close</span></button></div>",
+  "keyboardAndFocus": "Default modal=true contains Tab/Shift+Tab, moves focus into the popup, and restores focus to the trigger on closing. Escape and the supplied close button dismiss unless callback cancellation vetoes. Popup initialFocus/finalFocus may deliberately override the default targets.",
+  "sourceRule": "modal=true also locks outside pointer interaction and page scroll; modal=false permits the page. trap-focus contains focus without the full modal outside/scroll policy. disablePointerDismissal blocks outside press (and nonmodal focus-out), not the explicit Close control. Popup title/description supply accessible relations.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Owns open/modal state without a DOM root."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-trigger\"]",
+      "description": "Actual primitive native trigger."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-content\"]",
+      "description": "Actual focus-managed popup surface."
+    },
+    "overlay": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-overlay\"]",
+      "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-header\"]",
+      "description": "Intrinsic heading stack."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-footer\"]",
+      "description": "Actions, kept in caller order."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-title\"]",
+      "description": "Actual heading named by primitive relation."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-description\"]",
+      "description": "Actual descriptive paragraph."
+    },
+    "portal": {
+      "kind": "controller",
+      "description": "Portal ownership, not a styled anatomy element."
+    },
+    "close": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-close\"]",
+      "description": "Native close action, including optional internal icon close."
+    }
+  },
+  "visualStateMapping": {
+    "placement": "Actual public showCloseButton"
+  }
+}

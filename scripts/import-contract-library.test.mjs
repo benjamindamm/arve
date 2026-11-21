@@ -57,6 +57,30 @@ test('tampered bytes and undeclared files are rejected',()=>fixture(async({bundl
   await writeFile(path.join(bundle,'extra.txt'),'extra')
   await assert.rejects(importContractLibrary(bundle,dest),/Unexpected/)
 }))
+test('compact CSS closure preserves import chains, fonts, queries, cycles and explicit cross-component styles',()=>fixture(async({bundle,dest,files,seal})=>{
+  files['library/components/button/component.json']=JSON.stringify({status:'complete',domains:{visual:{css:'layout.css'}}})
+  files['library/components/button/layout.css']='/* @import "missing.css"; */ @import "../../tokens.css" layer(tokens); @import url("../shared/shared.css"); .button{background:url("../../assets/icon%20one.svg#mark")}'
+  files['library/tokens.css']='@import url(./fonts.css) screen; @import "https://example.invalid/remote.css";'
+  files['library/fonts.css']='@import "./tokens.css"; @font-face{src:url("./assets/font.woff2?v=1#font")} .x{background:url(data:image/png;base64,AAAA);filter:url(#local)}'
+  files['library/components/shared/shared.css']='.shared{background:none}'
+  files['library/components/shared/component.json']='{"private":"not a declared dependency"}'
+  files['library/assets/font.woff2']=Buffer.from([0,255,88])
+  files['library/assets/icon one.svg']='<svg/>'
+  await seal()
+  const result=await importContractLibrary(bundle,dest,{compact:true})
+  const [contract]=JSON.parse(await readFile(path.join(result.destination,'contracts.json'),'utf8'))
+  for(const name of ['tokens.css','fonts.css','assets/font.woff2','assets/icon one.svg','components/shared/shared.css'])assert(contract.artifacts[name],name)
+  assert(!contract.artifacts['components/shared/component.json'])
+  assert.deepEqual(await readFile(path.join(result.destination,'package/library/assets/font.woff2')),Buffer.from([0,255,88]))
+}))
+test('missing or escaping CSS dependencies fail closed',()=>fixture(async({bundle,dest,files,seal})=>{
+  files['library/components/button/component.json']=JSON.stringify({domains:{visual:{css:'layout.css'}}})
+  for(const reference of ['../../missing.css','../../../dependencies.json','../../%2e%2e/dependencies.json','file:///tmp/font.woff2','/private/font.woff2']){
+    files['library/components/button/layout.css']=`@import "${reference}";`
+    await seal()
+    await assert.rejects(importContractLibrary(bundle,dest,{compact:true}),/CSS dependency/,reference)
+  }
+}))
 test('symlinks are rejected',()=>fixture(async({bundle,dest})=>{
   await symlink('/tmp',path.join(bundle,'escape'))
   await assert.rejects(importContractLibrary(bundle,dest),/Symlinks/)

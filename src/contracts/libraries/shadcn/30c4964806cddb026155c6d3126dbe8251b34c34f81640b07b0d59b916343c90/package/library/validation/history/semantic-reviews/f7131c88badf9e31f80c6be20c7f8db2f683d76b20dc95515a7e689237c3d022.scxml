@@ -1,0 +1,12 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Attachment" initial="active">
+  <datamodel>
+    <data id="attachmentState" expr="'done'" />
+  </datamodel>
+  <state id="active">
+    <transition event="FOCUS_IN FOCUS_OUT ESCAPE" />
+    <transition event="SET_STATE" cond="['idle','uploading','processing','error','done'].includes(_event.data.state)">
+      <assign location="attachmentState" expr="_event.data.state" />
+    </transition>
+    <transition event="CHILD_ACTION" />
+  </state>
+</scxml>

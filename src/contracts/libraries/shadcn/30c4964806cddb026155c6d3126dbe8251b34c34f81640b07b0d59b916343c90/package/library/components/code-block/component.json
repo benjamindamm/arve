@@ -1,0 +1,160 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:CodeBlock",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Actual passive source surface with variant and size.",
+    "header": "Optional actual header wrapper.",
+    "title": "Actual source div, not an automatic heading; caller supplies code heading.",
+    "actions": "Actual independent actions; direct-root placement reveals on hover/focus/coarse pointer.",
+    "copy": "Actual Button with required exact caller value and source success/promise rejection behavior.",
+    "content": "Native focusable pre with source LTR/wrap/numbering behavior.",
+    "code": "Actual internal code element, not an extra public export.",
+    "line": "Actual source line and optional diff/highlight variant.",
+    "line-content": "Actual internal span; empty source line preserves newline.",
+    "footer": "Actual supporting metadata or legend."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "CodeBlock",
+      "selector": "[data-slot=\"code-block\"]",
+      "description": "Actual passive source surface with variant and size.",
+      "ownership": "actual pinned wrapper"
+    },
+    "header": {
+      "kind": "element",
+      "declaration": "CodeBlockHeader",
+      "selector": "[data-slot=\"code-block-header\"]",
+      "description": "Optional actual header wrapper.",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "CodeBlockTitle",
+      "selector": "[data-slot=\"code-block-title\"]",
+      "description": "Actual source div, not an automatic heading; caller supplies code heading.",
+      "ownership": "actual pinned wrapper"
+    },
+    "actions": {
+      "kind": "element",
+      "declaration": "CodeBlockActions",
+      "selector": "[data-slot=\"code-block-actions\"]",
+      "description": "Actual independent actions; direct-root placement reveals on hover/focus/coarse pointer.",
+      "ownership": "actual pinned wrapper"
+    },
+    "copy": {
+      "kind": "element",
+      "declaration": "CodeBlockCopyButton",
+      "selector": "[data-slot=\"code-block-copy-button\"]",
+      "description": "Actual Button with required exact caller value and source success/promise rejection behavior.",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "CodeBlockContent",
+      "selector": "[data-slot=\"code-block-content\"]",
+      "description": "Native focusable pre with source LTR/wrap/numbering behavior.",
+      "ownership": "actual pinned wrapper"
+    },
+    "code": {
+      "kind": "element",
+      "declaration": "CodeBlockContent",
+      "selector": "[data-slot=\"code-block-code\"]",
+      "description": "Actual internal code element, not an extra public export.",
+      "ownership": "actual pinned wrapper"
+    },
+    "line": {
+      "kind": "element",
+      "declaration": "CodeBlockLine",
+      "selector": "[data-slot=\"code-block-line\"]",
+      "description": "Actual source line and optional diff/highlight variant.",
+      "ownership": "actual pinned wrapper"
+    },
+    "line-content": {
+      "kind": "element",
+      "declaration": "CodeBlockLine",
+      "selector": "[data-slot=\"code-block-line-content\"]",
+      "description": "Actual internal span; empty source line preserves newline.",
+      "ownership": "actual pinned wrapper"
+    },
+    "footer": {
+      "kind": "element",
+      "declaration": "CodeBlockFooter",
+      "selector": "[data-slot=\"code-block-footer\"]",
+      "description": "Actual supporting metadata or legend.",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "code-block-added-dark": "components.code-block.addedDark",
+      "code-block-added-light": "components.code-block.addedLight",
+      "code-block-font": "components.code-block.font",
+      "code-block-font-size": "components.code-block.fontSize",
+      "code-block-font-weight": "components.code-block.fontWeight",
+      "code-block-gap": "components.code-block.gap",
+      "code-block-highlight-dark": "components.code-block.highlightDark",
+      "code-block-highlight-light": "components.code-block.highlightLight",
+      "code-block-line-height": "components.code-block.lineHeight",
+      "code-block-padding": "components.code-block.padding",
+      "code-block-radius": "components.code-block.radius",
+      "color-destructive": "semantic.color.destructive",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "The actual source pre/code/line hierarchy and public wrap/lineNumbers/startLine semantics lead the recipe. Native 18px surface corners,16px section/content insets and 8px header gap remain semantic metrics; source 448px example widths are never fixed. Actual native text runs and line-number text specify Geist Mono Medium 14/20, despite a22.75px artwork row frame; the pinned supplied font follows those text values. Compact 12/16 and 28rem maximum scroll height are explicit reference decisions. Native unbound highlighted zinc at50% is retained for light mode, with an explicit 10% light foreground tint in dark mode for readable text; added-line colors and destructive inset stroke are explicit visual decisions because pinned wrapper classes define the variants without these scalar values. The visible +/− text and legend carry diff meaning independently of color. Code content remains LTR inside RTL hosts. Counter-only line numbers have empty speech alternative where supported, and Copy always uses the caller value rather than rendered numbers or diff DOM. Headerless actions reveal on hover, focus-within and coarse pointers; the real native Button remains independently reachable. Copy success,2000ms reset and swallowed rejection remain actual source behavior; persistent selection instructions provide the concrete fallback. Root never executes code or adds a syntax highlighter.",
+    "variants": {
+      "variant": [
+        "default",
+        "destructive"
+      ],
+      "size": [
+        "default",
+        "sm"
+      ],
+      "content": {
+        "wrap": "boolean",
+        "lineNumbers": "boolean",
+        "startLine": "number"
+      },
+      "line.variant": [
+        "default",
+        "added",
+        "removed",
+        "highlighted"
+      ]
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

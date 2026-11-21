@@ -1,0 +1,117 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:DataTable",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "payments",
+      "name": "Payments",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\"></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "selected-stable-row",
+      "name": "Selected stable row",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\" data-state=\"selected\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\" checked></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "sort-ascending",
+      "name": "Sort ascending",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"ascending\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\"></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "sort-descending",
+      "name": "Sort descending",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"descending\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\"></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "empty-filtered",
+      "name": "Empty filtered",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\" data-part=\"data-table-empty\" colspan=\"4\">No results.</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">0 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "hidden-column-empty",
+      "name": "Hidden column empty",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\">Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\" data-part=\"data-table-empty\" colspan=\"3\">No results.</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">0 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "data-error",
+      "name": "Data error",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><p data-part=\"data-table-error\" role=\"alert\">Payment data unavailable. Retry local data.</p><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\" data-part=\"data-table-empty\" colspan=\"4\">No results.</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">0 matching payments.</p></section>"
+      },
+      "steps": [],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "sort-keyboard-focus",
+      "name": "Sort keyboard focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\"></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "sort",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    },
+    {
+      "id": "row-hover",
+      "name": "Row hover",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-part=\"data-table\"><div data-part=\"data-table-toolbar\"><label>Filter email<input data-part=\"data-table-filter\" data-slot=\"input\" aria-label=\"Filter email\"></label><label><input type=\"checkbox\" checked>Show status column</label></div><div data-slot=\"table-container\"><table data-slot=\"table\"><caption data-slot=\"table-caption\">Recent payment records in US dollars</caption><thead data-slot=\"table-header\"><tr data-slot=\"table-row\"><th data-slot=\"table-head\" scope=\"col\">Select</th><th data-slot=\"table-head\" scope=\"col\" aria-sort=\"none\"><button data-part=\"data-table-sort\" data-slot=\"button\" class=\"cn-button cn-button-variant-ghost\" type=\"button\">Sort email</button></th><th data-slot=\"table-head\" scope=\"col\">Status</th><th data-slot=\"table-head\" scope=\"col\">Amount</th></tr></thead><tbody data-slot=\"table-body\"><tr data-slot=\"table-row\"><td data-slot=\"table-cell\"><input data-part=\"data-table-selection\" type=\"checkbox\" aria-label=\"Select payment 728ed52f\"></td><td data-slot=\"table-cell\">m@example.com</td><td data-slot=\"table-cell\">pending</td><td data-slot=\"table-cell\">$100.00</td></tr></tbody></table></div><nav data-part=\"data-table-pages\" aria-label=\"Payment pages\"><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\" disabled>Previous page</button><button data-slot=\"button\" class=\"cn-button cn-button-variant-outline\" type=\"button\">Next page</button></nav><p data-part=\"data-table-status\" role=\"status\">1 matching payments.</p></section>"
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "table"
+        }
+      ],
+      "expectation": "Explicit source state/part fixture; actual native feature/form/scroll behavior is verified in the pinned React target, not simulated by this markup."
+    }
+  ]
+}

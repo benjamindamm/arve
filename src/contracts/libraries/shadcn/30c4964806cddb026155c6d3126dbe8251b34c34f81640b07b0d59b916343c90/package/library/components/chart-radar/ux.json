@@ -1,0 +1,65 @@
+{
+  "purpose": "Compare monthly visitor values around categorical spokes on a shared radial scale. Source April is 273 here, not the 73 in the area/bar/line samples; the complete table preserves this distinction. Filled polygon area is not an independent quantity.",
+  "avoid": "Do not rely only on color, geometry or hover for access to the values.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful informative plot with an exhaustive table and text equivalent, no adjustable Root value. Optional source pointer tooltip remains explicitly modeled; interactive descendants must retain their own contracts.",
+  "componentId": "shadcn:ChartRadar",
+  "contentAlternative": "Full captioned table with column headers, row headers, exact values and category order; visible summary explicitly states units/unknown units and the chart-specific interpretation. Every category/series survives without color, geometry, pointer hover or transient tooltip.",
+  "updatesAndDescendants": "ChartContainer is a div/context/ResponsiveContainer composition, not a plot API. It requires config:ChartConfig and a Recharts-compatible child, initialDimension defaults320x200; caller gives a nonzero constrained chart size. Config keys map optional ReactNode labels/icons and either color or complete light/dark theme values; generated --color-key variables are scoped to the chart id. ChartStyle returns null without color/theme entries. ChartTooltip and ChartLegend are direct Recharts aliases. ChartTooltipContent requires chart context, returns null when inactive/empty, filters payload type=none, resolves series/nameKey/labelKey and supports formatter, labelFormatter, hideLabel/hideIndicator and dot/line/dashed indicators. ChartLegendContent requires context, returns null with no payload, supports nameKey/hideIcon/verticalAlign. For one payload item with a non-dot indicator, the label nests inside the default row; a custom formatter replaces that row and owns the nested label as well. Neither tooltip nor legend fabricates source data, performs aggregation or automatically makes a complete text alternative. The actual source custom tooltip is a plain div, not a separately focusable ARIA tooltip widget. Recharts3.8 accessibilityLayer keyboard behavior and TooltipBoundingBox Escape dismissal are separately pinned. This reference offers the entire native table and summary continuously; its SVG is explicitly redundant aria-hidden with accessibilityLayer=false. Thus every value is readable without hover, chart focus or a particular screen reader mode. Pointer tooltip remains supplemental and Escape dismisses at the current coordinate until the source coordinate changes. Reference updates replace graph/table/summary from the same dataset; empty and failure are explicit caller feedback instead of a fabricated zero chart. Interactive application filters and legends, if composed, require their own Button/selection contract.",
+  "referenceDecision": "The source Base UI chart wrapper remains the public foundation. The named chart family is an explicit Recharts composition, not a new exported upstream component. The supplemental official new-york-v4 example supplies its actual plot shape and literal dataset only; it does not replace the chosen Base UI wrapper. Dataset counts, accessible figure/table, redundant hidden SVG, units, zero-baseline bar policy and reduced-motion/no-animation reference usage are explicit caller decisions. Figma supplies all native visual measurements; no claim equates this React sample with every Figma raster.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/chart.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/chart.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/chart-example.tsx.source",
+    "sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-radar-default.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "chartSpecificInterpretation": "Compare monthly visitor values around categorical spokes on a shared radial scale. Source April is273 here, not the73 in the area/bar/line samples; the complete table preserves this distinction. Filled polygon area is not an independent quantity. Exact values and category order follow the bound official sample. Unit: Visitors (count)",
+  "exampleSource": {
+    "examplePath": "sources/shadcn/apps/v4/registry/new-york-v4/charts/chart-radar-default.tsx.source",
+    "exampleSha256": "e503bd2c88e20d5f37082dcdfd2a95d1e61cfcc0855844d0050e114fa7428394",
+    "dataset": [
+      {
+        "month": "January",
+        "desktop": 186
+      },
+      {
+        "month": "February",
+        "desktop": 305
+      },
+      {
+        "month": "March",
+        "desktop": 237
+      },
+      {
+        "month": "April",
+        "desktop": 273
+      },
+      {
+        "month": "May",
+        "desktop": 209
+      },
+      {
+        "month": "June",
+        "desktop": 214
+      }
+    ],
+    "categoryKey": "month",
+    "series": [
+      "desktop"
+    ],
+    "unit": "Visitors (count)",
+    "supplementalVariant": "Official new-york-v4 example supplies concrete Recharts plot/data only; chosen public wrappers remain pinned Base UI chart.tsx. Figma supplies native visual observations."
+  },
+  "sourcePackage": "recharts@3.8.0",
+  "referenceDataBinding": "sources/chart-reference-data.json#/families/chart-radar",
+  "visualContract": {
+    "layoutPolicy": "Each family is an explicit Recharts composition using the real ChartContainer, Tooltip and Legend wrappers. The chosen native example Card corner is retained; catalog page dimensions and individual bar/path node coordinates are not layout contracts. Plot width is fluid with a chosen 260px block extent,12/16px ticks and a complete captioned data table. Static fixtures derive geometry from source data; straight segments stand in for runtime natural interpolation and are identified as illustrations. The actual React target preserves source chart type and dataset. Radar uses an explicit 70% outer radius to leave room between its April label and the real legend. Figure gap 12/inset 16, tooltip 8px radius/10px inset and accessible scrollable table are explicit reference choices, not invented universal Figma measurements. Source tooltip actual cn-chart-tooltip class and inline --color-bg/--color-border, including dot/line/dashed, are retained; transient content remains supplementary. Source legend receives a caller className. Series colors are explicit semantic roles; no color alone conveys data. ChartStyle theme selectors require .dark context, while semantic token aliases use data-theme; the target supplies both. The reference passes Pie rootTabIndex=-1 because Recharts Pie otherwise emits a tab stop even with chart accessibilityLayer=false; this prevents an aria-hidden focus target while preserving supplementary pointer hints. No chart role slider/progressbar or focusable graph is invented. Full exact table remains primary, SVG hidden, no animation required; empty/error states never imply zero data.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

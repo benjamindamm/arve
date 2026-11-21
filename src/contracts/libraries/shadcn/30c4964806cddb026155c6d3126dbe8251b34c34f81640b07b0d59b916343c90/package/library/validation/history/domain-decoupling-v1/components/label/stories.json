@@ -1,0 +1,95 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "73:1978"
+  },
+  "stories": [
+    {
+      "id": "figma-2084-964",
+      "name": "Frame 18",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2084:964",
+        "part": "2084:955"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-21259",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:21259",
+        "part": "2084:955"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2084-988",
+      "name": "Frame 22",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2084:988",
+        "part": "2084:955"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-21268",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:21268",
+        "part": "2084:955"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "referenceScope": "Pinned native/default content composition; original static Figma variants remain in stories. Source wrapper APIs and optional native render semantics are described in CEM/README.",
+  "contractCases": [
+    {
+      "id": "default-content-semantic-projection",
+      "html": "accessibility.html",
+      "expectSelector": "provenance://source/%2F%2Flabel[@for=\"label-project\"]"
+    },
+    {
+      "id": "prop-update-keeps-passive-contract",
+      "events": [
+        {
+          "event": "PROPS_CHANGED"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "unmount-remount",
+      "events": [
+        {
+          "event": "UNMOUNT"
+        },
+        {
+          "event": "MOUNT"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    },
+    {
+      "id": "no-fabricated-activation",
+      "events": [
+        {
+          "event": "ACTIVATE"
+        },
+        {
+          "event": "ESCAPE"
+        }
+      ],
+      "expectState": "rendered",
+      "expectNoCallbacks": true
+    }
+  ]
+}

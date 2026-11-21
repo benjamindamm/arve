@@ -1,0 +1,105 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "2712:2"
+  },
+  "stories": [
+    {
+      "id": "figma-2718-577",
+      "name": "Code block line / State=Default, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2718:577",
+        "part": "2718:578"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2718-579",
+      "name": "Code block line / State=Default, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2718:579",
+        "part": "2718:578"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2718-576",
+      "name": "Code block line / State=Highlighted, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2718:576",
+        "part": "2718:578"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2718-584",
+      "name": "Code block line / State=Highlighted, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2718:584",
+        "part": "2718:578"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2716-518",
+      "name": "Code block header / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2716:518",
+        "part": "2727:3145"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2727-3146",
+      "name": "Code block header / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2727:3146",
+        "part": "2727:3145"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2727-2381",
+      "name": "Code block footer / Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2727:2381",
+        "part": "2727:3208"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2727-3209",
+      "name": "Code block footer / Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2727:3209",
+        "part": "2727:3208"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "source-specific-normal-and-failure",
+      "expected": "Root variant=default|destructive and size=default|sm only style div content. Content is native pre with nested code, dir=ltr and tabIndex0; wrap defaultsfalse, lineNumbersfalse, startLine1 controls the CSS line counter. With string children and numbering, one trailing newline is removed before splitting; empty CodeBlockLine deliberately emits a newline. No syntax highlighter or executable code engine is built in. CopyButton requires value:string, defaults ghost/icon-xs, calls caller onClick before navigator.clipboard.writeText(value), and does not inspect defaultPrevented. Successful promise sets copied=true, aria-label=Copied and a polite live text; first copied=true schedules reset after2000ms. Repeated success while already copied does not restart that effect timer. Rejected promises are swallowed, preserving the previous copied state; no onCopied/onCopyError event exists. Missing navigator.clipboard can throw synchronously before the promise catch. This reference requires a supported secure clipboard context for Copy and provides persistent native text-selection instructions as the fallback. The copy value is exact caller text, not inferred from formatted/numbered DOM."
+    },
+    {
+      "id": "keyboard-focus-and-disabled",
+      "expected": "Native Copy Button supports Enter/Space; disabled suppresses its click. The focusable pre supports native selection/scrolling and Tab leaves it. Escape does not revert code or cancel a clipboard write already requested. Copy does not move focus. A descriptive code heading/instructions are caller supplied, not automatic CodeBlockTitle semantics."
+    },
+    {
+      "id": "meaningful-native-content",
+      "html": "accessibility.html"
+    }
+  ]
+}

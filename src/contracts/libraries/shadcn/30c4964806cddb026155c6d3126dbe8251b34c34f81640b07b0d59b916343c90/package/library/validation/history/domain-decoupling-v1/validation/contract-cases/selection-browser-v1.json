@@ -1,0 +1,540 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual pinned React selection widgets, native focus and keyboard transactions, plus observed upstream wrapper limitations.",
+  "caseCount": 36,
+  "families": [
+    {
+      "cases": [
+        {
+          "expected": {
+            "radio": "pro"
+          },
+          "name": "arrow selects next enabled radio",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "pro",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "basic"
+          },
+          "name": "arrow wraps and skips disabled item",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "basic"
+          },
+          "name": "Enter does not select a radio",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "pro"
+          },
+          "name": "Space selects focused radio",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "pro",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "pro"
+          },
+          "name": "readonly preserves group value",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "pro",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "pro"
+          },
+          "name": "callback cancellation retains source value",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "pro",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "radio": "pro"
+          },
+          "name": "Escape does not clear selection",
+          "result": "pass",
+          "state": {
+            "focus": "",
+            "pin": "false",
+            "radio": "pro",
+            "toggles": "[]"
+          }
+        }
+      ],
+      "family": "radio-group"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "toggles": "[\"bold\"]"
+          },
+          "name": "single group chooses array member",
+          "result": "pass",
+          "state": {
+            "focus": "Bold",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\"]"
+          }
+        },
+        {
+          "expected": {
+            "toggles": "[\"italic\"]"
+          },
+          "name": "single group replaces prior pressed member",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "toggles": "[]"
+          },
+          "name": "same toggle can clear single group",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[]"
+          }
+        },
+        {
+          "expected": {
+            "toggles": "[\"bold\",\"italic\"]"
+          },
+          "name": "multiple group retains independent members",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Italic",
+            "toggles": "[\"bold\",\"italic\"]"
+          },
+          "name": "arrow moves focus without toggling",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Bold"
+          },
+          "name": "loop skips disabled member",
+          "result": "pass",
+          "state": {
+            "focus": "Bold",
+            "orientation": "horizontal",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Bold"
+          },
+          "name": "pinned visual vertical prop does not forward primitive vertical keyboard orientation",
+          "result": "pass",
+          "state": {
+            "focus": "Bold",
+            "orientation": "vertical",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Italic"
+          },
+          "name": "horizontal primitive orientation remains active",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "vertical",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "toggles": "[\"bold\",\"italic\"]"
+          },
+          "name": "canceled group request retains members",
+          "result": "pass",
+          "state": {
+            "focus": "Italic",
+            "orientation": "vertical",
+            "pin": "false",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        },
+        {
+          "expected": {
+            "pin": "true"
+          },
+          "name": "standalone native Toggle is included and separately controlled",
+          "result": "pass",
+          "state": {
+            "focus": "Pin report",
+            "orientation": "vertical",
+            "pin": "true",
+            "radio": "basic",
+            "toggles": "[\"bold\",\"italic\"]"
+          }
+        }
+      ],
+      "family": "toggle-group"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "focus": "Details",
+            "tab": "summary"
+          },
+          "name": "manual arrow focus is distinct from panel activation",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Details",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "summary",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "details"
+          },
+          "name": "Enter activates associated panel",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Details",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "focus": "Unavailable tab",
+            "tab": "details"
+          },
+          "name": "pinned source permits disabled tab focus without activation",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Unavailable tab",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "details"
+          },
+          "name": "disabled focused tab cannot activate",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Unavailable tab",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "focus": "Summary"
+          },
+          "name": "arrow loops to first tab",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Summary",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "details"
+          },
+          "name": "Escape does not alter active panel",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Summary",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "details"
+          },
+          "name": "canceled user selection retains active panel",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Summary",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "summary"
+          },
+          "name": "explicit activateOnFocus changes panel with focus",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Summary",
+            "rootOrientation": "horizontal",
+            "slider": "[40]",
+            "tab": "summary",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "focus": "Summary",
+            "rootOrientation": "vertical",
+            "tabOrientation": null
+          },
+          "name": "pinned visual vertical prop leaves implicit horizontal ARIA and keyboard",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Summary",
+            "rootOrientation": "vertical",
+            "slider": "[40]",
+            "tab": "summary",
+            "tabOrientation": null
+          }
+        },
+        {
+          "expected": {
+            "tab": "details"
+          },
+          "name": "horizontal arrow remains operative",
+          "result": "pass",
+          "state": {
+            "commits": "0",
+            "focus": "Details",
+            "rootOrientation": "vertical",
+            "slider": "[40]",
+            "tab": "details",
+            "tabOrientation": null
+          }
+        },
+        {
+          "name": "client registration resolves actual selected tab and panel ownership after hydration",
+          "result": "pass",
+          "state": {
+            "controls": "base-ui-_r_3_",
+            "panel": "base-ui-_r_3_",
+            "selected": "true",
+            "tab": "base-ui-_r_0_",
+            "text": "Summary"
+          }
+        }
+      ],
+      "family": "tabs"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "commits": "1",
+            "slider": "[45]"
+          },
+          "name": "native thumb arrow advances configured step and commits",
+          "result": "pass",
+          "state": {
+            "commits": "1",
+            "focus": "",
+            "slider": "[45]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "commits": "2",
+            "slider": "[55]"
+          },
+          "name": "PageUp uses largeStep default",
+          "result": "pass",
+          "state": {
+            "commits": "2",
+            "focus": "",
+            "slider": "[55]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "commits": "3",
+            "slider": "[0]"
+          },
+          "name": "Home reaches minimum",
+          "result": "pass",
+          "state": {
+            "commits": "3",
+            "focus": "",
+            "slider": "[0]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "commits": "4",
+            "slider": "[100]"
+          },
+          "name": "End reaches maximum",
+          "result": "pass",
+          "state": {
+            "commits": "4",
+            "focus": "",
+            "slider": "[100]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "commits": "4",
+            "slider": "[100]"
+          },
+          "name": "Escape does not revert committed value",
+          "result": "pass",
+          "state": {
+            "commits": "4",
+            "focus": "",
+            "slider": "[100]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "focus": "After demo"
+          },
+          "name": "disabled slider skipped in native Tab order",
+          "result": "pass",
+          "state": {
+            "commits": "4",
+            "focus": "After demo",
+            "slider": "[100]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "expected": {
+            "commits": "4",
+            "slider": "[100]"
+          },
+          "name": "canceled change neither changes controlled value nor commits",
+          "result": "pass",
+          "state": {
+            "commits": "4",
+            "focus": "",
+            "slider": "[100]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        },
+        {
+          "name": "Root explicit labelledby propagates to actual native range input",
+          "result": "pass",
+          "state": {
+            "commits": "4",
+            "focus": "",
+            "slider": "[100]",
+            "sliderName": "volume-label",
+            "tab": "summary"
+          }
+        }
+      ],
+      "family": "slider"
+    }
+  ]
+}

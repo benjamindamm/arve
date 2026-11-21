@@ -1,0 +1,82 @@
+{
+  "format": "shadcn-import-integration-review/1",
+  "overall": "EXHAUSTIVE_SOURCE_MAPPING_WITH_DRAFT_GAPS",
+  "release": false,
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5"
+  },
+  "counts": {
+    "sourcePages": 89,
+    "componentPages": 62,
+    "chartSubtypes": 7,
+    "registeredFamilies": 69,
+    "newFamilies": 65,
+    "componentSets": 89,
+    "componentVariantOrStandaloneIds": 1392,
+    "blockCatalogues": 4,
+    "blockSets": 5,
+    "blockVariants": 19,
+    "iconLibraries": 5,
+    "iconMasters": 14125,
+    "figPreviewReceiptTriples": 69,
+    "openCoverageCriteria": 474
+  },
+  "checks": {
+    "sourceCoverage": {
+      "result": "MAPPED_DRAFTS",
+      "errors": 0,
+      "report": "source-coverage.json"
+    },
+    "layoutSchemasReferencesCoverage": {
+      "result": "DRAFT",
+      "errors": 0,
+      "report": "structure-check.json"
+    },
+    "coverageRegressions": {
+      "tests": 37,
+      "result": "passed",
+      "command": "PYTHONDONTWRITEBYTECODE=1 provenance://source/tools%2Fvalidation%2F.venv%2Fbin%2Fpython -m unittest discover -s provenance://source/tools%2Fcompleteness -p 'test_*.py'"
+    },
+    "libraryRegressions": {
+      "tests": 58,
+      "result": "passed",
+      "command": "PYTHONDONTWRITEBYTECODE=1 provenance://source/tools%2Fvalidation%2F.venv%2Fbin%2Fpython -m unittest discover -s provenance://source/tools%2Flibraries -p 'test_*.py'",
+      "scope": "Includes real shadcn portable export with source unchanged during export; final run after preview regeneration."
+    },
+    "nativeOutputs": {
+      "newExtracts": 65,
+      "editableReadbacks": 65,
+      "sourceFrameSizes": "all matched",
+      "previewPairHashes": "all 69 match",
+      "actualReadbackPreviews": 65
+    },
+    "visualInspection": {
+      "report": "visual-review.json",
+      "result": "REVIEWED_WITH_OPEN_FIDELITY_GAPS",
+      "inspectedOverviews": 69,
+      "pixelEquivalence": "not-checked"
+    }
+  },
+  "domainReview": {
+    "requirementsUX": "Author interpretations of suitability and limits are explicit; source examples and parts separately observed.",
+    "interface": "Source-specific CEM anatomy candidates only for new families. Runtime values/events remain open.",
+    "visual": "Source IDs, native measured CSS, static variants, editable FIG and PNG mapped. Token mapping and vector/instance rendering fidelity remain open.",
+    "behavior": "No transitions fabricated from static artwork. New behavior contracts absent and coverage criteria open.",
+    "accessibility": "No roles or names fabricated from appearance. Informative content gets its own bounded profile, with semantics, alternatives and updates open.",
+    "integration": "All source families and supporting catalogues mapped; identity/source/hash bindings and canonical folders checked. No browser or assistive-technology validation."
+  },
+  "preservation": {
+    "tokensSha256": "52171cae1c65df3af3268f2e12017cd315c13c3a36c3db587a55256511698b9b",
+    "existingFourDomainSourcesAndNativeOutputs": "preserved",
+    "profileExtension": "Added content-display/1. Archived current four coverage records before deliberate profile collection hash migration; prior criteria unchanged.",
+    "commitPushPublish": "not performed"
+  },
+  "limitations": [
+    "All 69 components remain draft. Mapping completeness is not contract completeness or UI approval.",
+    "Several native master grids and chart specimens contain conspicuous geometric rendering artifacts; see visual-review.json and affected component README files.",
+    "Native FIG retains editable imported trees but source-renderer pixel identity is not established.",
+    "No executed interaction, keyboard/focus, accessible name, ARIA or responsive behavior evidence for new families.",
+    "Asset master maps preserve every icon ID; separate SVG icon distributions and licensing/version equivalence were not established."
+  ]
+}

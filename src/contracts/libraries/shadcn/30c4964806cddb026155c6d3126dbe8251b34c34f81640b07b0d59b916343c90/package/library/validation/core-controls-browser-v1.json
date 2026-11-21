@@ -1,0 +1,86 @@
+{
+  "format": "shadcn-browser-cases/1",
+  "adapter": "provenance://source/apps%2Fshadcn-reference-lab",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "baseUI": "1.9.0",
+  "method": "BrowserOS native user actions plus read-only DOM/AX checks; no synthetic event dispatch.",
+  "allPassed": true,
+  "rows": [
+    {
+      "actual": "1",
+      "case": "button pointer",
+      "expected": "1"
+    },
+    {
+      "actual": "2",
+      "case": "button Enter",
+      "expected": "2"
+    },
+    {
+      "actual": "3",
+      "case": "button Space",
+      "expected": "3"
+    },
+    {
+      "actual": "3",
+      "case": "button Escape",
+      "expected": "3"
+    },
+    {
+      "actual": "true",
+      "case": "checkbox click",
+      "expected": "true"
+    },
+    {
+      "actual": "false",
+      "case": "checkbox Space",
+      "expected": "false"
+    },
+    {
+      "actual": "false",
+      "case": "checkbox Enter does not toggle",
+      "expected": "false"
+    },
+    {
+      "actual": "true",
+      "case": "readonly checkbox preserves checked",
+      "expected": "true"
+    },
+    {
+      "actual": "false",
+      "case": "callback cancellation vetoes checkbox update",
+      "expected": "false"
+    },
+    {
+      "actual": "true",
+      "case": "switch click",
+      "expected": "true"
+    },
+    {
+      "actual": "false",
+      "case": "switch Space",
+      "expected": "false"
+    },
+    {
+      "actual": "Reference project",
+      "case": "input native change",
+      "expected": "Reference project"
+    },
+    {
+      "actual": "Reference project",
+      "case": "input Escape preserves committed text",
+      "expected": "Reference project"
+    }
+  ],
+  "semantics": {
+    "description": "Use a project name.",
+    "disabledAction": true,
+    "disabledCheckbox": true,
+    "disabledSwitch": true,
+    "disabledText": "Locked",
+    "invalid": "true",
+    "mixed": true
+  },
+  "url": "http://127.0.0.1:5175/",
+  "release": false
+}

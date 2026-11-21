@@ -1,0 +1,96 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:HoverCard",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "open": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"bottom\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"bottom\" dir=\"rtl\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-top",
+      "name": "Side top",
+      "inputs": {
+        "side": "top"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"top\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-right",
+      "name": "Side right",
+      "inputs": {
+        "side": "right"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"right\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-bottom",
+      "name": "Side bottom",
+      "inputs": {
+        "side": "bottom"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"bottom\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-left",
+      "name": "Side left",
+      "inputs": {
+        "side": "left"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<a href=\"#profile\" data-slot=\"hover-card-trigger\">Alex profile</a><div data-slot=\"hover-card-content\" data-side=\"left\"><p>Alex writes project reports.</p></div><p id=\"profile\">Alex profile remains available here without a hover interaction.</p>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

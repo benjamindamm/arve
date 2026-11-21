@@ -1,0 +1,141 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:InputOtp",
+  "componentSha256": "b33b03c9d2607beb43f4c2c40f8d9d65439eae548f3462bade68603095461e50",
+  "profile": "interactive-control/1",
+  "profileSha256": "643e8814e78bd44e5cdbe1eb88797957a4e543b71064014b8f10b08307eb556c",
+  "requirements": {
+    "VIS-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "0e3b61b4f673152a95100b8c3a80fb02f89bb7855913337b0db90cd36c64ca1a",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fnative%2Finput-otp%2Fn2160x8025%2Fwidth"
+          }
+        }
+      ]
+    },
+    "VIS-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "286456a07fab979e7f7b7652bee6e20ddb309d5c26bada6a9633db3a013b2343",
+          "selector": {
+            "kind": "lines",
+            "value": "1:144"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "386bb0d3d52ac9b5d99921ccdea8d9029e9e6c74fea5548121348ea46fb0508b",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fpurpose"
+          }
+        }
+      ]
+    },
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "d579423ccf83bdbd2e54215dc1de4853829d6b22d3d6f6ec905be81416698706",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fmembers%2F0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "d579423ccf83bdbd2e54215dc1de4853829d6b22d3d6f6ec905be81416698706",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fevents%2F0"
+          }
+        }
+      ]
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Ascxml%2F%40initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[@event=\"SOURCE_CHANGE\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "a680f447d07544352261138bcddac99bea6fed29c6d1a450579f878645e6193e",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Finput[@id=\"verification-code\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "a680f447d07544352261138bcddac99bea6fed29c6d1a450579f878645e6193e",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Flabel[@for=\"verification-code\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "49d65f20717d3dd3280ddb3594105255f91535cac76f9217a314982c5482dee4",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"FOCUS_IN\")]"
+          }
+        }
+      ]
+    }
+  }
+}

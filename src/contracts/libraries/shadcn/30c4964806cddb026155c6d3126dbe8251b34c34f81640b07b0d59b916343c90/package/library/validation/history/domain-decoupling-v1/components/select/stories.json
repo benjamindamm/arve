@@ -1,0 +1,149 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "73:1986"
+  },
+  "stories": [
+    {
+      "id": "figma-2058-1186",
+      "name": "Frame 2",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1186",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23042",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23042",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2058-1195",
+      "name": "Frame 3",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1195",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23161",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23161",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2058-1202",
+      "name": "Frame 10",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1202",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23162",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23162",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2058-1209",
+      "name": "Frame 11",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1209",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23167",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23167",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2058-1223",
+      "name": "Frame 13",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1223",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23256",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23256",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2058-1257",
+      "name": "Frame 18",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2058:1257",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2463-23257",
+      "name": "Component preview",
+      "kind": "documented-example",
+      "view": {
+        "figmaNode": "2463:23257",
+        "part": "2058:943"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "query-versus-highlight-versus-selection-or-command",
+      "expected": "Select is a direct alias of SelectPrimitive.Root, not a native select wrapper. Generic value/defaultValue and onValueChange distinguish single Value|null from multiple arrays. open/defaultOpen/onOpenChange/onOpenChangeComplete are independent of selected value; default modal=true. Root name/form/required/autoComplete use its hidden form control; object labels/form values use itemToStringLabel/itemToStringValue and comparison uses isItemEqualToValue. SelectValue resolves labels from Root items or registered ItemText; it is not a label for the field. Trigger defaults native button role=combobox with size sm|default. Content defaults bottom/center, offsets4/0 and alignItemWithTrigger=true; it inserts scroll arrows and List automatically. Items are role=option; disabled entries can be focused but cannot commit, while closed typeahead skips disabled choices. Single commit requests closing separately, even if the value callback is canceled; multiple toggles array values and normally stays open. readOnly locks changes but deliberately allows opening/browsing. GroupLabel/Separator are actual primitive parts; no text-query input, filter, server fetch or custom command event is invented."
+    },
+    {
+      "id": "keyboard-disabled-and-escape",
+      "expected": "Trigger Enter/Space/opening arrows operate the source popup. Open Up/Down/Home/End and label typeahead move highlight; Enter/Space choose an enabled option. Closed-trigger typeahead can commit a single value, but is disabled for readOnly or multiple. Escape dismisses without selecting a highlighted candidate; controlled open/value callbacks remain separately authoritative. Disabled Root suppresses interaction. Named visible label and error/help relations belong to the caller, not the placeholder."
+    },
+    {
+      "id": "independent-cancellation-and-controlled-props",
+      "expected": "Each applicable actual callback preserves its own authority; canceling value need not cancel independent popup closing."
+    },
+    {
+      "id": "named-native-instance",
+      "html": "accessibility.html"
+    }
+  ]
+}

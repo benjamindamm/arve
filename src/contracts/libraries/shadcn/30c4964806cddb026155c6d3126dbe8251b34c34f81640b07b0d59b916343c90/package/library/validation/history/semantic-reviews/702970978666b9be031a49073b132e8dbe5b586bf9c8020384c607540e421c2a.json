@@ -1,0 +1,166 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Collapsible",
+      "selector": "[data-slot=\"collapsible\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "trigger": {
+      "declaration": "CollapsibleTrigger",
+      "selector": "[data-slot=\"collapsible-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "CollapsibleContent",
+      "selector": "[data-slot=\"collapsible-content\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2124:439",
+      "property": "height",
+      "value": 32,
+      "semanticRole": "triggerMinHeight"
+    },
+    {
+      "sourceNodeId": "2124:439",
+      "property": "layout.padding.1",
+      "value": 16,
+      "semanticRole": "triggerInset"
+    },
+    {
+      "sourceNodeId": "2124:3753",
+      "property": "layout.gap",
+      "value": 8,
+      "semanticRole": "gap"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 72:2724 (Collapsible), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2124:439",
+      "sourcePartId": "2124:440",
+      "sourceName": "Collapsible / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2124:438",
+      "sourcePartId": "2124:440",
+      "sourceName": "Collapsible / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2124:2671",
+      "sourcePartId": "2124:2672",
+      "sourceName": "CollapsibleContent / Dir=LTR, Variant=Key-value",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2124:2673",
+      "sourcePartId": "2124:2672",
+      "sourceName": "CollapsibleContent / Dir=LTR, Variant=Title-description",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2124:2670",
+      "sourcePartId": "2124:2672",
+      "sourceName": "CollapsibleContent / Dir=RTL, Variant=Key-value",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2124:2678",
+      "sourcePartId": "2124:2672",
+      "sourceName": "CollapsibleContent / Dir=RTL, Variant=Title-description",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "hovered",
+        "disabled",
+        "rtl",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The three pinned wrappers are unstyled primitives. This reference adopts the native compact 32px header, 16px inline inset and 8px stack gap; content height and width remain intrinsic. No card, chevron, animation, invented variant or fixed source instance width is implied. A composed Button may replace the trigger through the actual render API; its own chrome then belongs to that composition.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

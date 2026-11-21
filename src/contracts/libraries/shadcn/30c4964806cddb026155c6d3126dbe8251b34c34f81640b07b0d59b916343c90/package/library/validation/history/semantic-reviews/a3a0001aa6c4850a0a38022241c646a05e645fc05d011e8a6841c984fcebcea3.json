@@ -1,0 +1,55 @@
+{
+  "componentId": "shadcn:Avatar",
+  "referenceComposition": "<div data-slot=\"avatar\" data-size=\"default\"><span data-slot=\"avatar-fallback\" role=\"img\" aria-label=\"Alex Morgan\">AM</span></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "A loaded AvatarImage requires meaningful alt. This reference fallback uses explicit role=img and the same full name, while initials and badge color alone are insufficient. Nearby text supplies the person and availability independently.",
+  "updatesAndDescendants": "Avatar uses Base UI loading states idle/loading/loaded/error. AvatarImage onLoadingStatusChange reports the actual status; keepMounted=false preloads and only exposes a loaded image. keepMounted=true retains the image while loading but hides it from accessibility until loaded. Fallback span defaults delay=0 and is shown when not loaded after its delay; a positive delay avoids flashing. Source/srcSet/sizes changes retry loading. Root has no activation or selection API. AvatarGroup/Count only position caller content; counts and status are not calculated.",
+  "referenceDecision": "The full fallback name, readable Available badge and nearby identity text are explicit reference composition choices. The root does not automatically apply role=img or label initials. If adjacent text fully identifies the person, a decorative avatar can instead have empty alt deliberately.",
+  "keyboard": "Avatar uses Base UI loading states idle/loading/loaded/error. AvatarImage onLoadingStatusChange reports the actual status; keepMounted=false preloads and only exposes a loaded image. keepMounted=true retains the image while loading but hides it from accessibility until loaded. Fallback span defaults delay=0 and is shown when not loaded after its delay; a positive delay avoids flashing. Source/srcSet/sizes changes retry loading. Root has no activation or selection API. AvatarGroup/Count only position caller content; counts and status are not calculated.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "protocol": "Source-normalized observations project real internal image/scroll state, derived progress, caller-owned upload props or the composed Collapsible protocol. No generic activation callback is invented. Internal lifecycle observations are not public Root events.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar\"]",
+      "description": "Actual portrait root with public size."
+    },
+    "image": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar-image\"]",
+      "description": "Loaded native image; alt is caller meaning."
+    },
+    "fallback": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar-fallback\"]",
+      "description": "Fallback content mounted by primitive lifecycle; named image role belongs to this caller."
+    },
+    "badge": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar-badge\"]",
+      "description": "Small visual badge, with status conveyed separately as ordinary text."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar-group\"]",
+      "description": "Actual group layout, optional caller grouping/name."
+    },
+    "status": {
+      "kind": "element",
+      "selector": "[data-part=\"avatar-status\"]",
+      "description": "Caller-owned readable status outside the visual badge."
+    },
+    "count": {
+      "kind": "element",
+      "selector": "[data-slot=\"avatar-group-count\"]",
+      "description": "Passive visible overflow count, not an invented action or size API."
+    }
+  },
+  "visualStateMapping": {
+    "size": [
+      "sm",
+      "default",
+      "lg"
+    ]
+  }
+}

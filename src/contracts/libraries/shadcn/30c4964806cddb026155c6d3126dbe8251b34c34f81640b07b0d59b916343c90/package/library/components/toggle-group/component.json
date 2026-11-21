@@ -1,0 +1,95 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:ToggleGroup",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "group": "Named actual composite; values remain arrays in single/multiple mode.",
+    "item": "Actual native pressed button using source toggleVariants classes/context.",
+    "standalone": "Actual standalone Toggle from its own pinned module; independent boolean pressed state."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "group": {
+      "kind": "element",
+      "declaration": "ToggleGroup",
+      "selector": "[data-slot=\"toggle-group\"]",
+      "description": "Named actual composite; values remain arrays in single/multiple mode.",
+      "ownership": "actual pinned wrapper"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "ToggleGroupItem",
+      "selector": "[data-slot=\"toggle-group-item\"]",
+      "description": "Actual native pressed button using source toggleVariants classes/context.",
+      "ownership": "actual pinned wrapper"
+    },
+    "standalone": {
+      "kind": "element",
+      "declaration": "Toggle",
+      "selector": "[data-slot=\"toggle\"]",
+      "description": "Actual standalone Toggle from its own pinned module; independent boolean pressed state.",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "toggle-group-gap": "components.toggle-group.gap",
+      "toggle-group-height": "components.toggle-group.height",
+      "toggle-group-height-lg": "components.toggle-group.heightLg",
+      "toggle-group-height-sm": "components.toggle-group.heightSm",
+      "toggle-group-padding": "components.toggle-group.padding",
+      "toggle-group-radius": "components.toggle-group.radius",
+      "toggle-group-radius-sm": "components.toggle-group.radiusSm",
+      "toggle-group-spacing-unit": "components.toggle-group.spacingUnit"
+    },
+    "runtimeProperties": {
+      "--gap": {
+        "source": "../../sources/shadcn/apps/v4/registry/bases/base/ui/toggle-group.tsx.source#ToggleGroup",
+        "purpose": "Actual numeric spacing style written by Root; multiplied by the reference spacing unit, not a Figma coordinate."
+      }
+    },
+    "layoutPolicy": "Both grouped and standalone Toggle consume actual cn-toggle CVA classes; standalone does not emit invented data-size/data-variant attributes. Native heights 28/32/36px map sm/default/lg, with 8px small and 10px default/large corners,10px inline inset and 4px text/icon gap. Width is intrinsic, never copied 59/66px specimen text widths. The actual Root --gap stores numeric spacing units; this reference binds the 4px unit so default spacing 2 becomes native 8px. spacing 0 outline groups join logical borders/corners, including RTL. This fixes the reference styling against actual data-orientation/data-spacing attributes instead of depending on stale data-horizontal utilities; it does not fix or claim vertical primitive keyboard support. Raw Root consumes orientation without forwarding it, so reference groups remain horizontal. Group size/variant context wins over item appearance when set; array-valued group selection and boolean standalone pressed state remain distinct. RTL keyboard behavior requires Base UI DirectionProvider in addition to HTML dir. Focus and single/multiple selection follow actual composite/native button behavior; no toolbar role or invented onToggle event is added.",
+    "variants": {
+      "variant": [
+        "default",
+        "outline"
+      ],
+      "size": [
+        "sm",
+        "default",
+        "lg"
+      ],
+      "spacing": "finite nonnegative spacing units; default2",
+      "supportedReferenceOrientation": "horizontal",
+      "standalone": "Own Toggle module, pressed:boolean"
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

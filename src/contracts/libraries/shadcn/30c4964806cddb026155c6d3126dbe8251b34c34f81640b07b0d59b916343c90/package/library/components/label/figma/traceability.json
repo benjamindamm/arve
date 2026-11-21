@@ -1,0 +1,100 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "label": {
+      "declaration": "Label",
+      "selector": "[data-slot=\"label\"]",
+      "ownership": "actual wrapper"
+    },
+    "field": {
+      "declaration": "Label",
+      "selector": "[data-part=\"label-field\"]",
+      "ownership": "caller composition"
+    }
+  },
+  "measurements": [
+    {
+      "sourceObservations": "../../figma/semantic-measurements/label.json",
+      "sourceNodeId": "2084:2081",
+      "observed": "20px row;8px gap; actual instance refers to FieldLabel1930:418",
+      "semanticTokens": [
+        "semantic.control.labelGap",
+        "semantic.font.sizeBody",
+        "semantic.font.lineHeightBody"
+      ],
+      "decision": "Shared body typography is an explicit reference role; no automatic FieldLabel API is attributed to Label."
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2084:964",
+      "sourcePartId": "2084:955",
+      "sourceName": "Frame 18",
+      "semanticParts": [
+        "label",
+        "field"
+      ],
+      "canonicalFixtures": [
+        "named-input",
+        "disabled-host-field",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:21259",
+      "sourcePartId": "2084:955",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "label",
+        "field"
+      ],
+      "canonicalFixtures": [
+        "named-input",
+        "disabled-host-field",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2084:988",
+      "sourcePartId": "2084:955",
+      "sourceName": "Frame 22",
+      "semanticParts": [
+        "label",
+        "field"
+      ],
+      "canonicalFixtures": [
+        "named-input",
+        "disabled-host-field",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:21268",
+      "sourcePartId": "2084:955",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "label",
+        "field"
+      ],
+      "canonicalFixtures": [
+        "named-input",
+        "disabled-host-field",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Label is the actual native label wrapper, not an inferred FieldLabel primitive or automatic ARIA association. The source Label page itself depicts a FieldLabel instance from the same kit; its20px row and8px gap support the shared14/20px medium text and8px arrangement role. Optional field spacing and disabled opacity are explicitly caller context; no disabled prop is invented for Label. The host must bind htmlFor to a real labelable control and disable that control separately. Source instance widths are not runtime label widths. Logical layout supports RTL.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1978 (Label), observed anatomy and examples."
+  }
+}

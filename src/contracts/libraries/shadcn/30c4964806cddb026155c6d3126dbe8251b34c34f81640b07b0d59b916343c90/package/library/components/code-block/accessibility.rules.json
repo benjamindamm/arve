@@ -1,0 +1,81 @@
+{
+  "componentId": "shadcn:CodeBlock",
+  "sourceRule": "Root variant=default|destructive and size=default|sm only style div content. Content is native pre with nested code, dir=ltr and tabIndex0; wrap defaultsfalse, lineNumbersfalse, startLine1 controls the CSS line counter. With string children and numbering, one trailing newline is removed before splitting; empty CodeBlockLine deliberately emits a newline. No syntax highlighter or executable code engine is built in. CopyButton requires value:string, defaults ghost/icon-xs, calls caller onClick before navigator.clipboard.writeText(value), and does not inspect defaultPrevented. Successful promise sets copied=true, aria-label=Copied and a polite live text; first copied=true schedules reset after2000ms. Repeated success while already copied does not restart that effect timer. Rejected promises are swallowed, preserving the previous copied state; no onCopied/onCopyError event exists. Missing navigator.clipboard can throw synchronously before the promise catch. This reference requires a supported secure clipboard context for Copy and provides persistent native text-selection instructions as the fallback. The copy value is exact caller text, not inferred from formatted/numbered DOM.",
+  "keyboardAndFocus": "Native Copy Button supports Enter/Space; disabled suppresses its click. The focusable pre supports native selection/scrolling and Tab leaves it. Escape does not revert code or cancel a clipboard write already requested. Copy does not move focus. A descriptive code heading/instructions are caller supplied, not automatic CodeBlockTitle semantics.",
+  "referenceComposition": "<h2 id=\"code-heading\">Report code example</h2><div data-slot=\"code-block\" data-size=\"default\" data-variant=\"default\"><div data-slot=\"code-block-header\"><div data-slot=\"code-block-title\">report.js</div><div data-slot=\"code-block-actions\"><button type=\"button\" data-slot=\"code-block-copy-button\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-xs\" aria-describedby=\"code-help\" aria-label=\"Copy\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M9 9h12v12H9zM3 15V3h12\" fill=\"none\" stroke=\"currentColor\"/></svg></button><span class=\"sr-only\" aria-live=\"polite\"></span></div></div><pre data-slot=\"code-block-content\" dir=\"ltr\" tabindex=\"0\" aria-labelledby=\"code-heading\" aria-describedby=\"code-help\" data-numbered=\"true\" style=\"counter-reset:line 6\"><code data-slot=\"code-block-code\"><span data-slot=\"code-block-line\" data-variant=\"default\"><span data-slot=\"code-block-line-content\">const project = \"Annual report\";</span></span><span data-slot=\"code-block-line\" data-variant=\"added\"><span data-slot=\"code-block-line-content\">+ const added = 1;</span></span><span data-slot=\"code-block-line\" data-variant=\"removed\"><span data-slot=\"code-block-line-content\">- const removed = 0;</span></span><span data-slot=\"code-block-line\" data-variant=\"highlighted\"><span data-slot=\"code-block-line-content\">console.log(project);</span></span></code></pre><div data-slot=\"code-block-footer\">JavaScript · + added; − removed</div></div><p id=\"code-help\">Select the code and copy manually if clipboard copying is unavailable.</p>",
+  "projectionState": "Ready API/nonlooping first slide for Carousel; raw SSR disables both buttons until Embla initializes. Other projections show their stated native content/value.",
+  "protocol": "SCXML projects observed actual source/native transactions. Public callback names/payloads are real; _effect.* entries identify internal browser/primitive effects. It does not dispatch extra DOM events. Caller-controlled props remain authoritative, source result observations determine completion. Normal React target runs pinned original wrappers, not semantic HTML/CSS alone.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block\"]",
+      "description": "Actual passive source surface with variant and size."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-header\"]",
+      "description": "Optional actual header wrapper."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-title\"]",
+      "description": "Actual source div, not an automatic heading; caller supplies code heading."
+    },
+    "actions": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-actions\"]",
+      "description": "Actual independent actions; direct-root placement reveals on hover/focus/coarse pointer."
+    },
+    "copy": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-copy-button\"]",
+      "description": "Actual Button with required exact caller value and source success/promise rejection behavior."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-content\"]",
+      "description": "Native focusable pre with source LTR/wrap/numbering behavior."
+    },
+    "code": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-code\"]",
+      "description": "Actual internal code element, not an extra public export."
+    },
+    "line": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-line\"]",
+      "description": "Actual source line and optional diff/highlight variant."
+    },
+    "line-content": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-line-content\"]",
+      "description": "Actual internal span; empty source line preserves newline."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"code-block-footer\"]",
+      "description": "Actual supporting metadata or legend."
+    }
+  },
+  "visualStateMapping": {
+    "variant": [
+      "default",
+      "destructive"
+    ],
+    "size": [
+      "default",
+      "sm"
+    ],
+    "content": {
+      "wrap": "boolean",
+      "lineNumbers": "boolean",
+      "startLine": "number"
+    },
+    "line.variant": [
+      "default",
+      "added",
+      "removed",
+      "highlighted"
+    ]
+  }
+}

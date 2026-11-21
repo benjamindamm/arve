@@ -1,0 +1,116 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Empty",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "surface": "Empty collection surface, chosen after successful loading.",
+    "header": "Centered icon/title/description stack.",
+    "media": "Optional actual EmptyMedia slot, supplementary to text.",
+    "title": "Title wrapper with caller heading.",
+    "description": "Actual runtime div despite p-shaped source type annotation.",
+    "content": "Caller recovery content/actions."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "surface": {
+      "kind": "element",
+      "declaration": "Empty",
+      "selector": "[data-slot=\"empty\"]",
+      "description": "Empty collection surface, chosen after successful loading.",
+      "ownership": "actual wrapper"
+    },
+    "header": {
+      "kind": "element",
+      "declaration": "EmptyHeader",
+      "selector": "[data-slot=\"empty-header\"]",
+      "description": "Centered icon/title/description stack.",
+      "ownership": "actual wrapper"
+    },
+    "media": {
+      "kind": "element",
+      "declaration": "EmptyMedia",
+      "selector": "[data-slot=\"empty-icon\"]",
+      "description": "Optional actual EmptyMedia slot, supplementary to text.",
+      "ownership": "actual wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "EmptyTitle",
+      "selector": "[data-slot=\"empty-title\"]",
+      "description": "Title wrapper with caller heading.",
+      "ownership": "actual wrapper"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "EmptyDescription",
+      "selector": "[data-slot=\"empty-description\"]",
+      "description": "Actual runtime div despite p-shaped source type annotation.",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "EmptyContent",
+      "selector": "[data-slot=\"empty-content\"]",
+      "description": "Caller recovery content/actions.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "empty-content-max": "components.empty.contentMax",
+      "empty-gap": "components.empty.gap",
+      "empty-header-gap": "components.empty.headerGap",
+      "empty-icon-box": "components.empty.iconBox",
+      "empty-icon-radius": "components.empty.iconRadius",
+      "empty-icon-size": "components.empty.iconSize",
+      "empty-padding": "components.empty.padding",
+      "empty-radius": "components.empty.radius",
+      "empty-title-line": "components.empty.titleLine",
+      "empty-title-size": "components.empty.titleSize",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Empty uses all six actual wrappers. Runtime EmptyDescription is a div even though its TypeScript props inherit p; the HTML projection follows runtime output. Native24px padding,16px section gap,14px corners,8px header gap,32px icon surface/16px glyph and10px icon corners are retained.384px text stack is an upper bound rather than fixed specimen width. A deeper native read finds18/28px title text inside a20px frame: the reference preserves text metrics and intrinsic height, avoiding native frame clipping. Title is a caller-supplied heading. Dashed outline is this chosen empty-collection composition, not a new public variant. Loading/error decisions and recovery actions belong to the caller; no automatic fetch/upload lifecycle is invented.",
+    "variants": {
+      "media": {
+        "declaration": "EmptyMedia",
+        "prop": "variant",
+        "attribute": "data-variant",
+        "values": [
+          "default",
+          "icon"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

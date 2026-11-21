@@ -1,0 +1,155 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Attachment",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Passive file/state surface with actual size and orientation.",
+    "media": "Icon or image variant; caller supplies appropriate image alt.",
+    "content": "Flexible file metadata stack.",
+    "title": "Complete filename in text; visual truncation never removes its accessible text.",
+    "description": "File metadata or actionable error wording.",
+    "actions": "Independent native actions above any whole-tile trigger.",
+    "action": "Actual delegated Button, ghost/icon-xs defaults.",
+    "trigger": "Actual useRender native button or explicit caller link; sibling to secondary actions.",
+    "group": "Native overflow/snap layout, never selection state."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "Attachment",
+      "selector": "[data-slot=\"attachment\"]",
+      "description": "Passive file/state surface with actual size and orientation.",
+      "ownership": "actual pinned wrapper"
+    },
+    "media": {
+      "kind": "element",
+      "declaration": "AttachmentMedia",
+      "selector": "[data-slot=\"attachment-media\"]",
+      "description": "Icon or image variant; caller supplies appropriate image alt.",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "AttachmentContent",
+      "selector": "[data-slot=\"attachment-content\"]",
+      "description": "Flexible file metadata stack.",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "AttachmentTitle",
+      "selector": "[data-slot=\"attachment-title\"]",
+      "description": "Complete filename in text; visual truncation never removes its accessible text.",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "AttachmentDescription",
+      "selector": "[data-slot=\"attachment-description\"]",
+      "description": "File metadata or actionable error wording.",
+      "ownership": "actual pinned wrapper"
+    },
+    "actions": {
+      "kind": "element",
+      "declaration": "AttachmentActions",
+      "selector": "[data-slot=\"attachment-actions\"]",
+      "description": "Independent native actions above any whole-tile trigger.",
+      "ownership": "actual pinned wrapper"
+    },
+    "action": {
+      "kind": "element",
+      "declaration": "AttachmentAction",
+      "selector": "[data-slot=\"attachment-action\"]",
+      "description": "Actual delegated Button, ghost/icon-xs defaults.",
+      "ownership": "actual pinned wrapper"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "AttachmentTrigger",
+      "selector": "[data-slot=\"attachment-trigger\"]",
+      "description": "Actual useRender native button or explicit caller link; sibling to secondary actions.",
+      "ownership": "actual pinned wrapper"
+    },
+    "group": {
+      "kind": "element",
+      "declaration": "AttachmentGroup",
+      "selector": "[data-slot=\"attachment-group\"]",
+      "description": "Native overflow/snap layout, never selection state.",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "attachment-gap": "components.attachment.gap",
+      "attachment-media": "components.attachment.media",
+      "attachment-media-radius": "components.attachment.mediaRadius",
+      "attachment-media-sm": "components.attachment.mediaSm",
+      "attachment-media-xs": "components.attachment.mediaXs",
+      "attachment-padding": "components.attachment.padding",
+      "attachment-radius": "components.attachment.radius",
+      "attachment-tile-width": "components.attachment.tileWidth",
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-destructive": "semantic.color.destructive",
+      "color-destructive-subtle": "semantic.color.destructiveSubtle",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "The source root state idle/uploading/processing/error/done is caller styling, not an upload engine. Native default radius 18px/inset 8px/gap 8px and media 40/32/28px (mapped to actual default/sm/xs) are reusable metrics. The selected vertical thumbnail recipe prefers native 120px tiles and clamps to available width; horizontal file rows remain fluid, never fixed 384px source examples. Vertical height is intrinsic, including independent actions, rather than clipping content to the native 168px specimen height. Compact metadata 12/16 is an explicit reference size decision; default 14/20 uses native shared type roles. Media radius 10px and default 20px glyph are explicit native-aligned roles. All text remains in the DOM despite truncation. Secondary actions occupy a higher stacking layer than the actual whole-tile Trigger, so Retry and Open do not intercept one another. A caller status paragraph and filename-qualified labels provide concrete task meaning; disabled belongs to each native action, never a fabricated Attachment disabled API. Image thumbnail art is an independent fixture, not extracted file content.",
+    "variants": {
+      "state": [
+        "idle",
+        "uploading",
+        "processing",
+        "error",
+        "done"
+      ],
+      "size": [
+        "default",
+        "sm",
+        "xs"
+      ],
+      "orientation": [
+        "horizontal",
+        "vertical"
+      ],
+      "media.variant": [
+        "icon",
+        "image"
+      ]
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

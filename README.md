@@ -57,6 +57,8 @@ Die Übersicht verlinkt Farben und Tokens, Typografie und Form, Grid und Abstän
 
 Die [Komponentenübersicht](http://127.0.0.1:3010/systems/shadcn/komponenten) listet veröffentlichte Komponentenseiten aus Payload. Button, Input, Checkbox und Switch haben Spartan-Demos und gebundene Originalquellen. Alle vier Komponenten enthalten SCXML. Checkbox und Switch verwenden in Spartan Buttons mit ARIA-Rolle, während die Contract-Vorlagen native Checkbox-Eingabefelder verwenden.
 
+Der [Button](http://127.0.0.1:3010/systems/shadcn/components/button) dient als redaktionelle Vorlage für weitere Komponentenseiten. Neun feste Themen, die Trennung von Quellenregeln, Empfehlungen und Beispielen sowie die dokumentierten Quellenbezüge sind in der [Komponentenvorlage](docs/handbook/component-template/README.md) beschrieben. `npm run check:component-template` prüft den ausdrücklich dokumentierten Referenzstand; die übrigen Komponentenseiten werden dadurch nicht als fertig ausgearbeitet ausgegeben.
+
 ### Handbuch auf einer neuen Datenbank aufbauen
 
 Der öffentliche shadcn-Stand ist als begrenzter Snapshot versioniert. Der Bootstrap legt 46 Seiten, Beziehungen und eine Implementierung ohne feste Datenbank-IDs an; Wiederholung verändert identische Inhalte nicht. [Anleitung, Vorschau und Schutz bestehender Inhalte](docs/handbook/bootstrap/README.md).
@@ -68,12 +70,12 @@ Der öffentliche shadcn-Stand ist als begrenzter Snapshot versioniert. Der Boots
 UI Contracts erzeugt ein eigenständiges Exportverzeichnis mit Manifest, Bibliothek, Designartefakten, Herkunftsregister und portablen Skills. Diesen Ordner beliebig kopieren und in Arve importieren:
 
 ```sh
-node scripts/import-contract-library.mjs /pfad/zum/shadcn-export
+node scripts/import-contract-library.mjs /pfad/zum/shadcn-export --compact
 ```
 
 Arve liest ausschliesslich dieses Paket. Kein Quellcheckout, keine Umgebungsvariable mit Repositorypfad und keine Laufzeitverbindung zum Erzeuger sind erforderlich. Der Import prüft Formatversion, alle Dateihashes, die Gesamt-Revision und gebundene Contractquellen. Zusätzliche oder fehlende Dateien, Symlinks und aus der Bibliothek führende Contractbindungen werden abgelehnt. Bereits vorhandene Revisionen werden nur bei identischem Inhalt wiederverwendet, nie überschrieben.
 
-Unter `src/contracts/libraries/<bibliothek>/<revision>/package/` bleibt das vollständige Originalpaket einschliesslich `manifest.json`, `dependencies.json` und `skills/` erhalten. Die Bibliotheksdateien stehen zusätzlich an den bisherigen Arve-Artefaktpfaden bereit; `contracts.json` ist die lokale Projektion für Portal und MCP. Die Revision identifiziert das gesamte Paket einschliesslich Skills. Herkunftsverweise sind ausdrücklich keine lokal auflösbaren Dateiverweise. Historische Prüfbelege bleiben von den Prüfsummen des Exportpakets getrennt.
+Unter `src/contracts/libraries/<bibliothek>/<revision>/package/` bleibt das vollständige Originalpaket einschliesslich `manifest.json`, `dependencies.json` und `skills/` erhalten. Mit `--compact` vermeidet der Import eine zweite Kopie der Bibliotheksdateien und lädt nur die benötigten Contracttexte; `contracts.json` enthält die lokale Projektion für Portal und MCP. Der ältere Importmodus mit zusätzlichen Bibliotheksdateien bleibt für historische Revisionen verfügbar. Die Revision identifiziert das gesamte Paket einschliesslich Skills. Herkunftsverweise sind ausdrücklich keine lokal auflösbaren Dateiverweise. Historische Prüfbelege bleiben von den Prüfsummen des Exportpakets getrennt.
 
 Neue Revisionen werden im Katalog `src/contracts/catalog.ts` registriert. Bestehende Payload-Seiten behalten ihre gebundene Revision. Um eine Seite umzustellen, im CMS die Contractrevision ändern und die Seite veröffentlichen. Eine separat dokumentierte Implementierungsprüfung bleibt an ihrer bisherigen Revision gebunden. Portal und MCP lesen den Stand der veröffentlichten Komponentenseite.
 
@@ -82,6 +84,8 @@ Der Projekt-Skill [arve-ui-contracts](.agents/skills/arve-ui-contracts/SKILL.md)
 Den alten Einzelkomponenten-Exporter ersetzt der Export in UI Contracts. Bereits importierte historische Revisionen bleiben aus Gründen der Seitenversionierung unverändert erhalten.
 
 Importprüfung: `node --test scripts/import-contract-library.test.mjs`.
+
+Der [aktuelle semantische Shadcn-Stand](docs/handbook/semantic-shadcn/README.md) umfasst 69 veröffentlichte Komponentenpins. Die CSS-Importkette und lokale Schriftdateien werden beim Import ermittelt und über Portal, MCP und statische Veröffentlichung samt Hash bereitgestellt.
 
 ### MCP
 

@@ -1,0 +1,39 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="chart_pie" initial="mounted">
+  <datamodel>
+    <data id="rows" expr="[{&quot;browser&quot;: &quot;chrome&quot;, &quot;visitors&quot;: 275, &quot;fill&quot;: &quot;var(--color-chrome)&quot;}, {&quot;browser&quot;: &quot;safari&quot;, &quot;visitors&quot;: 200, &quot;fill&quot;: &quot;var(--color-safari)&quot;}, {&quot;browser&quot;: &quot;firefox&quot;, &quot;visitors&quot;: 187, &quot;fill&quot;: &quot;var(--color-firefox)&quot;}, {&quot;browser&quot;: &quot;edge&quot;, &quot;visitors&quot;: 173, &quot;fill&quot;: &quot;var(--color-edge)&quot;}, {&quot;browser&quot;: &quot;other&quot;, &quot;visitors&quot;: 90, &quot;fill&quot;: &quot;var(--color-other)&quot;}]" />
+    <data id="activeIndex" expr="null" />
+    <data id="tooltipVisible" expr="false" />
+    <data id="coordinateKey" expr="null" />
+    <data id="dismissedCoordinate" expr="null" />
+    <data id="loadStatus" expr="'ready'" />
+  </datamodel>
+  <state id="mounted">
+    <transition event="DATA_PROPS_CHANGED" cond="Array.isArray(_event.data.rows)">
+      <assign location="rows" expr="_event.data.rows" />
+      <assign location="tooltipVisible" expr="false" />
+      <assign location="activeIndex" expr="null" />
+      <assign location="loadStatus" expr="rows.length ? 'ready' : 'empty'" />
+    </transition>
+    <transition event="CALLER_FAILURE">
+      <assign location="loadStatus" expr="'error'" />
+      <assign location="tooltipVisible" expr="false" />
+    </transition>
+    <transition event="SOURCE_TOOLTIP_PAYLOAD" cond="loadStatus === 'ready' &amp;&amp; Number.isInteger(_event.data.index) &amp;&amp; _event.data.index &gt;= 0 &amp;&amp; _event.data.index &lt; rows.length &amp;&amp; typeof _event.data.coordinateKey === 'string'">
+      <assign location="activeIndex" expr="_event.data.index" />
+      <assign location="coordinateKey" expr="_event.data.coordinateKey" />
+      <assign location="tooltipVisible" expr="!!_event.data.active &amp;&amp; coordinateKey !== dismissedCoordinate" />
+    </transition>
+    <transition event="ESCAPE">
+      <assign location="tooltipVisible" expr="false" />
+      <assign location="dismissedCoordinate" expr="coordinateKey" />
+    </transition>
+    <transition event="SOURCE_TOOLTIP_INACTIVE">
+      <assign location="tooltipVisible" expr="false" />
+    </transition>
+    <transition event="NATIVE_TABLE_NAVIGATION FOCUS_IN FOCUS_OUT" />
+    <transition event="UNMOUNT" target="removed" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="mounted" />
+  </state>
+</scxml>

@@ -1,0 +1,192 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:NavigationMenu",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Actual named native nav, not a menu role.",
+    "list": "Actual ul composite list.",
+    "item": "Actual li item context.",
+    "trigger": "Actual native disclosure button; aria-controls points to the private native nav Popup, not Content.",
+    "trigger-icon": "Actual private decorative SVG.",
+    "content": "Actual selected content reparented into popup viewport.",
+    "positioner": "One built-in auto-appended source positioner; no second default instance.",
+    "popup": "Actual private native nav popup, no exposed label prop.",
+    "viewport": "Actual private viewport, not a fabricated export.",
+    "link": "Actual destination/current-page link, distinct from open item.",
+    "link-title": "Caller title content.",
+    "link-description": "Caller persistent description content.",
+    "indicator": "Actual optional primitive Icon, decorative.",
+    "indicator-arrow": "Actual private rotated square."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "NavigationMenu",
+      "selector": "[data-slot=\"navigation-menu\"]",
+      "description": "Actual named native nav, not a menu role.",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "kind": "element",
+      "declaration": "NavigationMenuList",
+      "selector": "[data-slot=\"navigation-menu-list\"]",
+      "description": "Actual ul composite list.",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "NavigationMenuItem",
+      "selector": "[data-slot=\"navigation-menu-item\"]",
+      "description": "Actual li item context.",
+      "ownership": "actual source wrapper"
+    },
+    "trigger": {
+      "kind": "element",
+      "declaration": "NavigationMenuTrigger",
+      "selector": "[data-slot=\"navigation-menu-trigger\"]",
+      "description": "Actual native disclosure button; aria-controls points to the private native nav Popup, not Content.",
+      "ownership": "actual source wrapper"
+    },
+    "trigger-icon": {
+      "kind": "element",
+      "declaration": "NavigationMenuTrigger",
+      "selector": ".cn-navigation-menu-trigger-icon",
+      "description": "Actual private decorative SVG.",
+      "ownership": "private source child"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "NavigationMenuContent",
+      "selector": "[data-slot=\"navigation-menu-content\"]",
+      "description": "Actual selected content reparented into popup viewport.",
+      "ownership": "actual source wrapper"
+    },
+    "positioner": {
+      "kind": "element",
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-positioner",
+      "description": "One built-in auto-appended source positioner; no second default instance.",
+      "ownership": "actual source wrapper"
+    },
+    "popup": {
+      "kind": "element",
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-popup",
+      "description": "Actual private native nav popup, no exposed label prop.",
+      "ownership": "private source child"
+    },
+    "viewport": {
+      "kind": "element",
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-popup>div",
+      "description": "Actual private viewport, not a fabricated export.",
+      "ownership": "private source child"
+    },
+    "link": {
+      "kind": "element",
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-slot=\"navigation-menu-link\"]",
+      "description": "Actual destination/current-page link, distinct from open item.",
+      "ownership": "actual source wrapper"
+    },
+    "link-title": {
+      "kind": "element",
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-part=\"navigation-link-title\"]",
+      "description": "Caller title content.",
+      "ownership": "caller children"
+    },
+    "link-description": {
+      "kind": "element",
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-part=\"navigation-link-description\"]",
+      "description": "Caller persistent description content.",
+      "ownership": "caller children"
+    },
+    "indicator": {
+      "kind": "element",
+      "declaration": "NavigationMenuIndicator",
+      "selector": "[data-slot=\"navigation-menu-indicator\"]",
+      "description": "Actual optional primitive Icon, decorative.",
+      "ownership": "actual source wrapper"
+    },
+    "indicator-arrow": {
+      "kind": "element",
+      "declaration": "NavigationMenuIndicator",
+      "selector": ".cn-navigation-menu-indicator-arrow",
+      "description": "Actual private rotated square.",
+      "ownership": "private source child"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "navigation-menu-item-block-inset": "components.navigation-menu.itemBlockInset",
+      "navigation-menu-item-gap": "components.navigation-menu.itemGap",
+      "navigation-menu-item-inline-inset": "components.navigation-menu.itemInlineInset",
+      "navigation-menu-item-radius": "components.navigation-menu.itemRadius",
+      "navigation-menu-item-width": "components.navigation-menu.itemWidth",
+      "navigation-menu-popup-radius": "components.navigation-menu.popupRadius",
+      "navigation-menu-trigger-height": "components.navigation-menu.triggerHeight",
+      "navigation-menu-trigger-radius": "components.navigation-menu.triggerRadius"
+    },
+    "runtimeProperties": {
+      "--positioner-width": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Actual selected content inline extent."
+      },
+      "--positioner-height": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Actual selected content block extent."
+      },
+      "--popup-width": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Actual popup measured width."
+      },
+      "--popup-height": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Actual popup measured height."
+      },
+      "--available-width": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Collision-constrained viewport width."
+      },
+      "--transform-origin": {
+        "source": "BaseUI NavigationMenu Positioner/Popup measured CSS geometry",
+        "purpose": "Actual disclosure origin; no source coordinate baked into CSS."
+      }
+    },
+    "layoutPolicy": "Native triggers are 36px with 10px corners; content cards use 8px corners,8/16px inset,4px gap and 14/20 Medium title/description. The native description text field says Medium despite its Regular style label, so this reference explicitly keeps the observed Medium field and muted role. Native 290px card width becomes a preferred maximum. Popup 12px corner/1px border/4px content pad are explicit reference surface choices; source 350ms position/size/content opacity timing is retained with reduced-motion duration 0.01ms; source Positioner/Popup width/height/origin variables remain actual measured geometry. Root automatically appends one Positioner; no extra default instance is added. Source Root and private Popup are native navigation landmarks, not menu roles; the private popup has no invented label prop. Active/current-page link and open disclosure value remain distinct. Destination links choose closeOnClick=true in target, while the source default remains false. Root/Trigger keyboard, disabled focusability, hover delay and controlled cancellation retain pinned primitive rules. Theme/dir are document context because the built-in private Popup cannot receive arbitrary Root data-theme props. Trigger aria-controls identifies the actual private nav Popup, not its Content child. No page/frame/node selectors or fixed source sample positions survive.",
+    "variants": {},
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

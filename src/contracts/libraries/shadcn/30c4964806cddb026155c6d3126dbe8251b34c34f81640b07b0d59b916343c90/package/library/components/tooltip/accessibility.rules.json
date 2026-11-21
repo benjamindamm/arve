@@ -1,0 +1,37 @@
+{
+  "componentId": "shadcn:Tooltip",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" data-slot=\"tooltip-trigger\" aria-describedby=\"persistent-help\">Save</button><div data-slot=\"tooltip-content\" data-side=\"bottom\" aria-hidden=\"true\">Save the current document<span class=\"cn-tooltip-arrow\" aria-hidden=\"true\"></span></div><p id=\"persistent-help\">Save stores the current document in the project.</p>",
+  "keyboardAndFocus": "Keyboard focus opens without hover delay; blur, Escape or trigger press can close. Focus never moves into the tooltip and there is no Tab trap. The trigger must carry an accessible name closely matching the visual label. The pinned primitive intentionally supplies a visual-only hint, not an automatic ARIA tooltip/description relationship.",
+  "sourceRule": "The source TooltipProvider wrapper defaults delay=0, while trigger/provider props can configure hover delay. disableHoverablePopup=false permits moving the pointer into the popup through the primitive safe-region logic. Disabled Root suppresses opening. Popup side=top, sideOffset=4, align=center, alignOffset=0. The package documentation calls tooltips visual-only and requires an appropriately named trigger; essential information uses inline text or an accessible Popover. This reference explicitly hides the redundant visual popup from assistive technology. Required help is persistent inline text; the trigger describedby relation points to that help, never solely to the visual popup.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Primitive open state/controller with no stable DOM root."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"tooltip-trigger\"]",
+      "description": "Actual native trigger; caller provides its complete accessible name."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"tooltip-content\"]",
+      "description": "Actual portal popup, positioned by the primitive."
+    },
+    "provider": {
+      "kind": "controller",
+      "description": "Delay context, no promised DOM wrapper."
+    },
+    "arrow": {
+      "kind": "element",
+      "selector": ".cn-tooltip-arrow",
+      "description": "Actual internal primitive Arrow; source exposes stable class, not a data-slot."
+    }
+  },
+  "visualStateMapping": {}
+}

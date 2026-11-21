@@ -1,5 +1,6 @@
 import type { CollectionConfig, Field } from 'payload'
 import { pageTemplates } from '../docs/page-templates'
+import { componentTemplateHelp } from '../docs/component-standard'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -28,7 +29,9 @@ export const Pages: CollectionConfig = {
       fields: pageTemplates.map(({ key, label, fields }): Field => ({
         name: key, type: 'group', label,
         admin: { condition: (data) => data.pageType === key },
-        fields: fields.map(({ key, label }) => ({ name: key, label, type: 'textarea' })),
+        fields: fields.map(({ key: fieldKey, label: fieldLabel }) => ({ name: fieldKey, label: fieldLabel, type: 'textarea',
+          ...(key === 'component' ? { admin: { description: componentTemplateHelp(fieldKey) } } : {}),
+        })),
       })) },
     { name: 'order', type: 'number', label: 'Sortierung', defaultValue: 0 },
     { name: 'summary', type: 'textarea', label: 'Kurzbeschreibung' },

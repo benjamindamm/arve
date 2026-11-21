@@ -1,0 +1,11 @@
+{
+  "componentId": "shadcn:Sheet",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"sheet-panel\">Open sheet</button><div id=\"sheet-panel\" data-slot=\"sheet-content\" role=\"dialog\" aria-labelledby=\"sheet-title\" aria-describedby=\"sheet-description\"><h2 id=\"sheet-title\">Project sheet</h2><p id=\"sheet-description\">Sheet task details.</p><button type=\"button\">Close sheet</button></div>",
+  "keyboardAndFocus": "Sheet inherits the pinned Dialog primitive focus containment, Escape/Close and return-focus behavior. The default modal policy is true; side changes placement, not semantics or commit rules.",
+  "sourceRule": "Sheet is a Dialog composition. Content side defaults right and accepts top/right/bottom/left; showCloseButton defaults true. A task commits only through its actual child action; simply closing, Escape or outside press does not invent an application result.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups."
+}

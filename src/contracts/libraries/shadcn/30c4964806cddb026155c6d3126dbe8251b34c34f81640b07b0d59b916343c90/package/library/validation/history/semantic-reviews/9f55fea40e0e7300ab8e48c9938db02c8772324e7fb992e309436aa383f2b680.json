@@ -1,0 +1,298 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "alert-dialog.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "AlertDialog",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "The pinned AlertDialogAction is an ordinary Button, not a Close wrapper. Its onClick invokes the caller action and does not automatically close the alert dialog. AlertDialogCancel wraps the primitive Close. The caller explicitly closes after successful work when desired; cancellation never emits a destructive confirmation."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Root.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:9."
+            }
+          ],
+          "events": [
+            {
+              "name": "onOpenChange",
+              "type": {
+                "text": "(open: boolean, eventDetails: AlertDialogPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual source React callback. eventDetails retains its native event, reason, cancellation and lifecycle methods; it is not a fabricated DOM CustomEvent."
+            },
+            {
+              "name": "onOpenChangeComplete",
+              "type": {
+                "text": "(open: boolean) => void"
+              },
+              "description": "Actual callback after the source transition lifecycle completes."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Owns open/modal state without a DOM root. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogTrigger",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Trigger.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:13."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Actual primitive native trigger. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogPortal",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Portal.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:19."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "portal",
+              "description": "Portal ownership, not a styled anatomy element. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogOverlay",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Backdrop.Props"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:25."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "overlay",
+              "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogContent",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Popup.Props & {\n  size?: \"default\" | \"sm\"\n}"
+              },
+              "description": "Exact public prop type and defaults {\"size\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:41."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Actual focus-managed popup surface. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogHeader",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:64."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Intrinsic heading stack. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogFooter",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:77."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Actions, kept in caller order. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogMedia",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:93."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "media",
+              "description": "Optional native media tile. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogTitle",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof AlertDialogPrimitive.Title>"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:106."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Actual heading named by primitive relation. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogDescription",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof AlertDialogPrimitive.Description>"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:119."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "description",
+              "description": "Actual descriptive paragraph. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogAction",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>"
+              },
+              "description": "Exact public prop type and defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:132."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "action",
+              "description": "Button action; the caller owns confirmation and closing. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "AlertDialogCancel",
+          "description": "Pinned React wrapper API; native roles and caller composition are kept separately.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "AlertDialogPrimitive.Close.Props &\n  Pick<React.ComponentProps<typeof Button>, \"variant\" | \"size\">"
+              },
+              "description": "Exact public prop type and defaults {\"variant\": \"\\\"outline\\\"\", \"size\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/alert-dialog.tsx.source:145."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "cancel",
+              "description": "Primitive Close rendered through Button. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

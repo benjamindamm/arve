@@ -1,0 +1,228 @@
+{
+  "result": "PASS",
+  "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification.",
+  "cases": [
+    {
+      "component": "data-table",
+      "name": "source data/page-size composition displays first two stable payment IDs",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BODY",
+          "text": "Recent paymentsFilter emailShow status columnSimulate data errorRecent payment records in US dollarsSelectSort emailStatusAmountm@example.compending$100.00example@gmail.comprocessing$125.00Previous pageNext page3 matching payments.[]1Sorting, filters, visibility, pagination and selection are separate caller-controlled TanStack feature states.\n"
+        },
+        "checks": [],
+        "empty": false,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[]"
+        },
+        "rows": [
+          {
+            "id": "728ed52f",
+            "text": "m@example.compending$100.00"
+          },
+          {
+            "id": "489e1d42",
+            "text": "example@gmail.comprocessing$125.00"
+          }
+        ],
+        "sort": "none",
+        "statusColumn": true,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "native header Enter sorts actual feature model and aria-sort",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Sort email"
+        },
+        "checks": [],
+        "empty": false,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[]"
+        },
+        "rows": [
+          {
+            "id": "reference-third",
+            "text": "a@example.comsuccess$80.00"
+          },
+          {
+            "id": "489e1d42",
+            "text": "example@gmail.comprocessing$125.00"
+          }
+        ],
+        "sort": "ascending",
+        "statusColumn": true,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "row selection IDs survive paging",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BODY",
+          "text": "Recent paymentsFilter emailShow status columnSimulate data errorRecent payment records in US dollarsSelectSort emailStatusAmountm@example.compending$100.00Previous pageNext page3 matching payments.[\"reference-third\"]2Sorting, filters, visibility, pagination and selection are separate caller-controlled TanStack feature states.\n"
+        },
+        "checks": [],
+        "empty": false,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "2",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [
+          {
+            "id": "728ed52f",
+            "text": "m@example.compending$100.00"
+          }
+        ],
+        "sort": "ascending",
+        "statusColumn": true,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "filter resets eligible page and derives filtered rows without dropping selection",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Filter email",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [],
+        "empty": false,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [
+          {
+            "id": "728ed52f",
+            "text": "m@example.compending$100.00"
+          }
+        ],
+        "sort": "ascending",
+        "statusColumn": true,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "empty filter result is real table row",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": "Filter email",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [],
+        "empty": true,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [],
+        "sort": "ascending",
+        "statusColumn": true,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "column visibility changes table cells and empty-state coverage",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "INPUT",
+          "text": ""
+        },
+        "checks": [],
+        "empty": true,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [],
+        "sort": "ascending",
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "caller error is readable and distinct from source table state",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Retry local data"
+        },
+        "checks": [],
+        "empty": true,
+        "error": "Payment data unavailable. Retry the local reference data.",
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [],
+        "sort": "ascending",
+        "statusColumn": false,
+        "viewport": null
+      }
+    },
+    {
+      "component": "data-table",
+      "name": "local retry restores data preserving independent feature states",
+      "result": "pass",
+      "observed": {
+        "active": {
+          "label": null,
+          "tag": "BUTTON",
+          "text": "Simulate data error"
+        },
+        "checks": [],
+        "empty": false,
+        "fieldset": [],
+        "outputs": {
+          "Payment page": "1",
+          "Selected payment IDs": "[\"reference-third\"]"
+        },
+        "rows": [
+          {
+            "id": "reference-third",
+            "text": "a@example.com$80.00"
+          },
+          {
+            "id": "489e1d42",
+            "text": "example@gmail.com$125.00"
+          }
+        ],
+        "sort": "ascending",
+        "statusColumn": false,
+        "viewport": null
+      }
+    }
+  ]
+}

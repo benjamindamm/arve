@@ -1,0 +1,244 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "container": {
+      "declaration": "Table",
+      "selector": "[data-slot=\"table-container\"]",
+      "ownership": "actual wrapper"
+    },
+    "table": {
+      "declaration": "Table",
+      "selector": "[data-slot=\"table\"]",
+      "ownership": "actual wrapper"
+    },
+    "header": {
+      "declaration": "TableHeader",
+      "selector": "[data-slot=\"table-header\"]",
+      "ownership": "actual wrapper"
+    },
+    "body": {
+      "declaration": "TableBody",
+      "selector": "[data-slot=\"table-body\"]",
+      "ownership": "actual wrapper"
+    },
+    "footer": {
+      "declaration": "TableFooter",
+      "selector": "[data-slot=\"table-footer\"]",
+      "ownership": "actual wrapper"
+    },
+    "row": {
+      "declaration": "TableRow",
+      "selector": "[data-slot=\"table-row\"]",
+      "ownership": "actual wrapper"
+    },
+    "head": {
+      "declaration": "TableHead",
+      "selector": "[data-slot=\"table-head\"]",
+      "ownership": "actual wrapper"
+    },
+    "cell": {
+      "declaration": "TableCell",
+      "selector": "[data-slot=\"table-cell\"]",
+      "ownership": "actual wrapper"
+    },
+    "caption": {
+      "declaration": "TableCaption",
+      "selector": "[data-slot=\"table-caption\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "1945:4069",
+      "observationPath": "height",
+      "semanticTokens": [
+        "components.table.headHeight"
+      ]
+    },
+    {
+      "sourceNodeId": "1945:4086",
+      "observationPath": "height,layout.padding",
+      "semanticTokens": [
+        "components.table.cellHeight",
+        "components.table.cellPadding"
+      ]
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1945:4069",
+      "sourcePartId": "1945:4070",
+      "sourceName": "Table head / Dir=LTR, State=Default",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "native-data-table",
+        "caller-selected-row",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1945:4068",
+      "sourcePartId": "1945:4070",
+      "sourceName": "Table head / Dir=RTL, State=Default",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "native-data-table",
+        "caller-selected-row",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2229:2511",
+      "sourcePartId": "1945:4070",
+      "sourceName": "Table head / Dir=LTR, State=Hover",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "row-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2229:2515",
+      "sourcePartId": "1945:4070",
+      "sourceName": "Table head / Dir=RTL, State=Hover",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "row-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1945:4086",
+      "sourcePartId": "1945:4087",
+      "sourceName": "Table cell / Dir=LTR, State=Default",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "native-data-table",
+        "caller-selected-row",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1945:4085",
+      "sourcePartId": "1945:4087",
+      "sourceName": "Table cell / Dir=RTL, State=Default",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "native-data-table",
+        "caller-selected-row",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2229:2537",
+      "sourcePartId": "1945:4087",
+      "sourceName": "Table cell / Dir=LTR, State=Hover",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "row-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2229:2541",
+      "sourcePartId": "1945:4087",
+      "sourceName": "Table cell / Dir=RTL, State=Hover",
+      "semanticParts": [
+        "container",
+        "table",
+        "header",
+        "body",
+        "footer",
+        "row",
+        "head",
+        "cell",
+        "caption"
+      ],
+      "canonicalFixtures": [
+        "row-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Table has nine semantic parts, including both actual DOM elements emitted by Table itself. Header cells retain 40px minimum extent; body cells retain 37px minimum extent and 8px insets, with 14/20px native typography mapped to shared roles. Native sample cell widths are content examples, not fixed columns. Text may wrap rather than being clipped to native single-line specimens; the actual wrapper provides overflow when content still needs it. Caption is deliberately placed below data with an explicit 8px separation. Native th/td/thead/tbody/tfoot and caller scope/caption carry semantics; no ARIA grid or sorting API is invented. Optional data-state=selected is an explicit caller presentation convention, not Table-owned selection behavior. Source TableRow emits no stored selection state.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "format": "shadcn-semantic-conversation-browser/1",
+  "records": [
+    {
+      "bubbles": [
+        {
+          "align": "start",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The default report is ready.Like (0)",
+          "variant": "default"
+        },
+        {
+          "align": "end",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The secondary report is ready.",
+          "variant": "secondary"
+        },
+        {
+          "align": "start",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The muted report is ready.",
+          "variant": "muted"
+        },
+        {
+          "align": "end",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The tinted report is ready.",
+          "variant": "tinted"
+        },
+        {
+          "align": "start",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The outline report is ready.",
+          "variant": "outline"
+        },
+        {
+          "align": "end",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The ghost report is ready.",
+          "variant": "ghost"
+        },
+        {
+          "align": "start",
+          "fontWeight": "400",
+          "height": 40,
+          "padding": "10px 12px",
+          "radius": "22px",
+          "text": "Alex: The destructive report is ready.",
+          "variant": "destructive"
+        }
+      ],
+      "checks": [
+        "Seven actual variants with native22px corners/10×12px insets/40px one-line height",
+        "Speaker attribution remains readable text",
+        "Caller reaction toggles native pressed state; Bubble has no reaction event",
+        "Actual BubbleContent button render invokes caller once with visible focus",
+        "Fixed native tint pair and semantic dark secondary resolve",
+        "320px viewport wraps intrinsic content without horizontal overflow"
+      ],
+      "contentAction": {
+        "focus": true,
+        "slot": "bubble-content",
+        "tag": "BUTTON",
+        "value": "1"
+      },
+      "dark": {
+        "secondary": "rgb(38, 38, 38)",
+        "surface": "rgb(199, 232, 255)",
+        "text": "rgb(10, 10, 10)"
+      },
+      "family": "bubble",
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          239.90625,
+          263.8984375,
+          235.6171875,
+          231.3125,
+          238.359375,
+          231.125,
+          267.875,
+          146.3359375
+        ]
+      },
+      "reaction": {
+        "align": "end",
+        "gap": "4px",
+        "height": 28,
+        "padding": "2px 6px",
+        "pressed": "true",
+        "side": "bottom",
+        "text": "Liked (1)",
+        "width": 77.7578125
+      },
+      "url": "http://localhost:5175/?family=bubble"
+    },
+    {
+      "action": {
+        "focus": true,
+        "tag": "BUTTON",
+        "value": "1"
+      },
+      "checks": [
+        "Three actual variants,16px hidden supplementary icon,14/20px text",
+        "Separator pseudo-lines flexible; border row28px grows from content",
+        "Only caller work status receives status role; nested Spinner remains hidden",
+        "Selected source render API creates a native keyboard action",
+        "320px viewport wraps intrinsic content without horizontal overflow"
+      ],
+      "family": "marker",
+      "markers": [
+        {
+          "after": "none",
+          "before": "none",
+          "classes": "cn-marker group/marker relative flex w-full items-center cn-marker-variant-default",
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 20,
+          "iconHidden": "true",
+          "iconSize": 16,
+          "lineHeight": "20px",
+          "role": null,
+          "tag": "DIV"
+        },
+        {
+          "after": "\"\"",
+          "before": "\"\"",
+          "classes": "cn-marker group/marker relative flex w-full items-center cn-marker-variant-separator",
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 20,
+          "iconHidden": "true",
+          "iconSize": 16,
+          "lineHeight": "20px",
+          "role": null,
+          "tag": "DIV"
+        },
+        {
+          "after": "none",
+          "before": "none",
+          "classes": "cn-marker group/marker relative flex w-full items-center cn-marker-variant-border",
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 28,
+          "iconHidden": "true",
+          "iconSize": 16,
+          "lineHeight": "20px",
+          "role": null,
+          "tag": "DIV"
+        },
+        {
+          "after": "none",
+          "before": "none",
+          "classes": "cn-marker group/marker relative flex w-full items-center cn-marker-variant-default",
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 20,
+          "iconHidden": "true",
+          "iconSize": 16,
+          "lineHeight": "20px",
+          "role": "status",
+          "tag": "DIV"
+        },
+        {
+          "after": "none",
+          "before": "none",
+          "classes": "cn-marker group/marker relative flex w-full items-center cn-marker-variant-default",
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 20,
+          "iconHidden": "true",
+          "iconSize": 16,
+          "lineHeight": "20px",
+          "role": null,
+          "tag": "BUTTON"
+        }
+      ],
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          272,
+          272,
+          272,
+          272,
+          272
+        ]
+      },
+      "url": "http://localhost:5175/?family=marker"
+    },
+    {
+      "added": {
+        "count": 3,
+        "focus": "Add message",
+        "status": "3 messages available"
+      },
+      "checks": [
+        "Six actual wrappers;32px supplementary avatar and8/10px row/content gaps",
+        "Native header14/20px retained without16px frame clipping; footer12/16px minimum24px",
+        "Source align=end reverses row; speaker/time are explicit text",
+        "Caller append updates data/status while focus remains on native invoking control",
+        "320px viewport wraps intrinsic content without horizontal overflow"
+      ],
+      "family": "message",
+      "messages": [
+        {
+          "align": "start",
+          "avatar": {
+            "hidden": "true",
+            "size": 32
+          },
+          "contentGap": "10px",
+          "direction": "row",
+          "footer": {
+            "fontSize": "12px",
+            "height": 24,
+            "lineHeight": "16px"
+          },
+          "gap": "8px",
+          "header": {
+            "height": 20,
+            "lineHeight": "20px",
+            "padding": "0px 12px",
+            "text": "Alex · 10:24"
+          }
+        },
+        {
+          "align": "end",
+          "avatar": {
+            "hidden": "true",
+            "size": 32
+          },
+          "contentGap": "10px",
+          "direction": "row-reverse",
+          "footer": {
+            "fontSize": "12px",
+            "height": 24,
+            "lineHeight": "16px"
+          },
+          "gap": "8px",
+          "header": {
+            "height": 20,
+            "lineHeight": "20px",
+            "padding": "0px 12px",
+            "text": "Morgan · 10:24"
+          }
+        }
+      ],
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          272,
+          272,
+          272
+        ]
+      },
+      "url": "http://localhost:5175/?family=message"
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,114 @@
+{
+  "componentId": "shadcn:Select",
+  "projectionState": "Concrete open/client-registered instance; closed popup is unmounted or explicitly kept hidden by source Presence options.",
+  "sourceRule": "Select is a direct alias of SelectPrimitive.Root, not a native select wrapper. Generic value/defaultValue and onValueChange distinguish single Value|null from multiple arrays. open/defaultOpen/onOpenChange/onOpenChangeComplete are independent of selected value; default modal=true. Root name/form/required/autoComplete use its hidden form control; object labels/form values use itemToStringLabel/itemToStringValue and comparison uses isItemEqualToValue. SelectValue resolves labels from Root items or registered ItemText; it is not a label for the field. Trigger defaults native button role=combobox with size sm|default. Content defaults bottom/center, offsets4/0 and alignItemWithTrigger=true; it inserts scroll arrows and List automatically. Items are role=option; disabled entries can be focused but cannot commit, while closed typeahead skips disabled choices. Single commit requests closing separately, even if the value callback is canceled; multiple toggles array values and normally stays open. readOnly locks changes but deliberately allows opening/browsing. GroupLabel/Separator are actual primitive parts; no text-query input, filter, server fetch or custom command event is invented.",
+  "keyboardAndFocus": "Trigger Enter/Space/opening arrows operate the source popup. Open Up/Down/Home/End and label typeahead move highlight; Enter/Space choose an enabled option. Closed-trigger typeahead can commit a single value, but is disabled for readOnly or multiple. Escape dismisses without selecting a highlighted candidate; controlled open/value callbacks remain separately authoritative. Disabled Root suppresses interaction. Named visible label and error/help relations belong to the caller, not the placeholder.",
+  "referenceComposition": "<div data-part=\"select-field\"><label for=\"select-fruit\">Fruit</label><button data-slot=\"select-trigger\" data-size=\"default\" type=\"button\" role=\"combobox\" id=\"select-fruit\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"select-list\" aria-describedby=\"select-help\"><span data-slot=\"select-value\">Apple</span><svg class=\"cn-select-trigger-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></button><p id=\"select-help\">Choose an available fruit.</p><input type=\"text\" name=\"fruit\" value=\"Apple\" aria-hidden=\"true\" tabindex=\"-1\" style=\"position:absolute;inline-size:1px;block-size:1px;clip-path:inset(50%)\"/></div><div data-slot=\"select-content\" class=\"cn-menu-target\" data-align-trigger=\"true\" role=\"presentation\" dir=\"ltr\" style=\"--available-width:320px;--available-height:400px\"><div data-slot=\"select-scroll-up-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div role=\"listbox\" id=\"select-list\"><div data-slot=\"select-group\" role=\"group\" aria-labelledby=\"select-options-label\"><div data-slot=\"select-label\" id=\"select-options-label\" aria-hidden=\"true\">Fruit options</div><div data-slot=\"select-item\" role=\"option\" tabindex=\"0\" aria-selected=\"true\"><div class=\"cn-select-item-text\">Apple</div><span class=\"cn-select-item-indicator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Banana</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\"><div class=\"cn-select-item-text\">Cherry</div></div><div data-slot=\"select-item\" role=\"option\" tabindex=\"-1\" aria-selected=\"false\" aria-disabled=\"true\"><div class=\"cn-select-item-text\">Unavailable fruit</div></div></div><div data-slot=\"select-separator\" role=\"separator\"></div></div><div data-slot=\"select-scroll-down-button\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>",
+  "protocol": "SCXML observes actual source callback/native transactions, retaining original eventDetails. For cmdk, SOURCE_QUERY_CHANGE observes CommandInput.onValueChange and SOURCE_HIGHLIGHT observes Command.onValueChange: same public callback name, different actual part/authority. Sends never dispatch extra DOM events. CommandDialog is the composed Dialog actor and retains its full existing lifecycle/focus/deferred-unmount contract; this machine records its open authority without reimplementing that actor. Highlight or typing is never a command invocation. Source query/filter normalization, positioning and focus remain with the real primitive.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Direct primitive Root alias owns selected/open and form control; no wrapper DOM."
+    },
+    "field": {
+      "kind": "element",
+      "selector": "[data-part=\"select-field\"]",
+      "description": "Chosen wrapper for native label/help and actual hidden source form input."
+    },
+    "form-input": {
+      "kind": "element",
+      "selector": "[data-part=\"select-field\"]>input[aria-hidden=\"true\"]",
+      "description": "Actual Root validation/form input; visually hidden, tabindex=-1, value follows selected serialization."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-trigger\"]",
+      "description": "Real native Button role combobox; public data-size sm/default."
+    },
+    "form-values": {
+      "kind": "element",
+      "selector": "[data-part=\"select-field\"]>input[type=\"hidden\"][name]",
+      "description": "Actual multiple-mode repeated hidden values, distinct from unnamed validation proxy."
+    },
+    "value": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-value\"]",
+      "description": "Actual value label output, separate from the field label."
+    },
+    "trigger-icon": {
+      "kind": "element",
+      "selector": ".cn-select-trigger-icon",
+      "description": "Actual private indicator render SVG itself, not a fabricated extra span wrapper."
+    },
+    "popup": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-content\"]",
+      "description": "Actual Popup is presentation because this wrapper inserts List."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-content\"]>[role=\"listbox\"]",
+      "description": "Actual private List owns listbox semantics and trigger aria-controls target."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-group\"]",
+      "description": "Source Group/GroupLabel relationship."
+    },
+    "label": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-label\"]",
+      "description": "Actual GroupLabel, not a field label."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-item\"]",
+      "description": "Actual option; disabled remains focusable but cannot commit."
+    },
+    "item-text": {
+      "kind": "element",
+      "selector": ".cn-select-item-text",
+      "description": "Actual private ItemText label."
+    },
+    "indicator": {
+      "kind": "element",
+      "selector": ".cn-select-item-indicator",
+      "description": "Actual private selected ItemIndicator."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-separator\"]",
+      "description": "Actual separator inside source List."
+    },
+    "scroll-up": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-scroll-up-button\"]",
+      "description": "Actual decorative pointer-scroll arrow; name does not promise native Button role."
+    },
+    "scroll-down": {
+      "kind": "element",
+      "selector": "[data-slot=\"select-scroll-down-button\"]",
+      "description": "Actual decorative pointer-scroll arrow; rendered/placed by primitive overflow."
+    }
+  },
+  "visualStateMapping": {
+    "size": {
+      "prop": "size",
+      "attribute": "data-size",
+      "values": [
+        "sm",
+        "default"
+      ]
+    },
+    "multiple": {
+      "prop": "multiple",
+      "valueShape": "array"
+    },
+    "readonly": {
+      "prop": "readOnly"
+    },
+    "disabled": {
+      "prop": "disabled"
+    }
+  }
+}

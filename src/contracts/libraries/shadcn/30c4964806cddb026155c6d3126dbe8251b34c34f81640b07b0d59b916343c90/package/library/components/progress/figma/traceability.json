@@ -1,0 +1,178 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Progress",
+      "selector": "[data-slot=\"progress\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "track": {
+      "declaration": "ProgressTrack",
+      "selector": "[data-slot=\"progress-track\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "indicator": {
+      "declaration": "ProgressIndicator",
+      "selector": "[data-slot=\"progress-indicator\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "label": {
+      "declaration": "ProgressLabel",
+      "selector": "[data-slot=\"progress-label\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "value": {
+      "declaration": "ProgressValue",
+      "selector": "[data-slot=\"progress-value\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceFile": "../../../figma/semantic-measurements/progress-track.json",
+      "sourceSha256": "a4c76dc38222925e1007b916a7714bcdf613323d146bbe2311bfd352c97552ed",
+      "sourceNodeId": "2274:16068",
+      "property": "height",
+      "value": 4,
+      "semanticRole": "trackHeight"
+    },
+    {
+      "sourceNodeId": "2066:2393",
+      "property": "height",
+      "value": 20,
+      "semanticRole": "native label row height"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1983 (Progress), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2066:2355",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Frame 18",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23028",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2066:2367",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Frame 13",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23029",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2066:2409",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Frame 22",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2463:23030",
+      "sourcePartId": "2066:2335",
+      "sourceName": "Component preview",
+      "semanticParts": [
+        "root",
+        "track",
+        "indicator",
+        "label",
+        "value"
+      ],
+      "canonicalFixtures": [
+        "value-0",
+        "value-40",
+        "value-100",
+        "indeterminate",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The pinned Progress root adds exactly one Track/Indicator after caller children; callers should not add a duplicate default track. Visible native track height is4px inside a12px artwork frame, confirmed by the separate deep native read. The source root gap 12px and native full corner are semantic metrics; sample 384px width and 240px range are observations, never runtime dimensions. The primitive owns clamping, localized value, aria-valuenow/valuetext and inline indicator percentage across min/max; CSS preserves that inline width and logical start in RTL. Indeterminate state has no numeric value: this reference uses a static centered 35% segment plus the real indeterminate description, without inventing a measured animation timing. The caller provides separate completion/error feedback; progress itself is passive and has no disabled or keyboard-action API.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "input.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Input",
+          "description": "Source-bound React reference surface; callback entries describe React handlers, not newly dispatched DOM CustomEvents.",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "React.ComponentProps<'input'>['value']"
+              },
+              "description": "Controlled native input value; the reference text composition uses a string."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"input\">"
+              },
+              "description": "Complete inherited public React prop surface; exact pinned declaration and native event types are retained in sources/manifest.json."
+            },
+            {
+              "kind": "field",
+              "name": "defaultValue",
+              "type": {
+                "text": "React.ComponentProps<'input'>['defaultValue']"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "React.HTMLInputTypeAttribute"
+              },
+              "default": "\"text\""
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "readOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "aria-invalid",
+              "type": {
+                "text": "boolean | \"grammar\" | \"spelling\""
+              },
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "onChange",
+              "type": {
+                "text": "React.ChangeEventHandler<HTMLInputElement>"
+              },
+              "description": "Inherited native React handler; source event identity and payload are preserved."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "field",
+              "description": "Caller form-field arrangement, not an automatic Input wrapper. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "label",
+              "description": "Visible native label with exact input association. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "control",
+              "description": "Actual native input source element. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "help",
+              "description": "Persistent caller help or error text. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

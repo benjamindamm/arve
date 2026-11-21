@@ -1,0 +1,168 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Trace",
+      "selector": "[data-slot=\"trace\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "line": {
+      "declaration": "TraceLine",
+      "selector": "[data-slot=\"trace-line\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "icon": {
+      "declaration": "TraceIcon",
+      "selector": "[data-slot=\"trace-icon\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "title": {
+      "declaration": "TraceTitle",
+      "selector": "[data-slot=\"trace-title\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "description": {
+      "declaration": "TraceDescription",
+      "selector": "[data-slot=\"trace-description\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "collapsible": {
+      "declaration": "TraceCollapsible",
+      "selector": "[data-slot=\"trace-collapsible\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "trigger": {
+      "declaration": "TraceCollapsibleTrigger",
+      "selector": "[data-slot=\"trace-collapsible-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "TraceCollapsibleContent",
+      "selector": "[data-slot=\"trace-collapsible-content\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content-inner": {
+      "declaration": "TraceCollapsibleContent",
+      "selector": "[data-slot=\"trace-collapsible-content-inner\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2731:3546",
+      "property": "layout.gap",
+      "value": 8,
+      "semanticRole": "lineGap"
+    },
+    {
+      "sourceNodeId": "2731:3539",
+      "property": "text",
+      "value": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "autoResize": "WIDTH_AND_HEIGHT"
+      },
+      "semanticRole": "native default title"
+    },
+    {
+      "sourceNodeId": "2731:3859",
+      "property": "text",
+      "value": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 14,
+        "lineHeight": 20,
+        "autoResize": "WIDTH_AND_HEIGHT"
+      },
+      "semanticRole": "native hover conflict"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 2731:3260 (Trace), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2731:3546",
+      "sourcePartId": "2731:3856",
+      "sourceName": "Trace line / State=Default",
+      "semanticParts": [
+        "root",
+        "line",
+        "icon",
+        "title",
+        "description",
+        "collapsible",
+        "trigger",
+        "content",
+        "content-inner"
+      ],
+      "canonicalFixtures": [
+        "status-default",
+        "status-running",
+        "status-error",
+        "status-pending",
+        "closed",
+        "disabled",
+        "hovered",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2731:3857",
+      "sourcePartId": "2731:3856",
+      "sourceName": "Trace line / State=Hover",
+      "semanticParts": [
+        "root",
+        "line",
+        "icon",
+        "title",
+        "description",
+        "collapsible",
+        "trigger",
+        "content",
+        "content-inner"
+      ],
+      "canonicalFixtures": [
+        "status-default"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2731:3864",
+      "sourcePartId": "2731:3856",
+      "sourceName": "Trace line / State=Destructive",
+      "semanticParts": [
+        "root",
+        "line",
+        "icon",
+        "title",
+        "description",
+        "collapsible",
+        "trigger",
+        "content",
+        "content-inner"
+      ],
+      "canonicalFixtures": [
+        "status-default",
+        "status-running",
+        "status-error",
+        "status-pending",
+        "closed",
+        "disabled",
+        "hovered",
+        "focused"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Trace owns passive 14/20 content with native 8px stack/line gaps and 16px glyphs; running/error/pending are actual optional TraceLine statuses, not operation engines. Native default title Medium versus hover Regular conflicts are retained in evidence; this reference keeps Medium across states to avoid reflow. Error is explicit readable wording, not color alone; metadata retains native 70% opacity and pending the pinned 60% utility. Description may shrink/wrap to remain usable in narrow views, an explicit adaptation of the pinned shrink-0 utility. The delegated primitive owns open/focus/cancellation; native Enter/Space toggles the real trigger and the internal trailing glyph rotates once. The actual inner content wrapper aligns 24px beneath the leading icon/gap. Panel height binds the real primitive --collapsible-panel-height, with explicit 150ms reference motion and reduced-motion disablement. Running shimmer is not essential meaning; this bounded reference keeps stable readable text rather than inventing measured animation from static artwork.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

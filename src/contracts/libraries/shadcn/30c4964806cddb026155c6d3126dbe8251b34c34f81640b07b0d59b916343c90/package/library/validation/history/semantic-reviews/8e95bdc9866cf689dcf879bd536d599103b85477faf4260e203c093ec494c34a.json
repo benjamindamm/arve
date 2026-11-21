@@ -1,0 +1,25 @@
+{
+  "purpose": "Present data in aligned rows and columns.",
+  "avoid": "Do not use table semantics solely for visual alignment.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 73:2898 (Table), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Table",
+  "contentAlternative": "Native caption, header scopes and textual cell values communicate the full table without color or hover. Complex header relationships use IDs/headers as required by that dataset.",
+  "updatesAndDescendants": "Table wraps a native table in an overflow container; header/body/footer/head/row/cell/caption retain their native tags. No sorting, filtering, row selection or grid keyboard protocol is built in. Data Table composes those features separately. Parent updates replace rows without moving focus automatically.",
+  "referenceDecision": "The sample dataset, caption and explicit scopes are caller-supplied reference content. No ARIA grid role or roving tabindex is added to an ordinary table.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/table.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/table.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/table-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Table has nine semantic parts, including both actual DOM elements emitted by Table itself. Header cells retain 40px minimum extent; body cells retain 37px minimum extent and 8px insets, with 14/20px native typography mapped to shared roles. Native sample cell widths are content examples, not fixed columns. Text may wrap rather than being clipped to native single-line specimens; the actual wrapper provides overflow when content still needs it. Caption is deliberately placed below data with an explicit 8px separation. Native th/td/thead/tbody/tfoot and caller scope/caption carry semantics; no ARIA grid or sorting API is invented. Optional data-state=selected is an explicit caller presentation convention, not Table-owned selection behavior. Source TableRow emits no stored selection state.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

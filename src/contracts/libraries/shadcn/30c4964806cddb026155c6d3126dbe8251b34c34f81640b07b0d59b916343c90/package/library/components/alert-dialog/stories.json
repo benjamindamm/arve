@@ -1,0 +1,70 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:AlertDialog",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "open": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open alert-dialog</button><div data-slot=\"alert-dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"alert-dialog-content\" role=\"alertdialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-size=\"default\"><div data-slot=\"alert-dialog-header\"><div data-slot=\"alert-dialog-media\" aria-hidden=\"true\">!</div><h2 data-slot=\"alert-dialog-title\" id=\"overlay-title\">Delete project?</h2><p data-slot=\"alert-dialog-description\" id=\"overlay-description\">This action cannot be undone.</p></div><div data-slot=\"alert-dialog-footer\"><button type=\"button\" data-slot=\"alert-dialog-cancel\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Cancel deletion</button><button type=\"button\" data-slot=\"alert-dialog-action\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\">Confirm deletion</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open alert-dialog</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open alert-dialog</button><div data-slot=\"alert-dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"alert-dialog-content\" role=\"alertdialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-size=\"default\" dir=\"rtl\"><div data-slot=\"alert-dialog-header\"><div data-slot=\"alert-dialog-media\" aria-hidden=\"true\">!</div><h2 data-slot=\"alert-dialog-title\" id=\"overlay-title\">Delete project?</h2><p data-slot=\"alert-dialog-description\" id=\"overlay-description\">This action cannot be undone.</p></div><div data-slot=\"alert-dialog-footer\"><button type=\"button\" data-slot=\"alert-dialog-cancel\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Cancel deletion</button><button type=\"button\" data-slot=\"alert-dialog-action\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\">Confirm deletion</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "disabled-trigger",
+      "name": "Disabled trigger",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" disabled=\"\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open alert-dialog</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "compact",
+      "name": "Compact",
+      "inputs": {
+        "size": "sm"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open alert-dialog</button><div data-slot=\"alert-dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"alert-dialog-content\" role=\"alertdialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-size=\"sm\"><div data-slot=\"alert-dialog-header\"><div data-slot=\"alert-dialog-media\" aria-hidden=\"true\">!</div><h2 data-slot=\"alert-dialog-title\" id=\"overlay-title\">Delete project?</h2><p data-slot=\"alert-dialog-description\" id=\"overlay-description\">This action cannot be undone.</p></div><div data-slot=\"alert-dialog-footer\"><button type=\"button\" data-slot=\"alert-dialog-cancel\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Cancel deletion</button><button type=\"button\" data-slot=\"alert-dialog-action\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\">Confirm deletion</button></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

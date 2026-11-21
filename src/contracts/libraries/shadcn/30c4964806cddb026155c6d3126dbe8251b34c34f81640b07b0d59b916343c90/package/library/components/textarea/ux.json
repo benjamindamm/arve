@@ -1,0 +1,26 @@
+{
+  "purpose": "Edit multiline plain text with native text editing, form submission and validation semantics.",
+  "avoid": "Do not infer validation limits from sample content.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Textarea",
+  "sourceRule": "The wrapper is exactly a native textarea with React.ComponentProps<textarea>. value/defaultValue, name, required, disabled, readOnly, maxLength, rows and onChange are native props. It adds field-sizing-content and a minimum height, not autosave, rich text, a submit-on-Enter handler or a new value callback.",
+  "keyboardAndFocus": "Native multiline editing and IME apply. Enter inserts a newline, Tab leaves the control, Escape does not revert committed text. Disabled suppresses editing and native form submission; readOnly permits focus/copy and retains its submitted value. Caller owns validation and explicit error relations.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "The wrapper is exactly a native textarea with React.ComponentProps<textarea>. value/defaultValue, name, required, disabled, readOnly, maxLength, rows and onChange are native props. It adds field-sizing-content and a minimum height, not autosave, rich text, a submit-on-Enter handler or a new value callback. Native multiline editing and IME apply. Enter inserts a newline, Tab leaves the control, Escape does not revert committed text. Disabled suppresses editing and native form submission; readOnly permits focus/copy and retains its submitted value. Caller owns validation and explicit error relations.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/textarea.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/textarea.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/textarea-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "Textarea is the actual native textarea export. Native 64px minimum height, 8/10px padding and 10px corners become semantic roles; the 360px sample width does not become a runtime constraint. Source field-sizing-content is represented directly, with a minimum-height fallback and native vertical resizing. Content can grow instead of clipping to a specimen height. Native label/help/error IDs are caller decisions, while readOnly, disabled, multiline value/selection/IME and native events remain browser-owned. Readonly stays focusable and selectable; disabled prevents user edits and is skipped in Tab order. Invalid styling supplements a linked readable error and does not invent validation.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

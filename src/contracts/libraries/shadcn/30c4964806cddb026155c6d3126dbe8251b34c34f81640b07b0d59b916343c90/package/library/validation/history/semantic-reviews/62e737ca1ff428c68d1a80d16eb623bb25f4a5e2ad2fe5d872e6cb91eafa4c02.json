@@ -1,0 +1,195 @@
+{
+  "format": "shadcn-semantic-foundations-browser/1",
+  "records": [
+    {
+      "checks": [
+        "Three real label/control associations including disabled and RTL",
+        "14/20px reference typography; explicit caller disabled opacity",
+        "Named input accepts native typing; label.control resolves actual input"
+      ],
+      "control": {
+        "disabled": true,
+        "labelControl": "label-project",
+        "rtl": "rtl",
+        "value": "Named project"
+      },
+      "family": "label",
+      "labels": [
+        {
+          "controlExists": true,
+          "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "opacity": "1",
+          "tag": "LABEL",
+          "target": "label-project",
+          "text": "Project name"
+        },
+        {
+          "controlExists": true,
+          "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "opacity": "0.5",
+          "tag": "LABEL",
+          "target": "disabled-project",
+          "text": "Disabled project"
+        },
+        {
+          "controlExists": true,
+          "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "20px",
+          "opacity": "1",
+          "tag": "LABEL",
+          "target": "rtl-project",
+          "text": "اسم المشروع"
+        }
+      ],
+      "url": "http://localhost:5175/?family=label"
+    },
+    {
+      "checks": [
+        "Actual required --ratio gives16:9/1:1/9:16",
+        "Native10px corner/gray surface; decoded independently authored fixture media",
+        "Caller cover/alt policy explicit",
+        "320px viewport remains fluid without overflow"
+      ],
+      "family": "aspect-ratio",
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          272,
+          272,
+          272
+        ]
+      },
+      "ratios": [
+        {
+          "alt": "Mountain lake at sunrise",
+          "fit": "cover",
+          "height": 216,
+          "imageComplete": true,
+          "naturalWidth": 267,
+          "radius": "10px",
+          "ratio": "1.77778 / 1",
+          "runtime": "1.7777777777777777",
+          "surface": "rgb(217, 217, 217)",
+          "width": 384
+        },
+        {
+          "alt": "Mountain lake at sunrise",
+          "fit": "cover",
+          "height": 384,
+          "imageComplete": true,
+          "naturalWidth": 267,
+          "radius": "10px",
+          "ratio": "1 / 1",
+          "runtime": "1",
+          "surface": "rgb(217, 217, 217)",
+          "width": 384
+        },
+        {
+          "alt": "Mountain lake at sunrise",
+          "fit": "cover",
+          "height": 682.6640625,
+          "imageComplete": true,
+          "naturalWidth": 267,
+          "radius": "10px",
+          "ratio": "0.5625 / 1",
+          "runtime": "0.5625",
+          "surface": "rgb(217, 217, 217)",
+          "width": 384
+        }
+      ],
+      "url": "http://localhost:5175/?family=aspect-ratio"
+    },
+    {
+      "checks": [
+        "Actual six wrappers; description runtime div retained",
+        "Native24px inset/16px gap/32px icon",
+        "Text18/28px retained without clipping to20px enclosing native frame",
+        "Native caller action replaces empty state with real data/status",
+        "320px viewport remains fluid without overflow"
+      ],
+      "family": "empty",
+      "loaded": {
+        "empty": 0,
+        "status": "Document added",
+        "text": "empty semantic source adapterDark themeDocumentsProject report.pdfClear documentsDocument added"
+      },
+      "narrow": {
+        "scrollWidth": 320,
+        "viewport": 320,
+        "widths": [
+          272
+        ]
+      },
+      "parts": [
+        {
+          "fontSize": "14px",
+          "gap": "16px",
+          "height": 194,
+          "lineHeight": "20px",
+          "padding": "24px",
+          "slot": "empty",
+          "tag": "DIV",
+          "width": 640
+        },
+        {
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 96,
+          "lineHeight": "20px",
+          "padding": "0px",
+          "slot": "empty-header",
+          "tag": "DIV",
+          "width": 191.3359375
+        },
+        {
+          "fontSize": "14px",
+          "gap": "normal",
+          "height": 32,
+          "lineHeight": "20px",
+          "padding": "0px",
+          "slot": "empty-icon",
+          "tag": "DIV",
+          "width": 32
+        },
+        {
+          "fontSize": "18px",
+          "gap": "normal",
+          "height": 28,
+          "lineHeight": "28px",
+          "padding": "0px",
+          "slot": "empty-title",
+          "tag": "DIV",
+          "width": 125.5546875
+        },
+        {
+          "fontSize": "14px",
+          "gap": "normal",
+          "height": 20,
+          "lineHeight": "20px",
+          "padding": "0px",
+          "slot": "empty-description",
+          "tag": "DIV",
+          "width": 191.3359375
+        },
+        {
+          "fontSize": "14px",
+          "gap": "8px",
+          "height": 32,
+          "lineHeight": "20px",
+          "padding": "0px",
+          "slot": "empty-content",
+          "tag": "DIV",
+          "width": 140.9375
+        }
+      ],
+      "url": "http://localhost:5175/?family=empty"
+    }
+  ],
+  "result": "PASS"
+}

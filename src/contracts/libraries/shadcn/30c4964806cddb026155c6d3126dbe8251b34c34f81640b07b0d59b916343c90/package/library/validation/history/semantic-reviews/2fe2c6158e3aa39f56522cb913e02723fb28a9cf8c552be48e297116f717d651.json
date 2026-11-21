@@ -1,0 +1,68 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:ScrollArea",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "overflow",
+      "name": "Overflow",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section aria-labelledby=\"activity-heading\"><h2 id=\"activity-heading\">Report activity</h2><p>Scroll for all activity; the final details link remains native.</p><div data-slot=\"scroll-area\" role=\"presentation\" data-has-overflow-y=\"\" data-overflow-y-end=\"\"><div data-slot=\"scroll-area-viewport\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" tabindex=\"0\" style=\"overflow:scroll\"><div data-part=\"scroll-area-content\"><ul><li>Report activity 1</li><li>Report activity 2</li><li>Report activity 3</li><li>Report activity 4</li><li>Report activity 5</li><li>Report activity 6</li><li>Report activity 7</li><li>Report activity 8</li><li>Report activity 9</li><li>Report activity 10</li><li>Report activity 11</li><li>Report activity 12</li><li>Report activity 13</li><li>Report activity 14</li><li>Report activity 15</li><li>Report activity 16</li><li>Report activity 17</li><li>Report activity 18</li><li>Report activity 19</li><li>Report activity 20</li><li>Report activity 21</li><li>Report activity 22</li><li>Report activity 23</li><li>Report activity 24</li></ul><a href=\"#activity-details\">View activity details</a></div></div><div data-slot=\"scroll-area-scrollbar\" data-orientation=\"vertical\" aria-hidden=\"true\" style=\"--scroll-area-thumb-height:80px\"><div data-slot=\"scroll-area-thumb\"></div></div></div></section><section id=\"activity-details\"><h2>Activity details</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "fits-without-scroll",
+      "name": "Fits without scroll",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section aria-labelledby=\"activity-heading\"><h2 id=\"activity-heading\">Report activity</h2><p>Scroll for all activity; the final details link remains native.</p><div data-slot=\"scroll-area\" role=\"presentation\"><div data-slot=\"scroll-area-viewport\" tabindex=\"-1\" style=\"overflow:auto\"><div data-part=\"scroll-area-content\"><ul><li>Report activity 1</li><li>Report activity 2</li></ul><a href=\"#activity-details\">View activity details</a></div></div></div></section><section id=\"activity-details\"><h2>Activity details</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "both-axes",
+      "name": "Both axes",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section aria-labelledby=\"activity-heading\"><h2 id=\"activity-heading\">Report activity</h2><p>Scroll for all activity; the final details link remains native.</p><div data-slot=\"scroll-area\" role=\"presentation\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" data-has-overflow-x=\"\"><div data-slot=\"scroll-area-viewport\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" data-has-overflow-x=\"\" tabindex=\"0\" style=\"overflow:scroll\"><div data-part=\"scroll-area-content\" style=\"inline-size:640px\"><ul><li>Report activity 1</li><li>Report activity 2</li><li>Report activity 3</li><li>Report activity 4</li><li>Report activity 5</li><li>Report activity 6</li><li>Report activity 7</li><li>Report activity 8</li><li>Report activity 9</li><li>Report activity 10</li><li>Report activity 11</li><li>Report activity 12</li><li>Report activity 13</li><li>Report activity 14</li><li>Report activity 15</li><li>Report activity 16</li><li>Report activity 17</li><li>Report activity 18</li><li>Report activity 19</li><li>Report activity 20</li><li>Report activity 21</li><li>Report activity 22</li><li>Report activity 23</li><li>Report activity 24</li></ul><a href=\"#activity-details\">View activity details</a></div><div data-slot=\"scroll-area-scrollbar\" data-orientation=\"horizontal\" aria-hidden=\"true\" style=\"--scroll-area-thumb-width:100px\"><div data-slot=\"scroll-area-thumb\"></div></div></div><div data-slot=\"scroll-area-scrollbar\" data-orientation=\"vertical\" aria-hidden=\"true\" style=\"--scroll-area-thumb-height:80px\"><div data-slot=\"scroll-area-thumb\"></div></div></div></section><section id=\"activity-details\"><h2>Activity details</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section aria-labelledby=\"activity-heading\"><h2 id=\"activity-heading\">Report activity</h2><p>Scroll for all activity; the final details link remains native.</p><div data-slot=\"scroll-area\" role=\"presentation\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" dir=\"rtl\"><div data-slot=\"scroll-area-viewport\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" tabindex=\"0\" style=\"overflow:scroll\"><div data-part=\"scroll-area-content\"><ul><li>Report activity 1</li><li>Report activity 2</li><li>Report activity 3</li><li>Report activity 4</li><li>Report activity 5</li><li>Report activity 6</li><li>Report activity 7</li><li>Report activity 8</li><li>Report activity 9</li><li>Report activity 10</li><li>Report activity 11</li><li>Report activity 12</li><li>Report activity 13</li><li>Report activity 14</li><li>Report activity 15</li><li>Report activity 16</li><li>Report activity 17</li><li>Report activity 18</li><li>Report activity 19</li><li>Report activity 20</li><li>Report activity 21</li><li>Report activity 22</li><li>Report activity 23</li><li>Report activity 24</li></ul><a href=\"#activity-details\">View activity details</a></div></div><div data-slot=\"scroll-area-scrollbar\" data-orientation=\"vertical\" aria-hidden=\"true\" style=\"--scroll-area-thumb-height:80px\"><div data-slot=\"scroll-area-thumb\"></div></div></div></section><section id=\"activity-details\"><h2>Activity details</h2></section>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "viewport-focus",
+      "name": "Viewport focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<section aria-labelledby=\"activity-heading\"><h2 id=\"activity-heading\">Report activity</h2><p>Scroll for all activity; the final details link remains native.</p><div data-slot=\"scroll-area\" role=\"presentation\" data-has-overflow-y=\"\" data-overflow-y-end=\"\"><div data-slot=\"scroll-area-viewport\" data-has-overflow-y=\"\" data-overflow-y-end=\"\" tabindex=\"0\" style=\"overflow:scroll\"><div data-part=\"scroll-area-content\"><ul><li>Report activity 1</li><li>Report activity 2</li><li>Report activity 3</li><li>Report activity 4</li><li>Report activity 5</li><li>Report activity 6</li><li>Report activity 7</li><li>Report activity 8</li><li>Report activity 9</li><li>Report activity 10</li><li>Report activity 11</li><li>Report activity 12</li><li>Report activity 13</li><li>Report activity 14</li><li>Report activity 15</li><li>Report activity 16</li><li>Report activity 17</li><li>Report activity 18</li><li>Report activity 19</li><li>Report activity 20</li><li>Report activity 21</li><li>Report activity 22</li><li>Report activity 23</li><li>Report activity 24</li></ul><a href=\"#activity-details\">View activity details</a></div></div><div data-slot=\"scroll-area-scrollbar\" data-orientation=\"vertical\" aria-hidden=\"true\" style=\"--scroll-area-thumb-height:80px\"><div data-slot=\"scroll-area-thumb\"></div></div></div></section><section id=\"activity-details\"><h2>Activity details</h2></section>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "viewport",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    }
+  ]
+}

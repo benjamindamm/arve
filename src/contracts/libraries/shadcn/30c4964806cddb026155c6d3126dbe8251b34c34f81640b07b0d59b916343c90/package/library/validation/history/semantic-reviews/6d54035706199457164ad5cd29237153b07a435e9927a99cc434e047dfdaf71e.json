@@ -1,0 +1,79 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "HoverCard",
+      "selector": null,
+      "ownership": "React context/portal control, no promised DOM element"
+    },
+    "trigger": {
+      "declaration": "HoverCardTrigger",
+      "selector": "[data-slot=\"hover-card-trigger\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "content": {
+      "declaration": "HoverCardContent",
+      "selector": "[data-slot=\"hover-card-content\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2156:674",
+      "property": "cornerRadius.0",
+      "value": 10,
+      "semanticRole": "radius"
+    },
+    {
+      "sourceNodeId": "2156:674",
+      "property": "layout.padding",
+      "value": [
+        12,
+        16,
+        12,
+        16
+      ],
+      "semanticRole": "insets"
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:231 (Hover Card), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2156:674",
+      "sourcePartId": "2156:1226",
+      "sourceName": "HoverCard / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2156:1227",
+      "sourcePartId": "2156:1226",
+      "sourceName": "HoverCard / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "trigger",
+        "content"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual HoverCard portal positioning, collision handling and defaults remain primitive-owned; CSS does not recreate anchor coordinates. Native radius/insets are adopted as semantic popup metrics, while width is fluid with an explicit bounded maximum. HoverCard keeps native 10px corners, 12/16px insets and 272px maximum; the real trigger remains an anchor and essential profile information is available outside the hover card. No invented Title/Description exports or automatic dialog role.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "purpose": "Group a related heading, content and optional actions.",
+  "avoid": "Do not create nested ambiguous clickable surfaces.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 72:2721 (Card), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Card",
+  "contentAlternative": "A text heading, description and body identify the group; imagery or card color is not its sole meaning.",
+  "updatesAndDescendants": "Card and its slots are native div wrappers. CardTitle does not automatically become a heading, and the whole card is not inherently clickable. Parent content updates rerender normally; descendants own their actions.",
+  "referenceDecision": "The h2 is deliberately supplied as CardTitle children in this reference. Consumers choose heading level from document hierarchy.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/card.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/card.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/card-example.tsx.source"
+  ],
+  "primitiveDocs": []
+}

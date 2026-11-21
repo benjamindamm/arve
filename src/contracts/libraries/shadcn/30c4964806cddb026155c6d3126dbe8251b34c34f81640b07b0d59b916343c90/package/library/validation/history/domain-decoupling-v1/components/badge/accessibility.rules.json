@@ -1,0 +1,10 @@
+{
+  "componentId": "shadcn:Badge",
+  "referenceComposition": "<span data-slot=\"badge\">Pending review</span>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The visible status/category text carries meaning without color or icon interpretation.",
+  "updatesAndDescendants": "The default span has no stored selection or activation lifecycle. Parent rerenders change its text. useRender may deliberately supply an anchor/button; that native element must retain its own naming, keyboard and event semantics.",
+  "referenceDecision": "The default reference is informative text. Interactive render overrides use native link/Button contracts, not a new badge-specific toggle protocol.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables."
+}

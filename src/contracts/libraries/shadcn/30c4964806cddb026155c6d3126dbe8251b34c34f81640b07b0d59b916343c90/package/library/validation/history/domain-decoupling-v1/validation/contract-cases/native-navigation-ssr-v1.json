@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "scope": "Actual source wrappers SSR; concrete browser and protocol evidence is separate.",
+  "cases": [
+    {
+      "component": "textarea",
+      "name": "native multiline props/value, readonly and error relations are forwarded",
+      "result": "pass"
+    },
+    {
+      "component": "native-select",
+      "name": "wrapper size/class and native option/optgroup/disabled are distinct",
+      "result": "pass"
+    },
+    {
+      "component": "native-select",
+      "name": "multiple remains genuine native select rather than simulated listbox",
+      "result": "pass"
+    },
+    {
+      "component": "breadcrumb",
+      "name": "ancestor link/current-page and hidden ellipsis preserve actual source semantics",
+      "result": "pass"
+    },
+    {
+      "component": "pagination",
+      "name": "actual Button-rendered anchor, active state and native href remain intact",
+      "result": "pass"
+    },
+    {
+      "component": "button-group",
+      "name": "group and visual orientation do not invent toolbar role or roving tabindex",
+      "result": "pass"
+    },
+    {
+      "component": "input-group",
+      "name": "input/textarea are actual child wrappers; action defaults and help span remain faithful",
+      "result": "pass"
+    }
+  ]
+}

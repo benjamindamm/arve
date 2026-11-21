@@ -1,0 +1,509 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "group": {
+      "declaration": "InputGroup",
+      "selector": "[data-slot=\"input-group\"]",
+      "ownership": "actual wrapper"
+    },
+    "addon": {
+      "declaration": "InputGroupAddon",
+      "selector": "[data-slot=\"input-group-addon\"]",
+      "ownership": "actual wrapper"
+    },
+    "input": {
+      "declaration": "InputGroupInput",
+      "selector": "[data-slot=\"input-group-control\"].cn-input-group-input",
+      "ownership": "actual wrapper"
+    },
+    "textarea": {
+      "declaration": "InputGroupTextarea",
+      "selector": "[data-slot=\"input-group-control\"].cn-input-group-textarea",
+      "ownership": "actual wrapper"
+    },
+    "button": {
+      "declaration": "InputGroupButton",
+      "selector": ".cn-input-group-button",
+      "ownership": "actual wrapper"
+    },
+    "text": {
+      "declaration": "InputGroupText",
+      "selector": ".cn-input-group-text",
+      "ownership": "actual wrapper"
+    },
+    "label": {
+      "declaration": "InputGroup",
+      "selector": "[data-part=\"input-group-label\"]",
+      "ownership": "caller composition"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2160:1323",
+      "observationPath": "height,cornerRadius",
+      "semanticTokens": [
+        "components.input-group.height",
+        "components.input-group.radius"
+      ]
+    },
+    {
+      "sourceNodeId": "2159:1927",
+      "observationPath": "layout.padding,layout.gap",
+      "semanticTokens": [
+        "components.input-group.addonInset",
+        "components.input-group.gap"
+      ]
+    },
+    {
+      "sourceNodeId": "2159:2506",
+      "observationPath": "height",
+      "semanticTokens": [
+        "components.input-group.buttonXsHeight"
+      ]
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 1188:5363 (Input Group), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2159:1927",
+      "sourcePartId": "2159:1928",
+      "sourceName": "InputGroupAddon / Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2159:1926",
+      "sourcePartId": "2159:1928",
+      "sourceName": "InputGroupAddon / Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2160:1323",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Default, Roudness=Default, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2160:3671",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Default, Roudness=Rounded, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2159:2539",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Focus, Roudness=Default, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2160:3687",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Focus, Roudness=Rounded, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2159:2538",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Destructive, Roudness=Default, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2160:3714",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Destructive, Roudness=Rounded, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2161:3267",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Disabled, Roudness=Default, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2161:3300",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Disabled, Roudness=Rounded, Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3585",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Default, Roudness=Default, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3591",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Default, Roudness=Rounded, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3598",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Focus, Roudness=Default, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3602",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Focus, Roudness=Rounded, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3611",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Destructive, Roudness=Default, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3615",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Destructive, Roudness=Rounded, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3624",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Disabled, Roudness=Default, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2260:3628",
+      "sourcePartId": "2159:2541",
+      "sourceName": "InputGroup / State=Disabled, Roudness=Rounded, Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "disabled"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2261:2395",
+      "sourcePartId": "2261:2396",
+      "sourceName": "InputGroupControl / Dir=LTR",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2261:2394",
+      "sourcePartId": "2261:2396",
+      "sourceName": "InputGroupControl / Dir=RTL",
+      "semanticParts": [
+        "group",
+        "addon",
+        "input",
+        "textarea",
+        "button",
+        "text",
+        "label"
+      ],
+      "canonicalFixtures": [
+        "inline",
+        "textarea",
+        "block-end",
+        "inline-end",
+        "button-sm",
+        "button-icon-xs",
+        "button-icon-sm"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "InputGroup maps six actual exports plus an explicit caller label. InputGroupText has no data-slot; Input/InputGroupTextarea share input-group-control, and actual cn-input-group-input/cn-input-group-textarea classes distinguish identity. InputGroupButton stays data-slot=button and carries cn-input-group-button plus custom size classes; it does not forward its size to Button, so the adapter explicitly maps the source group size classes while importing real Button styling. Native 32px outer height,10px corners,8px addon inset/gap and 24px xs action are retained. Flex control width with min-inline-size=0 replaces overspecified per-instance widths. Text addons center inside chrome so their native 6px outer text inset and 4px xs-button inset arise from content height rather than inflating the group. Four actual addon align values use order and full-row layout for block variants; textarea is intrinsically sized from the real Textarea dependency. Focus-within and actual child invalid/disabled states style the group; they do not invent Group validation/disabled logic. Caller disables both control/action if the whole group is unavailable. Native label/help/error IDs remain explicit. Default Addon pointer behavior focuses the first input only and skips nested buttons; textarea is not promised addon focus, and caller onClick can replace the default handler.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

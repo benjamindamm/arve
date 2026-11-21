@@ -1,0 +1,27 @@
+{
+  "purpose": "Provide a bounded viewport for overflowing content.",
+  "avoid": "Do not conceal essential content behind inaccessible scrolling.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful dynamic content/container; no user-set value on the root. Actual native scroll or delegated disclosure/action behavior remains explicitly described and exercised, rather than being classified as decorative.",
+  "componentId": "shadcn:ScrollArea",
+  "contentAlternative": "The region has a caller-supplied real heading and all scrollable content remains native text/list/link. The visual scrollbar is aria-hidden; it is not a second fake adjustable widget. Overflow must not be the only indication that more content exists.",
+  "updatesAndDescendants": "Root is role=presentation and wraps an internally created Viewport, vertical ScrollBar and Corner. Scrollbar/Corner are aria-hidden. Viewport is tabindex=0 only while at least one axis overflows, otherwise -1. Native scrolling drives viewport position, edge and thumb geometry. Root props are not Viewport props; the wrapper exports no Viewport and does not promise forwarding onScroll or aria-label to it. External sizing must make the viewport constrained. ScrollBar orientation defaults vertical; horizontal is explicitly composed. It does not auto-follow messages or preserve chat anchors; MessageScroller owns that behavior.",
+  "referenceDecision": "This reference uses an outer labelled section because the wrapper Root remains presentational. Native keyboard/wheel/touch scrolling and focusable descendants remain available. Browser scroll position is internal viewport state, not an invented Root value/onValueChange API.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/scroll-area.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/scroll-area.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/scroll-area-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/scroll-area.md.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "The selected native scroll specimen supplies 288px extent,8px corner,16px content inset and 6px rounded thumb thickness. Width remains fluid. Source Scrollbar padding 1px makes an8px total bar; actual primitive absolute placement, overflow, proportional thumb length/translation and Corner remain authoritative. Content padding is caller-owned because the wrapper exports no Viewport; Root props do not become Viewport callbacks or labels. The outer section supplies a real heading; Root stays presentational. Viewport becomes a native tab destination only when overflowing. Horizontal ScrollBar is explicitly added in caller children, which this wrapper places inside its Viewport; the wrapper vertical bar remains a Root sibling of that Viewport. Horizontal scrollbar uses column flex flow so flex-1 fills its thickness rather than overriding source-measured thumb width. Focus outline and native links remain meaningful without a draggable visual scrollbar; all text/list content is retained. No fake ARIA scrollbar or Root value/onValueChange is invented. Static thumb dimensions are finite illustrative runtime measurements, not copied node identities.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

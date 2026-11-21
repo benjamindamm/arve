@@ -1,0 +1,60 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Kbd",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "key": "Native keyboard-input notation, not shortcut registration.",
+    "group": "Native kbd grouping of the notation."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "key": {
+      "kind": "element",
+      "declaration": "Kbd",
+      "selector": "[data-slot=\"kbd\"]",
+      "description": "Native keyboard-input notation, not shortcut registration.",
+      "ownership": "actual wrapper"
+    },
+    "group": {
+      "kind": "element",
+      "declaration": "KbdGroup",
+      "selector": "[data-slot=\"kbd-group\"]",
+      "description": "Native kbd grouping of the notation.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-weight-normal": "semantic.typography.normalWeight",
+      "kbd-font-size": "components.kbd.fontSize",
+      "kbd-gap": "components.kbd.gap",
+      "kbd-height": "components.kbd.height",
+      "kbd-line-height": "components.kbd.lineHeight",
+      "kbd-padding": "components.kbd.padding",
+      "kbd-radius": "components.kbd.radius"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "The actual two exports render native kbd elements.20px minimum keycap height,6px corners,4px inline inset and12/16px text retain native metrics. The21px specimen width is glyph-dependent and stays in evidence. Group notation wraps at its host boundary, while no tabstop, role=button or automatic shortcut handling is added.",
+    "variants": {},
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

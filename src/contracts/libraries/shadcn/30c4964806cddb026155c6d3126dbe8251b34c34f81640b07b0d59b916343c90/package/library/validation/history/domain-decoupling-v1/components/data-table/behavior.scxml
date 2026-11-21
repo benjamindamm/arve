@@ -1,0 +1,74 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="DataTableRecipe" initial="active">
+  <datamodel>
+    <data id="sorting" expr="[]" />
+    <data id="columnFilters" expr="[]" />
+    <data id="columnVisibility" expr="{}" />
+    <data id="rowSelection" expr="{}" />
+    <data id="pagination" expr="({pageIndex:0,pageSize:2})" />
+    <data id="controlled" expr="true" />
+    <data id="canNext" expr="false" />
+    <data id="canPrevious" expr="false" />
+  </datamodel>
+  <state id="active">
+    <transition event="HOST_SORTING">
+      <assign location="sorting" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_SORTING_CHANGE" cond="typeof _event.data.updater !== &quot;undefined&quot;">
+      <send event="onSortingChange" target="#_parent">
+        <param name="updater" expr="_event.data.updater" />
+      </send>
+    </transition>
+    <transition event="HOST_COLUMN_FILTERS">
+      <assign location="columnFilters" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_COLUMN_FILTERS_CHANGE" cond="typeof _event.data.updater !== &quot;undefined&quot;">
+      <send event="onColumnFiltersChange" target="#_parent">
+        <param name="updater" expr="_event.data.updater" />
+      </send>
+    </transition>
+    <transition event="HOST_COLUMN_VISIBILITY">
+      <assign location="columnVisibility" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_COLUMN_VISIBILITY_CHANGE" cond="typeof _event.data.updater !== &quot;undefined&quot;">
+      <send event="onColumnVisibilityChange" target="#_parent">
+        <param name="updater" expr="_event.data.updater" />
+      </send>
+    </transition>
+    <transition event="HOST_ROW_SELECTION">
+      <assign location="rowSelection" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_ROW_SELECTION_CHANGE" cond="typeof _event.data.updater !== &quot;undefined&quot;">
+      <send event="onRowSelectionChange" target="#_parent">
+        <param name="updater" expr="_event.data.updater" />
+      </send>
+    </transition>
+    <transition event="HOST_PAGINATION">
+      <assign location="pagination" expr="_event.data.value" />
+    </transition>
+    <transition event="SOURCE_PAGINATION_CHANGE" cond="typeof _event.data.updater !== &quot;undefined&quot;">
+      <send event="onPaginationChange" target="#_parent">
+        <param name="updater" expr="_event.data.updater" />
+      </send>
+    </transition>
+    <transition event="SOURCE_PAGE_BOUNDS">
+      <assign location="canNext" expr="!!_event.data.next" />
+      <assign location="canPrevious" expr="!!_event.data.previous" />
+    </transition>
+    <transition event="NEXT_PAGE" cond="canNext">
+      <send event="_effect.sourcePaginationRequest" target="#_parent">
+        <param name="direction" expr="'next'" />
+      </send>
+    </transition>
+    <transition event="PREVIOUS_PAGE" cond="canPrevious">
+      <send event="_effect.sourcePaginationRequest" target="#_parent">
+        <param name="direction" expr="'previous'" />
+      </send>
+    </transition>
+    <transition event="TAB SHIFT_TAB NATIVE_EDIT ENTER SPACE">
+      <send event="_effect.delegateNativeControl" target="#_parent">
+        <param name="policy" expr="'actual-filter-button-checkbox-link-semantics'" />
+      </send>
+    </transition>
+    <transition event="ESCAPE ARROW_UP ARROW_DOWN" />
+  </state>
+</scxml>

@@ -1,0 +1,184 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "navigation": {
+      "declaration": "Breadcrumb",
+      "selector": "[data-slot=\"breadcrumb\"]",
+      "ownership": "actual wrapper"
+    },
+    "list": {
+      "declaration": "BreadcrumbList",
+      "selector": "[data-slot=\"breadcrumb-list\"]",
+      "ownership": "actual wrapper"
+    },
+    "item": {
+      "declaration": "BreadcrumbItem",
+      "selector": "[data-slot=\"breadcrumb-item\"]",
+      "ownership": "actual wrapper"
+    },
+    "link": {
+      "declaration": "BreadcrumbLink",
+      "selector": "[data-slot=\"breadcrumb-link\"]",
+      "ownership": "actual wrapper"
+    },
+    "page": {
+      "declaration": "BreadcrumbPage",
+      "selector": "[data-slot=\"breadcrumb-page\"]",
+      "ownership": "actual wrapper"
+    },
+    "separator": {
+      "declaration": "BreadcrumbSeparator",
+      "selector": "[data-slot=\"breadcrumb-separator\"]",
+      "ownership": "actual wrapper"
+    },
+    "ellipsis": {
+      "declaration": "BreadcrumbEllipsis",
+      "selector": "[data-slot=\"breadcrumb-ellipsis\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2198:2514",
+      "observationPath": "layout.gap",
+      "semanticTokens": [
+        "components.breadcrumb.itemGap"
+      ]
+    },
+    {
+      "sourceNodeId": "2198:2611",
+      "observationPath": "width",
+      "semanticTokens": [
+        "components.breadcrumb.iconSize"
+      ]
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 101:2 (Breadcrumb), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "1871:360",
+      "sourcePartId": "1871:361",
+      "sourceName": "BreadcrumbItem / State=Default, Dir=RTL",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "hierarchy",
+        "ellipsis-with-full-alternative",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1871:382",
+      "sourcePartId": "1871:361",
+      "sourceName": "BreadcrumbItem / State=Hover/Active, Dir=RTL",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "ancestor-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2198:2514",
+      "sourcePartId": "1871:361",
+      "sourceName": "BreadcrumbItem / State=Default, Dir=LTR",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "hierarchy",
+        "ellipsis-with-full-alternative",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2198:2518",
+      "sourcePartId": "1871:361",
+      "sourceName": "BreadcrumbItem / State=Hover/Active, Dir=LTR",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "ancestor-hover"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2198:2611",
+      "sourcePartId": "2198:2610",
+      "sourceName": "Breadcrumb separator / Type=chevron-right",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "hierarchy",
+        "ellipsis-with-full-alternative",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2198:2613",
+      "sourcePartId": "2198:2610",
+      "sourceName": "Breadcrumb separator / Type=dot",
+      "semanticParts": [
+        "navigation",
+        "list",
+        "item",
+        "link",
+        "page",
+        "separator",
+        "ellipsis"
+      ],
+      "canonicalFixtures": [
+        "hierarchy",
+        "ellipsis-with-full-alternative",
+        "rtl"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Breadcrumb binds all seven actual exports. Native 14px separator glyphs and 4px item gap are retained, with an explicit 8px wrapping-list reference gap and shared 14/20px typography. Ancestors are real href anchors; the actual current-page wrapper is a nonfocusable span with role=link, aria-disabled=true and aria-current=page, preserved rather than silently rewritten. Native presentation separators and ellipsis are hidden from accessibility. Ellipsis is not a disclosure control: this concrete fixture supplies the full hierarchy as alternative links below, instead of inventing an overflow API or hiding essential destinations. Caller can separately compose a real menu if desired. RTL fixtures explicitly set dir on Root and mirror chevrons; logical wrapping remains fluid.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

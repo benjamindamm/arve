@@ -1,0 +1,85 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "2484:76"
+  },
+  "stories": [
+    {
+      "id": "figma-2486-1541",
+      "name": "Questionnaire choice / State=Default, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2486:1541",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2490-1569",
+      "name": "Questionnaire choice / State=Default, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2490:1569",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2490-1561",
+      "name": "Questionnaire choice / State=Hover, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2490:1561",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2490-1553",
+      "name": "Questionnaire choice / State=Hover, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2490:1553",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2486-1540",
+      "name": "Questionnaire choice / State=Data checked, Dir=LTR",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2486:1540",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2490-1577",
+      "name": "Questionnaire choice / State=Data checked, Dir=RTL",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2490:1577",
+        "part": "2486:1542"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "actual-source-contract",
+      "expected": "Questionnaire is the actual shadcn @shadcn/react0.3.1 form wrapper, not a generic wizard value controller. Root props are native form props excluding value/defaultValue plus item/defaultItem/items/onItemChange/shortcuts. items provides complete ordered collection state on SSR; stable unique names and matching enabled rendered Item/Choice definitions are caller requirements. Controlled item is authoritative, onItemChange(string) is a request with no cancellable eventDetails; answers are separate native input state and FormData. Item is fieldset, Title legend, Description p, native ChoiceInput radio or checkbox when Item.multiple, with a label wrapping real input. Disabled choices cannot answer; disabled items are excluded from navigation. Inactive items remain mounted hidden/inert, preserving previous answers for FormData rather than disabling all inactive answers. Skip clears answer participation/name and marks skipped; only optional questions may skip. Optional unanswered is still invalid until answered or explicitly skipped. Item onStatusChange observes unanswered|answered|skipped, independently from active item. Choice checked/defaultChecked and Input value/defaultValue have their own controlled authority. Choice onChange can preventDefault before source internal selection; controlled choices require caller update. Selecting a single answer does not auto-advance. Next validates active item; invalid focuses its eligible answer, keeps current item and shows Item error (role=alert with registered fieldset error description). Root submit validates all registered items and goes to the first invalid one; only valid form submission reaches onSubmit(event). Root defaults noValidate=true and validates answer presence/external invalid, not arbitrary email patterns. Explicit noValidate=false enables native constraint checking/reportValidity in addition. Reference selects this mode for email. Error children and persistent descriptions explain the required answer; native invalid email uses browser constraint feedback. Root onReset is called first, preventDefault vetoes internal reset; otherwise answers reset to defaults, skipped/invalid attempts clear and initial valid question is requested. Progress is actual labelled progressbar with polite Question n of total text. Previous/Skip/Next/Submit are native buttons with hidden/inert/-1 states when inapplicable, not mere CSS opacity."
+    },
+    {
+      "id": "keyboard-focus-disabled-error",
+      "expected": "Tab uses actual form controls. Up/Down move eligible answer focus; native radio Left/Right keep their browser selection behavior. Outside radio/text entry, Left requests previous; Right requests next only after answered/skipped. Enter on a filled answer confirms active item, validating and requesting next or native requestSubmit on last; Ctrl/Meta+Enter confirms from the active question, ignores repeat/composition and conflicting modifiers. Optional letters/numbers shortcuts target enabled choices, focus then click, and do not run in text inputs. Active question changes focus its fieldset or invalid answer, including accepted controlled host updates; ignored controlled requests do not secretly advance. Escape is passive unless a separately composed Dialog owns it."
+    },
+    {
+      "id": "explicit-instance-composition",
+      "expected": "Three explicitly chosen questions: required Plus/Pro plan (Enterprise disabled), optional multiple Progress/Risks with explicit Skip, required contact email. Root has a visible heading/native form name; final FormData and result stay local, no message is sent. The exact source form and individual answer authorities are preserved. No fictitious Root disabled, onValueChange, asynchronous submission or automatic backend persistence is added."
+    }
+  ]
+}

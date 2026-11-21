@@ -1,0 +1,60 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:AspectRatio",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "landscape",
+      "name": "Landscape",
+      "inputs": {
+        "ratio": 1.7777777777777777
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"aspect-ratio\" style=\"--ratio:16 / 9\"><img src=\"data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 160 90&quot;%3E%3Cpath fill=&quot;%23c9e8f4&quot; d=&quot;M0 0h160v90H0z&quot;/%3E%3Cpath fill=&quot;%235d6b7a&quot; d=&quot;m0 60 45-45 50 55 35-35 30 25v30H0z&quot;/%3E%3Cpath fill=&quot;%235ba9c8&quot; d=&quot;M0 65h160v25H0z&quot;/%3E%3C/svg%3E\" alt=\"Mountain lake at sunrise\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "inputs": {
+        "ratio": 1
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"aspect-ratio\" style=\"--ratio:1\"><img src=\"data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 160 90&quot;%3E%3Cpath fill=&quot;%23c9e8f4&quot; d=&quot;M0 0h160v90H0z&quot;/%3E%3Cpath fill=&quot;%235d6b7a&quot; d=&quot;m0 60 45-45 50 55 35-35 30 25v30H0z&quot;/%3E%3Cpath fill=&quot;%235ba9c8&quot; d=&quot;M0 65h160v25H0z&quot;/%3E%3C/svg%3E\" alt=\"Mountain lake at sunrise\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "portrait",
+      "name": "Portrait",
+      "inputs": {
+        "ratio": 0.5625
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"aspect-ratio\" style=\"--ratio:9 / 16\"><img src=\"data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 160 90&quot;%3E%3Cpath fill=&quot;%23c9e8f4&quot; d=&quot;M0 0h160v90H0z&quot;/%3E%3Cpath fill=&quot;%235d6b7a&quot; d=&quot;m0 60 45-45 50 55 35-35 30 25v30H0z&quot;/%3E%3Cpath fill=&quot;%235ba9c8&quot; d=&quot;M0 65h160v25H0z&quot;/%3E%3C/svg%3E\" alt=\"Mountain lake at sunrise\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "ratio": 1.7777777777777777,
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"aspect-ratio\" style=\"--ratio:16 / 9\" dir=\"rtl\"><img src=\"data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 160 90&quot;%3E%3Cpath fill=&quot;%23c9e8f4&quot; d=&quot;M0 0h160v90H0z&quot;/%3E%3Cpath fill=&quot;%235d6b7a&quot; d=&quot;m0 60 45-45 50 55 35-35 30 25v30H0z&quot;/%3E%3Cpath fill=&quot;%235ba9c8&quot; d=&quot;M0 65h160v25H0z&quot;/%3E%3C/svg%3E\" alt=\"Mountain lake at sunrise\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    }
+  ]
+}

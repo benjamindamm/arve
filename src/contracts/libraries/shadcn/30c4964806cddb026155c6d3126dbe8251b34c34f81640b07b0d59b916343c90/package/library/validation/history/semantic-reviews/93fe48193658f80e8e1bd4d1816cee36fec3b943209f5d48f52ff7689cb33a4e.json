@@ -1,0 +1,181 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Slider",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "single",
+      "name": "Single",
+      "inputs": {
+        "value": [
+          40
+        ],
+        "step": 5,
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "range",
+      "name": "Range",
+      "inputs": {
+        "value": [
+          20,
+          80
+        ],
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback range</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.2);width:calc((100% - var(--ui-slider-thumb-size))*0.6);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.2);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"20\" aria-valuenow=\"20\" aria-valuetext=\"20% start range\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"1\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.8);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"80\" aria-valuenow=\"80\" aria-valuetext=\"80% end range\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred; first handle is start, second handle is end.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "vertical",
+      "name": "Vertical",
+      "inputs": {
+        "value": [
+          40
+        ],
+        "orientation": "vertical",
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"vertical\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"vertical\"><div data-slot=\"slider-track\" data-orientation=\"vertical\"><div data-slot=\"slider-range\" data-orientation=\"vertical\" style=\"position:absolute;bottom:0px;height:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);width:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"vertical\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;bottom:var(--position);left:50%;translate:-50% 50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"vertical\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "value": [
+          40
+        ],
+        "disabled": true,
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\" data-disabled=\"\"><div class=\"cn-slider\" data-orientation=\"horizontal\" data-disabled=\"\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" data-disabled=\"\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\" disabled=\"\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "inputs": {
+        "field": {
+          "invalid": true
+        },
+        "value": [
+          40
+        ],
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help volume-error\" aria-invalid=\"true\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p><div data-part=\"slider-error\" id=\"volume-error\">This playback level is unavailable. Choose another level.</div></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "value": [
+          40
+        ],
+        "directionProvider": "rtl",
+        "dir": "rtl",
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\" dir=\"rtl\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "hovered",
+      "name": "Hovered",
+      "inputs": {
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [
+        {
+          "action": "hover",
+          "part": "thumb"
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {
+        "format": {
+          "style": "unit",
+          "unit": "percent"
+        }
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"slider-field\"><label data-part=\"slider-label\" id=\"volume-label\">Playback volume</label><div data-slot=\"slider\" data-orientation=\"horizontal\" aria-labelledby=\"volume-label\"><div class=\"cn-slider\" data-orientation=\"horizontal\"><div data-slot=\"slider-track\" data-orientation=\"horizontal\"><div data-slot=\"slider-range\" data-orientation=\"horizontal\" style=\"position:relative;inset-inline-start:0px;width:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);height:inherit;\"></div></div><div data-slot=\"slider-thumb\" data-orientation=\"horizontal\" data-index=\"0\" style=\"--position:calc(var(--ui-slider-thumb-size)/2 + (100% - var(--ui-slider-thumb-size))*0.4);position:absolute;inset-inline-start:var(--position);top:50%;translate:-50% -50%;\"><input type=\"range\" min=\"0\" max=\"100\" step=\"5\" value=\"40\" aria-valuenow=\"40\" aria-valuetext=\"40%\" aria-orientation=\"horizontal\" aria-labelledby=\"volume-label\" aria-describedby=\"volume-help\"/></div></div></div><p data-part=\"slider-help\" id=\"volume-help\">Percent from zero to one hundred.</p></div>",
+        "context": "Actual Base UI Field.Root/Label/Description/Error; DirectionProvider where RTL, not arbitrary Root props."
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "input",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Named source-native controls expose real selected/pressed/value state. Static registered-client fixtures do not substitute for actual native focus and callback checks."
+    }
+  ]
+}

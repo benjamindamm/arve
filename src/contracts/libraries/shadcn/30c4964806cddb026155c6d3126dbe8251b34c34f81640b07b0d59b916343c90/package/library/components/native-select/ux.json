@@ -1,0 +1,26 @@
+{
+  "purpose": "Choose native single or multiple form options using the platform select interface.",
+  "avoid": "Source styling does not establish options or value types.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:NativeSelect",
+  "sourceRule": "NativeSelectProps omits the native numeric size prop and replaces it with sm|default (default). Other native select props, including multiple, value/defaultValue, disabled, name and onChange are passed through. NativeSelectOption/OptGroup are option/optgroup. The extra ChevronDown is aria-hidden. className styles the surrounding wrapper, not the select.",
+  "keyboardAndFocus": "The operating system/browser owns popup, arrow, typeahead, modifier selection and Escape behavior. This contract consumes the actual native change transaction; it does not equate every arrow key with a committed change. Escape may close a native picker, and does not fabricate an extra change/revert event. Disabled controls/options cannot be user-chosen; controlled value remains prop-authoritative.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "NativeSelectProps omits the native numeric size prop and replaces it with sm|default (default). Other native select props, including multiple, value/defaultValue, disabled, name and onChange are passed through. NativeSelectOption/OptGroup are option/optgroup. The extra ChevronDown is aria-hidden. className styles the surrounding wrapper, not the select. The operating system/browser owns popup, arrow, typeahead, modifier selection and Escape behavior. This contract consumes the actual native change transaction; it does not equate every arrow key with a committed change. Escape may close a native picker, and does not fabricate an extra change/revert event. Disabled controls/options cannot be user-chosen; controlled value remains prop-authoritative.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/native-select.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/native-select.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/native-select-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "NativeSelect maps all five actual parts across three exports. ClassName belongs to the wrapper; source size=sm/default is a visual API and never a native numeric select size attribute. Native 36px height, 8px outer block inset, 10px inline inset, 8px gap and 8px corner are retained. CSS padding subtracts its included 1px border so the outer-edge-to-text inset stays faithful without inflating height to38px. The reference explicitly selects 32px for the source-supported compact size, with no invented native sm observation. Width is content-dependent and capped by the host. Source dir is forwarded only to the select, so the wrapper derives explicit direction from that actual child attribute; logical chevron position stays aligned even under the opposite surrounding direction. Multiple remains a true native multiple select with intrinsic platform height and no misleading single-select chevron. Option/optgroup Canvas/CanvasText follows the source system-color utility; multiple selected options explicitly retain system Highlight/HighlightText so that utility cannot erase the visible selection. Native labels, selected values, disabled options, popup/typeahead/modifiers and events remain platform-owned; no fake ARIA listbox or selection events are introduced.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

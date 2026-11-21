@@ -1,0 +1,27 @@
+{
+  "purpose": "Separate related regions or items visually.",
+  "avoid": "Orientation alone does not decide whether separation is meaningful.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Separator",
+  "contentAlternative": "The separator role conveys a meaningful content boundary; surrounding section headings/text provide the boundary context. No fictitious label is required for a non-focusable separator.",
+  "updatesAndDescendants": "Base UI renders a non-focusable div role=separator and derives orientation from props. It has no adjustable value, keyboard operation or action callback. A purely decorative line can instead be hidden deliberately in its own context.",
+  "referenceDecision": "This reference chooses an informative non-focusable separator. It does not silently classify all separators as decorative or turn the line into a splitter.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/separator.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/separator.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/separator-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/separator.md.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "Actual selected BaseUI1.9 state is data-orientation=horizontal/vertical. The pinned wrapper utility text targets data-horizontal/data-vertical, which this runtime does not emit; the semantic adapter deliberately binds the observed actual orientation attribute without modifying upstream bytes. The native0px path dimensions describe a stroked line, not an invisible runtime element: the pinned wrapper explicitly supplies1px thickness, mapped to the semantic border width. Horizontal stretches across available width; vertical stretches to its flex/grid host block extent. Native100/120px specimen lengths remain host examples. No drag/resize or keyboard focus semantics are invented.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

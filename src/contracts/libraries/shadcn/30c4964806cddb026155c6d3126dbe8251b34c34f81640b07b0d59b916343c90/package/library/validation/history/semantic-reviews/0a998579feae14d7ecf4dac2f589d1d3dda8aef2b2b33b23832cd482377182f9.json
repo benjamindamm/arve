@@ -1,0 +1,119 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Switch",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "unchecked",
+      "name": "Unchecked",
+      "visualState": "default",
+      "inputs": {
+        "checked": false
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"default\" role=\"switch\" aria-checked=\"false\" aria-labelledby=\"switch-label\" tabindex=\"0\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "checked",
+      "name": "Checked",
+      "visualState": "checked",
+      "inputs": {
+        "checked": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"default\" role=\"switch\" aria-checked=\"true\" aria-labelledby=\"switch-label\" tabindex=\"0\" data-checked><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "visualState": "disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"default\" role=\"switch\" aria-checked=\"false\" aria-labelledby=\"switch-label\" tabindex=\"-1\" data-disabled aria-disabled=\"true\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "small",
+      "name": "Small",
+      "visualState": "default",
+      "inputs": {
+        "size": "sm"
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"sm\" role=\"switch\" aria-checked=\"false\" aria-labelledby=\"switch-label\" tabindex=\"0\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "checked-small",
+      "name": "Checked small",
+      "visualState": "checked",
+      "inputs": {
+        "checked": true,
+        "size": "sm"
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"sm\" role=\"switch\" aria-checked=\"true\" aria-labelledby=\"switch-label\" tabindex=\"0\" data-checked><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "rtl-checked",
+      "name": "Rtl checked",
+      "visualState": "checked",
+      "inputs": {
+        "checked": true,
+        "dir": "rtl"
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"default\" role=\"switch\" aria-checked=\"true\" aria-labelledby=\"switch-label\" tabindex=\"0\" data-checked dir=\"rtl\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "rtl-checked-small",
+      "name": "Rtl checked small",
+      "visualState": "checked",
+      "inputs": {
+        "checked": true,
+        "size": "sm",
+        "dir": "rtl"
+      },
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"sm\" role=\"switch\" aria-checked=\"true\" aria-labelledby=\"switch-label\" tabindex=\"0\" data-checked dir=\"rtl\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "visualState": "focused",
+      "inputs": {},
+      "fixture": {
+        "html": "<div data-part=\"switch-field\"><span data-slot=\"switch\" data-size=\"default\" role=\"switch\" aria-checked=\"false\" aria-labelledby=\"switch-label\" tabindex=\"0\"><span data-slot=\"switch-thumb\" aria-hidden=\"true\"></span></span><span id=\"switch-label\">Auto updates</span></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native semantics, actual source attributes and declared semantic styles apply; behavior remains with the bound source actor."
+    }
+  ]
+}

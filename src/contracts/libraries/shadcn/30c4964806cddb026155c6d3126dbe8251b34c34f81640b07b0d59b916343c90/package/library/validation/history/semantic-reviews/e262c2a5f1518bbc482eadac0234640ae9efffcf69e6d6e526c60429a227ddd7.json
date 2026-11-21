@@ -1,0 +1,25 @@
+{
+  "purpose": "Display an attached file and its metadata.",
+  "avoid": "Do not imply upload completion from an attachment tile.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful dynamic content/container; no user-set value on the root. Actual native scroll or delegated disclosure/action behavior remains explicitly described and exercised, rather than being classified as decorative.",
+  "componentId": "shadcn:Attachment",
+  "contentAlternative": "Filename, type/size where relevant and upload state/error are text. Decorative media icon is explicitly hidden. Action labels include the actual attachment name; thumbnails need useful alt when conveying content.",
+  "updatesAndDescendants": "Attachment state is a caller-supplied styling prop, default done; it does not upload, select files, retry, cancel or progress through states. Title/Description are spans, Content/Actions/Group are divs. AttachmentAction composes Button, ghost/icon-xs defaults. AttachmentTrigger uses native button default type=button, or an explicit native render such as anchor. Group supplies horizontal overflow/snap, not selection state. Caller owns async request transitions and focus after removal. Do not nest Trigger buttons/anchors inside other interactive elements or cover secondary actions with an unnamed trigger.",
+  "referenceDecision": "The error wording, status text and Retry Button are explicit caller composition. A real async operation determines state; no synthetic timeout is attached to make the visual upload states look operational.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/attachment.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/attachment.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/attachment-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "The source root state idle/uploading/processing/error/done is caller styling, not an upload engine. Native default radius 18px/inset 8px/gap 8px and media 40/32/28px (mapped to actual default/sm/xs) are reusable metrics. The selected vertical thumbnail recipe prefers native 120px tiles and clamps to available width; horizontal file rows remain fluid, never fixed 384px source examples. Vertical height is intrinsic, including independent actions, rather than clipping content to the native 168px specimen height. Compact metadata 12/16 is an explicit reference size decision; default 14/20 uses native shared type roles. Media radius 10px and default 20px glyph are explicit native-aligned roles. All text remains in the DOM despite truncation. Secondary actions occupy a higher stacking layer than the actual whole-tile Trigger, so Retry and Open do not intercept one another. A caller status paragraph and filename-qualified labels provide concrete task meaning; disabled belongs to each native action, never a fabricated Attachment disabled API. Image thumbnail art is an independent fixture, not extracted file content.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

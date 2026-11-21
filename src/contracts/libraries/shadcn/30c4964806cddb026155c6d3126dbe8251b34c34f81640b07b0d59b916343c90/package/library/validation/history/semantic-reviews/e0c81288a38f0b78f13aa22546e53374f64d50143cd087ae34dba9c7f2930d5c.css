@@ -1,0 +1,67 @@
+@import "../../tokens.css";
+
+[data-slot="marker"] {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-marker-gap);
+  inline-size: 100%;
+  min-inline-size: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ui-color-muted-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-marker-font-size);
+  line-height: var(--ui-marker-line-height);
+  font-weight: var(--ui-font-weight-normal);
+  text-align: start;
+}
+
+[data-slot="marker-icon"] {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-marker-icon-size);
+  block-size: var(--ui-marker-icon-size);
+}
+
+[data-slot="marker-icon"]>svg {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+[data-slot="marker-content"] {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+.cn-marker-variant-separator::before,
+.cn-marker-variant-separator::after {
+  content: "";
+  flex: 1;
+  min-inline-size: 0;
+  block-size: var(--ui-border-width);
+  background: var(--ui-color-border);
+}
+
+.cn-marker-variant-border {
+  padding-block-end: var(--ui-marker-gap);
+  box-shadow: inset 0 calc(-1*var(--ui-border-width))0 var(--ui-color-border);
+}
+
+button[data-slot="marker"] {
+  cursor: pointer;
+}
+
+button[data-slot="marker"] [data-slot="marker-content"] {
+  text-decoration: underline;
+}
+
+button[data-slot="marker"]:focus-visible {
+  outline: var(--ui-focus-width) solid var(--ui-color-ring);
+  outline-offset: var(--ui-focus-width);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}

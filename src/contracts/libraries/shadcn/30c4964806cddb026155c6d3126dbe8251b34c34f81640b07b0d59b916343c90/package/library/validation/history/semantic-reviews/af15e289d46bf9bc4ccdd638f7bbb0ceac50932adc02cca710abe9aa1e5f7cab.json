@@ -1,0 +1,87 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:ButtonGroup",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "implicit-default",
+      "name": "Implicit default",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-horizontal\"><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"vertical\" role=\"separator\" aria-orientation=\"vertical\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Export report</button></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "horizontal-with-text",
+      "name": "Horizontal with text",
+      "inputs": {
+        "orientation": "horizontal"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-horizontal\" data-orientation=\"horizontal\"><div data-slot=\"button-group-text\">Report</div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"vertical\" role=\"separator\" aria-orientation=\"vertical\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Export report</button></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "vertical",
+      "name": "Vertical",
+      "inputs": {
+        "orientation": "vertical"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-vertical\" data-orientation=\"vertical\"><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"horizontal\" role=\"separator\" aria-orientation=\"horizontal\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Export report</button></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "disabled-descendants",
+      "name": "Disabled descendants",
+      "inputs": {
+        "buttonsDisabled": true
+      },
+      "visualState": "disabled",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-horizontal\" data-orientation=\"horizontal\"><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" disabled data-disabled>Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"vertical\" role=\"separator\" aria-orientation=\"vertical\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\" disabled data-disabled>Export report</button></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "inputs": {},
+      "visualState": "focused",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-horizontal\" data-orientation=\"horizontal\"><div data-slot=\"button-group-text\">Report</div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"vertical\" role=\"separator\" aria-orientation=\"vertical\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Export report</button></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "action",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"button-group\" role=\"group\" aria-label=\"Report actions\" class=\"cn-button-group cn-button-group-orientation-horizontal\" data-orientation=\"horizontal\" dir=\"rtl\"><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Save report</button><div data-slot=\"button-group-separator\" data-orientation=\"vertical\" role=\"separator\" aria-orientation=\"vertical\"></div><button type=\"button\" data-slot=\"button\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Export report</button></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    }
+  ]
+}

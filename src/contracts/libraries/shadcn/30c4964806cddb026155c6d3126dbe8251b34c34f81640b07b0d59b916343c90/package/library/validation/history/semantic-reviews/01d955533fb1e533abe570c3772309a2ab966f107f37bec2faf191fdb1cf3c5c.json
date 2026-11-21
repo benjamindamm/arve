@@ -1,0 +1,92 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Field",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "vertical-invalid-field",
+      "name": "Vertical invalid field",
+      "inputs": {
+        "orientation": "vertical"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"vertical\" class=\"cn-field cn-field-orientation-vertical\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "horizontal",
+      "name": "Horizontal",
+      "inputs": {
+        "orientation": "horizontal"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "responsive",
+      "name": "Responsive",
+      "inputs": {
+        "orientation": "responsive"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"responsive\" class=\"cn-field cn-field-orientation-responsive\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "label-legend",
+      "name": "Label legend",
+      "inputs": {
+        "legendVariant": "label"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"label\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"vertical\" class=\"cn-field cn-field-orientation-vertical\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "error-list",
+      "name": "Error list",
+      "inputs": {
+        "errors": [
+          {
+            "message": "Enter a valid email address."
+          },
+          {
+            "message": "Use your work address."
+          }
+        ]
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"vertical\" class=\"cn-field cn-field-orientation-vertical\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\"><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\"><ul><li>Enter a valid email address.</li><li>Use your work address.</li></ul></div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    },
+    {
+      "id": "disabled-control",
+      "name": "Disabled control",
+      "inputs": {
+        "controlDisabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<fieldset data-slot=\"field-set\"><legend data-slot=\"field-legend\" data-variant=\"legend\">Contact details</legend><div data-slot=\"field-group\"><div role=\"group\" data-slot=\"field\" data-orientation=\"vertical\" class=\"cn-field cn-field-orientation-vertical\"><label data-slot=\"field-label\" class=\"cn-label cn-field-label\" for=\"field-email\">Email</label><div data-slot=\"field-content\"><input id=\"field-email\" data-slot=\"input\" type=\"email\" aria-invalid=\"true\" aria-describedby=\"field-help field-error\" disabled><p id=\"field-help\" data-slot=\"field-description\">Use your work address.</p><div id=\"field-error\" role=\"alert\" data-slot=\"field-error\">Enter a valid email address.</div></div></div><div data-slot=\"field-separator\" data-content=\"true\"><div data-slot=\"separator\" data-orientation=\"horizontal\" role=\"separator\"></div><span data-slot=\"field-separator-content\">Preferences</span></div><div role=\"group\" data-slot=\"field\" data-orientation=\"horizontal\" class=\"cn-field cn-field-orientation-horizontal\"><div data-slot=\"field-label\" class=\"cn-field-title\" id=\"updates-title\">Receive updates</div><input type=\"checkbox\" aria-labelledby=\"updates-title\"></div></div></fieldset>"
+      },
+      "steps": [],
+      "expectation": "Actual source anatomy, source public props and explicit native caller composition; source-specific semantic styles retain meaningful measured values."
+    }
+  ]
+}

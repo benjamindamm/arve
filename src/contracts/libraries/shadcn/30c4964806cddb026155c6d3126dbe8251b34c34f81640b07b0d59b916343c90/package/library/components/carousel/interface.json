@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "carousel.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Carousel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "opts",
+              "type": {
+                "text": "CarouselOptions"
+              },
+              "description": "Root props include opts:CarouselOptions, plugins:CarouselPlugin, orientation horizontal|vertical (defaulthorizontal), setApi(api) and native div props. useEmblaCarousel8.5.2 receives opts then an axis forced from orientation, so orientation wins over opts.axis. setApi receives the actual ready API, not a fabricated index event. Internal select/reInit observations derive canScrollPrev/Next; Previous/Next compose Button with default outline/icon-sm and readable hidden Previous slide/Next slide labels. Their disabled and onClick props are applied before {...props}, so callers can deliberately override them. Item is group with roledescription=slide; Root is region roledescription=carousel and requires caller context name. Content has an outer overflow viewport and inner flex track; className styles the track. Embla supplies drag, focus/resize behavior and snapping. No autoplay is enabled unless a plugin explicitly adds it; there is no built-in pause button, pagination or live announcement. This reference chooses three static slides, nonlooping default options, no plugin and external status from actual api.select subscriptions."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> & CarouselProps"
+              },
+              "description": "Exact public source type, defaults {\"orientation\": \"\\\"horizontal\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source:45."
+            }
+          ],
+          "events": [
+            {
+              "name": "setApi",
+              "type": {
+                "text": "(api: CarouselApi) => void"
+              },
+              "description": "Actual ready Embla API callback; subscribe to api.on(select/reInit) for source snapshots and unsubscribe in caller effect cleanup."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Named source region; orientation data attribute is an explicit caller visual binding. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "status",
+              "description": "External caller status from actual setApi select/reInit subscription. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CarouselContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source:135."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "viewport",
+              "description": "Actual overflow viewport receives carouselRef; className belongs inner track. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "track",
+              "description": "Actual private Embla flex track; primitive inline transform remains authoritative. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CarouselItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source:156."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "item",
+              "description": "Actual slide group/roledescription; caller provides position/content labels. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "slide",
+              "description": "Chosen content Card-like surface, intrinsic text and min extent. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CarouselPrevious",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"outline\\\"\", \"size\": \"\\\"icon-sm\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source:174."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "previous",
+              "description": "Actual Button delegation, disabled at nonlooping previous boundary. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CarouselNext",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button>"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"outline\\\"\", \"size\": \"\\\"icon-sm\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/carousel.tsx.source:211."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "next",
+              "description": "Actual Button delegation, disabled at nonlooping next boundary. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "useCarousel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "result",
+              "type": {
+                "text": "CarouselContextProps"
+              },
+              "description": "Actual context hook; throws outside Carousel. Returns real api, carouselRef, scrollPrev/Next, canScrollPrev/Next and current options/orientation."
+            }
+          ],
+          "cssParts": []
+        }
+      ]
+    }
+  ]
+}

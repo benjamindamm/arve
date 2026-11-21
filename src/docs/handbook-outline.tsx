@@ -5,7 +5,7 @@ import { SiteAnchor } from './site-anchor'
 import { useEffect, useRef, useState } from 'react'
 
 // Read only rendered handbook section anchors; example headings never enter this index.
-export function HandbookOutline({ initiallyCollapsed = false }: { initiallyCollapsed?: boolean }) {
+export function HandbookOutline({ initiallyCollapsed = false, scopeSelector }: { initiallyCollapsed?: boolean; scopeSelector?: string }) {
   const [expanded, setExpanded] = useState(false)
   const marker = useRef<HTMLElement>(null)
   const [headings, setHeadings] = useState<{ id: string; title: string }[]>([])
@@ -13,8 +13,10 @@ export function HandbookOutline({ initiallyCollapsed = false }: { initiallyColla
     setExpanded(!initiallyCollapsed && !window.matchMedia('(max-width: 600px)').matches)
     const article = marker.current?.closest('article')
     if (!article) return
+    const scope = scopeSelector ? article.querySelector(scopeSelector) : article
+    if (!scope) return
     const seen = new Set<string>()
-    const entries = Array.from(article.querySelectorAll<HTMLElement>('[id^="abschnitt-"], article > section.component-section[id]')).flatMap(section => {
+    const entries = Array.from(scope.querySelectorAll<HTMLElement>('[id^="abschnitt-"], article > section.component-section[id]')).flatMap(section => {
       if (section.closest('figure, .handbook-preview')) return []
       const heading = section.querySelector('h2')
       const title = section.tagName === 'DETAILS' ? section.querySelector(':scope > summary')?.textContent : heading?.textContent
@@ -23,6 +25,6 @@ export function HandbookOutline({ initiallyCollapsed = false }: { initiallyColla
       return [{ id: section.id, title: title.trim() }]
     })
     setHeadings(entries)
-  }, [initiallyCollapsed])
+  }, [initiallyCollapsed, scopeSelector])
   return <nav ref={marker} className="content-outline handbook-outline" aria-label="Auf dieser Seite" hidden={headings.length < 4}><details open={expanded} onToggle={event => setExpanded(event.currentTarget.open)}><summary>Auf dieser Seite <span>{headings.length} Abschnitte</span></summary><ol>{headings.map(({ id, title }) => <li key={id}><SiteAnchor href={'#' + id}>{title}</SiteAnchor></li>)}</ol></details></nav>
 }

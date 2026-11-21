@@ -1,0 +1,88 @@
+{
+  "result": "PASS",
+  "scope": "Source callback authority, native delegation and distinct responsive/notification actors; finite protocol cases, not a replacement primitive.",
+  "components": [
+    {
+      "component": "navigation-menu",
+      "behaviorSha256": "4cd942b7649915e37517441bf62d938e794ba0e8eaf8c9b6b400c87233e82a6f",
+      "cases": [
+        {
+          "name": "cancellation retains actual details identity and open item",
+          "result": "pass"
+        },
+        {
+          "name": "controlled callback is a request until host prop update",
+          "result": "pass"
+        },
+        {
+          "name": "disabled trigger cannot change item; Escape observes dismissal without fabricating callback",
+          "result": "pass"
+        },
+        {
+          "name": "deferred closed completion requires actual unmount; opening completion is not fabricated",
+          "result": "pass"
+        },
+        {
+          "name": "prevented native link does not emit synthetic navigation",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "sidebar",
+      "behaviorSha256": "2ea4cc2e658f0fb0a7bd07719c76705f56c338d15ea9a63d1457ef6a77d4584d",
+      "cases": [
+        {
+          "name": "uncontrolled desktop mutation writes actual candidate cookie without callback",
+          "result": "pass"
+        },
+        {
+          "name": "handler without controlled prop intercepts internal state",
+          "result": "pass"
+        },
+        {
+          "name": "controlled rejected candidate still writes cookie; host prop is separate authority",
+          "result": "pass"
+        },
+        {
+          "name": "mobile toggles independently with no desktop callback or cookie",
+          "result": "pass"
+        },
+        {
+          "name": "changing viewport preserves both independent states",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "component": "toast",
+      "behaviorSha256": "6cd4dd60ccf95baa32564b369d2d703f8d360e310ac10e53b45b5b13c5e03c54",
+      "cases": [
+        {
+          "name": "absent type stays untyped instead of inventing success; explicit undefined clears type",
+          "result": "pass"
+        },
+        {
+          "name": "actual viewport expansion/Close focus observation controls aria-hidden without a fabricated public event",
+          "result": "pass"
+        },
+        {
+          "name": "persistent/loading and paused timers do not request dismissal",
+          "result": "pass"
+        },
+        {
+          "name": "action is not dismissal and disabled/limited actions cannot execute",
+          "result": "pass"
+        },
+        {
+          "name": "Escape requires actual toast focus; close request is not lifecycle completion",
+          "result": "pass"
+        },
+        {
+          "name": "actual close and removal produce distinct no-argument callbacks",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "Avatar",
+      "selector": "[data-slot=\"avatar\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "image": {
+      "declaration": "AvatarImage",
+      "selector": "[data-slot=\"avatar-image\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "fallback": {
+      "declaration": "AvatarFallback",
+      "selector": "[data-slot=\"avatar-fallback\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "badge": {
+      "declaration": "AvatarBadge",
+      "selector": "[data-slot=\"avatar-badge\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "group": {
+      "declaration": "AvatarGroup",
+      "selector": "[data-slot=\"avatar-group\"]",
+      "ownership": "actual pinned wrapper"
+    },
+    "status": {
+      "declaration": "AvatarBadge",
+      "selector": "[data-part=\"avatar-status\"]",
+      "ownership": "caller"
+    },
+    "count": {
+      "declaration": "AvatarGroupCount",
+      "selector": "[data-slot=\"avatar-group-count\"]",
+      "ownership": "actual pinned wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2192:2567",
+      "semanticRole": "sizeSm",
+      "value": 24
+    },
+    {
+      "sourceNodeId": "2192:2553",
+      "semanticRole": "size",
+      "value": 32
+    },
+    {
+      "sourceNodeId": "2192:2561",
+      "semanticRole": "sizeLg",
+      "value": 40
+    },
+    {
+      "sourceNodeId": "2192:2531",
+      "semanticRole": "badgeSizeSm",
+      "value": 8
+    },
+    {
+      "sourceNodeId": "2192:2529",
+      "semanticRole": "badgeSize",
+      "value": 10
+    },
+    {
+      "sourceNodeId": "2192:2528",
+      "semanticRole": "badgeSizeLg",
+      "value": 12
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 72:2717 (Avatar), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2118:11461",
+      "sourcePartId": "2118:11510",
+      "sourceName": "AvatarGroup / Dir=LTR",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2118:11511",
+      "sourcePartId": "2118:11510",
+      "sourceName": "AvatarGroup / Dir=RTL",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2531",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Icon, Size=xs",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2529",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Icon, Size=default",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2528",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Icon, Size=lg",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2526",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Status, Size=lg",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2527",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Status, Size=default",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2530",
+      "sourcePartId": "2192:2532",
+      "sourceName": "AvatarBadge / Type=Status, Size=xs",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2567",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=sm, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2570",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=sm, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2553",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2576",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2561",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=lg, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2192:2583",
+      "sourcePartId": "2192:2550",
+      "sourceName": "Avatar / Size=lg, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1866:430",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=sm, Type=Icon",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1866:428",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=sm, Type=Count",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1867:580",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=default, Type=Icon",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1867:576",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=default, Type=Count",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1867:583",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=lg, Type=Icon",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "1867:578",
+      "sourcePartId": "2197:696",
+      "sourceName": "Avatar / Size=lg, Type=Count",
+      "semanticParts": [
+        "root",
+        "image",
+        "fallback",
+        "badge",
+        "group",
+        "status",
+        "count"
+      ],
+      "canonicalFixtures": [
+        "fallback",
+        "loaded-image",
+        "group",
+        "rtl-group",
+        "badge-sm",
+        "badge-default",
+        "badge-lg"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Actual Root sizes sm/default/lg map to native 24/32/40px circles; source badge sizes map to8/10/12px. The primitive owns image loading/error and fallback delay. Root remains overflow-visible for the badge; image/fallback inherit circle clipping. Group retains native 8px logical overlap and pinned 2px rings. Native size/type artwork does not create a public type prop. Count has a selected default 32px presentation because its actual API has no size prop; applications may explicitly adapt className for other group recipes. Badge uses the pinned physical right/bottom anchor even in RTL; ordinary adjacent text conveys any essential status. Independently authored portrait assets are fixtures, not extracted native image claims.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

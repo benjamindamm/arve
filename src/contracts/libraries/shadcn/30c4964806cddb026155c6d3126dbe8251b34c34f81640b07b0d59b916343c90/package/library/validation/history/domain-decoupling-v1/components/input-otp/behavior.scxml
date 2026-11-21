@@ -1,0 +1,38 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="InputOTP" initial="mounted">
+  <datamodel>
+    <data id="value" expr="''" />
+    <data id="controlled" expr="false" />
+    <data id="disabled" expr="false" />
+    <data id="maxLength" expr="6" />
+  </datamodel>
+  <state id="mounted">
+    <transition event="ESCAPE FOCUS_IN FOCUS_OUT" />
+    <transition event="SET_VALUE">
+      <assign location="value" expr="_event.data.value" />
+    </transition>
+    <transition event="SET_CONTROLLED">
+      <assign location="controlled" expr="_event.data.controlled" />
+    </transition>
+    <transition event="SET_DISABLED">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <transition event="SOURCE_CHANGE" cond="!disabled &amp;&amp; typeof _event.data.value === 'string' &amp;&amp; _event.data.value.length &lt;= maxLength &amp;&amp; (_event.data.value === '' || /^\d+$/.test(_event.data.value))">
+      <send event="onChange" target="#_parent">
+        <param name="value" expr="_event.data.value" />
+      </send>
+      <if cond="!controlled">
+        <assign location="value" expr="_event.data.value" />
+      </if>
+    </transition>
+    <transition event="SOURCE_COMPLETE" cond="_event.data.previousObserved === true &amp;&amp; typeof _event.data.previousValue === 'string' &amp;&amp; _event.data.previousValue.length &lt; maxLength &amp;&amp; value.length === maxLength">
+      <send event="onComplete" target="#_parent">
+        <param name="value" expr="value" />
+      </send>
+    </transition>
+    <transition event="PATTERN_REJECTED NATIVE_SELECTION_CHANGE" />
+    <transition event="UNMOUNT" target="removed" />
+  </state>
+  <state id="removed">
+    <transition event="MOUNT" target="mounted" />
+  </state>
+</scxml>

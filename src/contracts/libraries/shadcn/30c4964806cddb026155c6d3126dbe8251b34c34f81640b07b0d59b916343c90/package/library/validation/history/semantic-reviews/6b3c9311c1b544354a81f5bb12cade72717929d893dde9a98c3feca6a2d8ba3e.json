@@ -1,0 +1,198 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Command",
+  "version": "0.4.2",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "root": "Actual cmdk Root; value is active highlight, not execution.",
+    "input-label": "Actual private cmdk visually hidden native label registered by Root label prop.",
+    "input-wrapper": "Actual private search wrapper.",
+    "input-group": "Actual delegated InputGroup; no invented standalone search DOM.",
+    "input": "Actual native cmdk Input with virtual active descendant.",
+    "list": "Actual List role listbox.",
+    "group": "Actual cmdk Group outer presentation wrapper.",
+    "group-heading": "Actual private cmdk heading, not an exported shadcn part.",
+    "item": "Actual command option; onSelect is action invocation.",
+    "indicator": "Actual private Check glyph; data-checked is optional caller indication, distinct from active highlight.",
+    "empty": "Actual empty wrapper; chosen status child announces no results.",
+    "separator": "Actual source separator.",
+    "shortcut": "Displayed hint only; no keyboard registration.",
+    "dialog": "Source composes BaseUI Dialog Root, title/description siblings and actual DialogContent; own modal API is delegated.",
+    "dialog-popup": "Actual DialogContent with caller source command-specific className.",
+    "dialog-header": "Source visually hidden title/description siblings outside Popup; actual registered IDs supply name/help."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "dialog": {
+      "component": "../dialog/component.json"
+    },
+    "input-group": {
+      "component": "../input-group/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "root": {
+      "kind": "element",
+      "declaration": "Command",
+      "selector": "[data-slot=\"command\"]",
+      "description": "Actual cmdk Root; value is active highlight, not execution.",
+      "ownership": "actual source wrapper"
+    },
+    "input-label": {
+      "kind": "element",
+      "declaration": "Command",
+      "selector": "[cmdk-label]",
+      "description": "Actual private cmdk visually hidden native label registered by Root label prop.",
+      "ownership": "private source child"
+    },
+    "input-wrapper": {
+      "kind": "element",
+      "declaration": "CommandInput",
+      "selector": "[data-slot=\"command-input-wrapper\"]",
+      "description": "Actual private search wrapper.",
+      "ownership": "actual source wrapper"
+    },
+    "input-group": {
+      "kind": "element",
+      "declaration": "CommandInput",
+      "selector": ".cn-command-input-group",
+      "description": "Actual delegated InputGroup; no invented standalone search DOM.",
+      "ownership": "actual source wrapper"
+    },
+    "input": {
+      "kind": "element",
+      "declaration": "CommandInput",
+      "selector": "[data-slot=\"command-input\"]",
+      "description": "Actual native cmdk Input with virtual active descendant.",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "kind": "element",
+      "declaration": "CommandList",
+      "selector": "[data-slot=\"command-list\"]",
+      "description": "Actual List role listbox.",
+      "ownership": "actual source wrapper"
+    },
+    "group": {
+      "kind": "element",
+      "declaration": "CommandGroup",
+      "selector": "[data-slot=\"command-group\"]",
+      "description": "Actual cmdk Group outer presentation wrapper.",
+      "ownership": "actual source wrapper"
+    },
+    "group-heading": {
+      "kind": "element",
+      "declaration": "CommandGroup",
+      "selector": "[cmdk-group-heading]",
+      "description": "Actual private cmdk heading, not an exported shadcn part.",
+      "ownership": "private source child"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "CommandItem",
+      "selector": "[data-slot=\"command-item\"]",
+      "description": "Actual command option; onSelect is action invocation.",
+      "ownership": "actual source wrapper"
+    },
+    "indicator": {
+      "kind": "element",
+      "declaration": "CommandItem",
+      "selector": ".cn-command-item-indicator",
+      "description": "Actual private Check glyph; data-checked is optional caller indication, distinct from active highlight.",
+      "ownership": "actual source wrapper"
+    },
+    "empty": {
+      "kind": "element",
+      "declaration": "CommandEmpty",
+      "selector": "[data-slot=\"command-empty\"]",
+      "description": "Actual empty wrapper; chosen status child announces no results.",
+      "ownership": "actual source wrapper"
+    },
+    "separator": {
+      "kind": "element",
+      "declaration": "CommandSeparator",
+      "selector": "[data-slot=\"command-separator\"]",
+      "description": "Actual source separator.",
+      "ownership": "actual source wrapper"
+    },
+    "shortcut": {
+      "kind": "element",
+      "declaration": "CommandShortcut",
+      "selector": "[data-slot=\"command-shortcut\"]",
+      "description": "Displayed hint only; no keyboard registration.",
+      "ownership": "actual source wrapper"
+    },
+    "dialog": {
+      "kind": "controller",
+      "declaration": "CommandDialog",
+      "source": "Source composes BaseUI Dialog Root, title/description siblings and actual DialogContent; own modal API is delegated.",
+      "description": "Source composes BaseUI Dialog Root, title/description siblings and actual DialogContent; own modal API is delegated."
+    },
+    "dialog-popup": {
+      "kind": "element",
+      "declaration": "CommandDialog",
+      "selector": "[data-slot=\"dialog-content\"].cn-command-dialog",
+      "description": "Actual DialogContent with caller source command-specific className.",
+      "ownership": "actual source wrapper"
+    },
+    "dialog-header": {
+      "kind": "element",
+      "declaration": "CommandDialog",
+      "selector": "[data-slot=\"dialog-header\"].sr-only",
+      "description": "Source visually hidden title/description siblings outside Popup; actual registered IDs supply name/help.",
+      "ownership": "private delegated Dialog parts"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "command-dialog-width": "components.command.dialogWidth",
+      "command-gap": "components.command.gap",
+      "command-input-height": "components.command.inputHeight",
+      "command-inset": "components.command.inset",
+      "command-item-height": "components.command.itemHeight",
+      "command-list-height": "components.command.listHeight",
+      "command-radius": "components.command.radius",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Command is cmdk, not a Menu or selected-value picker: Input query, active option highlight and Item onSelect execution remain distinct. Native command frame 14px corners/4px inset are retained with explicit 28px minimum row,36px search role,300px scroll maximum and 384px palette maximum. Actual Input wraps InputGroup and addon; its command-input slot needs explicit flex:1 and nowrap on that delegated group, because generic InputGroup control-slot rules do not target cmdk Input. This preserves the chosen 36px search row rather than wrapping the glyph onto a second row. List is listbox, Item is option, and cmdk Group heading selector is a stable upstream DOM attribute rather than a source-node identity. Highlight uses actual data-selected; optional caller data-checked check glyph is separate and source shortcut presence hides the glyph. No keyboard binding is created by shortcut text. The source CommandDialog places registered title/description siblings before Popup; this reference mounts on opening/unmounts after close completion, hides only that header visually and preserves its actual naming IDs. Modal focus/close/cancellation remain delegated to Dialog; command-specific popup has zero inset and one-third physical centered placement, with narrow viewport bounded by Dialog. Theme and direction are application document context in this adapter because CommandDialog exposes className but no Popup dir/data-theme prop; leading CSS remains component-owned and source-independent. No fake aria-modal attribute or invented Root disabled/value veto is added. No-results text is an explicit readable status, and caller chooses to close palette after execution.",
+    "variants": {
+      "query": {
+        "source": "CommandInput value/onValueChange"
+      },
+      "highlight": {
+        "source": "Command value/onValueChange"
+      },
+      "invocation": {
+        "source": "CommandItem onSelect"
+      },
+      "palette": {
+        "source": "CommandDialog delegates Dialog open lifecycle"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

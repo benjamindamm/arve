@@ -1,0 +1,74 @@
+.figma-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--figma-checkbox-label-gap);
+}
+
+.figma-checkbox > input {
+  position: absolute;
+  inline-size: var(--figma-checkbox-size);
+  block-size: var(--figma-checkbox-size);
+  margin: 0;
+  opacity: 0;
+}
+
+.figma-checkbox__box {
+  display: inline-grid;
+  box-sizing: border-box;
+  flex: none;
+  place-items: center;
+  inline-size: var(--figma-checkbox-size);
+  block-size: var(--figma-checkbox-size);
+  border: var(--figma-checkbox-border-width) solid var(--figma-border);
+  border-radius: var(--figma-checkbox-radius);
+  background: var(--figma-background);
+  color: var(--figma-primary-foreground);
+  pointer-events: none;
+}
+
+.figma-checkbox__box > svg {
+  visibility: hidden;
+  inline-size: var(--figma-checkbox-indicator-size);
+  block-size: var(--figma-checkbox-indicator-size);
+}
+
+.figma-checkbox > input:checked + .figma-checkbox__box {
+  border-color: transparent;
+  background: var(--figma-primary);
+}
+
+.figma-checkbox > input:checked + .figma-checkbox__box > svg {
+  visibility: visible;
+}
+
+.figma-checkbox > input:focus-visible + .figma-checkbox__box {
+  border-color: var(--figma-ring);
+  box-shadow: 0 0 0 var(--figma-checkbox-focus-spread) var(--figma-checkbox-focus-shadow);
+}
+
+.figma-checkbox > input:disabled + .figma-checkbox__box {
+  opacity: var(--figma-checkbox-disabled-opacity);
+}
+
+@media (forced-colors: active) {
+  .figma-checkbox > input {
+    position: static;
+    opacity: 1;
+  }
+
+  .figma-checkbox__box {
+    display: none;
+  }
+}
+
+/* Base UI 1.9 semantic root projection, using the same native Figma tokens. */
+[data-slot="checkbox"][role="checkbox"] { display: inline-flex; box-sizing: border-box; border: 1px solid var(--figma-border); background: var(--figma-background); }
+[data-slot="checkbox"][aria-checked="true"] { background: var(--figma-primary); color: var(--figma-primary-foreground); }
+[data-slot="checkbox"][aria-disabled="true"] { opacity: 0.5; }
+[data-slot="checkbox"]:focus-visible { outline: 2px solid var(--figma-ring); outline-offset: 2px; }
+
+/* Geometry and state projection for the pinned Base UI span root. */
+[data-slot="checkbox"][role="checkbox"] { inline-size: var(--figma-checkbox-size); block-size: var(--figma-checkbox-size); border-radius: var(--figma-checkbox-radius); align-items: center; justify-content: center; }
+[data-slot="checkbox"][aria-checked="mixed"] { background: var(--figma-primary); color: var(--figma-primary-foreground); }
+[data-slot="checkbox-indicator"] > svg { inline-size: var(--figma-checkbox-indicator-size); block-size: var(--figma-checkbox-indicator-size); }

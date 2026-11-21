@@ -1,0 +1,130 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Card",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "surface": "Content grouping surface, not an automatic landmark or action.",
+    "header": "Title/description grid and optional action placement.",
+    "title": "Title wrapper; caller supplies a real heading.",
+    "description": "Supporting text.",
+    "action": "Optional caller actions, with their own native semantics.",
+    "content": "Fluid body content.",
+    "footer": "Wrapped caller footer actions or text."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "surface": {
+      "kind": "element",
+      "declaration": "Card",
+      "selector": "[data-slot=\"card\"]",
+      "description": "Content grouping surface, not an automatic landmark or action.",
+      "ownership": "actual wrapper"
+    },
+    "header": {
+      "kind": "element",
+      "declaration": "CardHeader",
+      "selector": "[data-slot=\"card-header\"]",
+      "description": "Title/description grid and optional action placement.",
+      "ownership": "actual wrapper"
+    },
+    "title": {
+      "kind": "element",
+      "declaration": "CardTitle",
+      "selector": "[data-slot=\"card-title\"]",
+      "description": "Title wrapper; caller supplies a real heading.",
+      "ownership": "actual wrapper"
+    },
+    "description": {
+      "kind": "element",
+      "declaration": "CardDescription",
+      "selector": "[data-slot=\"card-description\"]",
+      "description": "Supporting text.",
+      "ownership": "actual wrapper"
+    },
+    "action": {
+      "kind": "element",
+      "declaration": "CardAction",
+      "selector": "[data-slot=\"card-action\"]",
+      "description": "Optional caller actions, with their own native semantics.",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "CardContent",
+      "selector": "[data-slot=\"card-content\"]",
+      "description": "Fluid body content.",
+      "ownership": "actual wrapper"
+    },
+    "footer": {
+      "kind": "element",
+      "declaration": "CardFooter",
+      "selector": "[data-slot=\"card-footer\"]",
+      "description": "Wrapped caller footer actions or text.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "card-compact-gap": "components.card.compactGap",
+      "card-compact-title": "components.card.compactTitle",
+      "card-compact-title-line": "components.card.compactTitleLine",
+      "card-gap": "components.card.gap",
+      "card-header-gap": "components.card.headerGap",
+      "card-padding": "components.card.padding",
+      "card-radius": "components.card.radius",
+      "card-title-line": "components.card.titleLine",
+      "card-title-size": "components.card.titleSize",
+      "color-background": "semantic.color.background",
+      "color-border": "semantic.color.border",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-medium": "semantic.typography.mediumWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Card keeps intrinsic content height, fluid width,16px section spacing/insets and14px native corners. Native header/footer sample widths are not fixed runtime dimensions. The seven actual exported wrappers own distinct semantic parts. Native typography varies across specimens; the reference selects the observed16/24px medium title and14/20px body, with native headings explicitly supplied by the caller. The public sm size has no identified native sm master:12px section gap and14/20px title are an explicit compact reference choice, not a fabricated observation. RTL uses logical layout; footer actions wrap. No Card-specific activation event is invented.",
+    "variants": {
+      "size": {
+        "prop": "size",
+        "attribute": "data-size",
+        "values": [
+          "default",
+          "sm"
+        ]
+      },
+      "direction": {
+        "prop": "dir",
+        "values": [
+          "ltr",
+          "rtl"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

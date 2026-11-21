@@ -1,0 +1,45 @@
+{
+  "componentId": "shadcn:Breadcrumb",
+  "sourceRule": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed.",
+  "keyboardAndFocus": "Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation.",
+  "referenceComposition": "<nav data-slot=\"breadcrumb\" aria-label=\"Project hierarchy\"><ol data-slot=\"breadcrumb-list\"><li data-slot=\"breadcrumb-item\"><a data-slot=\"breadcrumb-link\" href=\"#home\">Home</a></li><li data-slot=\"breadcrumb-separator\" role=\"presentation\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></li><li data-slot=\"breadcrumb-item\"><span data-slot=\"breadcrumb-ellipsis\" role=\"presentation\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"5\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"19\" cy=\"12\" r=\"1\"/></svg><span class=\"sr-only\">More</span></span></li><li data-slot=\"breadcrumb-separator\" role=\"presentation\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></li><li data-slot=\"breadcrumb-item\"><a data-slot=\"breadcrumb-link\" href=\"#projects\">Projects</a></li><li data-slot=\"breadcrumb-separator\" role=\"presentation\" aria-hidden=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m9 5 7 7-7 7\" fill=\"none\" stroke=\"currentColor\"/></svg></li><li data-slot=\"breadcrumb-item\"><span data-slot=\"breadcrumb-page\" role=\"link\" aria-disabled=\"true\" aria-current=\"page\">Annual report</span></li></ol></nav><p>Full hierarchy: <a href=\"#workspace\">Workspace</a>, <a href=\"#projects\">Projects</a>, Annual report.</p><section id=\"home\"><h2>Home destination</h2></section><section id=\"projects\"><h2>Projects destination</h2></section><section id=\"workspace\"><h2>Workspace destination</h2></section>",
+  "protocol": "SCXML consumes actual source/native transaction observations; callback objects remain original. Sends document observed callbacks, not second DOM dispatches. Parent-controlled props alone synchronize authoritative values. HTML/CSS is a semantic projection; executable behavior uses actual pinned React wrappers.",
+  "semanticParts": {
+    "navigation": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb\"]",
+      "description": "Actual named nav; caller can localize its label."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-list\"]",
+      "description": "Actual wrapping ordered hierarchy list."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-item\"]",
+      "description": "Actual native list item."
+    },
+    "link": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-link\"]",
+      "description": "Actual native ancestor anchor with real destination."
+    },
+    "page": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-page\"]",
+      "description": "Actual nonfocusable current-page span with source role=link/aria-disabled/page."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-separator\"]",
+      "description": "Actual hidden presentation list item and separator glyph."
+    },
+    "ellipsis": {
+      "kind": "element",
+      "selector": "[data-slot=\"breadcrumb-ellipsis\"]",
+      "description": "Actual hidden presentation span; no automatic overflow action."
+    }
+  },
+  "visualStateMapping": {}
+}

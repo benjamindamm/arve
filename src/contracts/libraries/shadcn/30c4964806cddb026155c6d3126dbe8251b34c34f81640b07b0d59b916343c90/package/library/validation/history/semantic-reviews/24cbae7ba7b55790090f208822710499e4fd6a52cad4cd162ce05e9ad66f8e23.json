@@ -1,0 +1,212 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "root": {
+      "declaration": "NavigationMenu",
+      "selector": "[data-slot=\"navigation-menu\"]",
+      "ownership": "actual source wrapper"
+    },
+    "list": {
+      "declaration": "NavigationMenuList",
+      "selector": "[data-slot=\"navigation-menu-list\"]",
+      "ownership": "actual source wrapper"
+    },
+    "item": {
+      "declaration": "NavigationMenuItem",
+      "selector": "[data-slot=\"navigation-menu-item\"]",
+      "ownership": "actual source wrapper"
+    },
+    "trigger": {
+      "declaration": "NavigationMenuTrigger",
+      "selector": "[data-slot=\"navigation-menu-trigger\"]",
+      "ownership": "actual source wrapper"
+    },
+    "trigger-icon": {
+      "declaration": "NavigationMenuTrigger",
+      "selector": ".cn-navigation-menu-trigger-icon",
+      "ownership": "private source child"
+    },
+    "content": {
+      "declaration": "NavigationMenuContent",
+      "selector": "[data-slot=\"navigation-menu-content\"]",
+      "ownership": "actual source wrapper"
+    },
+    "positioner": {
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-positioner",
+      "ownership": "actual source wrapper"
+    },
+    "popup": {
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-popup",
+      "ownership": "private source child"
+    },
+    "viewport": {
+      "declaration": "NavigationMenuPositioner",
+      "selector": ".cn-navigation-menu-popup>div",
+      "ownership": "private source child"
+    },
+    "link": {
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-slot=\"navigation-menu-link\"]",
+      "ownership": "actual source wrapper"
+    },
+    "link-title": {
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-part=\"navigation-link-title\"]",
+      "ownership": "caller children"
+    },
+    "link-description": {
+      "declaration": "NavigationMenuLink",
+      "selector": "[data-part=\"navigation-link-description\"]",
+      "ownership": "caller children"
+    },
+    "indicator": {
+      "declaration": "NavigationMenuIndicator",
+      "selector": "[data-slot=\"navigation-menu-indicator\"]",
+      "ownership": "actual source wrapper"
+    },
+    "indicator-arrow": {
+      "declaration": "NavigationMenuIndicator",
+      "selector": ".cn-navigation-menu-indicator-arrow",
+      "ownership": "private source child"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2112:7220",
+      "observed": "Trigger36px/10px;2111:6526 link-card8px corner,8/16px insets,4px gap,14/20 Medium actual text fields.",
+      "decision": "Fluid preferred290px content card, explicit popup surface and actual primitive measurements."
+    }
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 73:1980 (Navigation Menu), observed anatomy and examples."
+  },
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2111:6526",
+      "sourcePartId": "2111:6527",
+      "sourceName": "NavigationMenuItem / State=Default, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "list",
+        "item",
+        "trigger",
+        "trigger-icon",
+        "content",
+        "positioner",
+        "popup",
+        "viewport",
+        "link",
+        "link-title",
+        "link-description",
+        "indicator",
+        "indicator-arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "opening-content",
+        "closing-content",
+        "disabled",
+        "rtl",
+        "optional-indicator",
+        "content-link-hover",
+        "trigger-keyboard-focus",
+        "link-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2111:6525",
+      "sourcePartId": "2111:6527",
+      "sourceName": "NavigationMenuItem / State=Hover, Dir=LTR",
+      "semanticParts": [
+        "root",
+        "list",
+        "item",
+        "trigger",
+        "trigger-icon",
+        "content",
+        "positioner",
+        "popup",
+        "viewport",
+        "link",
+        "link-title",
+        "link-description",
+        "indicator",
+        "indicator-arrow"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2113:7894",
+      "sourcePartId": "2111:6527",
+      "sourceName": "NavigationMenuItem / State=Default, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "list",
+        "item",
+        "trigger",
+        "trigger-icon",
+        "content",
+        "positioner",
+        "popup",
+        "viewport",
+        "link",
+        "link-title",
+        "link-description",
+        "indicator",
+        "indicator-arrow"
+      ],
+      "canonicalFixtures": [
+        "open",
+        "closed",
+        "opening-content",
+        "closing-content",
+        "disabled",
+        "rtl",
+        "optional-indicator",
+        "content-link-hover",
+        "trigger-keyboard-focus",
+        "link-keyboard-focus"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2113:7897",
+      "sourcePartId": "2111:6527",
+      "sourceName": "NavigationMenuItem / State=Hover, Dir=RTL",
+      "semanticParts": [
+        "root",
+        "list",
+        "item",
+        "trigger",
+        "trigger-icon",
+        "content",
+        "positioner",
+        "popup",
+        "viewport",
+        "link",
+        "link-title",
+        "link-description",
+        "indicator",
+        "indicator-arrow"
+      ],
+      "canonicalFixtures": [
+        "open"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "Native triggers are 36px with 10px corners; content cards use 8px corners,8/16px inset,4px gap and 14/20 Medium title/description. The native description text field says Medium despite its Regular style label, so this reference explicitly keeps the observed Medium field and muted role. Native 290px card width becomes a preferred maximum. Popup 12px corner/1px border/4px content pad are explicit reference surface choices; source 350ms position/size/content opacity timing is retained with reduced-motion duration 0.01ms; source Positioner/Popup width/height/origin variables remain actual measured geometry. Root automatically appends one Positioner; no extra default instance is added. Source Root and private Popup are native navigation landmarks, not menu roles; the private popup has no invented label prop. Active/current-page link and open disclosure value remain distinct. Destination links choose closeOnClick=true in target, while the source default remains false. Root/Trigger keyboard, disabled focusability, hover delay and controlled cancellation retain pinned primitive rules. Theme/dir are document context because the built-in private Popup cannot receive arbitrary Root data-theme props. Trigger aria-controls identifies the actual private nav Popup, not its Content child. No page/frame/node selectors or fixed source sample positions survive.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ]
+}

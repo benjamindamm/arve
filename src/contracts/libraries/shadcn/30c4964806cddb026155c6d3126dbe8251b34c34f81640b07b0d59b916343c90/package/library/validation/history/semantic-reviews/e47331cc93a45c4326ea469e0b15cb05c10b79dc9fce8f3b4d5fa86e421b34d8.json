@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "code-block.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "CodeBlock",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Root variant=default|destructive and size=default|sm only style div content. Content is native pre with nested code, dir=ltr and tabIndex0; wrap defaultsfalse, lineNumbersfalse, startLine1 controls the CSS line counter. With string children and numbering, one trailing newline is removed before splitting; empty CodeBlockLine deliberately emits a newline. No syntax highlighter or executable code engine is built in. CopyButton requires value:string, defaults ghost/icon-xs, calls caller onClick before navigator.clipboard.writeText(value), and does not inspect defaultPrevented. Successful promise sets copied=true, aria-label=Copied and a polite live text; first copied=true schedules reset after2000ms. Repeated success while already copied does not restart that effect timer. Rejected promises are swallowed, preserving the previous copied state; no onCopied/onCopyError event exists. Missing navigator.clipboard can throw synchronously before the promise catch. This reference requires a supported secure clipboard context for Copy and provides persistent native text-selection instructions as the fallback. The copy value is exact caller text, not inferred from formatted/numbered DOM."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\"> &\n  VariantProps<typeof codeBlockVariants> & { size?: \"default\" | \"sm\" }"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"default\\\"\", \"size\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:25."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Actual passive source surface with variant and size. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockHeader",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:43."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "header",
+              "description": "Optional actual header wrapper. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockTitle",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:56."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "title",
+              "description": "Actual source div, not an automatic heading; caller supplies code heading. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockActions",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:69."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "actions",
+              "description": "Actual independent actions; direct-root placement reveals on hover/focus/coarse pointer. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockCopyButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "description": "Exact clipboard text; independent from line-numbered display children."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<typeof Button> & { value: string }"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"ghost\\\"\", \"size\": \"\\\"icon-xs\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:85."
+            }
+          ],
+          "events": [
+            {
+              "name": "onClick",
+              "type": {
+                "text": "React.MouseEventHandler<HTMLButtonElement>"
+              },
+              "description": "Called before clipboard request. defaultPrevented does not veto the wrapper request; no success/error callback is exported."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "copy",
+              "description": "Actual Button with required exact caller value and source success/promise rejection behavior. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "children",
+              "type": {
+                "text": "React.ReactNode"
+              },
+              "description": "Actual displayed code content: a plain string supports automatic line splitting when numbered, or explicit CodeBlockLine children preserve caller markup. Clipboard value is separately typed on CopyButton."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"pre\"> & {\n  wrap?: boolean\n  lineNumbers?: boolean\n  startLine?: number\n}"
+              },
+              "description": "Exact public source type, defaults {\"wrap\": \"false\", \"lineNumbers\": \"false\", \"startLine\": \"1\"}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:147."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "content",
+              "description": "Native focusable pre with source LTR/wrap/numbering behavior. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "code",
+              "description": "Actual internal code element, not an extra public export. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockLine",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"span\"> & VariantProps<typeof codeBlockLineVariants>"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:208."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "line",
+              "description": "Actual source line and optional diff/highlight variant. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            },
+            {
+              "name": "line-content",
+              "description": "Actual internal span; empty source line preserves newline. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "CodeBlockFooter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "React.ComponentProps<\"div\">"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/code-block.tsx.source:235."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "footer",
+              "description": "Actual supporting metadata or legend. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

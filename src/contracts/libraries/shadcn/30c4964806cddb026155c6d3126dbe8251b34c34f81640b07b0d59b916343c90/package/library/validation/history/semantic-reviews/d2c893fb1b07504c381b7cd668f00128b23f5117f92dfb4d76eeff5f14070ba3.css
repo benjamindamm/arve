@@ -1,0 +1,39 @@
+@import "../../tokens.css";
+
+[data-slot="skeleton"] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  block-size: var(--ui-skeleton-text-height);
+  border-radius: var(--ui-skeleton-radius);
+  background: var(--ui-color-accent);
+  animation: ui-skeleton-pulse var(--ui-skeleton-pulse-duration) ease-in-out infinite;
+}
+
+[data-slot="skeleton"].ui-skeleton-avatar {
+  inline-size: var(--ui-skeleton-avatar-size);
+  block-size: var(--ui-skeleton-avatar-size);
+  border-radius: var(--ui-skeleton-avatar-radius);
+}
+
+[data-slot="skeleton"].ui-skeleton-card {
+  block-size: var(--ui-skeleton-card-height);
+}
+
+@keyframes ui-skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: var(--ui-skeleton-pulse-minimum);
+  }
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  [data-slot="skeleton"] {
+    animation: none;
+  }
+
+}

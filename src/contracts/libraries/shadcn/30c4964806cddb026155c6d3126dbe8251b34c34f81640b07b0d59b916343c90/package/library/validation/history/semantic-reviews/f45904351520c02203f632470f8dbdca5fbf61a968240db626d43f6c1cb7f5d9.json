@@ -1,0 +1,103 @@
+{
+  "componentId": "shadcn:Command",
+  "projectionState": "Concrete open/client-registered instance; closed popup is unmounted or explicitly kept hidden by source Presence options.",
+  "sourceRule": "Command wraps cmdk1.1.1. Root value/defaultValue is the active/highlighted item string, not a completed operation; Root onValueChange is that highlight callback. In this pinned implementation that callback is emitted in the controlled Root path, so this reference supplies controlled value/onValueChange and always mirrors the returned value. This is not a cancellable request; ignoring it is not promised to veto cmdk internal transient highlight. Item onSelect(value:string) is the actual invocation callback. Input has its own value/onValueChange(search:string). Item values and keywords are trimmed; supply stable unique values rather than relying on changing text content. Default fuzzy filtering/scoring sorts matches; shouldFilter=false transfers filtering/rendering to the caller, forceMount bypasses an item/group filter, loop defaults false, disablePointerSelection controls pointer highlight and vimBindings defaults true. Disabled items are excluded from enabled navigation/activation; there is no whole-Root disabled prop. List is listbox, input is combobox with active-descendant relation, items are option (not menuitem), group headings supply source relations. Empty is presentation; this reference supplies explicit status text for no results. Shortcut is only displayed text and registers no global shortcut. CommandDialog composes the existing Base UI Dialog contract, defaults title Command Palette/description Search for a command to run and showCloseButton=false. Its title/description are registered sibling parts before DialogContent; this reference mounts that composed actor on opening and removes it after onOpenChangeComplete(false), avoiding stray closed-state sibling headings while retaining the source closing lifecycle. The reference explicitly sets showCloseButton=true, so cancel is available without a physical Escape key or executing a command. It does not register a global Meta+K listener or automatically close after onSelect; caller invocation may close it explicitly.",
+  "keyboardAndFocus": "Inline cmdk uses Up/Down, Home/End, Enter invocation and source Ctrl+n/j/p/k bindings when vimBindings=true. Typing filters and may change highlight but never executes a command. Native input focus stays in the combobox while active-descendant identifies the selected option. Inline Escape does not automatically close or clear the component. CommandDialog delegates initial/return focus, modal ownership and Escape/cancellation to the actual Dialog primitive; the reference provides an explicit external Open command palette button and closes on successful caller action. Search, highlight, action and Dialog open are independent authorities.",
+  "referenceComposition": "<div data-slot=\"command\" cmdk-root=\"\" tabindex=\"-1\"><label cmdk-label=\"\" id=\"command-input-label\" for=\"command-query\" style=\"position:absolute;inline-size:1px;block-size:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)\">Report commands</label><div data-slot=\"command-input-wrapper\"><div data-slot=\"input-group\" class=\"cn-command-input-group\"><input data-slot=\"command-input\" id=\"command-query\" aria-labelledby=\"command-input-label\" type=\"text\" role=\"combobox\" aria-autocomplete=\"list\" aria-expanded=\"true\" aria-controls=\"command-list\" aria-activedescendant=\"command-save\" aria-label=\"Report commands\"/><div data-slot=\"input-group-addon\" data-align=\"inline-start\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div></div><div data-slot=\"command-list\" role=\"listbox\" id=\"command-list\" aria-label=\"Suggestions\"><div data-slot=\"command-group\" role=\"presentation\"><div cmdk-group-heading=\"\" id=\"command-group-label\">Report actions</div><div role=\"group\" aria-labelledby=\"command-group-label\"><div data-slot=\"command-item\" role=\"option\" id=\"command-save\" aria-selected=\"true\" data-selected=\"true\" aria-disabled=\"false\" data-disabled=\"false\">Save report<span data-slot=\"command-shortcut\" aria-hidden=\"true\">⌘S</span><svg class=\"cn-command-item-indicator\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"command-item\" role=\"option\" id=\"command-export\" aria-selected=\"false\" data-selected=\"false\" aria-disabled=\"false\" data-disabled=\"false\">Export report<svg class=\"cn-command-item-indicator\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"command-item\" role=\"option\" id=\"command-unavailable\" aria-selected=\"false\" data-selected=\"false\" aria-disabled=\"true\" data-disabled=\"true\">Unavailable command<svg class=\"cn-command-item-indicator\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div></div><div data-slot=\"command-separator\" role=\"separator\"></div></div></div>",
+  "protocol": "SCXML observes actual source callback/native transactions, retaining original eventDetails. For cmdk, SOURCE_QUERY_CHANGE observes CommandInput.onValueChange and SOURCE_HIGHLIGHT observes Command.onValueChange: same public callback name, different actual part/authority. Sends never dispatch extra DOM events. CommandDialog is the composed Dialog actor and retains its full existing lifecycle/focus/deferred-unmount contract; this machine records its open authority without reimplementing that actor. Highlight or typing is never a command invocation. Source query/filter normalization, positioning and focus remain with the real primitive.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"command\"]",
+      "description": "Actual cmdk Root; value is active highlight, not execution."
+    },
+    "input-label": {
+      "kind": "element",
+      "selector": "[cmdk-label]",
+      "description": "Actual private cmdk visually hidden native label registered by Root label prop."
+    },
+    "input-wrapper": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-input-wrapper\"]",
+      "description": "Actual private search wrapper."
+    },
+    "input-group": {
+      "kind": "element",
+      "selector": ".cn-command-input-group",
+      "description": "Actual delegated InputGroup; no invented standalone search DOM."
+    },
+    "input": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-input\"]",
+      "description": "Actual native cmdk Input with virtual active descendant."
+    },
+    "list": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-list\"]",
+      "description": "Actual List role listbox."
+    },
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-group\"]",
+      "description": "Actual cmdk Group outer presentation wrapper."
+    },
+    "group-heading": {
+      "kind": "element",
+      "selector": "[cmdk-group-heading]",
+      "description": "Actual private cmdk heading, not an exported shadcn part."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-item\"]",
+      "description": "Actual command option; onSelect is action invocation."
+    },
+    "indicator": {
+      "kind": "element",
+      "selector": ".cn-command-item-indicator",
+      "description": "Actual private Check glyph; data-checked is optional caller indication, distinct from active highlight."
+    },
+    "empty": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-empty\"]",
+      "description": "Actual empty wrapper; chosen status child announces no results."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-separator\"]",
+      "description": "Actual source separator."
+    },
+    "shortcut": {
+      "kind": "element",
+      "selector": "[data-slot=\"command-shortcut\"]",
+      "description": "Displayed hint only; no keyboard registration."
+    },
+    "dialog": {
+      "kind": "controller",
+      "description": "Source composes BaseUI Dialog Root, title/description siblings and actual DialogContent; own modal API is delegated."
+    },
+    "dialog-popup": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-content\"].cn-command-dialog",
+      "description": "Actual DialogContent with caller source command-specific className."
+    },
+    "dialog-header": {
+      "kind": "element",
+      "selector": "[data-slot=\"dialog-header\"].sr-only",
+      "description": "Source visually hidden title/description siblings outside Popup; actual registered IDs supply name/help."
+    }
+  },
+  "visualStateMapping": {
+    "query": {
+      "source": "CommandInput value/onValueChange"
+    },
+    "highlight": {
+      "source": "Command value/onValueChange"
+    },
+    "invocation": {
+      "source": "CommandItem onSelect"
+    },
+    "palette": {
+      "source": "CommandDialog delegates Dialog open lifecycle"
+    }
+  }
+}

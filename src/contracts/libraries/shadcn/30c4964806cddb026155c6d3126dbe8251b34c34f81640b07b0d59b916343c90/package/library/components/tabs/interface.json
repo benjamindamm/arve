@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "2.1.0",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "tabs.tsx",
+      "declarations": [
+        {
+          "kind": "class",
+          "name": "Tabs",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "TabsPrimitive.Tab.Value"
+              },
+              "description": "Root value/defaultValue uses the primitive generic Tab.Value (including null; default implicit0). List defaults activateOnFocus=false and loopFocus=true; variant default|line only styles it. Trigger value identifies a matching Panel, disabled triggers cannot activate; keepMounted is explicit on Panels (the shown inactive-panel projection chooses it). Automatic tab/panel ID relations register in client effects and are not present in raw static server markup; the reference HTML shows the registered client state. User onValueChange(value,eventDetails) is cancellable. Automatic uncontrolled selection/fallback reasons initial/disabled/missing cannot be canceled and may yield null when no enabled tab remains. Controlled values never automatically fall back. Callback details include activationDirection. Tab focus and active panel are distinct in manual mode."
+            },
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TabsPrimitive.Root.Props"
+              },
+              "description": "Exact public source type, defaults {\"orientation\": \"\\\"horizontal\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source:7."
+            }
+          ],
+          "events": [
+            {
+              "name": "onValueChange",
+              "type": {
+                "text": "(value: TabsPrimitive.Tab.Value, eventDetails: TabsPrimitive.Root.ChangeEventDetails) => void"
+              },
+              "description": "Actual cancellable source React callback, preserving eventDetails and native event. Controlled props remain authoritative."
+            }
+          ],
+          "cssParts": [
+            {
+              "name": "root",
+              "description": "Actual raw Root; supported reference orientation is horizontal. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TabsList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TabsPrimitive.List.Props & VariantProps<typeof tabsListVariants>"
+              },
+              "description": "Exact public source type, defaults {\"variant\": \"\\\"default\\\"\"}; sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source:40."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "list",
+              "description": "Named tablist with actual default/line variant. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TabsTrigger",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TabsPrimitive.Tab.Props"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source:55."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "trigger",
+              "description": "Native focusable Tab, including focusable aria-disabled source tabs. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "TabsContent",
+          "members": [
+            {
+              "kind": "field",
+              "name": "props",
+              "type": {
+                "text": "TabsPrimitive.Panel.Props"
+              },
+              "description": "Exact public source type, defaults {}; sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source:71."
+            }
+          ],
+          "events": [],
+          "cssParts": [
+            {
+              "name": "panel",
+              "description": "Actual associated panel; inactive keepMounted projections remain hidden. Semantic adapter part; actual React selector/ownership is in component.partBindings, not a promised Shadow DOM export."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

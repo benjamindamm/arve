@@ -1,0 +1,647 @@
+{
+  "format": "shadcn-disclosure-browser-cases/1",
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "baseUI": "1.9.0",
+  "cases": 35,
+  "families": [
+    {
+      "cases": [
+        {
+          "name": "first opens",
+          "state": {
+            "focus": "First section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[\"alpha\"]"
+          },
+          "expected": {
+            "values": "[\"alpha\"]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "single mode replaces first",
+          "state": {
+            "focus": "Second section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[\"beta\"]"
+          },
+          "expected": {
+            "values": "[\"beta\"]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "expanded item toggles closed",
+          "state": {
+            "focus": "Second section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "values": "[]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "pinned1.9 ArrowDown does not rove",
+          "state": {
+            "focus": "First section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "values": "[]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Tab follows normal trigger order",
+          "state": {
+            "focus": "Second section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "values": "[]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Escape preserves expansion",
+          "state": {
+            "focus": "First section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[\"alpha\"]"
+          },
+          "expected": {
+            "values": "[\"alpha\"]"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "callback cancellation preserves value",
+          "state": {
+            "focus": "Second section",
+            "open": "false",
+            "tooltip": null,
+            "values": "[\"alpha\"]"
+          },
+          "expected": {
+            "values": "[\"alpha\"]"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "accordion"
+    },
+    {
+      "cases": [
+        {
+          "name": "Enter opens",
+          "state": {
+            "focus": "Toggle details",
+            "open": "true",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Escape does not close disclosure",
+          "state": {
+            "focus": "Toggle details",
+            "open": "true",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Space closes",
+          "state": {
+            "focus": "Toggle details",
+            "open": "false",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "callback cancellation vetoes opening",
+          "state": {
+            "focus": "Toggle details",
+            "open": "false",
+            "tooltip": null,
+            "values": "[]"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "collapsible"
+    },
+    {
+      "cases": [
+        {
+          "name": "opens labelled modal and moves focus inside",
+          "state": {
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "dialog"
+              }
+            ],
+            "focus": "",
+            "focusId": "dialog-name",
+            "insideModal": true,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Tab stays within modal",
+          "state": {
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "dialog"
+              }
+            ],
+            "focus": "",
+            "focusId": "dialog-name",
+            "insideModal": true,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "dismissal returns trigger focus",
+          "state": {
+            "dialogs": [],
+            "focus": "Open dialog",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "source callback cancellation vetoes opening",
+          "state": {
+            "dialogs": [],
+            "focus": "Open dialog",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "dialog"
+    },
+    {
+      "cases": [
+        {
+          "name": "opens labelled modal and moves focus inside",
+          "state": {
+            "confirmed": "0",
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "alertdialog"
+              }
+            ],
+            "focus": "Cancel deletion",
+            "focusId": "",
+            "insideModal": true,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "source action invokes caller but does not auto-close",
+          "state": {
+            "confirmed": "1",
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "alertdialog"
+              }
+            ],
+            "focus": "Confirm deletion",
+            "focusId": "",
+            "insideModal": true,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "outside press does not dismiss alert dialog",
+          "state": {
+            "confirmed": "1",
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "alertdialog"
+              }
+            ],
+            "focus": "alert-dialog source reference Cancel open changesOpen confirmationOutside actiontrue[]trigger-press\nDelete project?This action cannot be undone.Cancel deletionConfirm deletion1",
+            "focusId": "",
+            "insideModal": false,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "dismissal returns trigger focus",
+          "state": {
+            "dialogs": [],
+            "focus": "Open confirmation",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "source callback cancellation vetoes opening",
+          "state": {
+            "dialogs": [],
+            "focus": "Open confirmation",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "alert-dialog"
+    },
+    {
+      "cases": [
+        {
+          "name": "opens labelled modal and moves focus inside",
+          "state": {
+            "dialogs": [
+              {
+                "description": "base-ui-_r_4_",
+                "label": "base-ui-_r_3_",
+                "modal": null,
+                "role": "dialog"
+              }
+            ],
+            "focus": "Project drawerDrawer task details.Close drawer",
+            "focusId": "_r_0_",
+            "insideModal": true,
+            "open": "true"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "dismissal returns trigger focus",
+          "state": {
+            "dialogs": [],
+            "focus": "Open drawer",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "source callback cancellation vetoes opening",
+          "state": {
+            "dialogs": [],
+            "focus": "Open drawer",
+            "focusId": "base-ui-_r_1_",
+            "insideModal": false,
+            "open": "false"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "drawer"
+    },
+    {
+      "cases": [
+        {
+          "matched": true,
+          "name": "opens named popup and focuses inside",
+          "state": {
+            "focus": "Close sheet",
+            "focusId": "",
+            "insidePopup": true,
+            "open": "true",
+            "popup": [
+              {
+                "description": "base-ui-_r_4_",
+                "hidden": null,
+                "label": "base-ui-_r_3_",
+                "role": "dialog",
+                "slot": "sheet-content",
+                "text": "Project sheetSheet task details.Close sheetClose"
+              }
+            ]
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "closes and returns trigger focus",
+          "state": {
+            "focus": "Open sheet",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "callback veto preserves closed state",
+          "state": {
+            "focus": "Open sheet",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "sheet"
+    },
+    {
+      "cases": [
+        {
+          "matched": true,
+          "name": "opens named popup and focuses inside",
+          "state": {
+            "focus": "",
+            "focusId": "popover-name",
+            "insidePopup": true,
+            "open": "true",
+            "popup": [
+              {
+                "description": "lab-popover-description",
+                "hidden": null,
+                "label": "lab-popover-title",
+                "role": "dialog",
+                "slot": "popover-content",
+                "text": "Project popoverSupplementary controls.Popover nameClose popover"
+              }
+            ]
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "closes and returns trigger focus",
+          "state": {
+            "focus": "Open popover",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "callback veto preserves closed state",
+          "state": {
+            "focus": "Open popover",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "popover"
+    },
+    {
+      "cases": [
+        {
+          "matched": true,
+          "name": "focus opens source popup",
+          "state": {
+            "focus": "Alex profile",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "true",
+            "popup": [
+              {
+                "description": null,
+                "hidden": null,
+                "label": null,
+                "role": null,
+                "slot": "hover-card-content",
+                "text": "Alex writes reports."
+              }
+            ]
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Escape closes without stealing trigger focus",
+          "state": {
+            "focus": "Alex profile",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "native anchor Enter reaches normal profile target",
+          "state": {
+            "focus": "hover-card source reference Cancel open changesAlex profileAlex profile details are available as normal page text.Outside actionfalse[]trigger-focus",
+            "focusId": "",
+            "insidePopup": false,
+            "open": "false",
+            "popup": []
+          },
+          "url": "http://127.0.0.1:5175/?family=hover-card#author-profile",
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "hover-card"
+    },
+    {
+      "cases": [
+        {
+          "matched": true,
+          "name": "focus opens source popup",
+          "state": {
+            "focus": "Save",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "true",
+            "popup": [
+              {
+                "description": null,
+                "hidden": "true",
+                "label": null,
+                "role": null,
+                "slot": "tooltip-content",
+                "text": "Save the current document"
+              }
+            ],
+            "triggerName": "Save the current document"
+          },
+          "expected": {
+            "open": "true"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "Escape closes without stealing trigger focus",
+          "state": {
+            "focus": "Save",
+            "focusId": "base-ui-_r_1_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": [],
+            "triggerName": "Save the current document"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        },
+        {
+          "name": "disabled Root does not open",
+          "state": {
+            "focus": "Disabled tooltip target",
+            "focusId": "base-ui-_r_3_",
+            "insidePopup": false,
+            "open": "false",
+            "popup": [],
+            "triggerName": "Save the current document"
+          },
+          "expected": {
+            "open": "false"
+          },
+          "result": "pass"
+        }
+      ],
+      "family": "tooltip"
+    }
+  ],
+  "tooltipAccessibleReferenceUsage": {
+    "after": {
+      "hidden": "true",
+      "role": null,
+      "text": "Save the current document"
+    },
+    "before": {
+      "describedby": "save-help",
+      "help": "Saves the current document to the project.",
+      "helpVisible": true,
+      "name": "Save the current document",
+      "visualPopup": false
+    },
+    "closed": {
+      "help": "Saves the current document to the project.",
+      "popupPresent": false
+    },
+    "family": "tooltip",
+    "matched": true
+  },
+  "limitations": [
+    "Real source modal Tab containment, initial focus, dismissal/return and callback veto were checked; continuous pointer-focus/AT certification is not claimed.",
+    "Alert backdrop press is ignored as a dismissal; document.activeElement may temporarily be body. No outside interactive action was activated.",
+    "Tooltip's popup is intentionally visual-only upstream; reference adds matching trigger naming and essential persistent external help, independently tested while closed."
+  ]
+}

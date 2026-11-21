@@ -1,0 +1,125 @@
+{
+  "format": "ui-contracts-completeness/1",
+  "componentId": "shadcn:Command",
+  "componentSha256": "b0b86348dcbc701e63812b750d2f300207740a5d8f693e74481bc622c2c82c22",
+  "profile": "interactive-control/1",
+  "profileSha256": "643e8814e78bd44e5cdbe1eb88797957a4e543b71064014b8f10b08307eb556c",
+  "requirements": {
+    "IF-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "1af86378f202f0dbce0630558be916ec7ebeaf2bb8ac64d87578e113f20f5633",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fmembers%2F0"
+          }
+        }
+      ]
+    },
+    "IF-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "1af86378f202f0dbce0630558be916ec7ebeaf2bb8ac64d87578e113f20f5633",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fmodules%2F0%2Fdeclarations%2F0%2Fevents%2F0"
+          }
+        }
+      ]
+    },
+    "VIS-001": {
+      "status": "open",
+      "note": "Domain migration required: semantic tokens/component-level parts, variants and state CSS must replace source-node visual dumps."
+    },
+    "VIS-002": {
+      "status": "open",
+      "note": "Domain migration required: semantic tokens/component-level parts, variants and state CSS must replace source-node visual dumps."
+    },
+    "BEH-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "ed43c459e6f32c9036b5eba2932df549724be80e5bd388d54580d4501bf60c3d",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Ascxml%2F%40initial"
+          }
+        }
+      ]
+    },
+    "BEH-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "ed43c459e6f32c9036b5eba2932df549724be80e5bd388d54580d4501bf60c3d",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[@event=\"SOURCE_ITEM_SELECT\"]"
+          }
+        }
+      ]
+    },
+    "BEH-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "ed43c459e6f32c9036b5eba2932df549724be80e5bd388d54580d4501bf60c3d",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[contains(@event,\"ESCAPE\")]"
+          }
+        }
+      ]
+    },
+    "A11Y-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "9dc5e70c8596cae78010f853cd13e86167775677b278a884f092221479cb123c",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2F%2A[@role=\"combobox\"]"
+          }
+        }
+      ]
+    },
+    "A11Y-002": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "9dc5e70c8596cae78010f853cd13e86167775677b278a884f092221479cb123c",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Flabel[@for]"
+          }
+        }
+      ]
+    },
+    "A11Y-003": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "ed43c459e6f32c9036b5eba2932df549724be80e5bd388d54580d4501bf60c3d",
+          "selector": {
+            "kind": "xpath",
+            "value": "provenance://source/%2F%2Fs%3Atransition[@event=\"SOURCE_HIGHLIGHT\"]"
+          }
+        }
+      ]
+    },
+    "UX-001": {
+      "status": "mapped",
+      "evidence": [
+        {
+          "sha256": "098923c1da5fee2c927ca71b88ea37c8bc5d1e55e32c9573a7fe2eedfd6dfbce",
+          "selector": {
+            "kind": "json-pointer",
+            "value": "provenance://source/%2Fpurpose"
+          }
+        }
+      ]
+    }
+  }
+}

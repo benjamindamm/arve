@@ -1,0 +1,25 @@
+{
+  "purpose": "Present a structured item with supporting content and actions.",
+  "avoid": "Avoid ambiguous nested whole-row and secondary actions.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 1196:923 (Item), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Item",
+  "contentAlternative": "The item heading, metadata and action identify the content without relying on its media icon.",
+  "updatesAndDescendants": "The default Item is a native content container; useRender can choose a native link/button. ItemActions contains independently named controls. Updates are parent React rerenders; Item itself has no selection, loading or command state.",
+  "referenceDecision": "The supplied heading and download action are concrete reference children. Nested whole-item and secondary interactive targets must not create invalid nested buttons/anchors.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/item.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/item.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/item-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Item maps all ten actual exports, with native 10/12px normal padding, 8/10px extra-small padding, 10px outer gap, 4px content gap, 10px corners, 40px/6px image geometry and 20px optional glyph. The source API additionally supports sm; an explicit 8px block/12px inline reference choice fills that size without claiming an unobserved native master. Three actual variant classes and three size classes bind presentation. Native sample width and fractional height are not hardcoded; text can wrap rather than clipping necessary information. ItemGroup supplies role=list but Item itself does not automatically supply listitem semantics: the caller does so for these default div rows. A whole-row native anchor fixture remains outside the list, has a real destination and omits nested actions. Default row actions are separate Buttons. ItemSeparator remains the composed nonfocusable horizontal separator and is hidden when merely decorative.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

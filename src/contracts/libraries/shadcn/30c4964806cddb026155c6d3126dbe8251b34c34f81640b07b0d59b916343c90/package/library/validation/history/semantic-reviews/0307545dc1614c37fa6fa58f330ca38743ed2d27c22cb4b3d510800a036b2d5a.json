@@ -1,0 +1,27 @@
+{
+  "purpose": "Present an edge task surface with optional source-supported swipe and snap-point behavior.",
+  "avoid": "The depicted position does not establish modal semantics.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Drawer",
+  "sourceRule": "The wrapper defaults modal=true, swipeDirection=down and showSwipeHandle=false. Snap points are viewport fractions, pixels or px/rem strings as declared by the primitive. A snap-point change does not imply dismissal. Only a source-reported eligible swipe requests open=false; callback cancellation and controlled props still govern acceptance.",
+  "keyboardAndFocus": "The default modal drawer contains focus, supports Escape/Close and restores the trigger focus. Pointer swipes use the configured direction and primitive gesture logic; keyboard access remains available through explicit controls.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/drawer.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/drawer.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/drawer-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/drawer.md.source"
+  ],
+  "referenceDecisions": "One stable trigger/content ownership relation per shown instance; concrete labels and task children are caller supplied. Exact wrapper types retain optional handles/payloads/placement overrides. Complete describes this sufficient reference, not a full application/platform certification.",
+  "visualContract": {
+    "layoutPolicy": "The pinned Drawer wrapper owns the actual parts and primitive lifecycle; Root/Portal are controllers rather than invented DOM identities. The edge surface follows actual swipeDirection values; horizontal edge surfaces cap at the selected native 384px width, vertical edge surfaces span the available viewport. Header inset 16px/gap 2px and footer inset 20px/gap 8px retain native section metrics. Native title 16/24 (Medium, or Semi Bold for AlertDialog) and body 14/20 are intrinsic text roles, never fixed frame heights. Footer order remains DOM order and wraps. Button actions explicitly depend on Button tokens/CVA, while primitive triggers remain bare unless the caller composes Button. Backdrop 50% and viewport clearance are explicit reference decisions; static examples do not measure live dimming. Close and Escape follow the actual primitive callback and host authority; no CSS rule invents state transitions. The pinned Drawer motion utilities bind the documented live primitive swipe, measured height, snap offset and nested-stack variables. These are real runtime inputs, not DTCG observations. Upstream 450ms easing,400ms release scalar,16px stack peek,0.05 scale step and 96px vertical clearance are explicit source-code decisions. Reduced motion disables transitions without disabling gestures or closing. All lifecycle attributes remain primitive output, never new public state props.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

@@ -1,0 +1,1281 @@
+{
+  "format": "shadcn-semantic-browser-review/1",
+  "scope": "Five source wrappers consuming their leading semantic CSS through normal ?family entry points. Native actions; read-only computed style measurements. Bounded browser evidence, no universal conformance or pixel equality.",
+  "records": {
+    "accordion": {
+      "collapsed": "- main\n  - heading \"accordion semantic source adapter\" [level=1]\n  - checkbox \"Dark theme\" [ref=e1]\n  - heading \"First section\" [level=3]\n    - button \"First section\" [collapsed] [ref=e2]\n  - heading \"Disabled section\" [level=3]\n    - button \"Disabled section\" [disabled] [collapsed] [ref=e3]\n  - heading \"القسم الأول\" [level=3]\n    - button \"القسم الأول\" [expanded] [ref=e4]\n  - region \"القسم الأول\"\n  - status \"Expanded items\"",
+      "family": "accordion",
+      "metrics": {
+        "changed": false,
+        "page": 384,
+        "settled": false,
+        "value": {
+          "fonts": [
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "500"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "600"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "700"
+            },
+            {
+              "family": "Noto Naskh Arabic",
+              "status": "loaded",
+              "weight": "400"
+            }
+          ],
+          "triggers": [
+            {
+              "disabled": false,
+              "expanded": "true",
+              "focusVisible": true,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "gap": "8px",
+              "height": 40,
+              "name": "First section",
+              "outline": "solid",
+              "padding": "10px 0px",
+              "visibleIcons": [
+                {
+                  "height": 16,
+                  "width": 16
+                }
+              ],
+              "width": 900
+            },
+            {
+              "disabled": true,
+              "expanded": "false",
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "gap": "8px",
+              "height": 40,
+              "name": "Disabled section",
+              "outline": "none",
+              "padding": "10px 0px",
+              "visibleIcons": [
+                {
+                  "height": 16,
+                  "width": 16
+                }
+              ],
+              "width": 900
+            },
+            {
+              "disabled": false,
+              "expanded": "true",
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "gap": "8px",
+              "height": 40,
+              "name": "القسم الأول",
+              "outline": "none",
+              "padding": "10px 0px",
+              "visibleIcons": [
+                {
+                  "height": 16,
+                  "width": 16
+                }
+              ],
+              "width": 900
+            }
+          ]
+        }
+      },
+      "reopened": "- main\n  - heading \"accordion semantic source adapter\" [level=1]\n  - checkbox \"Dark theme\" [ref=e1]\n  - heading \"First section\" [level=3]\n    - button \"First section\" [expanded] [ref=e2]\n  - region \"First section\"\n    - paragraph\n  - heading \"Disabled section\" [level=3]\n    - button \"Disabled section\" [disabled] [collapsed] [ref=e3]\n  - heading \"القسم الأول\" [level=3]\n    - button \"القسم الأول\" [expanded] [ref=e4]\n  - region \"القسم الأول\"\n  - status \"Expanded items\""
+    },
+    "switch": {
+      "family": "switch",
+      "metrics": {
+        "changed": false,
+        "page": 385,
+        "settled": false,
+        "value": [
+          {
+            "attributes": [
+              [
+                "role",
+                "switch"
+              ],
+              [
+                "tabindex",
+                "0"
+              ],
+              [
+                "id",
+                "base-ui-_r_0_"
+              ],
+              [
+                "aria-checked",
+                "true"
+              ],
+              [
+                "aria-labelledby",
+                "updates-label"
+              ],
+              [
+                "data-slot",
+                "switch"
+              ],
+              [
+                "data-size",
+                "default"
+              ],
+              [
+                "class",
+                "cn-switch peer group/switch relative inline-flex items-center transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 data-disabled:cursor-not-allowed data-disabled:opacity-50"
+              ],
+              [
+                "data-checked",
+                ""
+              ]
+            ],
+            "checked": "true",
+            "focusVisible": true,
+            "height": 18,
+            "name": "Auto updates",
+            "outline": "solid",
+            "thumb": {
+              "height": 16,
+              "transform": "matrix(1, 0, 0, 1, 14, 0)",
+              "width": 16
+            },
+            "width": 32
+          },
+          {
+            "attributes": [
+              [
+                "data-checked",
+                ""
+              ],
+              [
+                "role",
+                "switch"
+              ],
+              [
+                "tabindex",
+                "0"
+              ],
+              [
+                "id",
+                "base-ui-_r_3_"
+              ],
+              [
+                "aria-checked",
+                "true"
+              ],
+              [
+                "data-slot",
+                "switch"
+              ],
+              [
+                "data-size",
+                "sm"
+              ],
+              [
+                "aria-label",
+                "Small updates"
+              ],
+              [
+                "class",
+                "cn-switch peer group/switch relative inline-flex items-center transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 data-disabled:cursor-not-allowed data-disabled:opacity-50"
+              ]
+            ],
+            "checked": "true",
+            "focusVisible": false,
+            "height": 14,
+            "name": "Small updates",
+            "outline": "none",
+            "thumb": {
+              "height": 12,
+              "transform": "matrix(1, 0, 0, 1, 10, 0)",
+              "width": 12
+            },
+            "width": 24
+          },
+          {
+            "attributes": [
+              [
+                "data-checked",
+                ""
+              ],
+              [
+                "role",
+                "switch"
+              ],
+              [
+                "tabindex",
+                "0"
+              ],
+              [
+                "id",
+                "base-ui-_r_6_"
+              ],
+              [
+                "aria-checked",
+                "true"
+              ],
+              [
+                "data-slot",
+                "switch"
+              ],
+              [
+                "data-size",
+                "default"
+              ],
+              [
+                "aria-label",
+                "RTL updates"
+              ],
+              [
+                "dir",
+                "rtl"
+              ],
+              [
+                "class",
+                "cn-switch peer group/switch relative inline-flex items-center transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 data-disabled:cursor-not-allowed data-disabled:opacity-50"
+              ]
+            ],
+            "checked": "true",
+            "focusVisible": false,
+            "height": 18,
+            "name": "RTL updates",
+            "outline": "none",
+            "thumb": {
+              "height": 16,
+              "transform": "matrix(1, 0, 0, 1, -14, 0)",
+              "width": 16
+            },
+            "width": 32
+          },
+          {
+            "attributes": [
+              [
+                "data-checked",
+                ""
+              ],
+              [
+                "role",
+                "switch"
+              ],
+              [
+                "tabindex",
+                "0"
+              ],
+              [
+                "id",
+                "base-ui-_r_9_"
+              ],
+              [
+                "aria-checked",
+                "true"
+              ],
+              [
+                "data-slot",
+                "switch"
+              ],
+              [
+                "data-size",
+                "sm"
+              ],
+              [
+                "aria-label",
+                "Small RTL updates"
+              ],
+              [
+                "dir",
+                "rtl"
+              ],
+              [
+                "class",
+                "cn-switch peer group/switch relative inline-flex items-center transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 data-disabled:cursor-not-allowed data-disabled:opacity-50"
+              ]
+            ],
+            "checked": "true",
+            "focusVisible": false,
+            "height": 14,
+            "name": "Small RTL updates",
+            "outline": "none",
+            "thumb": {
+              "height": 12,
+              "transform": "matrix(1, 0, 0, 1, -10, 0)",
+              "width": 12
+            },
+            "width": 24
+          },
+          {
+            "attributes": [
+              [
+                "data-disabled",
+                ""
+              ],
+              [
+                "data-unchecked",
+                ""
+              ],
+              [
+                "role",
+                "switch"
+              ],
+              [
+                "tabindex",
+                "-1"
+              ],
+              [
+                "aria-disabled",
+                "true"
+              ],
+              [
+                "id",
+                "base-ui-_r_c_"
+              ],
+              [
+                "aria-checked",
+                "false"
+              ],
+              [
+                "data-slot",
+                "switch"
+              ],
+              [
+                "data-size",
+                "default"
+              ],
+              [
+                "aria-label",
+                "Disabled updates"
+              ],
+              [
+                "class",
+                "cn-switch peer group/switch relative inline-flex items-center transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 data-disabled:cursor-not-allowed data-disabled:opacity-50"
+              ]
+            ],
+            "checked": "false",
+            "focusVisible": false,
+            "height": 18,
+            "name": "Disabled updates",
+            "outline": "none",
+            "thumb": {
+              "height": 16,
+              "transform": "none",
+              "width": 16
+            },
+            "width": 32
+          }
+        ]
+      },
+      "off": "- main\n  - heading \"switch semantic source adapter\" [level=1]\n  - checkbox \"Dark theme\" [ref=e1]\n  - switch \"Auto updates\" [ref=e2]\n  - switch \"Small updates\" [ref=e3]\n  - switch \"RTL updates\" [ref=e4]\n  - switch \"Small RTL updates\" [ref=e5]\n  - switch \"Disabled updates\" [disabled] [ref=e6]\n  - status \"Switch value\"",
+      "on": "- main\n  - heading \"switch semantic source adapter\" [level=1]\n  - checkbox \"Dark theme\" [ref=e1]\n  - switch \"Auto updates\" [ref=e2]\n  - switch \"Small updates\" [ref=e3]\n  - switch \"RTL updates\" [ref=e4]\n  - switch \"Small RTL updates\" [ref=e5]\n  - switch \"Disabled updates\" [disabled] [ref=e6]\n  - status \"Switch value\""
+    },
+    "checkbox": {
+      "afterMixed": {
+        "changed": false,
+        "page": 386,
+        "settled": false,
+        "value": {
+          "checked": "true",
+          "mixed": false
+        }
+      },
+      "before": {
+        "changed": false,
+        "page": 386,
+        "settled": false,
+        "value": [
+          {
+            "border": "rgb(229, 229, 229)",
+            "checked": "false",
+            "disabled": null,
+            "height": 16,
+            "indicator": null,
+            "invalid": null,
+            "name": "Notifications",
+            "width": 16
+          },
+          {
+            "border": "rgb(23, 23, 23)",
+            "checked": "mixed",
+            "disabled": null,
+            "height": 16,
+            "indicator": {
+              "height": 14,
+              "minusWidth": "7px",
+              "position": "relative",
+              "width": 14
+            },
+            "invalid": null,
+            "name": "Mixed preference",
+            "width": 16
+          },
+          {
+            "border": "rgb(229, 229, 229)",
+            "checked": "false",
+            "disabled": "true",
+            "height": 16,
+            "indicator": null,
+            "invalid": null,
+            "name": "Disabled preference",
+            "width": 16
+          },
+          {
+            "border": "rgb(231, 0, 11)",
+            "checked": "false",
+            "disabled": null,
+            "height": 16,
+            "indicator": null,
+            "invalid": "true",
+            "name": "Invalid preference",
+            "width": 16
+          }
+        ]
+      },
+      "checked": {
+        "changed": false,
+        "page": 386,
+        "settled": false,
+        "value": {
+          "checked": "true",
+          "focusVisible": true,
+          "outline": "solid",
+          "value": "true"
+        }
+      },
+      "family": "checkbox"
+    },
+    "inputBeforeLegacyFix": {
+      "family": "input",
+      "metrics": {
+        "changed": false,
+        "page": 387,
+        "settled": false,
+        "value": [
+          {
+            "border": "1px",
+            "borderColor": "rgb(115, 115, 115)",
+            "disabled": false,
+            "focusVisible": true,
+            "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+            "fontSize": "14px",
+            "height": 38,
+            "invalid": null,
+            "name": "Project name",
+            "outline": "none",
+            "padding": "8px",
+            "parentWidth": 400,
+            "placeholder": "rgb(115, 115, 115)",
+            "radius": "4px",
+            "value": "Semantic project",
+            "width": 400
+          },
+          {
+            "border": "1px",
+            "borderColor": "rgb(136, 136, 136)",
+            "disabled": true,
+            "focusVisible": false,
+            "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+            "fontSize": "14px",
+            "height": 38,
+            "invalid": null,
+            "name": "Disabled name",
+            "outline": "none",
+            "padding": "8px",
+            "parentWidth": 948,
+            "placeholder": "rgb(10, 10, 10)",
+            "radius": "4px",
+            "value": "Locked",
+            "width": 900
+          },
+          {
+            "border": "2px",
+            "borderColor": "rgb(231, 0, 11)",
+            "disabled": false,
+            "focusVisible": false,
+            "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+            "fontSize": "14px",
+            "height": 40,
+            "invalid": "true",
+            "name": "Invalid name",
+            "outline": "none",
+            "padding": "8px",
+            "parentWidth": 948,
+            "placeholder": "rgb(10, 10, 10)",
+            "radius": "4px",
+            "value": "",
+            "width": 900
+          },
+          {
+            "border": "1px",
+            "borderColor": "rgb(136, 136, 136)",
+            "disabled": false,
+            "focusVisible": false,
+            "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+            "fontSize": "14px",
+            "height": 38,
+            "invalid": null,
+            "name": "Rounded name",
+            "outline": "none",
+            "padding": "8px",
+            "parentWidth": 948,
+            "placeholder": "rgb(10, 10, 10)",
+            "radius": "9999px",
+            "value": "",
+            "width": 900
+          }
+        ]
+      },
+      "snapshot": "- main\n  - heading \"input semantic source adapter\" [level=1]\n  - checkbox \"Dark theme\" [ref=e1]\n  - LabelText\n  - textbox \"Project name\" [ref=e2]: \"Semantic project\"\n  - paragraph\n  - textbox \"Disabled name\" [disabled] [ref=e3]: \"Locked\"\n  - textbox \"Invalid name\" [ref=e4]\n  - paragraph\n  - textbox \"Rounded name\" [ref=e5]\n  - status \"Text value\""
+    },
+    "button": {
+      "active": {
+        "changed": false,
+        "page": 388,
+        "settled": false,
+        "value": {
+          "buttons": [
+            {
+              "height": 24,
+              "padding": "0px 8px",
+              "size": "cn-button-size-xs",
+              "width": 74.484375
+            },
+            {
+              "height": 28,
+              "padding": "0px 10px",
+              "size": "cn-button-size-sm",
+              "width": 92.53125
+            },
+            {
+              "height": 32,
+              "padding": "0px 10px",
+              "size": "cn-button-size-default",
+              "width": 119.375
+            },
+            {
+              "height": 36,
+              "padding": "0px 10px",
+              "size": "cn-button-size-lg",
+              "width": 84.7578125
+            },
+            {
+              "height": 24,
+              "icon": 16,
+              "padding": "0px",
+              "size": "cn-button-size-icon-xs",
+              "width": 24
+            },
+            {
+              "height": 28,
+              "icon": 16,
+              "padding": "0px",
+              "size": "cn-button-size-icon-sm",
+              "width": 28
+            },
+            {
+              "height": 32,
+              "icon": 16,
+              "padding": "0px",
+              "size": "cn-button-size-icon",
+              "width": 32
+            },
+            {
+              "height": 36,
+              "icon": 16,
+              "padding": "0px",
+              "size": "cn-button-size-icon-lg",
+              "width": 36
+            }
+          ],
+          "count": "1",
+          "focusVisible": true,
+          "light": [
+            {
+              "background": "rgb(23, 23, 23)",
+              "color": "rgb(250, 250, 250)",
+              "variant": "default"
+            },
+            {
+              "background": "rgb(255, 255, 255)",
+              "color": "rgb(10, 10, 10)",
+              "variant": "outline"
+            },
+            {
+              "background": "rgb(245, 245, 245)",
+              "color": "rgb(10, 10, 10)",
+              "variant": "secondary"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(10, 10, 10)",
+              "variant": "ghost"
+            },
+            {
+              "background": "rgba(231, 0, 11, 0.1)",
+              "color": "rgb(231, 0, 11)",
+              "variant": "destructive"
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "color": "rgb(23, 23, 23)",
+              "variant": "link"
+            }
+          ],
+          "outline": "solid"
+        }
+      },
+      "dark": {
+        "changed": false,
+        "page": 388,
+        "settled": false,
+        "value": [
+          {
+            "background": "rgb(229, 229, 229)",
+            "color": "rgb(23, 23, 23)",
+            "variant": "default"
+          },
+          {
+            "background": "rgb(10, 10, 10)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "outline"
+          },
+          {
+            "background": "rgb(245, 245, 245)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "secondary"
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "ghost"
+          },
+          {
+            "background": "rgba(231, 0, 11, 0.1)",
+            "color": "rgb(231, 0, 11)",
+            "variant": "destructive"
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(229, 229, 229)",
+            "variant": "link"
+          }
+        ]
+      },
+      "family": "button"
+    },
+    "buttonDarkAfterAliasRepair": {
+      "changed": false,
+      "page": 388,
+      "settled": false,
+      "value": {
+        "colors": [
+          {
+            "background": "rgb(229, 229, 229)",
+            "color": "rgb(23, 23, 23)",
+            "variant": "default"
+          },
+          {
+            "background": "rgb(10, 10, 10)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "outline"
+          },
+          {
+            "background": "rgb(38, 38, 38)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "secondary"
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(250, 250, 250)",
+            "variant": "ghost"
+          },
+          {
+            "background": "rgba(255, 127, 110, 0.2)",
+            "color": "rgb(255, 127, 110)",
+            "variant": "destructive"
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(229, 229, 229)",
+            "variant": "link"
+          }
+        ],
+        "theme": "dark"
+      }
+    },
+    "finalControls": {
+      "accordion": {
+        "changed": false,
+        "page": 384,
+        "settled": false,
+        "value": {
+          "controls": [
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": null,
+              "disabled": false,
+              "expanded": "true",
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 40,
+              "icons": 1,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "First section",
+              "padding": "10px 0px",
+              "radius": "10px",
+              "slot": "accordion-trigger",
+              "width": 912
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": null,
+              "disabled": true,
+              "expanded": "false",
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 40,
+              "icons": 1,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Disabled section",
+              "padding": "10px 0px",
+              "radius": "10px",
+              "slot": "accordion-trigger",
+              "width": 912
+            },
+            {
+              "background": "rgba(0, 0, 0, 0)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": null,
+              "disabled": false,
+              "expanded": "true",
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 40,
+              "icons": 1,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "القسم الأول",
+              "padding": "10px 0px",
+              "radius": "10px",
+              "slot": "accordion-trigger",
+              "width": 912
+            }
+          ],
+          "family": "accordion",
+          "fonts": [
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "500"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "600"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "700"
+            },
+            {
+              "family": "Noto Naskh Arabic",
+              "status": "loaded",
+              "weight": "400"
+            }
+          ]
+        }
+      },
+      "checkbox": {
+        "changed": false,
+        "page": 390,
+        "settled": false,
+        "value": {
+          "controls": [
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(229, 229, 229)",
+              "checked": "false",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 16,
+              "icons": 0,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Notifications",
+              "padding": "0px",
+              "radius": "4px",
+              "slot": "checkbox",
+              "width": 16
+            },
+            {
+              "background": "rgb(23, 23, 23)",
+              "border": "1px",
+              "borderColor": "rgb(23, 23, 23)",
+              "checked": "mixed",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 16,
+              "icons": 1,
+              "indicator": {
+                "height": 14,
+                "minusWidth": "7px",
+                "position": "relative",
+                "transform": "none",
+                "width": 14
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Mixed preference",
+              "padding": "0px",
+              "radius": "4px",
+              "slot": "checkbox",
+              "width": 16
+            },
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(229, 229, 229)",
+              "checked": "false",
+              "disabled": true,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 16,
+              "icons": 0,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Disabled preference",
+              "padding": "0px",
+              "radius": "4px",
+              "slot": "checkbox",
+              "width": 16
+            },
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(231, 0, 11)",
+              "checked": "false",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 16,
+              "icons": 0,
+              "indicator": null,
+              "invalid": "true",
+              "lineHeight": "20px",
+              "name": "Invalid preference",
+              "padding": "0px",
+              "radius": "4px",
+              "slot": "checkbox",
+              "width": 16
+            }
+          ],
+          "family": "checkbox",
+          "fonts": [
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "500"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "600"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "700"
+            },
+            {
+              "family": "Noto Naskh Arabic",
+              "status": "unloaded",
+              "weight": "400"
+            }
+          ]
+        }
+      },
+      "input": {
+        "changed": false,
+        "page": 387,
+        "settled": false,
+        "value": {
+          "controls": [
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(229, 229, 229)",
+              "checked": null,
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 32,
+              "icons": 0,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "",
+              "padding": "4px 10px",
+              "radius": "10px",
+              "slot": "input",
+              "width": 400
+            },
+            {
+              "background": "rgba(229, 229, 229, 0.5)",
+              "border": "1px",
+              "borderColor": "rgb(229, 229, 229)",
+              "checked": null,
+              "disabled": true,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 32,
+              "icons": 0,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Disabled name",
+              "padding": "4px 10px",
+              "radius": "10px",
+              "slot": "input",
+              "width": 912
+            },
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(231, 0, 11)",
+              "checked": null,
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 32,
+              "icons": 0,
+              "indicator": null,
+              "invalid": "true",
+              "lineHeight": "20px",
+              "name": "Invalid name",
+              "padding": "4px 10px",
+              "radius": "10px",
+              "slot": "input",
+              "width": 912
+            },
+            {
+              "background": "rgb(255, 255, 255)",
+              "border": "1px",
+              "borderColor": "rgb(229, 229, 229)",
+              "checked": null,
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 32,
+              "icons": 0,
+              "indicator": null,
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Rounded name",
+              "padding": "4px 10px",
+              "radius": "9999px",
+              "slot": "input",
+              "width": 912
+            }
+          ],
+          "family": "input",
+          "fonts": [
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "500"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "600"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "700"
+            },
+            {
+              "family": "Noto Naskh Arabic",
+              "status": "unloaded",
+              "weight": "400"
+            }
+          ]
+        }
+      },
+      "switch": {
+        "changed": false,
+        "page": 389,
+        "settled": false,
+        "value": {
+          "controls": [
+            {
+              "background": "rgb(229, 229, 229)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": "false",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 18,
+              "icons": 0,
+              "indicator": {
+                "height": 16,
+                "minusWidth": "auto",
+                "position": "static",
+                "transform": "none",
+                "width": 16
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Auto updates",
+              "padding": "1px",
+              "radius": "9999px",
+              "slot": "switch",
+              "width": 32
+            },
+            {
+              "background": "rgb(23, 23, 23)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": "true",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 14,
+              "icons": 0,
+              "indicator": {
+                "height": 12,
+                "minusWidth": "auto",
+                "position": "static",
+                "transform": "matrix(1, 0, 0, 1, 10, 0)",
+                "width": 12
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Small updates",
+              "padding": "1px",
+              "radius": "9999px",
+              "slot": "switch",
+              "width": 24
+            },
+            {
+              "background": "rgb(23, 23, 23)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": "true",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 18,
+              "icons": 0,
+              "indicator": {
+                "height": 16,
+                "minusWidth": "auto",
+                "position": "static",
+                "transform": "matrix(1, 0, 0, 1, -14, 0)",
+                "width": 16
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "RTL updates",
+              "padding": "1px",
+              "radius": "9999px",
+              "slot": "switch",
+              "width": 32
+            },
+            {
+              "background": "rgb(23, 23, 23)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": "true",
+              "disabled": false,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 14,
+              "icons": 0,
+              "indicator": {
+                "height": 12,
+                "minusWidth": "auto",
+                "position": "static",
+                "transform": "matrix(1, 0, 0, 1, -10, 0)",
+                "width": 12
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Small RTL updates",
+              "padding": "1px",
+              "radius": "9999px",
+              "slot": "switch",
+              "width": 24
+            },
+            {
+              "background": "rgb(229, 229, 229)",
+              "border": "0px",
+              "borderColor": "rgb(10, 10, 10)",
+              "checked": "false",
+              "disabled": true,
+              "expanded": null,
+              "focusVisible": false,
+              "font": "Inter, \"Noto Naskh Arabic\", sans-serif",
+              "fontSize": "14px",
+              "height": 18,
+              "icons": 0,
+              "indicator": {
+                "height": 16,
+                "minusWidth": "auto",
+                "position": "static",
+                "transform": "none",
+                "width": 16
+              },
+              "invalid": null,
+              "lineHeight": "20px",
+              "name": "Disabled updates",
+              "padding": "1px",
+              "radius": "9999px",
+              "slot": "switch",
+              "width": 32
+            }
+          ],
+          "family": "switch",
+          "fonts": [
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "400"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "500"
+            },
+            {
+              "family": "Inter",
+              "status": "unloaded",
+              "weight": "600"
+            },
+            {
+              "family": "Inter",
+              "status": "loaded",
+              "weight": "700"
+            },
+            {
+              "family": "Noto Naskh Arabic",
+              "status": "unloaded",
+              "weight": "400"
+            }
+          ]
+        }
+      }
+    },
+    "responsive": {
+      "accordion": {
+        "changed": false,
+        "page": 384,
+        "settled": false,
+        "value": {
+          "controlWidths": [
+            272,
+            272,
+            272
+          ],
+          "scrollWidth": 320,
+          "viewport": 320
+        }
+      },
+      "input": {
+        "changed": false,
+        "page": 387,
+        "settled": false,
+        "value": {
+          "controlWidths": [
+            272,
+            272,
+            272,
+            272
+          ],
+          "scrollWidth": 320,
+          "viewport": 320
+        }
+      }
+    }
+  },
+  "findingsResolved": [
+    "Accordion actual wrapper renders down/up icon pair; semantic source adapter selects one by expanded state.",
+    "Explicit font inheritance on native trigger and shipped Inter/Arabic assets.",
+    "Small RTL switch requires negative size-specific travel.",
+    "Legacy behavioral lab styling scoped away from semantic adapters.",
+    "Component CSS aliases rebound inside each theme boundary to avoid resolving light values at root."
+  ]
+}

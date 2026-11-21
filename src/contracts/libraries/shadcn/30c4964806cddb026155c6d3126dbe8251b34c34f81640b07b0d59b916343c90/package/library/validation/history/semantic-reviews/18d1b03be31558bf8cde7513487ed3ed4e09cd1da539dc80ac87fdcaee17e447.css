@@ -1,0 +1,81 @@
+@import "../../tokens.css";
+
+[data-slot="message-group"] {
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: var(--ui-message-group-gap);
+}
+
+[data-slot="message"] {
+  position: relative;
+  display: flex;
+  inline-size: 100%;
+  min-inline-size: 0;
+  gap: var(--ui-message-row-gap);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  color: var(--ui-color-foreground);
+}
+
+[data-slot="message"][data-align="end"] {
+  flex-direction: row-reverse;
+}
+
+[data-slot="message-avatar"] {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  inline-size: var(--ui-message-avatar-size);
+  block-size: var(--ui-message-avatar-size);
+  overflow: hidden;
+  border-radius: var(--ui-message-avatar-radius);
+  background: var(--ui-color-muted);
+  color: var(--ui-color-foreground);
+}
+
+[data-slot="message-content"] {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-inline-size: 0;
+  gap: var(--ui-message-content-gap);
+  overflow-wrap: anywhere;
+}
+
+[data-slot="message-content"]>p {
+  margin: 0;
+}
+
+[data-slot="message-header"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ui-message-content-gap);
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  padding-inline: var(--ui-message-metadata-inset);
+  color: var(--ui-color-muted-foreground);
+}
+
+[data-slot="message-footer"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ui-message-row-gap);
+  min-block-size: var(--ui-message-footer-height);
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  padding-inline: var(--ui-message-metadata-inset);
+  color: var(--ui-color-muted-foreground);
+  font-size: var(--ui-message-footer-size);
+  line-height: var(--ui-message-footer-line);
+}
+
+[data-slot="message"][data-align="end"] [data-slot="message-header"],
+[data-slot="message"][data-align="end"] [data-slot="message-footer"] {
+  justify-content: flex-end;
+}

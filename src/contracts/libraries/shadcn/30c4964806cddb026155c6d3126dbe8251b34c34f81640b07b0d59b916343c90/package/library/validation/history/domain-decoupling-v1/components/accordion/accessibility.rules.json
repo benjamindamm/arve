@@ -1,0 +1,11 @@
+{
+  "componentId": "shadcn:Accordion",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button id=\"accordion-trigger-alpha\" type=\"button\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">First section</button></h3><section id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><p>First panel content</p></section></div></div>",
+  "keyboardAndFocus": "Base UI 1.9 uses normal Tab order and native Enter/Space on each trigger. Its orientation/loopFocus props are deprecated and no longer implement roving/arrow focus. Arrow/Home/End are not invented as accordion selection commands.",
+  "sourceRule": "multiple=false permits at most one expanded item; pressing that item closes it. multiple=true toggles items independently. Disabled root/items suppress changes. The callback candidate may be canceled; controlled value stays prop-authoritative.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups."
+}

@@ -1,0 +1,25 @@
+{
+  "purpose": "Group a related heading, content and optional actions.",
+  "avoid": "Do not create nested ambiguous clickable surfaces.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Card",
+  "contentAlternative": "A text heading, description and body identify the group; imagery or card color is not its sole meaning.",
+  "updatesAndDescendants": "Card and its slots are native div wrappers. CardTitle does not automatically become a heading, and the whole card is not inherently clickable. Parent content updates rerender normally; descendants own their actions.",
+  "referenceDecision": "The h2 is deliberately supplied as CardTitle children in this reference. Consumers choose heading level from document hierarchy.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/card.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/card.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/card-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Card keeps intrinsic content height, fluid width,16px section spacing/insets and14px native corners. Native header/footer sample widths are not fixed runtime dimensions. The seven actual exported wrappers own distinct semantic parts. Native typography varies across specimens; the reference selects the observed16/24px medium title and14/20px body, with native headings explicitly supplied by the caller. The public sm size has no identified native sm master:12px section gap and14/20px title are an explicit compact reference choice, not a fabricated observation. RTL uses logical layout; footer actions wrap. No Card-specific activation event is invented.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

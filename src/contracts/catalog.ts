@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
+import shadcnSemantic from './libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/contracts.json'
 import shadcnComplete from './libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/contracts.json'
 import shadcnPortable from './libraries/shadcn/65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26/contracts.json'
 import shadcnSnapshot from './libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed/contracts.json'
@@ -17,15 +18,17 @@ type ContractExport = {
   revision: string
   origin: string
   artifacts?: Record<string, string>
+  styleAssets?: {path:string;sha256:string;kind:'stylesheet'|'font'|'image'|'asset'}[]
   status: string
   sources: Record<string, string>
   files: Record<string, { path: string; sha256: string; content: string }>
   deferredFiles?: boolean
 }
 
-const catalog = [...shadcnComplete, ...shadcnPortable, ...shadcnSnapshot, button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious] as unknown as ContractExport[]
+const catalog = [...shadcnSemantic, ...shadcnComplete, ...shadcnPortable, ...shadcnSnapshot, button, inputContract, checkboxContract, switchContract, inputPrevious, checkboxPrevious] as unknown as ContractExport[]
 const hydrated = new Map<string, ContractExport>()
 const artifactRoots: Record<string,string> = {
+  '30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90': path.join(process.cwd(),'src/contracts/libraries/shadcn/30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90/package/library'),
   'bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91': path.join(process.cwd(),'src/contracts/libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/package/library'),
   '65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26': path.join(process.cwd(),'src/contracts/libraries/shadcn/65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26'),
   '5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed': path.join(process.cwd(),'src/contracts/libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed'),

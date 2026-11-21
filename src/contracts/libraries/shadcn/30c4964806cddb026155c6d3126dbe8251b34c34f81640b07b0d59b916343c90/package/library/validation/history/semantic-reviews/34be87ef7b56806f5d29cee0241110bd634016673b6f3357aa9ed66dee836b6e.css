@@ -1,0 +1,41 @@
+@import "../../tokens.css";
+
+@import url(../dropdown-menu/layout.css);
+
+[data-slot="menubar"] {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-menubar-gap);
+  min-block-size: var(--ui-menubar-height);
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  padding: var(--ui-menubar-inset);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-menubar-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+}
+
+[data-slot="menubar-trigger"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 24px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-weight: var(--ui-font-weight-medium);
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  outline: none;
+}
+
+[data-slot="menubar-trigger"][data-popup-open],
+[data-slot="menubar-trigger"]:focus-visible {
+  background: var(--ui-color-muted);
+}

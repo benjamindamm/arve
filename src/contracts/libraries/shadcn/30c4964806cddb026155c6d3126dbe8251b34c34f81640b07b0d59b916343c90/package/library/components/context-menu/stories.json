@@ -1,0 +1,137 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:ContextMenu",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "referenceState": "open"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "referenceState": "closed"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "inset-label",
+      "name": "Inset label",
+      "inputs": {
+        "referenceState": "inset-label"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-inset=\"true\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "highlighted",
+      "name": "Highlighted",
+      "inputs": {
+        "referenceState": "highlighted"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\" data-highlighted=\"\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "highlighted-checkbox",
+      "name": "Highlighted checkbox",
+      "inputs": {
+        "referenceState": "highlighted-checkbox"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\" data-highlighted=\"\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "highlighted-radio",
+      "name": "Highlighted radio",
+      "inputs": {
+        "referenceState": "highlighted-radio"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\" data-highlighted=\"\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "checked-comfortable",
+      "name": "Checked comfortable",
+      "inputs": {
+        "referenceState": "checked-comfortable"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "submenu-open",
+      "name": "Submenu open",
+      "inputs": {
+        "referenceState": "submenu-open"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"true\" aria-controls=\"context-menu-sub-popup\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div><div class=\"cn-menu-target\" data-slot=\"context-menu-sub-content\" id=\"context-menu-sub-popup\" role=\"menu\" aria-label=\"Export formats\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">PDF export</div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "destructive",
+      "name": "Destructive",
+      "inputs": {
+        "referenceState": "destructive"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"ltr\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"destructive\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"false\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    },
+    {
+      "id": "rtl-submenu",
+      "name": "Rtl submenu",
+      "inputs": {
+        "referenceState": "rtl-submenu"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<section data-slot=\"context-menu-trigger\" aria-label=\"Report preview\"><h2>Report preview</h2><p>Right click for context actions; the visible Report actions button provides a keyboard equivalent.</p></section><button type=\"button\" data-part=\"context-actions\" data-slot=\"dropdown-menu-trigger\" aria-haspopup=\"menu\" aria-expanded=\"false\">Report actions</button><div class=\"cn-menu-target cn-context-menu-content\" data-slot=\"context-menu-content\" role=\"menu\" id=\"context-menu-popup\" aria-label=\"Report actions\" dir=\"rtl\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-group\" role=\"group\" aria-labelledby=\"context-menu-label\"><div data-slot=\"context-menu-label\" id=\"context-menu-label\" data-menu-label>Report</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">Save report<span data-slot=\"context-menu-shortcut\" data-menu-shortcut aria-hidden=\"true\">⌘S</span></div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" aria-disabled=\"true\">Unavailable command</div><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"-1\" data-variant=\"default\">Delete report</div></div><div data-slot=\"context-menu-separator\" role=\"separator\"></div><div data-slot=\"context-menu-checkbox-item\" role=\"menuitemcheckbox\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Show grid</div><div data-slot=\"context-menu-radio-group\" role=\"group\" aria-label=\"Report view\"><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"true\"><span class=\"cn-context-menu-item-indicator\"><span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m5 12 4 4 10-10\" fill=\"none\" stroke=\"currentColor\"/></svg></span></span>Compact</div><div data-slot=\"context-menu-radio-item\" role=\"menuitemradio\" tabindex=\"-1\" aria-checked=\"false\"><span class=\"cn-context-menu-item-indicator\"></span>Comfortable</div></div><div data-slot=\"context-menu-sub-trigger\" role=\"menuitem\" tabindex=\"-1\" aria-haspopup=\"menu\" aria-expanded=\"true\" aria-controls=\"context-menu-sub-popup\">Export formats<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></div></div><div class=\"cn-menu-target\" data-slot=\"context-menu-sub-content\" id=\"context-menu-sub-popup\" role=\"menu\" aria-label=\"Export formats\" dir=\"rtl\" style=\"--available-width:320px;--available-height:500px\"><div data-slot=\"context-menu-item\" role=\"menuitem\" tabindex=\"0\">PDF export</div></div>"
+      },
+      "steps": [],
+      "expectation": "Source-native menu roles/selection/disabled/highlight relations; actual native keyboard and cancellation checks are separate. Shortcut is a visual hint, not an implemented command binding."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Input",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    },
+    "behavior": "behavior.scxml"
+  },
+  "anatomy": {
+    "field": "Caller form-field arrangement, not an automatic Input wrapper.",
+    "label": "Visible native label with exact input association.",
+    "control": "Actual native input source element.",
+    "help": "Persistent caller help or error text."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "field": {
+      "kind": "element",
+      "declaration": "Input",
+      "selector": "[data-part=\"input-field\"]",
+      "description": "Caller form-field arrangement, not an automatic Input wrapper.",
+      "ownership": "explicit caller composition"
+    },
+    "label": {
+      "kind": "element",
+      "declaration": "Input",
+      "selector": "[data-part=\"input-label\"]",
+      "description": "Visible native label with exact input association.",
+      "ownership": "explicit caller composition"
+    },
+    "control": {
+      "kind": "element",
+      "declaration": "Input",
+      "selector": "[data-slot=\"input\"]",
+      "description": "Actual native input source element.",
+      "ownership": "actual wrapper"
+    },
+    "help": {
+      "kind": "element",
+      "declaration": "Input",
+      "selector": "[data-part=\"input-help\"]",
+      "description": "Persistent caller help or error text.",
+      "ownership": "explicit caller composition"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "color-background": "semantic.color.background",
+      "color-destructive": "semantic.color.destructive",
+      "color-foreground": "semantic.color.foreground",
+      "color-input": "semantic.color.input",
+      "color-muted-foreground": "semantic.color.mutedForeground",
+      "color-ring": "semantic.color.ring",
+      "control-label-gap": "semantic.layout.controlLabelGap",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "input-border-width": "input.borderWidth",
+      "input-disabled-fill": "input.disabledFill",
+      "input-disabled-opacity": "input.disabledOpacity",
+      "input-empty-focus-blur": "input.emptyFocusBlur",
+      "input-empty-focus-offset": "input.emptyFocusOffset",
+      "input-empty-focus-shadow": "input.emptyFocusShadow",
+      "input-focus-shadow": "input.focusShadow",
+      "input-focus-spread": "input.focusSpread",
+      "input-font": "input.font",
+      "input-font-size": "input.fontSize",
+      "input-font-weight": "input.fontWeight",
+      "input-height": "input.height",
+      "input-line-height": "input.lineHeight",
+      "input-padding-block": "input.paddingBlock",
+      "input-padding-inline": "input.paddingInline",
+      "input-radius": "input.radius",
+      "input-round-radius": "input.roundRadius"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Input fills its caller layout with min-inline-size0 and semantic 32px minimum height. The native 320px sample width is not an intrinsic component token and remains in source evidence. Source font14/20px,10px inline/4px block padding, border/radius and distinct placeholder/focus/disabled/error styling are retained. Label/help/field are explicit caller parts. Rounded shape is caller className, not an invented Input prop.",
+    "variants": {
+      "disabled": {
+        "prop": "disabled",
+        "nativeAttribute": "disabled"
+      },
+      "invalid": {
+        "prop": "aria-invalid",
+        "attribute": "aria-invalid"
+      },
+      "shape": {
+        "source": "caller className",
+        "rounded": "ui-input-rounded"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

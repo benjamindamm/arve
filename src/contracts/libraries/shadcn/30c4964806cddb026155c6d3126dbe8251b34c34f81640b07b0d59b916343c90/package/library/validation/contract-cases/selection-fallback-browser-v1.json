@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "family": "tabs",
+  "scope": "Actual Base UI1.9 uncontrolled consistency callbacks in frozen shadcn wrappers; both callbacks invoke cancel, which cannot veto source consistency fallback.",
+  "cases": [
+    {
+      "name": "disabled selected uncontrolled tab automatically falls back despite callback cancel",
+      "result": "pass",
+      "state": "second:disabled"
+    },
+    {
+      "name": "removed only enabled tab produces uncancelable null fallback",
+      "result": "pass",
+      "state": "null:missing"
+    }
+  ]
+}

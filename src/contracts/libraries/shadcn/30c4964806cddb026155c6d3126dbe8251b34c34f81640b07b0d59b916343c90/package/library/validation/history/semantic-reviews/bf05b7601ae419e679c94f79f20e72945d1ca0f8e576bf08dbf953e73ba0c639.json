@@ -1,0 +1,140 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Bubble",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "group": "Vertical group; spacing preserves room for reaction overhang.",
+    "bubble": "Actual variant/alignment-controlled message bubble.",
+    "content": "Actual content wrapper or explicit native render override.",
+    "reactions": "Actual positioned caller reaction controls/content; no built-in reaction state."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "group": {
+      "kind": "element",
+      "declaration": "BubbleGroup",
+      "selector": "[data-slot=\"bubble-group\"]",
+      "description": "Vertical group; spacing preserves room for reaction overhang.",
+      "ownership": "actual wrapper"
+    },
+    "bubble": {
+      "kind": "element",
+      "declaration": "Bubble",
+      "selector": "[data-slot=\"bubble\"]",
+      "description": "Actual variant/alignment-controlled message bubble.",
+      "ownership": "actual wrapper"
+    },
+    "content": {
+      "kind": "element",
+      "declaration": "BubbleContent",
+      "selector": "[data-slot=\"bubble-content\"]",
+      "description": "Actual content wrapper or explicit native render override.",
+      "ownership": "actual wrapper"
+    },
+    "reactions": {
+      "kind": "element",
+      "declaration": "BubbleReactions",
+      "selector": "[data-slot=\"bubble-reactions\"]",
+      "description": "Actual positioned caller reaction controls/content; no built-in reaction state.",
+      "ownership": "actual wrapper"
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "border-width": "semantic.border.width",
+      "bubble-group-gap": "components.bubble.groupGap",
+      "bubble-padding-block": "components.bubble.paddingBlock",
+      "bubble-padding-inline": "components.bubble.paddingInline",
+      "bubble-radius": "components.bubble.radius",
+      "bubble-reaction-gap": "components.bubble.reactionGap",
+      "bubble-reaction-inset": "components.bubble.reactionInset",
+      "bubble-reaction-padding-block": "components.bubble.reactionPaddingBlock",
+      "bubble-reaction-padding-inline": "components.bubble.reactionPaddingInline",
+      "bubble-reaction-radius": "components.bubble.reactionRadius",
+      "bubble-tinted-surface": "components.bubble.tintedSurface",
+      "bubble-tinted-text": "components.bubble.tintedText",
+      "color-border": "semantic.color.border",
+      "color-destructive": "semantic.color.destructive",
+      "color-destructive-subtle": "semantic.color.destructiveSubtle",
+      "color-foreground": "semantic.color.foreground",
+      "color-muted": "semantic.color.muted",
+      "color-primary": "semantic.color.primary",
+      "color-primary-foreground": "semantic.color.primaryForeground",
+      "color-ring": "semantic.color.ring",
+      "color-secondary": "semantic.color.secondary",
+      "color-secondary-foreground": "semantic.color.secondaryForeground",
+      "focus-shadow": "semantic.focus.shadow",
+      "focus-spread": "semantic.focus.spread",
+      "focus-width": "semantic.focus.width",
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "font-weight-normal": "semantic.typography.normalWeight",
+      "line-height-body": "semantic.typography.bodyLineHeight"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Bubble binds all four actual wrappers. The native Primary depiction maps to the selected React API variant=default, not an invented primary prop. Native 22px corners, 10/12px insets, 14/20px text and 32px representative group spacing become reusable roles; the short primary text uses a Light face while longer specimens use Regular, and this reference explicitly selects Regular consistently. Native widths/heights remain text-dependent. All seven actual variant classes are described, including source-supported ghost without a separate native master. The unbound #C7E8FF tinted surface keeps its observed #0A0A0A text as a fixed pair across modes rather than inventing an unseen dark tint. Outline uses an inset stroke without increasing native intrinsic height. Reactions retain 2/6px insets, 4px gap and rounded surface; top/bottom half-overlap and 12px inline inset are explicit positioning decisions. Native passive reactions are 24px; an interactive child Button may enlarge this intrinsic surface. Speaker text is mandatory in this usage. Reaction state and native content actions belong to callers, not Bubble callbacks.",
+    "variants": {
+      "variant": {
+        "prop": "variant",
+        "attribute": "data-variant",
+        "values": [
+          "default",
+          "secondary",
+          "muted",
+          "tinted",
+          "outline",
+          "ghost",
+          "destructive"
+        ]
+      },
+      "align": {
+        "prop": "align",
+        "attribute": "data-align",
+        "values": [
+          "start",
+          "end"
+        ]
+      },
+      "reactionSide": {
+        "declaration": "BubbleReactions",
+        "prop": "side",
+        "attribute": "data-side",
+        "values": [
+          "top",
+          "bottom"
+        ]
+      },
+      "reactionAlign": {
+        "declaration": "BubbleReactions",
+        "prop": "align",
+        "attribute": "data-align",
+        "values": [
+          "start",
+          "end"
+        ]
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

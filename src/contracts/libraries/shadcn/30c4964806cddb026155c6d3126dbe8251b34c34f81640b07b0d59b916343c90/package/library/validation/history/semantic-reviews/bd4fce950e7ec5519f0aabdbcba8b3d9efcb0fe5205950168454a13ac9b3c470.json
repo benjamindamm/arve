@@ -1,0 +1,47 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Label",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "named-input",
+      "name": "Named input",
+      "inputs": {
+        "htmlFor": "label-project"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"label-field\"><label data-slot=\"label\" for=\"label-project\">Project name</label><input id=\"label-project\" type=\"text\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "disabled-host-field",
+      "name": "Disabled host field",
+      "inputs": {
+        "htmlFor": "label-project",
+        "hostDisabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"label-field\" data-disabled=\"true\"><label data-slot=\"label\" for=\"label-project\">Project name</label><input id=\"label-project\" type=\"text\" disabled></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"label-field\" dir=\"rtl\"><label data-slot=\"label\" for=\"label-project\">Project name</label><input id=\"label-project\" type=\"text\"></div>"
+      },
+      "steps": [],
+      "expectation": "Actual semantic source parts consume domain values; caller-owned content and associations stay explicit."
+    }
+  ]
+}

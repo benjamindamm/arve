@@ -1,0 +1,27 @@
+{
+  "purpose": "Select one associated panel while distinguishing keyboard focus from activation.",
+  "avoid": "Do not use tabs to disguise sequential task steps.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Tabs",
+  "sourceRule": "Root value/defaultValue uses the primitive generic Tab.Value (including null; default implicit0). List defaults activateOnFocus=false and loopFocus=true; variant default|line only styles it. Trigger value identifies a matching Panel, disabled triggers cannot activate; keepMounted is explicit on Panels (the shown inactive-panel projection chooses it). Automatic tab/panel ID relations register in client effects and are not present in raw static server markup; the reference HTML shows the registered client state. User onValueChange(value,eventDetails) is cancellable. Automatic uncontrolled selection/fallback reasons initial/disabled/missing cannot be canceled and may yield null when no enabled tab remains. Controlled values never automatically fall back. Callback details include activationDirection. Tab focus and active panel are distinct in manual mode.",
+  "keyboardAndFocus": "Tab enters the selected/enabled tab and then its panel. The source horizontal tablist uses Left/Right, Home/End to move focus, including source-focusable disabled triggers that cannot activate; default manual mode requires Enter/Space to activate. activateOnFocus=true also changes selection on arrow focus. Escape leaves selection unchanged. IMPORTANT pinned wrapper limitation: Root orientation is consumed for CSS/data attributes and not forwarded to TabsPrimitive.Root; primitive ARIA and keyboard behavior remain horizontal even when visual orientation=vertical. This reference chooses horizontal layout and makes the upstream discrepancy explicit.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/tabs.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/tabs.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/tabs-example.tsx.source"
+  ],
+  "primitiveDocs": [
+    "sources/base-ui-1.9.0/docs/tabs.md.source"
+  ],
+  "referenceDecision": "Concrete summary/details values, registered client relations and keepMounted hidden panels are caller fixtures. Reference scope is horizontal because the pinned wrapper does not forward orientation; actual DirectionProvider enables RTL primitive navigation.",
+  "visualContract": {
+    "layoutPolicy": "The selected reference uses actual horizontal Tabs, with a native 25px trigger box, centered 14/20 Medium text, nominal 4/10px insets,6px glyph gap,8px trigger radius,3px list inset and 10px list corner. Nominal block padding and fixed height disagree as layout arithmetic; the centered 20px line remains within the 25px box and its real text bounds are checked rather than clipping it. The native selected underline uses 1px stroke/4px separation, explicitly preferred over the pinned h-0.5 utility. Width is intrinsic with bounded native horizontal overflow, never fixed 67px tab specimens. Panel spacing 12px and visible panel focus outline are explicit reference decisions. Current pinned Root consumes orientation without forwarding it to the primitive; its keyboard/ARIA remain horizontal. This reference therefore does not advertise working vertical Tabs or change frozen code. Default/line appearance, selected versus focused state, disabled-focusable Tabs, manual/automatic activation and controlled cancellation retain source behavior. Client-registered ID relationships and keepMounted hidden inactive panels are explicit fixtures. RTL behavior requires the actual Base UI DirectionProvider plus matching HTML direction.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

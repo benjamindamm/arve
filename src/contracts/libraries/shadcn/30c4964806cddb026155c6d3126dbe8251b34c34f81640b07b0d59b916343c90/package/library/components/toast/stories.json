@@ -1,0 +1,156 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Toast",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "persistent",
+      "name": "Persistent",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "stack-collapsed",
+      "name": "Stack collapsed",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-1\" aria-describedby=\"toast-description-1\" style=\"--toast-index:1;--toast-offset-y:118px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-behind=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-1\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-1\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-2\" aria-describedby=\"toast-description-2\" style=\"--toast-index:2;--toast-offset-y:236px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-behind=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-2\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-2\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "stack-expanded",
+      "name": "Stack expanded",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-expanded=\"\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-expanded=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"false\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-1\" aria-describedby=\"toast-description-1\" data-expanded=\"\" style=\"--toast-index:1;--toast-offset-y:118px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-expanded=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-1\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-1\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"false\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-2\" aria-describedby=\"toast-description-2\" data-expanded=\"\" style=\"--toast-index:2;--toast-offset-y:236px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-expanded=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-2\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-2\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"false\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "limited",
+      "name": "Limited",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-1\" aria-describedby=\"toast-description-1\" style=\"--toast-index:1;--toast-offset-y:118px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-behind=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-1\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-1\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-2\" aria-describedby=\"toast-description-2\" data-limited=\"\" inert=\"\" style=\"--toast-index:2;--toast-offset-y:236px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-behind=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-2\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-2\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "typed-icon",
+      "name": "Typed icon",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><span data-slot=\"toast-icon\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"currentColor\"/><path d=\"m8 12 3 3 5-6\" fill=\"none\" stroke=\"currentColor\"/></svg></span><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "disabled-action",
+      "name": "Disabled action",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\" disabled>Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "opening",
+      "name": "Opening",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-starting-style=\"\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "closing",
+      "name": "Closing",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-ending-style=\"\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "swipe-down",
+      "name": "Swipe down",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-ending-style=\"\" data-swipe-direction=\"down\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "swipe-left",
+      "name": "Swipe left",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-ending-style=\"\" data-swipe-direction=\"left\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "swipe-right",
+      "name": "Swipe right",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-ending-style=\"\" data-swipe-direction=\"right\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "swipe-up",
+      "name": "Swipe up",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-ending-style=\"\" data-swipe-direction=\"up\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"true\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    },
+    {
+      "id": "root-keyboard-focus",
+      "name": "Root keyboard focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-slot=\"toast-viewport\" role=\"region\" aria-label=\"Notifications\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"additions text\"><div data-slot=\"toast\" role=\"dialog\" aria-modal=\"false\" tabindex=\"0\" aria-labelledby=\"toast-title-0\" aria-describedby=\"toast-description-0\" data-expanded=\"\" style=\"--toast-index:0;--toast-offset-y:0px;--toast-height:118px;--toast-frontmost-height:118px;--toast-swipe-movement-x:0px;--toast-swipe-movement-y:0px\"><div data-slot=\"toast-content\" data-expanded=\"\"><div><h2 data-slot=\"toast-title\" id=\"toast-title-0\">Report saved</h2><p data-slot=\"toast-description\" id=\"toast-description-0\">Changes remain available in the saved report.</p></div><button data-slot=\"toast-action\" class=\"cn-button cn-button-variant-outline cn-button-size-sm\" type=\"button\">Undo report change</button><button data-slot=\"toast-close\" class=\"cn-button cn-button-variant-ghost cn-button-size-icon-sm\" type=\"button\" aria-hidden=\"false\" aria-label=\"Close toast\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" fill=\"none\" stroke=\"currentColor\"/></svg></button></div></div></div><p>Report changes remain available in the saved report.</p>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "root",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Source-native role/state ownership and semantic component geometry; actual focus, lifecycle and viewport interactions are separately browser checked."
+    }
+  ]
+}

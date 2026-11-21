@@ -1,0 +1,28 @@
+@import "../../tokens.css";
+
+@import url(../dropdown-menu/layout.css);
+
+[data-slot="context-menu-content"],
+[data-slot="context-menu-sub-content"] {
+  --menu-corner: var(--ui-context-menu-radius);
+}
+
+[data-slot="context-menu-trigger"] {
+  box-sizing: border-box;
+  min-block-size: 120px;
+  max-inline-size: 100%;
+  padding: 16px;
+  border: var(--ui-border-width) dashed var(--ui-color-border);
+  border-radius: var(--ui-context-menu-radius);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+}
+
+[data-part="context-actions"] {
+  min-block-size: 32px;
+  max-inline-size: 100%;
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-context-menu-radius);
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+}

@@ -2,10 +2,49 @@ import { createHash } from 'node:crypto'
 import { mkdir, lstat, readFile, readdir, rename, rm, mkdtemp, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
+import postcss from 'postcss'
+import valueParser from 'postcss-value-parser'
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex')
 const validPath = value => typeof value === 'string' && value.length > 0 && !value.includes('\\') && !value.includes('\0') && !path.posix.isAbsolute(value) && value.split('/').every(part => part && part !== '.' && part !== '..')
 const sorted = entries => [...entries].sort(([a], [b]) => Buffer.compare(Buffer.from(a), Buffer.from(b)))
+
+function cssReferences(content) {
+  const references = []
+  const urls = value => valueParser(value).walk(node => {
+    if (node.type === 'function' && node.value.toLowerCase() === 'url') {
+      const tokens = node.nodes.filter(part => part.type !== 'comment' && part.type !== 'space')
+      references.push(tokens.length === 1 && tokens[0].type === 'string' ? tokens[0].value : valueParser.stringify(node.nodes).trim())
+      return false
+    }
+  })
+  const css = postcss.parse(content)
+  css.walkAtRules(/^import$/i, rule => {
+    const first = valueParser(rule.params).nodes.find(node => node.type !== 'comment' && node.type !== 'space')
+    if (first?.type === 'string') references.push(first.value)
+    else urls(rule.params)
+  })
+  css.walkDecls(declaration => urls(declaration.value))
+  return references
+}
+
+function styleClosure(files, entry) {
+  const selected = new Set(entry ? [entry] : []), queue = [...selected]
+  for (let i = 0; i < queue.length; i++) {
+    const name = queue[i]
+    if (!name.endsWith('.css')) continue
+    for (const reference of cssReferences(files.get(name).toString('utf8'))) {
+      if (!reference || reference.startsWith('#') || reference.startsWith('//') || /^(?:https?|data|blob):/i.test(reference)) continue
+      if (/^[a-z]+:/i.test(reference) || reference.startsWith('/') || reference.includes('\\')) throw new Error('Unsafe CSS dependency in ' + name + ': ' + reference)
+      let dependency
+      try { dependency = path.posix.join(path.posix.dirname(name), decodeURIComponent(reference.split(/[?#]/)[0])) }
+      catch { throw new Error('Invalid CSS dependency in ' + name) }
+      if (!validPath(dependency) || !files.has(dependency)) throw new Error('Missing or unsafe CSS dependency in ' + name + ': ' + reference)
+      if (!selected.has(dependency)) { selected.add(dependency); queue.push(dependency) }
+    }
+  }
+  return selected
+}
 
 async function collect(root, directory = '', files = new Map()) {
   for (const entry of await readdir(path.join(root, directory), { withFileTypes: true })) {
@@ -51,7 +90,8 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
       if (path.posix.isAbsolute(value) || value.includes('\\') || !validPath(name) || !libraryFiles.has(name)) throw new Error('Missing or unsafe contract source: ' + value)
       return [[domain, name]]
     }))
-    const selected = new Set([definitionPath, 'library.json', 'README.md', ...Object.values(sources)])
+    const styles = styleClosure(libraryFiles, sources.css)
+    const selected = new Set([definitionPath, 'library.json', 'README.md', ...Object.values(sources), ...styles])
     if (compact) {
       for (const [name] of libraryManifest) if (name.startsWith(directory + '/')) selected.add(name)
       // Follow source bindings from the component's own text, preserving portable evidence
@@ -77,6 +117,7 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
     }
     const scope = libraryManifest.filter(([name]) => compact ? selected.has(name) : !name.startsWith('components/') || name.startsWith(directory + '/'))
     return { library: manifest.library, revision: manifest.revision, component: path.posix.basename(directory), origin: 'portable-export', status: definition.status, sources,
+      ...(styles.size ? { styleAssets: [...styles].sort().map(name=>({path:name,sha256:hash(libraryFiles.get(name)),kind:name.endsWith('.css')?'stylesheet':/\.(woff2?|ttf|otf)$/i.test(name)?'font':/\.(svg|png|jpe?g|webp|avif|gif)$/i.test(name)?'image':'asset'})) } : {}),
       ...(compact ? { deferredFiles: true } : {}), files: Object.fromEntries((compact ? [] : scope).flatMap(([name, sha256]) => {
         const bytes = libraryFiles.get(name), content = bytes.toString('utf8')
         return Buffer.from(content).equals(bytes) && !content.includes('\0') ? [[name, { path: name, sha256, content }]] : []

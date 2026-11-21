@@ -1,0 +1,82 @@
+{
+  "format": "shadcn-semantic-traceability/1",
+  "sourceObservations": "figma-observations.json",
+  "nativeSpecimens": "source-specimens.json",
+  "sourceSha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "parts": {
+    "indicator": {
+      "declaration": "Spinner",
+      "selector": "[data-slot=\"spinner\"]",
+      "ownership": "actual wrapper"
+    }
+  },
+  "measurements": [
+    {
+      "sourceNodeId": "2009:423",
+      "observationPath": "width",
+      "semanticToken": "components.spinner.size"
+    },
+    {
+      "sourceNodeId": "2009:424",
+      "observationPath": "width",
+      "semanticToken": "components.spinner.smallSize"
+    }
+  ],
+  "specimenMappings": [
+    {
+      "sourceNodeId": "2009:424",
+      "sourcePartId": "2009:425",
+      "sourceName": "Spinner / Size=size-3",
+      "semanticParts": [
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "loading-default"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2009:423",
+      "sourcePartId": "2009:425",
+      "sourceName": "Spinner / Size=size-4",
+      "semanticParts": [
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "loading-default"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2009:422",
+      "sourcePartId": "2009:425",
+      "sourceName": "Spinner / Size=size-5",
+      "semanticParts": [
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "loading-default"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    },
+    {
+      "sourceNodeId": "2009:421",
+      "sourcePartId": "2009:425",
+      "sourceName": "Spinner / Size=size-6",
+      "semanticParts": [
+        "indicator"
+      ],
+      "canonicalFixtures": [
+        "loading-default"
+      ],
+      "decision": "Native depiction is evidence; source properties do not become runtime node selectors or an invented public state prop."
+    }
+  ],
+  "decisions": [
+    "The actual source indicator is a role=status SVG with a default Loading name. Reference usage supplies the task-specific Loading contacts name. The default16px size and12/20/24px source specimens map to explicit caller classes, not an invented public size prop. The source icon adapter chooses a vendor glyph; canonical SVG is a semantic icon projection, not a claim that native path bytes match all vendors. A chosen1s rotation expresses animate-spin; reduced-motion removes movement while preserving named status.",
+    "Semantic token scalar values are meaningful reusable metrics, never coordinate-keyed specimen dimensions. Widths in native specimen grids remain evidence unless explicitly adopted as a domain layout constraint."
+  ],
+  "retiredLeadingProvenance": {
+    "uxBasis": "Native source page 1196:1174 (Spinner), observed anatomy and examples."
+  }
+}

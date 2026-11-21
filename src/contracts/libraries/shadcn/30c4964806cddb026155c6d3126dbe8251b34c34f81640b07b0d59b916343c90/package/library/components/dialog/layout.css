@@ -1,0 +1,102 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-slot="dialog-overlay"] {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgb(0 0 0/var(--ui-dialog-backdrop-opacity));
+}
+
+[data-slot="dialog-content"] {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 51;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-dialog-gap);
+  min-inline-size: 0;
+  background: var(--ui-color-background);
+  color: var(--ui-color-foreground);
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-dialog-radius);
+  outline: none;
+  max-block-size: calc(100dvh - 32px);
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+[data-slot="dialog-content"] {
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%,-50%);
+  inline-size: calc(100vw - 32px);
+  max-inline-size: var(--ui-dialog-max-width);
+  padding: var(--ui-dialog-padding);
+}
+
+[data-slot="dialog-content"][dir="rtl"] {
+  inset-inline-start: auto;
+  left: 50%;
+}
+
+[data-slot="dialog-header"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ui-dialog-header-gap);
+  min-inline-size: 0;
+}
+
+[data-slot="dialog-title"] {
+  margin: 0;
+  font-size: var(--ui-dialog-title-size);
+  line-height: var(--ui-dialog-title-line-height);
+  font-weight: var(--ui-dialog-title-weight);
+}
+
+[data-slot="dialog-description"] {
+  margin: 0;
+  color: var(--ui-color-muted-foreground);
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="dialog-footer"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+[data-slot="dialog-close"].cn-dialog-close {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: 12px;
+}
+
+[data-slot="dialog-header"] {
+  padding-inline-end: 32px;
+}
+
+[data-slot="dialog-close"] svg {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+[data-slot="dialog-close"] .sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+[data-slot="dialog-trigger"]:disabled {
+  opacity: 0.5;
+}

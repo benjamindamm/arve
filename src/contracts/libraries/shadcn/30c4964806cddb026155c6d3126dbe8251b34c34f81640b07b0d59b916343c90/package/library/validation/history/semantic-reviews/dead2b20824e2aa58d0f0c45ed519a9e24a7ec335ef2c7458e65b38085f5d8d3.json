@@ -1,0 +1,25 @@
+{
+  "purpose": "Present contextual information or a problem inside a page.",
+  "avoid": "Do not assume every visible alert should interrupt assistive technology.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful native content or a content container in its default source mode. Interactive descendants/native render overrides keep their own native or component contracts; no decorative fallback or invented selection API.",
+  "componentId": "shadcn:Alert",
+  "contentAlternative": "The full problem and recovery instruction are text; the destructive color and optional icon are supplementary.",
+  "updatesAndDescendants": "The actual wrapper renders role=alert. Use it for dynamically inserted urgent feedback; do not repeatedly replace identical content or force focus. Optional action buttons follow Button semantics.",
+  "referenceDecision": "The concrete retry action and error wording are this reference composition; role=alert is in the pinned wrapper.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/alert.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/alert.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/alert-example.tsx.source"
+  ],
+  "primitiveDocs": [],
+  "visualContract": {
+    "layoutPolicy": "Alert retains its four actual source wrappers and optional caller SVG. Native 8/10px padding, 8px icon/action gap, 2px title/description gap, 10px corner and 16px icon become semantic metrics; native 464px width/78px height remain examples. The reference uses intrinsic grid rows, shared 14/20px text and an explicit caller class when an icon is supplied. Actions move below text at a chosen 28rem narrow-view boundary. Actual variant classes select default/destructive roles; color supplements text. The pinned root always renders role=alert: caller policy reserves dynamic insertion for urgent changes and avoids duplicate announcements or forced focus. Retry is a caller Button, not a fabricated Alert event.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}

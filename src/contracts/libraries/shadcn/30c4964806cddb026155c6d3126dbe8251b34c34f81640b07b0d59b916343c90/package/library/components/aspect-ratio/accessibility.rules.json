@@ -1,0 +1,29 @@
+{
+  "componentId": "shadcn:AspectRatio",
+  "referenceComposition": "<div data-slot=\"aspect-ratio\" style=\"--ratio:16 / 9\"><img src=\"data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 160 90&quot;%3E%3Cpath fill=&quot;%23c9e8f4&quot; d=&quot;M0 0h160v90H0z&quot;/%3E%3Cpath fill=&quot;%235d6b7a&quot; d=&quot;m0 60 45-45 50 55 35-35 30 25v30H0z&quot;/%3E%3Cpath fill=&quot;%235ba9c8&quot; d=&quot;M0 65h160v25H0z&quot;/%3E%3C/svg%3E\" alt=\"Mountain lake at sunrise\"></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The image alt conveys the meaningful media subject; a decorative image instead gets empty alt in its own context.",
+  "updatesAndDescendants": "The wrapper sets CSS --ratio from a required number and rerenders children on prop updates. It does not load, crop, label or announce media automatically. This reference requires a finite positive ratio as a caller precondition.",
+  "referenceDecision": "Positive ratio and meaningful alt are caller requirements. The upstream function itself supplies no runtime ratio validation.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "frame": {
+      "kind": "element",
+      "selector": "[data-slot=\"aspect-ratio\"]",
+      "description": "Actual source ratio frame; ratio prop supplies --ratio."
+    },
+    "media": {
+      "kind": "element",
+      "selector": "[data-slot=\"aspect-ratio\"] > img",
+      "description": "Explicit caller image with meaningful alt and crop policy."
+    }
+  },
+  "visualStateMapping": {
+    "ratio": {
+      "prop": "ratio",
+      "runtimeProperty": "--ratio",
+      "precondition": "finite positive number"
+    }
+  }
+}

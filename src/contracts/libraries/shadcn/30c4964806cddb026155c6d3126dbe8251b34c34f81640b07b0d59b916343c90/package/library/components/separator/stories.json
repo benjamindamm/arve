@@ -1,0 +1,33 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Separator",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "horizontal",
+      "name": "Horizontal",
+      "inputs": {
+        "orientation": "horizontal"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div role=\"separator\" aria-orientation=\"horizontal\" data-orientation=\"horizontal\" data-slot=\"separator\"></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    },
+    {
+      "id": "vertical",
+      "name": "Vertical",
+      "inputs": {
+        "orientation": "vertical"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div style=\"display:flex;block-size:6rem\"><span>Before</span><div role=\"separator\" aria-orientation=\"vertical\" data-orientation=\"vertical\" data-slot=\"separator\"></div><span>After</span></div>"
+      },
+      "steps": [],
+      "expectation": "Content keeps its native meaning; caller content and composition own updates/actions. Semantic source adapter styles match actual slots."
+    }
+  ]
+}

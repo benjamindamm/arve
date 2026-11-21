@@ -1,0 +1,90 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:InputOtp",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "empty",
+      "name": "Empty",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"\" aria-describedby=\"verification-help\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "partial-active",
+      "name": "Partial active",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">1</div><div data-slot=\"input-otp-slot\" data-active=\"false\">2</div><div data-slot=\"input-otp-slot\" data-active=\"true\"><div class=\"cn-input-otp-caret\"><div class=\"cn-input-otp-caret-line\"></div></div></div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"12\" aria-describedby=\"verification-help\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "complete",
+      "name": "Complete",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">1</div><div data-slot=\"input-otp-slot\" data-active=\"false\">2</div><div data-slot=\"input-otp-slot\" data-active=\"false\">3</div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">4</div><div data-slot=\"input-otp-slot\" data-active=\"false\">5</div><div data-slot=\"input-otp-slot\" data-active=\"false\">6</div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"123456\" aria-describedby=\"verification-help\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">1</div><div data-slot=\"input-otp-slot\" data-active=\"false\">2</div><div data-slot=\"input-otp-slot\" data-active=\"false\">3</div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">4</div><div data-slot=\"input-otp-slot\" data-active=\"false\">5</div><div data-slot=\"input-otp-slot\" data-active=\"false\">6</div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"123456\" aria-describedby=\"verification-help\" disabled/></div>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "expired-error",
+      "name": "Expired error",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">1</div><div data-slot=\"input-otp-slot\" data-active=\"false\">2</div><div data-slot=\"input-otp-slot\" data-active=\"false\">3</div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">4</div><div data-slot=\"input-otp-slot\" data-active=\"false\">5</div><div data-slot=\"input-otp-slot\" data-active=\"false\">6</div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"123456\" aria-describedby=\"verification-help verification-error\" aria-invalid=\"true\"/></div><p id=\"verification-error\">The code expired. Request a new code.</p>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "rtl-host",
+      "name": "Rtl host",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\" dir=\"rtl\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\">1</div><div data-slot=\"input-otp-slot\" data-active=\"false\">2</div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"12\" aria-describedby=\"verification-help\"/></div>"
+      },
+      "steps": [],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    },
+    {
+      "id": "native-focus",
+      "name": "Native focus",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<label for=\"verification-code\">Verification code</label><p id=\"verification-help\">Enter the six digit code.</p><div class=\"cn-input-otp\" data-input-otp-container=\"true\"><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"true\"><div class=\"cn-input-otp-caret\"><div class=\"cn-input-otp-caret-line\"></div></div></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><div data-slot=\"input-otp-separator\" role=\"separator\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 12h12\" stroke=\"currentColor\"/></svg></div><div data-slot=\"input-otp-group\" aria-hidden=\"true\"><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div><div data-slot=\"input-otp-slot\" data-active=\"false\"></div></div><input data-slot=\"input-otp\" class=\"cn-input-otp-input\" id=\"verification-code\" type=\"text\" inputmode=\"numeric\" autocomplete=\"one-time-code\" maxlength=\"6\" pattern=\"^\\d+$\" value=\"\" aria-describedby=\"verification-help\"/></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "input",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Finite semantic source composition; native input/scroll/snap behavior is checked separately in the actual adapter."
+    }
+  ]
+}

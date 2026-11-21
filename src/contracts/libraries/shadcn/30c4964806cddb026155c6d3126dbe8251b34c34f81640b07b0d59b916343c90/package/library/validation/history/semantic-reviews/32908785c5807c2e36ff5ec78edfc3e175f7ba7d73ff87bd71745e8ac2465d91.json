@@ -1,0 +1,110 @@
+{
+  "format": "ui-contract-component-draft",
+  "id": "shadcn:Pagination",
+  "version": "0.4.1",
+  "status": "complete",
+  "domains": {
+    "interface": "interface.json",
+    "visual": {
+      "tokens": "../../tokens.json",
+      "css": "layout.css"
+    },
+    "behavior": "behavior.scxml",
+    "accessibility": {
+      "html": "accessibility.html",
+      "rules": "accessibility.rules.json"
+    }
+  },
+  "anatomy": {
+    "navigation": "Actual named navigation surface.",
+    "list": "Actual native unordered action list.",
+    "item": "Actual native list item.",
+    "link": "Actual Button-rendered anchor: selected primitive exposes role=button and Space activation.",
+    "ellipsis": "Actual hidden omitted-page glyph, not an action.",
+    "previous": "Actual previous-page anchor distinguished by its source class.",
+    "next": "Actual next-page anchor distinguished by its source class."
+  },
+  "stories": "stories.json",
+  "ux": "ux.json",
+  "composition": {
+    "button": {
+      "component": "../button/component.json"
+    }
+  },
+  "convention": "semantic-component/1",
+  "partBindings": {
+    "navigation": {
+      "kind": "element",
+      "declaration": "Pagination",
+      "selector": "[data-slot=\"pagination\"]",
+      "description": "Actual named navigation surface.",
+      "ownership": "actual wrapper"
+    },
+    "list": {
+      "kind": "element",
+      "declaration": "PaginationContent",
+      "selector": "[data-slot=\"pagination-content\"]",
+      "description": "Actual native unordered action list.",
+      "ownership": "actual wrapper"
+    },
+    "item": {
+      "kind": "element",
+      "declaration": "PaginationItem",
+      "selector": "[data-slot=\"pagination-item\"]",
+      "description": "Actual native list item.",
+      "ownership": "actual wrapper"
+    },
+    "link": {
+      "kind": "element",
+      "declaration": "PaginationLink",
+      "selector": "[data-slot=\"pagination-link\"]",
+      "description": "Actual Button-rendered anchor: selected primitive exposes role=button and Space activation.",
+      "ownership": "actual wrapper"
+    },
+    "ellipsis": {
+      "kind": "element",
+      "declaration": "PaginationEllipsis",
+      "selector": "[data-slot=\"pagination-ellipsis\"]",
+      "description": "Actual hidden omitted-page glyph, not an action.",
+      "ownership": "actual wrapper"
+    },
+    "previous": {
+      "kind": "element",
+      "declaration": "PaginationPrevious",
+      "selector": ".cn-pagination-previous",
+      "description": "Actual previous-page anchor distinguished by its source class."
+    },
+    "next": {
+      "kind": "element",
+      "declaration": "PaginationNext",
+      "selector": ".cn-pagination-next",
+      "description": "Actual next-page anchor distinguished by its source class."
+    }
+  },
+  "visualContract": {
+    "tokens": {
+      "font-fallback": "semantic.typography.fallbackFamily",
+      "font-family": "semantic.typography.fontFamily",
+      "font-size-body": "semantic.typography.bodySize",
+      "line-height-body": "semantic.typography.bodyLineHeight",
+      "pagination-gap": "components.pagination.gap",
+      "pagination-icon-size": "components.pagination.iconSize",
+      "pagination-item-size": "components.pagination.itemSize"
+    },
+    "runtimeProperties": {},
+    "layoutPolicy": "Pagination binds all seven actual exports and explicitly imports its real Button styling dependency. Native 32px square page actions and 2px gap are retained; destination wording does not become fixed previous/next widths. The selected pinned Button primitive renders these anchors with role=button and tabindex=0 because nativeButton=false, and intentionally supplies Space activation while Enter uses native href activation. The reference faithfully describes page actions backed by href, rather than incorrectly claiming plain link roles or Enter-only behavior. isActive supplies aria-current=page, data-active and the source outline variant; it does not change a stored page index. Previous/Next text and accessible names are caller-localizable; the reference follows the source hide/show text recipe at explicit 40rem. Unavailable boundary actions are omitted, not fake-disabled anchors. Ellipsis remains hidden and does not imply a menu. All page computation, routing/fetching and isActive updates remain caller-owned.",
+    "variants": {
+      "active": {
+        "declaration": "PaginationLink",
+        "prop": "isActive",
+        "attribute": "data-active"
+      },
+      "size": {
+        "declaration": "PaginationLink",
+        "prop": "size",
+        "dependency": "Button"
+      }
+    },
+    "sourceTraceability": "figma/traceability.json"
+  }
+}

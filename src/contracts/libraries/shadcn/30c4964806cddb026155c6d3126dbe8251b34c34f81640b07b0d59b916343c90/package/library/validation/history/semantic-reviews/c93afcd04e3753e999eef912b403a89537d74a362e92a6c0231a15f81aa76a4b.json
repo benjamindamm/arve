@@ -1,0 +1,50 @@
+{
+  "componentId": "shadcn:Alert",
+  "referenceComposition": "<div role=\"alert\" data-slot=\"alert\" class=\"cn-alert cn-alert-variant-destructive ui-alert-with-icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m5 12 4 4L19 6\" fill=\"none\" stroke=\"currentColor\"/></svg><div data-slot=\"alert-title\">Connection failed</div><div data-slot=\"alert-description\">Check your network and try again.</div><div data-slot=\"alert-action\"><button type=\"button\">Retry connection</button></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The full problem and recovery instruction are text; the destructive color and optional icon are supplementary.",
+  "updatesAndDescendants": "The actual wrapper renders role=alert. Use it for dynamically inserted urgent feedback; do not repeatedly replace identical content or force focus. Optional action buttons follow Button semantics.",
+  "referenceDecision": "The concrete retry action and error wording are this reference composition; role=alert is in the pinned wrapper.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "surface": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert\"]",
+      "description": "Actual role=alert feedback surface; caller owns urgency and insertion timing."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-title\"]",
+      "description": "Text title; no automatic heading semantics."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-description\"]",
+      "description": "Readable problem/recovery description."
+    },
+    "action": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-action\"]",
+      "description": "Optional caller native action."
+    },
+    "icon": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert\"] > svg",
+      "description": "Supplementary caller icon, hidden when redundant."
+    }
+  },
+  "visualStateMapping": {
+    "variant": {
+      "prop": "variant",
+      "classes": [
+        "cn-alert-variant-default",
+        "cn-alert-variant-destructive"
+      ]
+    },
+    "iconComposition": {
+      "callerClassName": "ui-alert-with-icon",
+      "publicProp": false
+    }
+  }
+}

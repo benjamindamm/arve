@@ -1,0 +1,75 @@
+@import "../../tokens.css";
+
+@import "../button/layout.css";
+
+[data-slot="pagination"] {
+  display: flex;
+  justify-content: center;
+  min-inline-size: 0;
+  inline-size: 100%;
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+}
+
+[data-slot="pagination-content"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-pagination-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+[data-slot="pagination-item"] {
+  display: flex;
+  align-items: center;
+}
+
+[data-slot="pagination-link"] {
+  flex: none;
+}
+
+[data-slot="pagination-ellipsis"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-pagination-item-size);
+  block-size: var(--ui-pagination-item-size);
+}
+
+[data-slot="pagination-ellipsis"]>svg {
+  inline-size: var(--ui-pagination-icon-size);
+  block-size: var(--ui-pagination-icon-size);
+}
+
+[data-slot="pagination-ellipsis"]>.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.cn-pagination-previous,
+.cn-pagination-next {
+  gap: var(--ui-pagination-gap);
+}
+
+[data-slot="pagination"][dir="rtl"] .cn-pagination-previous>svg,
+[data-slot="pagination"][dir="rtl"] .cn-pagination-next>svg {
+  transform: scaleX(-1);
+}
+
+@media (max-width:40rem) {
+  .cn-pagination-previous-text,
+  .cn-pagination-next-text {
+    display: none;
+  }
+
+}

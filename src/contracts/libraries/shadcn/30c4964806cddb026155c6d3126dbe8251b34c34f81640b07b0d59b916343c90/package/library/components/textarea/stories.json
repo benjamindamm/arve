@@ -1,0 +1,100 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Textarea",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "empty",
+      "name": "Empty",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\"></textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "filled",
+      "name": "Filled",
+      "inputs": {
+        "value": "First line\nSecond line"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\">First line\nSecond line</textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "disabled",
+      "name": "Disabled",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "disabled",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\" disabled>Locked</textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "readonly",
+      "name": "Readonly",
+      "inputs": {
+        "readOnly": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\" readonly>Read-only notes</textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "error",
+      "name": "Error",
+      "inputs": {
+        "aria-invalid": true
+      },
+      "visualState": "invalid",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help notes-error\" aria-invalid=\"true\"></textarea><p id=\"notes-help\">Include any follow-up actions.</p><p id=\"notes-error\">Describe the required next step.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "focused",
+      "name": "Focused",
+      "inputs": {},
+      "visualState": "focused",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\"></textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [
+        {
+          "action": "focus",
+          "part": "control",
+          "keyboard": true
+        }
+      ],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {
+        "dir": "rtl"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<div data-part=\"textarea-field\"><label for=\"notes\" data-part=\"textarea-label\">Project notes</label><textarea id=\"notes\" name=\"notes\" data-slot=\"textarea\" placeholder=\"Add project notes\" aria-describedby=\"notes-help\" dir=\"rtl\">ملاحظات المشروع</textarea><p id=\"notes-help\">Include any follow-up actions.</p></div>"
+      },
+      "steps": [],
+      "expectation": "Native element semantics, actual source part bindings and semantic layout/state values remain coherent; caller data and relationships stay explicit."
+    }
+  ]
+}

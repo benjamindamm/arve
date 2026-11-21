@@ -1,0 +1,5369 @@
+{
+  "format": "shadcn-figma-observations/1",
+  "source": "provenance://source/.figma-pool%2Fshadcn.fig",
+  "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+  "classification": "observation",
+  "reader": "@leogcode/figma-reader 0.4.2",
+  "page": {
+    "id": "73:1979",
+    "name": "Menubar",
+    "kind": "component",
+    "slug": "menubar",
+    "top": [
+      {
+        "id": "2353:18247",
+        "name": "Be in the loop",
+        "type": "INSTANCE"
+      },
+      {
+        "id": "2162:770",
+        "name": "Menubar",
+        "type": "FRAME"
+      }
+    ],
+    "componentSets": [
+      {
+        "id": "2162:786",
+        "name": "MenubarItem",
+        "page": "Menubar",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "State",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "2162:787",
+            "name": "State=Default, Dir=LTR",
+            "instances": 5,
+            "swapInstances": 0
+          },
+          {
+            "id": "2162:794",
+            "name": "State=Hover, Dir=LTR",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "2162:801",
+            "name": "State=Disabled, Dir=LTR",
+            "instances": 0,
+            "swapInstances": 4
+          },
+          {
+            "id": "2162:808",
+            "name": "State=Default, Dir=RTL",
+            "instances": 0,
+            "swapInstances": 4
+          },
+          {
+            "id": "2162:815",
+            "name": "State=Hover, Dir=RTL",
+            "instances": 0,
+            "swapInstances": 0
+          },
+          {
+            "id": "2162:822",
+            "name": "State=Disabled, Dir=RTL",
+            "instances": 0,
+            "swapInstances": 1
+          }
+        ]
+      },
+      {
+        "id": "2162:829",
+        "name": "MenubarGroup",
+        "page": "Menubar",
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Type",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ],
+        "variants": [
+          {
+            "id": "2162:830",
+            "name": "Type=Default",
+            "instances": 11,
+            "swapInstances": 0
+          }
+        ]
+      }
+    ],
+    "components": []
+  },
+  "frames": [
+    {
+      "id": "2162:770",
+      "name": "Menubar",
+      "type": "FRAME",
+      "x": -429,
+      "y": -232,
+      "width": 532,
+      "height": 3170,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#FFFFFF",
+          "variable": "background"
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 48,
+        "padding": [
+          56,
+          56,
+          56,
+          56
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-12",
+        "stack_padding_left": "p-14",
+        "stack_padding_top": "p-14",
+        "stack_padding_right": "p-14",
+        "stack_padding_bottom": "p-14",
+        "rectangle_top_left_corner_radius": "radius-xl",
+        "rectangle_top_right_corner_radius": "radius-xl",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border"
+      },
+      "children": [
+        {
+          "id": "2162:771",
+          "name": "Title",
+          "type": "FRAME",
+          "x": 56,
+          "y": 56,
+          "width": 420,
+          "height": 140,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 16,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-4"
+          },
+          "children": [
+            {
+              "id": "2162:772",
+              "name": "Component description",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 255,
+              "height": 140,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 8,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "layoutChild": {
+                "grow": 1
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-2"
+              },
+              "children": [
+                {
+                  "id": "2162:773",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 255,
+                  "height": 36,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Menubar",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 30,
+                    "lineHeight": 36,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-3xl/Semi Bold"
+                },
+                {
+                  "id": "2162:774",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 44,
+                  "width": 255,
+                  "height": 96,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:775",
+              "name": "Buttons",
+              "type": "FRAME",
+              "x": 271,
+              "y": 0,
+              "width": 149,
+              "height": 32,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                12,
+                12,
+                12,
+                12
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": "#0000001A",
+                  "offset": [
+                    0,
+                    1
+                  ],
+                  "radius": 2
+                }
+              ],
+              "effectStyle": "Box Shadow/shadow-xs",
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  12,
+                  0,
+                  12
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-3",
+                "stack_padding_right": "px-3",
+                "rectangle_top_left_corner_radius": "rounded-xl",
+                "rectangle_top_right_corner_radius": "rounded-xl",
+                "rectangle_bottom_left_corner_radius": "rounded-xl",
+                "rectangle_bottom_right_corner_radius": "rounded-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2162:776",
+                  "name": "Text",
+                  "type": "FRAME",
+                  "x": 12,
+                  "y": 6,
+                  "width": 103,
+                  "height": 20,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "counterSizing": "HUG"
+                  },
+                  "childCount": 1
+                },
+                {
+                  "id": "2162:778",
+                  "name": "lucide/arrow-up-right",
+                  "type": "INSTANCE",
+                  "x": 121,
+                  "y": 8,
+                  "width": 16,
+                  "height": 16,
+                  "clipsContent": true,
+                  "component": {
+                    "mainComponent": "lucide/arrow-up-right",
+                    "mainComponentId": "128:198"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2162:779",
+          "name": "Component elements",
+          "type": "FRAME",
+          "x": 56,
+          "y": 244,
+          "width": 420,
+          "height": 680,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 40,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-10"
+          },
+          "children": [
+            {
+              "id": "2463:21824",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 32,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Components",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 24,
+                "lineHeight": 32
+              },
+              "textStyle": "Text-2xl/Semi Bold"
+            },
+            {
+              "id": "2162:780",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 72,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2268:3865",
+              "name": "Wrapper",
+              "type": "FRAME",
+              "x": 0,
+              "y": 140,
+              "width": 420,
+              "height": 244,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border",
+                "border_bottom_weight": "border",
+                "border_left_weight": "border",
+                "border_right_weight": "border"
+              },
+              "children": [
+                {
+                  "id": "2268:3866",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 20,
+                  "y": 20,
+                  "width": 100,
+                  "height": 204,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 24,
+                    "padding": [
+                      72,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-6"
+                  },
+                  "childCount": 3
+                },
+                {
+                  "id": "2268:3873",
+                  "name": "Wrapper",
+                  "type": "FRAME",
+                  "x": 136,
+                  "y": 20,
+                  "width": 264,
+                  "height": 204,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 16,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-4"
+                  },
+                  "childCount": 2
+                }
+              ]
+            },
+            {
+              "id": "2268:3890",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 424,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Menubar Group",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2162:829",
+              "name": "MenubarGroup",
+              "type": "COMPONENT_SET",
+              "x": 0,
+              "y": 492,
+              "width": 168,
+              "height": 188,
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "color": "#E5E5E5",
+                  "variable": "border"
+                }
+              ],
+              "strokeWeight": [
+                1,
+                1,
+                1,
+                1
+              ],
+              "strokeAlign": "INSIDE",
+              "cornerRadius": [
+                14,
+                14,
+                14,
+                14
+              ],
+              "clipsContent": true,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 16,
+                "padding": [
+                  20,
+                  20,
+                  20,
+                  20
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN",
+                "counterSizing": "HUG"
+              },
+              "component": {
+                "kind": "COMPONENT_SET",
+                "propertyDefinitions": [
+                  {
+                    "name": "Type",
+                    "type": "VARIANT",
+                    "default": ""
+                  }
+                ]
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-4",
+                "stack_padding_left": "p-5",
+                "stack_padding_top": "p-5",
+                "stack_padding_right": "p-5",
+                "stack_padding_bottom": "p-5",
+                "rectangle_top_left_corner_radius": "radius-xl",
+                "rectangle_top_right_corner_radius": "radius-xl",
+                "rectangle_bottom_left_corner_radius": "radius-xl",
+                "rectangle_bottom_right_corner_radius": "radius-xl",
+                "border_top_weight": "border-width",
+                "border_bottom_weight": "border-width",
+                "border_left_weight": "border-width",
+                "border_right_weight": "border-width"
+              },
+              "children": [
+                {
+                  "id": "2162:830",
+                  "name": "Type=Default",
+                  "type": "COMPONENT",
+                  "x": 20,
+                  "y": 20,
+                  "width": 128,
+                  "height": 148,
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      4,
+                      4,
+                      4,
+                      4
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "component": {
+                    "kind": "COMPONENT"
+                  },
+                  "boundVariables": {
+                    "stack_padding_left": "p-1",
+                    "stack_padding_top": "p-1",
+                    "stack_padding_right": "p-1",
+                    "stack_padding_bottom": "p-1",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:21825",
+          "name": "Seperator",
+          "type": "LINE",
+          "x": 56,
+          "y": 972,
+          "width": 420,
+          "height": 0,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": 2,
+          "strokeAlign": "CENTER",
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stroke_weight": "border-2"
+          }
+        },
+        {
+          "id": "2162:836",
+          "name": "Frame 2",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1020,
+          "width": 420,
+          "height": 120,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2162:837",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Examples",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 20,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-xl/Semi Bold"
+            },
+            {
+              "id": "2162:838",
+              "name": "Frame 3",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 420,
+              "height": 92,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 0,
+                "padding": [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-6"
+              },
+              "children": [
+                {
+                  "id": "2162:839",
+                  "name": "Heading",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 24,
+                  "width": 420,
+                  "height": 28,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#0A0A0A",
+                      "variable": "foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "characters": "Checkbox",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Semi Bold",
+                    "fontSize": 18,
+                    "lineHeight": 28,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-lg/Semi Bold"
+                },
+                {
+                  "id": "2162:840",
+                  "name": "Frame 7",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 52,
+                  "width": 420,
+                  "height": 40,
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 10,
+                    "padding": [
+                      16,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "CENTER",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED",
+                    "counterSizing": "HUG"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_padding_top": "pt-4"
+                  },
+                  "childCount": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:21827",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1188,
+          "width": 420,
+          "height": 274,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2163:1691",
+              "name": "Menubar",
+              "type": "FRAME",
+              "x": 66,
+              "y": 41,
+              "width": 288,
+              "height": 192,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1"
+              },
+              "children": [
+                {
+                  "id": "2163:1692",
+                  "name": "Menubar",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 288,
+                  "height": 32,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 2,
+                    "padding": [
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "height": "h-8",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border",
+                    "border_bottom_weight": "border",
+                    "border_left_weight": "border",
+                    "border_right_weight": "border"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2163:1697",
+                  "name": "Menu",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 36,
+                  "width": 256,
+                  "height": 156,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "popover"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        2
+                      ],
+                      "radius": 4,
+                      "spread": -2
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        4
+                      ],
+                      "radius": 6,
+                      "spread": -1
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/shadow-md",
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "boundVariables": {
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2162:850",
+          "name": "Frame 3",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1510,
+          "width": 420,
+          "height": 92,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2162:851",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Radio",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2162:852",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 420,
+              "height": 64,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2162:853",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 420,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use MenubarRadioGroup and MenubarRadioItem for single-select options.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:21828",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1650,
+          "width": 420,
+          "height": 274,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2164:1805",
+              "name": "Menubar",
+              "type": "FRAME",
+              "x": 66,
+              "y": 41,
+              "width": 288,
+              "height": 192,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1"
+              },
+              "children": [
+                {
+                  "id": "2164:1806",
+                  "name": "Menubar",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 288,
+                  "height": 32,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 2,
+                    "padding": [
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "height": "h-8",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border",
+                    "border_bottom_weight": "border",
+                    "border_left_weight": "border",
+                    "border_right_weight": "border"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2164:1860",
+                  "name": "Menu",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 36,
+                  "width": 256,
+                  "height": 156,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "popover"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        2
+                      ],
+                      "radius": 4,
+                      "spread": -2
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        4
+                      ],
+                      "radius": 6,
+                      "spread": -1
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/shadow-md",
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "boundVariables": {
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2162:864",
+          "name": "Frame 10",
+          "type": "FRAME",
+          "x": 56,
+          "y": 1972,
+          "width": 420,
+          "height": 92,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2162:865",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "Submenu",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2162:866",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 420,
+              "height": 64,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2162:867",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 420,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "Use MenubarSub, MenubarSubTrigger, and MenubarSubContent for nested menus.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:21829",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2112,
+          "width": 420,
+          "height": 190,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2165:1909",
+              "name": "Menubar",
+              "type": "FRAME",
+              "x": 66,
+              "y": 41,
+              "width": 288,
+              "height": 108,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1"
+              },
+              "children": [
+                {
+                  "id": "2165:1910",
+                  "name": "Menubar",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 288,
+                  "height": 32,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 2,
+                    "padding": [
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "height": "h-8",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border",
+                    "border_bottom_weight": "border",
+                    "border_left_weight": "border",
+                    "border_right_weight": "border"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2165:1913",
+                  "name": "Menu",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 36,
+                  "width": 144,
+                  "height": 72,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "popover"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        2
+                      ],
+                      "radius": 4,
+                      "spread": -2
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        4
+                      ],
+                      "radius": 6,
+                      "spread": -1
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/shadow-md",
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "boundVariables": {
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2162:876",
+          "name": "Frame 19",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2350,
+          "width": 420,
+          "height": 28,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2162:877",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "With Icons",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            }
+          ]
+        },
+        {
+          "id": "2463:21830",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2426,
+          "width": 420,
+          "height": 218,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2165:1981",
+              "name": "Menubar",
+              "type": "FRAME",
+              "x": 66,
+              "y": 41,
+              "width": 288,
+              "height": 136,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MIN"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1"
+              },
+              "children": [
+                {
+                  "id": "2165:1982",
+                  "name": "Menubar",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 288,
+                  "height": 32,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 2,
+                    "padding": [
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "height": "h-8",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border",
+                    "border_bottom_weight": "border",
+                    "border_left_weight": "border",
+                    "border_right_weight": "border"
+                  },
+                  "childCount": 2
+                },
+                {
+                  "id": "2165:1985",
+                  "name": "Menu",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 36,
+                  "width": 144,
+                  "height": 100,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "popover"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        2
+                      ],
+                      "radius": 4,
+                      "spread": -2
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        4
+                      ],
+                      "radius": 6,
+                      "spread": -1
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/shadow-md",
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "boundVariables": {
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2162:969",
+          "name": "Frame 18",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2692,
+          "width": 420,
+          "height": 92,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "children": [
+            {
+              "id": "2162:970",
+              "name": "Heading",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 420,
+              "height": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "foreground"
+                }
+              ],
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "characters": "RTL",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Semi Bold",
+                "fontSize": 18,
+                "lineHeight": 28,
+                "autoResize": "HEIGHT"
+              },
+              "textStyle": "Text-lg/Semi Bold"
+            },
+            {
+              "id": "2162:971",
+              "name": "Frame 7",
+              "type": "FRAME",
+              "x": 0,
+              "y": 28,
+              "width": 420,
+              "height": 64,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 10,
+                "padding": [
+                  16,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "CENTER",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "boundVariables": {
+                "stack_padding_top": "pt-4"
+              },
+              "children": [
+                {
+                  "id": "2162:972",
+                  "name": "Description",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 16,
+                  "width": 420,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "layoutChild": {
+                    "grow": 1
+                  },
+                  "characters": "To enable RTL support in shadcn/ui, see the RTL configuration guide.",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 16,
+                    "lineHeight": 24,
+                    "autoResize": "HEIGHT"
+                  },
+                  "textStyle": "Text-base/Regular",
+                  "runs": [
+                    {
+                      "text": "To enable RTL support in shadcn/ui, see the "
+                    },
+                    {
+                      "text": "RTL configuration guide",
+                      "textDecoration": "UNDERLINE",
+                      "link": "https://ui.shadcn.com/docs/rtl"
+                    },
+                    {
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2463:21831",
+          "name": "Component preview",
+          "type": "FRAME",
+          "x": 56,
+          "y": 2832,
+          "width": 420,
+          "height": 282,
+          "strokes": [
+            {
+              "type": "SOLID",
+              "color": "#E5E5E5",
+              "variable": "border"
+            }
+          ],
+          "strokeWeight": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strokeAlign": "INSIDE",
+          "cornerRadius": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 10,
+            "padding": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "primaryAlign": "CENTER",
+            "counterAlign": "CENTER"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-10",
+            "stack_padding_top": "p-10",
+            "stack_padding_right": "p-10",
+            "stack_padding_bottom": "p-10",
+            "rectangle_top_left_corner_radius": "radius-2xl",
+            "rectangle_top_right_corner_radius": "radius-2xl",
+            "rectangle_bottom_left_corner_radius": "radius-2xl",
+            "rectangle_bottom_right_corner_radius": "radius-2xl",
+            "border_top_weight": "border",
+            "border_bottom_weight": "border",
+            "border_left_weight": "border",
+            "border_right_weight": "border"
+          },
+          "children": [
+            {
+              "id": "2165:2048",
+              "name": "Menubar",
+              "type": "FRAME",
+              "x": 66,
+              "y": 41,
+              "width": 288,
+              "height": 200,
+              "layout": {
+                "mode": "VERTICAL",
+                "gap": 4,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "MAX"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1"
+              },
+              "children": [
+                {
+                  "id": "2165:2049",
+                  "name": "Menubar",
+                  "type": "FRAME",
+                  "x": 0,
+                  "y": 0,
+                  "width": 288,
+                  "height": 32,
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "layout": {
+                    "mode": "HORIZONTAL",
+                    "gap": 2,
+                    "padding": [
+                      3,
+                      3,
+                      3,
+                      3
+                    ],
+                    "primaryAlign": "MAX",
+                    "counterAlign": "CENTER",
+                    "primarySizing": "FIXED"
+                  },
+                  "layoutChild": {
+                    "alignSelf": "STRETCH"
+                  },
+                  "boundVariables": {
+                    "stack_spacing": "gap-0,5",
+                    "height": "h-8",
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border",
+                    "border_bottom_weight": "border",
+                    "border_left_weight": "border",
+                    "border_right_weight": "border"
+                  },
+                  "childCount": 4
+                },
+                {
+                  "id": "2165:2052",
+                  "name": "Menu",
+                  "type": "FRAME",
+                  "x": 101.28,
+                  "y": 36,
+                  "width": 186.72,
+                  "height": 164,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#FFFFFF",
+                      "variable": "popover"
+                    }
+                  ],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": "#E5E5E5",
+                      "variable": "border"
+                    }
+                  ],
+                  "strokeWeight": [
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "strokeAlign": "INSIDE",
+                  "cornerRadius": [
+                    10,
+                    10,
+                    10,
+                    10
+                  ],
+                  "effects": [
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        2
+                      ],
+                      "radius": 4,
+                      "spread": -2
+                    },
+                    {
+                      "type": "DROP_SHADOW",
+                      "color": "#0000001A",
+                      "offset": [
+                        0,
+                        4
+                      ],
+                      "radius": 6,
+                      "spread": -1
+                    }
+                  ],
+                  "effectStyle": "Box Shadow/shadow-md",
+                  "layout": {
+                    "mode": "VERTICAL",
+                    "gap": 0,
+                    "padding": [
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "primaryAlign": "MIN",
+                    "counterAlign": "MIN"
+                  },
+                  "boundVariables": {
+                    "rectangle_top_left_corner_radius": "radius-lg",
+                    "rectangle_top_right_corner_radius": "radius-lg",
+                    "rectangle_bottom_left_corner_radius": "radius-lg",
+                    "rectangle_bottom_right_corner_radius": "radius-lg",
+                    "border_top_weight": "border-width",
+                    "border_bottom_weight": "border-width",
+                    "border_left_weight": "border-width",
+                    "border_right_weight": "border-width"
+                  },
+                  "childCount": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "2162:786",
+      "name": "MenubarItem",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 72,
+      "width": 264,
+      "height": 132,
+      "clipsContent": true,
+      "layout": {
+        "mode": "GRID",
+        "gap": 10,
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "State",
+            "type": "VARIANT",
+            "default": ""
+          },
+          {
+            "name": "Dir",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "border_top_weight": "border",
+        "border_bottom_weight": "border",
+        "border_left_weight": "border",
+        "border_right_weight": "border",
+        "grid_row_gap": "gap-6",
+        "grid_column_gap": "gap-6"
+      },
+      "children": [
+        {
+          "id": "2162:787",
+          "name": "State=Default, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 0,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          },
+          "children": [
+            {
+              "id": "2162:789",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:790",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:791",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 87,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:792",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:793",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 65,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "2162:794",
+          "name": "State=Hover, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 52,
+          "width": 120,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#F5F5F5",
+              "variable": "accent"
+            }
+          ],
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          },
+          "children": [
+            {
+              "id": "2162:796",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:797",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:799",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 87,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:800",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:798",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 65,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "2162:801",
+          "name": "State=Disabled, Dir=LTR",
+          "type": "COMPONENT",
+          "x": 0,
+          "y": 104,
+          "width": 120,
+          "height": 28,
+          "opacity": 0.5,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md",
+            "opacity": "opacity-50"
+          },
+          "children": [
+            {
+              "id": "2162:803",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:804",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:806",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 87,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:807",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:805",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 65,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "2162:808",
+          "name": "State=Default, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 144,
+          "y": 0,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          },
+          "children": [
+            {
+              "id": "2162:811",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:809",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:810",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:813",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "align": "RIGHT",
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:814",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 98,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "2162:815",
+          "name": "State=Hover, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 144,
+          "y": 52,
+          "width": 120,
+          "height": 28,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#F5F5F5",
+              "variable": "accent"
+            }
+          ],
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          },
+          "children": [
+            {
+              "id": "2162:816",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:817",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:818",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:820",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "align": "RIGHT",
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:821",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 98,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "2162:822",
+          "name": "State=Disabled, Dir=RTL",
+          "type": "COMPONENT",
+          "x": 144,
+          "y": 104,
+          "width": 120,
+          "height": 28,
+          "opacity": 0.5,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "component": {
+            "kind": "COMPONENT",
+            "propertyDefinitions": [
+              {
+                "name": "Left icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Right icon",
+                "type": "BOOL",
+                "default": false
+              },
+              {
+                "name": "Shortcut",
+                "type": "BOOL",
+                "default": false
+              }
+            ]
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md",
+            "opacity": "opacity-50"
+          },
+          "children": [
+            {
+              "id": "2162:823",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            },
+            {
+              "id": "2162:824",
+              "name": "Shortcut",
+              "type": "FRAME",
+              "visible": false,
+              "x": 6,
+              "y": 6,
+              "width": 27,
+              "height": 16,
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "counterSizing": "HUG"
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5"
+              },
+              "children": [
+                {
+                  "id": "2162:825",
+                  "name": "⌘+T",
+                  "type": "TEXT",
+                  "x": 0,
+                  "y": 0,
+                  "width": 27,
+                  "height": 16,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": "#737373",
+                      "variable": "muted-foreground"
+                    }
+                  ],
+                  "characters": "⌘+T",
+                  "text": {
+                    "fontFamily": "Inter",
+                    "fontStyle": "Regular",
+                    "fontSize": 12,
+                    "lineHeight": 16,
+                    "autoResize": "WIDTH_AND_HEIGHT",
+                    "maxLines": 1,
+                    "truncation": "ENDING"
+                  },
+                  "textStyle": "Text-xs/Regular"
+                }
+              ]
+            },
+            {
+              "id": "2162:827",
+              "name": "Menubar Item",
+              "type": "TEXT",
+              "x": 6,
+              "y": 4,
+              "width": 108,
+              "height": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#0A0A0A",
+                  "variable": "popover-foreground"
+                }
+              ],
+              "layoutChild": {
+                "grow": 1
+              },
+              "characters": "Menubar Item",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 14,
+                "lineHeight": 20,
+                "align": "RIGHT",
+                "autoResize": "HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-sm/Regular"
+            },
+            {
+              "id": "2162:828",
+              "name": "lucide/check",
+              "type": "INSTANCE",
+              "visible": false,
+              "x": 98,
+              "y": 6,
+              "width": 16,
+              "height": 16,
+              "clipsContent": true,
+              "component": {
+                "mainComponent": "lucide/check",
+                "mainComponentId": "128:576",
+                "overrides": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2162:787",
+      "name": "State=Default, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 0,
+      "width": 120,
+      "height": 28,
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md"
+      },
+      "children": [
+        {
+          "id": "2162:789",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:790",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:791",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 87,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:792",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:793",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 65,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:794",
+      "name": "State=Hover, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 52,
+      "width": 120,
+      "height": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#F5F5F5",
+          "variable": "accent"
+        }
+      ],
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md"
+      },
+      "children": [
+        {
+          "id": "2162:796",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:797",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:799",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 87,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:800",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:798",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 65,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:801",
+      "name": "State=Disabled, Dir=LTR",
+      "type": "COMPONENT",
+      "x": 0,
+      "y": 104,
+      "width": 120,
+      "height": 28,
+      "opacity": 0.5,
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md",
+        "opacity": "opacity-50"
+      },
+      "children": [
+        {
+          "id": "2162:803",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:804",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:806",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 87,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:807",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:805",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 65,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:808",
+      "name": "State=Default, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 144,
+      "y": 0,
+      "width": 120,
+      "height": 28,
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md"
+      },
+      "children": [
+        {
+          "id": "2162:811",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:809",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:810",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:813",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "align": "RIGHT",
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:814",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 98,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:815",
+      "name": "State=Hover, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 144,
+      "y": 52,
+      "width": 120,
+      "height": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "color": "#F5F5F5",
+          "variable": "accent"
+        }
+      ],
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md"
+      },
+      "children": [
+        {
+          "id": "2162:816",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:817",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:818",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:820",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "align": "RIGHT",
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:821",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 98,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:822",
+      "name": "State=Disabled, Dir=RTL",
+      "type": "COMPONENT",
+      "x": 144,
+      "y": 104,
+      "width": 120,
+      "height": 28,
+      "opacity": 0.5,
+      "cornerRadius": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 6,
+        "padding": [
+          4,
+          6,
+          4,
+          6
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT",
+        "propertyDefinitions": [
+          {
+            "name": "Left icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Right icon",
+            "type": "BOOL",
+            "default": false
+          },
+          {
+            "name": "Shortcut",
+            "type": "BOOL",
+            "default": false
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-1,5",
+        "stack_padding_left": "px-1,5",
+        "stack_padding_top": "py-1",
+        "stack_padding_right": "px-1,5",
+        "stack_padding_bottom": "py-1",
+        "rectangle_top_left_corner_radius": "rounded-md",
+        "rectangle_top_right_corner_radius": "rounded-md",
+        "rectangle_bottom_left_corner_radius": "rounded-md",
+        "rectangle_bottom_right_corner_radius": "rounded-md",
+        "opacity": "opacity-50"
+      },
+      "children": [
+        {
+          "id": "2162:823",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        },
+        {
+          "id": "2162:824",
+          "name": "Shortcut",
+          "type": "FRAME",
+          "visible": false,
+          "x": 6,
+          "y": 6,
+          "width": 27,
+          "height": 16,
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "counterSizing": "HUG"
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5"
+          },
+          "children": [
+            {
+              "id": "2162:825",
+              "name": "⌘+T",
+              "type": "TEXT",
+              "x": 0,
+              "y": 0,
+              "width": 27,
+              "height": 16,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": "#737373",
+                  "variable": "muted-foreground"
+                }
+              ],
+              "characters": "⌘+T",
+              "text": {
+                "fontFamily": "Inter",
+                "fontStyle": "Regular",
+                "fontSize": 12,
+                "lineHeight": 16,
+                "autoResize": "WIDTH_AND_HEIGHT",
+                "maxLines": 1,
+                "truncation": "ENDING"
+              },
+              "textStyle": "Text-xs/Regular"
+            }
+          ]
+        },
+        {
+          "id": "2162:827",
+          "name": "Menubar Item",
+          "type": "TEXT",
+          "x": 6,
+          "y": 4,
+          "width": 108,
+          "height": 20,
+          "fills": [
+            {
+              "type": "SOLID",
+              "color": "#0A0A0A",
+              "variable": "popover-foreground"
+            }
+          ],
+          "layoutChild": {
+            "grow": 1
+          },
+          "characters": "Menubar Item",
+          "text": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "align": "RIGHT",
+            "autoResize": "HEIGHT",
+            "maxLines": 1,
+            "truncation": "ENDING"
+          },
+          "textStyle": "Text-sm/Regular"
+        },
+        {
+          "id": "2162:828",
+          "name": "lucide/check",
+          "type": "INSTANCE",
+          "visible": false,
+          "x": 98,
+          "y": 6,
+          "width": 16,
+          "height": 16,
+          "clipsContent": true,
+          "component": {
+            "mainComponent": "lucide/check",
+            "mainComponentId": "128:576",
+            "overrides": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "2162:829",
+      "name": "MenubarGroup",
+      "type": "COMPONENT_SET",
+      "x": 0,
+      "y": 492,
+      "width": 168,
+      "height": 188,
+      "strokes": [
+        {
+          "type": "SOLID",
+          "color": "#E5E5E5",
+          "variable": "border"
+        }
+      ],
+      "strokeWeight": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "strokeAlign": "INSIDE",
+      "cornerRadius": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "clipsContent": true,
+      "layout": {
+        "mode": "HORIZONTAL",
+        "gap": 16,
+        "padding": [
+          20,
+          20,
+          20,
+          20
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN",
+        "counterSizing": "HUG"
+      },
+      "component": {
+        "kind": "COMPONENT_SET",
+        "propertyDefinitions": [
+          {
+            "name": "Type",
+            "type": "VARIANT",
+            "default": ""
+          }
+        ]
+      },
+      "boundVariables": {
+        "stack_spacing": "gap-4",
+        "stack_padding_left": "p-5",
+        "stack_padding_top": "p-5",
+        "stack_padding_right": "p-5",
+        "stack_padding_bottom": "p-5",
+        "rectangle_top_left_corner_radius": "radius-xl",
+        "rectangle_top_right_corner_radius": "radius-xl",
+        "rectangle_bottom_left_corner_radius": "radius-xl",
+        "rectangle_bottom_right_corner_radius": "radius-xl",
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "2162:830",
+          "name": "Type=Default",
+          "type": "COMPONENT",
+          "x": 20,
+          "y": 20,
+          "width": 128,
+          "height": 148,
+          "layout": {
+            "mode": "VERTICAL",
+            "gap": 0,
+            "padding": [
+              4,
+              4,
+              4,
+              4
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "MIN"
+          },
+          "component": {
+            "kind": "COMPONENT"
+          },
+          "boundVariables": {
+            "stack_padding_left": "p-1",
+            "stack_padding_top": "p-1",
+            "stack_padding_right": "p-1",
+            "stack_padding_bottom": "p-1",
+            "border_top_weight": "border-width",
+            "border_bottom_weight": "border-width",
+            "border_left_weight": "border-width",
+            "border_right_weight": "border-width"
+          },
+          "children": [
+            {
+              "id": "2163:1573",
+              "name": "MenubarItem",
+              "type": "INSTANCE",
+              "x": 4,
+              "y": 4,
+              "width": 120,
+              "height": 28,
+              "cornerRadius": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  4,
+                  6,
+                  4,
+                  6
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "2162:787",
+                "componentSet": "MenubarItem",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR"
+                }
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-1,5",
+                "stack_padding_top": "py-1",
+                "stack_padding_right": "px-1,5",
+                "stack_padding_bottom": "py-1",
+                "rectangle_top_left_corner_radius": "rounded-md",
+                "rectangle_top_right_corner_radius": "rounded-md",
+                "rectangle_bottom_left_corner_radius": "rounded-md",
+                "rectangle_bottom_right_corner_radius": "rounded-md"
+              }
+            },
+            {
+              "id": "2163:1555",
+              "name": "MenubarItem",
+              "type": "INSTANCE",
+              "x": 4,
+              "y": 32,
+              "width": 120,
+              "height": 28,
+              "cornerRadius": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  4,
+                  6,
+                  4,
+                  6
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "2162:787",
+                "componentSet": "MenubarItem",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR"
+                }
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-1,5",
+                "stack_padding_top": "py-1",
+                "stack_padding_right": "px-1,5",
+                "stack_padding_bottom": "py-1",
+                "rectangle_top_left_corner_radius": "rounded-md",
+                "rectangle_top_right_corner_radius": "rounded-md",
+                "rectangle_bottom_left_corner_radius": "rounded-md",
+                "rectangle_bottom_right_corner_radius": "rounded-md"
+              }
+            },
+            {
+              "id": "2163:1579",
+              "name": "MenubarItem",
+              "type": "INSTANCE",
+              "x": 4,
+              "y": 60,
+              "width": 120,
+              "height": 28,
+              "cornerRadius": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  4,
+                  6,
+                  4,
+                  6
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "2162:787",
+                "componentSet": "MenubarItem",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR"
+                }
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-1,5",
+                "stack_padding_top": "py-1",
+                "stack_padding_right": "px-1,5",
+                "stack_padding_bottom": "py-1",
+                "rectangle_top_left_corner_radius": "rounded-md",
+                "rectangle_top_right_corner_radius": "rounded-md",
+                "rectangle_bottom_left_corner_radius": "rounded-md",
+                "rectangle_bottom_right_corner_radius": "rounded-md"
+              }
+            },
+            {
+              "id": "2163:1567",
+              "name": "MenubarItem",
+              "type": "INSTANCE",
+              "x": 4,
+              "y": 88,
+              "width": 120,
+              "height": 28,
+              "cornerRadius": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  4,
+                  6,
+                  4,
+                  6
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "2162:787",
+                "componentSet": "MenubarItem",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR"
+                }
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-1,5",
+                "stack_padding_top": "py-1",
+                "stack_padding_right": "px-1,5",
+                "stack_padding_bottom": "py-1",
+                "rectangle_top_left_corner_radius": "rounded-md",
+                "rectangle_top_right_corner_radius": "rounded-md",
+                "rectangle_bottom_left_corner_radius": "rounded-md",
+                "rectangle_bottom_right_corner_radius": "rounded-md"
+              }
+            },
+            {
+              "id": "2163:1561",
+              "name": "MenubarItem",
+              "type": "INSTANCE",
+              "x": 4,
+              "y": 116,
+              "width": 120,
+              "height": 28,
+              "cornerRadius": [
+                6,
+                6,
+                6,
+                6
+              ],
+              "layout": {
+                "mode": "HORIZONTAL",
+                "gap": 6,
+                "padding": [
+                  4,
+                  6,
+                  4,
+                  6
+                ],
+                "primaryAlign": "MIN",
+                "counterAlign": "CENTER",
+                "primarySizing": "FIXED",
+                "counterSizing": "HUG"
+              },
+              "layoutChild": {
+                "alignSelf": "STRETCH"
+              },
+              "component": {
+                "mainComponent": "State=Default, Dir=LTR",
+                "mainComponentId": "2162:787",
+                "componentSet": "MenubarItem",
+                "properties": {
+                  "State": "Default",
+                  "Dir": "LTR"
+                }
+              },
+              "boundVariables": {
+                "stack_spacing": "gap-1,5",
+                "stack_padding_left": "px-1,5",
+                "stack_padding_top": "py-1",
+                "stack_padding_right": "px-1,5",
+                "stack_padding_bottom": "py-1",
+                "rectangle_top_left_corner_radius": "rounded-md",
+                "rectangle_top_right_corner_radius": "rounded-md",
+                "rectangle_bottom_left_corner_radius": "rounded-md",
+                "rectangle_bottom_right_corner_radius": "rounded-md"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2162:830",
+      "name": "Type=Default",
+      "type": "COMPONENT",
+      "x": 20,
+      "y": 20,
+      "width": 128,
+      "height": 148,
+      "layout": {
+        "mode": "VERTICAL",
+        "gap": 0,
+        "padding": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "primaryAlign": "MIN",
+        "counterAlign": "MIN"
+      },
+      "component": {
+        "kind": "COMPONENT"
+      },
+      "boundVariables": {
+        "stack_padding_left": "p-1",
+        "stack_padding_top": "p-1",
+        "stack_padding_right": "p-1",
+        "stack_padding_bottom": "p-1",
+        "border_top_weight": "border-width",
+        "border_bottom_weight": "border-width",
+        "border_left_weight": "border-width",
+        "border_right_weight": "border-width"
+      },
+      "children": [
+        {
+          "id": "2163:1573",
+          "name": "MenubarItem",
+          "type": "INSTANCE",
+          "x": 4,
+          "y": 4,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "component": {
+            "mainComponent": "State=Default, Dir=LTR",
+            "mainComponentId": "2162:787",
+            "componentSet": "MenubarItem",
+            "properties": {
+              "State": "Default",
+              "Dir": "LTR"
+            }
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          }
+        },
+        {
+          "id": "2163:1555",
+          "name": "MenubarItem",
+          "type": "INSTANCE",
+          "x": 4,
+          "y": 32,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "component": {
+            "mainComponent": "State=Default, Dir=LTR",
+            "mainComponentId": "2162:787",
+            "componentSet": "MenubarItem",
+            "properties": {
+              "State": "Default",
+              "Dir": "LTR"
+            }
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          }
+        },
+        {
+          "id": "2163:1579",
+          "name": "MenubarItem",
+          "type": "INSTANCE",
+          "x": 4,
+          "y": 60,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "component": {
+            "mainComponent": "State=Default, Dir=LTR",
+            "mainComponentId": "2162:787",
+            "componentSet": "MenubarItem",
+            "properties": {
+              "State": "Default",
+              "Dir": "LTR"
+            }
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          }
+        },
+        {
+          "id": "2163:1567",
+          "name": "MenubarItem",
+          "type": "INSTANCE",
+          "x": 4,
+          "y": 88,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "component": {
+            "mainComponent": "State=Default, Dir=LTR",
+            "mainComponentId": "2162:787",
+            "componentSet": "MenubarItem",
+            "properties": {
+              "State": "Default",
+              "Dir": "LTR"
+            }
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          }
+        },
+        {
+          "id": "2163:1561",
+          "name": "MenubarItem",
+          "type": "INSTANCE",
+          "x": 4,
+          "y": 116,
+          "width": 120,
+          "height": 28,
+          "cornerRadius": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "layout": {
+            "mode": "HORIZONTAL",
+            "gap": 6,
+            "padding": [
+              4,
+              6,
+              4,
+              6
+            ],
+            "primaryAlign": "MIN",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "HUG"
+          },
+          "layoutChild": {
+            "alignSelf": "STRETCH"
+          },
+          "component": {
+            "mainComponent": "State=Default, Dir=LTR",
+            "mainComponentId": "2162:787",
+            "componentSet": "MenubarItem",
+            "properties": {
+              "State": "Default",
+              "Dir": "LTR"
+            }
+          },
+          "boundVariables": {
+            "stack_spacing": "gap-1,5",
+            "stack_padding_left": "px-1,5",
+            "stack_padding_top": "py-1",
+            "stack_padding_right": "px-1,5",
+            "stack_padding_bottom": "py-1",
+            "rectangle_top_left_corner_radius": "rounded-md",
+            "rectangle_top_right_corner_radius": "rounded-md",
+            "rectangle_bottom_left_corner_radius": "rounded-md",
+            "rectangle_bottom_right_corner_radius": "rounded-md"
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "All reported sets and standalone components on this page. Normalized visual trees are limited to depth 3; native FIG export retains deeper editable trees. Hidden source variants are included in the component inventory.",
+  "unestablished": [
+    "runtime public API and event payloads",
+    "state transitions and commitment/cancellation",
+    "native or ARIA semantics, names, keyboard and focus",
+    "responsive adaptation and runtime contrast",
+    "full token variable-to-DTCG mapping"
+  ]
+}

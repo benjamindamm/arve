@@ -1,0 +1,58 @@
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="Collapsible" initial="control">
+  <datamodel>
+    <data id="controlled" expr="false" />
+    <data id="disabled" expr="false" />
+    <data id="open" expr="false" />
+    <data id="preventUnmount" expr="false" />
+    <data id="modal" expr="false" />
+    <data id="disablePointerDismissal" expr="false" />
+  </datamodel>
+  <state id="control" initial="closed">
+    <transition event="SET_CONTROLLED" cond="typeof _event.data.controlled === 'boolean'">
+      <assign location="controlled" expr="_event.data.controlled" />
+    </transition>
+    <transition event="SET_DISABLED" cond="typeof _event.data.disabled === 'boolean'">
+      <assign location="disabled" expr="_event.data.disabled" />
+    </transition>
+    <state id="closed">
+      <transition event="TRIGGER_PRESS" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="true" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="TRIGGER_PRESS" target="expanded" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="true" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="true" />
+      </transition>
+    </state>
+    <state id="expanded">
+      <transition event="TRIGGER_PRESS" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; (controlled || _event.data.eventDetails.isCanceled)">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+      </transition>
+      <transition event="TRIGGER_PRESS" target="closed" cond="(!disabled) &amp;&amp; !!_event.data.eventDetails &amp;&amp; !controlled &amp;&amp; !_event.data.eventDetails.isCanceled">
+        <send event="onOpenChange" target="#_parent">
+          <param name="open" expr="false" />
+          <param name="eventDetails" expr="_event.data.eventDetails" />
+        </send>
+        <assign location="open" expr="false" />
+        <assign location="preventUnmount" expr="!!_event.data.preventUnmount" />
+      </transition>
+    </state>
+    <transition event="SET_OPEN" target="closed" cond="typeof _event.data.open === 'boolean' &amp;&amp; _event.data.open === false &amp;&amp; open !== _event.data.open">
+      <assign location="open" expr="false" />
+      <assign location="preventUnmount" expr="false" />
+    </transition>
+    <transition event="SET_OPEN" target="expanded" cond="typeof _event.data.open === 'boolean' &amp;&amp; _event.data.open === true &amp;&amp; open !== _event.data.open">
+      <assign location="open" expr="true" />
+      <assign location="preventUnmount" expr="false" />
+    </transition>
+    <transition event="ESCAPE OUTSIDE_PRESS FOCUS_IN FOCUS_OUT" />
+  </state>
+</scxml>

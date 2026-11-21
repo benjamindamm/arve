@@ -1,0 +1,90 @@
+{
+  "componentId": "shadcn:Item",
+  "referenceComposition": "<div role=\"list\" data-slot=\"item-group\"><div role=\"listitem\" data-slot=\"item\" class=\"cn-item cn-item-variant-outline cn-item-size-default\"><div data-slot=\"item-header\">Reports</div><div data-slot=\"item-media\" data-variant=\"icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6 3h9l3 3v15H6z\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"item-content\"><div data-slot=\"item-title\"><h3>Annual report</h3></div><p data-slot=\"item-description\">Current financial year</p></div><div data-slot=\"item-actions\"><button type=\"button\">Open report</button></div><div data-slot=\"item-footer\">24 pages</div></div><div data-slot=\"item-separator\" data-orientation=\"horizontal\" role=\"separator\" aria-hidden=\"true\"></div><div role=\"listitem\" data-slot=\"item\" class=\"cn-item cn-item-variant-muted cn-item-size-xs\"><div data-slot=\"item-media\" data-variant=\"icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M6 3h9l3 3v15H6z\" fill=\"none\" stroke=\"currentColor\"/></svg></div><div data-slot=\"item-content\"><div data-slot=\"item-title\"><h3>Annual report</h3></div><p data-slot=\"item-description\">Current financial year</p></div><div data-slot=\"item-actions\"><button type=\"button\">Open report</button></div></div></div>",
+  "sourceFacts": "Exact wrapper props/slots/native output from sources/react-api-inventory.json and pinned code.",
+  "contentAlternative": "The item heading, metadata and action identify the content without relying on its media icon.",
+  "updatesAndDescendants": "The default Item is a native content container; useRender can choose a native link/button. ItemActions contains independently named controls. Updates are parent React rerenders; Item itself has no selection, loading or command state.",
+  "referenceDecision": "The supplied heading and download action are concrete reference children. Nested whole-item and secondary interactive targets must not create invalid nested buttons/anchors.",
+  "keyboard": "This default content wrapper does not install a keyboard listener or roving focus. Native links/buttons/inputs in the chosen children retain their own documented semantics. Label delegates native focus through its associated control.",
+  "naming": "The HTML projection identifies all required visible content/labels. No unnecessary ARIA role/name is imposed on native text, headings, kbd or tables.",
+  "semanticParts": {
+    "group": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-group\"]",
+      "description": "Actual role=list; caller supplies listitem roles on noninteractive rows."
+    },
+    "separator": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-separator\"]",
+      "description": "Actual composed horizontal Separator; decorative in this list usage."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"item\"]",
+      "description": "Actual default div or explicit native render override."
+    },
+    "media": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-media\"]",
+      "description": "Actual default/icon/image media variant wrapper."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-content\"]",
+      "description": "Flexible title/description stack."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-title\"]",
+      "description": "Title wrapper with explicit caller heading."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-description\"]",
+      "description": "Native description paragraph."
+    },
+    "actions": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-actions\"]",
+      "description": "Independent caller actions; omitted from a whole-row anchor."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-header\"]",
+      "description": "Full-row optional header content."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"item-footer\"]",
+      "description": "Full-row optional footer content."
+    }
+  },
+  "visualStateMapping": {
+    "variant": {
+      "prop": "variant",
+      "classes": [
+        "cn-item-variant-default",
+        "cn-item-variant-outline",
+        "cn-item-variant-muted"
+      ]
+    },
+    "size": {
+      "prop": "size",
+      "classes": [
+        "cn-item-size-default",
+        "cn-item-size-sm",
+        "cn-item-size-xs"
+      ]
+    },
+    "media": {
+      "declaration": "ItemMedia",
+      "prop": "variant",
+      "attribute": "data-variant",
+      "values": [
+        "default",
+        "icon",
+        "image"
+      ]
+    }
+  }
+}

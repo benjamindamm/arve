@@ -1,0 +1,19 @@
+{
+  "purpose": "Present a sequence of execution or activity steps.",
+  "avoid": "Visual nesting does not define status or chronology.",
+  "classification": "author-interpretation",
+  "basis": "Native source page 2731:3260 (Trace), observed anatomy and examples.",
+  "profile": "content-display/1",
+  "profileRationale": "Meaningful dynamic content/container; no user-set value on the root. Actual native scroll or delegated disclosure/action behavior remains explicitly described and exercised, rather than being classified as decorative.",
+  "componentId": "shadcn:Trace",
+  "contentAlternative": "TraceTitle/Description carry actual step/status/error text; TraceIcon is hidden by the source. Running shimmer, opacity and red color do not replace status wording. Expanded detail is readable native content.",
+  "updatesAndDescendants": "Trace and line/title/description are passive wrappers. TraceLine status is running|error|pending; there is no automatic successful state, log transport or retry action. TraceTitle includes motion-reduce:shimmer-none. Optional TraceCollapsible/Trigger/Content delegate the actual Collapsible component. Its controlled open prop requires onOpenChange in the wrapper union; defaultOpen remains available. Trigger Enter/Space toggles, disabled suppresses changes, cancellation/control authority follows Collapsible; Escape does not close it and focus is not trapped.",
+  "referenceDecision": "This family deliberately composes the complete Collapsible reference for disclosure behavior, rather than pretending all trace lines are decorative or inventing an independent trace expansion API. Error/recovery wording is caller content; optional live announcements are task-owned.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/trace.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/trace.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/trace-example.tsx.source"
+  ],
+  "primitiveDocs": []
+}

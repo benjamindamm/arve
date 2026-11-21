@@ -1,0 +1,457 @@
+{
+  "result": "PASS",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "baseUI": "1.9.0",
+  "scope": "Actual source menus: focusable disabled commands, checkbox/radio keep-open defaults, command vs root-close veto, nested Escape, typeahead, parent menubar switching; native right-click plus complete keyboard-operable visible context alternative. Shift+F10 is not claimed as a registered source shortcut.",
+  "caseCount": 30,
+  "families": [
+    {
+      "cases": [
+        {
+          "expected": {
+            "focus": "Save report",
+            "open": "true"
+          },
+          "name": "native opening arrow highlights actual first command",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "focus": "Save report",
+            "menus": 1,
+            "open": "true",
+            "view": "compact"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Unavailable command"
+          },
+          "name": "source disabled command stays focusable",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "focus": "Unavailable command",
+            "menus": 1,
+            "open": "true",
+            "view": "compact"
+          }
+        },
+        {
+          "expected": {
+            "commands": "0",
+            "open": "true"
+          },
+          "name": "disabled command cannot activate or dismiss",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "focus": "Unavailable command",
+            "menus": 1,
+            "open": "true",
+            "view": "compact"
+          }
+        },
+        {
+          "expected": {
+            "checked": "true",
+            "open": "true"
+          },
+          "name": "checkbox setting toggles and stays open by source default",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Show grid",
+            "menus": 1,
+            "open": "true",
+            "view": "compact"
+          }
+        },
+        {
+          "expected": {
+            "open": "true",
+            "view": "comfortable"
+          },
+          "name": "radio setting chooses real value and stays open",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Comfortable",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "checked": "true"
+          },
+          "name": "canceled setting request preserves actual controlled setting",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Show grid",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "open": "true"
+          },
+          "name": "canceled root close preserves popup",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Show grid",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "open": "true"
+          },
+          "name": "root close veto does not undo the real command callback",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Save report",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "focus": "PDF export",
+            "menus": 2
+          },
+          "name": "submenu arrow opens independently owned child",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "PDF export",
+            "menus": 2,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Export formats",
+            "menus": 1,
+            "open": "true"
+          },
+          "name": "default child Escape closes child and returns to owner without closing parent",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Export formats",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Save report"
+          },
+          "name": "Home highlights first source command",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Save report",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "name": "typeahead highlights a matching item without changing chosen setting",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Compact",
+            "menus": 1,
+            "open": "true",
+            "view": "comfortable"
+          }
+        },
+        {
+          "expected": {
+            "focus": "Report actions",
+            "open": "false"
+          },
+          "name": "accepted Escape closes root and restores owning trigger",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Report actions",
+            "menus": 0,
+            "open": "false",
+            "view": "comfortable"
+          }
+        },
+        {
+          "name": "actual item preventBaseUIHandler allows command but prevents internal default close",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "open": "true"
+          }
+        }
+      ],
+      "family": "dropdown-menu"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "commands": "0",
+            "open": "true"
+          },
+          "name": "real right-button contextmenu opens without accidental release activation",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "focus": "Report actions",
+            "inMenu": true,
+            "open": "true"
+          }
+        },
+        {
+          "expected": {
+            "checked": "true",
+            "open": "true"
+          },
+          "name": "actual context checkbox toggles and stays open",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Show grid",
+            "inMenu": true,
+            "open": "true"
+          }
+        },
+        {
+          "expected": {
+            "commands": "0",
+            "open": "true"
+          },
+          "name": "source-focusable disabled item cannot commit command",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "Unavailable command",
+            "inMenu": true,
+            "open": "true"
+          }
+        },
+        {
+          "expected": {
+            "inMenu": false,
+            "open": "false"
+          },
+          "name": "accepted Escape dismisses without trapping focus in removed menu",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "focus": "context-menu source menu Cancel menu changesReport previewRight click for contextual commands, or use the visible Report actions button.Report actionsAfter menufalsetruecompact0escape-keynone\n",
+            "inMenu": false,
+            "open": "false"
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "focus": "Report actions",
+            "open": "false"
+          },
+          "name": "visible equivalent path is fully keyboard operable and returns its own trigger",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "focus": "Report actions",
+            "inMenu": false,
+            "open": "false"
+          }
+        },
+        {
+          "name": "visible keyboard alternative includes actual checkbox setting, not only primary command",
+          "result": "pass",
+          "state": "true"
+        },
+        {
+          "name": "visible keyboard alternative includes every radio setting",
+          "result": "pass",
+          "state": "comfortable"
+        },
+        {
+          "name": "visible keyboard alternative reaches nested PDF command and restores its own trigger",
+          "result": "pass",
+          "state": {
+            "commands": "1",
+            "focus": "Report actions"
+          }
+        }
+      ],
+      "family": "context-menu"
+    },
+    {
+      "cases": [
+        {
+          "expected": {
+            "commands": "0",
+            "focus": "Edit",
+            "menus": 0
+          },
+          "name": "closed bar Right moves to sibling trigger without command activation",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "fileOpen": "false",
+            "focus": "Edit",
+            "focusRole": "menuitem",
+            "menus": 0
+          }
+        },
+        {
+          "expected": {
+            "fileOpen": "false",
+            "focus": "Undo edit",
+            "menus": 1
+          },
+          "name": "opening sibling menu focuses actual command",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "fileOpen": "false",
+            "focus": "Undo edit",
+            "focusRole": "menuitem",
+            "menus": 1
+          }
+        },
+        {
+          "expected": {
+            "fileOpen": "true",
+            "focusRole": "menu",
+            "menus": 1
+          },
+          "name": "parent bar Left switches owned popups and initially focuses new menu surface",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "fileOpen": "true",
+            "focus": "Save reportUnavailable commandShow gridVeto later changesCompactComfortableExport formats",
+            "focusRole": "menu",
+            "menus": 1
+          }
+        },
+        {
+          "expected": {
+            "focus": "Save report"
+          },
+          "name": "source Down enters first command after sibling switch",
+          "result": "pass",
+          "state": {
+            "checked": "false",
+            "commands": "0",
+            "fileOpen": "true",
+            "focus": "Save report",
+            "focusRole": "menuitem",
+            "menus": 1
+          }
+        },
+        {
+          "expected": {
+            "checked": "true",
+            "fileOpen": "true"
+          },
+          "name": "Menubar checkbox wrapper retains setting and default keep-open policy",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "fileOpen": "true",
+            "focus": "Show grid",
+            "focusRole": "menuitemcheckbox",
+            "menus": 1
+          }
+        },
+        {
+          "expected": {
+            "fileOpen": "false",
+            "focus": "File"
+          },
+          "name": "Escape returns to actual owning top-level trigger",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "0",
+            "fileOpen": "false",
+            "focus": "File",
+            "focusRole": "menuitem",
+            "menus": 0
+          }
+        },
+        {
+          "expected": {
+            "commands": "1",
+            "focus": "Edit",
+            "menus": 0
+          },
+          "name": "real command executes once and dismisses its own menu",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "fileOpen": "false",
+            "focus": "Edit",
+            "focusRole": "menuitem",
+            "menus": 0
+          }
+        },
+        {
+          "expected": {
+            "focus": "After menu"
+          },
+          "name": "Tab exits persistent bar to next native control",
+          "result": "pass",
+          "state": {
+            "checked": "true",
+            "commands": "1",
+            "fileOpen": "false",
+            "focus": "After menu",
+            "focusRole": null,
+            "menus": 0
+          }
+        }
+      ],
+      "family": "menubar"
+    }
+  ]
+}

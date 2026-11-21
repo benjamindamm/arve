@@ -1,0 +1,74 @@
+{
+  "componentId": "shadcn:AlertDialog",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<button type=\"button\" data-slot=\"alert-dialog-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open alert-dialog</button><div data-slot=\"alert-dialog-overlay\" aria-hidden=\"true\"></div><div data-slot=\"alert-dialog-content\" role=\"alertdialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-size=\"default\"><div data-slot=\"alert-dialog-header\"><div data-slot=\"alert-dialog-media\" aria-hidden=\"true\">!</div><h2 data-slot=\"alert-dialog-title\" id=\"overlay-title\">Delete project?</h2><p data-slot=\"alert-dialog-description\" id=\"overlay-description\">This action cannot be undone.</p></div><div data-slot=\"alert-dialog-footer\"><button type=\"button\" data-slot=\"alert-dialog-cancel\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Cancel deletion</button><button type=\"button\" data-slot=\"alert-dialog-action\" class=\"cn-button cn-button-variant-destructive cn-button-size-default\">Confirm deletion</button></div></div>",
+  "keyboardAndFocus": "The alert dialog is modal. This reference chooses Cancel as initialFocus using the actual Popup prop. Tab remains inside; Escape/Cancel dismiss without confirming and return focus. Outside press is ignored by the primitive.",
+  "sourceRule": "The pinned AlertDialogAction is an ordinary Button, not a Close wrapper. Its onClick invokes the caller action and does not automatically close the alert dialog. AlertDialogCancel wraps the primitive Close. The caller explicitly closes after successful work when desired; cancellation never emits a destructive confirmation.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "controller",
+      "description": "Owns open/modal state without a DOM root."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-trigger\"]",
+      "description": "Actual primitive native trigger."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-content\"]",
+      "description": "Actual focus-managed popup surface."
+    },
+    "overlay": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-overlay\"]",
+      "description": "Actual modal backdrop; Sheet owns its unexported internal wrapper through Content."
+    },
+    "header": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-header\"]",
+      "description": "Intrinsic heading stack."
+    },
+    "footer": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-footer\"]",
+      "description": "Actions, kept in caller order."
+    },
+    "title": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-title\"]",
+      "description": "Actual heading named by primitive relation."
+    },
+    "description": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-description\"]",
+      "description": "Actual descriptive paragraph."
+    },
+    "portal": {
+      "kind": "controller",
+      "description": "Portal ownership, not a styled anatomy element."
+    },
+    "media": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-media\"]",
+      "description": "Optional native media tile."
+    },
+    "cancel": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-cancel\"]",
+      "description": "Primitive Close rendered through Button."
+    },
+    "action": {
+      "kind": "element",
+      "selector": "[data-slot=\"alert-dialog-action\"]",
+      "description": "Button action; the caller owns confirmation and closing."
+    }
+  },
+  "visualStateMapping": {
+    "placement": "Actual public size"
+  }
+}

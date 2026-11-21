@@ -1,0 +1,61 @@
+{
+  "componentId": "shadcn:Accordion",
+  "nativeProjectionState": "open",
+  "closedProjection": "aria-expanded=false; panel unmounted by default, or hidden/noninteractive if the source keepMounted option is explicitly chosen.",
+  "semantics": "<div data-slot=\"accordion\"><div data-slot=\"accordion-item\" data-value=\"alpha\"><h3><button type=\"button\" data-slot=\"accordion-trigger\" id=\"accordion-trigger-alpha\" aria-expanded=\"true\" aria-controls=\"accordion-panel-alpha\">First section<svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 9 6 6 6-6\" fill=\"none\" stroke=\"currentColor\"/></svg><svg data-slot=\"accordion-trigger-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"m6 15 6-6 6 6\" fill=\"none\" stroke=\"currentColor\"/></svg></button></h3><div data-slot=\"accordion-content\" id=\"accordion-panel-alpha\" role=\"region\" aria-labelledby=\"accordion-trigger-alpha\"><div class=\"cn-accordion-content-inner\"><p>First panel content</p></div></div></div></div>",
+  "keyboardAndFocus": "Base UI 1.9 uses normal Tab order and native Enter/Space on each trigger. Its orientation/loopFocus props are deprecated and no longer implement roving/arrow focus. Arrow/Home/End are not invented as accordion selection commands.",
+  "sourceRule": "multiple=false permits at most one expanded item; pressing that item closes it. multiple=true toggles items independently. Disabled root/items suppress changes. The callback candidate may be canceled; controlled value stays prop-authoritative.",
+  "protocol": "SCXML consumes source-normalized interaction/callback transactions. eventDetails is the source callback object. onOpenChange/onValueChange sends project those observed callbacks, never dispatch a second DOM event. _effect.* entries are internal source focus/application effects, not public component events. Controlled SET_OPEN/SET_VALUE synchronizes props without fabricating a callback.",
+  "actualModalityProjection": "The pinned Base UI implementation does not emit aria-modal by default. Its modal prop owns focus containment and outside aria-hidden/inert behavior. This source reference does not invent an aria-modal attribute; it is not a universal ARIA conformance certificate.",
+  "ownership": "Trigger/popup IDs, labels and descriptions belong to this exact instance. Modal ownership cannot be inferred from edge placement or shared globally across unrelated popups.",
+  "semanticParts": {
+    "root": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion\"]",
+      "description": "Accordion visual collection."
+    },
+    "item": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion-item\"]",
+      "description": "Repeated item keyed by domain value, not document node."
+    },
+    "heading": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion-item\"] > h3",
+      "description": "Actual source native heading owner around the trigger."
+    },
+    "trigger": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion-trigger\"]",
+      "description": "Native source disclosure button."
+    },
+    "icon": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion-trigger-icon\"]",
+      "description": "Actual alternative expand/collapse glyph set appended by the source; only the matching glyph is visible."
+    },
+    "content": {
+      "kind": "element",
+      "selector": "[data-slot=\"accordion-content\"]",
+      "description": "Owned source panel with exact instance relation."
+    }
+  },
+  "visualStateMapping": {
+    "expanded": {
+      "callback": "onValueChange",
+      "triggerAttribute": "aria-expanded",
+      "panel": "owned source Presence lifecycle"
+    },
+    "disabled": {
+      "prop": "disabled",
+      "triggerAttribute": "data-disabled"
+    },
+    "direction": {
+      "prop": "dir",
+      "values": [
+        "ltr",
+        "rtl"
+      ]
+    }
+  }
+}

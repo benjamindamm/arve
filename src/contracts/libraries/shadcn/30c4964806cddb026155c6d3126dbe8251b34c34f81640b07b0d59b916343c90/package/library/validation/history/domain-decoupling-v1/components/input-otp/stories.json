@@ -1,0 +1,145 @@
+{
+  "format": "shadcn-figma-stories/1",
+  "scope": "Static native design variants and documented examples; not executable interaction tests.",
+  "source": {
+    "path": "provenance://source/.figma-pool%2Fshadcn.fig",
+    "sha256": "ccbe95f20f501389a322d0f6de2c90ca79126a33355f1b31e2b1dcc7c8e2b3d5",
+    "page": "101:698"
+  },
+  "stories": [
+    {
+      "id": "figma-2160-8025",
+      "name": "InputOPT / Position=Left, State=Default",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8025",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1339",
+      "name": "InputOPT / Position=Left, State=Disabled",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1339",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2160-8024",
+      "name": "InputOPT / Position=Middle, State=Default",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8024",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2160-8023",
+      "name": "InputOPT / Position=Right, State=Default",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8023",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2160-8021",
+      "name": "InputOPT / Position=Left, State=Focus",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8021",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2160-8022",
+      "name": "InputOPT / Position=Middle, State=Focus",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8022",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2160-8020",
+      "name": "InputOPT / Position=Right, State=Focus",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2160:8020",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1681",
+      "name": "InputOPT / Position=Left, State=Destructive",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1681",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1684",
+      "name": "InputOPT / Position=Middle, State=Destructive",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1684",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1687",
+      "name": "InputOPT / Position=Right, State=Destructive",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1687",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1342",
+      "name": "InputOPT / Position=Middle, State=Disabled",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1342",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    },
+    {
+      "id": "figma-2161-1345",
+      "name": "InputOPT / Position=Right, State=Disabled",
+      "kind": "component-variant",
+      "view": {
+        "figmaNode": "2161:1345",
+        "part": "2160:8026"
+      },
+      "expectation": "Preserve this native static source depiction; event, value and focus contracts remain unresolved."
+    }
+  ],
+  "contractCases": [
+    {
+      "id": "source-specific-normal-and-failure",
+      "expected": "InputOTP forwards input-otp1.4.2 OTPInputProps, maxLength:number is required, value/defaultValue are strings, onChange(newValue:string) is not a native event callback. onComplete receives the complete value when a previously observed shorter value becomes exactly maxLength; initial full value is not an automatic completion request. It does not submit, verify, store or resend codes. The underlying library defaults inputMode=numeric and autoComplete=one-time-code, but only a supplied pattern enforces characters. This reference explicitly selects maxLength6 and REGEXP_ONLY_DIGITS, complete six slots indexed0..5, and a pasteTransformer removing spaces/hyphens. Pattern failure rejects the whole candidate rather than sanitizing arbitrary letters. Underlying selection, paste insertion, length truncation and fake caret use one actual input; slots/groups are visual divs. The reference explicitly hides visual slots and the separator from assistive technology while the real input remains labelled/exposed. Wrapper spellCheck=false can be overridden by native props. Disabled suppresses native user editing; controlled props remain authoritative and caller owns verification errors, cooldown and server response. The input-otp implementation also forwards native defaultValue alongside its internal value when supplied; React19 can warn about both. This reference deliberately uses the controlled string form."
+    },
+    {
+      "id": "keyboard-focus-and-disabled",
+      "expected": "The actual native input provides arrows, selection, Backspace/Delete, paste and one-time-code autofill. Tab enters one input, not six fake controls. Do not invent per-slot roving focus or automatic submission. Enter is ordinary native form behavior; onComplete only reports a filled code. Escape does not clear the code. Error text is explicit aria-describedby/aria-invalid; never identify codes only by color."
+    },
+    {
+      "id": "meaningful-native-content",
+      "html": "accessibility.html"
+    }
+  ]
+}

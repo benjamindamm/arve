@@ -1,0 +1,181 @@
+{
+  "format": "ui-contract-stories/1",
+  "componentId": "shadcn:Drawer",
+  "purpose": "Source-independent reusable semantic fixtures. Static HTML specifies expected anatomy/state; actual pinned React adapter and protocol cases separately establish behavior.",
+  "stories": [
+    {
+      "id": "open",
+      "name": "Open",
+      "inputs": {
+        "open": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "closed",
+      "name": "Closed",
+      "inputs": {
+        "open": false
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open drawer</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "rtl",
+      "name": "Rtl",
+      "inputs": {},
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\" dir=\"rtl\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "disabled-trigger",
+      "name": "Disabled trigger",
+      "inputs": {
+        "disabled": true
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" disabled=\"\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\">Open drawer</button>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-up",
+      "name": "Side up",
+      "inputs": {
+        "swipeDirection": "up"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"up\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-right",
+      "name": "Side right",
+      "inputs": {
+        "swipeDirection": "right"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"right\" data-swipe-axis=\"x\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-down",
+      "name": "Side down",
+      "inputs": {
+        "swipeDirection": "down"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "side-left",
+      "name": "Side left",
+      "inputs": {
+        "swipeDirection": "left"
+      },
+      "visualState": "default",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"left\" data-swipe-axis=\"x\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "starting",
+      "name": "Starting",
+      "inputs": {},
+      "visualState": "starting",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-starting-style=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-starting-style=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "starting"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "ending",
+      "name": "Ending",
+      "inputs": {},
+      "visualState": "ending",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-ending-style=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-ending-style=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "ending"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "swiping",
+      "name": "Swiping",
+      "inputs": {},
+      "visualState": "swiping",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-swiping=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-swiping=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "swiping"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "snap-points",
+      "name": "Snap points",
+      "inputs": {},
+      "visualState": "snap-points",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-snap-points=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-snap-points=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "snap-points"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "nested-open",
+      "name": "Nested open",
+      "inputs": {},
+      "visualState": "nested-open",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-nested-drawer-open=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-nested-drawer-open=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "nested-open"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    },
+    {
+      "id": "nested-swiping",
+      "name": "Nested swiping",
+      "inputs": {},
+      "visualState": "nested-swiping",
+      "fixture": {
+        "html": "<button type=\"button\" data-slot=\"drawer-trigger\" aria-haspopup=\"dialog\" aria-expanded=\"true\" aria-controls=\"overlay-popup\">Open drawer</button><div data-slot=\"drawer-overlay\" data-nested-drawer-swiping=\"\" aria-hidden=\"true\"></div><div data-slot=\"drawer-viewport\" data-modal=\"true\"><div data-slot=\"drawer-popup\" data-nested-drawer-swiping=\"\" role=\"dialog\" id=\"overlay-popup\" aria-labelledby=\"overlay-title\" aria-describedby=\"overlay-description\" tabindex=\"-1\" data-swipe-direction=\"down\" data-swipe-axis=\"y\"><div data-slot=\"drawer-swipe-handle\" aria-hidden=\"true\"></div><div data-slot=\"drawer-content\"><div data-slot=\"drawer-header\"><h2 data-slot=\"drawer-title\" id=\"overlay-title\">Project drawer</h2><p data-slot=\"drawer-description\" id=\"overlay-description\">Review the project details before saving.</p></div><div data-slot=\"drawer-footer\"><button type=\"button\" data-slot=\"drawer-close\" class=\"cn-button cn-button-variant-outline cn-button-size-default\">Close drawer</button></div></div></div></div>",
+        "primitiveOutputState": "nested-swiping"
+      },
+      "steps": [],
+      "expectation": "Actual source parts and caller-owned content match the semantic adapter. Static visibility is a fixture; primitive lifecycle, event cancellation and focus are checked in the real target."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+@import "../../tokens.css";
+
+.cn-input-otp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-input-otp-gap);
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  font-family: var(--ui-font-family),var(--ui-font-fallback),sans-serif;
+  font-size: var(--ui-font-size-body);
+  line-height: var(--ui-line-height-body);
+  color: var(--ui-color-foreground);
+  direction: ltr;
+}
+
+.cn-input-otp:has(input:disabled) {
+  opacity: 0.5;
+}
+
+input[data-slot="input-otp"] {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  outline: none;
+}
+
+input[data-slot="input-otp"]:disabled {
+  cursor: not-allowed;
+}
+
+[data-slot="input-otp-group"] {
+  display: flex;
+  align-items: center;
+}
+
+[data-slot="input-otp-slot"] {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-input-otp-slot-size);
+  block-size: var(--ui-input-otp-slot-size);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  background: var(--ui-color-background);
+  font-variant-numeric: tabular-nums;
+}
+
+[data-slot="input-otp-slot"]:not(:first-child) {
+  border-inline-start: 0;
+}
+
+[data-slot="input-otp-slot"]:first-child {
+  border-start-start-radius: var(--ui-input-otp-radius);
+  border-end-start-radius: var(--ui-input-otp-radius);
+}
+
+[data-slot="input-otp-slot"]:last-child {
+  border-start-end-radius: var(--ui-input-otp-radius);
+  border-end-end-radius: var(--ui-input-otp-radius);
+}
+
+[data-slot="input-otp-slot"][data-active="true"] {
+  z-index: 1;
+  outline: var(--ui-border-width) solid var(--ui-color-ring);
+  box-shadow: 0 0 0 var(--ui-focus-spread) var(--ui-focus-shadow);
+}
+
+.cn-input-otp:has(input[aria-invalid="true"]) [data-slot="input-otp-slot"] {
+  border-color: var(--ui-color-destructive);
+}
+
+[data-slot="input-otp-separator"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--ui-input-otp-separator-width);
+  flex: none;
+}
+
+[data-slot="input-otp-separator"] svg {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+.cn-input-otp-caret {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cn-input-otp-caret-line {
+  inline-size: var(--ui-input-otp-caret-width);
+  block-size: var(--ui-input-otp-caret-height);
+  background: var(--ui-color-foreground);
+}

@@ -1,0 +1,1264 @@
+{
+  "format": "shadcn-semantic-browser-run/1",
+  "records": [
+    {
+      "behavior": {
+        "cases": [
+          {
+            "component": "data-table",
+            "name": "source data/page-size composition displays first two stable payment IDs",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BODY",
+                "text": "Dark themeRight to leftRecent paymentsFilter emailShow status columnSimulate data errorRecent payment records in US dollarsSelectSort emailStatusAmountm@example.compending$100.00example@gmail.comprocessing$125.00Previous pageNext page3 matching payments.[]1Sorting, filters, visibility, pagination and selection are separate caller-controlled TanStack feature states.\n"
+              },
+              "checks": [],
+              "empty": false,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[]"
+              },
+              "rows": [
+                {
+                  "id": "728ed52f",
+                  "text": "m@example.compending$100.00"
+                },
+                {
+                  "id": "489e1d42",
+                  "text": "example@gmail.comprocessing$125.00"
+                }
+              ],
+              "sort": "none",
+              "statusColumn": true,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "native header Enter sorts actual feature model and aria-sort",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Sort email"
+              },
+              "checks": [],
+              "empty": false,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[]"
+              },
+              "rows": [
+                {
+                  "id": "reference-third",
+                  "text": "a@example.comsuccess$80.00"
+                },
+                {
+                  "id": "489e1d42",
+                  "text": "example@gmail.comprocessing$125.00"
+                }
+              ],
+              "sort": "ascending",
+              "statusColumn": true,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "row selection IDs survive paging",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BODY",
+                "text": "Dark themeRight to leftRecent paymentsFilter emailShow status columnSimulate data errorRecent payment records in US dollarsSelectSort emailStatusAmountm@example.compending$100.00Previous pageNext page3 matching payments.[\"reference-third\"]2Sorting, filters, visibility, pagination and selection are separate caller-controlled TanStack feature states.\n"
+              },
+              "checks": [],
+              "empty": false,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "2",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [
+                {
+                  "id": "728ed52f",
+                  "text": "m@example.compending$100.00"
+                }
+              ],
+              "sort": "ascending",
+              "statusColumn": true,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "filter resets eligible page and derives filtered rows without dropping selection",
+            "observed": {
+              "active": {
+                "label": "Filter email",
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [],
+              "empty": false,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [
+                {
+                  "id": "728ed52f",
+                  "text": "m@example.compending$100.00"
+                }
+              ],
+              "sort": "ascending",
+              "statusColumn": true,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "empty filter result is real table row",
+            "observed": {
+              "active": {
+                "label": "Filter email",
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [],
+              "empty": true,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [],
+              "sort": "ascending",
+              "statusColumn": true,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "column visibility changes table cells and empty-state coverage",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [],
+              "empty": true,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [],
+              "sort": "ascending",
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "caller error is readable and distinct from source table state",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Retry local data"
+              },
+              "checks": [],
+              "empty": true,
+              "error": "Payment data unavailable. Retry the local reference data.",
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [],
+              "sort": "ascending",
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "data-table",
+            "name": "local retry restores data preserving independent feature states",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Simulate data error"
+              },
+              "checks": [],
+              "empty": false,
+              "fieldset": [],
+              "outputs": {
+                "Payment page": "1",
+                "Selected payment IDs": "[\"reference-third\"]"
+              },
+              "rows": [
+                {
+                  "id": "reference-third",
+                  "text": "a@example.com$80.00"
+                },
+                {
+                  "id": "489e1d42",
+                  "text": "example@gmail.com$125.00"
+                }
+              ],
+              "sort": "ascending",
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          }
+        ],
+        "result": "PASS",
+        "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification."
+      },
+      "checks": [
+        "Actual source feature/form/scroll protocol rerun via normal family URL",
+        "Own stable semantic parts and delegated component geometry consume real leading CSS/tokens",
+        "Actual native selected/focused/inactive/edge state styles with meaningful source behavior",
+        "Actual document Dark/RTL320px responsive surface and independent identities"
+      ],
+      "family": "data-table",
+      "narrow": {
+        "box": {
+          "bottom": 757.515625,
+          "height": 681.515625,
+          "left": 0,
+          "right": 320,
+          "top": 76,
+          "width": 320,
+          "x": 0,
+          "y": 76
+        },
+        "client": 320,
+        "color": "rgb(250, 250, 250)",
+        "dir": "rtl",
+        "scroll": 320
+      },
+      "selected": {
+        "background": "rgb(245, 245, 245)",
+        "id": "728ed52f"
+      },
+      "styles": {
+        "caption": "Recent payment records in US dollars",
+        "cellHeight": 41,
+        "filterWidth": 320,
+        "gap": "12px",
+        "headHeight": 48.5,
+        "scopes": [
+          "col",
+          "col",
+          "col",
+          "col"
+        ]
+      },
+      "url": "http://localhost:5175/?family=data-table"
+    },
+    {
+      "behavior": {
+        "cases": [
+          {
+            "component": "questionnaire",
+            "name": "real native form starts required plan with disabled Enterprise",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BODY",
+                "text": "Dark themeRight to leftReport preferencesControlled current questionIgnore current question requestPrevent choice changeQuestion 1 of 3Choose a planEnterprise is unavailable. Choose Plus or Pro.PlusAProBEnterpriseChoose a plan before continuing.Choose report signalsSelect any signals, or explicitly skip.ProgressARisksBSelect a signal or use Skip.Contact addressEnter an email address for the report.Enter a contact email before submitting.PreviousSkipNextSubmitReset answersplannoneSubmission remains local to this reference.\n"
+              },
+              "checks": [
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "required unanswered cannot advance and actual error is announced",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "error": "Choose a plan before continuing.",
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": "true",
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "native choice defaultPrevented vetoes source internal answer change",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "error": "Choose a plan before continuing.",
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": "true",
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "letter shortcut selects enabled real native choice without advancing",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "confirm advances to optional question and focuses fieldset",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "FIELDSET",
+                "text": "Choose report signalsSelect any signals, or explicitly skip.ProgressARisksBSelect a signal or use Skip."
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Choose report signals"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "signals",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "optional unanswered requires explicit answer or Skip",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "error": "Select a signal or use Skip.",
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": "true",
+                  "title": "Choose report signals"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "signals",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "explicit optional Skip advances and omits its answer participation",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "FIELDSET",
+                "text": "Contact addressEnter an email address for the report.Enter a contact email before submitting."
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Contact address"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "contact",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "native email constraints block valid-submit callback",
+            "observed": {
+              "active": {
+                "label": "Contact email",
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Contact address"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "contact",
+                "Submitted answers": "none"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "valid source form submits actual FormData without skipped answers",
+            "observed": {
+              "active": {
+                "label": "Contact email",
+                "tag": "INPUT",
+                "text": ""
+              },
+              "checks": [
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Contact address"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "contact",
+                "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "native reset restores initial question and default answers",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "FIELDSET",
+                "text": "Choose a planEnterprise is unavailable. Choose Plus or Pro.PlusAProBEnterpriseChoose a plan before continuing."
+              },
+              "checks": [
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          },
+          {
+            "component": "questionnaire",
+            "name": "ignored controlled item request does not secretly advance",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Next"
+              },
+              "checks": [
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "plus"
+                },
+                {
+                  "checked": true,
+                  "disabled": false,
+                  "name": "plan",
+                  "value": "pro"
+                },
+                {
+                  "checked": false,
+                  "disabled": true,
+                  "name": "plan",
+                  "value": "enterprise"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "progress"
+                },
+                {
+                  "checked": false,
+                  "disabled": false,
+                  "name": "signals",
+                  "value": "risks"
+                }
+              ],
+              "fieldset": [
+                {
+                  "inert": false,
+                  "invalid": null,
+                  "title": "Choose a plan"
+                }
+              ],
+              "outputs": {
+                "Requested current question": "plan",
+                "Submitted answers": "[[\"plan\",\"plus\"],[\"contact\",\"report@example.com\"]]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": null
+            },
+            "result": "pass"
+          }
+        ],
+        "result": "PASS",
+        "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification."
+      },
+      "checked": {
+        "background": "rgb(245, 245, 245)",
+        "dot": "block",
+        "dotWidth": 8
+      },
+      "checks": [
+        "Actual source feature/form/scroll protocol rerun via normal family URL",
+        "Own stable semantic parts and delegated component geometry consume real leading CSS/tokens",
+        "Actual native selected/focused/inactive/edge state styles with meaningful source behavior",
+        "Actual document Dark/RTL320px responsive surface and independent identities"
+      ],
+      "family": "questionnaire",
+      "focus": "rgba(161, 161, 161, 0.5) 0px 0px 0px 3px",
+      "narrow": {
+        "box": {
+          "bottom": 643.515625,
+          "height": 432,
+          "left": 16,
+          "right": 304,
+          "top": 211.515625,
+          "width": 288,
+          "x": 16,
+          "y": 211.515625
+        },
+        "client": 320,
+        "color": "rgb(250, 250, 250)",
+        "dir": "rtl",
+        "scroll": 320
+      },
+      "styles": {
+        "choice": 64,
+        "hiddenActions": [
+          "none",
+          "none",
+          "none"
+        ],
+        "hiddenItems": [
+          "none",
+          "none"
+        ],
+        "indicator": 16,
+        "radius": "10px",
+        "shortcut": 20,
+        "width": 448
+      },
+      "url": "http://localhost:5175/?family=questionnaire"
+    },
+    {
+      "behavior": {
+        "cases": [
+          {
+            "component": "message-scroller",
+            "name": "opening end applies actual constrained geometry",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BODY",
+                "text": "Dark themeRight to leftReport discussionPrevent scroll commandAppend messagePrepend historySam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13Scroll to startScroll to endJump to message eight{\"start\":true,\"end\":false}[\"m11\",\"m12\",\"m13\"]Loading older messages and transport errors are caller feedback, independent from scroll state.\n"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":true,\"end\":false}",
+                "Visible message IDs": "[\"m11\",\"m12\",\"m13\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": -170,
+                "focused": false,
+                "max": 826,
+                "top": 826
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "native Home scrolls viewport to start and releases follow",
+            "observed": {
+              "active": {
+                "label": "Report discussion messages",
+                "tag": "DIV",
+                "text": "Sam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":false,\"end\":true}",
+                "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 656,
+                "focused": true,
+                "max": 826,
+                "top": 0
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "appending while reader is away does not yank to bottom",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Append message"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":false,\"end\":true}",
+                "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 656,
+                "focused": false,
+                "max": 906,
+                "top": 0
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "active native Button onClick can veto scroll command",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Scroll to end"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":false,\"end\":true}",
+                "Visible message IDs": "[\"m0\",\"m1\",\"m2\",\"m3\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 656,
+                "focused": false,
+                "max": 906,
+                "top": 0
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "accepted real button command reaches end without selecting/focusing message",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BODY",
+                "text": "Dark themeRight to leftReport discussionPrevent scroll commandAppend messagePrepend historySam: Report message 0Alex: Report message 1Sam: Report message 2Alex: Report message 3Sam: Report message 4Alex: Report message 5Sam: Report message 6Alex: Report message 7Sam: Report message 8Alex: Report message 9Sam: Report message 10Alex: Report message 11Sam: Report message 12Alex: Report message 13Sam: New report message 14Scroll to startScroll to endJump to message eight{\"start\":true,\"end\":false}[\"m12\",\"m13\",\"m14\"]Loading older messages and transport errors are caller feedback, independent from scroll state.\n"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":true,\"end\":false}",
+                "Visible message IDs": "[\"m12\",\"m13\",\"m14\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": -250,
+                "focused": false,
+                "max": 906,
+                "top": 906
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "hook command aligns actual stable message ID with16px transcript inset",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Jump to message eight"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":true,\"end\":true}",
+                "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 16,
+                "focused": false,
+                "max": 906,
+                "top": 640
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "prepend preserves actual visible anchor geometry",
+            "observed": {
+              "active": {
+                "label": null,
+                "tag": "BUTTON",
+                "text": "Prepend history"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":true,\"end\":true}",
+                "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 16,
+                "focused": false,
+                "max": 986,
+                "top": 720
+              }
+            },
+            "result": "pass"
+          },
+          {
+            "component": "message-scroller",
+            "name": "Escape leaves native transcript intact and focused",
+            "observed": {
+              "active": {
+                "label": "Report discussion messages",
+                "tag": "DIV",
+                "text": "Sam: Earlier report historyAlex: Report message 0Sam: Report message 1Alex: Report message 2Sam: Report message 3Alex: Report message 4Sam: Report message 5Alex: Report message 6Sam: Report message 7Alex: Report message 8Sam: Report message 9Alex: Report message 10Sam: Report message 11Alex: Report message 12Sam: Report message 13Alex: New report message 14"
+              },
+              "checks": [],
+              "fieldset": [],
+              "outputs": {
+                "Scroll edges": "{\"start\":true,\"end\":true}",
+                "Visible message IDs": "[\"m8\",\"m9\",\"m10\",\"m11\"]"
+              },
+              "rows": [],
+              "statusColumn": false,
+              "viewport": {
+                "anchorTop": 16,
+                "focused": true,
+                "max": 986,
+                "top": 720
+              }
+            },
+            "result": "pass"
+          }
+        ],
+        "result": "PASS",
+        "scope": "Exact normal-entry source compositions in BrowserOS neo: actual pinned primitive feature/form/geometry behavior and native DOM observations; no remote backend or platform certification."
+      },
+      "checks": [
+        "Actual source feature/form/scroll protocol rerun via normal family URL",
+        "Own stable semantic parts and delegated component geometry consume real leading CSS/tokens",
+        "Actual native selected/focused/inactive/edge state styles with meaningful source behavior",
+        "Actual document Dark/RTL320px responsive surface and independent identities"
+      ],
+      "family": "message-scroller",
+      "narrow": {
+        "box": {
+          "bottom": 522.515625,
+          "height": 320,
+          "left": 16,
+          "right": 304,
+          "top": 202.515625,
+          "width": 288,
+          "x": 16,
+          "y": 202.515625
+        },
+        "client": 320,
+        "color": "rgb(250, 250, 250)",
+        "dir": "rtl",
+        "scroll": 320
+      },
+      "rtlCenter": 0,
+      "styles": {
+        "button": {
+          "bottom": 226.515625,
+          "height": 28,
+          "left": 194,
+          "right": 222,
+          "top": 198.515625,
+          "width": 28,
+          "x": 194,
+          "y": 198.515625
+        },
+        "inactive": {
+          "inert": true,
+          "opacity": "0",
+          "tabIndex": -1
+        },
+        "labelPosition": "absolute",
+        "log": "log",
+        "radius": "14px",
+        "root": {
+          "bottom": 501.515625,
+          "height": 320,
+          "left": 16,
+          "right": 400,
+          "top": 181.515625,
+          "width": 384,
+          "x": 16,
+          "y": 181.515625
+        },
+        "spacerHidden": "true",
+        "viewport": {
+          "bottom": 500.515625,
+          "height": 318,
+          "left": 17,
+          "right": 399,
+          "top": 182.515625,
+          "width": 382,
+          "x": 17,
+          "y": 182.515625
+        }
+      },
+      "url": "http://localhost:5175/?family=message-scroller"
+    }
+  ],
+  "result": "PASS",
+  "scope": "Finite pinned TanStack/Table, Questionnaire and native MessageScroller recipes with source-specific real behavior/styles. No backend or universal device/AT certification.",
+  "visualReview": {
+    "families": [
+      "data-table",
+      "questionnaire",
+      "message-scroller"
+    ],
+    "observed": "Actual 1040px native Table/feature controls, full Questionnaire answer cards/hidden inactive fields, and overflowing MessageScroller transcript with active source command visually inspected in BrowserOS screenshots. No unexplained clipping/overlap; partial offscreen transcript rows are native scroll content.",
+    "notClaimed": "Pixel identity or universal device/AT certification."
+  }
+}

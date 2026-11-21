@@ -1,0 +1,26 @@
+{
+  "purpose": "Identify the current page within a hierarchical path and provide real links to ancestors.",
+  "avoid": "Avoid treating browsing history as a hierarchy.",
+  "classification": "source-bound-reference-with-explicit-decisions",
+  "basis": "Pinned React/primitive sources lead API, lifecycle and semantics; native visual observations and explicit reference decisions are mapped in figma/traceability.json.",
+  "profile": "interactive-control/1",
+  "profileRationale": "The family presents controls or navigation; static depictions do not establish an interactive contract.",
+  "componentId": "shadcn:Breadcrumb",
+  "sourceRule": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed.",
+  "keyboardAndFocus": "Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation.",
+  "contentAlternative": "Visible native labels, destinations and task text provide the meaning; icons, borders and position are supplementary.",
+  "updatesAndDescendants": "Root is nav with default aria-label=breadcrumb; List/Item are ol/li. BreadcrumbLink defaults to anchor through useRender. BreadcrumbPage is a nonfocusable span role=link, aria-disabled=true and aria-current=page. Separator/Ellipsis are presentation and aria-hidden; the hidden More text inside Ellipsis does not make an interactive overflow control. A real overflow menu must be explicitly composed. Tab visits real ancestor links; Enter follows their href. Current page and separators are not made focusable. No root arrow navigation, roving focus or path state is implemented. Caller/router supplies updated ancestors and the current page after navigation.",
+  "referenceDecision": "Concrete labels, destination fragments and validation text are caller-supplied examples. The bound source wrapper does not automatically supply those application decisions.",
+  "sourceCommit": "45bbf9ba23c9c0f63d38887947e5fb06f59c7da3",
+  "sourceFiles": [
+    "sources/shadcn/apps/v4/registry/bases/base/ui/breadcrumb.tsx.source",
+    "sources/shadcn/apps/v4/content/docs/components/base/breadcrumb.mdx.source",
+    "sources/shadcn/apps/v4/registry/bases/base/examples/breadcrumb-example.tsx.source"
+  ],
+  "visualContract": {
+    "layoutPolicy": "Breadcrumb binds all seven actual exports. Native 14px separator glyphs and 4px item gap are retained, with an explicit 8px wrapping-list reference gap and shared 14/20px typography. Ancestors are real href anchors; the actual current-page wrapper is a nonfocusable span with role=link, aria-disabled=true and aria-current=page, preserved rather than silently rewritten. Native presentation separators and ellipsis are hidden from accessibility. Ellipsis is not a disclosure control: this concrete fixture supplies the full hierarchy as alternative links below, instead of inventing an overflow API or hiding essential destinations. Caller can separately compose a real menu if desired. RTL fixtures explicitly set dir on Root and mirror chevrons; logical wrapping remains fluid.",
+    "parts": "component.json#/partBindings",
+    "tokenBindings": "component.json#/visualContract/tokens",
+    "sourceEvidence": "figma/traceability.json"
+  }
+}
