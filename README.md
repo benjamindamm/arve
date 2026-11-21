@@ -91,13 +91,9 @@ Der [aktuelle semantische Shadcn-Stand](docs/handbook/semantic-shadcn/README.md)
 
 ### MCP
 
-`http://127.0.0.1:3010/mcp` verwendet Streamable HTTP. Das lesende Tool `get_component_page` erwartet `{"system":"shadcn","component":"button"}`. Portal und MCP nutzen dieselbe Abfrage für veröffentlichte Payload-Inhalte, Demo-Konfiguration und Contract-Referenz. Der lokale Server bindet an Loopback.
+`http://127.0.0.1:3010/mcp` verwendet Streamable HTTP und bindet lokal an Loopback. Die lesenden Tools liefern standardmässig kompakte Einstiege: erst entdecken und suchen, dann benötigte redaktionelle Abschnitte, Skill-Ressourcen und Contractdateien gezielt nachladen. Portal und MCP greifen auf dieselben veröffentlichten Payload-Inhalte und gebundenen Contractrevisionen zu.
 
-Für veröffentlichte Leitfäden stehen zusätzlich diese lesenden MCP-Tools bereit:
-
-- `list_documentation_tree` mit `{"system":"shadcn"}` listet Bereiche, Seiten, Layoutbeispiele und Komponenten.
-- `search_documentation` mit `{"system":"shadcn","query":"Schweizer PLZ"}` durchsucht Titel, Kurzbeschreibungen und redaktionelle Texte.
-- `get_documentation_page` mit `{"system":"shadcn","section":"formulare-validierung"}` liest den veröffentlichten Leitfaden. Mit `section: "layout"` und `example: "detail"` liefert es die Daten zum entsprechenden Layoutbeispiel.
+Der aktuelle [MCP-Leseablauf und die API-Referenz](docs/mcp/progressive-reading.md) dokumentieren Grenzen, Fortsetzungen, Herkunft und die Migration bestehender Clients. Ein kompakter Treffer ist keine vollständige Regel- oder Contractfreigabe. `view: "full"` bleibt als ausdrückliche Kompatibilitätsausnahme für bestehende Vollständigkeitsprüfungen verfügbar; für normale Agentenabfragen gelten die kompakten Vorgaben.
 
 ## Mehrere Design-Systeme
 

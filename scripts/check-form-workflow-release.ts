@@ -13,7 +13,7 @@ const payload=await getPayload({config:safeConfig})
 const client=new Client({name:'form-workflow-release-check',version:'1.0.0'})
 try {
  await client.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
- const tree=await client.callTool({name:'list_documentation_tree',arguments:{system:'shadcn'}})
+ const tree=await client.callTool({name:'list_documentation_tree',arguments:{view:'full',system:'shadcn'}})
  assert(!tree.isError)
  const paths=new Set<string>()
  const collectPaths=(value:unknown):void=>{if(Array.isArray(value)) value.forEach(collectPaths);else if(value&&typeof value==='object'){for(const [key,child] of Object.entries(value)){if(key==='path'&&typeof child==='string') paths.add(child);else collectPaths(child)}}}
@@ -26,7 +26,7 @@ try {
   checkLinks(page.content)
   const section=entry.slug.slice('shadcn-'.length)
   const component=page.component
-  const response=await client.callTool({name:component?'get_component_page':'get_documentation_page',arguments:component?{system:'shadcn',component}:{system:'shadcn',section}})
+  const response=await client.callTool({name:component?'get_component_page':'get_documentation_page',arguments:component?{view:'full',system:'shadcn',component}:{view:'full',system:'shadcn',section}})
   assert(!response.isError,section)
   const data=response.structuredContent as Record<string,unknown>
   assert.deepEqual(data.content,publicContent(page.content))

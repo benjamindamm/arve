@@ -7,7 +7,7 @@ const origin='http://127.0.0.1:3010'
 const client=new Client({name:'design-resource-check',version:'1.0.0'})
 try {
  await client.connect(new StreamableHTTPClientTransport(new URL('/mcp',origin)))
- const result=await client.callTool({name:'get_documentation_page',arguments:{system:'shadcn',section:'gestaltungs-pilot'}})
+ const result=await client.callTool({name:'get_documentation_page',arguments:{view:'full',system:'shadcn',section:'gestaltungs-pilot'}})
  assert(!result.isError)
  const data=result.structuredContent as {resources:Omit<typeof manifest, 'templates'> & {templates:(typeof manifest.templates[number]&{url:string})[]}}
  assert.equal(data.resources.revision,manifest.revision)

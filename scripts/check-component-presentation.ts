@@ -122,7 +122,7 @@ async function check(component:string) {
       for(const item of group.items)assert(html.includes(item.title.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#x27;')),component+': static item '+item.id)
     }
   }else if(!sourceOnly){
-    const response=await client.callTool({name:'get_component_page',arguments:{system:'shadcn',component}})
+    const response=await client.callTool({name:'get_component_page',arguments:{view:'full',system:'shadcn',component}})
     assert(!response.isError)
     const page=response.structuredContent as any
     assert.equal(page.visualComparisons.kind,'static-editorial')

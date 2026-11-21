@@ -13,18 +13,18 @@ const digest=(v:string)=>createHash('sha256').update(v).digest('hex')
 try {
  await client.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
  const call=async(name:string,args:Record<string,unknown>)=>{const r=await client.callTool({name,arguments:args});assert(!r.isError,JSON.stringify(r.content).slice(0,300));return r.structuredContent as any}
- const tree=await call('list_documentation_tree',{system:'shadcn'})
+ const tree=await call('list_documentation_tree',{view:'full',system:'shadcn'})
  const components:any[]=[]
  const visit=(entries:any[])=>entries.forEach(e=>{if(e.kind==='component')components.push(e);visit(e.children??[])})
  visit(tree.tree);assert.equal(components.length,69)
- const listed=await call('list_library_skills',{library:'shadcn',revision:completeRevision})
+ const listed=await call('list_library_skills',{view:'full',library:'shadcn',revision:completeRevision})
  assert.equal(listed.exports[0].componentPages.length,69)
  for(const resource of listed.exports[0].skills[0].resources){
-  const r=await call('get_library_skill',{library:'shadcn',revision:completeRevision,skill:listed.exports[0].skills[0].id,resourcePath:resource.resourcePath})
+  const r=await call('get_library_skill',{view:'full',library:'shadcn',revision:completeRevision,skill:listed.exports[0].skills[0].id,resourcePath:resource.resourcePath})
   assert.equal(digest(r.content),resource.sha256)
  }
  for(const item of referenceComponents){
-  const page=await call('get_component_page',{system:'shadcn',component:item.slug})
+  const page=await call('get_component_page',{view:'full',system:'shadcn',component:item.slug})
   assert.equal(page.contractReference.revision,completeRevision)
   assert.equal(page.contract.status,'complete')
   const expected=getContract({library:'shadcn',component:item.slug,revision:completeRevision})!.styleAssets!
@@ -59,7 +59,7 @@ try {
   results.push({component:item.slug,status:'PASS',contractStatus:page.contract.status,domains:Object.keys(page.contract.sources).length,artifactCount:page.contractArtifacts.length,styleAssets:page.styleAssets.length,htmlBytes:Buffer.byteLength(body)})
   console.log(`${item.slug}: published, pinned, complete sources, PNG binding, frameworks, HTTP200`)
  }
- const guide=await call('get_documentation_page',{system:'shadcn',section:'frameworks'});assert(guide.content.length===8)
+ const guide=await call('get_documentation_page',{view:'full',system:'shadcn',section:'frameworks'});assert(guide.content.length===8)
  for(const rev of ['65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26','fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d'])assert(getContract({library:'shadcn',component:'button',revision:rev}))
  await mkdir('docs/handbook/semantic-shadcn',{recursive:true})
  await writeFile('docs/handbook/semantic-shadcn/verification.json',JSON.stringify({revision:completeRevision,componentCount:69,uniqueStyleAssetsChecked:checkedAssets.size,status:'PASS',results},null,2)+'\n')

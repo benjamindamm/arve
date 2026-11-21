@@ -12,7 +12,7 @@ try {
  for(const slug of ['farben','input','formulare-validierung','detailseite']) {
   const {docs:[page]}=await payload.find({collection:'pages',depth:1,draft:false,where:{and:[{slug:{equals:'shadcn-'+slug}},{_status:{equals:'published'}}]}})
   assert(page)
-  const result=await client.callTool({name:slug==='input'?'get_component_page':'get_documentation_page',arguments:slug==='input'?{system:'shadcn',component:'input'}:{system:'shadcn',section:slug}})
+  const result=await client.callTool({name:slug==='input'?'get_component_page':'get_documentation_page',arguments:slug==='input'?{view:'full',system:'shadcn',component:'input'}:{view:'full',system:'shadcn',section:slug}})
   assert(!result.isError)
   const data=result.structuredContent as Record<string,unknown>
   assert.deepEqual(data.content,publicContent(page.content))
@@ -20,7 +20,7 @@ try {
   assert.equal(data.updatedAt,page.updatedAt)
   console.log(`MCP = veröffentlichte CMS-Fassung: ${slug}`)
  }
- const tree=await client.callTool({name:'list_documentation_tree',arguments:{system:'shadcn'}})
+ const tree=await client.callTool({name:'list_documentation_tree',arguments:{view:'full',system:'shadcn'}})
  assert(JSON.stringify(tree.structuredContent).includes('/systems/shadcn/detailseite'))
  console.log('Neue Detailseite im veröffentlichten Seitenbaum.')
  // Unreferenced uploads must remain inaccessible, even when their URL is known.

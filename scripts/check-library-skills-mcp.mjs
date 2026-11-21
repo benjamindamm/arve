@@ -16,18 +16,18 @@ try {
   const { tools } = await client.listTools()
   const existing = ['list_documentation_tree', 'search_documentation', 'get_documentation_page', 'get_component_page']
   for (const name of [...existing, 'list_library_skills', 'get_library_skill']) assert(tools.some(tool => tool.name === name))
-  assert.equal(tools.length, 6)
+  assert.deepEqual(tools.map(tool => tool.name).sort(), [...existing, 'list_library_skills', 'get_library_skill', 'get_documentation_section', 'get_component_domain', 'get_component_file', 'list_design_systems'].sort())
   for (const name of ['list_library_skills', 'get_library_skill']) {
     const tool = tools.find(item => item.name === name)
     assert(tool.annotations.readOnlyHint)
     assert(tool.description.includes('list_library_skills') || tool.description.includes('get_library_skill'))
     assert(tool.inputSchema.required.includes('library'))
   }
-  const listed = await read('list_library_skills', { library: 'shadcn' })
+  const listed = await read('list_library_skills', { library: 'shadcn', view: 'full' })
   assert.equal(listed.library, 'shadcn')
   for (const exported of listed.exports) {
     for (const skill of exported.skills) {
-      const args = { library: listed.library, revision: exported.revision, skill: skill.id }
+      const args = { view: 'full', library: listed.library, revision: exported.revision, skill: skill.id }
       const main = await read('get_library_skill', args)
       assert.equal(main.resourcePath, skill.mainResourcePath)
       for (const resource of skill.resources) {
@@ -48,13 +48,13 @@ try {
       }
     }
   }
-  const tree = await read('list_documentation_tree', { system: 'shadcn' })
+  const tree = await read('list_documentation_tree', { view: 'full', system: 'shadcn' })
   assert(tree.tree.length)
   const search = await read('search_documentation', { system: 'shadcn', query: 'button', limit: 2 })
   assert(search.results.length)
-  const page = await read('get_documentation_page', { system: 'shadcn', section: 'technische-anbindung' })
+  const page = await read('get_documentation_page', { view: 'full', system: 'shadcn', section: 'technische-anbindung' })
   assert(page.content)
-  const component = await read('get_component_page', { system: 'shadcn', component: 'button' })
+  const component = await read('get_component_page', { view: 'full', system: 'shadcn', component: 'button' })
   assert(component.contract && component.contractArtifacts.length)
   for (const artifact of component.contractArtifacts) {
     const response = await fetch(artifact.url)

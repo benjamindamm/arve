@@ -55,7 +55,7 @@ try {
     where: { and: [{ designSystem: { equals: system.id } }, { _status: { equals: 'published' } }] } })
   const bySlug = new Map(pages.map(page => [page.slug, page]))
   await client.connect(new StreamableHTTPClientTransport(new URL('/mcp', origin)))
-  const tree = await client.callTool({ name: 'list_documentation_tree', arguments: { system: 'shadcn' } })
+  const tree = await client.callTool({ name: 'list_documentation_tree', arguments: { view: 'full', system: 'shadcn' } })
   assert(!tree.isError, 'Dokumentationsbaum fehlgeschlagen')
   collectTree(tree.structuredContent)
   assert(treeEntries.size > 0, 'Leerer Dokumentationsbaum')
@@ -78,7 +78,7 @@ try {
     assert.equal(treeEntry.value.title, page.title)
     assert.equal(treeEntry.value.summary, page.summary)
     assert.equal(treeEntry.value.pageType, page.pageType)
-    const response = await client.callTool({ name: 'get_documentation_page', arguments: { system: 'shadcn', section: entry.slug.slice('shadcn-'.length) } })
+    const response = await client.callTool({ name: 'get_documentation_page', arguments: { view: 'full', system: 'shadcn', section: entry.slug.slice('shadcn-'.length) } })
     assert(!response.isError, `${path}: MCP fehlgeschlagen`)
     const data = response.structuredContent as Record<string, unknown>
     assert(data)

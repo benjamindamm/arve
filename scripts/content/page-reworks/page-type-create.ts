@@ -10,9 +10,17 @@ const text = (key: string, title: string, paragraphs: string[], links: [string, 
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:54:17.199Z',
+  expectedUpdatedAt: '2026-11-20T17:00:27.093Z',
   summary: 'Ein neues Projekt erfassen und die Erstellung erst bestätigen, wenn sie sicher abgeschlossen ist.',
   content: [
+    text('goals', 'Allgemeine UX-Regeln · Neue Einträge erstellen', [
+      'Beim Erstellen muss erkennbar sein, was neu angelegt wird, welche Angaben dafür erforderlich sind und welche Angaben das System ergänzt.',
+      'Eingaben bei Fehlern erhalten und Korrekturen verständlich ermöglichen. Vor dem Verlust ungespeicherter Angaben schützen; Folgen eines Abbruchs oder Verlassens erklären.',
+      'Eine laufende Anfrage und ein bestätigtes Ergebnis unterscheiden. Bei ungeklärtem Ergebnis den Stand und den nächsten sicheren Schritt erklären und unbeabsichtigte doppelte Einträge verhindern. Nach erfolgreichem Erstellen Orientierung und Kontext erhalten.',
+    ]),
+    text('example-scope', 'Festlegungen für das Projektbeispiel', [
+      'Die folgenden Festlegungen gelten für das lokale Webbeispiel «Projekt erstellen». Feldumfang, Namensgrenze, Prüfzeitpunkte, Status, Texte, Navigation und die Grenze von 640 px sind Entscheidungen dieses Beispiels. Sie sind keine allgemeinen Vorgaben für andere Formulare oder Plattformen; dort müssen passende fachliche und gestalterische Entscheidungen getroffen werden.',
+    ]),
     text('example', 'So beginnt eine Erstellung', [
       'Projekt erstellen',
       'Ein neuer Eintrag beginnt mit einem leeren Namen.',
@@ -39,13 +47,13 @@ export const release = {
       'Es ist noch unklar, ob das Projekt erstellt wurde',
       'Die Eingabe und der Bezug zur Anfrage bleiben erhalten. Solange das Ergebnis unbekannt ist, gibt es weder erneutes Absenden noch Verwerfen. Zuerst muss das Ergebnis geklärt werden. Die dafür benötigte Funktion ist im Piloten noch nicht verfügbar; «Status prüfen» darf deshalb noch nicht bedienbar sein.',
     ]),
-    text('decisions', 'Für den Entwurf beachten', [
+    text('decisions', 'Entscheidungen im Projektbeispiel', [
       'create beginnt mit einem leeren Formular und erstellt einen neuen Eintrag. edit lädt dagegen den bestätigten Namen eines bestehenden aktiven Projekts zur Bearbeitung.',
       'Der Pilot hat nur das Feld Projektname. Nach dem Entfernen von Leerraum am Anfang und Ende muss der Name 1 bis 80 Zeichen lang sein. Gezählt werden Unicode-Graphemcluster, also zusammengehörige Zeichen. Gleiche Namen sind erlaubt. ID und Status vergibt das System.',
       'Ist das Formular noch unverändert leer, führt «Abbrechen» zur Liste. Bei ungespeicherten Änderungen erscheint zuerst «Ungespeicherte Änderungen verwerfen?» mit «Weiterbearbeiten» und «Verwerfen». Die Angaben gehen beim Verwerfen verloren; der Entwurf wird nicht dauerhaft gespeichert.',
       'Wer die Seite während einer laufenden Anfrage oder bei unbekanntem Ergebnis verlässt, stoppt damit die Anfrage nicht. Vor dem Verlassen erscheint deshalb eine Warnung. Ist das Ergebnis unbekannt, muss es zuerst geklärt werden; die Nachfrage zum Verwerfen wird dann nicht angeboten. Die vollständigen Regeln für Warnung und Rückkehr stehen unter «Formulare und Validierung».',
     ], [['edit · vorhandenen Namen bearbeiten', '/systems/shadcn/page-type-edit']]),
-    text('regions', 'Breit und schmal dieselbe Reihenfolge', [
+    text('regions', 'Projektbeispiel · Breit und schmal dieselbe Reihenfolge', [
       'Titel und Kontext → Projektname mit Hilfe und gegebenenfalls Fehler → Meldung zum Vorgang → Projekt erstellen → Abbrechen. ID und Status erscheinen als Hinweis, nicht als bearbeitbare Felder.',
       'Der Seiteninhalt bleibt einspaltig. Ab 640 px verfügbarer Inhaltsbreite stehen die Aktionen nebeneinander; darunter untereinander, Hauptaktion zuerst. Hilfe und Fehler umbrechen, die Aktionen bleiben im normalen Seitenfluss.',
     ]),

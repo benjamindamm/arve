@@ -24,6 +24,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Check progressive MCP reads and search
+        run: npm run check:mcp:unit
       - uses: actions/configure-pages@v5
         id: pages
       - name: Check component documentation reference

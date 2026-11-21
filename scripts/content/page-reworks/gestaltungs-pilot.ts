@@ -4,19 +4,24 @@ const base = { version: 1, direction: 'ltr' as const, format: '' as const, inden
 const text = (blockName: string, title: string, ...paragraphs: string[]): Block => ({blockType:'text',blockName,body:{root:{...base,type:'root',children:[{...base,type:'heading',tag:'h2',children:[{type:'text',version:1,text:title}]},...paragraphs.map(value=>({...base,type:'paragraph',children:[{type:'text',version:1,text:value}]}))]}}})
 // Published CMS read with push:false and a read-only database connection. Original contracts below are unchanged.
 export const release = {
-  expectedUpdatedAt: '2026-11-20T14:29:13.422Z',
-  summary: 'Mit editierbaren Vorlagen gestalten, wie Menschen Projekte finden, ansehen, erstellen und bearbeiten.',
+  expectedUpdatedAt: '2026-11-20T16:34:48.269Z',
+  summary: 'Aufgaben, Zustände und Rückwege zusammen gestalten; ein lokaler Web-Projektpilot zeigt die Anwendung mit editierbaren Vorlagen.',
   content: [
-    text('example', 'Vom Suchergebnis zum Formular',
-      'Die Vorlagen zeigen einen Projektablauf. Die verlinkten Fachseiten erklären die Regeln dazu.',
+    text('goals', 'Allgemeine UX-Regeln · einen Arbeitsweg zusammen gestalten',
+      'Beginne mit der Aufgabe: Was möchte die Person erreichen, welche Angaben braucht sie und woran erkennt sie das Ergebnis? Gestalte die zusammengehörigen Schritte mit ihren Zuständen und Rückwegen.',
+      'Erhalte beim Wechsel den Bezug zum bearbeiteten Inhalt und den bisherigen Arbeitskontext. Erkläre vor dem Verlassen, welche ungespeicherten Angaben verloren gehen. Ein Verlassen der Ansicht bestätigt nicht, dass ein laufender Auftrag abgebrochen wurde.',
+      'Unterscheide laufende Übermittlung, bestätigte Annahme, ausdrückliche Ablehnung und unbekanntes Ergebnis. Fehlende Bestätigung ist kein sicherer Misserfolg. Bei unbekanntem Ergebnis bleibt die Unsicherheit sichtbar; vor erneutem Senden oder Verwerfen muss der Status geklärt werden.',
+      'Diese Ziele beschreiben das Nutzungserlebnis auch für native Anwendungen. Welche Ansichten, Bedienelemente und Rückwege passen, ist am jeweiligen Produkt und auf der Zielplattform zu gestalten und zu prüfen. Der folgende Webpilot belegt keine native Umsetzung.'),
+    text('example', 'Festlegungen für das Projektbeispiel · lokaler Webablauf',
+      'Der Projektpilot veranschaulicht die Ziele mit Suche, Detail und Formular. Diese Aufgabenfolge, das Datenmodell, die Gestaltungsmittel und die Downloads sind Entscheidungen für dieses Beispiel. Die verlinkten Fachseiten trennen die Ziele von den Pilotfestlegungen.',
       '1 · Finden', 'Suche: Alpen', 'Status: Aktiv', 'Alpen · P-101 · Aktiv', 'Projekt öffnen →',
       '2 · Detail', 'Alpen', 'Projekt-ID: P-101', 'Status: Aktiv', 'Namen bearbeiten →',
       '3 · Bearbeiten', 'Projektname', 'Alpen', 'Abbrechen · Namen speichern',
       'Ein neues Projekt wird aus der Übersicht erstellt: einen Namen eingeben; ID und Status vergibt das System.',
       'Zurück geht es zur Übersicht mit derselben Suche und demselben Statusfilter. Das Schema zeigt den Ablauf einer künftigen Projektanwendung.'),
-    text('usage', 'In drei Schritten zum eigenen Entwurf',
-      '1. Lade die breite und die schmale Ablaufvorlage herunter. Importiere das SVG im Designwerkzeug oder öffne die native FIG in OpenPencil. Inter muss im Zielwerkzeug verfügbar sein.',
-      '2. Verwende dasselbe Projekt in Suche, Detailansicht und Formular. Ergänze die Zustandsvorlagen. Berücksichtige dabei die Suchkriterien bei der Rückkehr, archivierte Projekte und den Fall, dass das Speicherergebnis unbekannt ist.',
+    text('usage', 'Den Web-Projektpiloten mit den Vorlagen ausarbeiten',
+      '1. Für diesen Beispielablauf: Lade die breite und die schmale Ablaufvorlage herunter. Importiere das SVG im Designwerkzeug oder öffne die native FIG in OpenPencil. Inter muss im Zielwerkzeug verfügbar sein.',
+      '2. Verwende im Projektpiloten dasselbe Projekt in Suche, Detailansicht und Formular. Ergänze die Zustandsvorlagen. Berücksichtige dabei die Suchkriterien bei der Rückkehr, archivierte Projekte und den Fall, dass das Speicherergebnis unbekannt ist.',
       '3. Gib den Entwurf einer zweiten Person ohne mündliche Ergänzung. Halte fest, welche Entscheidungen und Ressourcen fehlen. Diese unabhängige Teamprobe steht noch aus.'),
     text('limits', 'Was für eine Anwendung noch fehlt',
       'Die Downloads sind statische, editierbare Gestaltungsvorlagen. Sie enthalten keine reale Suche oder Speicheranbindung. FIGs enthalten flache Frames und Texte, keine Varianten- oder Auto-Layout-Bibliothek.',
@@ -94,8 +99,8 @@ export const release = {
 },
 {
   "id": "6afcf3a334010ea3ee3caaf9",
-  "title": "Die Aufgaben im Entwurf ausarbeiten",
-  "summary": "Verwende dasselbe Projekt in allen drei Schritten. Die verlinkten Fachseiten erklären Regeln, Zustände und Rückwege.",
+  "title": "Lokalen Web-Projektpiloten ausarbeiten",
+  "summary": "Für diesen Beispielablauf wird dasselbe Projekt in allen drei Schritten verwendet. Die Aufgabenfolge ist eine Pilotentscheidung; Kontext und verständliche Zustände bleiben die übertragbaren UX-Ziele.",
   "caption": "Die Anleitung beschreibt einen statischen Entwurf. Navigation, Speicherung und assistive Bedienung müssen erst umgesetzt und geprüft werden.",
   "source": "Lokale Pilotentscheidung 0.1 vom 18.11.2026; aus der gemeinsamen Arbeitsfähigkeitsprüfung abgeleitet.",
   "blockName": "workflow",
@@ -153,7 +158,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Die drei Aufgaben",
+              "text": "Die drei Aufgaben des Web-Projektpiloten",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -284,7 +289,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Das gemeinsame Datenmodell",
+              "text": "Beispielentscheidungen · Datenmodell des Web-Projektpiloten",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -302,7 +307,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Ein Projekt hat genau drei fachliche Angaben: eine unveränderliche ID, einen erforderlichen Projektnamen und den Status Aktiv oder Archiviert. Das System vergibt ID und Status. Für den Namen sind 1–80 wahrgenommene Zeichen zulässig (Unicode-Graphemcluster); Leerzeichen am Anfang und Ende werden vor dem Zählen entfernt. Mehrere Projekte dürfen denselben Namen haben; die ID unterscheidet sie.",
+              "text": "Im lokalen Web-Projektpiloten hat ein Projekt genau drei fachliche Angaben: eine unveränderliche ID, einen erforderlichen Projektnamen und den Status Aktiv oder Archiviert. Das System vergibt ID und Status. Für den Namen sind 1–80 wahrgenommene Zeichen zulässig (Unicode-Graphemcluster); Leerzeichen am Anfang und Ende werden vor dem Zählen entfernt. Mehrere Projekte dürfen denselben Namen haben; die ID unterscheidet sie.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -373,7 +378,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Visuelle Referenz · Farbe und Typografie",
+              "text": "Lokale Webreferenz · Farbe und Typografie",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -462,7 +467,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Visuelle Referenz · Raum und Anordnung",
+              "text": "Lokale Webreferenz · Raum und Anordnung",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -480,7 +485,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Die vorgesehenen Abstände sind 4, 8, 12, 16, 24, 32 und 48 px. Zwischen Label und Feld liegen 8 px, ebenso zwischen Feld und Hilfe oder Fehlermeldung. Zwischen Feldern oder zusammengehörigen Bereichen liegen 24 px, zwischen grossen Seitenabschnitten 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
+              "text": "Für diesen Web-Projektpiloten sind die Abstände 4, 8, 12, 16, 24, 32 und 48 px. Zwischen Label und Feld liegen 8 px, ebenso zwischen Feld und Hilfe oder Fehlermeldung. Zwischen Feldern oder zusammengehörigen Bereichen liegen 24 px, zwischen grossen Seitenabschnitten 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
               "type": "text",
               "style": "",
               "detail": 0,
@@ -498,7 +503,7 @@ export const release = {
           "children": [
             {
               "mode": "normal",
-              "text": "Inhaltsbreite maximal 1120 px; Seitenränder breit 32 px, schmal 16 px. Formular maximal 640 px; die kurze Detailansicht bleibt einspaltig. Unter 640 px verfügbarer Inhaltsbreite stehen Suchfelder und Aktionsgruppen untereinander. Lange Namen umbrechen. Listen zeigen schmal dieselben Angaben in gestapelten Einträgen.",
+              "text": "Die lokale Webreferenz legt fest: Inhaltsbreite maximal 1120 px; Seitenränder breit 32 px, schmal 16 px. Formular maximal 640 px; die kurze Detailansicht bleibt einspaltig. Unter 640 px verfügbarer Inhaltsbreite stehen Suchfelder und Aktionsgruppen untereinander. Lange Namen umbrechen. Listen zeigen schmal dieselben Angaben in gestapelten Einträgen.",
               "type": "text",
               "style": "",
               "detail": 0,

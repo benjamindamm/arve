@@ -17,7 +17,8 @@
     "check:static": "node --import tsx scripts/check-static-site.ts",
     "preview:static": "node scripts/serve-static-site.mjs",
     "check:component-template": "node --import tsx scripts/check-component-template.ts",
-    "check:component-catalog": "node --import tsx scripts/check-component-catalog.ts --all --published --report"
+    "check:component-catalog": "node --import tsx scripts/check-component-catalog.ts --all --published --report",
+    "check:mcp:unit": "node --import tsx scripts/mcp-reads.test.ts && node --import tsx scripts/mcp-library-skills.test.ts && node --import tsx --test src/docs/documentation-search.test.ts src/docs/mcp-navigation.test.ts"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",

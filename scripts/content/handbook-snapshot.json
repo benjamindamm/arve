@@ -1,7 +1,7 @@
 {
   "format": 1,
-  "sourceCommit": "0c16bdc543b96f75cb2c6422a21053692e4b7e55",
-  "capturedAt": "2026-11-21T21:38:23.397Z",
+  "sourceCommit": "d629412b278151a273a9db94fca074092f1041b8",
+  "capturedAt": "2026-11-21T23:04:42.427Z",
   "contractRevision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
   "system": {
     "name": "shadcn",
@@ -1506,7 +1506,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Ein Alert macht ein Problem innerhalb der Seite sichtbar, ohne den Arbeitsbereich zu überdecken. Setze ihn beispielsweise neben einen fehlgeschlagenen Speichervorgang, wenn die Person sofort wissen muss, dass ihre Änderungen noch nicht gesichert sind.",
+                      "text": "Ein Alert macht ein Problem innerhalb der Seite sichtbar, ohne den Arbeitsbereich zu überdecken. Setze ihn beispielsweise neben einen nachweislich fehlgeschlagenen Speichervorgang, wenn die Person sofort wissen muss, dass ihre Änderungen noch nicht gesichert sind.",
                       "type": "text",
                       "version": 1
                     }
@@ -1588,7 +1588,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Der Entwurf zeigt die Meldung «Änderungen nicht gespeichert» mit der Erklärung «Prüfe die Verbindung und versuche es erneut.» und dem Button «Erneut speichern». Die Meldung steht im Zusammenhang mit der bearbeiteten Seite; sie verlangt keinen Wechsel in ein separates Fenster.",
+                      "text": "In diesem Beispiel hat der Dienst bestätigt, dass der Speicherauftrag nicht angenommen wurde. Die Ursache ist behoben und ein neuer Versuch möglich. Der Entwurf zeigt «Änderungen nicht gespeichert», die Erklärung «Die Speicherung wurde abgelehnt. Deine Eingaben bleiben erhalten.» und den Button «Erneut speichern». Die Meldung steht bei der bearbeiteten Seite und verlangt keinen Wechsel in ein separates Fenster.",
                       "type": "text",
                       "version": 1
                     }
@@ -1602,7 +1602,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Der Titel nennt das Ergebnis, der Folgesatz einen nächsten Schritt. Das Symbol unterstützt die Erkennung. Der Button löst eine Aktion der Anwendung aus: Alert selbst speichert keine Daten und wiederholt keinen Vorgang.",
+                      "text": "Der Titel nennt das Ergebnis, die Erklärung ergänzt die Ablehnung und den Erhalt der Eingaben. Das Symbol unterstützt die Erkennung. Der Button löst eine Aktion der Anwendung aus: Alert selbst speichert keine Daten und wiederholt keinen Vorgang.",
                       "type": "text",
                       "version": 1
                     }
@@ -1628,7 +1628,7 @@
                       "version": 1,
                       "children": [
                         {
-                          "text": "Speicherfehlermeldung mit Warndreieck, Titel Änderungen nicht gespeichert, Verbindungshinweis und Button Erneut speichern.",
+                          "text": "Speicherfehlermeldung mit Warndreieck, Titel Änderungen nicht gespeichert, bestätigter Ablehnung, erhaltenen Eingaben und Button Erneut speichern.",
                           "type": "text",
                           "version": 1
                         }
@@ -1645,7 +1645,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Statische Illustration · Speicherfehler mit einem konkreten nächsten Schritt.",
+                      "text": "Statische Illustration · Erneut speichern nach bestätigter Nichtannahme und behobener Ursache.",
                       "type": "text",
                       "version": 1
                     }
@@ -1825,6 +1825,20 @@
                     }
                   ],
                   "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Fehlt nur die Antwort, kann die Speicherung trotzdem erfolgt sein. Erhalte die Eingaben und den Bezug zum ursprünglichen Vorgang. Kläre dessen Ergebnis, bevor du eine neue Speicherung anbietest. Ein sicherer erneuter Aufruf desselben Vorgangs setzt voraus, dass das Produkt eine doppelte Ausführung zuverlässig verhindert; Alert leistet das nicht.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
                 }
               ],
               "direction": "ltr"
@@ -1863,7 +1877,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "«Änderungen nicht gespeichert» ist hilfreicher als «Fehler», weil der Titel die konkrete Folge nennt. «Prüfe die Verbindung und versuche es erneut» hilft mehr als «Ein unbekannter Fehler ist aufgetreten». Verwende nur Ursachen und Zusagen, die die Anwendung tatsächlich kennt.",
+                      "text": "«Änderungen nicht gespeichert» ist hilfreicher als «Fehler», wenn die Nichtannahme bestätigt ist. Fehlt die Bestätigung, passt «Es ist noch unklar, ob die Änderungen gespeichert wurden». Eine unterbrochene Verbindung allein beweist keinen Misserfolg. Nenne nur Ursachen und Zusagen, die das Produkt tatsächlich kennt.",
                       "type": "text",
                       "version": 1
                     }
@@ -1877,7 +1891,45 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Empfohlen sind ein kurzer Titel und eine knappe Erklärung mit einem klaren nächsten Schritt. Benenne Aktionen konkret, etwa «Erneut speichern» statt «OK». Wesentliche Informationen müssen im Text stehen; Farbe und Symbol reichen nicht aus. Lange Diagnosen gehören in ergänzende Hilfe.",
+                      "text": "Empfohlen sind ein kurzer Titel und eine knappe Erklärung mit einem klaren nächsten Schritt. «Erneut speichern» passt im gezeigten Fall nach bestätigter Nichtannahme und behobener Ursache. «Status prüfen» passt nur, wenn sich der ursprüngliche Vorgang verlässlich abfragen lässt, ohne eine weitere Speicherung auszulösen. Fehlt diese Möglichkeit, muss das Produkt einen konkreten Weg zur Klärung bereitstellen; erfinde keine bedienbare Aktion.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Wesentliche Informationen müssen im Text stehen; Farbe und Symbol reichen nicht aus. Lange Diagnosen gehören in ergänzende Hilfe. ",
+                      "type": "text",
+                      "version": 1
+                    },
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/content-design",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Content Design",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    },
+                    {
+                      "text": " erläutert die Formulierung bei bestätigtem und unbekanntem Ergebnis.",
                       "type": "text",
                       "version": 1
                     }
@@ -25310,6 +25362,122 @@
                   "version": 1,
                   "children": [
                     {
+                      "text": "Allgemeine UX-Regeln · Formulare anordnen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Zusammengehörige Angaben, Hilfe und Fehlermeldungen so anordnen, dass ihre Zuordnung verständlich bleibt und die Reihenfolge der Aufgabe folgt.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Für längere Beschriftungen und Rückmeldungen sowie wenig verfügbaren Platz vorsorgen. Die logische Reihenfolge erhalten; Inhalte und Aktionen müssen erreichbar bleiben.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Aktionen verständlich zuordnen und ihre Priorität erkennbar machen. Spalten, Abstände und die Anordnung von Aktionen anhand des Inhalts und der Zielumgebung festlegen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Festlegungen für das Projektbeispiel",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die folgende Vorschau zeigt das lokale Webbeispiel «Projekt bearbeiten». Das einzelne Namensfeld mit seiner Grenze von 1 bis 80 Zeichen, die Reihenfolge Label → Eingabe → Hilfe → Fehler, die einspaltige Anordnung, 640 px maximale Formularbreite, 24 px Gruppenabstand und die Aktionsanordnung sind Festlegungen dieses Beispiels. Sie sind keine allgemeinen Vorgaben für andere Formulare oder Plattformen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "example-scope",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
                       "text": "Projekt bearbeiten",
                       "type": "text",
                       "version": 1
@@ -25584,7 +25752,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Drei Regeln für die Anordnung",
+                      "text": "Anordnung im Projektbeispiel",
                       "type": "text",
                       "version": 1
                     }
@@ -25598,7 +25766,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Ordne die Felder in einer Spalte an und begrenze das Formular auf 640 px Breite. Jede Feldgruppe folgt der Reihenfolge Label, Eingabe, Hilfe und gegebenenfalls Fehler. Lass zwischen mehreren Gruppen 24 px Abstand.",
+                      "text": "Im Projektbeispiel sind die Felder in einer Spalte angeordnet und das Formular ist auf 640 px Breite begrenzt. Jede Feldgruppe folgt der Reihenfolge Label, Eingabe, Hilfe und gegebenenfalls Fehler. Zwischen mehreren Gruppen liegen 24 px Abstand.",
                       "type": "text",
                       "version": 1
                     }
@@ -25626,7 +25794,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Platziere die Aktionen nach dem Feld: «Änderungen speichern» steht vor «Abbrechen». Sind weniger als 640 px Formularbreite verfügbar, stehen beide untereinander und nutzen die volle Breite.",
+                      "text": "Im Projektbeispiel folgen die Aktionen auf das Feld: «Änderungen speichern» steht vor «Abbrechen». Sind weniger als 640 px Formularbreite verfügbar, stehen beide untereinander und nutzen die volle Breite.",
                       "type": "text",
                       "version": 1
                     }
@@ -36092,11 +36260,141 @@
         "component": {}
       },
       "order": 0,
-      "summary": "Einen Projektnamen eingeben, Fehler erklären und das Ergebnis beim Speichern verständlich anzeigen.",
+      "summary": "Anforderungen erklären, Eingaben erhalten und den Speicherstand verständlich zeigen; der lokale Web-Projektpilot veranschaulicht die Ziele.",
       "contract": {},
       "demo": {},
       "slug": "shadcn-formulare-validierung",
       "content": [
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Allgemeine UX-Regeln · Eingabe und Ergebnis verständlich machen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Erkläre vor der Eingabe den Zweck, die erforderlichen Angaben und ihre Anforderungen. Beschriftungen bleiben erkennbar; Hilfe und Fehler gehören zum betroffenen Wert. Eine Fehlermeldung erklärt, was korrigiert werden kann, und die Eingabe bleibt erhalten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Unterscheide den Entwurf, eine laufende Übermittlung, bestätigte Annahme, ausdrückliche Ablehnung und unbekanntes Ergebnis. Eine gültige Eingabe ist noch keine bestätigte Speicherung. Fehlt die Antwort, darf daraus kein sicherer Misserfolg werden; vor erneutem Senden oder Verwerfen muss das Ergebnis geklärt werden.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Erkläre beim Verlassen, welche ungespeicherten Angaben verloren gehen und ob eine Anfrage weiterlaufen kann. Erhalte beim Korrigieren und bei der Rückkehr den Bezug zur Aufgabe, zu den Angaben und zur ursprünglichen Anfrage. Versprich nur eine Wiederherstellung, die tatsächlich möglich ist.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Diese UX-Ziele lassen sich auch für native Anwendungen verwenden. Prüftakt, Rückwege, Fokusführung und Darstellung sind auf die Aufgabe und die Zielplattform abzustimmen und dort zu prüfen. Das folgende lokale Webbeispiel ist kein Nachweis für eine native Umsetzung.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Festlegungen für das Projektbeispiel · lokales Webformular",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Das Beispiel zeigt einen Projektnamen in einem Webformular. Die Grenze von 1–80 Zeichen, die Prüfung zuerst beim Absenden und die konkrete Anordnung sind für diesen Piloten festgelegt. Andere Produkte brauchen eigene fachliche Bedingungen und eine zur Zielplattform passende Bedienung.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "example-scope",
+          "blockType": "text"
+        },
         {
           "body": {
             "root": {
@@ -36141,7 +36439,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Statische Vorschau · Wähle einen Zustand, um seine Darstellung anzusehen. Das Feld ist schreibgeschützt; die abgebildeten Aktionen senden und speichern nichts.",
+                      "text": "Lokales Webbeispiel · Feldgrenze, Prüftakt und Aktionsanordnung gelten für diesen Projektpiloten. Wähle einen Zustand, um seine statische Darstellung anzusehen. Das Feld ist schreibgeschützt; die abgebildeten Aktionen senden und speichern nichts.",
                       "type": "text",
                       "version": 1
                     }
@@ -37055,7 +37353,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Drei Regeln für den Entwurf",
+                      "text": "Festlegungen für das Projektbeispiel · Formularregeln",
                       "type": "text",
                       "version": 1
                     }
@@ -37069,7 +37367,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Begrenze den Namen auf 1 bis 80 Zeichen, nachdem Leerraum am Anfang und Ende entfernt wurde. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt. Die genaue Zählweise steht unter «Alle Regeln zum Formular».",
+                      "text": "Für diesen Piloten: Begrenze den Namen auf 1 bis 80 Zeichen, nachdem Leerraum am Anfang und Ende entfernt wurde. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt. Die genaue Zählweise steht in der Vertiefung zu den Regeln des lokalen Web-Projektpiloten.",
                       "type": "text",
                       "version": 1
                     }
@@ -37083,7 +37381,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Prüfe zuerst beim Absenden. Danach wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ordne Hilfe und Fehlermeldung dem Feld zu, und erhalte die Eingabe.",
+                      "text": "Der Prüftakt im Piloten: Prüfe zuerst beim Absenden. Danach wird das zuvor fehlerhafte Feld erneut geprüft, sobald es verlassen wird. Ordne Hilfe und Fehlermeldung dem Feld zu, und erhalte die Eingabe.",
                       "type": "text",
                       "version": 1
                     }
@@ -37127,7 +37425,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Layout und Seitentypen",
+                      "text": "Lokale Webanordnung und zugehörige Seitentypen",
                       "type": "text",
                       "version": 1
                     }
@@ -37141,7 +37439,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Das Formular bleibt einspaltig. Die Vorgangsmeldung steht zwischen Feld und Aktionen; unter 640 px verfügbarer Inhaltsbreite folgen Aktionen in gleicher Reihenfolge untereinander.",
+                      "text": "Das Webbeispiel ist einspaltig. Die Vorgangsmeldung steht zwischen Feld und Aktionen; unter 640 px verfügbarer Inhaltsbreite folgen Aktionen in gleicher Reihenfolge untereinander. Diese Anordnung und die Pixelgrenze gehören zur lokalen Webreferenz. Übertragbares Ziel bleibt, dass Angaben, Rückmeldung und nächste Handlung verständlich aufeinander folgen und bei wenig Platz erreichbar bleiben.",
                       "type": "text",
                       "version": 1
                     }
@@ -37355,7 +37653,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Alle Regeln zum Formular",
+                      "text": "Vertiefung · Regeln des lokalen Web-Projektpiloten",
                       "type": "text",
                       "version": 1
                     }
@@ -37369,7 +37667,35 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Aktuelle Erläuterung der fachlichen Regeln: Projekt erstellen, Namen bearbeiten, abbrechen und zurückkehren. Sie berücksichtigt die Präzisierung vom 20.11.2026 und ist keine wörtliche Abschrift des damaligen Stands.",
+                      "text": "Die folgende Erläuterung konkretisiert den Projektpiloten für Weboberflächen in de-CH. Projektname, 1–80 Zeichen, Prüftakt, einzelne Fokusziele, Dialogtasten, URL-Parameter und Pixelmasse sind Entscheidungen dieser Referenz. Sie bilden keine allgemeine Vorgabe für andere Produkte oder native Plattformen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die UX-Ziele zu verständlichen Anforderungen, erhaltenen Eingaben, Verlustschutz und belegten Ergebniszuständen gelten weiterhin. Insbesondere bleibt bei unbekanntem Ergebnis die Statusklärung vor Verwerfen oder erneutem Senden erforderlich. Die dafür benötigte Funktion fehlt im Piloten noch.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Der folgende bestehende Erklärungsteil bleibt erhalten: Projekt erstellen, Namen bearbeiten, abbrechen und zurückkehren. Er berücksichtigt die Präzisierung vom 20.11.2026 und ist keine wörtliche Abschrift des damaligen Stands.",
                       "type": "text",
                       "version": 1
                     }
@@ -39235,7 +39561,7 @@
         "component": {}
       },
       "order": -1,
-      "summary": "Mit editierbaren Vorlagen gestalten, wie Menschen Projekte finden, ansehen, erstellen und bearbeiten.",
+      "summary": "Aufgaben, Zustände und Rückwege zusammen gestalten; ein lokaler Web-Projektpilot zeigt die Anwendung mit editierbaren Vorlagen.",
       "contract": {},
       "demo": {},
       "slug": "shadcn-gestaltungs-pilot",
@@ -39256,7 +39582,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Vom Suchergebnis zum Formular",
+                      "text": "Allgemeine UX-Regeln · einen Arbeitsweg zusammen gestalten",
                       "type": "text",
                       "version": 1
                     }
@@ -39270,7 +39596,93 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Die Vorlagen zeigen einen Projektablauf. Die verlinkten Fachseiten erklären die Regeln dazu.",
+                      "text": "Beginne mit der Aufgabe: Was möchte die Person erreichen, welche Angaben braucht sie und woran erkennt sie das Ergebnis? Gestalte die zusammengehörigen Schritte mit ihren Zuständen und Rückwegen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Erhalte beim Wechsel den Bezug zum bearbeiteten Inhalt und den bisherigen Arbeitskontext. Erkläre vor dem Verlassen, welche ungespeicherten Angaben verloren gehen. Ein Verlassen der Ansicht bestätigt nicht, dass ein laufender Auftrag abgebrochen wurde.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Unterscheide laufende Übermittlung, bestätigte Annahme, ausdrückliche Ablehnung und unbekanntes Ergebnis. Fehlende Bestätigung ist kein sicherer Misserfolg. Bei unbekanntem Ergebnis bleibt die Unsicherheit sichtbar; vor erneutem Senden oder Verwerfen muss der Status geklärt werden.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Diese Ziele beschreiben das Nutzungserlebnis auch für native Anwendungen. Welche Ansichten, Bedienelemente und Rückwege passen, ist am jeweiligen Produkt und auf der Zielplattform zu gestalten und zu prüfen. Der folgende Webpilot belegt keine native Umsetzung.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Festlegungen für das Projektbeispiel · lokaler Webablauf",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Der Projektpilot veranschaulicht die Ziele mit Suche, Detail und Formular. Diese Aufgabenfolge, das Datenmodell, die Gestaltungsmittel und die Downloads sind Entscheidungen für dieses Beispiel. Die verlinkten Fachseiten trennen die Ziele von den Pilotfestlegungen.",
                       "type": "text",
                       "version": 1
                     }
@@ -39524,7 +39936,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "In drei Schritten zum eigenen Entwurf",
+                      "text": "Den Web-Projektpiloten mit den Vorlagen ausarbeiten",
                       "type": "text",
                       "version": 1
                     }
@@ -39538,7 +39950,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "1. Lade die breite und die schmale Ablaufvorlage herunter. Importiere das SVG im Designwerkzeug oder öffne die native FIG in OpenPencil. Inter muss im Zielwerkzeug verfügbar sein.",
+                      "text": "1. Für diesen Beispielablauf: Lade die breite und die schmale Ablaufvorlage herunter. Importiere das SVG im Designwerkzeug oder öffne die native FIG in OpenPencil. Inter muss im Zielwerkzeug verfügbar sein.",
                       "type": "text",
                       "version": 1
                     }
@@ -39552,7 +39964,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "2. Verwende dasselbe Projekt in Suche, Detailansicht und Formular. Ergänze die Zustandsvorlagen. Berücksichtige dabei die Suchkriterien bei der Rückkehr, archivierte Projekte und den Fall, dass das Speicherergebnis unbekannt ist.",
+                      "text": "2. Verwende im Projektpiloten dasselbe Projekt in Suche, Detailansicht und Formular. Ergänze die Zustandsvorlagen. Berücksichtige dabei die Suchkriterien bei der Rückkehr, archivierte Projekte und den Fall, dass das Speicherergebnis unbekannt ist.",
                       "type": "text",
                       "version": 1
                     }
@@ -39709,8 +40121,8 @@
           "blockType": "text"
         },
         {
-          "title": "Die Aufgaben im Entwurf ausarbeiten",
-          "summary": "Verwende dasselbe Projekt in allen drei Schritten. Die verlinkten Fachseiten erklären Regeln, Zustände und Rückwege.",
+          "title": "Lokalen Web-Projektpiloten ausarbeiten",
+          "summary": "Für diesen Beispielablauf wird dasselbe Projekt in allen drei Schritten verwendet. Die Aufgabenfolge ist eine Pilotentscheidung; Kontext und verständliche Zustände bleiben die übertragbaren UX-Ziele.",
           "caption": "Die Anleitung beschreibt einen statischen Entwurf. Navigation, Speicherung und assistive Bedienung müssen erst umgesetzt und geprüft werden.",
           "source": "Lokale Pilotentscheidung 0.1 vom 18.11.2026; aus der gemeinsamen Arbeitsfähigkeitsprüfung abgeleitet.",
           "blockName": "workflow",
@@ -39763,7 +40175,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Die drei Aufgaben",
+                      "text": "Die drei Aufgaben des Web-Projektpiloten",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -39893,7 +40305,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Das gemeinsame Datenmodell",
+                      "text": "Beispielentscheidungen · Datenmodell des Web-Projektpiloten",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -39911,7 +40323,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Ein Projekt hat genau drei fachliche Angaben: eine unveränderliche ID, einen erforderlichen Projektnamen und den Status Aktiv oder Archiviert. Das System vergibt ID und Status. Für den Namen sind 1–80 wahrgenommene Zeichen zulässig (Unicode-Graphemcluster); Leerzeichen am Anfang und Ende werden vor dem Zählen entfernt. Mehrere Projekte dürfen denselben Namen haben; die ID unterscheidet sie.",
+                      "text": "Im lokalen Web-Projektpiloten hat ein Projekt genau drei fachliche Angaben: eine unveränderliche ID, einen erforderlichen Projektnamen und den Status Aktiv oder Archiviert. Das System vergibt ID und Status. Für den Namen sind 1–80 wahrgenommene Zeichen zulässig (Unicode-Graphemcluster); Leerzeichen am Anfang und Ende werden vor dem Zählen entfernt. Mehrere Projekte dürfen denselben Namen haben; die ID unterscheidet sie.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -39981,7 +40393,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Visuelle Referenz · Farbe und Typografie",
+                      "text": "Lokale Webreferenz · Farbe und Typografie",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -40069,7 +40481,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Visuelle Referenz · Raum und Anordnung",
+                      "text": "Lokale Webreferenz · Raum und Anordnung",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -40087,7 +40499,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Die vorgesehenen Abstände sind 4, 8, 12, 16, 24, 32 und 48 px. Zwischen Label und Feld liegen 8 px, ebenso zwischen Feld und Hilfe oder Fehlermeldung. Zwischen Feldern oder zusammengehörigen Bereichen liegen 24 px, zwischen grossen Seitenabschnitten 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
+                      "text": "Für diesen Web-Projektpiloten sind die Abstände 4, 8, 12, 16, 24, 32 und 48 px. Zwischen Label und Feld liegen 8 px, ebenso zwischen Feld und Hilfe oder Fehlermeldung. Zwischen Feldern oder zusammengehörigen Bereichen liegen 24 px, zwischen grossen Seitenabschnitten 48 px. Dokumentation und längere Texte bleiben bei höchstens 65 Zeichen pro Zeile.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -40105,7 +40517,7 @@
                   "children": [
                     {
                       "mode": "normal",
-                      "text": "Inhaltsbreite maximal 1120 px; Seitenränder breit 32 px, schmal 16 px. Formular maximal 640 px; die kurze Detailansicht bleibt einspaltig. Unter 640 px verfügbarer Inhaltsbreite stehen Suchfelder und Aktionsgruppen untereinander. Lange Namen umbrechen. Listen zeigen schmal dieselben Angaben in gestapelten Einträgen.",
+                      "text": "Die lokale Webreferenz legt fest: Inhaltsbreite maximal 1120 px; Seitenränder breit 32 px, schmal 16 px. Formular maximal 640 px; die kurze Detailansicht bleibt einspaltig. Unter 640 px verfügbarer Inhaltsbreite stehen Suchfelder und Aktionsgruppen untereinander. Lange Namen umbrechen. Listen zeigen schmal dieselben Angaben in gestapelten Einträgen.",
                       "type": "text",
                       "style": "",
                       "detail": 0,
@@ -41727,7 +42139,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Prüfe die Verbindung und versuche es erneut.",
+                      "text": "Die Speicherung wurde abgelehnt. Deine Eingaben bleiben erhalten.",
                       "type": "text",
                       "version": 1
                     }
@@ -41741,7 +42153,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Häkchen und Warnzeichen unterscheiden die Zustände; der Text erklärt den Sachverhalt. Beide Beispiele sind statisch, es wird nichts gespeichert.",
+                      "text": "Häkchen und Warnzeichen unterscheiden die Zustände; der Text erklärt den Sachverhalt. Der Fehlertext setzt voraus, dass die Nichtannahme bestätigt ist. Fehlt nur die Antwort, bleibt das Ergebnis unbekannt. Beide Beispiele sind statisch, es wird nichts gespeichert.",
                       "type": "text",
                       "version": 1
                     }
@@ -58048,6 +58460,122 @@
                   "version": 1,
                   "children": [
                     {
+                      "text": "Allgemeine UX-Regeln · Neue Einträge erstellen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Beim Erstellen muss erkennbar sein, was neu angelegt wird, welche Angaben dafür erforderlich sind und welche Angaben das System ergänzt.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Eingaben bei Fehlern erhalten und Korrekturen verständlich ermöglichen. Vor dem Verlust ungespeicherter Angaben schützen; Folgen eines Abbruchs oder Verlassens erklären.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Eine laufende Anfrage und ein bestätigtes Ergebnis unterscheiden. Bei ungeklärtem Ergebnis den Stand und den nächsten sicheren Schritt erklären und unbeabsichtigte doppelte Einträge verhindern. Nach erfolgreichem Erstellen Orientierung und Kontext erhalten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Festlegungen für das Projektbeispiel",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die folgenden Festlegungen gelten für das lokale Webbeispiel «Projekt erstellen». Feldumfang, Namensgrenze, Prüfzeitpunkte, Status, Texte, Navigation und die Grenze von 640 px sind Entscheidungen dieses Beispiels. Sie sind keine allgemeinen Vorgaben für andere Formulare oder Plattformen; dort müssen passende fachliche und gestalterische Entscheidungen getroffen werden.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "example-scope",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
                       "text": "So beginnt eine Erstellung",
                       "type": "text",
                       "version": 1
@@ -58478,7 +59006,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Für den Entwurf beachten",
+                      "text": "Entscheidungen im Projektbeispiel",
                       "type": "text",
                       "version": 1
                     }
@@ -58592,7 +59120,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Breit und schmal dieselbe Reihenfolge",
+                      "text": "Projektbeispiel · Breit und schmal dieselbe Reihenfolge",
                       "type": "text",
                       "version": 1
                     }
@@ -58856,6 +59384,122 @@
                   "version": 1,
                   "children": [
                     {
+                      "text": "Allgemeine UX-Regeln · Bestehende Angaben bearbeiten",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Vor dem Bearbeiten die Identität des Eintrags, die zuletzt bestätigten Angaben und die verfügbaren Bearbeitungsmöglichkeiten verständlich machen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Erkennbar halten, welche Angaben geändert wurden und wie sie gespeichert werden. Eingaben bei Fehlern erhalten und vor dem unbeabsichtigten Verlust ungespeicherter Änderungen schützen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Laufende Speicherung, bestätigten Erfolg und ungeklärtes Ergebnis unterscheiden. Den nächsten sicheren Schritt erklären, unbeabsichtigte wiederholte Änderungen verhindern und bei der Rückkehr den Zusammenhang mit dem bearbeiteten Eintrag erhalten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Festlegungen für das Projektbeispiel",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die folgenden Festlegungen gelten für das lokale Webbeispiel «Projekt bearbeiten». Projektstatus und Bearbeitungsrechte, Namensregeln, ausdrückliches Speichern, Prüfzeitpunkte, Dialoge, Rückwege und die Grenze von 640 px sind Entscheidungen dieses Beispiels. Sie sind keine allgemeinen Vorgaben für andere Formulare oder Plattformen; dort sind passende fachliche Regeln und Bedienmuster festzulegen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "example-scope",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
                       "text": "Bestehende Angaben bearbeiten",
                       "type": "text",
                       "version": 1
@@ -59026,7 +59670,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Drei Entscheidungen für den Entwurf",
+                      "text": "Drei Entscheidungen im Projektbeispiel",
                       "type": "text",
                       "version": 1
                     }
@@ -59582,7 +60226,7 @@
                   "version": 1,
                   "children": [
                     {
-                      "text": "Detailregeln und technische Voraussetzungen",
+                      "text": "Projektbeispiel · Detailregeln und technische Voraussetzungen",
                       "type": "text",
                       "version": 1
                     }

@@ -7,13 +7,13 @@ const text = (key: string, title: string, ...paragraphs: string[]): Block => ({ 
   ...paragraphs.map(p => ({ ...base, type: 'paragraph', children: [node(p)] })),
 ] } } })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:43:28.710Z',
+  expectedUpdatedAt: '2026-11-20T16:51:55.215Z',
   summary: 'Beschrifte Handlungen, benenne reine Iconaktionen und erkläre Status mit Text.',
   content: [
     text('examples', 'Vier Anwendungen im Vergleich', 'Eigene Beispielzeichen · keine freigegebene Iconbibliothek'),
     text('label', 'Icon mit sichtbarem Text', 'Benennung gestalten', 'Der Pfeil ergänzt das Linkziel. Der Text benennt es; das Zeichen wird nicht zusätzlich angesagt.'),
     text('only', 'Icon allein: Zweck benennen', 'Hinweis zum Entwurf anzeigen', 'Hinweis zum Entwurf ausblenden', 'Die Taste mit dem «i» zeigt einen Hinweis. Ihr zugänglicher Name beschreibt die Handlung statt der Form des Zeichens.', 'Wähle bei seltenen oder mehrdeutigen Handlungen sichtbaren Text. Ein Name für assistive Technik macht ein unbekanntes Zeichen visuell noch nicht verständlich.'),
-    text('status', 'Status auch ohne Farbe verstehen', 'Gespeichert', 'Speichern fehlgeschlagen', 'Prüfe die Verbindung und versuche es erneut.', 'Häkchen und Warnzeichen unterscheiden die Zustände; der Text erklärt den Sachverhalt. Beide Beispiele sind statisch, es wird nichts gespeichert.'),
+    text('status', 'Status auch ohne Farbe verstehen', 'Gespeichert', 'Speichern fehlgeschlagen', 'Die Speicherung wurde abgelehnt. Deine Eingaben bleiben erhalten.', 'Häkchen und Warnzeichen unterscheiden die Zustände; der Text erklärt den Sachverhalt. Der Fehlertext setzt voraus, dass die Nichtannahme bestätigt ist. Fehlt nur die Antwort, bleibt das Ergebnis unbekannt. Beide Beispiele sind statisch, es wird nichts gespeichert.'),
     text('decoration', 'Dekoration trägt keine Information', 'Dein Arbeitsbereich', 'Das Schmuckzeichen ergänzt die Überschrift. Ohne das Zeichen bleibt die Aussage vollständig; es wird bei der Ansage übersprungen.'),
     text('rules', 'Für deinen Entwurf entscheiden',
       'Bevorzuge sichtbaren Text, wenn die Handlung nicht sofort klar ist. Verwende dasselbe Zeichen für dieselbe Bedeutung. Ein Tooltip kann zusätzliche Hinweise geben; die Handlung muss auch ohne ihn verständlich sein.',

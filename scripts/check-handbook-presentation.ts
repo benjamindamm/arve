@@ -18,7 +18,7 @@ const client=new Client({name:'handbook-presentation-check',version:'1'})
 const releases=new Set((await readdir('scripts/content/page-reworks')).filter(file=>file.endsWith('.ts')).map(file=>file.slice(0,-3)))
 try{
  await client.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
- const tree=await client.callTool({name:'list_documentation_tree',arguments:{system:'shadcn'}})
+ const tree=await client.callTool({name:'list_documentation_tree',arguments:{view:'full',system:'shadcn'}})
  assert(!tree.isError)
  const paths=new Set<string>()
  const walk=(value:any):void=>{if(Array.isArray(value))value.forEach(walk);else if(value&&typeof value==='object')for(const [key,child]of Object.entries(value)){if(key==='path'&&typeof child==='string')paths.add(child);else walk(child)}}
@@ -38,7 +38,7 @@ try{
   }
   if(!home){
    assert(paths.has(path),path+' absent from MCP tree')
-   const result=await client.callTool({name:page.component?'get_component_page':'get_documentation_page',arguments:page.component?{system:'shadcn',component:page.component}:{system:'shadcn',section}})
+   const result=await client.callTool({name:page.component?'get_component_page':'get_documentation_page',arguments:page.component?{view:'full',system:'shadcn',component:page.component}:{view:'full',system:'shadcn',section}})
    assert(!result.isError,path)
    const data=result.structuredContent as any
    assert.equal(data.title,page.title,path)

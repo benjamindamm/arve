@@ -18,6 +18,7 @@ export default function PilotGuide({ content }: { content: Page['content'] }) {
       : <section id={blockAnchor(b)}><RichText data={b.body} /></section>
   }
   return <div className="pilot-guide">
+    {section('goals')}
     {example && <section id={blockAnchor(example)}>
       <h2>{e[0]}</h2><p className="pg-caption">{e[1]}</p>
       <ol className="pg-journey">

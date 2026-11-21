@@ -10,7 +10,7 @@
       "key": "usage",
       "title": "Dringende Rückmeldung am betroffenen Ort",
       "paragraphs": [
-        "Ein Alert macht ein Problem innerhalb der Seite sichtbar, ohne den Arbeitsbereich zu überdecken. Setze ihn beispielsweise neben einen fehlgeschlagenen Speichervorgang, wenn die Person sofort wissen muss, dass ihre Änderungen noch nicht gesichert sind.",
+        "Ein Alert macht ein Problem innerhalb der Seite sichtbar, ohne den Arbeitsbereich zu überdecken. Setze ihn beispielsweise neben einen nachweislich fehlgeschlagenen Speichervorgang, wenn die Person sofort wissen muss, dass ihre Änderungen noch nicht gesichert sind.",
         "Die hier beschriebene Ausführung verwendet bereits die Rolle alert. Dynamisch eingefügte Meldungen sind deshalb für dringende Rückmeldungen vorgesehen. Für einen dauerhaften, unaufdringlichen Einführungstext empfehlen wir normalen Seiteninhalt. Betrifft der Fehler nur ein Eingabefeld, gehört eine Feldfehlermeldung direkt zu diesem Feld. Muss eine folgenschwere Aktion ausdrücklich bestätigt werden, passt ein Alert Dialog besser."
       ],
       "links": [
@@ -25,13 +25,13 @@
       "key": "example",
       "title": "Speicherfehler verständlich auffangen",
       "paragraphs": [
-        "Der Entwurf zeigt die Meldung «Änderungen nicht gespeichert» mit der Erklärung «Prüfe die Verbindung und versuche es erneut.» und dem Button «Erneut speichern». Die Meldung steht im Zusammenhang mit der bearbeiteten Seite; sie verlangt keinen Wechsel in ein separates Fenster.",
-        "Der Titel nennt das Ergebnis, der Folgesatz einen nächsten Schritt. Das Symbol unterstützt die Erkennung. Der Button löst eine Aktion der Anwendung aus: Alert selbst speichert keine Daten und wiederholt keinen Vorgang."
+        "In diesem Beispiel hat der Dienst bestätigt, dass der Speicherauftrag nicht angenommen wurde. Die Ursache ist behoben und ein neuer Versuch möglich. Der Entwurf zeigt «Änderungen nicht gespeichert», die Erklärung «Die Speicherung wurde abgelehnt. Deine Eingaben bleiben erhalten.» und den Button «Erneut speichern». Die Meldung steht bei der bearbeiteten Seite und verlangt keinen Wechsel in ein separates Fenster.",
+        "Der Titel nennt das Ergebnis, die Erklärung ergänzt die Ablehnung und den Erhalt der Eingaben. Das Symbol unterstützt die Erkennung. Der Button löst eine Aktion der Anwendung aus: Alert selbst speichert keine Daten und wiederholt keinen Vorgang."
       ],
       "illustration": {
         "src": "/component-examples/alert.svg",
-        "alt": "Speicherfehlermeldung mit Warndreieck, Titel Änderungen nicht gespeichert, Verbindungshinweis und Button Erneut speichern.",
-        "caption": "Statische Illustration · Speicherfehler mit einem konkreten nächsten Schritt."
+        "alt": "Speicherfehlermeldung mit Warndreieck, Titel Änderungen nicht gespeichert, bestätigter Ablehnung, erhaltenen Eingaben und Button Erneut speichern.",
+        "caption": "Statische Illustration · Erneut speichern nach bestätigter Nichtannahme und behobener Ursache."
       }
     },
     {
@@ -55,15 +55,24 @@
       "title": "Die Anwendung steuert den weiteren Verlauf",
       "paragraphs": [
         "Alert wird angezeigt, kann mit neuen Inhalten aktualisiert und wieder entfernt werden. Ein eigener Lade-, Erfolgs- oder Geschlossen-Zustand gehört nicht zu seinem Verhalten. Auch automatisches Ausblenden und eine eingebaute Schliessen-Aktion sind nicht definiert.",
-        "Nach «Erneut speichern» verantwortet die Anwendung den Vorgang und seine Rückmeldung. Entferne die Fehlermeldung erst, wenn sie nicht mehr zutrifft. Erzeuge dieselbe Meldung nicht bei jeder Aktualisierung neu und verschiebe den Fokus nicht allein wegen ihres Erscheinens."
+        "Nach «Erneut speichern» verantwortet die Anwendung den Vorgang und seine Rückmeldung. Entferne die Fehlermeldung erst, wenn sie nicht mehr zutrifft. Erzeuge dieselbe Meldung nicht bei jeder Aktualisierung neu und verschiebe den Fokus nicht allein wegen ihres Erscheinens.",
+        "Fehlt nur die Antwort, kann die Speicherung trotzdem erfolgt sein. Erhalte die Eingaben und den Bezug zum ursprünglichen Vorgang. Kläre dessen Ergebnis, bevor du eine neue Speicherung anbietest. Ein sicherer erneuter Aufruf desselben Vorgangs setzt voraus, dass das Produkt eine doppelte Ausführung zuverlässig verhindert; Alert leistet das nicht."
       ]
     },
     {
       "key": "labels",
       "title": "Das Ergebnis nennen, den nächsten Schritt erklären",
       "paragraphs": [
-        "«Änderungen nicht gespeichert» ist hilfreicher als «Fehler», weil der Titel die konkrete Folge nennt. «Prüfe die Verbindung und versuche es erneut» hilft mehr als «Ein unbekannter Fehler ist aufgetreten». Verwende nur Ursachen und Zusagen, die die Anwendung tatsächlich kennt.",
-        "Empfohlen sind ein kurzer Titel und eine knappe Erklärung mit einem klaren nächsten Schritt. Benenne Aktionen konkret, etwa «Erneut speichern» statt «OK». Wesentliche Informationen müssen im Text stehen; Farbe und Symbol reichen nicht aus. Lange Diagnosen gehören in ergänzende Hilfe."
+        "«Änderungen nicht gespeichert» ist hilfreicher als «Fehler», wenn die Nichtannahme bestätigt ist. Fehlt die Bestätigung, passt «Es ist noch unklar, ob die Änderungen gespeichert wurden». Eine unterbrochene Verbindung allein beweist keinen Misserfolg. Nenne nur Ursachen und Zusagen, die das Produkt tatsächlich kennt.",
+        "Empfohlen sind ein kurzer Titel und eine knappe Erklärung mit einem klaren nächsten Schritt. «Erneut speichern» passt im gezeigten Fall nach bestätigter Nichtannahme und behobener Ursache. «Status prüfen» passt nur, wenn sich der ursprüngliche Vorgang verlässlich abfragen lässt, ohne eine weitere Speicherung auszulösen. Fehlt diese Möglichkeit, muss das Produkt einen konkreten Weg zur Klärung bereitstellen; erfinde keine bedienbare Aktion.",
+        "Wesentliche Informationen müssen im Text stehen; Farbe und Symbol reichen nicht aus. Lange Diagnosen gehören in ergänzende Hilfe. Content Design erläutert die Formulierung bei bestätigtem und unbekanntem Ergebnis."
+      ],
+      "links": [
+        {
+          "text": "Content Design",
+          "href": "/systems/shadcn/content-design",
+          "paragraph": 2
+        }
       ]
     },
     {

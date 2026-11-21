@@ -26,6 +26,7 @@ export default function FormValidation({content}:{content:Page['content']}) {
  const original=blocks.slice(blocks.findIndex(b=>b.blockName==='contract')+1)
  const source=find('sources'); const contract=find('contract')
  return <div className="validation-rework">
+  {['goals','example-scope'].map(key=>{const block=find(key); return block&&<section id={blockAnchor(block)} key={key}><RichText data={block.body}/></section>})}
   <section id={find('example') && blockAnchor(find('example')!)} className="validation-example">
    <div className="validation-state-select"><label htmlFor={`${id}-state`}>{selector}</label><select id={`${id}-state`} value={state} onChange={e=>setState(e.target.value as State)} aria-controls={`${id}-preview`}>{states.map(key=><option value={key} key={key}>{lines(find('state-'+key))[0]}</option>)}</select></div>
    <figure>

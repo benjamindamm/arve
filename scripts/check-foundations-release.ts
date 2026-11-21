@@ -16,7 +16,7 @@ const payload=await getPayload({config:safeConfig})
 const client=new Client({name:'foundations-release-check',version:'1.0.0'})
 try {
  await client.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
- const tree=await client.callTool({name:'list_documentation_tree',arguments:{system:'shadcn'}})
+ const tree=await client.callTool({name:'list_documentation_tree',arguments:{view:'full',system:'shadcn'}})
  assert(!tree.isError)
  for(const original of foundationsRelease) {
   const entry = await currentPage(original.slug === 'shadcn-grundlagen' ? { ...original, ...foundationsOverviewRelease } : original.slug === 'shadcn-farben' ? { ...original, ...colorPageRelease } : original)
@@ -28,7 +28,7 @@ try {
     assert.deepEqual(withoutIds(page.content), withoutIds(entry.content))
     assert.equal(page.summary, entry.summary)
   }
-  const response=await client.callTool({name:'get_documentation_page',arguments:{system:'shadcn',section}})
+  const response=await client.callTool({name:'get_documentation_page',arguments:{view:'full',system:'shadcn',section}})
   assert(!response.isError,section)
   const data=response.structuredContent as Record<string,unknown>
   assert.deepEqual(data.content,publicContent(page.content))

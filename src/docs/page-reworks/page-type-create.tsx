@@ -26,6 +26,7 @@ export default function PageTypeCreate({ content }: { content: Page['content'] }
       : <section id={blockAnchor(b)}><RichText data={b.body}/></section>
   }
   return <div className="create-rework">
+    {section('goals')}{section('example-scope')}
     {example && <section id={blockAnchor(example)}>
       <h2>{v[0]}</h2>
       <div className="create-example">

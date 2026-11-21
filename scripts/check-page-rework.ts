@@ -10,7 +10,7 @@ const c=new Client({name:'page-rework-check',version:'1'})
 try{
  await c.connect(new StreamableHTTPClientTransport(new URL('http://127.0.0.1:3010/mcp')))
  const component = ['button','input','checkbox','switch'].includes(slug)
- const result=await c.callTool({name:component?'get_component_page':'get_documentation_page',arguments:component?{system:'shadcn',component:slug}:{system:'shadcn',section:slug}});assert(!result.isError)
+ const result=await c.callTool({name:component?'get_component_page':'get_documentation_page',arguments:component?{view:'full',system:'shadcn',component:slug}:{view:'full',system:'shadcn',section:slug}});assert(!result.isError)
  const data=result.structuredContent as any;assert.deepEqual(clean(data.content),clean(release.content));assert.equal(data.summary,release.summary)
  if(release.title)assert.equal(data.title,release.title)
  assert(!/postfinance|beispielsystem/i.test(JSON.stringify(data)))

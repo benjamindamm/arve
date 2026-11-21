@@ -9,7 +9,7 @@ const client=new Client({name:'portable-contract-publication-check',version:'1.0
 try{
  await client.connect(new StreamableHTTPClientTransport(new URL('/mcp',origin)))
  for(const component of ['button','input','checkbox','switch']){
- const response=await client.callTool({name:'get_component_page',arguments:{system:'shadcn',component}})
+ const response=await client.callTool({name:'get_component_page',arguments:{view:'full',system:'shadcn',component}})
  assert(!response.isError)
  const data=response.structuredContent as {contract:ReturnType<typeof getContract>;contractReference:{revision:string};contractArtifacts:{path:string;sha256:string;url:string}[]}
  assert.equal(data.contractReference.revision,revision)

@@ -25,6 +25,10 @@ export default function FormLayout({ content }: { content: Page['content'] }) {
   const [label, value, help, errorText] = lines(find('field'))
   const [actionsLabel, primary, secondary] = lines(find('actions'))
   return <div className="form-layout-rework">
+    {['goals', 'example-scope'].map(key => {
+      const b = find(key)
+      return b ? <section key={key} id={blockAnchor(b)}><RichText data={b.body}/></section> : null
+    })}
     {example && <section id={blockAnchor(example)} className="form-layout-example">
       <fieldset className="form-layout-switch"><legend>{stateLabel}</legend>
         <button type="button" aria-pressed={!error} aria-controls={`${id}-preview`} onClick={() => setError(false)}>{normalLabel}</button>
@@ -48,7 +52,7 @@ export default function FormLayout({ content }: { content: Page['content'] }) {
         <figcaption>{caption}</figcaption>
       </figure>
     </section>}
-    {blocks.filter(b => !['example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => ["rules", "anatomy"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
+    {blocks.filter(b => !['goals', 'example-scope', 'example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => ["rules", "anatomy"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
       ? <details key={b.blockName} id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section key={b.blockName} id={blockAnchor(b)}><RichText data={b.body}/></section>)}
   </div>

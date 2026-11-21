@@ -16,7 +16,7 @@ try{
  for(const slug of slugs){
   const doc=slug==='button'?button:JSON.parse(await readFile('scripts/content/component-docs/'+slug+'.json','utf8'))
   const expected=slug==='button'?button.content:editorialContent(doc)
-  const page=await call('get_component_page',{system:'shadcn',component:slug})
+  const page=await call('get_component_page',{view:'full',system:'shadcn',component:slug})
   assert.equal(page.contractReference.revision,revision)
   assert.equal(page.summary,doc.summary,slug)
   assert.deepEqual(clean(page.content),clean(expected),slug+': MCP editorial content')

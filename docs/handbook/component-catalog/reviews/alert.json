@@ -186,13 +186,35 @@
           "snippet": "Status der neuen Domänenmigration: **complete** im begrenzten Referenzumfang."
         }
       ]
+    },
+    {
+      "id": "confirmed-rejection-example",
+      "blockName": "example",
+      "kind": "editorial",
+      "statement": "Das Beispiel setzt bestätigte Nichtannahme und behobene Ursache voraus. Verbindungsabbruch allein rechtfertigt weder die definitive Fehlermeldung noch eine neue Speicherung.",
+      "evidence": []
+    },
+    {
+      "id": "unknown-outcome-guidance",
+      "blockName": "states",
+      "kind": "editorial",
+      "statement": "Bei unbekanntem Ergebnis bleiben Eingaben und Vorgangsbezug erhalten. Vor einer neuen Speicherung wird das Ergebnis geklärt; eine sichere Wiederholung desselben Vorgangs verlangt nachgewiesenen Schutz vor doppelter Ausführung. Das ist Produktverantwortung und kein Alert-Zustand.",
+      "evidence": []
+    },
+    {
+      "id": "conditional-status-action",
+      "blockName": "labels",
+      "kind": "editorial",
+      "statement": "Unsicherheit wird ausdrücklich benannt. Status prüfen wird nur bei verlässlicher Abfrage des ursprünglichen Vorgangs vorgeschlagen, ohne eine weitere Speicherung auszulösen. Keine neue Produktfähigkeit wird aus dem Beispiel abgeleitet.",
+      "evidence": []
     }
   ],
   "decisions": [
     "Speicherfehler statt allgemeiner Informationsmeldung gewählt, da die exportierte Wurzel role=alert liefert.",
     "Alternativen als redaktionelle Einsatzentscheidungen formuliert; keine fremden Komponentenfähigkeiten beschrieben.",
     "destructive im Beispiel neutral illustriert: Farbe ergänzt die explizite Fehlermeldung, die Grafik behauptet keine Pixelkonformität.",
-    "Kein eigener Schliessen-Button erfunden; die Anwendung verantwortet Behebung und Entfernen."
+    "Kein eigener Schliessen-Button erfunden; die Anwendung verantwortet Behebung und Entfernen.",
+    "UX-Präzisierung vom 22.11.2026: Beispiel und Beschriftung trennen bestätigte Nichtannahme von fehlender Antwort; die Nachbarseiten Content Design, Formulare und Validierung sowie Laden, Leere und Fehler wurden dafür redaktionell abgeglichen. Originalquellen und Contractaussagen bleiben unverändert."
   ],
   "limits": [
     "Keine lokale Alert-Live-Demo im Demoordner vorhanden.",

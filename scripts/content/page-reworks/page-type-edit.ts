@@ -15,9 +15,17 @@ const links = (key: string, title: string, entries: [string, string][]): Block =
   ] } },
 })
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:53:38.750Z',
+  expectedUpdatedAt: '2026-11-20T16:39:59.326Z',
   summary: 'Bestehende Angaben bearbeiten, Änderungen speichern und beim Abbrechen vor dem Verlust ungespeicherter Angaben warnen.',
   content: [
+    text('goals', 'Allgemeine UX-Regeln · Bestehende Angaben bearbeiten', [
+      'Vor dem Bearbeiten die Identität des Eintrags, die zuletzt bestätigten Angaben und die verfügbaren Bearbeitungsmöglichkeiten verständlich machen.',
+      'Erkennbar halten, welche Angaben geändert wurden und wie sie gespeichert werden. Eingaben bei Fehlern erhalten und vor dem unbeabsichtigten Verlust ungespeicherter Änderungen schützen.',
+      'Laufende Speicherung, bestätigten Erfolg und ungeklärtes Ergebnis unterscheiden. Den nächsten sicheren Schritt erklären, unbeabsichtigte wiederholte Änderungen verhindern und bei der Rückkehr den Zusammenhang mit dem bearbeiteten Eintrag erhalten.',
+    ]),
+    text('example-scope', 'Festlegungen für das Projektbeispiel', [
+      'Die folgenden Festlegungen gelten für das lokale Webbeispiel «Projekt bearbeiten». Projektstatus und Bearbeitungsrechte, Namensregeln, ausdrückliches Speichern, Prüfzeitpunkte, Dialoge, Rückwege und die Grenze von 640 px sind Entscheidungen dieses Beispiels. Sie sind keine allgemeinen Vorgaben für andere Formulare oder Plattformen; dort sind passende fachliche Regeln und Bedienmuster festzulegen.',
+    ]),
     text('example', 'Bestehende Angaben bearbeiten', [
       'Statisches Gestaltungsbeispiel: Die Felder und Aktionen zeigen die Anordnung. Eingeben, Speichern und Navigieren sind hier nicht möglich.',
       'Projekt bearbeiten', 'Alpen · P-101', 'Aktiv', 'Projektname (erforderlich)', 'Alpen',
@@ -25,7 +33,7 @@ export const release = {
       'Änderungen speichern', 'Abbrechen',
       'Der zuletzt bestätigte Name ist Alpen. ID und Status helfen, das Projekt zu erkennen; nur der Name lässt sich bearbeiten.',
     ]),
-    text('rules', 'Drei Entscheidungen für den Entwurf', [
+    text('rules', 'Drei Entscheidungen im Projektbeispiel', [
       'Vor dem Bearbeiten muss feststehen, welches Projekt geöffnet ist, welcher Wert zuletzt bestätigt wurde und ob die Person es bearbeiten darf. Archivierte Projekte bleiben lesbar und bieten keine Aktion zum Speichern.',
       'Nur «Änderungen speichern» übermittelt die Eingabe. Weder Tippen noch das Verlassen des Felds speichert etwas. Ohne Änderung erscheint bei den Aktionen «Keine Änderungen zu speichern.»; es wird keine Anfrage gesendet und die Seite bleibt geöffnet.',
       'Ohne Änderungen führt Abbrechen direkt zur Detailseite. Bei noch nicht übermittelten Änderungen fragt ein Dialog, ob sie verworfen werden sollen. Läuft die Anfrage bereits oder ist ihr Ergebnis unklar, braucht das Verlassen einen eigenen Hinweis.',
@@ -52,7 +60,7 @@ export const release = {
       'Auf Seite bleiben', 'Seite verlassen',
       'Solange das Ergebnis der Anfrage unklar ist, gelten diese Regeln auch bei geänderten Angaben: Weder Verwerfen noch erneutes Speichern ist möglich. Der Fokus liegt zunächst auf «Auf Seite bleiben»; auch Escape lässt die Seite geöffnet. Bei der Rückkehr bleiben Bearbeiten und Senden gesperrt, bis das Ergebnis bestätigt ist. Die dafür nötige Statusabfrage muss noch bereitgestellt werden.',
     ]),
-    text('details', 'Detailregeln und technische Voraussetzungen', [
+    text('details', 'Projektbeispiel · Detailregeln und technische Voraussetzungen', [
       'Für den Namen gilt im Pilot: Leerzeichen am Anfang und Ende werden entfernt (Randtrim). Danach muss der Name 1–80 Unicode-Graphemcluster umfassen. Innere Leerzeichen und Gross-/Kleinschreibung bleiben erhalten; gleiche Namen sind erlaubt. Bei zu langen Namen lautet der Fehler: «Den Projektnamen auf höchstens 80 Zeichen kürzen.»',
       'Während der Anfrage steht «Änderungen werden gespeichert …» vor den Aktionen; erneutes Senden ist blockiert. Erst die bestätigte Annahme führt zur Detailseite von P-101 mit der Meldung «Änderungen gespeichert». Wird die Anfrage ausdrücklich nicht angenommen, bleibt die Eingabe erhalten. Erkläre die Ursache am Feld oder für den gesamten Vorgang.',
       'Die URL-Parameter q und status bleiben beim Wechsel zwischen Detailseite und Bearbeitung sowie auf dem Rückweg erhalten. Browser-Zurück innerhalb der Anwendung bietet denselben Schutz vor unbeabsichtigtem Verlassen. Neuladen, Schliessen und externe Navigation sind damit nicht abgesichert. Ein Entwurf wird nicht dauerhaft gespeichert.',
