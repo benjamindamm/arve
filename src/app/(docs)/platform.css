@@ -11,7 +11,8 @@
 .platform-hero { background: var(--arve-paper); border-bottom: 1px solid var(--arve-line); }
 .platform-intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: clamp(32px, 6vw, 84px); padding-block: clamp(44px, 6vw, 84px); }
 .platform-intro h1 { margin: 0; font-size: clamp(38px, 4.9vw, 62px); line-height: 1.09; letter-spacing: -.055em; }
-.platform-lead { max-width: 46ch; margin: 24px 0 28px; font-size: 18px; line-height: 1.6; color: var(--muted-foreground); }
+.platform-lead { max-width: 46ch; margin: 24px 0 14px; font-size: 18px; line-height: 1.6; color: var(--muted-foreground); }
+.platform-scope { max-width: 48ch; margin: 0 0 28px; font-size: 15px; line-height: 1.6; }
 .platform-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 14px; }
 .platform-primary-link { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 48px; padding: 12px 18px; color: white; background: var(--arve-green); font-weight: 550; }
 .platform-primary-link:hover { background: #17382d; }
@@ -25,9 +26,10 @@
 .platform-map-sources div > span, .platform-map-readers span { display: block; margin-top: 6px; font-size: 12px; color: var(--arve-muted); }
 .platform-map-plus { color: var(--arve-muted); }
 .platform-map-connector { height: 40px; text-align: center; font-size: 24px; line-height: 40px; color: #7a8b7c; }
-.platform-map-center { display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center; column-gap: 10px; padding: 21px 16px; background: #e4eadf; border: 1px solid #c9d4c7; }
+.platform-map-center { display: flex; flex-direction: column; align-items: center; padding: 21px 16px; background: #e4eadf; border: 1px solid #c9d4c7; }
+.platform-map-brand { display: flex; align-items: center; gap: 10px; }
 .platform-map-center strong { font-size: 27px; letter-spacing: -.04em; }
-.platform-map-center > span:last-child { grid-column: 1 / -1; text-align: center; margin-top: 8px; font-size: 13px; color: var(--arve-green); }
+.platform-map-center > span:last-child { text-align: center; margin-top: 8px; font-size: 13px; color: var(--arve-green); }
 .platform-map-branches, .platform-map-readers { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; text-align: center; }
 .platform-map-branches { font-size: 24px; color: #7a8b7c; line-height: 40px; }
 .platform-map-readers > div { border-top: 1px solid var(--arve-line); padding-top: 14px; }

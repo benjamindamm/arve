@@ -2,24 +2,58 @@ import Link from 'next/link'
 import { flattenDocumentation, type Entry } from './published-documentation'
 import './shadcn-home.css'
 
-const chapters = [
-  { slug: 'page-types', title: 'Page types', text: 'Übersicht, Detail, Erstellen und Bearbeiten' },
-  { slug: 'page-layouts', title: 'Page layouts', text: 'Hauptbereiche, Karten und Spalten' },
-  { slug: 'patterns', title: 'Patterns', text: 'Suche, Eingaben und Rückmeldungen' },
-  { slug: 'komponenten', title: 'Komponenten', text: 'Bausteine, Beispiele und verfügbarer Stand' },
+const startingPoints = [
+  {
+    title: 'Eine Seite aufbauen',
+    text: 'Lege den Zweck der Seite fest und ordne die Inhalte.',
+    links: [
+      { slug: 'page-types', title: 'Seitentyp wählen' },
+      { slug: 'page-layouts', title: 'Layout finden' },
+    ],
+  },
+  {
+    title: 'Einen Ablauf gestalten',
+    text: 'Plane Eingaben, Rückwege und Rückmeldungen.',
+    links: [
+      { slug: 'patterns', title: 'UX-Patterns nachschlagen' },
+      { slug: 'formulare-validierung', title: 'Formulare und Rückmeldungen' },
+    ],
+  },
+  {
+    title: 'Komponenten auswählen',
+    text: 'Vergleiche Bausteine und prüfe, wann sie passen.',
+    links: [{ slug: 'komponenten', title: 'Zum Komponentenkatalog' }],
+  },
 ]
 
-const topics = [
-  { slug: 'grundlagen', title: 'Grundlagen', text: 'Farbe, Schrift, Abstände und Form' },
-  { slug: 'content-design', title: 'Content Design', text: 'Labels, Hilfen und Meldungen' },
-  { slug: 'barrierefreiheit', title: 'Barrierefreiheit', text: 'Barrierefreiheit in Formularen prüfen' },
-  { slug: 'mitwirken', title: 'Mitwirken und Releases', text: 'Änderungen und aktueller Stand' },
+const referenceGroups = [
+  {
+    title: 'Gestaltungsgrundlagen',
+    links: [
+      { slug: 'grundlagen', title: 'Grundlagen', text: 'Farbe, Schrift, Abstände und Form' },
+      { slug: 'content-design', title: 'Content Design', text: 'Labels, Hilfen und Meldungen' },
+    ],
+  },
+  {
+    title: 'Qualität und Zusammenarbeit',
+    links: [
+      { slug: 'barrierefreiheit', title: 'Barrierefreiheit', text: 'Anforderungen und Prüfhinweise' },
+      { slug: 'mitwirken', title: 'Mitwirken und Releases', text: 'Änderungen und aktueller Stand' },
+    ],
+  },
 ]
 
 export function ShadcnHome({ theme, entries }: { theme?: string | null; entries: Entry[] }) {
   const published = new Map(flattenDocumentation(entries).map(entry => [entry.slug, entry]))
+  const starts = startingPoints.map(item => ({
+    ...item,
+    links: item.links.flatMap(link => {
+      const entry = published.get(link.slug)
+      return entry ? [{ ...link, path: entry.path }] : []
+    }),
+  })).filter(item => item.links.length)
   const pilot = published.get('gestaltungs-pilot')
-  const forms = published.get('formulare-validierung')
+
   return (
     <main id="inhalt" className="shell shadcn-home" data-system-theme={theme}>
       <header className="shadcn-home-intro">
@@ -29,54 +63,23 @@ export function ShadcnHome({ theme, entries }: { theme?: string | null; entries:
           Nutze die Referenz mit deinem Team, um Entwürfe abzustimmen und die Umsetzung vorzubereiten.</p>
       </header>
 
-      {pilot && <section className="shadcn-home-start" aria-labelledby="shadcn-home-start">
-        <div className="shadcn-home-start-copy">
-          <p className="shadcn-home-eyebrow">Empfohlener Einstieg</p>
-          <h2 id="shadcn-home-start">Ein Projekt finden und bearbeiten</h2>
-          <p>Entwirf einen zusammenhängenden Ablauf: von der Suche über die Detailansicht bis zum Formular.</p>
-          <Link href={pilot.path} className="shadcn-home-primary">Projektablauf ansehen <span aria-hidden="true">→</span></Link>
-          <p className="shadcn-home-start-detail">Dort findest du editierbare SVG-/FIG-Vorlagen für breite und schmale Ansichten sowie die passenden Regeln.</p>
-          <p className="shadcn-home-limit">Statische Entwürfe. Anwendung und unabhängige Teamprobe stehen noch aus.</p>
+      {!!starts.length && <section className="shadcn-home-start" aria-labelledby="shadcn-home-start">
+        <h2 id="shadcn-home-start">Was möchtest du gestalten?</h2>
+        <div className="shadcn-home-start-grid">
+          {starts.map(item => <div className="shadcn-home-task" key={item.title}>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <ul>{item.links.map(link => <li key={link.slug}>
+              <Link href={link.path}>{link.title} <span aria-hidden="true">→</span></Link>
+            </li>)}</ul>
+          </div>)}
         </div>
-        <figure className="shadcn-home-preview">
-          <figcaption>Ein Projekt in drei Schritten <span>Statische Vorschau</span></figcaption>
-          <ol>
-            <li>
-              <h3><span>1</span> Finden</h3>
-              <div className="shadcn-home-screen">
-                <p className="shadcn-home-screen-label">Projekte</p>
-                <div className="shadcn-home-search">Suche: Alpen <span>Status: Aktiv</span></div>
-                <div className="shadcn-home-result"><strong>Alpen</strong><span>P-101 · Aktiv</span></div>
-                <p className="shadcn-home-screen-next">Projekt öffnen →</p>
-              </div>
-            </li>
-            <li>
-              <h3><span>2</span> Verstehen</h3>
-              <div className="shadcn-home-screen">
-                <p className="shadcn-home-screen-label">Projektdetail</p>
-                <strong className="shadcn-home-project">Alpen</strong>
-                <dl><div><dt>Projekt-ID</dt><dd>P-101</dd></div><div><dt>Status</dt><dd>Aktiv</dd></div></dl>
-                <p className="shadcn-home-screen-next">Namen bearbeiten →</p>
-              </div>
-            </li>
-            <li>
-              <h3><span>3</span> Bearbeiten</h3>
-              <div className="shadcn-home-screen">
-                <p className="shadcn-home-screen-label">Projekt bearbeiten</p>
-                <p>Projektname</p>
-                <div className="shadcn-home-input">Alpen</div>
-                <p className="shadcn-home-screen-next">Abbrechen · Speichern</p>
-              </div>
-            </li>
-          </ol>
-        </figure>
-        {forms && <p className="shadcn-home-deepen">Zum Vertiefen: <Link href={forms.path}>Eingaben, Fehler und Rückmeldungen im Formular <span aria-hidden="true">→</span></Link></p>}
       </section>}
 
       <section className="shadcn-home-reference" aria-labelledby="shadcn-home-reference">
-        <h2 id="shadcn-home-reference">Direkt nachschlagen</h2>
+        <h2 id="shadcn-home-reference">Weiter nachschlagen</h2>
         <div className="shadcn-home-reference-grid">
-          {[{ title: 'Aufbau und Bausteine', links: chapters }, { title: 'Regeln und Zusammenarbeit', links: topics }].map(group => <div key={group.title}>
+          {referenceGroups.map(group => <div key={group.title}>
             <h3>{group.title}</h3>
             <ul>{group.links.map(item => {
               const entry = published.get(item.slug)
@@ -84,8 +87,11 @@ export function ShadcnHome({ theme, entries }: { theme?: string | null; entries:
             })}</ul>
           </div>)}
         </div>
-        {!pilot && forms && <p className="shadcn-home-deepen"><Link href={forms.path}>Eingaben, Fehler und Rückmeldungen im Formular <span aria-hidden="true">→</span></Link></p>}
-        <p className="shadcn-home-status">Die Referenzimplementierung zeigt, wie Regeln und Bausteine zusammenspielen. Der Stand ist je Beispiel und Komponente unterschiedlich; Verfügbarkeit und offene Prüfungen findest du auf der jeweiligen Seite.</p>
+        {pilot && <aside className="shadcn-home-example" aria-label="Ergänzendes Beispiel">
+          <div><h3>An einem Beispiel nachvollziehen</h3><p>Der Projektablauf zeigt, wie Suche, Detail und Formular zusammenhängen.</p></div>
+          <Link href={pilot.path}>Zum Projektbeispiel <span aria-hidden="true">→</span></Link>
+        </aside>}
+        <p className="shadcn-home-status">Den verfügbaren Stand und offene Prüfungen findest du auf den jeweiligen Komponenten- und Beispielseiten.</p>
       </section>
     </main>
   )
