@@ -18,7 +18,7 @@ try{
  for(const b of row.content??[])if(b.blockType==='guideline'&&b.image)mediaIDs.add(b.image)
  return row}).sort((a,b)=>a.slug.localeCompare(b.slug))
  await mkdir('scripts/content/handbook-snapshot-media',{recursive:true})
- const media=[];for(const id of mediaIDs){const d=await p.findByID({collection:'media',id,depth:0});const bytes=await readFile('media/'+d.filename);await copyFile('media/'+d.filename,'scripts/content/handbook-snapshot-media/'+d.filename);media.push({key:d.filename,alt:d.alt,sha256:createHash('sha256').update(bytes).digest('hex')});for(const page of pageData)for(const b of page.content??[])if(b.blockType==='guideline'&&b.image===id)b.image=d.filename}
+ const media=[];for(const id of mediaIDs){const d=await p.findByID({collection:'media',id,depth:0});const bytes=await readFile('media/'+d.filename);await copyFile('media/'+d.filename,'scripts/content/handbook-snapshot-media/'+d.filename);media.push({key:d.filename,alt:d.alt,mimeType:d.mimeType,sha256:createHash('sha256').update(bytes).digest('hex')});for(const page of pageData)for(const b of page.content??[])if(b.blockType==='guideline'&&b.image===id)b.image=d.filename}
  const {docs:implementations}=await p.find({collection:'implementations',depth:0,pagination:false,draft:false,where:{and:[{componentPage:{in:[...ids.keys()]}},{_status:{equals:'published'}}]}})
  const revisions=new Set(pages.filter(page=>page.component).map(page=>page.contract?.revision))
  if(revisions.size!==1||![...revisions].every(revision=>typeof revision==='string'&&/^[a-f0-9]{64}$/.test(revision)))throw Error('Snapshot format requires one explicit component reference revision')

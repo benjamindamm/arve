@@ -1,18 +1,25 @@
 # Arve
 
-Plattform für mehrere Design-Systeme mit Payload CMS, Next.js und PostgreSQL. Arve verbindet redaktionelles Designwissen, versionierte UI-Contract-Exports und plattformspezifische Implementierungen. Teams lesen die veröffentlichten Inhalte im Portal; KI-Agenten können denselben Stand über MCP abrufen.
+**UX für Teams und Agenten.**
 
-Im Admin-Bereich lassen sich Seiten mit Rich Text, Bildern und Do’s und Don’ts pflegen. Die Sammlung **Seiten** unterstützt Entwürfe und Versionshistorie. Die Startseite erklärt die Arbeitswege für gemeinsames Entwerfen, gezieltes Umsetzen und die Weiterentwicklung bestehender Designs und Codebases.
+Arve ist ein gemeinsames Handbuch für Design und Entwicklung. Es beschreibt, wie Oberflächen gestaltet werden, welche Komponenten passen und welche Bedienregeln gelten. Teams lesen und pflegen das Handbuch im Browser. KI-Agenten können die veröffentlichten Regeln über MCP abrufen.
 
-## Statische Veröffentlichung
+Mit Arve lassen sich mehrere Design-Systeme parallel verwalten. Jedes hat einen eigenen Seitenbaum, eigene Inhalte und verknüpfte Komponentenbibliotheken. Als Ausgangspunkt ist ein vollständiges **shadcn-Handbuch mit 116 Seiten und 69 Komponenten** enthalten.
 
-Das öffentliche Handbuch kann ohne laufendes CMS auf GitHub Pages erscheinen. `npm run build:static` baut den gespeicherten veröffentlichten Datenbankstand, `npm run check:static` prüft Seiten und Dateien, `npm run preview:static` startet die lokale Vorschau unter `http://127.0.0.1:3020/arve/`. Navigation, Suche, Live-Beispiele und Contract-Downloads bleiben bedienbar. Admin und MCP gehören zur separat laufenden Payload-Anwendung. [Inhalte aktualisieren und auf GitHub Pages veröffentlichen](docs/deployment/github-pages.md).
+## Was ihr damit machen könnt
 
-## Lokal starten
+- **Gestaltung dokumentieren:** Farben, Typografie, Seitentypen, Layouts, UX-Patterns und Komponenten mit Beispielen sowie Do’s und Don’ts beschreiben.
+- **Gemeinsam weiterarbeiten:** Inhalte im CMS bearbeiten, als Entwurf prüfen und veröffentlichen. Änderungen werden versioniert.
+- **Agenten mit Regeln versorgen:** Über MCP passende Seiten finden und benötigte Regeln, Contracts oder Skills gezielt abrufen.
+- **Ein eigenes System aufbauen:** Die shadcn-Referenz kopieren und die Inhalte unabhängig anpassen.
 
-Voraussetzungen sind Docker mit Compose und Node.js 22 ab 22.23.4 oder Node.js ab 24.22.1. Die Befehle werden im Projektordner ausgeführt.
+Das Handbuch kann Regeln für Web, iOS und Android zusammenführen. Welche Bibliothek eine Komponente tatsächlich anbietet und welcher Prüfstand vorliegt, wird getrennt dokumentiert.
 
-Einmalig die lokale Konfiguration anlegen, falls `.env` noch fehlt:
+## Lokal ausprobieren
+
+Ihr braucht Docker mit Compose und Node.js **22 ab 22.23.4** oder **ab 24.22.1**. Führt die folgenden Befehle im Projektordner aus.
+
+Bei einer neuen Installation zuerst die Konfiguration anlegen und die Abhängigkeiten installieren:
 
 ```sh
 cp .env.example .env
@@ -20,123 +27,101 @@ printf '\nPAYLOAD_SECRET=%s\n' "$(openssl rand -hex 32)" >> .env
 npm ci
 ```
 
-Anschliessend die Datenbank und den Entwicklungsserver starten:
+Dann Datenbank und Anwendung starten:
 
 ```sh
 docker compose up -d --wait
 npm run dev
 ```
 
-Falls lokal nur eine ältere Node-Version vorhanden ist, können die npm-Befehle mit Node.js 26 ausgeführt werden:
+Beim ersten Start richtet Arve die veröffentlichte shadcn-Referenz automatisch in der Datenbank ein. Es sind keine zusätzlichen Seed-Skripte nötig. Ein bereits vorhandenes shadcn-System wird nicht überschrieben.
+
+| Einstieg | Adresse |
+| --- | --- |
+| Arve öffnen | [localhost:3010](http://127.0.0.1:3010/) |
+| shadcn-Handbuch erkunden | [/systems/shadcn](http://127.0.0.1:3010/systems/shadcn) |
+| Inhalte bearbeiten | [/admin](http://127.0.0.1:3010/admin) |
+| Agenten verbinden | `http://127.0.0.1:3010/mcp` |
+
+Zum Bearbeiten beim ersten Besuch im Admin-Bereich ein eigenes Konto anlegen. Unter **Seiten** findet ihr Texte, Inhaltsblöcke und Vorlagen. Unter **Design-Systeme** verwaltet ihr die einzelnen Handbücher.
+
+## Die Referenz als Ausgangspunkt nutzen
+
+Das shadcn-Handbuch zeigt Grundlagen, Layouts, UX-Patterns und Komponenten in einem zusammenhängenden System. Es enthält statische Gestaltungsbeispiele, ausgewählte interaktive Spartan-Beispiele für Angular und versionierte UI Contracts. Die Referenz bleibt als Orientierung erhalten, während ihr ein eigenes System aufbaut.
+
+Um alle gespeicherten Inhalte zu übernehmen, setzt `TEMPLATE_DATABASE_URI` in `.env` ausdrücklich auf die gewünschte Ziel-Datenbank. Das kann dieselbe Datenbank sein, in der shadcn liegt. Danach zunächst die geplante Kopie ansehen:
 
 ```sh
-npm exec --yes --package=node@26 -c 'npm ci'
-npm exec --yes --package=node@26 -c 'npm run dev'
+npm run reference:import -- --slug mein-system --name "Mein Design-System"
 ```
 
-Beim ersten Start ein [Administratorkonto anlegen](http://127.0.0.1:3010/admin/create-first-user). Danach ist der [Admin-Bereich](http://127.0.0.1:3010/admin) über den regulären Einstieg erreichbar. Danach können unter **Seiten** Inhalte erstellt und unter **Media** Bilder mit Alternativtext hochgeladen werden.
-
-## REST-API
-
-Die REST-Sammlung ist unter `/api/pages` erreichbar. Für einen Agenten kann beim vorgesehenen Benutzerkonto ein API-Schlüssel aktiviert werden. Payload erwartet den Header `Authorization: users API-Key <Schlüssel>`.
-
-## shadcn-Referenz
-
-Die [Startseite](http://127.0.0.1:3010/) verlinkt auf den [shadcn-Button](http://127.0.0.1:3010/systems/shadcn/components/button). Die Seite kommt aus Payload und enthält ein Angular-Beispiel mit der Originaldirektive `BrnButton` aus `@spartan-ng/brain` sowie lokale Demo-Styles. Die SCXML-Quelle wird angezeigt. Das Beispiel führt sie nicht aus.
-
-Eine leere lokale Datenbank mit der veröffentlichten Beispielseite befüllen:
+Mit `--apply` wird sie angelegt:
 
 ```sh
-node --env-file=.env --import tsx scripts/seed-shadcn.ts
-node --env-file=.env --import tsx scripts/seed-shadcn-controls.ts
-node --env-file=.env --import tsx scripts/seed-shadcn-foundations.ts
-node --env-file=.env --import tsx scripts/seed-shadcn-guides.ts
+npm run reference:import -- --slug mein-system --name "Mein Design-System" --apply
 ```
 
-Die Übersicht verlinkt Farben und Tokens, Typografie und Form, Grid und Abstände, UX-Patterns sowie Komponenten. Die Texte liegen in Payload. Farbproben und Raster zeigen die Werte der Portal-Referenz. Unter Grid und Abstände sind drei responsive Seitentypen verlinkt.
+Die Kopie bekommt eigene Seiten und beginnt als **Entwurf**. Seitenbaum und interne Systemlinks werden angepasst; Contract-Revisionen und Quellen behalten ihre Herkunft. Vorhandene Zielsysteme werden nicht überschrieben. Einige eigens gestaltete shadcn-Vorschauen sind weiterhin Anwendungscode; die Kopie verwendet zunächst die allgemeinen Seitenansichten.
 
-Die [Komponentenübersicht](http://127.0.0.1:3010/systems/shadcn/komponenten) listet veröffentlichte Komponentenseiten aus Payload. Button, Input, Checkbox und Switch haben Spartan-Demos und gebundene Originalquellen. Alle vier Komponenten enthalten SCXML. Checkbox und Switch verwenden in Spartan Buttons mit ARIA-Rolle, während die Contract-Vorlagen native Checkbox-Eingabefelder verwenden.
+[Referenz einrichten, kopieren und als Paket weitergeben](docs/handbook/reference-template.md)
 
-Der [Button](http://127.0.0.1:3010/systems/shadcn/components/button) dient als redaktionelle Vorlage für weitere Komponentenseiten. Neun feste Themen, die Trennung von Quellenregeln, Empfehlungen und Beispielen sowie die dokumentierten Quellenbezüge sind in der [Komponentenvorlage](docs/handbook/component-template/README.md) beschrieben. `npm run check:component-template` prüft den ausdrücklich dokumentierten Referenzstand; die übrigen Komponentenseiten werden dadurch nicht als fertig ausgearbeitet ausgegeben.
+## Inhalte pflegen
 
-### Handbuch auf einer neuen Datenbank aufbauen
+Texte und Inhalte liegen in **PostgreSQL** und werden mit **Payload CMS** bearbeitet. Für Grundlagen, Layouts, UX-Patterns und Komponenten gibt es eigene Inhaltsvorlagen. Seitentyp, übergeordnete Seite und Sortierung bestimmen den Seitenbaum.
 
-Der öffentliche shadcn-Stand ist als begrenzter Snapshot versioniert. Der Bootstrap legt 46 Seiten, Beziehungen und eine Implementierung ohne feste Datenbank-IDs an; Wiederholung verändert identische Inhalte nicht. [Anleitung, Vorschau und Schutz bestehender Inhalte](docs/handbook/bootstrap/README.md).
+Veröffentlichte Inhalte erscheinen im Portal und über MCP. Entwürfe bleiben im CMS. Ein gespeicherter Export der shadcn-Referenz liefert die Basis für neue Installationen; spätere Änderungen in der Datenbank werden bewusst mit `npm run reference:capture` in diesen Export übernommen.
 
-[Editierbare Pilotvorlagen und Prüfgrenzen](docs/handbook/design-resources/README.md) · [Unabhängige Agentenprobe mit Nachprüfung](docs/handbook/independent-trial/README.md).
+Unter **Implementierungen** lässt sich dokumentieren, welche Bibliothek eine Komponente für Web, iOS oder Android umsetzt – einschließlich Paketversion, Freigabestatus und Prüfumfang. Eine veröffentlichte Dokumentation bedeutet dabei noch keine technische Freigabe der Implementierung.
 
-Alle 69 Komponentenseiten sind inhaltlich ausgearbeitet. Die 68 neuen Seiten enthalten eigene statische Gestaltungsbeispiele und Quellenreviews; der Button bleibt die Referenzvorlage. [Umfang und Prüfungen](docs/handbook/component-catalog/README.md). Die neuen Seiten werden als editierbare Payload-Inhalte veröffentlicht und über MCP bereitgestellt.
+[Komponentenvorlage](docs/handbook/component-template/README.md) · [Komponentenkatalog](docs/handbook/component-catalog/README.md)
 
-### UI Contracts importieren
+## Mit einem Agenten arbeiten
 
-UI Contracts erzeugt ein eigenständiges Exportverzeichnis mit Manifest, Bibliothek, Designartefakten, Herkunftsregister und portablen Skills. Diesen Ordner beliebig kopieren und in Arve importieren:
+Verbindet ein MCP-fähiges Werkzeug mit `http://127.0.0.1:3010/mcp` über Streamable HTTP. Der Agent kann zuerst ein Design-System auswählen und nach einer Aufgabe suchen. Anschließend lädt er die passenden Regeln, Komponenten-Contracts und mitgelieferten Skills nach.
+
+Beispielsweise könnt ihr ihn bitten:
+
+> Finde im shadcn-Handbuch passende Regeln für ein Formular mit einer Zusammenfassung. Unterscheide allgemeine Vorgaben von Beispielentscheidungen und nenne die Quellen.
+
+Portal und MCP lesen denselben veröffentlichten Datenbankstand. Größere Inhalte werden in begrenzten Abschnitten abgerufen.
+
+[MCP einrichten und die verfügbaren Abrufe verstehen](docs/mcp/progressive-reading.md)
+
+## UI Contracts anbinden
+
+UI Contracts ergänzen die redaktionellen Regeln um versionierte Beschreibungen von Komponenten, Gestaltung, Verhalten und Barrierefreiheit. Arve verwendet eigenständig kopierbare Exportpakete einschließlich Quellenbezügen und Skills. Ein laufendes oder lokal danebenliegendes ui-contracts-Repository ist dafür nicht erforderlich.
+
+Ein neues Contract-Paket importieren:
 
 ```sh
-node scripts/import-contract-library.mjs /pfad/zum/shadcn-export --compact
+node scripts/import-contract-library.mjs /pfad/zum/contract-export --compact
 ```
 
-Arve liest ausschliesslich dieses Paket. Kein Quellcheckout, keine Umgebungsvariable mit Repositorypfad und keine Laufzeitverbindung zum Erzeuger sind erforderlich. Der Import prüft Formatversion, alle Dateihashes, die Gesamt-Revision und gebundene Contractquellen. Zusätzliche oder fehlende Dateien, Symlinks und aus der Bibliothek führende Contractbindungen werden abgelehnt. Bereits vorhandene Revisionen werden nur bei identischem Inhalt wiederverwendet, nie überschrieben.
+Der Import prüft die Dateien und ihre Prüfsummen. Neue Revisionen werden anschließend in `src/contracts/catalog.ts` registriert und auf den gewünschten CMS-Seiten verknüpft. Bestehende Seiten behalten ihre bisherige Revision, bis sie ausdrücklich umgestellt werden.
 
-Unter `src/contracts/libraries/<bibliothek>/<revision>/package/` bleibt das vollständige Originalpaket einschliesslich `manifest.json`, `dependencies.json` und `skills/` erhalten. Mit `--compact` vermeidet der Import eine zweite Kopie der Bibliotheksdateien und lädt nur die benötigten Contracttexte; `contracts.json` enthält die lokale Projektion für Portal und MCP. Der ältere Importmodus mit zusätzlichen Bibliotheksdateien bleibt für historische Revisionen verfügbar. Die Revision identifiziert das gesamte Paket einschliesslich Skills. Herkunftsverweise sind ausdrücklich keine lokal auflösbaren Dateiverweise. Historische Prüfbelege bleiben von den Prüfsummen des Exportpakets getrennt.
+[Contract-Stand und Abhängigkeiten](docs/handbook/semantic-shadcn/README.md) · [Skills für die Arbeit mit Contracts](.agents/skills/arve-ui-contracts/SKILL.md)
 
-Neue Revisionen werden im Katalog `src/contracts/catalog.ts` registriert. Bestehende Payload-Seiten behalten ihre gebundene Revision. Um eine Seite umzustellen, im CMS die Contractrevision ändern und die Seite veröffentlichen. Eine separat dokumentierte Implementierungsprüfung bleibt an ihrer bisherigen Revision gebunden. Portal und MCP lesen den Stand der veröffentlichten Komponentenseite.
+## Das Handbuch statisch veröffentlichen
 
-Der Projekt-Skill [arve-ui-contracts](.agents/skills/arve-ui-contracts/SKILL.md) nutzt die mitimportierten Anleitungen. Das portable Paket unterstützt Lesen, UX-Auswahl und die Einordnung vorhandener Nachweise. Autorenwerkzeuge und ausführbare Plattformprüfungen werden nicht durch das Kopieren eines Skills verfügbar; der Export benennt diese Grenzen und Voraussetzungen ausdrücklich.
-
-Den alten Einzelkomponenten-Exporter ersetzt der Export in UI Contracts. Bereits importierte historische Revisionen bleiben aus Gründen der Seitenversionierung unverändert erhalten.
-
-Importprüfung: `node --test scripts/import-contract-library.test.mjs`.
-
-Der [aktuelle semantische Shadcn-Stand](docs/handbook/semantic-shadcn/README.md) umfasst 69 veröffentlichte Komponentenpins. Die CSS-Importkette und lokale Schriftdateien werden beim Import ermittelt und über Portal, MCP und statische Veröffentlichung samt Hash bereitgestellt.
-
-### MCP
-
-`http://127.0.0.1:3010/mcp` verwendet Streamable HTTP und bindet lokal an Loopback. Die lesenden Tools liefern standardmässig kompakte Einstiege: erst entdecken und suchen, dann benötigte redaktionelle Abschnitte, Skill-Ressourcen und Contractdateien gezielt nachladen. Portal und MCP greifen auf dieselben veröffentlichten Payload-Inhalte und gebundenen Contractrevisionen zu.
-
-Der aktuelle [MCP-Leseablauf und die API-Referenz](docs/mcp/progressive-reading.md) dokumentieren Grenzen, Fortsetzungen, Herkunft und die Migration bestehender Clients. Ein kompakter Treffer ist keine vollständige Regel- oder Contractfreigabe. `view: "full"` bleibt als ausdrückliche Kompatibilitätsausnahme für bestehende Vollständigkeitsprüfungen verfügbar; für normale Agentenabfragen gelten die kompakten Vorgaben.
-
-## Mehrere Design-Systeme
-
-Nach den shadcn-Seed-Skripten die bestehenden Seiten dem System und seinem Seitenbaum zuordnen:
+Für eine Veröffentlichung etwa auf GitHub Pages kann Arve den gespeicherten veröffentlichten Handbuchstand als statische Website bauen:
 
 ```sh
-node --env-file=.env --import tsx scripts/migrate-design-systems.ts
+npm run build:static
+npm run check:static
+npm run preview:static
 ```
 
-Das Skript ordnet die Seiten der shadcn-Referenzimplementierung zu. Bereits zugeordnete Seiten werden bei einem erneuten Lauf übersprungen. Im Payload-Admin lassen sich Name, Slug, Beschreibung, Theme und Startseite unter **Design-Systeme** bearbeiten. Unter **Seiten** steuern Design-System, Seitentyp, übergeordnete Seite und Sortierung den veröffentlichten Baum. Portal und MCP lesen denselben Baum. Seiten und Komponenten sind unter `/systems/<system>/…` erreichbar.
+Die lokale Vorschau läuft unter [localhost:3020/arve](http://127.0.0.1:3020/arve/). Navigation, Suche, Beispiele und Contract-Downloads funktionieren dort ohne laufendes CMS. Zum Bearbeiten und für MCP wird die datenbankgestützte Arve-Anwendung benötigt.
 
-Für Seitenslugs gilt aktuell die globale Eindeutigkeit in Payload. Verwende etwa `mein-system-grundlagen` für die URL `/systems/mein-system/grundlagen`. Systemübergreifende Zugriffstrennung für private Daten erfordert separate Instanzen oder eigene Zugriffskontrollen. Die shadcn-Referenzimplementierung ist öffentlich lesbar.
+[Inhalte aktualisieren und auf GitHub Pages veröffentlichen](docs/deployment/github-pages.md)
 
-## Seitenvorlagen
+## Technische Grundlagen
 
-### shadcn-Handbuch ergänzen
+Arve verwendet **Next.js und React** für das Portal, **Payload CMS** für die Redaktion und **PostgreSQL** für die Inhalte. Die dokumentierten Komponentenbibliotheken können andere Frameworks verwenden; ausgewählte Angular-Beispiele laufen mit Spartan.
 
-Nach den shadcn-Seeds und der Seitenmigration können die kuratierten Leitfäden eingespielt werden:
+- **REST-API:** `/api/pages` und weitere Payload-Sammlungen. API-Schlüssel verwenden den Header `Authorization: users API-Key <Schlüssel>`.
+- **Prüfungen:** `npm run typecheck`, `npm run check:reference` und `npm run check:mcp:unit`.
+- **Leerer Seitenbaum:** `npm run seed:system -- --slug mein-system --name "Mein Design-System"` legt über die REST-API acht leere Entwurfsseiten an; benötigt `PAYLOAD_API_KEY`. Für die vollständige Inhaltsbasis stattdessen `reference:import` verwenden.
+- **Zugriffstrennung:** Mehrere Systeme in einer Instanz sind keine getrennten privaten Mandanten. Dafür sind zusätzliche Zugriffskontrollen oder getrennte Instanzen erforderlich.
 
-```sh
-node --env-file=.env --import tsx scripts/seed-shadcn-handbook.ts
-```
-
-Das Skript legt fehlende Leitfäden unter den veröffentlichten Handbuchbereichen an. Bestehende Seiten werden übersprungen, damit redaktionelle Änderungen in Payload erhalten bleiben.
-
-Im Payload-Admin unter **Seiten** das Design-System und den **Seitentyp** auswählen. Bei **Grundlagen**, **Layout**, **UX-Pattern** und **Komponente** erscheinen unter **Seitenvorlage** die passenden leeren Felder. Bestehende freie Inhaltsblöcke bleiben separat bearbeitbar. Auf veröffentlichten Seiten erscheinen die ausgefüllten Vorlagenabschnitte und sind über MCP als `templateSections` abrufbar und durchsuchbar.
-
-### Leeren Seitenbaum per REST-API anlegen
-
-Voraussetzungen sind eine laufende Payload-Instanz mit aktuellem Datenbankschema und ein Payload-API-Schlüssel mit Lese- und Schreibzugriff auf **Design-Systeme** und **Seiten**. Den Schlüssel als Umgebungsvariable `PAYLOAD_API_KEY` bereitstellen.
-
-```sh
-npm run seed:system -- --slug mein-system --name "Mein Design-System"
-```
-
-Mit `--url https://cms.example.org` lässt sich eine andere Instanz wählen. Der Standard ist `http://127.0.0.1:3010`. Das Skript legt das System und acht leere Seiten als Entwürfe an und setzt die Übersicht als Startseite, falls noch keine zugeordnet ist. Der Komponentenbereich ist ein Leitfaden als Einstieg in den späteren Katalog. Bestehende Seiten und eine bereits gewählte Startseite bleiben erhalten. Die Seiten werden nach der redaktionellen Veröffentlichung im Portal und über MCP auffindbar.
-
-## Plattformimplementierungen
-
-Unter **Implementierungen** lässt sich eine Komponentenseite mit veröffentlichten Einträgen für Web, iOS und Android verknüpfen. Web kann Desktop und Mobile als Nutzungskontexte führen. Paketversion, technische Referenz, Freigabestatus und Prüfumfang sind pro Eintrag editierbar. Der Freigabestatus ist unabhängig vom Payload-Veröffentlichungsstatus. Das Portal und `get_component_page` zeigen veröffentlichte Einträge.
-
-Für die shadcn-Referenz kann nach der Seitenmigration der vorhandene Spartan-Button als Web-Preview eingetragen werden:
-
-```sh
-node --env-file=.env --import tsx scripts/seed-spartan-implementation.ts
-```
+[Expliziter Datenbank-Erstaufbau](docs/handbook/bootstrap/README.md) · [Gestaltungsvorlagen und Prüfgrenzen](docs/handbook/design-resources/README.md) · [Dokumentierte Agentenprobe](docs/handbook/independent-trial/README.md)

@@ -1,15 +1,17 @@
+> Aktueller Einstieg: [Vollständige Referenz beim Erststart und als Kopiervorlage](../reference-template.md). `npm run dev` und `npm start` richten shadcn auf einer frischen Datenbank automatisch ein. Die folgenden Befehle beschreiben weiterhin den ausdrücklich gewählten Bootstrap auf einem separaten Ziel.
+
 # Reproduzierbarer Erstaufbau des shadcn-Handbuchs
 
 Git enthält keine PostgreSQL-Inhalte. `scripts/bootstrap-handbook.ts` importiert deshalb den versionierbaren, ausdrücklich begrenzten öffentlichen Snapshot `scripts/content/handbook-snapshot.json`. Die alten Seed-/Release-Skripte mit historischen IDs und `updatedAt`-Voraussetzungen sind **kein** Erstaufbauverfahren.
 
 ## Umfang und Herkunft
 
-- 46 veröffentlichte Seiten des Systems `shadcn`, System-Metadaten und eine veröffentlichte Implementierung.
-- Alle vier Komponentenseiten behalten Contractrevision `65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26`.
+- 116 veröffentlichte Seiten des Systems `shadcn`, System-Metadaten und eine veröffentlichte Implementierung.
+- Alle 69 Komponentenseiten behalten Contractrevision `30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90`.
 - Die Implementierung Spartan Button behält ihren historischen Nachweisstand `fe29eb804f0b742433f143d6b6adbe4787aac0e183fed413f46b94313af9162d`. Ein neuer Seitenpin aktualisiert keinen Implementierungsnachweis.
 - Erfassung ausschließlich mit Payload `push:false`, `draft:false`, Systemfilter und veröffentlichtem Status. Es werden ausdrücklich benannte Inhaltsfelder übernommen, keine Benutzer, Zugangsdaten, Sitzungen, IDs, Bearbeitungszeitpunkte oder Versionshistorien. Der öffentliche Inhalt enthält keine personenbezogenen Kontaktdaten.
-- `sourceCommit` bezeichnet den damaligen Repository-HEAD; der Arbeitsstand enthielt zusätzliche Änderungen und ist durch diesen Commit allein **nicht** vollständig beschrieben. Maßgeblich für den exakten Inhalt ist die Snapshot-Datei mit ihrem SHA-256 in `verification.md`.
-- Keine der 46 Seiten referenziert ein Medienobjekt über einen guideline-Block. Daher enthält der Snapshot keine Mediendateien. Die vier bestehenden Dateien im ignorierten `media/` werden nicht pauschal übertragen. Exporte mit Medien werden vom Import derzeit ausdrücklich abgelehnt.
+- `sourceCommit` bezeichnet den damaligen Repository-HEAD; der Arbeitsstand enthielt zusätzliche Änderungen und ist durch diesen Commit allein **nicht** vollständig beschrieben. Maßgeblich für den aktuellen Inhalt ist die Snapshot-Datei. `verification.md` bewahrt den historischen Bootstrap-Prüfstand.
+- Keine der 116 Seiten referenziert ein Medienobjekt über einen guideline-Block. Daher enthält der Snapshot keine Mediendateien. Die vier bestehenden Dateien im ignorierten `media/` werden nicht pauschal übertragen. Exporte mit Medien werden vom Import derzeit ausdrücklich abgelehnt.
 - Contractdateien und öffentliche Gestaltungsdownloads kommen aus dem Repository; sie werden nicht aus der Datenbank rekonstruiert.
 
 ## Erstinstallation auf einer separaten leeren Datenbank

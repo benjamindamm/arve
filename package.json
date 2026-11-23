@@ -18,7 +18,16 @@
     "preview:static": "node scripts/serve-static-site.mjs",
     "check:component-template": "node --import tsx scripts/check-component-template.ts",
     "check:component-catalog": "node --import tsx scripts/check-component-catalog.ts --all --published --report",
-    "check:mcp:unit": "node --import tsx scripts/mcp-reads.test.ts && node --import tsx scripts/mcp-library-skills.test.ts && node --import tsx --test src/docs/documentation-search.test.ts src/docs/mcp-navigation.test.ts"
+    "check:mcp:unit": "node --import tsx scripts/mcp-reads.test.ts && node --import tsx scripts/mcp-library-skills.test.ts && node --import tsx --test src/docs/documentation-search.test.ts src/docs/mcp-navigation.test.ts",
+    "reference:export": "node --import tsx scripts/system-template.ts export",
+    "reference:import": "node --env-file-if-exists=.env --import tsx scripts/system-template.ts import",
+    "reference:setup": "node --env-file-if-exists=.env --import tsx scripts/setup-reference.ts",
+    "predev": "npm run reference:setup",
+    "start": "next start --hostname 127.0.0.1 --port 3010",
+    "prestart": "npm run reference:setup",
+    "check:reference": "node --import tsx --test scripts/system-template.test.ts",
+    "reference:capture": "node --env-file-if-exists=.env --import tsx scripts/bootstrap-handbook-export.ts",
+    "check:reference:db": "node --env-file=.env --import tsx scripts/system-template.integration.ts"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",

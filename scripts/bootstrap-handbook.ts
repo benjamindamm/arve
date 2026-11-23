@@ -8,7 +8,8 @@ import { getPayload } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import config from '../src/payload.config'
 
-export const revision='65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26'
+import { shadcnReferenceRevision } from '../src/contracts/current-reference'
+export const revision = shadcnReferenceRevision
 const pageFields=['title','system','pageType','template','order','summary','component','contract','demo','slug','content','_status','parent']
 const implementationFields=['name','platform','releaseStatus','packageName','packageVersion','owner','contexts','contract','verification','_status','componentPage']
 export function clean(x:any):any {
