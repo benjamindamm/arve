@@ -1,0 +1,464 @@
+{
+  "format": "arve-color-pilot/1",
+  "system": "shadcn",
+  "title": "Farbe",
+  "mode": "delegated-showcase-design",
+  "scope": "Prototypisches Web-Handbuch für Desktop und Mobile; helle und dunkle Darstellung. Die Rollen erklären das Showcase, ohne die aktuellen Komponenten-Contracts oder den Portalrahmen umzustellen. Native Zuordnungen bleiben offen.",
+  "provenance": "Eigene Showcase-Ausarbeitung vom 23.11.2026 auf ausdrücklichen Nutzerauftrag. Semantische Paare orientieren sich an shadcn; die konkreten sRGB-Werte und Ergänzungen sind lokale Designentscheidungen, keine unveränderte Originalpalette.",
+  "sources": [
+    {
+      "id": "USER-DESIGN",
+      "kind": "user-instruction",
+      "reference": "Gespräch 23.11.2026: prototypisch/ideal arbeiten; shadcn als Showcase; fehlende Palette selbst entwerfen.",
+      "scope": "Autorisierung zum Entwerfen, keine vorgegebene konkrete Palette oder simulierte Freigabe."
+    },
+    {
+      "id": "SHADCN-THEME",
+      "kind": "upstream-documentation",
+      "reference": "https://ui.shadcn.com/docs/theming",
+      "accessed": "2026-11-23",
+      "scope": "Semantische Flächen-/Inhaltsrollen, erweiterbare Tokens, mehrere Erscheinungsmodi; keine Behauptung pixelgleicher Werte."
+    },
+    {
+      "id": "WCAG-TEXT",
+      "kind": "requirement-reference",
+      "reference": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "accessed": "2026-11-23",
+      "scope": "Erläuterung zu Textkontrast; Berechnung opaker sRGB-Paare, kein allgemeiner Produktnachweis."
+    },
+    {
+      "id": "SHOWCASE-DECISION",
+      "kind": "local-design",
+      "reference": "Dieses Showcase-Artefakt",
+      "scope": "Alle konkreten Werte, zusätzlichen Statusrollen und Anwendungsentscheidungen; fachlicher Stand: ausgearbeiteter Prototyp, nicht für eine Organisation freigegeben."
+    }
+  ],
+  "palette": [
+    {
+      "id": "base",
+      "label": "Grundfläche",
+      "surfaceToken": "background",
+      "textToken": "foreground",
+      "usage": "Seitenhintergrund, Überschriften und laufender Text.",
+      "light": {
+        "background": "#FFFFFF",
+        "foreground": "#171717"
+      },
+      "dark": {
+        "background": "#0A0A0A",
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "id": "card",
+      "label": "Inhaltsfläche",
+      "surfaceToken": "card",
+      "textToken": "card-foreground",
+      "usage": "Zusammengehörige Inhalte. Eine Card ist eine mögliche Verwendung, keine Pflicht für jeden Abschnitt.",
+      "light": {
+        "background": "#FAFAFA",
+        "foreground": "#171717"
+      },
+      "dark": {
+        "background": "#171717",
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "id": "popover",
+      "label": "Überlagerte Fläche",
+      "surfaceToken": "popover",
+      "textToken": "popover-foreground",
+      "usage": "Menüs und schwebende Informationen; Abgrenzung zusätzlich über Kontur oder Ebene.",
+      "light": {
+        "background": "#FFFFFF",
+        "foreground": "#171717"
+      },
+      "dark": {
+        "background": "#262626",
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "id": "primary",
+      "label": "Primäre Handlung",
+      "surfaceToken": "primary",
+      "textToken": "primary-foreground",
+      "usage": "Die hervorgehobene Handlung. Primär ist eine Gewichtung, keine Erfolgsmeldung.",
+      "light": {
+        "background": "#171717",
+        "foreground": "#FAFAFA"
+      },
+      "dark": {
+        "background": "#E5E5E5",
+        "foreground": "#171717"
+      }
+    },
+    {
+      "id": "secondary",
+      "label": "Unterstützende Handlung",
+      "surfaceToken": "secondary",
+      "textToken": "secondary-foreground",
+      "usage": "Weniger stark gewichtete Aktionen neben der primären Handlung.",
+      "light": {
+        "background": "#F5F5F5",
+        "foreground": "#171717"
+      },
+      "dark": {
+        "background": "#262626",
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "id": "muted",
+      "label": "Ergänzende Information",
+      "surfaceToken": "muted",
+      "textToken": "muted-foreground",
+      "usage": "Hilfen und Metadaten. Notwendige Informationen bleiben lesbar.",
+      "light": {
+        "background": "#F5F5F5",
+        "foreground": "#525252"
+      },
+      "dark": {
+        "background": "#262626",
+        "foreground": "#D4D4D4"
+      }
+    },
+    {
+      "id": "accent",
+      "label": "Interaktive Hervorhebung",
+      "surfaceToken": "accent",
+      "textToken": "accent-foreground",
+      "usage": "Hover und hervorgehobene Menüeinträge. Eine dauerhafte Auswahl erhält zusätzlich eine Markierung.",
+      "light": {
+        "background": "#E5E5E5",
+        "foreground": "#171717"
+      },
+      "dark": {
+        "background": "#404040",
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "id": "destructive",
+      "label": "Destruktive Handlung",
+      "surfaceToken": "destructive",
+      "textToken": "destructive-foreground",
+      "usage": "Aktionen mit löschender oder schwer rückgängig zu machender Wirkung; Folge und Objekt im Text nennen.",
+      "light": {
+        "background": "#B91C1C",
+        "foreground": "#FFFFFF"
+      },
+      "dark": {
+        "background": "#B91C1C",
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "id": "error",
+      "label": "Fehlerhinweis",
+      "surfaceToken": "error-surface",
+      "textToken": "error-text",
+      "usage": "Bestätigter Fehler oder Korrekturbedarf. Fehler mit Text erklären; unbekannten Ausgang nicht als gescheitert darstellen.",
+      "light": {
+        "background": "#FEF2F2",
+        "foreground": "#991B1B"
+      },
+      "dark": {
+        "background": "#450A0A",
+        "foreground": "#FCA5A5"
+      }
+    },
+    {
+      "id": "success",
+      "label": "Erfolgsbestätigung",
+      "surfaceToken": "success-surface",
+      "textToken": "success-text",
+      "usage": "Ein bestätigtes Ergebnis benennen; eine gestartete Aktion ist noch kein Erfolg.",
+      "light": {
+        "background": "#F0FDF4",
+        "foreground": "#166534"
+      },
+      "dark": {
+        "background": "#052E16",
+        "foreground": "#86EFAC"
+      }
+    },
+    {
+      "id": "warning",
+      "label": "Warnhinweis",
+      "surfaceToken": "warning-surface",
+      "textToken": "warning-text",
+      "usage": "Relevante Folge oder Einschränkung vor der Entscheidung erklären.",
+      "light": {
+        "background": "#FFFBEB",
+        "foreground": "#92400E"
+      },
+      "dark": {
+        "background": "#451A03",
+        "foreground": "#FCD34D"
+      }
+    },
+    {
+      "id": "info",
+      "label": "Sachlicher Hinweis",
+      "surfaceToken": "info-surface",
+      "textToken": "info-text",
+      "usage": "Zusätzliche Information ohne Fehler- oder Erfolgsbehauptung.",
+      "light": {
+        "background": "#EFF6FF",
+        "foreground": "#1E40AF"
+      },
+      "dark": {
+        "background": "#172554",
+        "foreground": "#93C5FD"
+      }
+    },
+    {
+      "id": "disabled",
+      "label": "Nicht verfügbare Aktion",
+      "surfaceToken": "disabled-surface",
+      "textToken": "disabled-text",
+      "usage": "Verringerte Gewichtung; den Grund ausserhalb des deaktivierten Elements erklären. Diese Farben bilden keine allgemeine Opazitätsregel.",
+      "light": {
+        "background": "#F5F5F5",
+        "foreground": "#666666"
+      },
+      "dark": {
+        "background": "#262626",
+        "foreground": "#A3A3A3"
+      }
+    }
+  ],
+  "indicators": [
+    {
+      "id": "control-boundary",
+      "label": "Erforderliche Feldkontur",
+      "light": {
+        "foreground": "#737373",
+        "background": "#FFFFFF"
+      },
+      "dark": {
+        "foreground": "#A3A3A3",
+        "background": "#171717"
+      },
+      "usage": "Sichtbare Begrenzung auf den benannten Flächen. Dekorative Trenner dürfen eine eigene, schwächere Rolle erhalten, ersetzen aber keine erforderliche Feldkontur."
+    },
+    {
+      "id": "focus",
+      "label": "Fokusmarkierung",
+      "light": {
+        "foreground": "#2563EB",
+        "background": "#FFFFFF"
+      },
+      "dark": {
+        "foreground": "#93C5FD",
+        "background": "#171717"
+      },
+      "usage": "Durchgehende äussere Kontur, mit Abstand zum Element; auf diesen angrenzenden Flächen berechnet. Verhalten auf farbigen Flächen, Beschneidung und reale Geometrie separat prüfen."
+    }
+  ],
+  "charts": {
+    "scope": "Kategorische Diagramme im Showcase, höchstens fünf Kategorien. Reihenfolge und Bedeutung bleiben innerhalb eines Diagramms stabil. Keine Aussage zur Unterscheidbarkeit allein durch Farbe.",
+    "light": [
+      "#2563EB",
+      "#7C3AED",
+      "#0F766E",
+      "#B45309",
+      "#BE185D"
+    ],
+    "dark": [
+      "#93C5FD",
+      "#C4B5FD",
+      "#5EEAD4",
+      "#FCD34D",
+      "#F9A8D4"
+    ],
+    "rules": [
+      "Kategorien zusätzlich direkt benennen; bei Bedarf Marker oder Muster verwenden.",
+      "Werte, Einheiten und fehlende Daten in einer textlichen oder tabellarischen Alternative bereitstellen.",
+      "Keine Statusbedeutung aus der Farbe einer Datenreihe ableiten. Mehr als fünf Kategorien benötigt eine eigene Darstellungsentscheidung."
+    ]
+  },
+  "rules": [
+    {
+      "id": "COLOR-R01",
+      "text": "Wähle die Rolle nach dem Zweck; verwende Text und Fläche als benanntes Paar. Ein allein kopierter Hexwert beschreibt seinen Einsatz nicht.",
+      "source": "SHOWCASE-DECISION"
+    },
+    {
+      "id": "COLOR-R02",
+      "text": "Primäre Handlung, Auswahl, Fokus und Status sind unterschiedliche Bedeutungen. Fokus und Fehler müssen gleichzeitig erkennbar bleiben.",
+      "source": "SHOWCASE-DECISION"
+    },
+    {
+      "id": "COLOR-R03",
+      "text": "Zeige Status durch verständlichen Text und bei Bedarf ein Symbol. Die Farbe unterstützt die Aussage.",
+      "source": "SHOWCASE-DECISION"
+    },
+    {
+      "id": "COLOR-R04",
+      "text": "Hover ist eine zusätzliche Rückmeldung. Notwendige Informationen bleiben ohne Hover zugänglich. Dauerhafte Auswahl bekommt eine zusätzliche Markierung.",
+      "source": "SHOWCASE-DECISION"
+    },
+    {
+      "id": "COLOR-R05",
+      "text": "Die Bedeutung der Rollen bleibt in Hell und Dunkel gleich. Die konkreten Werte sind pro Modus festgelegt; keine pauschale Farbinvertierung.",
+      "source": "SHOWCASE-DECISION"
+    },
+    {
+      "id": "COLOR-R06",
+      "text": "Information wird im Showcase auf einer opaken Fläche dargestellt. Texte auf Bildern, Verläufen oder transparenten Mischflächen brauchen eine gesonderte Paarungsentscheidung und Prüfung.",
+      "source": "SHOWCASE-DECISION"
+    }
+  ],
+  "textContrastTarget": 4.5,
+  "targetRationale": "Eigene Showcase-Entscheidung: alle aufgeführten Textpaare erreichen mindestens 4,5:1 ohne Abstützung auf Ausnahmen für grosse oder inaktive Texte. Die W3C-Erläuterung nennt 4,5:1 für gewöhnlichen Text, mit definierten Ausnahmen. Dieses Ziel ersetzt keine vollständige Prüfung.",
+  "answers": [
+    {
+      "id": "COL-01",
+      "applies": "yes",
+      "answer": "shadcn dient als Web-Showcase. Ein vollständiger Farbentwurf ist delegiert; Hell und Dunkel sind lokale Entwurfsentscheidungen. Native Plattformen werden nicht als umgesetzt behauptet.",
+      "sourceIds": [
+        "USER-DESIGN",
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "scope",
+        "palette"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-02",
+      "applies": "yes",
+      "answer": "Die Rollenbenennung orientiert sich an der aktuellen shadcn-Theming-Dokumentation. Dieses Artefakt führt die konkreten Showcase-Werte; bestehende exportierte Contract-Dateien werden nicht ersetzt.",
+      "sourceIds": [
+        "SHADCN-THEME",
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "provenance",
+        "sources"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-03",
+      "applies": "yes",
+      "answer": "13 Flächen-/Textpaare und zwei Konturrollen decken Inhalt, Aktionen und Rückmeldungen ab. Zusätzliche Status- und disabled-Rollen sind eigene Ergänzungen; sie sind nicht als verfügbare Bibliothekstokens belegt.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "palette",
+        "indicators"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-04",
+      "applies": "yes",
+      "answer": "Jedes Paar nennt Einsatz und Grenzen. Die Rollenregeln erklären Auswahl, Gewichtung und zulässige Verwendung. Die Gegenüberstellung der Modi zeigt dieselbe Rolle mit angepassten Werten.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "palette",
+        "rules"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-05",
+      "applies": "yes",
+      "answer": "Fehler, Erfolg, Warnung und sachliche Information haben eigene Rollen. Auswahl und Fokus sind davon getrennt; Meldung und Folgeschritt sind zusätzlich sprachlich zu erklären. Zeitpunkt und Ablauf bleiben Sache des jeweiligen Patterns.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "palette",
+        "rules"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-06",
+      "applies": "yes",
+      "answer": "Alle 26 opaken Textpaare werden gegen das Showcase-Ziel 4,5:1 berechnet. Kontur-/Diagrammpaare werden separat dokumentiert. Reale Zustände, assistive Nutzung und native Kontexte bleiben ungeprüft.",
+      "sourceIds": [
+        "WCAG-TEXT",
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "textContrastTarget",
+        "targetRationale",
+        "indicators",
+        "openItems"
+      ],
+      "status": "calculated-pairs-only"
+    },
+    {
+      "id": "COL-07",
+      "applies": "yes",
+      "answer": "Hell und Dunkel sind als zwei Modi definiert. Theme-Auswahl, Präferenzvorrang und Speicherung sind kein Bestandteil dieses Farbentwurfs. Weitere Marken benötigen eine eigene Zuordnung.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "palette",
+        "scope",
+        "openItems"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-08",
+      "applies": "restricted",
+      "answer": "Der Entwurf begrenzt die freigegebenen Rechenbedingungen auf opake sRGB-Flächen. Bild-/Verlaufs-/Transparenzkombinationen sind nicht abgedeckt und brauchen eigene Belege.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "rules",
+        "openItems"
+      ],
+      "status": "scope-limited"
+    },
+    {
+      "id": "COL-09",
+      "applies": "yes",
+      "answer": "Fünf kategorische Diagrammfarben je Modus sind als Showcase-Vorschlag festgelegt. Benennung und Datenalternative sind erforderlich; visuelle Unterscheidbarkeit wird nicht aus dem Kontrast zur Grundfläche abgeleitet.",
+      "sourceIds": [
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "charts",
+        "openItems"
+      ],
+      "status": "showcase-design"
+    },
+    {
+      "id": "COL-10",
+      "applies": "yes",
+      "answer": "Der Stand ist ein ausgearbeiteter Prototyp. Verantwortliche Organisation, Implementierung, native Rollenabbildung und weitere Prüfungen bleiben offen. Neue Werte brauchen eine Aktualisierung der Berechnung und fachliche Einordnung.",
+      "sourceIds": [
+        "USER-DESIGN",
+        "SHOWCASE-DECISION"
+      ],
+      "evidence": [
+        "provenance",
+        "openItems"
+      ],
+      "status": "showcase-design"
+    }
+  ],
+  "openItems": [
+    "Abbildung der zusätzlichen Rollen auf echte React-/Angular-Implementierungen; derzeit keine installierten Erweiterungstokens behaupten.",
+    "Prüfung tatsächlicher Fokusgeometrie, Hover-/Auswahlkombinationen, Fehlermeldungen und Komponenten im Browser.",
+    "Diagramme bei Farbsehschwächen, mit Mustern/Markern und textlicher Alternative prüfen.",
+    "Native iOS-/Android-Zuordnung und Prüfungen; keine Übertragung einer Web-Berechnung als nativer Nachweis.",
+    "Transparente Flächen, Bilder/Verläufe und vom Nutzer erzwungene Farben gesondert behandeln.",
+    "Verantwortliche Stelle und Freigabe für eine reale Organisation sind nicht festgelegt."
+  ]
+}

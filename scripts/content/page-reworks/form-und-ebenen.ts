@@ -1,53 +1,909 @@
 import type { Page } from '../../../src/payload-types'
-type Block = NonNullable<Page['content']>[number]
-const base = { version: 1, direction: 'ltr' as const, format: '' as const, indent: 0 }
-const node = (text: string) => ({ type: 'text', version: 1, text })
-const text = (blockName: string, title: string, ...paragraphs: string[]): Block => ({
-  id: ({ comparison: '6b004e19522e8e5444d75e8e', rules: '6b004e19522e8e5444d75e8f', overlay: '6b004e19522e8e5444d75e90', radii: '6b004e19522e8e5444d75e91', check: '6b004e19522e8e5444d75e92', sources: '6b004e19522e8e5444d75e93' } as Record<string, string>)[blockName],
-  blockType: 'text', blockName, body: { root: { ...base, type: 'root', children: [
-    { ...base, type: 'heading', tag: 'h2', children: [node(title)] },
-    ...paragraphs.map(p => ({ ...base, type: 'paragraph', children: [node(p)] })),
-  ] } },
-})
 export const release = {
-  expectedUpdatedAt: '2026-11-20T13:41:45.899Z',
-  summary: 'Inhalte mit Abstand gruppieren, bei Bedarf umranden und überlagerte Flächen im Zusammenhang zeigen.',
-  content: [
-    text('comparison', 'Wann braucht eine Gruppe eine Umrandung?',
-      'Offene Gruppe', 'Begrenzte Fläche', 'Schwebende Fläche',
-      'Kontakt', 'Alex Beispiel', 'alex@example.com',
-      'An Überschrift und Abstand ist erkennbar, dass die Angaben zusammengehören.',
-      'Die Kontur fasst dieselben Angaben zu einem Bereich zusammen.',
-      'Durch den Schatten wirkt die Fläche, als läge sie über dem Untergrund.',
-      'Die Beispiele zeigen dieselben Inhalte auf unterschiedlich gestalteten Flächen. Ihre Radien und Schatten dienen nur der Veranschaulichung.'),
-    text('rules', 'Drei Entscheidungen für deinen Entwurf',
-      'Beginne mit Überschrift und Abstand. Umrande einen eigenständigen Bereich, wenn er sonst nicht klar erkennbar ist. Entferne ineinander verschachtelte Cards, wenn sie nicht zusätzlich verdeutlichen, welche Inhalte zusammengehören.',
-      'Übernimm den Radius aus den Vorgaben der gewählten Komponente. An der Rundung allein ist nicht erkennbar, ob eine Fläche eine Aktion auslöst oder über anderem Inhalt liegt. Text, Position und Kontur müssen dies ebenfalls verständlich machen.',
-      'Zeige bei einer überlagerten Fläche, zu welchem Auslöser sie gehört. Prüfe, ob sie sich auch auf dunklen Flächen und ohne sichtbaren Schatten vom Untergrund abhebt. Wie sich der Fokus bewegt, wie die Fläche geschlossen wird und ob der Hintergrund bedienbar bleibt, richtet sich nach der gewählten Komponente und ihrem Pattern.'),
-    text('overlay', 'Kontur und Schatten einzeln vergleichen',
-      'Nur Kontur', 'Nur Schatten', 'Kontur und Schatten',
-      'Kontakt', 'Weitere Aktionen', 'Kontakt bearbeiten', 'Kontakt teilen',
-      'Statische Darstellung: Unter «Weitere Aktionen» liegt eine Fläche über den Kontaktdaten. Der Auslöser bleibt sichtbar; die Fläche verdeckt einen Teil des Untergrunds. Die drei Varianten ändern nur Kontur und Schatten.',
-      'Die dargestellten Aktionen lassen sich nicht bedienen. Die Beispiele zeigen weder das Verhalten eines Dialogs noch eines Popovers. Die Schatten dienen der Veranschaulichung; sie geben keine festen Stufen für die Höhe über dem Untergrund vor.'),
-    text('radii', 'Radien der Komponenten aus dem Export',
-      'Checkbox', '4 px', 'Kleiner Button', '6 px', 'Input und Standardbutton', '10 px', 'Switch', 'Pillenform',
-      'Die Formen zeigen nur die jeweilige Rundung. Ihre Grössen und inneren Abstände dienen der Veranschaulichung; sie bilden keine vollständigen Komponenten nach. Die Werte gelten für die genannten Komponenten und bilden keine allgemeine Radiusskala.'),
-    text('check', 'Mit deinem Inhalt prüfen',
-      'Bleiben lange Texte und Gruppen auch in schmalen Ansichten lesbar? Reicht Abstand statt einer weiteren Card? Sind Kontur und Inhalt auch ohne Schatten unterscheidbar?',
-      'Prüfe im Produkt beide Themes und veränderte Kontrasteinstellungen. Prüfe bei echten Überlagerungen zusätzlich die Tastaturbedienung, den Fokuswechsel und das Schliessen. Die statischen Beispiele bestätigen dieses Verhalten nicht.'),
-    text('sources', 'Quellen und offene Festlegungen',
-      'Lokaler shadcn-Export: src/contracts/libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed/tokens.json. button.radiusSm = 6 px, button.radius = 10 px, checkbox.radius = 4 px, input.radius = 10 px. switch.radius = 9999 px wird hier als Pillenform gezeigt.',
-      'Der frühere Portalwert 7 px gehört zu einem anderen Gestaltungsstand. Er gibt keinen gemeinsamen Basisradius für diese Komponenten vor.',
-      'Im gelesenen lokalen Bestand ist nicht allgemein festgelegt, welche Flächen über anderen liegen, welche Schattenstufen gelten oder welche zusätzlichen Aufgaben Flächen übernehmen. Die Vergleichsflächen und ihre Schatten wurden für diese Beispiele gestaltet. Damit sind sie noch nicht für eine Anwendung freigegeben.'),
-    {"id": "6b004e19522e8e5444d75e94", "kind": "shape", "title": "Wie Kontur und Schatten eine Fläche verändern", "explanation": "An Überschrift und Abstand ist erkennbar, welche Angaben eine offene Gruppe bilden. Eine begrenzte Fläche fasst den Inhalt zusätzlich mit einer Kontur ein. Eine schwebende Fläche wirkt, als läge sie über anderem Inhalt. Kontur, Fläche und Schatten wirken dabei zusammen. Die Beispiele zeigen nicht, wie sich ein Dialog verhält. Die Radiusübersicht enthält die Werte aus dem Komponentenexport: Checkbox 4 px, kleiner Button 6 px, Input und Standardbutton 10 px, Switch als Pillenform. Daraus lässt sich keine allgemeine Skala für Radien oder die Höhe von Flächen über dem Untergrund ableiten.", "source": "Radiuswerte aus dem lokalen tokens.json; Flächen und Schatten wurden für die schematischen Beispiele gestaltet.", "revision": "5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed", "blockName": "original-study", "blockType": "study"},
-    { id: '6b004e19522e8e5444d75e95', blockType: 'text', blockName: 'links', body: { root: { ...base, type: 'root', children: [
-      { ...base, type: 'heading', tag: 'h2', children: [node('Weiter gestalten')] },
-      ...[
-        ['Abstände: Inhalte gruppieren und Platz schaffen', '/systems/shadcn/abstaende'],
-        ['Farbe: Fläche und Kontur', '/systems/shadcn/farben'],
-        ['Themes und visuelle Zustände', '/systems/shadcn/themes-und-zustaende'],
-        ['Komponenten auswählen', '/systems/shadcn/komponenten-auswahl'],
-      ].map(([label,url]) => ({ ...base, type: 'paragraph', children: [{ ...base, type: 'link', fields: { url, linkType: 'custom', newTab: false }, children: [node(label)] }] })),
-    ] } } },
-  ] satisfies Page['content'],
-}
+  "expectedUpdatedAt": "2026-11-23T18:46:21.503Z",
+  "summary": "Formen wählen, Flächen abgrenzen und Überlagerungen verständlich gestalten.",
+  "content": [
+    {
+      "blockType": "text",
+      "blockName": "shape-start",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Formen gezielt einsetzen"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Formen halten Inhalte zusammen. Konturen grenzen Bereiche ab. Schatten können zeigen, dass eine Fläche über anderem Inhalt liegt. Wähle das Mittel, das die Aufgabe verständlich macht."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die Beispiele ergänzen die exportierten Komponentenwerte um lokale Gestaltungsregeln für dieses shadcn-Handbuch. Sie gelten für die gezeigten Webanwendungen, nicht automatisch für andere Plattformen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-surfaces",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wann braucht eine Fläche eine Grenze?"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Vergleiche die Kontaktangaben neben Benachrichtigungen und letzten Änderungen. Offen und begrenzt bleiben sie Teil der Seite; schwebend liegen sie vor den Nachbarinhalten."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wähle eine zusätzliche Begrenzung, wenn ein Bereich sonst untergeht. Ein Schatten kennzeichnet hier die Überlagerung; er macht die Fläche nicht automatisch klickbar oder modal."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-radii",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Welche Rundung passt?"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die Proben zeigen denselben Körper mit unterschiedlichen Radien. Die Beschriftung nennt die jeweilige Verwendung im Export."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Übernimm für eine Komponente ihr Rezept. Die Auswahl bildet keine globale Skala; eine Pillenform passt ihren sichtbaren Radius an die Geometrie an."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-combination",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Ecken im Zusammenhang"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine Card kann stärker gerundet sein als ihr Eingabefeld: hier aussen 14 px, innen 10 px. Genügend Innenraum hält die Konturen auseinander. Ein weiterer Rahmen um jedes Feld ist dafür nicht nötig."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Bei verbundenen Elementen fasse die äusseren Ecken zu einer gemeinsamen Form zusammen. Die inneren Kanten bleiben gerade; eine Trennlinie genügt. Das Beispiel ist eine lokale Gestaltungsregel für eine zusammengehörige Aktionsgruppe, kein neuer Button-Contract."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Berechne innere Radien nicht pauschal durch Subtraktion. Bestehende Komponentenrezepte sind führend. Gleiche oder unterschiedliche Radien können je nach Abstand und Geometrie sinnvoll sein."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-depth",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Was leisten Kontur und Schatten?"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Schalte Kontur und Schatten einzeln ein und aus. Inhalt, Form und Position bleiben gleich. So erkennst du, welches Signal die Fläche vom Untergrund trennt."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Für eine überlagerte Fläche nutzt dieses Beispiel Kontur und Schatten gemeinsam. Auf einem ähnlichen Untergrund hilft die Kontur, die Grenze auch ohne Schatten zu erkennen. Der dunkle Untergrund ist eine zusätzliche Studie, keine vollständige Dark-Theme-Vorgabe."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Der Schatten dieser Studie lautet 0 6px 18px mit 22 % dunkler Farbe. Er ist lokal gestaltet und keine exportierte Höhenstufe. Ein Fokus-Schatten im Contract erfüllt eine andere Aufgabe."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-order",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Welche Fläche liegt vorne?"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Spiele den Ablauf durch: Inhalt → Menü → Dialog. Beim Wechsel in den Dialog wird das zuvor offene Menü geschlossen. Die Darstellung zeigt die Reihenfolge, nicht die Bedienung eines echten Menüs oder Dialogs."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Lokale Regel für dieses Beispiel: Das Menü liegt über dem Seiteninhalt. Nach Auswahl einer Dialogaktion verschwindet das Menü. Der Dialog liegt vor der abgedunkelten Seite; der Hintergrund ist im echten Produkt währenddessen nicht bedienbar."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die Vorschau zeichnet den gesperrten Hintergrund nur. Für echte Umsetzung sind Öffnen, Schliessen, Fokuswechsel und Rückkehr zur auslösenden Aktion durch Dialog, Dropdown-Menü und das passende Pattern zu regeln. Ein Schatten, eine Grafik oder ein hoher Stapelwert bestätigt dieses Verhalten nicht."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Weitere Kombinationen wie mehrere Dialoge, Hinweise über Dialogen oder überlagerte feste Navigation sind damit nicht festgelegt. Dafür braucht das Zielsystem eine eigene Konfliktregel; nicht einfach eine höhere Ebene vergeben."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-states",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Form ist kein Zustand"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Rundung allein zeigt weder Auswahl noch Fokus oder Fehler. Behalte die Form einer Komponente bei und verwende ihre definierten Zustandssignale. Fehler brauchen eine verständliche Meldung; der Fokus muss von einer bloss angehobenen Fläche unterscheidbar bleiben."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die Feldproben zeigen dieselbe 10-px-Form: neutral, mit zusätzlicher Fokusmarkierung und mit Fehlermeldung. Farben und Markierung sind eine schematische Erklärung, keine vollständige Zustandsreferenz."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-adaptation",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auch mit mehr Inhalt verständlich"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Lass Flächen mit dem Inhalt wachsen. Verwende Innenabstand statt fester Beispielhöhen, die längere Beschriftungen abschneiden. Überlagerungen brauchen genügend Platz, erkennbare Zuordnung zum Auslöser und erreichbare Aktionen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wenn ein Menü auf schmalem Raum nicht mehr sinnvoll passt, wähle eine passende andere Komponente. Ein Sheet oder Dialog bringt eigene Bedienregeln mit; es ist nicht einfach dasselbe Menü in voller Breite."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-decision",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "So triffst du die Entscheidung"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Kontaktangaben in einem bereits gegliederten Detailbereich: offene Gruppe. Dieselben Angaben als eigenständiger Abschnitt neben anderen Informationen: begrenzte Fläche. Temporäre Aktionen über dem Inhalt: passende Overlay-Komponente mit erkennbarer Grenze."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Für das Eingabefeld in einer Card werden die vorhandenen 10-/14-px-Rezepte kombiniert. Bei einer Dialogaktion aus einem Menü wird zuerst das Menü beendet. So entscheidest du über Form, Kombination und Reihenfolge, statt nur einen Effekt auszuwählen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-source",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Werte und Herkunft"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Komponentenwerte aus dem lokal importierten shadcn-Export, Revision 30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90, package/library/tokens.css: --ui-sheet-radius 0px, --ui-checkbox-radius 4px, --ui-button-radius-sm 6px, --ui-tooltip-radius 8px, --ui-input-radius und --ui-button-radius 10px, --ui-card-radius und --ui-dialog-radius 14px, --ui-switch-radius 9999px."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auswahlhilfen für Flächen, der Beispielschatten, verbundene Ecken und der Ablauf Menü → Dialog sind lokale Entwurfsentscheidungen. Die Abmessungen der schematischen Proben sind nicht die vollständigen Abmessungen der genannten Komponenten."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die frühere Studie unten bleibt mit ihrem alten Exportstand erhalten. Sie ist kein zusätzlicher aktueller Regelstand."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-checks",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Prüfen und offen halten"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Prüfe im Produkt die Flächen auf ihren tatsächlichen Untergründen, in unterstützten Themes und bei veränderten Kontrasteinstellungen. Notwendige erkennbare Grenzen sind anders zu beurteilen als rein dekorative Konturen. Der vorliegende Vergleich ist keine allgemeine Barrierefreiheitsfreigabe."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Prüfe echte Overlays zusätzlich mit Tastatur, Fokus, Schliessen, Hintergrundsperre und langen Inhalten. Die hier gezeigten Illustrationen bestätigen diese Eigenschaften nicht."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Offen bleiben eine vollständige systemweite Flächen-/Ebenenreferenz, weitere Konfliktfälle, echte Dark-Theme-Rezepte, native Zuordnungen und eine fachlich verantwortliche Stelle. Bei Änderungen an Tokens, Themes oder Overlayregeln sind Beispiele und Texte gemeinsam zu überprüfen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "shape-links",
+      "body": {
+        "root": {
+          "version": 1,
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "children": [
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "heading",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Weiter gestalten"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "version": 1,
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/abstaende",
+                    "linkType": "custom",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "Abstände und Grössen"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "version": 1,
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/farben",
+                    "linkType": "custom",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "Farbe"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "version": 1,
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/themes-und-zustaende",
+                    "linkType": "custom",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "Themes und Zustände"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "version": 1,
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/components/dialog",
+                    "linkType": "custom",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "Dialog"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "children": [
+                {
+                  "version": 1,
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/components/dropdown-menu",
+                    "linkType": "custom",
+                    "newTab": false
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "version": 1,
+                      "text": "Dropdown-Menü"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "6b004e19522e8e5444d75e94",
+      "kind": "shape",
+      "title": "Wie Kontur und Schatten eine Fläche verändern",
+      "explanation": "An Überschrift und Abstand ist erkennbar, welche Angaben eine offene Gruppe bilden. Eine begrenzte Fläche fasst den Inhalt zusätzlich mit einer Kontur ein. Eine schwebende Fläche wirkt, als läge sie über anderem Inhalt. Kontur, Fläche und Schatten wirken dabei zusammen. Die Beispiele zeigen nicht, wie sich ein Dialog verhält. Die Radiusübersicht enthält die Werte aus dem Komponentenexport: Checkbox 4 px, kleiner Button 6 px, Input und Standardbutton 10 px, Switch als Pillenform. Daraus lässt sich keine allgemeine Skala für Radien oder die Höhe von Flächen über dem Untergrund ableiten.",
+      "source": "Radiuswerte aus dem lokalen tokens.json; Flächen und Schatten wurden für die schematischen Beispiele gestaltet.",
+      "revision": "5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed",
+      "blockName": "original-study",
+      "blockType": "study"
+    }
+  ]
+} satisfies { expectedUpdatedAt: string; summary: string; content: Page['content'] }

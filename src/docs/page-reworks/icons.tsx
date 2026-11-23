@@ -1,52 +1,103 @@
 'use client'
-import { SiteAnchor } from '../site-anchor'
 
-import { useId, useState } from 'react'
+import { createElement, useId, useState } from 'react'
 import type { Page } from '../../payload-types'
+import { Content } from '../content'
 import { RichText } from '../rich-text'
 import { blockAnchor } from '../content-outline'
+import { sitePath } from '../site-path'
+import showcase from '../icons-showcase.json'
 import './icons.css'
 
 type Block = NonNullable<Page['content']>[number]
-type Text = Extract<Block, { blockType: 'text' }>
-function strings(block: Text) {
-  return block.body.root.children.map(n => Array.isArray(n.children) ? n.children.map((c: { text?: string }) => c.text ?? '').join('') : '')
-}
-function Icon({ kind }: { kind: 'arrow' | 'info' | 'check' | 'warning' | 'spark' }) {
-  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-    {kind === 'arrow' && <path d="M4 12h16m-6-6 6 6-6 6"/>}
-    {kind === 'info' && <><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></>}
-    {kind === 'check' && <><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></>}
-    {kind === 'warning' && <><path d="m12 3 10 18H2L12 3Zm0 6v5m0 3v.1"/></>}
-    {kind === 'spark' && <path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5L12 2Z"/>}
+function Icon({ id = 'search', size = 24, stroke = 2 }: { id?: string; size?: number; stroke?: number }) {
+  const icon = showcase.icons.find(i => i.id === id)!
+  return <svg viewBox={icon.viewBox} width={size} height={size} style={{width:size,height:size}} fill="none" stroke="currentColor" strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    {icon.nodes.map((node,i)=>createElement(node.tag,{...node.attrs,key:i}))}
   </svg>
 }
+
 export default function IconsPage({ content }: { content: Page['content'] }) {
   const [open, setOpen] = useState(false)
-  const hintId = useId()
+  const [long, setLong] = useState(false)
+  const [boxes, setBoxes] = useState(true)
+  const [activated, setActivated] = useState(false)
+  const [query, setQuery] = useState('')
+  const hintId = useId(), queryId = useId()
   const blocks = content ?? []
-  const find = (key: string) => blocks.find(b => b.blockName === key)
-  const read = (key: string) => { const b = find(key); return b?.blockType === 'text' ? strings(b) : [] }
-  const examples = read('examples'), label = read('label'), only = read('only'), status = read('status'), decoration = read('decoration')
-  const original = find('original')
-  const section = (key: string, details = false) => {
-    const b = find(key)
-    if (b?.blockType !== 'text') return null
-    return details ? <details id={blockAnchor(b)}><summary>{strings(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
-      : <section id={blockAnchor(b)}><RichText data={b.body}/></section>
+  const byName = new Map(blocks.map(b=>[b.blockName,b]))
+  if (!byName.has('icon-start')) return <Content blocks={blocks}/>
+  const render = (key:string) => {const b=byName.get(key);return b?<Content blocks={[b]}/>:null}
+  const text = (key:string,part:'intro'|'rest'|'scope') => {
+    const b=byName.get(key);if(b?.blockType!=='text')return null
+    const children=part==='intro'?b.body.root.children.slice(0,2):part==='scope'?b.body.root.children.slice(1):b.body.root.children.slice(2).filter(n=>n.type!=='list')
+    return <RichText data={{...b.body,root:{...b.body.root,children}}}/>
   }
+  const anchor = (key:string) => {const b=byName.get(key);return b?blockAnchor(b):undefined}
+  const keys=['icon-start','icon-labels','icon-sizes','icon-strokes','icon-alignment','icon-meaning','icon-status','icon-adaptation','icon-sources','icon-platforms','icon-checks','icon-links','original']
+  const extra=blocks.filter(b=>!keys.includes(b.blockName??''))
+  const matches=showcase.icons.filter(i=>`${i.label} ${i.use} ${i.id}`.toLocaleLowerCase('de').includes(query.trim().toLocaleLowerCase('de')))
+  const original=byName.get('original')
+  const label = open ? long?'Hinweis zur gewählten E-Mail-Adresse ausblenden':'Hinweis ausblenden' : long?'Hinweis zur gewählten E-Mail-Adresse anzeigen':'Hinweis anzeigen'
   return <div className="icons-rework">
-    <section id={find('examples') ? blockAnchor(find('examples')!) : undefined}>
-      <h2>{examples[0]}</h2>
-      <div className="ic-examples">
-        <article><h3>{label[0]}</h3><div className="ic-specimen"><SiteAnchor className="ic-text-link" href="/systems/shadcn/content-design">{label[1]}<Icon kind="arrow"/></SiteAnchor></div><p>{label[2]}</p></article>
-        <article><h3>{only[0]}</h3><div className="ic-specimen"><button type="button" aria-label={only[open ? 2 : 1]} aria-expanded={open} aria-controls={hintId} onClick={() => setOpen(!open)}><Icon kind="info"/></button></div><p>{only[3]}</p><p id={hintId} className="ic-hint" hidden={!open}>{only[4]}</p></article>
-        <article><h3>{status[0]}</h3><div className="ic-status-list"><div><Icon kind="check"/><strong>{status[1]}</strong></div><div><Icon kind="warning"/><span><strong>{status[2]}</strong><br/>{status[3]}</span></div></div><p>{status[4]}</p></article>
-        <article><h3>{decoration[0]}</h3><div className="ic-specimen ic-decoration"><Icon kind="spark"/><strong>{decoration[1]}</strong></div><p>{decoration[2]}</p></article>
-      </div><p className="ic-note">{examples[1]}</p>
+    <div className="ic-scope" id={anchor('icon-start')}>{text('icon-start','scope')}</div>
+    <section id={anchor('icon-labels')}>
+      {text('icon-labels','intro')}
+      <div className="ic-label-comparison">
+        <figure><figcaption>Mit sichtbarem Text</figcaption><div className="ic-action-context"><strong>Kontaktangaben</strong><button type="button" aria-expanded={open} aria-controls={hintId} onClick={()=>setOpen(!open)}><Icon id="info" size={16}/><span>{label}</span></button></div></figure>
+        <figure><figcaption>Ohne sichtbaren Text</figcaption><div className="ic-action-context"><strong>Kontaktangaben</strong><button className="ic-icon-button" type="button" aria-label={open?'Hinweis ausblenden':'Hinweis anzeigen'} aria-expanded={open} aria-controls={hintId} onClick={()=>setOpen(!open)}><Icon id="info" size={16}/></button></div></figure>
+      </div>
+      <p className="ic-hint" id={hintId} hidden={!open}>Die Taste öffnet diesen Beispielhinweis. Es werden keine Daten geändert.</p>
+      <fieldset className="ic-controls"><legend>Beschriftung vergleichen</legend><label><input type="checkbox" checked={long} onChange={e=>setLong(e.target.checked)}/>Lange Beschriftung</label></fieldset>
+      {text('icon-labels','rest')}
     </section>
-    {section('rules')}{section('review')}
-    {original?.blockType === 'study' && <details id={blockAnchor(original)}><summary>{original.title}</summary><p>{original.explanation}</p><p>{original.source}</p></details>}
-    {section('sources', true)}{section('links')}
+    <section id={anchor('icon-sizes')}>
+      {text('icon-sizes','intro')}
+      <dl className="ic-size-list">{showcase.sizes.map(s=><div key={s.px}><dt><strong>{s.px} px</strong><span>{s.use}</span></dt><dd><Icon size={s.px}/><span>Kontakte suchen</span></dd></div>)}</dl>
+      {text('icon-sizes','rest')}
+    </section>
+    <section id={anchor('icon-strokes')}>
+      {text('icon-strokes','intro')}
+      <div className="ic-stroke-comparison">{showcase.strokes.map(s=><figure key={s.width}>
+        <figcaption><strong>{s.label}</strong><span>Strichwert {s.width}</span></figcaption>
+        <div className="ic-stroke-original"><Icon size={24} stroke={s.width}/></div><span className="ic-probe-label">24 px</span>
+        <div className="ic-stroke-detail"><Icon size={48} stroke={s.width}/></div><span className="ic-probe-label">Detail · 2×</span>
+      </figure>)}</div>
+      {text('icon-strokes','rest')}
+    </section>
+    <section id={anchor('icon-alignment')}>
+      {text('icon-alignment','intro')}
+      <fieldset className="ic-controls"><legend>Geometrie vergleichen</legend><label><input type="checkbox" checked={boxes} onChange={e=>setBoxes(e.target.checked)}/>Zeichenflächen markieren</label></fieldset>
+      <div className="ic-geometry">{[['search','Lupe'],['arrow-right','Pfeil'],['info','Information']].map(([id,label])=><figure key={id}><div className="ic-geometry-stage"><span className="ic-icon-box" data-marked={boxes}><Icon id={id}/></span></div><figcaption>{label}<span>24 × 24 px</span></figcaption></figure>)}
+        <figure><div className="ic-geometry-stage"><button className="ic-icon-button" type="button" aria-label="Beispielaktion auslösen" onClick={()=>setActivated(true)}><Icon id="info" size={16}/></button></div><figcaption>Aktive Fläche<span>44 × 44 px · Icon 16 px</span></figcaption></figure>
+      </div>
+      <p role="status" className="ic-note">{activated?'Beispielaktion ausgelöst.':'Die aktive Fläche lässt sich auch neben dem kleinen Zeichen auslösen.'}</p>
+      {text('icon-alignment','rest')}
+    </section>
+    <section id={anchor('icon-meaning')}>
+      {text('icon-meaning','intro')}
+      <label className="ic-search-label" htmlFor={queryId}>Zeichen in dieser Auswahl finden</label><input className="ic-search" id={queryId} type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Zum Beispiel: Datei, Hinweis, search"/>
+      <p className="ic-note" role="status">{matches.length} von {showcase.icons.length} Zeichen</p>
+      <ul className="ic-catalogue">{matches.map(i=><li key={i.id}><Icon id={i.id} size={20}/><div><strong>{i.label}</strong><span>{i.use}</span><code>{i.id}</code></div><a href={sitePath(`/handbook/icons/lucide/${i.id}.svg`)} download aria-label={`SVG für ${i.label} herunterladen`}>SVG</a></li>)}</ul>
+      {!matches.length&&<p>Kein passendes Zeichen in dieser Auswahl. Versuche einen anderen Begriff.</p>}
+    </section>
+    <section id={anchor('icon-status')}>
+      {text('icon-status','intro')}
+      <div className="ic-status-examples">
+        <div><Icon id="circle-check" size={20}/><span><strong>Gespeichert</strong><span>Die Änderung wurde bestätigt.</span></span></div>
+        <div><Icon id="triangle-exclamation-point" size={20}/><span><strong>Speichern fehlgeschlagen</strong><span>Deine Eingaben bleiben erhalten.</span></span></div>
+        <div className="ic-decorative"><Icon id="sparkles" size={20}/><span><strong>Dein Arbeitsbereich</strong><span>Dekoratives Zeichen · keine zusätzliche Aussage</span></span></div>
+      </div>
+      {text('icon-status','rest')}
+    </section>
+    {render('icon-adaptation')}
+    <details className="ic-details"><summary>Quellen, Varianten und Prüfungen</summary>
+      {render('icon-sources')}
+      <p><a href={sitePath('/handbook/icons/lucide/LICENSE.txt')}>Vollständige Lizenzhinweise</a> · <a href={sitePath('/handbook/icons/lucide/provenance.json')}>Assetquellen und Prüfsummen</a></p>
+      <p><a href={sitePath('/handbook/icons/lucide/figma-references.json')}>Figma-Zuordnung der Beispielzeichen</a></p>
+      {render('icon-platforms')}{render('icon-checks')}
+    </details>
+    {original?.blockType==='study'&&<details className="ic-details" id={blockAnchor(original)}><summary>Frühere Studie · historischer Stand</summary><p>{original.explanation}</p><p>{original.source}</p></details>}
+    {render('icon-links')}<Content blocks={extra}/>
   </div>
 }
