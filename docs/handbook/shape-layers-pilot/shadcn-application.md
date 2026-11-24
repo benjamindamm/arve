@@ -58,3 +58,9 @@ Typprüfung, vollständiger CMS-/MCP-Inhaltsabgleich, statischer Build und stati
 24.11.2026 · Showcase-Profil v3. Der Versatz der schwebenden Kontaktfläche wird jetzt durch rechten und unteren Aussenabstand im Layout berücksichtigt. Kontur und Schatten zeigen weiterhin die erhöhte Ebene; die Box verdeckt keine benachbarten Texte mehr. Die Legende wurde entsprechend angepasst.
 
 Vor der Korrektur lag die Box bei 390 px um 32 px über dem Nachbarbereich. Nach der Korrektur überschneiden sich die Rechtecke der Kontaktfläche und der beiden Nachbarbereiche bei 320, 390 und 1440 px nicht; die jeweilige Dokumentbreite entspricht der Ansichtsbreite. Die mobile schwebende Variante wurde zusätzlich visuell geprüft. Die Prüfung betrifft dieses Beispiel, nicht sämtliche Overlay-Studien der Seite.
+
+## Vergleich ohne Positionsänderung
+
+24.11.2026 · Showcase-Profil v4. Nach der Rückfrage des Nutzers entfällt der Versatz vollständig. Offen, begrenzt und schwebend behalten dieselbe Geometrie; zwischen begrenzt und schwebend ändert sich nur der Schatten. Die zusätzlichen Ausgleichsabstände aus v3 entfallen damit ebenfalls. So lässt sich die Flächenbehandlung isoliert vergleichen, ohne eine räumliche Bewegung zu suggerieren.
+
+Nachprüfung v4: Bei 320, 390 und 1440 px haben alle drei Varianten identische Position und Grösse relativ zur gemeinsamen Szene. Der berechnete Transform ist jeweils `none`; nur Schwebend hat einen Schatten. Keine horizontale Überbreite. Typprüfung bestanden.
