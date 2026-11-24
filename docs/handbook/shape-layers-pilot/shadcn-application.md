@@ -52,3 +52,9 @@ Die wechselnde Bildlegende erläutert jeweils die sichtbare Variante. Der anschl
 Geprüft: Desktop 1440 × 1000 und mobile Ansicht 390 × 844 im Browser. Offene Desktopansicht, schwebende Variante auf Desktop sowie begrenzte und schwebende mobile Ansicht visuell angesehen. Auswahl per Tastatur betätigt. Die schwebende Fläche überschneidet den darunterliegenden Inhaltsbereich um 28 px auf Desktop beziehungsweise den benachbarten Abschnitt um 32 px auf Mobil. Bei 390 px misst die gemeinsame Szene rund 406 px Höhe; kein horizontaler Seitenüberlauf. Zusätzliche Breitenmessung bei 320 px ebenfalls ohne Überlauf, kein vollständiger visueller Test dieser Breite.
 
 Typprüfung, vollständiger CMS-/MCP-Inhaltsabgleich, statischer Build und statischer Check erfolgreich. Letzter statischer Check: 198 HTML-Dateien, 116 Handbuchseiten, 69 Komponenten, 59 421 interne Links und 2 955 Assets. Nur diese DB-Seite geändert (122 weitere unverändert); nur diese Snapshotseite geändert (115 weitere sowie System-/Implementierungs-/Medien-/Contractreferenzen unverändert). Historische Studie unverändert bewahrt. Keine neue unabhängige Nachprüfung durch einen Designer-Agenten und kein Nutzertest dieses überarbeiteten Stands.
+
+## Korrektur: Nachbarinhalte lesbar halten
+
+24.11.2026 · Showcase-Profil v3. Der Versatz der schwebenden Kontaktfläche wird jetzt durch rechten und unteren Aussenabstand im Layout berücksichtigt. Kontur und Schatten zeigen weiterhin die erhöhte Ebene; die Box verdeckt keine benachbarten Texte mehr. Die Legende wurde entsprechend angepasst.
+
+Vor der Korrektur lag die Box bei 390 px um 32 px über dem Nachbarbereich. Nach der Korrektur überschneiden sich die Rechtecke der Kontaktfläche und der beiden Nachbarbereiche bei 320, 390 und 1440 px nicht; die jeweilige Dokumentbreite entspricht der Ansichtsbreite. Die mobile schwebende Variante wurde zusätzlich visuell geprüft. Die Prüfung betrifft dieses Beispiel, nicht sämtliche Overlay-Studien der Seite.

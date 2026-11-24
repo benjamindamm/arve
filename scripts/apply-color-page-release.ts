@@ -4,6 +4,7 @@ import { getPayload, type PayloadRequest } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import config from '../src/payload.config'
 import { colorPageRelease } from './content/color-page-release'
+import { release } from './content/page-reworks/farben'
 
 const publish = process.argv.includes('--publish')
 const safeConfig = await config
@@ -17,7 +18,7 @@ try {
   const published = await payload.findByID({collection:'pages',id:page.id,draft:false,depth:0})
   assert.deepEqual(page,published,'Neuerer oder abweichender Entwurf vorhanden.')
   const same = () => page.summary === colorPageRelease.summary && isDeepStrictEqual(clean(page.content), clean(colorPageRelease.content))
-  if (!same()) assert.equal(page.updatedAt,'2026-11-17T23:33:02.381Z','Farbseite seit der Prüfung verändert.')
+  if (!same()) assert.equal(page.updatedAt,release.expectedUpdatedAt,'Farbseite seit der Prüfung verändert.')
   const untouched = async (req?: Partial<PayloadRequest>) => ({
     pages: (await payload.find({collection:'pages',draft:true,pagination:false,depth:0,sort:'id',where:{id:{not_equals:page.id}},req})).docs,
     published: (await payload.find({collection:'pages',draft:false,pagination:false,depth:0,sort:'id',where:{id:{not_equals:page.id}},req})).docs,

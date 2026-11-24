@@ -82,7 +82,7 @@ export default async function SectionPage({ params }: { params: Promise<{ system
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={path} />
         <h1>{page.title}</h1>
         {page.summary && !patternCatalog && <p className="lead">{page.summary}</p>}
-        {!patternCatalog && !componentCatalogue && <HandbookOutline key={path} initiallyCollapsed={shadcn && ['page-type-overview', 'typografie', 'abstaende', 'form-und-ebenen', 'icons'].includes(section)} />}
+        {!patternCatalog && !componentCatalogue && <HandbookOutline key={path} initiallyCollapsed={shadcn && ['page-type-overview', 'farben', 'themes-und-zustaende', 'typografie', 'abstaende', 'form-und-ebenen', 'icons', 'bewegung'].includes(section)} />}
         {ReworkedPage ? <ReworkedPage content={page.content} {...(patternCatalog ? { summary: page.summary } : {})} catalogueEntries={catalogueEntries} /> : foundationsOverview ? <FoundationsOverview content={page.content} /> : colorPage ? <ColorPage content={page.content} /> : <>
         <TemplateContent sections={readTemplate(page.pageType, page.template)} />
         <DesignResourceLinks system={system} section={section} />

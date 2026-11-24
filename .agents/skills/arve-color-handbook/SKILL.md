@@ -16,7 +16,7 @@ Das Ergebnis beantwortet relevante Farbfragen für ein ausdrücklich gewähltes 
 ## Arbeitsweise
 
 1. Kläre Zielsystem und Aufgabe (bestehenden Stand dokumentieren, prüfen oder neue Regeln vorschlagen). Ein noch unbenanntes System ist möglich; halte es als unbenannt fest. Lies verfügbare Quellen zuerst. Frage nicht erneut nach Angaben, die der Nutzer bereits gemacht hat. shadcn ist nur eine mögliche Anschauungsreferenz, keine vorgewählte Grundlage.
-2. Lies den [Fragenkatalog](references/color-questions.md). Ordne bekannte Angaben mit genauer Fundstelle und Stand den Fragen zu. Unterscheide Quellbefund, lokale Entscheidung, Vorschlag und Illustration. Ein Tokenname belegt noch keine Einsatzregel; eine implementierte Farbe noch keine fachliche Zustimmung.
+2. Lies den [Fragenkatalog](references/color-questions.md). Für Farbrollen, Flächen oder visuelle Zustände lies zusätzlich die [Anwendungsfragen](references/color-applications.md). Ordne bekannte Angaben mit genauer Fundstelle und Stand den Fragen zu. Unterscheide Quellbefund, lokale Entscheidung, Vorschlag und Illustration. Ein Tokenname belegt noch keine Einsatzregel; eine implementierte Farbe noch keine fachliche Zustimmung.
 3. Aktiviere bedingte Fragen anhand des Systemumfangs. Ungeklärter Bedarf bleibt offen. Fehlende Erwähnung bedeutet nicht „nicht relevant“. Bei einem Quellkonflikt zeige die widersprechenden Aussagen und frage gezielt nach Geltung oder gewollter Abweichung.
 4. Stelle kleine zusammenhängende Fragebündel, in der Regel ein bis drei Fragen. Beginne mit der Frage, deren Antwort weitere Fragen erspart oder freischaltet. Beschreibe die konkrete Entscheidung in verständlicher Sprache. Begründe, wenn eine Rückfrage Auswirkungen auf andere Regeln hat. Frage nicht nach der ganzen Palette, wenn nur eine Regel geprüft werden soll.
 5. Biete bei fehlender Orientierung begründete Optionen an. Kennzeichne sie als Vorschläge, nicht als bestehende Vorgaben. „Noch nicht entschieden“ ist eine zulässige Antwort. Ein Vorschlag, Schweigen oder ein Ablauf einer Wartezeit ist keine Annahme. Auf eine notwendige Antwort warten; unabhängige Quellenarbeit kann weitergehen.
@@ -32,6 +32,12 @@ Vertiefe dort, wo eine Begründung, Alternative, Grenzsituation oder Prüfmethod
 Ordne das Ergebnis nach den Aufgaben der Leser: Die geltende Verwendung und ihre Grenzen müssen schnell auffindbar sein. Herkunft, Begründungen und Prüfungen bleiben zugänglich und dürfen ausführlich sein. Je nach Thema eignen sich integrierte Erläuterungen, aufklappbare Vertiefungen, Querverweise oder Begleitdokumente; keine dieser Darstellungen ist vorgeschrieben. Eine lokale Grenze gehört direkt zur betroffenen Verwendung. Allgemeine Einschränkungen einmal verständlich erklären, statt jede Aussage mit demselben Vorbehalt zu versehen.
 
 Unterscheide bei offenen Punkten aktuelle ungeregelte Anwendungen, unzureichende Nachweise und mögliche spätere Erweiterungen. Erkläre die praktische Konsequenz: Was lässt sich bereits gestalten, und wozu liefert das Kapitel noch keine Vorgabe? Lege keine erfundene Priorität, Zuständigkeit oder Frist fest.
+
+## Palette und Anwendung auseinanderhalten
+
+Dokumentiere die verfügbaren Farben und ihre Abstufungen unter Farbe. Beschreibe die Zuordnung zu Flächen, Handlungen und Rückmeldungen bei den visuellen Zuständen; bei kleinen Kapiteln sind dies klar getrennte Abschnitte. Verlinke beide Richtungen. Theme ist der Erscheinungsmodus, Interaktionszustand etwa Hover oder Fokus, semantische Rolle etwa Fehler oder primäre Handlung. Diese Dimensionen nicht zu einer einzigen Farbenliste vermischen.
+
+Wenn Carbon als Referenz gewählt ist, nutze Palette → Rolle → Token → Wert je Theme und prüfe die passende Elementgruppe (etwa Background, Layer, Text, Border, Support oder Focus). Übernimm keine fremden Werte oder Begriffe blind: „primärer Text“ ist keine primäre Handlung, eine destruktive Handlung kein Fehlerhinweis. Eigene Erweiterungen ausdrücklich kennzeichnen.
 
 ## Gemeinsame Ergebnisstruktur
 

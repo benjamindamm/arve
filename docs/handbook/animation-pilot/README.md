@@ -1,6 +1,6 @@
 # Fach-Skill für Animation
 
-24.11.2026 · Autorenprototyp v0.1, noch keine Anwendung auf einen neuen Seitenaufbau und kein unabhängiger Transferlauf.
+24.11.2026 · Fach-Skill v0.1, inzwischen auf die shadcn-Seite angewendet. Noch kein unabhängiger Transferlauf.
 
 ## Ergebnis
 
@@ -32,7 +32,7 @@ Der Arbeitsrahmen verbindet Zweck und Auswahl mit konkret beschriebenen Abläufe
 
 Die Fragen strukturieren die Ausarbeitung, nicht die sichtbare Reihenfolge oder die Anzahl Abschnitte. Umfangreiche Herleitungen sind möglich. Die praktische Auswahl und Vorschau sollen früh auffindbar bleiben.
 
-## Bestehende shadcn-Seite
+## Ausgangslage vor der Anwendung
 
 Gezielt gelesen: `scripts/content/page-reworks/bewegung.ts`, `src/docs/page-reworks/bewegung.tsx` und `.css`, veröffentlichter DB-Stand sowie einzelne Animationswerte im ausgewählten Contract-Export.
 
@@ -42,9 +42,9 @@ Bei einer neuen Ausarbeitung fehlen vor allem klar auffindbare Auswahl-/Rezeptbe
 
 ## Umbenennung
 
-Auf Nutzerwunsch heisst das veröffentlichte Kapitel jetzt **Animation**. Geändert wurden ausschliesslich Titel und Änderungszeit der Seite `shadcn-bewegung`; Inhalt, Summary, Beziehungen und Adresse bleiben erhalten. Die aktuelle Ausarbeitungsdatei nennt ebenfalls den neuen Titel. Der bestehende Inhaltsstand wurde neu erfasst; im Snapshot ist nur der Seitentitel geändert, zusätzlich zu den üblichen Erfassungsmetadaten.
+Auf Nutzerwunsch heisst das veröffentlichte Kapitel jetzt **Animation**. Bei der Umbenennung geändert wurden ausschliesslich Titel und Änderungszeit der Seite `shadcn-bewegung`; Inhalt, Summary, Beziehungen und Adresse bleiben erhalten. Die aktuelle Ausarbeitungsdatei nennt ebenfalls den neuen Titel. Der bestehende Inhaltsstand wurde neu erfasst; im damaligen Snapshot war nur der Seitentitel geändert, zusätzlich zu den üblichen Erfassungsmetadaten.
 
-Die aktuelle DB-Fassung entspricht inhaltlich nicht vollständig der älteren Ausarbeitungsdatei. Deshalb wurde diese nicht erneut über die Seite publiziert. Die gezielte Titeländerung bewahrt alle vorhandenen Inhalte und setzt keinen alten Inhalt zurück. Eingefrorene Ausgangsdateien wurden nicht umgeschrieben.
+Zum Zeitpunkt der Umbenennung entsprach die DB-Fassung inhaltlich nicht vollständig der älteren Ausarbeitungsdatei. Deshalb wurde diese damals nicht erneut über die Seite publiziert. Die gezielte Titeländerung bewahrt alle vorhandenen Inhalte und setzt keinen alten Inhalt zurück. Eingefrorene Ausgangsdateien wurden nicht umgeschrieben.
 
 ## Quellen und redaktioneller Gegencheck
 
@@ -56,4 +56,4 @@ Die Fragen wurden redaktionell gegen die dokumentierten Gegenbeispiele abgeglich
 
 Skillform und lokale Markdownverweise geprüft; 16 eindeutige Fachfragen vollständig. Umbenennung mit Schutz vor abweichendem Entwurf und konkurrierender Änderung durchgeführt, alle übrigen Seitenfelder bewahrt. Titel und Navigation „Animation“ in der laufenden Seite im Browser beobachtet. Scope-Prüfung erfolgreich: 122 weitere DB-Seiten unverändert; im Snapshot nur der Titel dieser Seite geändert. MCP liefert unter dem bisherigen Pfad den Titel „Animation“. Typprüfung, statischer Build und statischer Check erfolgreich: 198 HTML-Dateien, 116 Handbuchseiten, 69 Komponenten, 59 431 interne Links und 2 955 Contractassets, Basispfad `/arve`, kein Backend erforderlich.
 
-Kein neues Animationsbeispiel implementiert, keine Token/Contracts geändert, keine fremde Bibliothek installiert und keine Skillverteilung über MCP ergänzt. Noch kein unabhängiger Verhaltenstest des Skills oder neuer Designer-Review der Seite. Nächster fachlicher Schritt ist die Anwendung auf den aktuellen Seiteninhalt; die blosse Umbenennung ersetzt diese Ausarbeitung nicht.
+Bei Skill-Erstellung und Umbenennung wurde kein neues Animationsbeispiel implementiert, kein Token/Contract geändert, keine fremde Bibliothek installiert und keine Skillverteilung über MCP ergänzt. Noch kein unabhängiger Verhaltenstest des Skills oder neuer Designer-Review der Seite. Die anschliessende Anwendung mit Dauer-/Verlaufvergleichen und reduzierter Variante ist unter [Ausarbeitung und tatsächliche Prüfungen](shadcn-application.md) dokumentiert. Die damalige Bestandsaufnahme und die reine Umbenennung bleiben als historischer Zwischenschritt nachvollziehbar.

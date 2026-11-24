@@ -1,1000 +1,1057 @@
 import type { Page } from '../../../src/payload-types'
-
 export const release = {
-  "expectedUpdatedAt": "2026-11-20T13:37:15.946Z",
-  "summary": "Vergleiche dieselbe Auswahl, denselben Fehler und dieselbe Aktion in Hell und Dunkel.",
+  "expectedUpdatedAt": "2026-11-20T16:45:48.660Z",
+  "summary": "Flächen, Handlungen und Rückmeldungen unterscheiden – in Hell und Dunkel.",
   "content": [
     {
-      "id": "6b004d0b693e27368b340ff2",
+      "blockType": "text",
+      "blockName": "col-intro",
       "body": {
         "root": {
           "type": "root",
+          "version": 1,
           "format": "",
           "indent": 0,
-          "version": 1,
+          "direction": "ltr",
           "children": [
             {
-              "tag": "h2",
               "type": "heading",
+              "version": 1,
               "format": "",
               "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Dieselbe Aufgabe in zwei Themes",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Hell",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Dunkel",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Dein Kontakt",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Ausgewählt",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "E-Mail ausgewählt",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Fehler + Fokus",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "E-Mail-Adresse",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "alex.example.com",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Korrektur nötig",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Ergänze das @ in der Adresse.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Nicht verfügbar",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Speichern",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Bitte zuerst die Adresse korrigieren.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": "theme-example",
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff3",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
+              "direction": "ltr",
               "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
               "children": [
                 {
-                  "mode": "normal",
-                  "text": "Stand des Beispiels",
                   "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Das statische Beispiel verwendet lokale Theme-Farben. Das Verhalten der Komponenten ist damit noch nicht belegt.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Die Kontur zeigt den Fokus schematisch; beide Felder sind keine bedienbaren Eingaben. Eine Fehlerfarbe ist lokal noch nicht zugeordnet.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": "theme-stand",
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff4",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Drei Regeln für den Vergleich",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Vergleiche denselben Inhalt. Die Auswahl bleibt erhalten, die Fehlermeldung gehört weiterhin zum selben Feld und der nächste Schritt bleibt erkennbar. Gestalte Text, Konturen und Flächen gemeinsam. Leite dunkle Flächen nicht durch pauschales Invertieren heller Flächen ab.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Kombiniere die Zustände. Im Beispiel bleiben Fehlertext und Fokus gleichzeitig sichtbar. Eine Auswahl geht beim Fokuswechsel nicht verloren; Farbe wird durch Häkchen und Text ergänzt.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Erkläre den nächsten Schritt ausserhalb des deaktivierten Buttons. Die Korrekturhilfe bleibt sichtbar, auch ohne Hover und ohne den Button erreichen zu müssen.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": "theme-rules",
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff5",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Im tatsächlichen Produkt prüfen",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Prüfe nacheinander die Grundfläche mit der primären Handlung, einen langen Hilfetext, die Auswahl, den Fokus, den Fokus mit Fehler und eine überlagerte Fläche. Wiederhole die Folge in jedem angebotenen Theme. Achte auch auf abgesetzten Flächen auf lesbaren Text und erkennbare Grenzen.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Ob Menschen ein Theme auswählen können, ob das Produkt der Systemeinstellung folgt und wie es die Auswahl speichert oder zwischen Themes wechselt, entscheidet das Produktteam. Dieses Beispiel legt das nicht fest. Gestalte und prüfe native Darstellungen gesondert.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": "theme-review",
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff6",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Quellen und Grenzen des Beispiels",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Die Vertiefung erläutert den Vergleich und seine Grenzen. Die Farbwerte stammen aus dem lokalen Export. Wie Auswahl und Fokus hier dargestellt sind, wurde für das Beispiel gestaltet und ist für die Komponenten noch nicht bestätigt.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": "theme-evidence",
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff7",
-      "kind": "themes",
-      "title": "Gleiche Bedeutung, andere Darstellung",
-      "explanation": "Hell und Dunkel zeigen dieselbe Auswahl, dieselbe fehlerhafte Adresse und dieselbe nicht verfügbare Handlung. Häkchen und Text kennzeichnen die Auswahl. Fehlertext und Fokus sind gleichzeitig sichtbar. Warum die Aktion nicht verfügbar ist, steht ausserhalb des Buttons. Die Farbwerte stammen aus dem lokalen Export. Die Darstellung der Auswahl, die Form der Fokuskontur und der Fehler dienen als Gestaltungsbeispiel. Eine Fehlerfarbe wurde nicht ergänzt. Das Beispiel belegt weder eine funktionierende Formularvalidierung noch, dass eine lokale Komponente diese Zustände unterstützt.",
-      "source": "Lokale Theme-Farben; eigenes Beispiel mit mehreren gleichzeitigen Zuständen.",
-      "revision": "5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed",
-      "blockName": null,
-      "blockType": "study"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff8",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Bedeutung erhalten",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Ein Theme verändert die Darstellung, nicht die Aufgabe. Eine ausgewählte Option bleibt ausgewählt. Eine Fehlermeldung bleibt derselben Angabe zugeordnet. Dunkle Flächen sind keine pauschale Invertierung heller Flächen: Text, Konturen, Fokus und darüberliegende Bereiche müssen gemeinsam funktionieren.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Vergleiche immer denselben Inhalt. Nur dann lässt sich erkennen, ob ein Theme die Hierarchie unbeabsichtigt verschiebt. Prüfe unterstützenden Text auch auf einer abgesetzten Fläche, nicht nur auf dem Seitenhintergrund.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": null,
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ff9",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Zustände können sich überlagern",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Fokus und Fehler sind unabhängig voneinander. Auswahl kann beim Fokuswechsel erhalten bleiben. Eine Aktion kann während einer Übermittlung vorübergehend nicht verfügbar sein. Entwirf solche Kombinationen, bevor du jede Einzelansicht für sich optimierst.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Hover ist im Web eine zusätzliche Rückmeldung. Eine ausschliesslich dort sichtbare Erklärung fehlt bei anderen Eingabearten. Erforderliche Informationen bleiben ohne Hover erreichbar. Ein deaktiviertes Element ist kein guter Ort für den einzigen Hinweis darauf, wie es weitergeht.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": null,
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ffa",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Ein kurzer, vollständiger Prüfweg",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Beginne mit der Grundfläche und einer primären Handlung. Prüfe dann einen langen Hilfetext, eine ausgewählte Option und ein fokussiertes Feld. Ergänze im selben Feld einen Fehler. Öffne anschliessend eine überlagerte Fläche und überprüfe die Abgrenzung zum Hintergrund. Wiederhole diese Folge in jedem tatsächlich angebotenen Theme.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Die beiden Themes verwenden lokale Tokens. Das Produktteam entscheidet, ob Menschen ein Theme auswählen können, ob das Produkt der Systemeinstellung folgt oder nur eine Darstellung anbietet. Das Beispiel legt weder fest, wie die Auswahl gespeichert wird, noch wie ein Wechsel abläuft. Die Zuordnung für native Oberflächen muss gesondert gestaltet und geprüft werden.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": null,
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ffb",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Grenzen dieser Studie",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Für zusätzliche Flächen- und Statusrollen fehlen lokale Theme-Tokens. Deshalb zeigt das Beispiel, welche Informationen zusammengehören und gleichzeitig sichtbar bleiben müssen; die Farben sind noch nicht vollständig spezifiziert. Welche Zustände eine Komponente technisch unterstützt, steht auf ihrer Komponentenseite. Wann eine Eingabe geprüft und wie ein Zustand wiederhergestellt wird, beschreibt das jeweilige Pattern.",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            }
-          ],
-          "direction": "ltr"
-        }
-      },
-      "blockName": null,
-      "blockType": "text"
-    },
-    {
-      "id": "6b004d0b693e27368b340ffc",
-      "body": {
-        "root": {
-          "type": "root",
-          "format": "",
-          "indent": 0,
-          "version": 1,
-          "children": [
-            {
-              "tag": "h2",
-              "type": "heading",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "mode": "normal",
-                  "text": "Vertiefen",
-                  "type": "text",
-                  "style": "",
-                  "detail": 0,
-                  "format": 0,
-                  "version": 1
-                }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "type": "link",
-                  "fields": {
-                    "url": "/systems/shadcn/farben",
-                    "newTab": false,
-                    "linkType": "custom"
-                  },
-                  "format": "",
-                  "indent": 0,
                   "version": 1,
-                  "children": [
-                    {
-                      "mode": "normal",
-                      "text": "Farbe: verfügbare Paare und ihre Grenzen",
-                      "type": "text",
-                      "style": "",
-                      "detail": 0,
-                      "format": 0,
-                      "version": 1
-                    }
-                  ],
-                  "direction": "ltr"
+                  "text": "Gleiche Aufgabe, passende Darstellung"
                 }
-              ],
-              "direction": "ltr"
+              ]
             },
             {
               "type": "paragraph",
+              "version": 1,
               "format": "",
               "indent": 0,
-              "version": 1,
+              "direction": "ltr",
               "children": [
                 {
-                  "type": "link",
-                  "fields": {
-                    "url": "/systems/shadcn/components/input",
-                    "newTab": false,
-                    "linkType": "custom"
-                  },
-                  "format": "",
-                  "indent": 0,
+                  "type": "text",
                   "version": 1,
-                  "children": [
-                    {
-                      "mode": "normal",
-                      "text": "Input: Zustände und tatsächlicher Prüfstand",
-                      "type": "text",
-                      "style": "",
-                      "detail": 0,
-                      "format": 0,
-                      "version": 1
-                    }
-                  ],
-                  "direction": "ltr"
+                  "text": "Flächen gliedern Inhalte. Handlungsfarben lenken, Statusfarben erklären Rückmeldungen. Die Bedeutung bleibt in Hell und Dunkel gleich."
                 }
-              ],
-              "direction": "ltr"
+              ]
             },
             {
               "type": "paragraph",
+              "version": 1,
               "format": "",
               "indent": 0,
-              "version": 1,
+              "direction": "ltr",
               "children": [
                 {
-                  "type": "link",
-                  "fields": {
-                    "url": "/systems/shadcn/formulare-validierung",
-                    "newTab": false,
-                    "linkType": "custom"
-                  },
-                  "format": "",
-                  "indent": 0,
+                  "type": "text",
                   "version": 1,
-                  "children": [
-                    {
-                      "mode": "normal",
-                      "text": "Formulare und Validierung",
-                      "type": "text",
-                      "style": "",
-                      "detail": 0,
-                      "format": 0,
-                      "version": 1
-                    }
-                  ],
-                  "direction": "ltr"
+                  "text": "Die Beispiele zeigen die lokale Farberweiterung der shadcn-Referenz. Sie sind Gestaltungsbeispiele, keine geänderten Komponenten-Contracts."
                 }
-              ],
-              "direction": "ltr"
-            },
-            {
-              "type": "paragraph",
-              "format": "",
-              "indent": 0,
-              "version": 1,
-              "children": [
-                {
-                  "type": "link",
-                  "fields": {
-                    "url": "https://ui.shadcn.com/docs/theming",
-                    "newTab": false,
-                    "linkType": "custom"
-                  },
-                  "format": "",
-                  "indent": 0,
-                  "version": 1,
-                  "children": [
-                    {
-                      "mode": "normal",
-                      "text": "shadcn Theming · geprüft 18.11.2026",
-                      "type": "text",
-                      "style": "",
-                      "detail": 0,
-                      "format": 0,
-                      "version": 1
-                    }
-                  ],
-                  "direction": "ltr"
-                }
-              ],
-              "direction": "ltr"
+              ]
             }
-          ],
-          "direction": "ltr"
+          ]
         }
-      },
-      "blockName": null,
-      "blockType": "text"
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-roles",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Semantische Rollen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine Rolle benennt die Aufgabe, nicht den Farbton. In heller und dunkler Darstellung bleibt ihre Bedeutung gleich. Primär und Sekundär beschreiben Handlungen; Information, Erfolg, Warnung und Fehler beschreiben Rückmeldungen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-primary",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Primär"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die wichtigste Handlung im aktuellen Bereich. Beispiel: Änderungen speichern"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #21618C, foreground #FFFFFF, border #21618C, hover #184665, active #0F2B3D."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #B8DBF2, foreground #07151F, border #85C1E9, hover #DCEDF9, active #F3F9FD."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe blue. Tokens: button-primary; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-secondary",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Sekundär"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine ergänzende Handlung. Dezent einsetzen; neutrale Alternativen bleiben möglich. Beispiel: Vorschau öffnen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #F9F5FB, foreground #472954, border #633974, hover #EEE3F3, active #DCC5E5."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #2B1933, foreground #EEE3F3, border #C39BD3, hover #472954, active #472954."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe purple. Tokens: button-secondary; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-info",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Information"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Sachliche Hinweise ohne unmittelbaren Handlungsdruck. Beispiel: Änderungen werden automatisch gespeichert."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #F3F9FD, foreground #184665, border #21618C, hover #DCEDF9, active #B8DBF2."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #0F2B3D, foreground #DCEDF9, border #85C1E9, hover #184665, active #184665."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe blue. Tokens: support-info; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-success",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Erfolg"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine erfolgreich abgeschlossene Handlung bestätigen. Beispiel: Änderungen gespeichert."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #F2FAF5, foreground #12502C, border #196F3D, hover #DAF1E4, active #B3E3C7."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #0B311B, foreground #DAF1E4, border #7DCEA0, hover #12502C, active #12502C."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe green. Tokens: support-success; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-warning",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Warnung"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auf eine mögliche Folge oder ein vermeidbares Problem hinweisen. Beispiel: Nicht gespeicherte Änderungen gehen verloren."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #FEF9F1, foreground #704808, border #9C640C, hover #FDEED7, active #FBDCAC."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #442C05, foreground #FDEED7, border #F8C471, hover #704808, active #704808."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe amber. Tokens: support-warning; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-error",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Fehler"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Ein Problem benennen und die Korrektur ermöglichen. Beispiel: Die E-Mail-Adresse enthält kein @."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #FEF4F3, foreground #6A231C, border #943126, hover #FBE1DE, active #F7C0BB."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #411511, foreground #FBE1DE, border #F1948A, hover #6A231C, active #6A231C."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe red. Tokens: support-error; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-role-destructive",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Destruktiv"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine Handlung mit Verlust oder schwer umkehrbarer Folge. Rot bleibt auf die betroffene Aktion begrenzt. Beispiel: Entwurf löschen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #943126, foreground #FFFFFF, border #943126, hover #6A231C, active #411511."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #F7C0BB, foreground #200B08, border #F1948A, hover #FBE1DE, active #FEF4F3."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Farbgruppe red. Tokens: button-destructive; Hintergrund, Inhalt und Rahmen gemeinsam verwenden. Dies sind lokale Rollenbezeichnungen, keine behaupteten Bibliotheks-Tokens."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-neutral",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Flächen, Text und Rahmen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Neutrale Flächen gliedern die Oberfläche. Lesetext hat eine höhere Gewichtung als ergänzende Angaben; sichtbare Feldgrenzen bleiben ausreichend deutlich. Ein Rahmen allein kennzeichnet noch keine Auswahl."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: background #FFFFFF, surface #F5F5F5, foreground #171717, muted #525252, border #737373, focus #21618C, selected #DCEDF9, selectedText #184665."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Dunkel: background #0A0A0A, surface #262626, foreground #FAFAFA, muted #D4D4D4, border #737373, focus #B8DBF2, selected #0F2B3D, selectedText #DCEDF9."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-states",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Interaktion und Status trennen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hover und Gedrückt verändern die Aktionsfläche; Fokus bleibt als eigene Kontur sichtbar. Ausgewählte Einträge erhalten zusätzlich ein Häkchen oder einen ausdrücklich benannten Zustand."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine Fehlermeldung ersetzt den Fokus nicht. Fehlertext erklärt die Korrektur am betroffenen Feld. Bei Warnungen und Erfolg unterstützen Symbol und Text die Farbe."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Nicht verfügbare Aktionen verwenden neutrale Farben. Der Grund bleibt daneben lesbar. Ein grauer Button allein erklärt die Einschränkung nicht."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-layers",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Überlagernde Flächen"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Eine überlagernde Fläche liegt vor dem Inhalt, etwa ein geöffnetes Menü. Eine klar begrenzte Fläche und ein Schatten zeigen die Ebene; die Farbe allein muss den Unterschied nicht tragen."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Hell: Grundfläche #FFFFFF, Inhaltsfläche #F5F5F5, Menüfläche #FFFFFF. Dunkel: Grundfläche #0A0A0A, Inhaltsfläche #262626, Menüfläche #404040. Menütext bleibt im jeweiligen normalen Textton. Die Schatten sind schematisch und tragen keinen Informationstext."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-highlights",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Ergänzende Information und Hervorhebung"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Ergänzende Angaben bleiben neutral und lesbar. Sie erklären den Kontext, ohne wie eine Warnung oder Handlungsaufforderung zu wirken."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Interaktive Hervorhebung zeigt Bedienbarkeit, Hover oder Auswahl. Links erhalten zusätzlich eine Unterstreichung, Auswahl ein Häkchen. Dafür die dokumentierten Aktions- und Auswahlpaare verwenden; Violett nicht als beliebige Hervorhebungsfarbe einsetzen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "col-evidence",
+      "body": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "format": "",
+          "indent": 0,
+          "direction": "ltr",
+          "children": [
+            {
+              "type": "heading",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Herkunft und Kontrast"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Flat UI Colors liefert die fünf Ausgangstöne: https://flatuicolors.com/palette/defo. Alle farbigen Skalen haben ihren Ausgangston bei 50. Die hellen Stufen mischen im sRGB-Farbraum mit Weiss (94 %, 83 %, 65 %, 40 %), die dunklen mit Schwarz (18 %, 36 %, 54 %, 72 %, 86 %). Die Skalen sind keine wahrnehmungsgleichmässigen Messreihen."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Die Struktur folgt Carbon: Palette → Rolle → Token → Wert im Theme. Die Gruppen für Flächen, Text, Rahmen, Fokus und Status orientieren sich an Carbon; konkrete Farben und Zuordnungen sind lokale Entscheidungen. Quelle: https://www.carbondesignsystem.com/building-blocks/foundations/color/overview. Sekundär ist hier eine eigene ergänzende Aktionsrolle und keine Übernahme einer Carbon-Statusfarbe."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Der lokale Prüfbericht berechnet opake sRGB-Text-/Flächenpaare in Hell und Dunkel einschliesslich der gezeigten Hover- und Gedrückt-Zustände. Ziel: mindestens 4,5:1 für die gezeigten normalen Texte und 3:1 für die geprüften Feld- und Fokusgrenzen. Anforderungsreferenzen: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html und https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "version": 1,
+              "format": "",
+              "indent": 0,
+              "direction": "ltr",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Transparente Flächen, Bilder, native Plattformen und vollständige Komponenten sind damit nicht geprüft. Der bestehende Komponenten-Export zeigt weiterhin den unveränderten Bibliotheksstand. Eine spätere Übernahme der Palette in Komponenten muss separat abgeglichen werden. Diagrammpaletten sind nicht Teil dieser Ausarbeitung."
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
-} satisfies {expectedUpdatedAt:string} & Pick<Page,'summary'|'content'>
+} satisfies { expectedUpdatedAt: string; summary: string; content: Page['content'] }

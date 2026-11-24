@@ -22,7 +22,8 @@
 .sh-contact dd { margin:0; overflow-wrap:anywhere; }
 .sh-contact dt { color:#536171; }
 .sh-bounded,.sh-floating { background:var(--sh-surface); border-color:var(--sh-line); }
-.sh-floating { box-shadow:var(--sh-shadow); transform:translate(.5rem,3rem); z-index:1; }
+/* Reserve the visual offset so the floating example cannot cover adjacent copy. */
+.sh-floating { box-shadow:var(--sh-shadow); transform:translate(.5rem,3rem); margin-right:.5rem; margin-bottom:3rem; z-index:1; }
 .sh-radii { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.5rem; margin-block:1.5rem; }
 .sh-radius-box { width:min(100%,104px); height:64px; background:var(--sh-base); border:1px solid var(--sh-line); }
 .sh-radii figcaption { margin-bottom:0; }

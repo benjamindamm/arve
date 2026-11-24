@@ -1,6 +1,6 @@
 # Farbe: Fragen und erwartete Antworten
 
-Version 0.2 · Nach einem begrenzten synthetischen Transfer-Test und einem Designer-Review redaktionell präzisiert; diese Revision ist noch nicht erneut unabhängig erprobt. Präzisiert FND-COL und FND-01–06 aus Arves Inhaltsstandard. Der Katalog gibt keine Palette, Mindestanzahl von Rollen, Kontrastschwelle oder Erscheinungsmodi vor.
+Version 0.3 · Nach einem begrenzten synthetischen Transfer-Test und einem Designer-Review redaktionell präzisiert; diese Revision ist noch nicht erneut unabhängig erprobt. Präzisiert FND-COL und FND-01–06 aus Arves Inhaltsstandard. Der Katalog gibt keine Palette, Mindestanzahl von Rollen, Kontrastschwelle oder Erscheinungsmodi vor.
 
 Eine Frage kann durch Text, Tabelle, Abbildung mit gleichwertiger Textaussage oder präzisen Verweis beantwortet werden. Die IDs dienen der Zuordnung, nicht als Pflichtüberschriften.
 
@@ -16,6 +16,8 @@ Eine Frage kann durch Text, Tabelle, Abbildung mit gleichwertiger Textaussage od
 | COL-08 | Bedingte Frage | Bei Transparenz, Bildern/Verläufen hinter Information, Überlagerung oder vom Nutzer angepassten Farben | Welche tatsächliche Fläche wirkt, und wie bleibt Information erkennbar? | Konkrete Zusammensetzung und Kontextregel, geprüftes Ergebnis oder offene Prüfung. Kein Kontrastbeleg aus isoliertem Vordergrund-Token bei unbekannter Mischfläche. |
 | COL-09 | Bedingte Frage | Bei Charts, Kategorien oder sonstiger Datenkodierung | Welche fachliche Aussage kodiert Farbe, was passiert bei fehlenden/zusätzlichen Kategorien, welche alternative Darstellung gibt es? | Geltende Kodierungs-/Auswahlregel oder Verweis auf Datenvisualisierung. Kein erfundenes Chartfarbsystem für ein System ohne Diagramme. |
 | COL-10 | Grundfrage | Zum Abschluss des beauftragten Teilstands; bei Änderungen gezielt vertiefen | Was ist entschieden, vorgeschlagen, offen oder abgelöst? Wer kann fehlende Entscheidungen treffen und wann muss erneut geprüft werden? | Konkrete Lücken und nächster Klärungsweg; verantwortliche Stelle nur, wenn bekannt. Keine erfundenen Gremien, Freigaben oder Reviewtermine. Änderung/Ersatz nur dokumentieren, wenn vorhanden. |
+
+Die [Anwendungsfragen](color-applications.md) konkretisieren COL-03–08 für Flächen, Handlungen und visuelle Zustände. Sie ergänzen die Abdeckung; die COL-IDs bleiben stabil.
 
 ## Vertiefungen nach fachlichem Bedarf
 
