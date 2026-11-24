@@ -48,3 +48,7 @@ Diese Bestandsaufnahme beschreibt den Zustand vor der Anwendung. Inzwischen wurd
 Bei der Konzeption wurden die im Fragenkatalog genannten Gegenbeispiele redaktionell geprüft: Komponentenwert statt globaler Basis, Kontur ausserhalb einer Schrittlogik, unbekannte aktive Fläche, langer Text, System ohne Bedienziele und native Einheiten. Die Onlinequellen zu Target Size Minimum und Enhanced wurden getrennt gelesen und in der Prüfhilfe eingeordnet.
 
 Skillform, lokale Referenzen und eindeutige Fragen-IDs sind geprüft. Das ist kein unabhängiger Transferlauf und keine UI-/Zugänglichkeitsprüfung. Nächster Nachweis wäre eine echte oder ausdrücklich synthetische Anwendung mit einer vorhandenen Skala, lokalen Ausnahmen und einer konkreten Gruppierungsaufgabe; fehlende Regeln müssen sichtbar bleiben, statt aus einer geometrischen Reihe erfunden zu werden.
+
+## Weiterentwicklung: Beziehungen vor Zahlen
+
+Am 24.11.2026 wurde der Skill auf v0.2 präzisiert und die Seite erneut überarbeitet: Zugehörigkeit, Weissraum und Innen-/Aussenabstände werden zuerst grafisch erklärt. Nach weiterem Nutzerfeedback sind die sichtbaren Texte kürzer und die Beispiele deutlicher. [Aktueller Aufbau und tatsächliche Prüfungen](shadcn-relations-2026-11-24.md). Die ursprüngliche Anwendung vom 23.11. bleibt als historischer Stand erhalten.

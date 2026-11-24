@@ -18,6 +18,7 @@ function revise(block: Block, heading: string, ...paragraphs: string[]): Block {
 }
 export const release = {
   expectedUpdatedAt:'2026-11-20T13:43:19.240Z',
+  title:'Animation',
   summary:'Zeige klar, was sich durch eine Handlung verändert. Das Ergebnis muss auch ohne Animation verständlich bleiben.',
   content:[
     copy('motion-example','Kontaktdetails öffnen',
@@ -57,4 +58,4 @@ export const release = {
       'Für native Plattformen müssen Bewegungen und der Umgang mit Systempräferenzen gesondert gestaltet werden. Die Webdemonstration bestätigt keine iOS- oder Android-Unterstützung.'),
     original.content[6] as Block,
   ],
-} satisfies {expectedUpdatedAt:string} & Pick<Page,'summary'|'content'>
+} satisfies {expectedUpdatedAt:string} & Pick<Page,'title'|'summary'|'content'>

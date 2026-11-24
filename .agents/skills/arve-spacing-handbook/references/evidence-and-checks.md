@@ -35,3 +35,11 @@ Nicht automatisch auf dekorative Icons, statische Boxen, jede Plattform oder aus
 - Native Quellen und Einheiten bei entsprechendem Auftrag gesondert heranziehen. Gleiche Zahl und gleicher Rollenname sind keine Bestätigung identischer Fläche oder Bedienbarkeit.
 
 Ein redaktioneller Anwendungsgang prüft, ob die Anleitung eine Wahl ermöglicht. Rechenprüfung, gerenderte Darstellung und beobachtete Nutzung liefern weitere, unterschiedliche Nachweise. Keiner davon allein bestätigt das gesamte Design-System.
+
+## Beziehungen, Weissraum und Innen-/Aussenabstand
+
+Am 24.11.2026 gezielt gelesen: [Carbon – Spacing, Designing with space](https://www.carbondesignsystem.com/building-blocks/foundations/spacing/overview). Die Quelle erläutert Nähe und wiederkehrende Abstandsmuster als Beziehungssignale sowie Weissraum als Mittel zur Gruppierung ohne zusätzliche Trennlinien. Sie behandelt die Nutzung von Werten innerhalb und zwischen Komponenten. Das begründet gestalterische Orientierung, übernimmt aber weder Carbons Zahlen noch seine Komponenten als Regel eines anderen Systems.
+
+Für die Ausarbeitung zuerst Einheiten und Themen benennen, dann sichtbare Trennung gestalten. Abstand innerhalb einer Einheit, Abstand zwischen Einheiten im selben Thema und Abstand zwischen Themen bilden mögliche Entscheidungsebenen. Die tatsächliche Aufgabenstruktur kann anders sein. Eine nützliche Ausgangsheuristik ist engere Nähe bei stärkerem Bezug; kein universelles Verhältnis und keine Zahlenformel daraus machen.
+
+Innenraum hält Inhalt von der Grenze seiner Fläche fern; Abstand nach aussen hält Flächen auseinander. Die Grössen können unabhängig voneinander gewählt werden. Gemeinsame Kanten und konsistente Muster unterstützen die Ordnung. Textmetriken, Konturen und Verschachtelung beeinflussen den sichtbaren Eindruck. Vergleiche deshalb nicht nur Tokenwerte, sondern deren tatsächliche Kombination. Der didaktische Vergleich kann Innenraum ändern und Aussenabstand bewusst konstant halten.
