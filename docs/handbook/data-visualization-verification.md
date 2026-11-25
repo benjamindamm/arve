@@ -1,5 +1,9 @@
 # Datenvisualisierung · erste Einordnung
 
+Aktueller Nachtrag vom 25.11.2026: Die sichtbaren AR-Nummern wurden auf Nutzerwunsch entfernt. Natürliche Fallnamen und fünf kurze Fragen ersetzen den ausführlichen Einstieg. Die Palettenseite bündelt Konflikte und Formregeln, statt pro Farbe einen Abschnitt zu führen. Das Finanzbeispiel zeigt jetzt echte erfundene Werte, Nulllinie, Budget, Aufschlüsselung und Saldo. Divergenz und Status besitzen kleine Chart-Beispiele. Werte aus der Grundpalette stehen einmal aufklappbar; ihre Textalternative bleibt vollständig im CMS/MCP. Der Autoren-Skill verlangt diese knappe, anschauliche Darstellung ohne starre Archetypen-IDs. Die folgenden Abschnitte dokumentieren frühere Ausbaustände.
+
+Für diesen Nachtrag: TypeScript, drei Farbquellenprüfungen, Skill-Format, vollständige/kompakte MCP-Abrufe aller sieben Seiten und statischer Build mit Linkprüfung bestanden. Finanzbeispiel bei 390 px und divergierendes Beispiel bei 320 px visuell geprüft, jeweils ohne gemessene horizontale Überbreite. Keine unabhängige Designer-Freigabe behauptet.
+
 25.11.2026 · Lokaler redaktioneller Entwurf auf Nutzerauftrag. Die Taxonomie ist eine eigene Synthese; Carbon liefert die Referenz für Chartformen und die zentralen Palettenfamilien. Keine Behauptung einer offiziellen shadcn-Palette oder universell geprüfter Farben.
 
 Sieben veröffentlichte CMS-Seiten unter `/systems/shadcn/datenvisualisierung`: Übersicht, Charts einordnen, Chart-Paletten, Chart-Typen, Beschriftung/Achsen/Legenden, Interaktion/kleine Ansichten und Zugänglichkeit. Die fünf Ebenen und die Palettenfamilien erhalten keine zusätzlichen Unterseiten. Grundfarben und Chart-Komponente verlinken den Bereich. Die neun etablierten Inhaltsabschnitte der Chart-Komponente bleiben erhalten.

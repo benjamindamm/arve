@@ -5,6 +5,14 @@ description: Erarbeite oder prüfe Chart-Taxonomie und semantische Chart-Archety
 
 # Datenvisualisierung im Handbuch
 
+## Darstellung: knapp und anschaulich
+
+„Archetyp“ ist ein Denkwerkzeug für den Autor, keine zusätzliche Nummerierung für Leser. Keine AR-01-IDs oder starre Typenliste einführen. Sichtbare Einstiege natürlich benennen: etwa „Ein Verlauf“, „Ein- und Auszahlungen“ oder „Unter oder über einem Bezug“.
+
+Beginne mit wenigen Fragen zur Aufgabe und Struktur. Zeige die Farbentscheidung dann an einem echten beschrifteten Chart; ein Farbstreifen oder eine Legende allein genügt nicht. Halte Daten und Massstab bei Vergleichen gleich. Für Finanzbeispiele Nulllinie, Beträge, Referenz und separates Ergebnis zeigen; Teilbeträge müssen zum Total passen. Wesentliche Werte und Aussagen bleiben auch als Text abrufbar.
+
+Pro Beispiel reichen Aufgabe, sichtbare Lösung und eine kurze Regel. Gemeinsamen Geltungsrahmen einmal nennen, lokale Grenzen nur am betroffenen Beispiel. Ausführliche Herleitung und Farbwerte aufklappbar halten. Keine identischen Token-/Hexlisten in Absatz und Grafik wiederholen. Deutsche Farbnamen und Stufen zuerst, technische Referenzen ergänzend. Die sechs nachfolgend genannten Fälle sind mögliche Ausgangspunkte, keine Pflichtabschnitte.
+
 Kläre das gewählte System, Quellen und Auftragsmodus. Im Bestand bleiben unbekannte Entscheidungen offen. Ein beauftragter Showcase erlaubt begründete eigene Vorschläge; kennzeichne sie getrennt von Bibliotheksvorgaben und tatsächlich geprüften Regeln. Vorhandene Nutzerantworten nicht erneut abfragen.
 
 ## Fünf Einordnungsebenen

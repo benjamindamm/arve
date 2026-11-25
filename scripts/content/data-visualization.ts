@@ -1,7 +1,7 @@
 import type {Page} from '../../src/payload-types'
 import {editorialContent,type ComponentEditorial} from '../../src/docs/component-editorial'
 import chart from './component-docs/chart.json'
-import {chartArchetypes,chartColorConflicts,chartFormRules,chartPalettes,colorRefLabel,chartColor} from '../../src/docs/chart-color-policy'
+import {chartArchetypes,chartPalettes,colorRefLabel,chartColor} from '../../src/docs/chart-color-policy'
 
 const root='/systems/shadcn/datenvisualisierung'
 type Block=NonNullable<Page['content']>[number]
@@ -36,73 +36,36 @@ export const visualizationPages=[
   ],[link('Charts einordnen','charts-einordnen'),link('Chart-Paletten vergleichen','chart-paletten')]),
   section('dv-boundary','Regeln und Komponenten',['Hier stehen die Gestaltungsregeln. Die Komponentenseiten beschreiben verfügbare Bausteine und verknüpfte Contracts. Ein fachlicher Name wie „Kursverlauf“ legt weder Darstellung noch Bibliothek fest.'],[],[{label:'Zur Komponente Chart',href:'/systems/shadcn/components/chart'},{label:'Grundlagen · Farben',href:'/systems/shadcn/farben'}]),evidence,
  ]),
- row('charts-einordnen','Charts einordnen','Aus fünf Ebenen einen semantischen Archetyp und die passende Farbauswahl ableiten.',0,[
-  section('data-viz-guide','Was wird wie dargestellt?',['Ein semantischer Archetyp beschreibt die Rollen und Beziehungen im Chart: etwa zwei Gegenrichtungen mit Referenz und Unterkategorien. Er entsteht aus den fünf Einordnungsebenen, nicht allein aus dem fachlichen Thema oder der Form.']),
-  section('dv-archetypes','Semantische Chart-Archetypen',['Diese sechs Ausgangsfälle sind kombinierbar. Bei einer Kombination gelten alle beteiligten Reservierungen. Eine neue Reihe verändert die Gesamtstruktur und muss vor ihrer Einfärbung eingeordnet werden.']),
-  ...chartArchetypes.map(a=>section('dv-archetype-'+a.id,a.code+' · '+a.title,[a.structure],['Farbregel: '+a.rule,'Wenn Werte hinzukommen: '+a.expansion])),
-  section('dv-meaning','1 · Datenbedeutung',[],[
-   'Neutral: Farbe kennzeichnet Werte ohne fachliche Bewertung.',
-   'Kategorial: Farbe unterscheidet ungeordnete Kategorien.',
-   'Geordnet: Abstufungen zeigen eine Reihenfolge oder Grössenordnung.',
-   'Divergierend: Zwei Richtungen beziehen sich auf eine benannte Mitte, etwa null oder einen Zielwert.',
-   'Statusbezogen: Farbe kennzeichnet einen definierten Zustand, etwa eine Grenzverletzung.',
-   'Bedeutungen können zusammen auftreten. Halte fest, welche visuelle Eigenschaft jeweils welche Bedeutung trägt.',
-  ]),
-  section('dv-comparison','2 · Vergleichsstruktur',[],[
-   'Einzelreihe: Ein Wert entwickelt sich über Zeit oder eine andere geordnete Dimension.',
-   'Vergleichsreihen: Mehrere gleichberechtigte Reihen müssen unterscheidbar sein.',
-   'Zusammensetzung: Teile gehören zu einem Ganzen; Kategorien bleiben stabil zugeordnet.',
-   'Ist und Referenz: Hauptwert und Vergleichswert haben unterschiedliche Rollen.',
-   'Werte und Grenzen: Messwerte stehen neben Zielbereich oder Schwellen.',
-  ]),
-  section('dv-visual-marks','3 · Darstellungsform',['Dünne Linien, kleine Punkte und grosse Flächen stellen unterschiedliche Anforderungen an dieselbe Farbe.'],[
-   'Linien: Verlauf und Referenzen; auch bei dünnem Strich erkennbar halten.',
-   'Punkte: Einzelwerte; Grösse, Dichte und Überdeckung beachten.',
-   'Getrennte Flächen: Balken oder Säulen; grosse Farbflächen ruhig halten.',
-   'Angrenzende Flächen: Gestapelte Balken und Segmente; Nachbarn unterscheiden.',
-   'Überlagerte Flächen: Gefüllte Verläufe und Bänder; Verdeckung und Mischfarben prüfen.',
-  ]),
-  section('dv-visual-density','4 · Datenumfang und Dichte',['Zähle getrennt: Wie viele Reihen oder Kategorien müssen farblich unterschieden werden? Wie viele Marken oder Messpunkte sind gleichzeitig sichtbar?'],[
-   'Illustration: Eine Reihe mit sechs oder achtzehn Messpunkten bleibt dieselbe Farbidentität.',
-   'Eine, wenige oder viele Kategorien: „wenige“ endet dort, wo die konkrete Palette im vorgesehenen Chart nicht mehr zuverlässig unterscheidet. Es gibt hier keine pauschale Höchstzahl.',
-   'Locker, dicht oder überlagert: Die sichtbare Dichte hängt auch von Bildschirmgrösse und Darstellungsform ab.',
-   'Reicht die Unterscheidbarkeit nicht, Auswahl, Beschriftung oder getrennte Teilgrafiken prüfen. Farben nicht einfach zyklisch wiederholen.',
-  ]),
-  section('dv-identity','5 · Farbidentität und Wiederholung',[],[
-   'Im Chart: Verschiedene Kategorien nicht gleich einfärben, wenn die Farbe ihre Identität vermitteln soll.',
-   'In zusammengehörigen Charts: Dieselbe Kategorie behält dieselbe Farbe. Die Zuordnung darf nach Filtern oder Sortieren nicht verrutschen.',
-   'In unabhängigen Charts: Wiederverwendung ist möglich, sofern keine gemeinsame Identität suggeriert wird.',
-   'Bei gemeinsamer Bedeutung: Alle negativen Werte dürfen dieselbe Farbe haben, wenn diese Regel ausdrücklich gilt. Kategorien brauchen dann eine andere Kennzeichnung.',
-   'Semantische Reservierung: Ist Rot im Nutzungskontext für negative Salden reserviert, darf es dort nicht nebenbei eine neutrale Vergleichsreihe kennzeichnen.',
-  ]),
-  section('dv-cases','Eine zusätzliche Reihe verändert die Entscheidung',['Einzahlungen und Auszahlungen belegen Grün und Rot für die Richtung. Ein Budget ist eine Referenz und erhält eine beschriftete gestrichelte Linie in neutral.70. Gebühren sind eine Unterkategorie der Auszahlungen: dieselbe Richtungsfarbe, getrennt durch Namen und Position. Ein berechneter Saldo gehört als Ergebnis in eine eigene Kennzahl oder Teilgrafik.','Der gleiche fachliche Kontext kann also mehrere Strukturen enthalten. Nicht jedem neuen Wert einfach die nächste Farbe zuweisen.'],[],[link('Farben auswählen und Konflikte lösen','chart-paletten')]),evidence,
+ row('charts-einordnen','Charts einordnen','Was zeigt dein Chart – und welche Aufgabe übernimmt die Farbe?',0,[
+  section('data-viz-guide','Erst die Aussage, dann die Farbe',['Verlauf, Vergleich, Richtung oder Status: Die gleiche Form kann unterschiedliche Aufgaben erfüllen.']),
+  section('dv-questions','Fünf kurze Fragen',[],['Was sollen Menschen erkennen?','Welche Werte gehören zusammen: Reihen, Teile, Richtungen oder Referenzen?','Linien, Punkte oder Flächen?','Wie viele Reihen und Messpunkte sind gleichzeitig sichtbar?','Welche Farbbedeutungen gelten bereits im Umfeld?']),
+  section('dv-archetypes','Was passt zu deinem Chart?',['Wähle den passenden Fall. Mehrere können zusammen auftreten.']),
+  ...chartArchetypes.map(a=>section('dv-archetype-'+a.id,a.title,[a.structure,a.rule,a.expansion])),
+  section('dv-visual-flows','Beispiel: Ein- und Auszahlungen',['Erfundene Monatswerte: Einzahlungen +4’000 CHF, Auszahlungen −2’500 CHF. Das Ausgabenbudget liegt bei 2’700 CHF. Die Auszahlungen bestehen aus Miete 1’500, Sonstigem 950 und Gebühren 50 CHF. Saldo: +1’500 CHF.','Grün und Rot kennzeichnen die Richtung. Gebühren bleiben als Teil der Auszahlungen rot. Budget ist eine Referenz; Saldo ein Ergebnis. Eine rote Marke erhält hier keine zusätzliche Reihenrolle.']),
+  section('dv-visual-density','Viele Punkte brauchen nicht viele Farben',['Beide Beispiele zeigen eine Reihe. Erst zusätzliche Reihen oder Kategorien erhöhen den Bedarf an unterscheidbaren Farben.']),
+  section('dv-next','Farben auswählen',[],[],[link('Zu den Chart-Paletten','chart-paletten')]),evidence,
  ]),
- row('chart-paletten','Chart-Paletten','Die Bedeutung bestimmt die Familie. Linien, Flächen und Dichte bestimmen ihre Eignung.',1,[
-  section('data-viz-guide','Grundpalette → Archetyp → Farbauswahl',['Chart-Paletten sind Auswahlen aus der allgemeinen Farbpalette. Vor der Auswahl stehen Struktur, Datenbedeutung und vorhandene Rollen im selben Nutzungskontext. Die Markenfarbe ist ein Kandidat; sie erhält keinen automatischen Vorrang.']),
-  section('dv-priority','So löst du einen Farbkonflikt',[],[
-   'Rollen sammeln: Welche Bedeutung tragen Farbe, Vorzeichen, Position, Füllung und Strichmuster? Auch UI-Auswahl, Fokus, Fehler und destruktive Handlungen im Umfeld berücksichtigen.',
-   'Geltung festlegen: Reservierungen gelten für den Chart und die zusammengehörigen Ansichten derselben Aufgabe. Andere Aufgaben dürfen andere Zuordnungen haben, müssen sie aber kenntlich machen. UI- und Datenrollen dürfen eine Familie teilen, wenn Form und Kontext die Bedeutung klar trennen.',
-   'Konflikt prüfen: Neben ausdrücklich festgelegten Rollen auch erwartbare Lesarten berücksichtigen. Rote oder grüne Finanzdaten können als Minus/Plus wirken; Blau kann Auswahl, Amber Warnung bedeuten.',
-   'Alternative wählen: Datenbedeutung und Lesbarkeit gehen vor Markenwunsch. Für neutrale Reihen blue.70, bei Konflikt purple.70, danach neutral.70 prüfen. Jede belegte oder ungeeignete Farbe überspringen. Keine Alternative ist automatisch semantisch frei.',
-   'Reicht die bereinigte Auswahl nicht, über Position, Beschriftung oder getrennte Ansichten unterscheiden. Keine zusätzliche Farbe erfinden und keine bestehende Bedeutung heimlich umbelegen.',
+ row('chart-paletten','Chart-Paletten','Farben aus der Grundpalette wählen, ohne ihre Bedeutung zu verfälschen.',1,[
+  section('data-viz-guide','Welche Aufgabe hat die Farbe?',['Die Beispiele zeigen lokale Empfehlungen für helle Charts auf Weiss. Alle Farben kommen aus der Grundpalette. Unterscheidbarkeit im konkreten Chart bleibt zu prüfen.']),
+  section('dv-palette-single','Eine Reihe',['Eine Farbe hält den Verlauf zusammen. Die Zahl der Messpunkte ändert daran nichts.']),
+  section('dv-palette-categorical','Kategorien unterscheiden',['Blau, Violett und Dunkelgrau als Ausgangspunkt. Jede Kategorie behält ihre Farbe; bereits belegte Bedeutungen aussparen.']),
+  section('dv-palette-sequential','Niedrige bis hohe Werte',['Helligkeitsstufen zeigen eine geordnete Grösse. Sie sind keine Palette für beliebige Kategorien.']),
+  section('dv-palette-diverging','Unter oder über einem Bezug',['Bezugspunkt null: −20 liegt darunter, +30 darüber. Violett/Blau bedeuten hier unterhalb/oberhalb, nicht schlecht/gut.']),
+  section('dv-palette-semantic','Einen Zustand erkennen',['Grenze 60: Der Wert 35 liegt innerhalb, 75 darüber. Text und Zeichen ergänzen die Farbe.']),
+  section('dv-palette-reference','Zusätzlich: Wert und Referenz',['Die Hauptreihe steht vorn; Ziel oder Vorperiode bleiben als beschriftete, gestrichelte Referenz sichtbar.']),
+  section('dv-conflicts','Wenn Farben schon etwas bedeuten',[],[
+   'Marke: Passt, solange sie keine andere Aussage suggeriert. Rote oder grüne Marke im Finanzchart: neutrale Alternative wählen; die Marke bleibt im Rahmen.',
+   'Rot/Grün: Bei Ein-/Auszahlungen für die Richtung reserviert. Nicht zusätzlich für unabhängige Kategorien verwenden. Auszahlung ist kein Fehler; Einzahlung keine Erfolgsbestätigung.',
+   'Blau: Darf Datenfarbe sein, auch neben blauen Buttons. Ist im Chart aber Blau als Auswahl belegt, neutrale Reihen violett oder dunkelgrau zeigen; Auswahl zusätzlich mit Kontur markieren.',
+   'Amber: Bei Warnbedeutung keine beliebige Kategorie damit hervorheben.',
+   'Violett/Grau: Auch Alternativen auf bestehende Rollen prüfen. Keine freie, lesbare Farbe übrig? Beschriften oder in Teilgrafiken aufteilen statt Farben zu erfinden.',
   ]),
-  ...chartColorConflicts.map(c=>section('dv-conflict-'+c.id,c.title,[c.meaning],['Passt, wenn: '+c.allowed,'Bei Konflikt: '+c.fallback])),
-  section('dv-visual-flows','Beispiel: Ein- und Auszahlungen',['Grün kennzeichnet hier Einzahlungen, Rot Auszahlungen. Gebühren sind Teil der Auszahlungen und behalten Rot. Das Budget ist eine neutrale Referenz. Die Wiederholung von Rot ist hier richtig: Sie wiederholt die Richtung, keine neue Kategorie.','Eine rote Markenfarbe darf deshalb nicht zusätzlich den neutralen Saldo identifizieren. Auch Blau oder Violett sind keine pauschale Lösung: Ist die Farbe bereits für Auswahl oder eine Kategorie belegt, Ergebnis separat und eindeutig beschriftet zeigen.']),
-  section('dv-palette-single','Einzelfarbe',['Für eine neutrale Reihe. Mehr Messpunkte erzeugen keinen zusätzlichen Farbbedarf. Eine helle Flächenfüllung gehört zur gleichen Identität wie ihre Konturlinie.']),
-  section('dv-palette-categorical','Kategorisch',['Für ungeordnete Kategorien und gleichberechtigte Vergleichsreihen. Jede sichtbare Kategorie erhält eine stabile Zuordnung. Die Illustration zeigt drei Kandidaten aus der Grundpalette, keine geprüfte Kapazitätsgrenze. blue.70, purple.70 und neutral.70 müssen im konkreten Kontext noch unterscheidbar und semantisch frei sein.','Bei vielen Kategorien: direkte Beschriftung, Auswahl oder getrennte Ansichten ergänzen. Reservierte Statusfarben im jeweiligen Kontext aussparen.']),
-  section('dv-palette-sequential','Sequenziell',['Für eine geordnete Grösse: Die Farbskala vermittelt niedrig bis hoch. Die Reihenfolge muss auch im gewählten Theme erkennbar sein.','Nicht als Ersatz für beliebige Kategorien verwenden. Die Farbe beschreibt eine Grösse und nicht bloss den Index eines Elements.']),
-  section('dv-palette-diverging','Divergierend',['Für Abweichungen unter und über einer ausdrücklich benannten Mitte. Zwei Farbrichtungen und eine neutrale Mitte machen Richtung und Ausmass sichtbar.','Die Beispielskala verwendet Violett und Blau ohne Gut-/Schlechtwertung. In einem Ein-/Auszahlungs-Chart gelten dagegen die Richtungscodes des Archetyps. Rot/Grün nicht gleichzeitig für unabhängige Kategorien verwenden.']),
-  section('dv-palette-semantic','Semantisch',['Für fachlich definierte Zustände. Die Illustration kennzeichnet „innerhalb der Grenze“ und „Grenze überschritten“ zusätzlich mit Text und Zeichen.','Negativ, Verlust, Warnung und Fehler sind verschiedene Aussagen. Lege ihre Zuordnung und ihren Geltungsbereich fest; übernimm keine Farbe allein aufgrund ihres Namens.']),
-  section('dv-palette-reference','Hauptwert und Referenz',['Eine Hauptreihe wird hervorgehoben; Ziel, Vorperiode oder Benchmark treten zurück. Die Referenz bleibt durch Beschriftung und gegebenenfalls Strichmuster erkennbar.','Dies ist eine Kombination von Rollen, keine eigene Datenordnung. Eine wichtige Grenzverletzung darf durch die zurückhaltende Gestaltung nicht verschwinden.']),
-  section('dv-form-choice','Die Form begrenzt die Auswahl',['Gleiche Farbfamilie bedeutet nicht gleiche Eignung: Helle Flächenstufen sind keine geeigneten dünnen Linien. Die folgenden Regeln gelten für die helle Referenzdarstellung.']),
-  ...chartFormRules.map(f=>section('dv-form-'+f.id,f.title,[f.rule])),
-  section('dv-palette-check','Eignung einer konkreten Palette festhalten',[],[
-   'Geltung: Theme, Hintergrund und reservierte Bedeutungen.',
-   'Form: dünne Linien, kleine Punkte, getrennte, angrenzende oder überlagerte Flächen.',
-   'Umfang: Anzahl tatsächlich unterscheidbarer Kategorien unter den geprüften Bedingungen.',
-   'Wiederholung: Identität im Chart und über zusammengehörige Ansichten.',
-   'Nachweis: geprüfte Paarungen und Grenzen; offene Fragen ausdrücklich benennen.',
-  ],[{label:'Grundpalette und Abstufungen',href:'/systems/shadcn/farben'},{label:'Farben für Flächen und Rückmeldungen',href:'/systems/shadcn/themes-und-zustaende'},link('Zugänglichkeit prüfen','zugaenglichkeit')]),evidence,
+  section('dv-form-choice','Linien oder Flächen?',[],[
+   'Dünne Linien und kleine Punkte: dunkle Stufen verwenden. Helle Füllfarben sind dafür ungeeignet.',
+   'Angrenzende Flächen: Nachbarfarben und kleine Segmente prüfen.',
+   'Überlagerte Flächen: Keine unklaren Mischfarben erzeugen. Konturlinien oder Teilgrafiken verwenden.',
+  ]),
+  section('dv-links','Anwenden und prüfen',[],[],[link('Ein- und Auszahlungen als vollständiges Beispiel','charts-einordnen'),{label:'Zur Grundpalette',href:'/systems/shadcn/farben'},link('Zugänglichkeit prüfen','zugaenglichkeit')]),evidence,
  ]),
  row('chart-typen','Chart-Typen','Wähle die Form nach der Frage an die Daten.',2,[
   section('data-viz-guide','Aufgabe vor Form',['Die folgende Auswahl ist ein Einstieg. Ein Chart-Name allein bestimmt weder Farbpalette noch Anzahl der Reihen. Für exaktes Nachschlagen kann eine Tabelle geeigneter sein.']),
@@ -132,7 +95,7 @@ export const visualizationPages=[
 for(const page of visualizationPages)for(const block of page.content){
  const key=block.blockName?.replace('dv-palette-','')??''
  const palette=chartPalettes[key]
- if(palette&&block.blockType==='text')block.body.root.children.push(node('paragraph',[text('Grundpalette: '+palette.refs.map(r=>colorRefLabel(r)+' ('+chartColor(r)+')').join(' · ')+'. Die Auswahl ist ein Gestaltungsentwurf; die Unterscheidbarkeit im konkreten Chart bleibt zu prüfen.')]) as any)
+ if(palette&&block.blockType==='text')block.body.root.children.push(node('paragraph',[text('Grundpalette: '+palette.refs.map(r=>colorRefLabel(r)+' ('+chartColor(r)+')').join(' · ')+'.')]) as any)
 }
 
 export const visualizationCrosslinks=[
