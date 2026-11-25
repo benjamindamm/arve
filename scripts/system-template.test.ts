@@ -5,7 +5,7 @@ import { prepareTemplate, importTemplate } from './lib/system-template'
 const snapshot = JSON.parse(await readFile('scripts/content/handbook-snapshot.json','utf8'))
 test('complete reference becomes independent drafts, retaining every content field and immutable pin',()=>{
  const copy = prepareTemplate(snapshot,'acme','Acme')
- assert.equal(copy.pages.length,116); assert.equal(copy.pages.filter(p=>p.component).length,69)
+ assert.equal(copy.pages.length,snapshot.pages.length); assert.equal(copy.pages.filter(p=>p.component).length,69)
  assert(copy.pages.every(p=>p._status==='draft' && p.system==='acme' && p.slug.startsWith('acme-')))
  for(let i=0;i<copy.pages.length;i++) { assert.deepEqual(copy.pages[i].contract,snapshot.pages[i].contract); assert.deepEqual(copy.pages[i].template,snapshot.pages[i].template) }
  assert(copy.implementations.every(i=>i._status==='draft' && i.releaseStatus==='draft' && i.componentPage.startsWith('acme-')))

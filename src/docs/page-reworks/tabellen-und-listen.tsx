@@ -34,7 +34,7 @@ export default function TablesAndLists({content}: {content: Page['content']}) {
       <div id="tl-selection" hidden={!preview} className="tl-preview"><strong>{e[21]}</strong><p>{rows.filter(r=>selected.includes(r.id)).map(r=>`${r.name} (${r.id})`).join(', ')||e[22]}</p><p>{e[14]}</p></div>
       <div className="tl-info" role="status" aria-live="polite">{info&&<><strong>{e[13]} · {rows.find(r=>r.id===info)?.name}</strong><p>{e[14]} {info}</p></>}</div>
     </section>}
-    <section id={find('list-example')?blockAnchor(find('list-example')!):undefined}><h2>{list[0]}</h2><div className="tl-compare"><p>{list[1]}</p><div><p>{list[2]}</p><ul className="tl-list">{[3,5].map(i=><li key={i}><strong>{list[i]}</strong><p>{list[i+1]}</p></li>)}</ul><SiteAnchor href="/systems/shadcn/detailseite">{list[7]} →</SiteAnchor></div></div></section>
+    <section id={find('list-example')?blockAnchor(find('list-example')!):undefined}><h2>{list[0]}</h2><div className="tl-compare"><p>{list[1]}</p><div><p>{list[2]}</p><ul className="tl-list">{[3,5].map(i=><li key={i}><strong>{list[i]}</strong><p>{list[i+1]}</p></li>)}</ul><SiteAnchor href="/systems/shadcn/layout/page-types/detail">{list[7]} →</SiteAnchor></div></div></section>
     {section('table-rules')}
     <section id={find('table-states')?blockAnchor(find('table-states')!):undefined}><h2>{states[0]}</h2><div className="tl-states">{[1,3,5].map(i=><article key={i}><h3>{states[i]}</h3><p>{states[i+1]}</p></article>)}</div></section>
     {section('table-responsive')}{section('table-related')}{section('table-sources',true)}{section('table-limits',true)}

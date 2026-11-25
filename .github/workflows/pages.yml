@@ -30,6 +30,8 @@ jobs:
         id: pages
       - name: Check foundation color scales and contrast
         run: node --import tsx scripts/check-foundation-colors.ts
+      - name: Check handbook hierarchy and compatibility links
+        run: npm run check:handbook-paths
       - name: Check component documentation reference
         run: npm run check:component-template
       - name: Check all component documentation

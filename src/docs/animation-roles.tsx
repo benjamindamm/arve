@@ -1,0 +1,4 @@
+'use client'
+import {useState} from 'react'
+import roles from './animation-semantics.json'
+export function AnimationRoles(){const[index,setIndex]=useState(0),role=roles[index];return <div className="am-semantics"><div className="am-role-options" role="group" aria-label="Animationsrolle wählen">{roles.map((r,i)=><button type="button" key={r.id} aria-pressed={index===i} onClick={()=>setIndex(i)}>{r.label}</button>)}</div><div className="am-role-body" aria-live="polite"><p><strong>Auslöser:</strong> {role.trigger}</p><div className="am-role-contrast"><span><small>Vorher</small>{role.before}</span><span><small>Nachher</small>{role.after}</span></div><p><strong>Aussage:</strong> {role.meaning}</p><p><strong>Nicht suggerieren:</strong> {role.limit}</p><p><strong>Reduziert:</strong> {role.reduced}</p><small>Zustandsvergleich zur Bedeutung · keine laufende Animation.</small></div></div>}

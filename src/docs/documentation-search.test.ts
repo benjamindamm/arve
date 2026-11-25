@@ -61,7 +61,7 @@ test('published snapshot recovers audited tasks, preserves scope and exposes act
     assert.ok(result.unmatchedTerms.length > 0)
   }
   const tree = flattenDocumentation((await documentationTree('shadcn'))!.tree)
-  assert.deepEqual(tree.find(entry => entry.slug === 'detail' && entry.kind === 'layout-example')?.retrieval, { tool: 'get_documentation_page', arguments: { system: 'shadcn', section: 'layout', example: 'detail' } })
+  assert.deepEqual(tree.find(entry => entry.slug === 'beispiele-detail' && entry.kind === 'layout-example')?.retrieval, { tool: 'get_documentation_page', arguments: { system: 'shadcn', section: 'beispiele-detail' } })
   assert.deepEqual(tree.find(entry => entry.slug === 'main-sidebar')?.retrieval, { tool: 'get_documentation_page', arguments: { system: 'shadcn', section: 'main-sidebar' } })
 })
 
@@ -117,7 +117,7 @@ test('task labels lead to bounded general guidance and related original sections
   for (const query of ['Kosten', 'Gesamtbetrag', 'Zusammenfassung']) {
     const result = await find(query)
     assert.ok(result.results[0].entry.guidance, query)
-    const main = result.results.find(hit => hit.entry.guidance?.sourceBlock === 'responsive')!
+    const main = result.results.find(hit => hit.entry.guidance?.sourceBlock === 'ms-rules')!
     assert.ok(main, query)
     assert.match(main.discovery?.scope ?? '', /not published normative content/)
     assert.match(main.entry.guidance?.scope ?? '', /layout measurements elsewhere.*not general requirements/)

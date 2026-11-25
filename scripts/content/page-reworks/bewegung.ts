@@ -1,8 +1,8 @@
 import type { Page } from '../../../src/payload-types'
 export const release = {
-  "expectedUpdatedAt": "2026-11-24T08:15:41.329Z",
+  "expectedUpdatedAt": "2026-11-24T12:21:45.918Z",
   "title": "Animation",
-  "summary": "Dauer und Verlauf vergleichen. Das gleiche Ergebnis ohne Bewegung gestalten.",
+  "summary": "Was Bewegung vermittelt – und wie Dauer, Verlauf und reduzierte Animation dazu passen.",
   "content": [
     {
       "blockType": "text",
@@ -41,6 +41,664 @@ export const release = {
                   "type": "text",
                   "version": 1,
                   "text": "Steuerbare Gestaltungsstudien für das Web. Werte und Kurven sind lokale Vergleichsrezepte, keine allgemeine shadcn-Skala."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-semantics",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Was Animation vermittelt"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Wähle zuerst die Aussage, danach Dauer und Verlauf. Semantische Animationsrollen verbinden Auslöser, Kontext und sichtbare Veränderung."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Mikroanimation beschreibt den kleinen, lokalen Umfang. Ihre Rolle kann Bedienreaktion, Zustandswechsel, Bestätigung oder eine andere Aufgabe sein; die Bewegung allein hat keine eindeutige Bedeutung."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-reaction",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Bedienreaktion"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Drücken einer Taste."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Die Eingabe wurde wahrgenommen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Taste bereit → Taste gedrückt."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Keine erfolgreiche Verarbeitung versprechen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Gedrückt-Zustand direkt zeigen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-change",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandswechsel"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Eine Option wird umgestellt."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Der lokale Zustand hat sich geändert."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Option aus → Option an."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Keine bestätigte Speicherung ableiten."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Beschriftung und neuer Zustand bleiben sichtbar."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-success",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Bestätigung"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Der Erfolg wurde tatsächlich bestätigt."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Die Aktion ist erfolgreich abgeschlossen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Wird gespeichert → ✓ Gespeichert."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Das Ende eines Effekts ist keine Serverbestätigung."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Erfolgstext und Symbol direkt anzeigen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-processing",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Verarbeitung"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Ein Vorgang läuft noch."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Das Ergebnis steht noch aus."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Anfrage gestartet → Wird verarbeitet …."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Keine Dauer oder Prozentzahl ohne belastbare Grundlage suggerieren."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Statischen Status anzeigen und bei tatsächlicher Änderung aktualisieren."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-relation",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Orientierung und Zusammenhang"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Details zum gewählten Eintrag öffnen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Diese Information gehört zu deiner Auswahl."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Kontakt ausgewählt → Details · derselbe Kontakt."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Keine neue Auswahl oder ungefragten Fokuswechsel durch den Effekt erzeugen."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Identität, Überschrift und Rückweg erhalten; Details direkt zeigen."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "blockType": "text",
+      "blockName": "anm-role-attention",
+      "body": {
+        "root": {
+          "version": 1,
+          "type": "root",
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "version": 1,
+              "type": "heading",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "tag": "h2",
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aufmerksamkeit"
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Auslöser: Eine relevante Information kommt hinzu."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Aussage: Hier hat sich etwas verändert."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Zustandsvergleich: Keine neue Meldung → Neue Rückfrage."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Grenze: Keine Dringlichkeit oder Gefahr allein durch Bewegung behaupten."
+                }
+              ]
+            },
+            {
+              "version": 1,
+              "type": "paragraph",
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Reduziert: Neue Information mit verständlicher Kennzeichnung anzeigen."
                 }
               ]
             }
@@ -935,4 +1593,4 @@ export const release = {
       "blockType": "study"
     }
   ]
-} satisfies { expectedUpdatedAt: string; title: string; summary: string; content: Page['content'] }
+} satisfies { expectedUpdatedAt:string; title:string; summary:string; content:Page['content'] }

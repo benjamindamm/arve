@@ -1,0 +1,62 @@
+[
+  {
+    "id": "reaction",
+    "label": "Bedienreaktion",
+    "trigger": "Drücken einer Taste",
+    "meaning": "Die Eingabe wurde wahrgenommen.",
+    "before": "Taste bereit",
+    "after": "Taste gedrückt",
+    "limit": "Keine erfolgreiche Verarbeitung versprechen.",
+    "reduced": "Gedrückt-Zustand direkt zeigen."
+  },
+  {
+    "id": "change",
+    "label": "Zustandswechsel",
+    "trigger": "Eine Option wird umgestellt",
+    "meaning": "Der lokale Zustand hat sich geändert.",
+    "before": "Option aus",
+    "after": "Option an",
+    "limit": "Keine bestätigte Speicherung ableiten.",
+    "reduced": "Beschriftung und neuer Zustand bleiben sichtbar."
+  },
+  {
+    "id": "success",
+    "label": "Bestätigung",
+    "trigger": "Der Erfolg wurde tatsächlich bestätigt",
+    "meaning": "Die Aktion ist erfolgreich abgeschlossen.",
+    "before": "Wird gespeichert",
+    "after": "✓ Gespeichert",
+    "limit": "Das Ende eines Effekts ist keine Serverbestätigung.",
+    "reduced": "Erfolgstext und Symbol direkt anzeigen."
+  },
+  {
+    "id": "processing",
+    "label": "Verarbeitung",
+    "trigger": "Ein Vorgang läuft noch",
+    "meaning": "Das Ergebnis steht noch aus.",
+    "before": "Anfrage gestartet",
+    "after": "Wird verarbeitet …",
+    "limit": "Keine Dauer oder Prozentzahl ohne belastbare Grundlage suggerieren.",
+    "reduced": "Statischen Status anzeigen und bei tatsächlicher Änderung aktualisieren."
+  },
+  {
+    "id": "relation",
+    "label": "Orientierung und Zusammenhang",
+    "trigger": "Details zum gewählten Eintrag öffnen",
+    "meaning": "Diese Information gehört zu deiner Auswahl.",
+    "before": "Kontakt ausgewählt",
+    "after": "Details · derselbe Kontakt",
+    "limit": "Keine neue Auswahl oder ungefragten Fokuswechsel durch den Effekt erzeugen.",
+    "reduced": "Identität, Überschrift und Rückweg erhalten; Details direkt zeigen."
+  },
+  {
+    "id": "attention",
+    "label": "Aufmerksamkeit",
+    "trigger": "Eine relevante Information kommt hinzu",
+    "meaning": "Hier hat sich etwas verändert.",
+    "before": "Keine neue Meldung",
+    "after": "Neue Rückfrage",
+    "limit": "Keine Dringlichkeit oder Gefahr allein durch Bewegung behaupten.",
+    "reduced": "Neue Information mit verständlicher Kennzeichnung anzeigen."
+  }
+]

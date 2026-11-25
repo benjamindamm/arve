@@ -21,6 +21,7 @@ Die Vorlagen definieren Inhaltsabdeckung, keine feste Reihenfolge von Überschri
 | [Content und Inklusion](content-inclusion.md) | Sprache, Formate, übergreifende Zugänglichkeit und Prüfwege |
 | [Systemprofil, Plattformen, Pflege und technische Nutzung](platforms-governance.md) | Geltung, Umsetzungsstände, Verantwortung, Änderungen und Agenten |
 | [Abgleich mit Arve/shadcn](assessment-shadcn.md) | Belegter aktueller Stand und Prioritäten |
+| [Autoren-Skills für Layoutseiten](../layout-authoring/README.md) | Seitentypen, Seitenlayouts und Inhaltslayouts gezielt mit Fragen erarbeiten |
 | [Prüfblatt](review-template.md) | Kopierbare Arbeitsvorlage für eine neue Familie oder ein neues System |
 
 ## Themenlandkarte
@@ -41,6 +42,10 @@ Die Vorlagen definieren Inhaltsabdeckung, keine feste Reihenfolge von Überschri
 Dies sind Verantwortungsbereiche, keine Pflicht, zehn Hauptmenüpunkte anzulegen. Kleine Systeme dürfen Bereiche bündeln. Ein eigenes Unterthema bekommt eine Seite, wenn es eine eigenständige Entscheidung erklärt; sonst genügt ein klar auffindbarer Abschnitt. Ein Formularpattern gehört nur dann in den Umfang, wenn die Produkte Formularaufgaben haben. Die Systementscheidung über diese Relevanz gehört immer ins Profil.
 
 ## Gemeinsamer Seitenrahmen
+
+Für Chart-Farbentscheidungen zusätzlich einen **semantischen Archetyp** aus diesen Ebenen ableiten: Welche Werte sind Richtungen, Kategorien, Unterkategorien, Referenzen, Ergebnisse oder Zustände? Die Auswahl kommt aus der Grundpalette. Konflikte mit Marke, UI-Rollen und erwartbaren Datenlesarten brauchen konkrete Alternativen und einen benannten Geltungsbereich. Eine neue Reihe erhält nicht automatisch eine neue Farbe.
+
+Datenvisualisierung ist in der shadcn-Referenz ein eigener Bereich. Die Taxonomie trennt Datenbedeutung, Vergleichsstruktur, Darstellungsform, Datenumfang/Dichte und Farbidentität. Die fünf Ebenen und die Palettenfamilien bleiben jeweils auf einer gemeinsamen Seite; Chart-Typen, Beschriftung, kleine Ansichten und Zugänglichkeit ergänzen sie. Grundlagen/Farben führt allgemeine Farben, Komponentenseiten ihren Contract- und Implementierungsstand. Beide verlinken die Chart-Regeln. Für neue Systeme unterstützt der [Datenvisualisierungs-Skill](../../../.agents/skills/arve-data-visualization-handbook/SKILL.md) die fachliche Ausarbeitung; Palette und Beispielwerte werden nicht blind übertragen.
 
 Die folgenden IDs ergänzen jede Themenvorlage. **P** = im gewählten Umfang erforderlich; **B** = bei genanntem Auslöser. Ein Punkt benötigt keine eigene sichtbare Überschrift.
 

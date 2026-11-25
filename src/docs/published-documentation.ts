@@ -1,3 +1,5 @@
+import type {Page,DesignSystem} from '../payload-types'
+import { isLayoutRedirect,legacyLayoutSections } from './handbook-paths'
 import { catalogueMeta } from './component-catalogue-data'
 import { patternCatalog } from './pattern-catalog'
 import { designResources } from './design-resources'
@@ -36,7 +38,7 @@ const patternDiscoveryAliases: Record<string, string[]> = {
 // Task-to-source navigation, not additional source wording. Each label is
 // attached to one original block; page-level example decisions stay out of scope.
 const guidanceDiscovery = [
-  { slug: 'main-sidebar', key: 'responsive', aliases: ['Kosten', 'Gesamtbetrag', 'Zusammenfassung', 'Folgen', 'Konsequenzen'], why: 'Place information needed for a decision in the main task content; this is an editorial task connection, not a cost calculation rule.' },
+  { slug: 'main-sidebar', key: 'ms-rules', aliases: ['Kosten', 'Gesamtbetrag', 'Zusammenfassung', 'Folgen', 'Konsequenzen'], why: 'Place information needed for a decision in the main task content; this is an editorial task connection, not a cost calculation rule.' },
   { slug: 'formulare-validierung', key: 'goals', aliases: ['Zusammenfassung', 'ungewisses Ergebnis', 'ungeklärtes Ergebnis', 'ungewiss', 'ungeklärt', 'unbekannt'], why: 'Explain required information and distinguish submitted, confirmed and unknown outcomes; local form examples remain separate.' },
   { slug: 'content-design', key: 'writing-rules', aliases: [], why: 'Name the next action precisely: checking information and transmitting it are different actions.' },
   { slug: 'content-design', key: 'writing-messages', aliases: ['ungewisses Ergebnis', 'ungeklärtes Ergebnis', 'ungewiss', 'ungeklärt', 'unbekannt'], why: 'Match messages to known outcome evidence; the project wording and numerical limits belong to the local example.' },
@@ -50,9 +52,9 @@ export async function documentationTree(system: string) {
   const docs = await (await documentationData()).pages(designSystem)
   const searchText = new Map<string, string>()
   const searchDocuments: SearchDocument[] = []
-  const visible = docs.filter((page) => page.id !== relationId(designSystem.home) || page.pageType !== 'overview')
-  const patternPage = visible.some(page => !page.component && sectionSlug(system, page.slug) === 'patterns') ? await getDocumentationPage(system, 'patterns') : null
-  const guidancePages = new Map(await Promise.all([...new Set(guidanceDiscovery.map(item => item.slug))].map(async slug => [slug, await getDocumentationPage(system, slug)] as const)))
+  const visible = docs.filter((page) => !isLayoutRedirect(page) && (page.id !== relationId(designSystem.home) || page.pageType !== 'overview'))
+  const patternPage = visible.some(page => !page.component && sectionSlug(system, page.slug) === 'patterns') ? await getDocumentationPage(system, 'patterns',undefined,{designSystem,docs}) : null
+  const guidancePages = new Map(await Promise.all([...new Set(guidanceDiscovery.map(item => item.slug))].map(async slug => [slug, await getDocumentationPage(system, slug,undefined,{designSystem,docs})] as const)))
   const guidanceHits: SearchDocument[] = guidanceDiscovery.flatMap(config => {
     const page = guidancePages.get(config.slug)
     const section = page && pageSections(page).find(section => section.key === config.key)
@@ -67,21 +69,16 @@ export async function documentationTree(system: string) {
   const patternSections = patternPage ? pageSections(patternPage) : []
   const patternSnapshot = patternPage ? snapshotOf(patternPage) : undefined
   const entries = new Map(visible.map((page) => {
-    const path = pagePath(system, page)
+    const path = pagePath(system, page, docs)
     const slug = page.component || sectionSlug(system, page.slug)
     const catalogue = page.component ? catalogueMeta({slug,path,summary:page.summary ?? undefined}) : undefined
     searchText.set(path, [catalogue?.description ?? '', catalogue?.keywords ?? '', JSON.stringify(designResources(system, slug) ?? ''), plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
     const entry: Entry = {
       slug, path, title: page.title, summary: page.summary ?? undefined,
       pageType: page.pageType ?? undefined,
-      kind: page.component ? 'component' : 'section',
+      kind: page.component ? 'component' : page.content?.some(b=>b.blockName?.startsWith('guide-visual-demo-'))?'layout-example':'section',
       retrieval: page.component ? { tool: 'get_component_page', arguments: { system, component: page.component } } : { tool: 'get_documentation_page', arguments: { system, section: slug } },
       children: [],
-    }
-    if (system === 'shadcn' && !page.component && slug === 'layout') {
-      entry.children = layoutExamples.map(example => ({ slug: example.id, title: example.title, path: path + '/' + example.id,
-        summary: example.description, kind: 'layout-example', retrieval: { tool: 'get_documentation_page', arguments: { system, section: 'layout', example: example.id } } }))
-      for (const example of entry.children) searchDocuments.push({ entry: example, sections: [{ text: example.summary ?? '' }] })
     }
     const patterns = slug === 'patterns' && !page.component ? patternCatalog(page.content) : []
     for (const pattern of patterns) {
@@ -91,14 +88,15 @@ export async function documentationTree(system: string) {
       searchDocuments.push({
         entry: { ...entry, children: undefined, title: pattern.title, summary: pattern.task, path,
           ...(section && patternSnapshot ? { matchedSection: { tool: 'get_documentation_section' as const, arguments: { system, section: slug, snapshot: patternSnapshot, sectionId: section.id, offset: 0, limit: 6000 } } } : {}),
-          ...(pattern.id === 'UX-021' ? { relatedGuidance: guidanceHits.filter(hit => ['responsive', 'goals', 'writing-rules'].includes(hit.entry.guidance!.sourceBlock)).map(hit => ({ title: hit.entry.title, why: hit.entry.summary!, scope: hit.entry.guidance!.scope, read: hit.entry.matchedSection! })) } : {}),
+          ...(pattern.id === 'UX-021' ? { relatedGuidance: guidanceHits.filter(hit => ['ms-rules', 'goals', 'writing-rules'].includes(hit.entry.guidance!.sourceBlock)).map(hit => ({ title: hit.entry.title, why: hit.entry.summary!, scope: hit.entry.guidance!.scope, read: hit.entry.matchedSection! })) } : {}),
           pattern: { id: pattern.id!, status: pattern.status as 'candidate', scope: 'Observed UI pattern candidate; not an approved rule or evidence of domain correctness.', observations: pattern.observations } },
         keywords: [pattern.category, ...pattern.tags].join(' '),
         discoveryAliases: patternDiscoveryAliases[pattern.id!] ?? [],
         sections: [{ id: pattern.id!, text: [pattern.id, pattern.title, pattern.task, ...pattern.steps.flatMap(step => [step.title, step.description]), pattern.observations].join(' ') }],
       })
     }
-    searchDocuments.push({ entry, description: catalogue?.description, keywords: catalogue?.keywords,
+    const legacyAliases=Object.entries(legacyLayoutSections).filter(([,target])=>target===slug).map(([alias])=>alias.replaceAll('-',' '))
+    searchDocuments.push({ entry, description: catalogue?.description, keywords: catalogue?.keywords, discoveryAliases:legacyAliases.length?legacyAliases:undefined,
       sections: [...(page.content ?? []).filter(block => !patterns.some(pattern => pattern.id === block.blockName)).map(block => ({ id: block.blockName ?? undefined, text: plainText([block]) })),
         ...readTemplate(page.pageType, page.template).map(({ label, text }) => ({ text: label + ' ' + text }))] })
     return [page.id, entry] as const
@@ -153,27 +151,29 @@ export async function searchDocumentation(system: string, query: string, limit: 
   return result?.results.map(({ entry }) => entry) ?? null
 }
 
-export async function getDocumentationPage(system: string, section: string, example?: string) {
-  const page = await readPublishedSection(system, section)
-  if (!page) return null
-
-  const path = '/systems/' + system + '/' + section
-  if (example) {
-    const layout = system === 'shadcn' && section === 'layout' && layoutExamples.find(({ id }) => id === example)
-    return layout ? { kind: 'layout-example', path: path + '/' + example, ...layout } : null
-  }
+export async function getDocumentationPage(system: string, section: string, example?: string, context?:{designSystem:DesignSystem;docs:Page[]}) {
+  const legacyExample=example&&section==='layout'?layoutExamples.find(item=>item.id===example):undefined
+  if(example&&!legacyExample)return null
+  const designSystem=context?.designSystem??await readSystem(system)
+  if(!designSystem)return null
+  const docs=context?.docs??await (await documentationData()).pages(designSystem)
+  const requested=legacyExample?'beispiele-'+example:section,alias=legacyLayoutSections[requested]
+  const matchSlug=(slug:string)=>docs.find(p=>!p.component&&(p.slug===system+'-'+slug||p.slug===slug))
+  const page=requested.includes('/')?docs.find(p=>!p.component&&pagePath(system,p,docs)==='/systems/'+encodeURIComponent(system)+'/'+requested):(alias?matchSlug(alias):undefined)??matchSlug(requested)
+  if(!page)return null
 
   return {
-    kind: 'section',
-    path,
+    kind: legacyExample?'layout-example':'section',
+    path:pagePath(system,page,docs),
     title: page.title,
     pageType: page.pageType,
     summary: page.summary,
     updatedAt: page.updatedAt,
     content: publicContent(page.content),
     templateSections: readTemplate(page.pageType, page.template),
-    resources: designResources(system, section),
+    resources: designResources(system,sectionSlug(system,page.slug)),
     ...(section === 'patterns' && {patterns: patternCatalog(page.content)}),
+    ...(legacyExample&&{layout:legacyExample.layout}),
   }
 }
 

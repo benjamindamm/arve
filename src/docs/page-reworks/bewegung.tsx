@@ -1,4 +1,5 @@
 'use client'
+import {AnimationRoles} from '../animation-roles'
 
 import { useEffect, useId, useRef, useState, useSyncExternalStore, type CSSProperties } from 'react'
 import type { Page } from '../../payload-types'
@@ -73,12 +74,13 @@ export default function Motion({content}:{content:Page['content']}){
   const render=(key:string)=>{const b=map.get(key);return b?<Content blocks={[b]}/>:null}
   const durationEntries=profile.durations.map(ms=>({id:`duration-${ms}`,label:`${ms} ms`,duration:ms,easing:profile.durationEasing}))
   const curveEntries=profile.curves.map(c=>({...c,duration:profile.curveDuration}))
-  const known=new Set(['anm-start','anm-duration','anm-curve','anm-reduced','anm-choice','anm-recipes','anm-processing','anm-preferences','anm-adaptation','anm-source','anm-checks','anm-links'])
+  const known=new Set(['anm-start','anm-semantics',...['reaction','change','success','processing','relation','attention'].map(id=>'anm-role-'+id),'anm-duration','anm-curve','anm-reduced','anm-choice','anm-recipes','anm-processing','anm-preferences','anm-adaptation','anm-source','anm-checks','anm-links'])
   const historical=blocks.find(b=>b.blockType==='study')
   const style={'--am-reveal-duration':`${profile.disclosure.duration}ms`,'--am-reveal-easing':profile.disclosure.easing,'--am-reveal-offset':`${profile.disclosure.offsetRem}rem`} as CSSProperties
   return <div className="animation-rework" style={style}>
     <div className="am-scope" id={anchor('anm-start')}>{text('anm-start','scope')}</div>
     {systemReduced&&<p className="am-system-note">Deine Systemeinstellung reduziert Bewegung. Die Vergleiche zeigen das Ziel direkt.</p>}
+    <section id={anchor('anm-semantics')}>{text('anm-semantics','intro')}<AnimationRoles/><details className="am-details"><summary>Mikroanimation und Bedeutung</summary>{text('anm-semantics','rest')}</details></section>
     <section id={anchor('anm-duration')}>
       {text('anm-duration','intro')}<Comparison kind="duration" name="Dauervergleich" entries={durationEntries} reduced={systemReduced}/>
       <details className="am-details"><summary>Rezept und Bedienung</summary>{text('anm-duration','rest')}</details>

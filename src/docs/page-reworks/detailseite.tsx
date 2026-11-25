@@ -2,7 +2,7 @@ import { SiteAnchor } from '../site-anchor'
 import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
 import { RichText } from '../rich-text'
-import { blockAnchor } from '../content-outline'
+import { blockAnchor as sourceAnchor } from '../content-outline'
 import './detailseite.css'
 
 const ruleLabels: Record<string, string[]> = {"rules": ["Projekt erkennen", "Inhalte priorisieren", "Rückweg und Filter"]}
@@ -11,14 +11,15 @@ type Block = NonNullable<Page['content']>[number]
 function strings(block?: Block) {
   return block?.blockType === 'text' ? block.body.root.children.map(n => Array.isArray(n.children) ? n.children.map((c: { text?: string }) => c.text ?? '').join('') : '') : []
 }
-export default function DetailPage({ content }: { content: Page['content'] }) {
+export default function DetailPage({ content, anchorPrefix='' }: { content: Page['content']; anchorPrefix?:string }) {
+  const blockAnchor=(block:Block)=>anchorPrefix+sourceAnchor(block)
   const find = (key: string) => (content ?? []).find(b => b.blockName === key)
   const example = find('example'), region = find('regions'), variants = find('variants')
   const e = strings(example), r = strings(region), v = strings(variants)
   const section = (key: string, disclosure = false) => {
     const b = find(key)
     if (b?.blockType !== 'text') return null
-    if (["rules", "responsive"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
+    if (["rules", "responsive"].includes(key)) return <LayoutRuleBlock anchorPrefix={anchorPrefix} block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return disclosure ? <details id={blockAnchor(b)}><summary>{strings(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }} /></details>
       : <section id={blockAnchor(b)}><RichText data={b.body} /></section>
   }

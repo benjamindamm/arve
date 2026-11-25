@@ -4,7 +4,7 @@ import { LayoutRuleBlock } from './layout-rule-block'
 import { useId, useState } from 'react'
 import type { Page } from '../../payload-types'
 import { RichText } from '../rich-text'
-import { blockAnchor } from '../content-outline'
+import { blockAnchor as sourceAnchor } from '../content-outline'
 import './content-layout-form-layout.css'
 
 const ruleLabels: Record<string, string[]> = {"rules": ["Feldgruppen", "Mehrzeilige Texte", "Aktionen"]}
@@ -15,7 +15,8 @@ type Child = { text?: string; children?: Child[] }
 const flatten = (n: Child): string => n.text ?? (n.children ?? []).map(flatten).join('')
 const lines = (b?: Text) => b?.body.root.children.map(n => flatten(n as Child)) ?? []
 
-export default function FormLayout({ content }: { content: Page['content'] }) {
+export default function FormLayout({ content, anchorPrefix='' }: { content: Page['content']; anchorPrefix?:string }) {
+  const blockAnchor=(block:Block)=>anchorPrefix+sourceAnchor(block)
   const [error, setError] = useState(false)
   const id = useId()
   const blocks = (content ?? []).filter((b): b is Text => b.blockType === 'text')
@@ -52,7 +53,7 @@ export default function FormLayout({ content }: { content: Page['content'] }) {
         <figcaption>{caption}</figcaption>
       </figure>
     </section>}
-    {blocks.filter(b => !['goals', 'example-scope', 'example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => ["rules", "anatomy"].includes(b.blockName ?? "") ? <LayoutRuleBlock key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
+    {blocks.filter(b => !['goals', 'example-scope', 'example', 'field', 'actions'].includes(b.blockName ?? '')).map(b => ["rules", "anatomy"].includes(b.blockName ?? "") ? <LayoutRuleBlock anchorPrefix={anchorPrefix} key={b.blockName} block={b} labels={ruleLabels[b.blockName ?? ""]} /> : b.blockName === 'sources'
       ? <details key={b.blockName} id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section key={b.blockName} id={blockAnchor(b)}><RichText data={b.body}/></section>)}
   </div>

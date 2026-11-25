@@ -1,8 +1,10 @@
+import {canonicalHandbookHref} from './handbook-paths'
 export const staticPublication = process.env.NEXT_PUBLIC_ARVE_STATIC === '1'
 const basePath = process.env.NEXT_PUBLIC_ARVE_BASE_PATH ?? ''
 
 /** Raw anchors/assets need a prefix; next/link adds the configured basePath itself. */
 export function sitePath(value: string) {
+  value=canonicalHandbookHref(value)
   return value.startsWith('/') && !value.startsWith('//') && basePath && value !== basePath && !value.startsWith(basePath + '/')
     ? basePath + value : value
 }

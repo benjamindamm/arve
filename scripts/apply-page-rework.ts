@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import {isDeepStrictEqual} from 'node:util'
 import {resolve} from 'node:path'
 import {pathToFileURL} from 'node:url'
 import {getPayload} from 'payload'
@@ -14,7 +15,7 @@ try{
  const page=(await p.find({collection:'pages',depth:0,draft:true,where:{slug:{equals:'shadcn-'+slug}}})).docs[0];assert(page&&page._status==='published')
  const published=await p.findByID({collection:'pages',id:page.id,depth:0,draft:false});assert.deepEqual(page,published,'Neuere Entwurfsversion')
  const data={summary:release.summary,content:release.content,...(release.title?{title:release.title}:{})}
- const same=()=>Object.entries(data).every(([k,v])=>JSON.stringify(clean(page[k as keyof typeof page]))===JSON.stringify(clean(v)))
+ const same=()=>Object.entries(data).every(([k,v])=>isDeepStrictEqual(clean(page[k as keyof typeof page]),clean(v)))
  if(!same())assert.equal(page.updatedAt,release.expectedUpdatedAt,'Redaktionelle Änderung seit Analyse')
  if(process.argv.includes('--publish')&&!same()){
  const transactionID=await p.db.beginTransaction();assert(transactionID);const req={transactionID};try{

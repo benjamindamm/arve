@@ -59,7 +59,7 @@ export default function SearchFilter({ content }: { content: Page['content'] }) 
     {region('search-rules')}
     <section id={blockAnchor(find('search-states')!)}><h2>{lines(find('search-states'))[0]}</h2><div className="sf-states">{lines(find('search-states')).slice(1).map(s => { const [title, ...rest] = s.split(' · '); return <article key={title}><h3>{title}</h3><p>{rest.join(' · ')}</p></article> })}</div></section>
     {region('search-context')}{region('search-patterns')}
-    <nav className="sf-next" aria-label={e[24]}><SiteAnchor href="/systems/shadcn/detailseite">{e[21]}</SiteAnchor><SiteAnchor href="/systems/shadcn/formulare-validierung">{e[22]}</SiteAnchor><SiteAnchor href="/systems/shadcn/patterns">{e[23]}</SiteAnchor></nav>
+    <nav className="sf-next" aria-label={e[24]}><SiteAnchor href="/systems/shadcn/layout/page-types/detail">{e[21]}</SiteAnchor><SiteAnchor href="/systems/shadcn/formulare-validierung">{e[22]}</SiteAnchor><SiteAnchor href="/systems/shadcn/patterns">{e[23]}</SiteAnchor></nav>
     <div className="sf-contracts">{originals.map((b, i) => <details id={blockAnchor(b)} key={b.id ?? i}><summary>{blockTitle(b)}</summary>{b.blockType === 'text' ? <RichText data={b.body} /> : b.blockType === 'workflowStudy' ? <WorkflowStudy {...b} /> : b.blockType === 'messageComparison' ? <MessageComparison {...b} /> : null}</details>)}</div>
   </div>
 }

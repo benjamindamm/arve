@@ -1,6 +1,7 @@
 import { readTemplate } from './page-templates'
 import { documentationData } from './documentation-data'
 import { contractFileUrl, contractAssetUrl, staticPublication } from './site-path'
+import { legacyLayoutSections } from './handbook-paths'
 import { pagePath, readSystem } from './systems'
 import type { Page } from '../payload-types'
 import { getContract } from '../contracts/catalog'
@@ -20,7 +21,7 @@ export async function getComponentPage(system: string, component: string) {
   const demo = system === 'shadcn' && page.demo?.key === 'spartan-' + component ? page.demo : null
   const references = frameworkReferences((await readPublishedSection(system, 'frameworks'))?.content)
   const published = await data.pages(designSystem)
-  const nextSteps = componentNextSteps({system,component,pagePath:pagePath(system,page),contract,implementations,referenceFrameworks:references,documentation:published.map(entry=>({slug:entry.slug,path:pagePath(system,entry),title:entry.title}))})
+  const nextSteps = componentNextSteps({system,component,pagePath:pagePath(system,page),contract,implementations,referenceFrameworks:references,documentation:published.map(entry=>({slug:entry.slug,path:pagePath(system,entry,published),title:entry.title}))})
   const previewPath = `components/${component}/preview.png`
   const previewHash = contract?.artifacts?.[previewPath]
 
@@ -59,7 +60,14 @@ export async function getComponentPage(system: string, component: string) {
 export async function readPublishedSection(system: string, section: string) {
   const designSystem = await readSystem(system)
   if (!designSystem) return null
-  const page = await (await documentationData()).page(designSystem, {slugs:[system + '-' + section,section]})
+  const data=await documentationData()
+  if(section.includes('/')){
+    const pages=await data.pages(designSystem)
+    return pages.find(page=>!page.component&&pagePath(system,page,pages)==='/systems/'+encodeURIComponent(system)+'/'+section)
+  }
+  const alias=legacyLayoutSections[section]
+  const selected=alias?await data.page(designSystem,{slugs:[system+'-'+alias,alias]}):undefined
+  const page=selected??await data.page(designSystem,{slugs:[system+'-'+section,section]})
   return page?.component ? undefined : page
 }
 

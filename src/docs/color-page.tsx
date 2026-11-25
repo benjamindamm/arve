@@ -67,6 +67,7 @@ export function ColorPage({content, presentation='palette'}: {content:Page['cont
    </div>
   </section>}
   <details className="cp-evidence" id={heading('col-evidence')}><summary>Herkunft, Werte und Kontrastprüfung</summary>{text('col-evidence')}<p><a href="https://flatuicolors.com/palette/defo">Flat UI Palette v1</a> · <a href="https://www.carbondesignsystem.com/building-blocks/foundations/color/overview">Carbon: Farbe und Rollen</a></p><h3>Vollständige Rollenwerte</h3>{palette.roles.map(r=><div key={r.id}>{text('col-role-'+r.id)}</div>)}{text('col-neutral')}{text('col-states')}<p>Geltungsbereich: {palette.scope}</p></details>
+  {map.has('col-charts')&&<section className="cp-section" id={heading('col-charts')}>{text('col-charts')}</section>}
   <SiteAnchor className="cp-next" href={presentation==='palette'?'/systems/shadcn/themes-und-zustaende':'/systems/shadcn/farben'}>{presentation==='palette'?'Farben anwenden: Themes und visuelle Zustände →':'Zur Farbpalette →'}</SiteAnchor>
  </div>
 }

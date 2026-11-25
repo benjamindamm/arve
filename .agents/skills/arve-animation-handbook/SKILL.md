@@ -1,6 +1,6 @@
 ---
 name: arve-animation-handbook
-description: Erarbeite oder prüfe das Kapitel Animation eines Design-System-Handbuchs aus Quellen, Rückfragen und delegierten Gestaltungsentscheidungen. Behandelt Zweck, Abläufe, Timing, Unterbrechung und reduzierte Animation; nicht die Erstellung beliebiger Animationsfilme oder die Implementierung einer App.
+description: Erarbeite oder prüfe das Kapitel Animation eines Design-System-Handbuchs aus Quellen, Rückfragen und delegierten Gestaltungsentscheidungen. Behandelt semantische Rollen, Zweck, Abläufe, Timing, Unterbrechung und reduzierte Animation; nicht die Erstellung beliebiger Animationsfilme oder die Implementierung einer App.
 ---
 
 # Animation erarbeiten
@@ -13,7 +13,15 @@ Kläre System, Aufgaben, Plattformen und Auftrag aus den vorhandenen Angaben. Im
 
 Lies gezielt Designvariablen, Komponentenrezepte, Zustands-/Verhaltensdefinitionen und vorhandene Animationsregeln. Unterscheide Systemvorgabe, lokale Implementierung, Beobachtung und Beispielgestaltung. Eine Spinnerdauer oder ein CSS-Übergang im Portal ist keine globale Zeitskala. Bei Konflikten keine automatische Rangfolge Code/Design erfinden.
 
-Nutze die [Fachfragen ANM-01–16](references/animation-questions.md). Für reduzierte Animation, automatische Inhalte und Aussagen über Prüfungen lies gezielt die [Quellen- und Prüfhilfe](references/evidence-and-checks.md).
+Nutze die [Fachfragen ANM-01–17](references/animation-questions.md). Für reduzierte Animation, automatische Inhalte und Aussagen über Prüfungen lies gezielt die [Quellen- und Prüfhilfe](references/evidence-and-checks.md).
+
+## Semantische Animationsrollen immer klären
+
+Jede Ausarbeitung behandelt ausdrücklich, was Bewegung im Kontext bedeutet, bevor sie Timing und Effekte festlegt. Für die tatsächlich verwendeten Rollen Auslöser, Kontext, beabsichtigte Aussage, Anfang/Ziel, irreführende Aussagen und gleichwertige reduzierte Darstellung festhalten. Im Bestand fehlende Bedeutung als offen kennzeichnen, statt Absichten zu erfinden. Diese inhaltliche Abdeckung ist verbindlich; Darstellung und Umfang bleiben frei.
+
+Bedienreaktion, lokaler Zustandswechsel, bestätigter Erfolg, laufende Verarbeitung, Orientierung/Zusammenhang und Aufmerksamkeit sind hilfreiche Ausgangsrollen, keine universell vorgeschriebenen sechs Kategorien. Rückmeldung über wahrgenommene Eingabe ist keine Erfolgsbestätigung; ein lokaler Zustandswechsel bestätigt keine Speicherung. Erfolg nur bei entsprechender fachlicher Bestätigung zeigen, keinen Fortschritt oder Dringlichkeit aus einem Effekt ableiten.
+
+Mikroanimation bezeichnet einen kleinen lokalen Übergang, nicht dessen Bedeutung. Derselbe Effekt kann unterschiedliche Rollen erfüllen; eine Rolle kann verschiedene passende Rezepte haben. Zeige die Aussage an einem Kontextbeispiel und halte sie auch ohne Bewegung verständlich. Reine Vorher-/Nachher-Skizzen als solche benennen; sie belegen keinen zeitlichen Ablauf.
 
 ## Zweck und Ablauf gestalten
 
@@ -51,10 +59,12 @@ Grundfragen sichern die Orientierung. Bedingte Fragen vertiefen tatsächlich vor
 
 ## Ergebnis und Gegencheck
 
-Auffindbar werden Zweck/Auswahl, Quellen und konkrete Rezepte, Anfang/Ziel und Verlauf, Unterbrechung, reduzierte Alternative, relevante Prüfungen und offene Entscheidungen. Die Autorenprüfung ordnet ANM-IDs zu Anwendbarkeit, Antwort/Fundstelle oder Lücke, Herkunft, fachlichem Stand und tatsächlichen Nachweisen. Diese Matrix muss keine sichtbare Seite mit einem Abschnitt pro Frage erzeugen.
+Auffindbar werden semantische Rollen und ihre Geltung, Zweck/Auswahl, Quellen und konkrete Rezepte, Anfang/Ziel und Verlauf, Unterbrechung, reduzierte Alternative, relevante Prüfungen und offene Entscheidungen. Die Autorenprüfung ordnet ANM-IDs zu Anwendbarkeit, Antwort/Fundstelle oder Lücke, Herkunft, fachlichem Stand und tatsächlichen Nachweisen. Diese Matrix muss keine sichtbare Seite mit einem Abschnitt pro Frage erzeugen.
 
 Vollziehe einen Ablauf aus dem Auftragsumfang mit der fertigen Anleitung nach: Animation wählen oder begründet weglassen, Rezept anwenden, eine erneute Eingabe oder Unterbrechung behandeln und die reduzierte Alternative nachvollziehen. Benenne die tragenden Kapitel-Aussagen und fehlendes Zusatzwissen. Bei engem Auftrag keinen ganzen Produktscreen erfinden. Diese redaktionelle Prüfung ist kein Nutzertest.
 
 Berichte nur ausgeführte Prüfungen mit Objekt, Methode, Umgebung und Ergebnis. Tokenwert, berechneter Stil, beobachteter Ablauf und tatsächliche Nutzungswirkung sind verschiedene Nachweise. Zwei Screenshots belegen keine Dauer, flüssige Bildfolge oder korrekte Unterbrechung. Eine Vorschau beweist keine allgemeine Plattform- oder Zugänglichkeitsfreigabe.
 
 Animation führt die visuelle Veränderung; Komponenten/SCXML führen ihre definierten Verhaltenszustände, Patterns den Arbeitsablauf, Layouts die Anordnung, Plattformen native Mechanismen. Diese Beziehungen hier erklären, ohne fremde Definitionen zu duplizieren. Der Skill setzt kein Framework, CMS oder MCP voraus. Er autorisiert keine neuen Contracts, Paketwechsel oder Veröffentlichung. Für eine ausdrücklich beauftragte Übernahme gelten Zielsystem und vorhandene Autorisierung.
+
+Nach Anwendung oder Review übertragbare Erkenntnisse in Skill und Fragen zurückführen. Lokale Werte und konkrete Prüfergebnisse bleiben beim Anwendungsprotokoll.

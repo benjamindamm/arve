@@ -41,6 +41,8 @@ Wenn Carbon als Referenz gewählt ist, nutze Palette → Rolle → Token → Wer
 
 ## Gemeinsame Ergebnisstruktur
 
+Chart-Farbregeln gehören unter **Datenvisualisierung**, nicht als zusätzliche allgemeine UI-Rollen in die Grundpalette. Verlinke dorthin und nutze bei einer Ausarbeitung den benachbarten [Datenvisualisierungs-Skill](../arve-data-visualization-handbook/SKILL.md). Datenbedeutung, Vergleichsstruktur, Linien/Flächen, Zahl unterscheidbarer Reihen und Farbidentität getrennt klären. Viele Messpunkte benötigen nicht viele Farben; Rot darf im gleichen Kontext nicht zugleich reservierter Negativsaldo und beliebige neutrale Kategorie sein. Fachliche Reservierung und Geltungsbereich ausdrücklich festlegen, statt alle negativen Werte automatisch als Fehler zu behandeln.
+
 Das Ergebnis umfasst unabhängig von seiner Darstellung diese fachlichen Teile:
 
 - Identität, Auftrag und Geltungsbereich (COL-01).
@@ -53,6 +55,8 @@ Das Ergebnis umfasst unabhängig von seiner Darstellung diese fachlichen Teile:
 Halte pro COL-ID fest, ob eine Grundfrage beantwortet bzw. offen oder eine bedingte Frage relevant, unbekannt oder begründet nicht relevant ist. Verweise auf vorhandene Antworten, statt für jeden Prüfpunkt neue Prosa zu erzeugen. Diese Abdeckungsübersicht unterstützt die Autorenprüfung; sie muss nicht vollständig im sichtbaren Kapitel stehen. Sie darf integriert, vertiefend oder als Begleitdatensatz vorliegen. Die fachliche Struktur ist gemeinsam, die Zahl und Reihenfolge sichtbarer Abschnitte bleibt frei. Ein beantworteter Punkt kann fachlich noch ein Vorschlag sein; ein abgeschlossener Entwurf ist kein bestandener Implementierungstest.
 
 ## Übergabe und Prüfung
+
+Bei Chart-Nutzung zusätzlich klären: Aus welchen verfügbaren Familien/Stufen stammen die Chartfarben? Welche Rollen sind durch Marke, Handlungen, Status, Auswahl oder Daten bereits belegt? Der semantische Archetyp umfasst auch strukturelle Beziehungen: Richtung, Kategorie, Unterkategorie, Referenz und berechnetes Ergebnis. Eine weitere Reihe muss deshalb nicht eine weitere Farbe erhalten. Chart-Paletten und auch ihre Illustrationen aus der Grundpalette ableiten, keine isolierten Hexfarben führen. Erwartbare Lesarten (etwa Rot/Grün für Abfluss/Zufluss oder Blau für Auswahl) neben expliziten Regeln prüfen. Konflikt, Geltungsbereich und konkrete verfügbare Alternative dokumentieren; auch die Alternative kann belegt sein. Markenfarbe nicht mit UI-Primärfarbe gleichsetzen und keine Familie pauschal global sperren.
 
 Halte für jede relevante Frage ID, Antwort bzw. offene Entscheidung, System-/Plattformgeltung, Herkunft und fachlichen Stand fest. Quellen dürfen gemeinsam referenziert werden, sofern die Zuordnung eindeutig bleibt. Fachlicher Stand und Prüfnachweis bleiben getrennt; veröffentlichter Text ist keine Freigabe. Bei einer Nutzerentscheidung genügt der konkrete Gesprächsbezug; erfinde weder zuständiges Team noch externe Autorität.
 

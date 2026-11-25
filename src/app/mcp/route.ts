@@ -35,6 +35,7 @@ export async function POST(request: Request) {
   const server = new McpServer({ name: 'design-system', version: '0.1.0' })
   const transport = new WebStandardStreamableHTTPServerTransport({ enableJsonResponse: true })
   const slug = z.string().regex(/^[a-z][a-z0-9-]{0,79}$/)
+  const sectionPath = z.string().max(500).regex(/^[a-z][a-z0-9-]*(?:\/[a-z][a-z0-9-]*)*$/)
   const withUrl = <T extends { path: string }>(entry: T) => ({
     ...entry, pageUrl: new URL(entry.path, request.url).href,
   })
@@ -118,7 +119,7 @@ export async function POST(request: Request) {
 
   server.registerTool('get_documentation_page', {
     description: 'Read compact paginated plain-text previews and stable block references for a published section. Follow next and section reads for all applicability, exceptions and evidence; view=full preserves the complete structured page. Layout examples use section layout and example slug.',
-    inputSchema: { system: slug, section: slug, example: slug.optional(), view: viewSchema, snapshot: hashSchema.optional(), offset: z.number().int().min(0).default(0), limit: z.number().int().min(1).max(4).default(4) },
+    inputSchema: { system: slug, section: sectionPath, example: slug.optional(), view: viewSchema, snapshot: hashSchema.optional(), offset: z.number().int().min(0).default(0), limit: z.number().int().min(1).max(4).default(4) },
     annotations: { readOnlyHint: true },
   }, async ({ system, section, example, view, snapshot, offset, limit }) => {
     const page = await getDocumentationPage(system, section, example)
@@ -133,7 +134,7 @@ export async function POST(request: Request) {
 
   server.registerTool('get_documentation_section', {
     description: 'Read an exact stable block from the compact documentation page as paginated plain text. Requires the page snapshot. Offsets count Unicode code points; full-resource SHA256 covers UTF-8 text, not original rich-text JSON. Follow every continuation to read complete applicability and limitations.',
-    inputSchema: { system: slug, section: slug, example: slug.optional(), snapshot: hashSchema, sectionId: z.string().min(1).max(100), ...chunkSchema },
+    inputSchema: { system: slug, section: sectionPath, example: slug.optional(), snapshot: hashSchema, sectionId: z.string().min(1).max(100), ...chunkSchema },
     annotations: { readOnlyHint: true },
   }, async ({ system, section, example, snapshot, sectionId, offset, limit }) => {
     try {

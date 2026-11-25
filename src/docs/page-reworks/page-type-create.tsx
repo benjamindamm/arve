@@ -1,7 +1,7 @@
 import { LayoutRuleBlock } from './layout-rule-block'
 import type { Page } from '../../payload-types'
 import { RichText } from '../rich-text'
-import { blockAnchor } from '../content-outline'
+import { blockAnchor as sourceAnchor } from '../content-outline'
 import './page-type-create.css'
 
 const ruleLabels: Record<string, string[]> = {"decisions": ["Neuer oder bestehender Eintrag", "Feld und Systemangaben", "Abbrechen vor dem Absenden", "Laufende oder unbekannte Anfrage"]}
@@ -11,7 +11,8 @@ type Text = Extract<Block, { blockType: 'text' }>
 type Child = { text?: string; children?: Child[] }
 const flatten = (node: Child): string => node.text ?? (node.children ?? []).map(flatten).join('')
 const lines = (block?: Text) => block?.body.root.children.map(n => flatten(n as Child)) ?? []
-export default function PageTypeCreate({ content }: { content: Page['content'] }) {
+export default function PageTypeCreate({ content, anchorPrefix='' }: { content: Page['content']; anchorPrefix?:string }) {
+  const blockAnchor=(block:Block)=>anchorPrefix+sourceAnchor(block)
   const get = (key: string) => (content ?? []).find((b): b is Text => b.blockName === key && b.blockType === 'text')
   const example = get('example'), v = lines(example)
   const error = get('error'), e = lines(error)
@@ -21,7 +22,7 @@ export default function PageTypeCreate({ content }: { content: Page['content'] }
   const section = (key: string, collapsible = false) => {
     const b = get(key)
     if (!b) return null
-    if (["decisions", "regions"].includes(key)) return <LayoutRuleBlock block={b} labels={ruleLabels[b.blockName ?? ""]} />
+    if (["decisions", "regions"].includes(key)) return <LayoutRuleBlock anchorPrefix={anchorPrefix} block={b} labels={ruleLabels[b.blockName ?? ""]} />
     return collapsible ? <details id={blockAnchor(b)}><summary>{lines(b)[0]}</summary><RichText data={{ ...b.body, root: { ...b.body.root, children: b.body.root.children.slice(1) } }}/></details>
       : <section id={blockAnchor(b)}><RichText data={b.body}/></section>
   }

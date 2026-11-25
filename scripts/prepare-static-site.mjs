@@ -1,3 +1,5 @@
+import {pagePath} from '../src/docs/systems.ts'
+import {snapshotData} from '../src/docs/snapshot-data.ts'
 import { cp, mkdir, readFile, rm, symlink, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
@@ -30,11 +32,13 @@ const home = path.join(stage,'src/app/(docs)/page.tsx')
 const homeSource = await readFile(home,'utf8')
 if(!homeSource.includes("export const dynamic = 'force-dynamic'"))throw Error('Review static home route configuration')
 await writeFile(home,homeSource.replace("export const dynamic = 'force-dynamic'",''))
+const [system]=await snapshotData.systems(), pages=await snapshotData.pages(system)
+const legacy=JSON.parse(await readFile('src/docs/layout-legacy.json','utf8'))
+const sections=[...new Set([...pages.filter(p=>!p.component&&p.slug!==snapshot.system.home).map(p=>pagePath(system.slug,p,pages).split('/systems/'+system.slug+'/')[1]),...Object.keys(legacy.hrefs)])]
 const params = [
   ['systems/[system]/page.tsx',[{system:snapshot.system.slug}]],
-  ['systems/[system]/[section]/page.tsx',snapshot.pages.filter(p=>!p.component&&p.slug!==snapshot.system.home).map(p=>({system:snapshot.system.slug,section:p.slug.replace(new RegExp('^'+snapshot.system.slug+'-'),'' )}))],
+  ['systems/[system]/[...section]/page.tsx',sections.map(section=>({system:system.slug,section:section.split('/')}))],
   ['systems/[system]/components/[component]/page.tsx',snapshot.pages.filter(p=>p.component).map(p=>({system:snapshot.system.slug,component:p.component}))],
-  ['systems/shadcn/layout/[example]/page.tsx',[{example:'detail'},{example:'uebersicht'},{example:'arbeitsflaeche'}]],
   ['systems/shadcn/beispiele/rechnungen/[id]/page.tsx',['RE-1048','RE-1047','RE-1046','RE-1045','RE-1044'].map(id=>({id}))],
 ]
 for(const [relative,values]of params) {

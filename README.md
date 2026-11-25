@@ -4,7 +4,9 @@
 
 Arve ist ein gemeinsames Handbuch für Design und Entwicklung. Es beschreibt, wie Oberflächen gestaltet werden, welche Komponenten passen und welche Bedienregeln gelten. Teams lesen und pflegen das Handbuch im Browser. KI-Agenten können die veröffentlichten Regeln über MCP abrufen.
 
-Mit Arve lassen sich mehrere Design-Systeme parallel verwalten. Jedes hat einen eigenen Seitenbaum, eigene Inhalte und verknüpfte Komponentenbibliotheken. Als Ausgangspunkt ist ein vollständiges **shadcn-Handbuch mit 116 Seiten und 69 Komponenten** enthalten.
+Mit Arve lassen sich mehrere Design-Systeme parallel verwalten. Jedes hat einen eigenen Seitenbaum, eigene Inhalte und verknüpfte Komponentenbibliotheken. Als Ausgangspunkt ist ein vollständiges **shadcn-Handbuch mit 69 Komponenten** enthalten.
+
+**Für Agenten im Repository:** Zum Erarbeiten oder Prüfen von Handbuchinhalten zuerst den passenden [Autoren-Skill](#autoren-skills) lesen.
 
 ## Was ihr damit machen könnt
 
@@ -64,6 +66,37 @@ npm run reference:import -- --slug mein-system --name "Mein Design-System" --app
 Die Kopie bekommt eigene Seiten und beginnt als **Entwurf**. Seitenbaum und interne Systemlinks werden angepasst; Contract-Revisionen und Quellen behalten ihre Herkunft. Vorhandene Zielsysteme werden nicht überschrieben. Einige eigens gestaltete shadcn-Vorschauen sind weiterhin Anwendungscode; die Kopie verwendet zunächst die allgemeinen Seitenansichten.
 
 [Referenz einrichten, kopieren und als Paket weitergeben](docs/handbook/reference-template.md)
+
+## Autoren-Skills
+
+Die [Autoren-Skills](.agents/skills/) helfen, ein eigenes Design-System inhaltlich auszuarbeiten. Sie beschreiben, welche Fragen ein Kapitel beantworten soll und welche Entscheidungen, Beispiele und Nachweise dafür gebraucht werden. Die shadcn-Referenz zeigt eine mögliche Ausarbeitung; ihre Texte und Regeln werden nicht ungeprüft auf ein neues System übertragen.
+
+| Thema | Einstieg für den Agenten |
+| --- | --- |
+| Farben und Farbrollen | [arve-color-handbook](.agents/skills/arve-color-handbook/SKILL.md) |
+| Typografie | [arve-typography-handbook](.agents/skills/arve-typography-handbook/SKILL.md) |
+| Abstände und Grössen | [arve-spacing-handbook](.agents/skills/arve-spacing-handbook/SKILL.md) |
+| Form und Ebenen | [arve-shape-layers-handbook](.agents/skills/arve-shape-layers-handbook/SKILL.md) |
+| Icons | [arve-icons-handbook](.agents/skills/arve-icons-handbook/SKILL.md) |
+| Animation und ihre Bedeutung | [arve-animation-handbook](.agents/skills/arve-animation-handbook/SKILL.md) |
+| Seitentypen und Nutzeraufgaben | [arve-page-types-handbook](.agents/skills/arve-page-types-handbook/SKILL.md) |
+| Seitenlayouts und Seitenrahmen | [arve-page-layouts-handbook](.agents/skills/arve-page-layouts-handbook/SKILL.md) |
+| Inhaltsanordnung innerhalb von Abschnitten und Cards | [arve-content-layouts-handbook](.agents/skills/arve-content-layouts-handbook/SKILL.md) |
+| Datenvisualisierung, semantische Chart-Archetypen und Paletten | [arve-data-visualization-handbook](.agents/skills/arve-data-visualization-handbook/SKILL.md) |
+
+Für die Arbeit mit vorhandenen Komponenten-Contracts gibt es ergänzend [arve-ui-contracts](.agents/skills/arve-ui-contracts/SKILL.md).
+
+So arbeitet ein Agent damit:
+
+1. Zielsystem und Thema bestimmen, dann die verlinkte `SKILL.md` lesen. Weitere Referenzen nach Bedarf über deren Verweise laden.
+2. Vorhandene Quellen auswerten und fehlende Entscheidungen mit dem Nutzer klären. Belegte Regeln, eigene Vorschläge und offene Fragen auseinanderhalten.
+3. Das Kapitel für das Zielsystem ausarbeiten oder prüfen. Beispiele sollen Entscheidungen erklären; fehlende Inhalte nicht mit allgemeinen Texten auffüllen.
+
+Beispielauftrag:
+
+> Lies `.agents/skills/arve-data-visualization-handbook/SKILL.md`. Erarbeite für unser Design-System die Chart-Farbregeln aus unserer Grundpalette. Kläre zuerst die semantischen Archetypen und Konflikte mit bestehenden Farbrollen. Frage nach fehlenden Entscheidungen, bevor du sie als Vorgaben formulierst.
+
+Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Sie werden derzeit **nicht über MCP ausgeliefert**. MCP stellt die veröffentlichten Handbuchinhalte sowie separat die mit den UI-Contracts importierten Bibliotheks-Skills bereit.
 
 ## Inhalte pflegen
 

@@ -12,10 +12,16 @@ export function LayoutVariantPicker({ variants, compact = false, legend = 'Varia
       let hash = window.location.hash.slice(1)
       try { hash = decodeURIComponent(hash) } catch { /* A malformed external fragment is not a variant. */ }
       const target = document.getElementById(hash)
-      const panel = target?.closest<HTMLElement>('[data-layout-variant]')
-      if (panel) {
-        setSelected(panel.dataset.layoutVariant)
-        requestAnimationFrame(() => target?.scrollIntoView({ block: 'start' }))
+      let cursor:HTMLElement|null=target
+      while(cursor){
+        const panel:HTMLElement|null=cursor.closest<HTMLElement>('[data-layout-variant]')
+        if(!panel)break
+        if(variants.some(v=>v.id===panel.dataset.layoutVariant)){
+          setSelected(panel.dataset.layoutVariant)
+          requestAnimationFrame(() => target?.scrollIntoView({ block: 'start' }))
+          break
+        }
+        cursor=panel.parentElement
       }
     }
     reveal()

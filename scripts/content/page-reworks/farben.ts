@@ -1,6 +1,6 @@
 import type { Page } from '../../../src/payload-types'
 export const release = {
-  "expectedUpdatedAt": "2026-11-24T13:48:57.183Z",
+  "expectedUpdatedAt": "2026-11-25T10:07:05.691Z",
   "summary": "Farbskalen und klare Rollen für Handlungen, Rückmeldungen und neutrale Oberflächen.",
   "content": [
     {
@@ -1328,6 +1328,106 @@ export const release = {
           ]
         }
       }
+    },
+    {
+      "body": {
+        "root": {
+          "type": "root",
+          "format": "",
+          "indent": 0,
+          "version": 1,
+          "children": [
+            {
+              "tag": "h2",
+              "type": "heading",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "text": "Farben in Charts",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "text": "Datenfarben folgen der Bedeutung und der Darstellung: eine Reihe, mehrere Kategorien, geordnete Werte oder eine Abweichung. Farben und ihre Wiederholung werden im Bereich Datenvisualisierung eingeordnet.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/datenvisualisierung/charts-einordnen",
+                    "newTab": false,
+                    "linkType": "custom"
+                  },
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Charts einordnen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            },
+            {
+              "type": "paragraph",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "type": "link",
+                  "fields": {
+                    "url": "/systems/shadcn/datenvisualisierung/chart-paletten",
+                    "newTab": false,
+                    "linkType": "custom"
+                  },
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Chart-Paletten",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          ],
+          "direction": "ltr"
+        }
+      },
+      "blockName": "col-charts",
+      "blockType": "text"
     }
   ]
 } satisfies { expectedUpdatedAt: string; summary: string; content: Page['content'] }

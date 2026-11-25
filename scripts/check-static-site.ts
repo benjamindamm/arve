@@ -1,3 +1,5 @@
+import {pagePath} from '../src/docs/systems'
+import {snapshotData} from '../src/docs/snapshot-data'
 import assert from 'node:assert/strict'
 import { readFile, readdir, stat } from 'node:fs/promises'
 import path from 'node:path'
@@ -44,8 +46,9 @@ for(const file of html) {
     links++
   }
 }
-for(const page of snapshot.pages) {
-  const relative=page.slug===snapshot.system.home?'systems/'+snapshot.system.slug:page.component?'systems/'+snapshot.system.slug+'/components/'+page.component:'systems/'+snapshot.system.slug+'/'+page.slug.replace(new RegExp('^'+snapshot.system.slug+'-'),'')
+const [system]=await snapshotData.systems(), pages=await snapshotData.pages(system)
+for(const page of pages) {
+  const relative=page.slug===snapshot.system.home?'systems/'+snapshot.system.slug:pagePath(system.slug,page,pages).slice(1)
   const content=await readFile(path.join(root,relative,'index.html'),'utf8')
   assert(content.includes('<h1'),relative)
 }

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import {SiteAnchor as Link} from './site-anchor'
 
 import { layoutExamples } from './layout-metadata'
 
@@ -8,31 +8,34 @@ export function LayoutExamples() {
       <h2 id="seitentypen">Seitentypen</h2>
       <ul className="component-index">
         {layoutExamples.map(({ id, title, description }) => (
-          <li key={id}><Link href={'/systems/shadcn/layout/' + id}><strong>{title}</strong><span> · {description}</span></Link></li>
+          <li key={id}><Link href={'/systems/shadcn/layout/beispiele/' + id}><strong>{title}</strong><span> · {description}</span></Link></li>
         ))}
       </ul>
     </section>
   )
 }
 
-export function LayoutExample({ id }: { id: string }) {
+export function LayoutExample({ id, embedded=false }: { id: string; embedded?:boolean }) {
   const example = layoutExamples.find((item) => item.id === id)
   if (!example) return null
+  const Root=embedded?'div':'main'
   return (
-    <main className="shell layout-example" id="inhalt">
+    <Root className={embedded?'layout-example':'shell layout-example'} id={embedded?undefined:'inhalt'}>
+      {!embedded&&<>
       <Link href="/systems/shadcn/layout">← Layouts</Link>
       <header>
         <h1>{example.title}</h1>
         <p>{example.description}</p>
         <nav aria-label="Seitentypen">
           {layoutExamples.map((item) => (
-            <Link key={item.id} href={'/systems/shadcn/layout/' + item.id}
+            <Link key={item.id} href={'/systems/shadcn/layout/beispiele/' + item.id}
               aria-current={item.id === id ? 'page' : undefined} className={item.id === id ? 'system-button' : 'system-button outline'}>
               {item.title}
             </Link>
           ))}
         </nav>
       </header>
+      </>}
       {id === 'detail' && (
         <div className="layout-split">
           <article className="layout-card">
@@ -72,6 +75,6 @@ export function LayoutExample({ id }: { id: string }) {
           </table>
         </article>
       )}
-    </main>
+    </Root>
   )
 }
