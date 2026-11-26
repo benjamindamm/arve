@@ -45,19 +45,19 @@ export function ArveWorkflows() {
           hidden={active !== index} tabIndex={0} className="platform-workflow-panel">
           <h3>{label}</h3>
           <p>{description}</p>
+          <div className="platform-workflow-actions">
+            {[
+              [['Mit Autoren-Skills starten', '/handbuch/autoren-skills'], ['Zusammenarbeit', '/handbuch/arbeitsweise']],
+              [['Farbklärung ausprobieren', '/handbuch/interaktion-mit-agenten'], ['Redaktion und Seitenstatus', '/handbuch/redaktion']],
+              [['Ein eigenes System aufbauen', '/handbuch/eigenes-system'], ['Zum Arve-Handbuch', '/handbuch']],
+            ][index].map(([text, href], action) => (
+              <Link key={href} href={href} className={action === 0 ? 'platform-primary-link' : 'platform-workflow-secondary'}>
+                {text}<span aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
         </div>
       ))}
-      <nav className="platform-workflow-links" aria-label="Mehr zur Arbeit mit Arve">
-        <p>Im Arve-Handbuch</p>
-        <ul>
-          {[
-            ['Zusammenarbeit', '/handbuch/arbeitsweise'],
-            ['Autoren-Skills', '/handbuch/autoren-skills'],
-            ['Redaktion und Seitenstatus', '/handbuch/redaktion'],
-            ['Ein eigenes System aufbauen', '/handbuch/eigenes-system'],
-          ].map(([label, href]) => <li key={href}><Link href={href}>{label} <span aria-hidden="true">→</span></Link></li>)}
-        </ul>
-      </nav>
     </section>
   )
 }

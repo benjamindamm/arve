@@ -7,7 +7,7 @@ const contractAssets = [
   './src/contracts/libraries/shadcn/5f44094657713ed167897c12a0a21e8ac6ee45fa9fd6983d15a2c77b19aab4ed/**/*',
 ]
 export default withPayload({ agentRules: false, outputFileTracingIncludes: {
-  '/mcp': contractAssets,
+  '/mcp': [...contractAssets, './.agents/skills/arve-*-handbook/**/*.md', './public/mcp-apps/color-review.html'],
   '/systems/*/components/*': contractAssets,
   '/systems/*/components/*/files': contractAssets,
   '/systems/*/components/*/assets/*': contractAssets,

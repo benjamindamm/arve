@@ -63,3 +63,9 @@ Halte für jede relevante Frage ID, Antwort bzw. offene Entscheidung, System-/Pl
 Prüfe vor Übergabe: Sind alle aktiven Fragen beantwortet oder offen? Ist jede behauptete Farbe/Rolle/Paarung belegt oder ein sichtbarer Vorschlag? Wurde Unbekanntes versehentlich ausgeschlossen? Gibt es widersprüchliche Zuordnungen? Belegen berechnete Kontraste die tatsächlich genannten Bedingungen? Keine pauschale Zugänglichkeitsfreigabe aus einem Zahlenwert ableiten.
 
 Der Skill setzt weder Payload noch MCP voraus. Nutze vorhandene Zugänge für Quellen, nicht als Ersatz für Fachentscheidungen. Ein Textentwurf ist kein Auftrag zur Veröffentlichung. Für eine Übernahme in ein CMS gelten der gewählte Umfang und die vorhandene Autorisierung; keine Datenbankstruktur oder Contracts nebenbei ändern.
+
+## Visuell gemeinsam klären
+
+Wenn eine Textfrage die Farbwirkung nicht verständlich macht, zeige zwei bis drei Varianten derselben Situation. Nutze belegte Werte oder ausdrücklich bezeichnete Vorschläge. Frage nach einer Arbeitsrichtung, einer gewünschten Änderung oder „noch offen“. Keine Variante vorwählen. Geltungsbereich, Grundlage und verbleibenden Konflikt angeben; eine Markenfarbe ist nicht automatisch eine Handlungs- oder Statusfarbe. Bei UI-gestützter Klärung die [Interaktionsfragen](../arve-pattern-handbook/references/agent-interaction.md) nutzen.
+
+In Arve kann `compare_color_roles` primäre Handlung und Fehlermeldung vergleichen. Das ist ein begrenzter Einstieg, kein allgemeiner Paletten- oder Charteditor. Das Werkzeug erwartet ein ausdrücklich benanntes Zielsystem, Scope, Frage, Grundlage und Varianten. Ohne UI dieselben Optionen als Text anbieten. Die Nutzerantwort bleibt Gesprächsergebnis; vor einer CMS-Übernahme fachlich einordnen und offene Fragen bewahren. Karten-Hash und Quellenstand nicht gleichsetzen. Kein erforderlicher MCP-Zugang für die übrige Anwendung dieses Skills.

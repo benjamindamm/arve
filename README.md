@@ -97,7 +97,7 @@ Beispielauftrag:
 
 > Lies `.agents/skills/arve-data-visualization-handbook/SKILL.md`. Erarbeite für unser Design-System die Chart-Farbregeln aus unserer Grundpalette. Kläre zuerst die semantischen Archetypen und Konflikte mit bestehenden Farbrollen. Frage nach fehlenden Entscheidungen, bevor du sie als Vorgaben formulierst.
 
-Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Sie werden derzeit **nicht über MCP ausgeliefert**. MCP stellt die veröffentlichten Handbuchinhalte sowie separat die mit den UI-Contracts importierten Bibliotheks-Skills bereit.
+Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Über MCP sind sie mit `list_authoring_skills` auffindbar und mit `get_authoring_skill` schrittweise lesbar. MCP stellt die veröffentlichten Handbuchinhalte sowie separat die mit den UI-Contracts importierten Bibliotheks-Skills bereit.
 
 ## Inhalte pflegen
 
@@ -165,3 +165,9 @@ Arve verwendet **Next.js und React** für das Portal, **Payload CMS** für die R
 - **Zugriffstrennung:** Mehrere Systeme in einer Instanz sind keine getrennten privaten Mandanten. Dafür sind zusätzliche Zugriffskontrollen oder getrennte Instanzen erforderlich.
 
 [Expliziter Datenbank-Erstaufbau](docs/handbook/bootstrap/README.md) · [Gestaltungsvorlagen und Prüfgrenzen](docs/handbook/design-resources/README.md) · [Dokumentierte Agentenprobe](docs/handbook/independent-trial/README.md)
+
+### Interaktive Klärung im Chat
+
+Unter [Interaktion mit Agenten](http://127.0.0.1:3010/handbuch/interaktion-mit-agenten) zeigt Arve einen visuellen Farbvergleich. Im Portal wird die Antwort kopiert; über `compare_color_roles` kann ein MCP-Apps-fähiger Host dieselbe Ansicht im Gespräch öffnen. Der Agent liefert ein ausdrücklich gewähltes Zielsystem, Scope, Grundlage und zwei bis drei Varianten für primäre Handlung und Fehlermeldung. Der Nutzer wählt eine Arbeitsrichtung, beschreibt eine Änderung oder lässt die Frage offen. Eine Übergabe schreibt nichts ins CMS. Text-Clients erhalten vollständige Optionen ohne eingebettete UI.
+
+Die [Autorenfragen für Agentendialoge](.agents/skills/arve-pattern-handbook/references/agent-interaction.md) ergänzen den Pattern-Skill. Der Farb-Skill beschreibt die Anwendung. `npm run build:mcp-apps` erzeugt die eigenständige HTML-Ressource; Entwicklungsstart und Builds führen das automatisch aus. GitHub Pages zeigt die Demo ohne Chat-Anbindung. Prüfgrenzen und Einrichtung stehen im [Pilotbericht](docs/arve-handbook/color-dialog-pilot.md).

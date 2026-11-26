@@ -10,7 +10,7 @@ export async function authoringSkills(){
   const files:{name:string;content:string}[]=[]
   async function read(relative:string){const file=await realpath(path.join(directory,relative));if(!file.startsWith(directory+path.sep))throw Error('Reference outside skill');files.push({name:relative,content:await readFile(file,'utf8')})}
   await read('SKILL.md')
-  try{for(const f of await readdir(path.join(directory,'references'),{withFileTypes:true}))if(f.isFile()&&f.name.endsWith('.md'))await read('references/'+f.name)}catch(e:any){if(e.code!=='ENOENT')throw e}
+  try{for(const f of (await readdir(path.join(directory,'references'),{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name)))if(f.isFile()&&f.name.endsWith('.md'))await read('references/'+f.name)}catch(e:any){if(e.code!=='ENOENT')throw e}
   const source=files[0].content
   result.push({id:entry.name,title:source.match(/^# (.+)$/m)?.[1]??entry.name,description:source.match(/^description: (.+)$/m)?.[1]??'',files})
  }

@@ -26,7 +26,7 @@ Nur bei tatsächlichem Bedarf aktivieren: mehrstufige Abläufe, asynchrone Verar
 
 Bei fehlender Antwort ist eine Übermittlung weder sicher gescheitert noch bestätigt. Wiederholen oder Verwerfen erst nach geklärter Wirkung anbieten. Ein lokales Beispiel darf dieses Problem zeigen, aber keine produktive Statusabfrage oder sichere Wiederholung behaupten.
 
-Für Formulare lies zusätzlich [Formularfragen](references/forms.md). Andere Patterns erhalten nur die für ihren Fall erforderliche Vertiefung. Ein Formularthema muss nicht jeden Such-, Berechtigungs- oder Offlinefall behandeln.
+Für Formulare lies zusätzlich [Formularfragen](references/forms.md). Für eingebettete UI in Agentendialogen lies die [Interaktionsfragen](references/agent-interaction.md). Andere Patterns erhalten nur die für ihren Fall erforderliche Vertiefung. Ein Formularthema muss nicht jeden Such-, Berechtigungs- oder Offlinefall behandeln.
 
 ## Darstellung und Übernahme
 

@@ -93,9 +93,9 @@
   .platform-agent-context dl > div { grid-template-columns: 1fr; gap: 3px; }
 }
 
-.platform-workflow-links { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--arve-line); }
-.platform-workflow-links > p { margin: 0 0 8px; font-size: .85rem; color: var(--muted-foreground); }
-.platform-workflow-links ul { display: flex; flex-wrap: wrap; column-gap: 28px; row-gap: 4px; list-style: none; padding: 0; margin: 0; }
-.platform-workflow-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-block: 8px; color: var(--arve-green); text-decoration: underline; text-underline-offset: 4px; }
-.platform-workflow-links a:focus-visible { outline: 2px solid var(--arve-green); outline-offset: 4px; }
-@media (max-width: 600px) { .platform-workflow-links ul { display: grid; gap: 0; } }
+.platform-workflow-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; font-size: 14px; }
+.platform-workflow-actions a { text-decoration: none; border: 1px solid var(--arve-green); border-radius: 4px; }
+.platform-workflow-secondary { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 48px; padding: 12px 18px; color: var(--arve-green); background: transparent; font-weight: 550; }
+.platform-workflow-secondary:hover { background: #edf1e9; }
+.platform-workflow-actions a:focus-visible { outline: 2px solid var(--arve-green); outline-offset: 4px; }
+@media (max-width: 600px) { .platform-workflow-actions { flex-direction: column; align-items: stretch; } }

@@ -28,6 +28,8 @@ jobs:
         run: npm run check:mcp:unit
       - uses: actions/configure-pages@v6.0.0
         id: pages
+      - name: Check agent dialog and authoring skill access
+        run: npm run build:mcp-apps && npm run check:agent-ui
       - name: Check editorial status and reference copies
         run: node --import tsx --test scripts/editorial.test.ts scripts/system-template.test.ts
       - name: Check foundation color scales and contrast

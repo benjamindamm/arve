@@ -22,14 +22,19 @@
     "reference:export": "node --import tsx scripts/system-template.ts export",
     "reference:import": "node --env-file-if-exists=.env --import tsx scripts/system-template.ts import",
     "reference:setup": "node --env-file-if-exists=.env --import tsx scripts/setup-reference.ts",
-    "predev": "npm run reference:setup",
+    "predev": "npm run reference:setup && npm run build:mcp-apps",
     "start": "next start --hostname 127.0.0.1 --port 3010",
     "prestart": "npm run reference:setup",
     "check:reference": "node --import tsx --test scripts/system-template.test.ts",
     "reference:capture": "node --env-file-if-exists=.env --import tsx scripts/bootstrap-handbook-export.ts",
     "check:reference:db": "node --env-file=.env --import tsx scripts/system-template.integration.ts",
     "check:handbook-paths": "node --import tsx --test scripts/handbook-paths.test.ts",
-    "db:editorial": "node --env-file-if-exists=.env --import tsx scripts/add-editorial-fields.ts"
+    "db:editorial": "node --env-file-if-exists=.env --import tsx scripts/add-editorial-fields.ts",
+    "build:mcp-apps": "node scripts/build-mcp-apps.mjs",
+    "prebuild": "npm run build:mcp-apps",
+    "prebuild:static": "npm run build:mcp-apps",
+    "check:agent-ui": "node --import tsx --test scripts/agent-ui.test.ts",
+    "preview:agent-ui": "npm run build:mcp-apps && node --import tsx scripts/agent-ui-host.ts"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",
@@ -39,6 +44,7 @@
     "@angular/forms": "21.2.26",
     "@angular/platform-browser": "21.2.26",
     "@base-ui/react": "1.9.0",
+    "@modelcontextprotocol/ext-apps": "1.7.5",
     "@modelcontextprotocol/sdk": "1.32.2",
     "@payloadcms/db-postgres": "3.93.0",
     "@payloadcms/next": "3.93.0",
@@ -60,6 +66,7 @@
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "esbuild": "0.25.12",
     "parse5": "8.1.1",
     "tsx": "4.23.15",
     "typescript": "~5.9.3"

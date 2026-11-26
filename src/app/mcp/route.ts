@@ -1,3 +1,5 @@
+import {registerColorReview} from '../../agent-ui/register'
+import {registerAuthoringSkills} from '../../agent-ui/authoring-mcp'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js'
 import { z } from 'zod'
@@ -33,6 +35,8 @@ export async function POST(request: Request) {
   }
 
   const server = new McpServer({ name: 'design-system', version: '0.1.0' })
+  registerColorReview(server)
+  registerAuthoringSkills(server)
   const transport = new WebStandardStreamableHTTPServerTransport({ enableJsonResponse: true })
   const slug = z.string().regex(/^[a-z][a-z0-9-]{0,79}$/)
   const sectionPath = z.string().max(500).regex(/^[a-z][a-z0-9-]*(?:\/[a-z][a-z0-9-]*)*$/)
