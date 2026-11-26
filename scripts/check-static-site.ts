@@ -1,3 +1,4 @@
+import {authoringSkills} from '../src/docs/authoring-skills'
 import {pagePath} from '../src/docs/systems'
 import {snapshotData} from '../src/docs/snapshot-data'
 import assert from 'node:assert/strict'
@@ -58,4 +59,15 @@ for(const [name,expected]of Object.entries(publication.assets)) {
 }
 assert(!(await exists(path.join(root,'admin'))));assert(!(await exists(path.join(root,'mcp'))))
 assert(await exists(path.join(root,'404.html')))
-console.log(JSON.stringify({status:'PASS',html:html.length,handbookPages:snapshot.pages.length,components:snapshot.pages.filter(p=>p.component).length,internalLinks:links,verifiedAssets:Object.keys(publication.assets).length,basePath:base,backend:false}))
+let skillFiles=0
+for(const skill of await authoringSkills())for(const source of skill.files){
+  const filename=path.join(root,'handbuch/dateien',skill.id,source.name,'index.html')
+  const dom=parse(await readFile(filename,'utf8'))
+  let original:string|undefined
+  function textOf(node:any):string{return node.nodeName==='#text'?node.value:(node.childNodes??[]).map(textOf).join('')}
+  function findSource(node:any){if(node.tagName==='pre'&&node.attrs?.some((a:any)=>a.name==='class'&&a.value.split(' ').includes('guide-full-source')))original=textOf(node);for(const child of node.childNodes??[])findSource(child)}
+  findSource(dom)
+  assert.equal(original,source.content,'Skill source changed during publication: '+source.name)
+  skillFiles++
+}
+console.log(JSON.stringify({status:'PASS',html:html.length,skillFiles,handbookPages:snapshot.pages.length,components:snapshot.pages.filter(p=>p.component).length,internalLinks:links,verifiedAssets:Object.keys(publication.assets).length,basePath:base,backend:false}))

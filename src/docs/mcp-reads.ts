@@ -48,7 +48,7 @@ export function pageSections(page: Record<string, unknown>) {
     })
   }
   // Layout examples and resource/pattern catalogs may store guidance outside content.
-  const extra = Object.fromEntries(Object.entries(page).filter(([key]) => !['content','templateSections','system','component','path','pageUrl','kind','title','summary','updatedAt','pageType'].includes(key)))
+  const extra = Object.fromEntries(Object.entries(page).filter(([key]) => !['content','templateSections','system','component','path','pageUrl','kind','title','summary','updatedAt','pageType','editorial'].includes(key)))
   if (Object.keys(extra).length) { const text = plain(extra); entries.push({ id: `metadata-${snapshotOf(extra).slice(0,12)}`, source: 'metadata', key: 'metadata', title: 'Zusätzliche Angaben', text, sha256: digest(text) }) }
   return entries
 }
@@ -63,7 +63,7 @@ export function compactDocumentation(page: Record<string, unknown>, args: Record
     return { id: section.id, key: section.key, title: section.title, source: section.source, ...chunk, read: { tool: 'get_documentation_section', arguments: { ...args, snapshot, sectionId: section.id, offset: 0, limit: 6000 } }, ...(chunk.nextOffset !== null ? { next: { tool: 'get_documentation_section', arguments: { ...args, snapshot, sectionId: section.id, offset: chunk.nextOffset, limit: 6000 } } } : {}) }
   })
   const nextOffset = offset + previews.length < sections.length ? offset + previews.length : null
-  return { view: 'compact', ...Object.fromEntries(['kind','path','pageUrl','title','summary','updatedAt','pageType'].filter(key => key in page).map(key => [key,page[key]])), snapshot,
+  return { view: 'compact', ...Object.fromEntries(['kind','path','pageUrl','title','summary','updatedAt','pageType','editorial'].filter(key => key in page).map(key => [key,page[key]])), snapshot,
     readingScope: 'Plain-text previews of source blocks, in source order. Wording and applicability are not summarized. Previews and section pages may be incomplete; read every continuation needed for a decision. Structured source remains available with view=full.',
     sections: previews, pagination: { offset, limit, total: sections.length, nextOffset },
     omissions: ['Original rich-text structure and non-text values', ...(previews.some(s => !s.complete) ? ['Remainder of previewed sections; follow section next calls'] : []), ...(nextOffset !== null || offset > 0 ? ['Sections outside this page'] : [])],
@@ -76,7 +76,7 @@ export function compactComponent(page: Component, requestUrl: string) {
   const argumentsBase = { system: page.system, component: page.component, snapshot, revision: contract?.revision }
   const read = (domain: string) => ({ tool: 'get_component_domain', arguments: { ...argumentsBase, domain, offset: 0, limit: 6000 } })
   const guidance = compactDocumentation({ content: page.content, templateSections: page.templateSections }, { system: page.system, section: page.component })
-  return { view: 'compact', system: page.system, component: page.component, title: page.title, summary: page.summary, updatedAt: page.updatedAt,
+  return { view: 'compact', system: page.system, component: page.component, title: page.title, summary: page.summary, updatedAt: page.updatedAt, editorial:page.editorial,
     pageUrl: new URL(page.path,requestUrl).href, snapshot, contractReference: page.contractReference,
     contract: contract ? { library: contract.library, component: contract.component, revision: contract.revision, origin: contract.origin, status: contract.status, sources: contract.sources } : null,
     nextSteps: page.nextSteps, catalogue: page.catalogue,

@@ -174,6 +174,18 @@ export interface DesignSystem {
 export interface Page {
   id: number;
   title: string;
+  /**
+   * Unabhängig von Entwurf/Veröffentlichung. Wird im Portal und über MCP angezeigt.
+   */
+  editorialStatus?: ('draft' | 'clarify' | 'review' | 'checked') | null;
+  /**
+   * Bei „Zu klären“ erforderlich. Bei „Geprüft“ den geprüften Umfang beschreiben. Öffentlich sichtbar.
+   */
+  editorialNote?: string | null;
+  /**
+   * Optionales Team oder verantwortliche Rolle. Öffentlich sichtbar.
+   */
+  editorialOwner?: string | null;
   system?: string | null;
   designSystem?: (number | null) | DesignSystem;
   parent?: (number | null) | Page;
@@ -506,6 +518,9 @@ export interface DesignSystemsSelect<T extends boolean = true> {
  */
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
+  editorialStatus?: T;
+  editorialNote?: T;
+  editorialOwner?: T;
   system?: T;
   designSystem?: T;
   parent?: T;

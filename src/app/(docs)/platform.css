@@ -92,3 +92,10 @@
   .platform-intro h1 { font-size: 34px; }
   .platform-agent-context dl > div { grid-template-columns: 1fr; gap: 3px; }
 }
+
+.platform-workflow-links { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--arve-line); }
+.platform-workflow-links > p { margin: 0 0 8px; font-size: .85rem; color: var(--muted-foreground); }
+.platform-workflow-links ul { display: flex; flex-wrap: wrap; column-gap: 28px; row-gap: 4px; list-style: none; padding: 0; margin: 0; }
+.platform-workflow-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding-block: 8px; color: var(--arve-green); text-decoration: underline; text-underline-offset: 4px; }
+.platform-workflow-links a:focus-visible { outline: 2px solid var(--arve-green); outline-offset: 4px; }
+@media (max-width: 600px) { .platform-workflow-links ul { display: grid; gap: 0; } }

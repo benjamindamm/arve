@@ -10,7 +10,7 @@ import config from '../src/payload.config'
 
 import { shadcnReferenceRevision } from '../src/contracts/current-reference'
 export const revision = shadcnReferenceRevision
-const pageFields=['title','system','pageType','template','order','summary','component','contract','demo','slug','content','_status','parent']
+const pageFields=['title','system','pageType','template','order','summary','editorialStatus','editorialNote','editorialOwner','component','contract','demo','slug','content','_status','parent']
 const implementationFields=['name','platform','releaseStatus','packageName','packageVersion','owner','contexts','contract','verification','_status','componentPage']
 export function clean(x:any):any {
  if(Array.isArray(x))return x.map(clean)
@@ -53,7 +53,7 @@ export async function bootstrap(payload:any,snapshot:any,apply=false){
   if(apply){
    if(!system){const {home,...data}=snapshot.system;system=await payload.create({collection:'design-systems',data,req})}
    // Phase 1: allocate every page identity before resolving parent/home relationships.
-   for(const page of missingPages){const {parent,...data}=page;bySlug.set(page.slug,await payload.create({collection:'pages',data:{...data,designSystem:system.id},draft:false,req}))}
+   for(const page of missingPages){const {parent,...data}=page;bySlug.set(page.slug,await payload.create({collection:'pages',data:{...data,editorialStatus:data.editorialStatus??null,designSystem:system.id},draft:false,req}))}
    // Phase 2: resolve exclusively through this system's logical slug map.
    for(const page of missingPages)if(page.parent)await payload.update({collection:'pages',id:bySlug.get(page.slug).id,data:{parent:bySlug.get(page.parent).id},draft:false,req})
    if(result.system==='create')await payload.update({collection:'design-systems',id:system.id,data:{home:bySlug.get(snapshot.system.home).id},req})

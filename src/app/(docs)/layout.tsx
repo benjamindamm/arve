@@ -5,6 +5,7 @@ import type { ReactNode, CSSProperties } from 'react'
 import './docs.css'
 import './handbook.css'
 import { sitePath, staticPublication } from '../../docs/site-path'
+import {SiteMenu} from '../../docs/site-menu'
 
 export const metadata: Metadata = {
   title: { default: 'Arve — Design-Systeme', template: '%s | Arve' },
@@ -19,12 +20,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
         <header className="site-header">
           <div className="shell topbar">
             <Link href="/" className="brand arve-brand"><span aria-hidden="true" className="arve-mark" />Arve</Link>
-            <nav aria-label="Hauptnavigation">
-              <Link href="/#workflows">Zusammenarbeit</Link>
-              <Link href="/#mcp">Mit KI arbeiten</Link>
-              <Link href="/#systeme">Design-Systeme</Link>
-            </nav>
-            {!staticPublication && <SiteAnchor className="system-button outline" href="/admin">CMS öffnen <span aria-hidden="true">↗</span></SiteAnchor>}
+            <SiteMenu cmsEnabled={!staticPublication}/>
           </div>
         </header>
         {children}

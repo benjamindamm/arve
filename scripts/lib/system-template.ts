@@ -34,7 +34,7 @@ export function prepareTemplate(source: Snapshot, slug: string, name: string) {
   }
   const result = rewrite(source) as Snapshot
   result.system = { ...result.system, slug, name: name.trim(), home: slugs.get(source.system.home) }
-  result.pages = result.pages.map(page => ({ ...page, slug: slugs.get(page.slug), parent: page.parent ? slugs.get(page.parent) : undefined, system: slug, _status: 'draft' }))
+  result.pages = result.pages.map(page => ({ ...page, slug: slugs.get(page.slug), parent: page.parent ? slugs.get(page.parent) : undefined, system: slug, _status: 'draft', editorialStatus:'draft', editorialNote:null, editorialOwner:null }))
   result.implementations = result.implementations.map(impl => {
     assert(slugs.has(impl.componentPage), 'External implementation page')
     return { ...impl, componentPage: slugs.get(impl.componentPage), _status: 'draft', releaseStatus: 'draft', verification: { ...impl.verification, scope: `Aus der Referenz ${original} übernommen; für ${name.trim()} noch nicht geprüft.\n${impl.verification?.scope ?? ''}` } }

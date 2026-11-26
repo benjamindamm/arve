@@ -1,3 +1,5 @@
+import {EditorialPage} from '../../../../docs/editorial-page'
+import {editorialOf} from '../../../../docs/editorial'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Content } from '../../../../docs/content'
@@ -10,14 +12,14 @@ export default async function SystemHome({ params }: { params: Promise<{ system:
   const { system: slug } = await params
   const [system, documentation, systems] = await Promise.all([readSystem(slug), documentationTree(slug), listSystems()])
   if (!system || !documentation) notFound()
-  if (slug === 'shadcn') return <ShadcnHome theme={system.theme} entries={documentation.tree} />
   const id = relationId(system.home)
   const home = id ? await (await documentationData()).page(system,{id}) : undefined
+  if (slug === 'shadcn') return <EditorialPage as="section" className="shell system-home-editorial" editorial={editorialOf(home)}><ShadcnHome theme={system.theme} entries={documentation.tree} /></EditorialPage>
   const first = documentation.tree[0]
 
   return (
     <main id="inhalt" className="shell" data-system-theme={system.theme}>
-      <section className="hero">
+      <EditorialPage as="section" className="hero" editorial={editorialOf(home)}>
         <div className="hero-content">
           <h1>{home?.title ?? system.name}</h1>
           {system.description && <p className="hero-copy">{system.description}</p>}
@@ -26,7 +28,7 @@ export default async function SystemHome({ params }: { params: Promise<{ system:
             <Link className="system-button" href={first.path}>{first.title} ansehen ↗</Link>
           </div>}
         </div>
-      </section>
+      </EditorialPage>
       {!!documentation.tree.length && (
         <section className="catalog" aria-labelledby="systembereiche">
           <div className="section-title"><h2 id="systembereiche">Dokumentation</h2></div>

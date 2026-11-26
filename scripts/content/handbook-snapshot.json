@@ -1,7 +1,7 @@
 {
   "format": 1,
-  "sourceCommit": "fc2d463d589c23e3b058a5c5c035be2c625b5173",
-  "capturedAt": "2026-11-25T14:44:21.949Z",
+  "sourceCommit": "a8057176feb1588061c054b2e0644c62172d9cec",
+  "capturedAt": "2026-11-26T09:40:24.953Z",
   "contractRevision": "30c4964806cddb026155c6d3126dbe8251b34c34f81640b07b0d59b916343c90",
   "system": {
     "name": "shadcn",
@@ -41546,11 +41546,1121 @@
         "component": {}
       },
       "order": 0,
-      "summary": "Anforderungen erklären, Eingaben erhalten und den Speicherstand verständlich zeigen; der lokale Web-Projektpilot veranschaulicht die Ziele.",
+      "summary": "Angaben klar gliedern, Fehler gezielt korrigieren und Ergebnisse verständlich zeigen.",
       "contract": {},
       "demo": {},
       "slug": "shadcn-formulare-validierung",
       "content": [
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Aufbau wählen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Kurze Aufgaben auf einer Seite erledigen. Zusammengehörige Angaben gruppieren.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Schritte nur bei sinnvoller Aufteilung; Zurück erhält Eingaben. Sofort wirksame Einstellungen brauchen oft kein Absenden.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Anforderungen vor der Eingabe erklären. Gültige Angaben bei Fehlern erhalten. Gültige Eingabe ist keine bestätigte Annahme; ein unbekanntes Ergebnis kein sicherer Fehlschlag. Zusammenfassung und nächste Handlung am belegten Stand ausrichten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "goals",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Ausprobieren: Kontaktanfrage",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Lokale Simulation: nichts wird übertragen oder gespeichert. Erst leer senden, dann korrigieren. Die Antwort wird über die Beispielsteuerung gewählt.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Name (erforderlich)",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Vor- und Nachname.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Gib deinen Namen ein.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-name",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "E-Mail-Adresse (erforderlich)",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Zum Beispiel alex@example.org.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Gib eine E-Mail-Adresse ein.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Prüfe die E-Mail-Adresse, zum Beispiel alex@example.org.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-email",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Nachricht (optional)",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-note",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Andere Antwort ausprobieren",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Für eine andere Antwort Beispiel zurücksetzen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-choice",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Übermittlung läuft",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die Anfrage wird übermittelt …",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Keine zweite Anfrage auslösen. Die Eingaben bleiben sichtbar.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-response-pending",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Annahme bestätigt",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Deine Anfrage ist eingegangen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Dies ist eine simulierte Bestätigung, keine gespeicherte Anfrage.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-response-confirmed",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Nicht angenommen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Die Anfrage wurde nicht angenommen. Deine Angaben bleiben erhalten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Vorgangsfehler: Die Felder sind gültig. Im Beispiel ist die Nichtannahme bestätigt; erneutes Versuchen ist möglich.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-response-rejected",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Ergebnis unbekannt",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Es ist unklar, ob die Anfrage angekommen ist.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Nicht erneut senden. In einer echten Anwendung muss zuerst der ursprüngliche Vorgang geklärt werden. Dieses Beispiel hat keine Statusabfrage.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "demo-response-unknown",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Felder verständlich machen",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Dauerhafte Labels statt Placeholder als einzige Beschriftung. Pflicht und optional vor der Eingabe kennzeichnen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Hilfe steht am Feld und nennt nur nötige Anforderungen. Eingabeformate möglichst tolerant behandeln. Inhaltlich zusammengehörige Felder in sinnvoller Reihenfolge gruppieren.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "fields",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Prüfen und korrigieren",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Fehler zeigen, wenn eine Prüfung hilfreich ist. Den ersten Prüfzeitpunkt und die Prüfung nach Korrektur getrennt festlegen; nicht jede begonnene Eingabe sofort als falsch markieren.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Feldfehler nennt die nötige Korrektur direkt am Feld. Ein Vorgangsfehler erklärt das Problem am Formular, ohne gültige Felder rot zu markieren. Andere Eingaben bleiben erhalten.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Bei mehreren Fehlern kann eine verlinkte Übersicht helfen. Bei einem einzelnen Fehler direkt zum Feld führen. Zeitpunkt und Fokus an Umfang und Plattform anpassen.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "validation",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Warum das Beispiel so reagiert",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Lokale Beispielregeln: zwei erforderliche Kontaktangaben und eine optionale Nachricht, ohne erfundene Längengrenze. Erste Prüfung beim Absenden; ein noch fehlerhaftes Feld wird danach beim Verlassen erneut geprüft. Eine korrigierte E-Mail wird nur syntaktisch geprüft, nicht auf Existenz.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Bei zwei Fehlern erhält die Übersicht den Fokus, bei einem das Feld. Nach gültiger Eingabe zeigt die Simulation die gewählte Antwort; Rückmeldungen bekommen den Fokus. Bei laufender oder ungeklärter Übermittlung sind Bearbeiten und erneutes Senden gesperrt. Die Antwortwahl bleibt nach einem Ergebnis gesperrt. „Beispiel zurücksetzen“ ist eine Lernfunktion ausserhalb des Formulars und ermöglicht einen neuen Durchlauf.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Ein echter Abbruch muss vor Datenverlust warnen, wenn Änderungen betroffen sind. Dieses Beispiel zeigt keine produktive Navigation, Entwurfsspeicherung oder Wiederherstellung. Für folgenreiche Vorgänge kann vor dem Senden zusätzlich Prüfen/Ändern nötig sein.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "example-rules",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Passende Bausteine",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/components/input",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Input",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/components/textarea",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Textfeld für längere Angaben",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/layout/content-layouts/form-layout",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Formularfelder und Gruppen",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/layout/page-types/create-edit",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Erstellen und Bearbeiten",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/layout/page-types/review-decision",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Prüfen und Entscheiden",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "/systems/shadcn/laden-leer-fehler",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "Laden, leer und Fehler",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "connections",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Quellen und Geltung",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Lokaler Handbuchentwurf auf Grundlage des UX-Reviews und des Pattern-Autoren-Skills. WAI Forms Tutorials zu Validierung und Rückmeldungen am 25.11.2026 gelesen. Sie behandeln unter anderem Pflichtangaben, verständliche Formate, Feldzuordnung und unterschiedliche Prüfzeitpunkte. Der konkrete Prüftakt dieses Beispiels ist eine lokale Entscheidung.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Allgemeine Ziele gelten unabhängig vom Framework. Die Demo veranschaulicht Web-Bedienung; sie belegt keine Serververarbeitung, Screenreader- oder native Plattformfreigabe.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "WAI · Validierung",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "type": "link",
+                      "fields": {
+                        "url": "https://www.w3.org/WAI/tutorials/forms/notifications/",
+                        "newTab": false,
+                        "linkType": "custom"
+                      },
+                      "format": "",
+                      "indent": 0,
+                      "version": 1,
+                      "children": [
+                        {
+                          "text": "WAI · Rückmeldungen",
+                          "type": "text",
+                          "version": 1
+                        }
+                      ],
+                      "direction": "ltr"
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "sources",
+          "blockType": "text"
+        },
+        {
+          "body": {
+            "root": {
+              "type": "root",
+              "format": "",
+              "indent": 0,
+              "version": 1,
+              "children": [
+                {
+                  "tag": "h2",
+                  "type": "heading",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Früherer Projektpilot",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                },
+                {
+                  "type": "paragraph",
+                  "format": "",
+                  "indent": 0,
+                  "version": 1,
+                  "children": [
+                    {
+                      "text": "Historischer Einfeldpilot und damalige Erläuterungen. Seine Feldgrenzen, URL-Parameter und Fokusregeln sind keine allgemeinen Vorgaben.",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr"
+                }
+              ],
+              "direction": "ltr"
+            }
+          },
+          "blockName": "forms-history",
+          "blockType": "text"
+        },
         {
           "body": {
             "root": {
@@ -41634,7 +42744,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "goals",
+          "blockName": "forms-history-goals",
           "blockType": "text"
         },
         {
@@ -41678,7 +42788,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "example-scope",
+          "blockName": "forms-history-example-scope",
           "blockType": "text"
         },
         {
@@ -41778,7 +42888,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "example",
+          "blockName": "forms-history-example",
           "blockType": "text"
         },
         {
@@ -41920,7 +43030,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "phases",
+          "blockName": "forms-history-phases",
           "blockType": "text"
         },
         {
@@ -42006,7 +43116,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-input",
+          "blockName": "forms-history-state-input",
           "blockType": "text"
         },
         {
@@ -42106,7 +43216,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-error",
+          "blockName": "forms-history-state-error",
           "blockType": "text"
         },
         {
@@ -42206,7 +43316,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-dirty",
+          "blockName": "forms-history-state-dirty",
           "blockType": "text"
         },
         {
@@ -42306,7 +43416,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-saving",
+          "blockName": "forms-history-state-saving",
           "blockType": "text"
         },
         {
@@ -42406,7 +43516,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-confirmed",
+          "blockName": "forms-history-state-confirmed",
           "blockType": "text"
         },
         {
@@ -42506,7 +43616,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-rejected",
+          "blockName": "forms-history-state-rejected",
           "blockType": "text"
         },
         {
@@ -42620,7 +43730,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "state-unknown",
+          "blockName": "forms-history-state-unknown",
           "blockType": "text"
         },
         {
@@ -42692,7 +43802,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "rules",
+          "blockName": "forms-history-rules",
           "blockType": "text"
         },
         {
@@ -42741,7 +43851,7 @@
                     {
                       "type": "link",
                       "fields": {
-                        "url": "/systems/shadcn/layout/content-layouts/form-layout",
+                        "url": "/systems/shadcn/content-layout-form-layout",
                         "newTab": false,
                         "linkType": "custom"
                       },
@@ -42769,7 +43879,7 @@
                     {
                       "type": "link",
                       "fields": {
-                        "url": "/systems/shadcn/layout/page-types/create-edit",
+                        "url": "/systems/shadcn/page-type-create",
                         "newTab": false,
                         "linkType": "custom"
                       },
@@ -42797,7 +43907,7 @@
                     {
                       "type": "link",
                       "fields": {
-                        "url": "/systems/shadcn/layout/page-types/create-edit",
+                        "url": "/systems/shadcn/page-type-edit",
                         "newTab": false,
                         "linkType": "custom"
                       },
@@ -42825,7 +43935,7 @@
                     {
                       "type": "link",
                       "fields": {
-                        "url": "/systems/shadcn/layout/page-types/detail",
+                        "url": "/systems/shadcn/detailseite",
                         "newTab": false,
                         "linkType": "custom"
                       },
@@ -42848,7 +43958,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "connections",
+          "blockName": "forms-history-connections",
           "blockType": "text"
         },
         {
@@ -42920,7 +44030,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "sources",
+          "blockName": "forms-history-sources",
           "blockType": "text"
         },
         {
@@ -42992,7 +44102,7 @@
               "direction": "ltr"
             }
           },
-          "blockName": "contract",
+          "blockName": "forms-history-contract",
           "blockType": "text"
         },
         {
@@ -43000,6 +44110,7 @@
           "summary": "Beim Erstellen eines Projekts wird der Name erst mit «Projekt erstellen» übermittelt. Die acht Zustände zeigen auch Fehler und alternative Ergebnisse. Darunter folgt die Bearbeitung eines bestehenden Namens. Eine gültige Eingabe, eine laufende Anfrage und eine bestätigte Speicherung müssen erkennbar verschieden bleiben.",
           "caption": "Statische Ablaufstudie mit allen Verzweigungen im Text. Sie enthält kein ausführbares Formular und keinen SCXML-Contract. Speicherung, Statusabfrage und sichere Wiederholung sind damit nicht nachgewiesen.",
           "source": "Lokale Gestaltungsentscheidung für den Piloten vom 18.11.2026 auf Grundlage der bestehenden achtteiligen Formularstudie. Sie ist keine Vorgabe des ursprünglichen Designsystems, keine Firmenregel und keine Produktfreigabe.",
+          "blockName": "forms-history-15",
           "steps": [
             {
               "key": "eingeben",
@@ -43127,6 +44238,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-16",
           "blockType": "text"
         },
         {
@@ -43214,6 +44326,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-17",
           "blockType": "text"
         },
         {
@@ -43301,6 +44414,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-18",
           "blockType": "text"
         },
         {
@@ -43388,6 +44502,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-19",
           "blockType": "text"
         },
         {
@@ -43511,6 +44626,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-20",
           "blockType": "text"
         },
         {
@@ -43580,6 +44696,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-21",
           "blockType": "text"
         },
         {
@@ -43649,6 +44766,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-22",
           "blockType": "text"
         },
         {
@@ -43842,6 +44960,7 @@
               "direction": "ltr"
             }
           },
+          "blockName": "forms-history-23",
           "blockType": "text"
         }
       ],

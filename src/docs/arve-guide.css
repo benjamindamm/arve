@@ -1,0 +1,54 @@
+.arve-guide{display:grid;grid-template-columns:230px minmax(0,1fr);gap:4rem;padding-top:3rem;padding-bottom:4rem}
+.arve-guide aside>p{font-size:.8rem;font-weight:600}
+.arve-guide nav{display:grid;gap:.5rem}
+.arve-guide nav a{padding:.6rem .5rem;text-decoration:none;font-size:.9rem}
+.arve-guide nav a[aria-current=page]{font-weight:600;background:var(--muted,#f5f5f5)}
+.arve-guide article{min-width:0;max-width:920px}
+.arve-guide article>h2{margin-top:2.5rem}
+.arve-guide p,.arve-guide li{max-width:68ch;line-height:1.7}
+.arve-guide li{margin:.8rem 0}
+.arve-guide-eyebrow{font-size:.8rem;color:var(--muted-foreground,#525252)}
+.arve-guide-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:2rem 0}
+.arve-guide-cards>a,.arve-guide-cards>section{padding:1.3rem;border:1px solid var(--border,#ddd);text-decoration:none;color:inherit;min-width:0}
+.arve-guide-cards h2{font-size:1.1rem;margin:0 0 .5rem}
+.arve-guide-cards p{font-size:.9rem;margin:0}
+.arve-status-options{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.5rem 0}
+.arve-status-options button{font:inherit;padding:.6rem .9rem;min-height:44px;background:var(--background,#fff);color:inherit;border:1px solid var(--border,#aaa);border-radius:4px;cursor:pointer}
+.arve-status-options button[aria-pressed=true]{background:var(--foreground,#171717);color:var(--background,#fff)}
+.arve-editorial-demo .editorial-page{padding:1.5rem;border:1px solid var(--border,#ddd);margin:1.5rem 0}
+.arve-editorial-demo h2{font-size:1.3rem}
+.authoring-skill-list>details{border-top:1px solid var(--border,#ddd);padding:1rem 0}
+.authoring-skill-list summary{font-weight:600;cursor:pointer;line-height:1.5}
+.authoring-skill-file{margin-top:1rem}
+.authoring-skill-file summary{font-family:monospace;font-size:.85rem}
+.authoring-skill-file pre{background:var(--muted,#f5f5f5);padding:1rem;border:1px solid var(--border,#ddd);font-size:.8rem;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;max-height:65vh;overflow:auto}
+.arve-guide code{overflow-wrap:anywhere}
+@media(max-width:800px){.arve-guide{grid-template-columns:1fr;gap:2rem;padding-top:1.5rem}.arve-guide nav{display:flex;flex-wrap:wrap;gap:.3rem}.arve-guide nav a{border:1px solid var(--border,#ddd)}.arve-guide-cards{grid-template-columns:1fr}.arve-editorial-demo .editorial-page{padding:1rem}}
+.arve-chapters-compact{display:none}
+.guide-example{margin:2rem 0;padding:1.5rem;border:1px solid var(--border,#ddd)}
+.guide-example h2{margin-top:0}
+.guide-command{margin:1.25rem 0;padding:1rem;background:var(--muted,#f5f5f5);border:1px solid var(--border,#ddd)}
+.guide-command pre,.guide-full-source{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.85rem;line-height:1.7}
+.guide-command pre{margin:0 0 1rem}
+.guide-copy{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.5rem;max-width:100%}
+.guide-copy button{min-height:44px;padding:.5rem .8rem;font:inherit;font-size:.85rem;background:var(--background,#fff);color:inherit;border:1px solid var(--border,#aaa);border-radius:4px;cursor:pointer}
+.guide-copy [role=status]{font-size:.8rem;overflow-wrap:anywhere}
+.guide-copy button:focus-visible,.arve-chapters-compact summary:focus-visible,.guide-file-actions a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.guide-caption{font-size:.85rem;color:var(--muted-foreground,#525252)}
+.guide-workflow{display:grid;gap:1.5rem;margin:2rem 0;padding-left:1.25rem;border-left:2px solid var(--border,#ddd)}
+.guide-workflow h3{margin:0 0 .4rem;font-size:1rem}.guide-workflow p{margin:0}
+.guide-more{margin:2rem 0;padding:1rem 0;border-top:1px solid var(--border,#ddd)}
+.guide-more>summary{font-weight:600;cursor:pointer;min-height:44px;align-content:center}
+.guide-file-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin:1rem 0}
+.guide-file-actions>a{display:inline-flex;align-items:center;min-height:44px}
+.guide-full-source{padding:1.25rem;background:var(--muted,#f5f5f5);border:1px solid var(--border,#ddd)}
+@media(max-width:800px){
+ .arve-guide .arve-chapters-wide{display:none}
+ .arve-chapters-compact{display:block;border:1px solid var(--border,#ddd)}
+ .arve-chapters-compact>summary{padding:.8rem;min-height:44px;cursor:pointer;font-size:.9rem;line-height:1.5}
+ .arve-guide .arve-chapters-compact nav{display:grid;gap:0;padding:.25rem}
+ .arve-guide .arve-chapters-compact nav a{border:0;padding:.75rem;min-height:44px;line-height:1.5}
+ .guide-example{padding:1rem}.guide-full-source{padding:.8rem}
+ .arve-status-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+ .arve-status-options button{padding:.6rem .3rem}
+}

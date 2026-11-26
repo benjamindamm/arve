@@ -1,3 +1,4 @@
+import {editorialOf,type Editorial} from './editorial'
 import type {Page,DesignSystem} from '../payload-types'
 import { isLayoutRedirect,legacyLayoutSections } from './handbook-paths'
 import { catalogueMeta } from './component-catalogue-data'
@@ -15,6 +16,7 @@ import { pagePath, readSystem, relationId, sectionSlug } from './systems'
 
 export type Entry = {
   slug: string
+  editorial?: Editorial
   title: string
   path: string
   summary?: string
@@ -60,7 +62,7 @@ export async function documentationTree(system: string) {
     const section = page && pageSections(page).find(section => section.key === config.key)
     if (!page || !section) return []
     return [{ entry: { slug: config.slug, title: page.title + ' · ' + section.title, path: page.path, kind: 'section' as const,
-      summary: config.why, guidance: { sourceBlock: config.key, scope: 'This original guidance block only; local examples and layout measurements elsewhere on the page are not general requirements.' },
+      summary: config.why, editorial:page.editorial, guidance: { sourceBlock: config.key, scope: 'This original guidance block only; local examples and layout measurements elsewhere on the page are not general requirements.' },
       retrieval: { tool: 'get_documentation_page' as const, arguments: { system, section: config.slug } },
       matchedSection: { tool: 'get_documentation_section' as const, arguments: { system, section: config.slug, snapshot: snapshotOf(page), sectionId: section.id, offset: 0, limit: 6000 } } },
       discoveryAliases: [...config.aliases], sections: [{ id: section.id, text: section.text }] }]
@@ -74,7 +76,7 @@ export async function documentationTree(system: string) {
     const catalogue = page.component ? catalogueMeta({slug,path,summary:page.summary ?? undefined}) : undefined
     searchText.set(path, [catalogue?.description ?? '', catalogue?.keywords ?? '', JSON.stringify(designResources(system, slug) ?? ''), plainText(page.content), ...readTemplate(page.pageType, page.template).map(({ label, text }) => label + ' ' + text)].join(' '))
     const entry: Entry = {
-      slug, path, title: page.title, summary: page.summary ?? undefined,
+      slug, path, title: page.title, summary: page.summary ?? undefined, editorial:editorialOf(page),
       pageType: page.pageType ?? undefined,
       kind: page.component ? 'component' : page.content?.some(b=>b.blockName?.startsWith('guide-visual-demo-'))?'layout-example':'section',
       retrieval: page.component ? { tool: 'get_component_page', arguments: { system, component: page.component } } : { tool: 'get_documentation_page', arguments: { system, section: slug } },
@@ -167,6 +169,7 @@ export async function getDocumentationPage(system: string, section: string, exam
     path:pagePath(system,page,docs),
     title: page.title,
     pageType: page.pageType,
+    editorial:editorialOf(page),
     summary: page.summary,
     updatedAt: page.updatedAt,
     content: publicContent(page.content),

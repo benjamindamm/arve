@@ -12,6 +12,8 @@ Jedes System nennt seinen Geltungsbereich: Web, mobiles Web, Desktop-Anwendung s
 
 Grundlagen besitzen Abstandsbedeutung und Skalen sowie die verbindlichen Werte und Prinzipien für Typografie und Bewegung. Layouts führen Rasteranwendung, Container und Umbruch. Komponenten besitzen ihre lokalen Zustände und Bedienverträge. Content führt Sprach- und Benennungsregeln; das Pattern liefert konkrete Meldungen im Aufgabenkontext. Inklusion führt übergreifende Anforderungen; Pattern und Layout beschreiben deren konkrete Folgen für Fokus, Reihenfolge, Alternativen und Rückmeldungen. Ein Querverweis muss eine benannte Regel oder Seite treffen; ein Link zur allgemeinen Kapitelübersicht ersetzt keine benötigte Aussage.
 
+Für die praktische Ausarbeitung: [Pattern-Autoren-Skill](../../../.agents/skills/arve-pattern-handbook/SKILL.md). Die [Formularanwendung](../pattern-authoring/forms-application.md) dokumentiert den ersten Durchlauf und seine Prüfgrenzen.
+
 ## Gemeinsamer Inhalt jeder Pattern-Seite
 
 Diese IDs gelten pro dokumentiertem Pattern. „Pflicht“ bedeutet, dass der Inhalt vorhanden sein muss, nicht dass dafür ein eigener Abschnitt gerendert werden muss.

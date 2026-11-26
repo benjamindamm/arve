@@ -1,3 +1,4 @@
+import {EditorialBadge} from './editorial-page'
 import Link from 'next/link'
 import { HandbookNavigation } from './handbook-navigation'
 import type { Entry } from './published-documentation'
@@ -12,10 +13,10 @@ function Branch({ entries, current }: { entries: Entry[]; current?: string }) {
       {entries.filter(entry => !['/systems/shadcn/icons-bewegung', '/systems/shadcn/felder-und-fehlermeldungen', '/systems/shadcn/systemzustaende'].includes(entry.path)).map((entry) => (
         <li key={entry.path}>
           {entry.children?.length ? <details open={containsCurrent(entry, current)} key={current}>
-            <summary>{entry.title}</summary>
+            <summary>{entry.title}{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}</summary>
             <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.title} · Übersicht</Link>
             <Branch entries={entry.children} current={current} />
-          </details> : <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.title}</Link>}
+          </details> : <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.title}{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}</Link>}
         </li>
       ))}
     </ul>

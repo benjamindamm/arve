@@ -1,3 +1,5 @@
+import {editorialOf} from '../../../../../docs/editorial'
+import {EditorialPage} from '../../../../../docs/editorial-page'
 import {LegacyDocumentationRedirect} from '../../../../../docs/legacy-documentation-redirect'
 import {LayoutGuide} from '../../../../../docs/layout-guide'
 import {LayoutPilot} from '../../../../../docs/layout-pilot'
@@ -93,11 +95,11 @@ export default async function SectionPage({ params }: { params: Promise<{ system
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={path} />
-      <article className="article">
+      <EditorialPage className="article" editorial={editorialOf(page)}>
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={path} />
         <h1>{page.title}</h1>
         {page.summary && !patternCatalog && <p className="lead">{page.summary}</p>}
-        {!patternCatalog && !componentCatalogue && !pilot && <HandbookOutline key={path} initiallyCollapsed={dataVisualization||guide||pilot||shadcn && ['layout', 'page-types', 'page-layouts', 'content-layouts', 'beispiele', 'page-type-overview', 'main-sidebar', 'farben', 'themes-und-zustaende', 'typografie', 'abstaende', 'form-und-ebenen', 'icons', 'bewegung'].includes(section)} />}
+        {!patternCatalog && !componentCatalogue && !pilot && section!=='formulare-validierung' && <HandbookOutline scopeSelector={section==='formulare-validierung'?'.forms-current':undefined} key={path} initiallyCollapsed={section==='formulare-validierung'||dataVisualization||guide||pilot||shadcn && ['layout', 'page-types', 'page-layouts', 'content-layouts', 'beispiele', 'page-type-overview', 'main-sidebar', 'farben', 'themes-und-zustaende', 'typografie', 'abstaende', 'form-und-ebenen', 'icons', 'bewegung'].includes(section)} />}
         {dataVisualization?<DataVisualizationGuide content={page.content}/>:pilot?<LayoutPilot content={page.content}/>:guide?<LayoutGuide content={page.content}/>:ReworkedPage ? <ReworkedPage content={page.content} {...(patternCatalog ? { summary: page.summary } : {})} catalogueEntries={catalogueEntries} /> : foundationsOverview ? <FoundationsOverview content={page.content} /> : colorPage ? <ColorPage content={page.content} /> : <>
         <TemplateContent sections={readTemplate(page.pageType, page.template)} />
         <DesignResourceLinks system={system} section={section} />
@@ -120,7 +122,7 @@ export default async function SectionPage({ params }: { params: Promise<{ system
             <ul>{relatedEntries.map(({ title, href }) => <li key={href}><Link href={href}>{title}</Link></li>)}</ul>
           </section>
         )}
-      </article>
+      </EditorialPage>
     </main>
   )
 }

@@ -1,3 +1,4 @@
+import {editorialOf} from './editorial'
 import { readTemplate } from './page-templates'
 import { documentationData } from './documentation-data'
 import { contractFileUrl, contractAssetUrl, staticPublication } from './site-path'
@@ -30,6 +31,7 @@ export async function getComponentPage(system: string, component: string) {
     component,
     path: pagePath(system, page),
     title: page.title,
+    editorial:editorialOf(page),
     summary: page.summary,
     updatedAt: page.updatedAt,
     nextSteps,

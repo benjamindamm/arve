@@ -83,6 +83,7 @@ Die [Autoren-Skills](.agents/skills/) helfen, ein eigenes Design-System inhaltli
 | Seitenlayouts und Seitenrahmen | [arve-page-layouts-handbook](.agents/skills/arve-page-layouts-handbook/SKILL.md) |
 | Inhaltsanordnung innerhalb von Abschnitten und Cards | [arve-content-layouts-handbook](.agents/skills/arve-content-layouts-handbook/SKILL.md) |
 | Datenvisualisierung, semantische Chart-Archetypen und Paletten | [arve-data-visualization-handbook](.agents/skills/arve-data-visualization-handbook/SKILL.md) |
+| UX-Patterns, etwa Formulare und Validierung | [arve-pattern-handbook](.agents/skills/arve-pattern-handbook/SKILL.md) |
 
 Für die Arbeit mit vorhandenen Komponenten-Contracts gibt es ergänzend [arve-ui-contracts](.agents/skills/arve-ui-contracts/SKILL.md).
 
@@ -99,6 +100,12 @@ Beispielauftrag:
 Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Sie werden derzeit **nicht über MCP ausgeliefert**. MCP stellt die veröffentlichten Handbuchinhalte sowie separat die mit den UI-Contracts importierten Bibliotheks-Skills bereit.
 
 ## Inhalte pflegen
+
+Das [Arve-Handbuch](http://127.0.0.1:3010/handbuch) dokumentiert Arve selbst mit eigener Navigation ausserhalb der Design-Systeme. Unter **Redaktion und Seitenstatus** lässt sich die farbige Umrandung ausprobieren. Unter **Autoren-Skills** sind die Originaldateien aufklappbar lesbar.
+
+Seiten besitzen einen redaktionellen Stand: **Entwurf**, **Zu klären**, **Im Review** oder **Geprüft**. Er ist unabhängig von Payloads Veröffentlichung. Klärungsnotiz und optionale Zuständigkeit erscheinen im Portal und über MCP; bei „Zu klären“ ist eine Notiz erforderlich. Bestehende Seiten ohne Zuordnung zeigen „Nicht eingeordnet“. Der persönliche Redaktionsmodus blendet die Statusumrandung ein.
+
+Bei einer bestehenden Datenbank vor dem Start nach diesem Update einmal `npm run db:editorial` ausführen. Das ergänzt ausschliesslich die Statusfelder an Seiten und Versionen; bestehende Inhalte und Prüfstände werden nicht überschrieben. Neue leere Datenbanken erhalten die Felder beim Erstaufbau. Beim Kopieren eines Systems beginnen die redaktionellen Stände als Entwurf, ohne übernommene Klärungsnotizen oder Zuständigkeiten.
 
 Texte und Inhalte liegen in **PostgreSQL** und werden mit **Payload CMS** bearbeitet. Für Grundlagen, Layouts, UX-Patterns und Komponenten gibt es eigene Inhaltsvorlagen. Seitentyp, übergeordnete Seite und Sortierung bestimmen den Seitenbaum.
 

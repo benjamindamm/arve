@@ -14,7 +14,7 @@ try{
  if(!system)throw Error('shadcn missing')
  const {docs:pages}=await p.find({collection:'pages',where:{and:[{designSystem:{equals:system.id}},{_status:{equals:'published'}}]},depth:0,pagination:false,draft:false})
  const ids=new Map(pages.map(d=>[d.id,d.slug]));const mediaIDs=new Set<number>();
- const pageData=pages.map((d:any)=>{const row=pick(d,['title','system','pageType','template','order','summary','component','contract','demo','slug','content','_status']);if(d.parent){if(!ids.has(d.parent))throw Error('External parent');row.parent=ids.get(d.parent)}
+ const pageData=pages.map((d:any)=>{const row=pick(d,['title','system','pageType','template','order','summary','editorialStatus','editorialNote','editorialOwner','component','contract','demo','slug','content','_status']);if(d.parent){if(!ids.has(d.parent))throw Error('External parent');row.parent=ids.get(d.parent)}
  for(const b of row.content??[])if(b.blockType==='guideline'&&b.image)mediaIDs.add(b.image)
  return row}).sort((a,b)=>a.slug.localeCompare(b.slug))
  await mkdir('scripts/content/handbook-snapshot-media',{recursive:true})

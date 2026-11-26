@@ -28,6 +28,8 @@ jobs:
         run: npm run check:mcp:unit
       - uses: actions/configure-pages@v6.0.0
         id: pages
+      - name: Check editorial status and reference copies
+        run: node --import tsx --test scripts/editorial.test.ts scripts/system-template.test.ts
       - name: Check foundation color scales and contrast
         run: node --import tsx scripts/check-foundation-colors.ts
       - name: Check handbook hierarchy and compatibility links

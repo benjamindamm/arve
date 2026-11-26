@@ -1,3 +1,4 @@
+import {EditorialPage} from '../../../../../../docs/editorial-page'
 import { SiteAnchor } from '../../../../../../docs/site-anchor'
 import '../../../../../../docs/component-page.css'
 import { CopyValue } from '../../../../../../docs/copy-value'
@@ -49,7 +50,7 @@ export default async function ComponentPage({ params }: {
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={page.path} />
-      <article className="article component-documentation">
+      <EditorialPage className="article component-documentation" editorial={page.editorial}>
         <ComponentHashLinks pagePath={page.path}/>
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={page.path} />
         <h1>{page.title}</h1>
@@ -155,7 +156,7 @@ export default async function ComponentPage({ params }: {
             </>
           ) : <p>Für diese Seite ist kein verfügbarer Contract-Export verknüpft.</p>}
         </section>
-      </article>
+      </EditorialPage>
     </main>
   )
 }

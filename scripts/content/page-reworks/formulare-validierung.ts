@@ -868,7 +868,7 @@ const preserved = [
     "blockType": "text"
   }
 ] satisfies Page['content']
-export const release = {
+const historicalRelease = {
  expectedUpdatedAt:"2026-11-20T16:32:11.566Z",
   summary:'Anforderungen erklären, Eingaben erhalten und den Speicherstand verständlich zeigen; der lokale Web-Projektpilot veranschaulicht die Ziele.',
  content:[
@@ -888,5 +888,51 @@ export const release = {
   text("sources","Quellen und Prüfgrenzen",["Grundlage ist der veröffentlichte CMS-Stand shadcn-formulare-validierung vom 20.11.2026, 08:04:53 UTC. Die folgende Erläuterung ist sprachlich überarbeitet. Sie bewahrt die fachlichen Regeln einschliesslich der lokalen Präzisierung vom 20.11.2026 zum unbekannten Ergebnis einer Speicherung. Die historischen Quellen bleiben im Projekt erhalten.", "Die Vorschau fasst den Ablauf in vier Phasen zusammen. Zusätzlich lassen sich Fehler, ungespeicherte Änderungen und die möglichen Ergebnisse einer Anfrage ansehen. Die Vertiefung beschreibt weiterhin alle acht Zustände der Studie und die Regeln für Bearbeitung, Abbruch und Rückkehr. Daraus entstehen weder neue fachliche Regeln noch eine Produktfreigabe.", "Die Vorschau enthält keine ausführbare Validierung oder Serveranbindung. Sie weist Speicherung, Statusklärung, sichere Wiederholung, Navigation und Fokuswechsel der späteren Anwendung nicht nach. Die in der Vertiefung genannten Prüfungen stehen weiterhin aus."]),
   text("contract","Vertiefung · Regeln des lokalen Web-Projektpiloten",["Die folgende Erläuterung konkretisiert den Projektpiloten für Weboberflächen in de-CH. Projektname, 1–80 Zeichen, Prüftakt, einzelne Fokusziele, Dialogtasten, URL-Parameter und Pixelmasse sind Entscheidungen dieser Referenz. Sie bilden keine allgemeine Vorgabe für andere Produkte oder native Plattformen.", "Die UX-Ziele zu verständlichen Anforderungen, erhaltenen Eingaben, Verlustschutz und belegten Ergebniszuständen gelten weiterhin. Insbesondere bleibt bei unbekanntem Ergebnis die Statusklärung vor Verwerfen oder erneutem Senden erforderlich. Die dafür benötigte Funktion fehlt im Piloten noch.", "Der folgende bestehende Erklärungsteil bleibt erhalten: Projekt erstellen, Namen bearbeiten, abbrechen und zurückkehren. Er berücksichtigt die Präzisierung vom 20.11.2026 und ist keine wörtliche Abschrift des damaligen Stands."]),
   ...preserved,
+ ] satisfies Page['content'],
+}
+
+export const release = {
+ expectedUpdatedAt:'2026-11-25T18:07:48.607Z',
+ summary:'Angaben klar gliedern, Fehler gezielt korrigieren und Ergebnisse verständlich zeigen.',
+ content:[
+  text('goals','Aufbau wählen',[
+   'Kurze Aufgaben auf einer Seite erledigen. Zusammengehörige Angaben gruppieren.',
+   'Schritte nur bei sinnvoller Aufteilung; Zurück erhält Eingaben. Sofort wirksame Einstellungen brauchen oft kein Absenden.',
+   'Anforderungen vor der Eingabe erklären. Gültige Angaben bei Fehlern erhalten. Gültige Eingabe ist keine bestätigte Annahme; ein unbekanntes Ergebnis kein sicherer Fehlschlag. Zusammenfassung und nächste Handlung am belegten Stand ausrichten.',
+  ]),
+  text('demo','Ausprobieren: Kontaktanfrage',[
+   'Lokale Simulation: nichts wird übertragen oder gespeichert. Erst leer senden, dann korrigieren. Die Antwort wird über die Beispielsteuerung gewählt.',
+  ]),
+  text('demo-name','Name (erforderlich)',['Vor- und Nachname.','Gib deinen Namen ein.']),
+  text('demo-email','E-Mail-Adresse (erforderlich)',['Zum Beispiel alex@example.org.','Gib eine E-Mail-Adresse ein.','Prüfe die E-Mail-Adresse, zum Beispiel alex@example.org.']),
+  text('demo-note','Nachricht (optional)',[]),
+  text('demo-choice','Andere Antwort ausprobieren',['Für eine andere Antwort Beispiel zurücksetzen.']),
+  text('demo-response-pending','Übermittlung läuft',['Die Anfrage wird übermittelt …','Keine zweite Anfrage auslösen. Die Eingaben bleiben sichtbar.']),
+  text('demo-response-confirmed','Annahme bestätigt',['Deine Anfrage ist eingegangen.','Dies ist eine simulierte Bestätigung, keine gespeicherte Anfrage.']),
+  text('demo-response-rejected','Nicht angenommen',['Die Anfrage wurde nicht angenommen. Deine Angaben bleiben erhalten.','Vorgangsfehler: Die Felder sind gültig. Im Beispiel ist die Nichtannahme bestätigt; erneutes Versuchen ist möglich.']),
+  text('demo-response-unknown','Ergebnis unbekannt',['Es ist unklar, ob die Anfrage angekommen ist.','Nicht erneut senden. In einer echten Anwendung muss zuerst der ursprüngliche Vorgang geklärt werden. Dieses Beispiel hat keine Statusabfrage.']),
+  text('fields','Felder verständlich machen',[
+   'Dauerhafte Labels statt Placeholder als einzige Beschriftung. Pflicht und optional vor der Eingabe kennzeichnen.',
+   'Hilfe steht am Feld und nennt nur nötige Anforderungen. Eingabeformate möglichst tolerant behandeln. Inhaltlich zusammengehörige Felder in sinnvoller Reihenfolge gruppieren.',
+  ]),
+  text('validation','Prüfen und korrigieren',[
+   'Fehler zeigen, wenn eine Prüfung hilfreich ist. Den ersten Prüfzeitpunkt und die Prüfung nach Korrektur getrennt festlegen; nicht jede begonnene Eingabe sofort als falsch markieren.',
+   'Feldfehler nennt die nötige Korrektur direkt am Feld. Ein Vorgangsfehler erklärt das Problem am Formular, ohne gültige Felder rot zu markieren. Andere Eingaben bleiben erhalten.',
+   'Bei mehreren Fehlern kann eine verlinkte Übersicht helfen. Bei einem einzelnen Fehler direkt zum Feld führen. Zeitpunkt und Fokus an Umfang und Plattform anpassen.',
+  ]),
+  text('example-rules','Warum das Beispiel so reagiert',[
+   'Lokale Beispielregeln: zwei erforderliche Kontaktangaben und eine optionale Nachricht, ohne erfundene Längengrenze. Erste Prüfung beim Absenden; ein noch fehlerhaftes Feld wird danach beim Verlassen erneut geprüft. Eine korrigierte E-Mail wird nur syntaktisch geprüft, nicht auf Existenz.',
+   'Bei zwei Fehlern erhält die Übersicht den Fokus, bei einem das Feld. Nach gültiger Eingabe zeigt die Simulation die gewählte Antwort; Rückmeldungen bekommen den Fokus. Bei laufender oder ungeklärter Übermittlung sind Bearbeiten und erneutes Senden gesperrt. Die Antwortwahl bleibt nach einem Ergebnis gesperrt. „Beispiel zurücksetzen“ ist eine Lernfunktion ausserhalb des Formulars und ermöglicht einen neuen Durchlauf.',
+   'Ein echter Abbruch muss vor Datenverlust warnen, wenn Änderungen betroffen sind. Dieses Beispiel zeigt keine produktive Navigation, Entwurfsspeicherung oder Wiederherstellung. Für folgenreiche Vorgänge kann vor dem Senden zusätzlich Prüfen/Ändern nötig sein.',
+  ]),
+  text('connections','Passende Bausteine',[],[
+   ['Input','/systems/shadcn/components/input'],['Textfeld für längere Angaben','/systems/shadcn/components/textarea'],['Formularfelder und Gruppen','/systems/shadcn/layout/content-layouts/form-layout'],['Erstellen und Bearbeiten','/systems/shadcn/layout/page-types/create-edit'],['Prüfen und Entscheiden','/systems/shadcn/layout/page-types/review-decision'],['Laden, leer und Fehler','/systems/shadcn/laden-leer-fehler'],
+  ]),
+  text('sources','Quellen und Geltung',[
+   'Lokaler Handbuchentwurf auf Grundlage des UX-Reviews und des Pattern-Autoren-Skills. WAI Forms Tutorials zu Validierung und Rückmeldungen am 25.11.2026 gelesen. Sie behandeln unter anderem Pflichtangaben, verständliche Formate, Feldzuordnung und unterschiedliche Prüfzeitpunkte. Der konkrete Prüftakt dieses Beispiels ist eine lokale Entscheidung.',
+   'Allgemeine Ziele gelten unabhängig vom Framework. Die Demo veranschaulicht Web-Bedienung; sie belegt keine Serververarbeitung, Screenreader- oder native Plattformfreigabe.',
+  ],[['WAI · Validierung','https://www.w3.org/WAI/tutorials/forms/validation/'],['WAI · Rückmeldungen','https://www.w3.org/WAI/tutorials/forms/notifications/']]),
+  text('forms-history','Früherer Projektpilot',['Historischer Einfeldpilot und damalige Erläuterungen. Seine Feldgrenzen, URL-Parameter und Fokusregeln sind keine allgemeinen Vorgaben.']),
+  ...historicalRelease.content.map((block,index)=>({...block,blockName:'forms-history-'+(block.blockName??index)})),
  ] satisfies Page['content'],
 }

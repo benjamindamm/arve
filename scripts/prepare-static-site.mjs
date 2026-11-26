@@ -11,6 +11,7 @@ if (snapshot.format !== 1 || !snapshot.pages.length || snapshot.pages.some(page=
 await rm(stage,{recursive:true,force:true})
 await mkdir(stage,{recursive:true})
 await cp('src',path.join(stage,'src'),{recursive:true})
+await cp('.agents/skills',path.join(stage,'.agents/skills'),{recursive:true})
 await mkdir(path.join(stage,'scripts/content'),{recursive:true})
 await cp('scripts/content/handbook-snapshot.json',path.join(stage,'scripts/content/handbook-snapshot.json'))
 await cp('docs/handbook/design-resources/manifest.json',path.join(stage,'docs/handbook/design-resources/manifest.json'),{recursive:true})
