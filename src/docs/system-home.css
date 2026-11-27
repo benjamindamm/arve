@@ -55,3 +55,12 @@
 .system-home-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;list-style:none;padding:0;margin:0}
 .system-home-topics a{display:flex;justify-content:space-between;gap:16px;min-height:44px;padding-block:12px;border-top:1px solid var(--border);font-size:14px}
 @media(max-width:640px){.system-home-topics{grid-template-columns:1fr}}
+
+/* Stable visual anchors, shared by every system using this template. */
+.system-home .handbook-icon{display:block;flex:0 0 auto;width:24px;height:24px;color:#285b4b}
+.system-home-task h3,.system-home-example h3,.system-home-reference-grid h3{display:flex;align-items:center;gap:12px}
+.system-home-task h3{align-items:flex-start}
+.system-home-reference-grid .handbook-icon,.system-home-example .handbook-icon,.system-home-topics .handbook-icon{width:18px;height:18px}
+.system-home-reference-grid h3{gap:9px;min-height:24px}
+.system-home-topic-label{display:flex;align-items:center;gap:12px;min-width:0}
+.system-home-topic-label>span{min-width:0;overflow-wrap:anywhere}
