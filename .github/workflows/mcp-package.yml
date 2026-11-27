@@ -83,4 +83,3 @@ jobs:
             exit 1
           fi
           gh release create "$tag" package/*.tgz --target "$RELEASE_COMMIT" --title "Arve MCP $RELEASE_VERSION" --notes-file release-notes.md --latest
-
