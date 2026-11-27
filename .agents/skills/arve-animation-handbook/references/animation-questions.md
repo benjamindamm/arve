@@ -1,8 +1,12 @@
 # Animation: Fachfragen und erwartete Antworten
 
-Version 0.2 · Autorenprototyp aus FND-MOT und dem gemeinsamen Grundlagenrahmen. Keine universelle Animationssprache, Dauer- oder Verlaufsskala.
+Version 0.3 · Autorenprototyp aus FND-MOT und dem gemeinsamen Grundlagenrahmen. Keine universelle Animationssprache, Dauer- oder Verlaufsskala.
 
 **Grundfragen** geben Orientierung im aufgenommenen Thema; eine konkrete offene Entscheidung kann die Antwort sein. **Bedingte Fragen** vertiefen relevante Abläufe. **Vertiefungen** erklären Zusammenhänge und Alternativen ohne feste Seitenaufteilung.
+
+## Verwendung bei der Autorenprüfung
+
+Zuerst den Seitenentwurf nach der [Seitenkomposition](page-composition.md) aufbauen. Danach jede relevante Frage gegen eine vorhandene Darstellung oder Regel prüfen. Eine Fundstelle darf mehrere IDs abdecken. Keine sichtbaren Kapitel pro Frage erzeugen; fehlende Antworten in einem gemeinsamen Klärungsbereich sammeln. Wiederholte Sicherheits- und Geltungssätze sind kein zusätzlicher Inhalt.
 
 ## Grundfragen
 
@@ -10,7 +14,7 @@ Version 0.2 · Autorenprototyp aus FND-MOT und dem gemeinsamen Grundlagenrahmen.
 | --- | --- | --- |
 | ANM-01 | Für welches System, welche Aufgaben und Plattformen gilt das Kapitel? Dokumentieren oder entwerfen wir? | Benannter Umfang und Gestaltungsziel; funktionale Übergänge, Feedback und dekorative Effekte nach tatsächlichem Bedarf. „Keine Animation“ ist eine mögliche bewusste Regel. |
 | ANM-02 | Wo sind geltende Rezepte, Verhaltenszustände und Werte definiert? Was ist Quelle, Umsetzung oder Vorschau? | Auflösbare Referenz mit Stand/Scope. Einzelne Spinner-, Skeleton- oder Portalwerte nicht zur Systemskala erklären. Fehlende Belege und Widersprüche sichtbar. |
-| ANM-17 | Welche semantische Rolle hat Bewegung im jeweiligen Kontext? | Immer behandeln: Rolle → Auslöser/Kontext → Aussage → Anfang/Ziel → unzulässige Suggestion → reduzierte Alternative. Mikroanimation ist ein Umfang, keine Bedeutung. Wahrgenommene Eingabe, lokaler Wechsel und bestätigter Erfolg auseinanderhalten; offene Rollen im Bestand benennen. |
+| ANM-17 | Welche semantische Rolle hat Bewegung im jeweiligen Kontext? | Immer behandeln: Kompakter Rollenvergleich: Auslöser/Kontext, Aussage, Anfang/Ziel, relevante Bedeutungsgrenze und reduzierte Alternative. Keine sechs Prosaabschnitte je Rolle. Mikroanimation ist ein Umfang, keine Bedeutung. Wahrgenommene Eingabe, lokaler Wechsel und bestätigter Erfolg auseinanderhalten; offene Rollen im Bestand benennen. |
 | ANM-03 | Wann hilft Animation und wann genügt die direkte Veränderung? | Aufgabe, beabsichtigte Information/Beziehung und begründete Auswahl. Keine reine Effektliste oder nachträglich erfundene Absicht. Eine relevante Alternative erklärt die Entscheidung. |
 | ANM-04 | Was löst den Ablauf aus und was verändert sich zwischen Anfang und Ziel? | Zustände, betroffene Eigenschaften, Weg/Bezug und Auslöser konkret. Visueller Übergang nicht mit fachlichem Zustand oder tatsächlichem Verarbeitungserfolg gleichsetzen. |
 | ANM-05 | Welche Dauer, Verzögerung und Wiederholung gilt wofür? | Auflösbare Werte/Regeln mit Einheit, Aufgabe und Grenzen. Einmaliger Übergang, Zyklusdauer und Wartezeit auf Daten unterscheiden. Keine allgemeine Mindest-/Höchstdauer erfinden. |
