@@ -1,5 +1,6 @@
 /** Content-only copies: immutable contract references retain their original identity. */
 import assert from 'node:assert/strict'
+import {mapHomeTargets} from '../../src/docs/system-home-template'
 import { readFile, rm } from 'node:fs/promises'
 import { basename, resolve } from 'node:path'
 import { randomUUID, createHash } from 'node:crypto'
@@ -34,7 +35,7 @@ export function prepareTemplate(source: Snapshot, slug: string, name: string) {
   }
   const result = rewrite(source) as Snapshot
   result.system = { ...result.system, slug, name: name.trim(), home: slugs.get(source.system.home) }
-  result.pages = result.pages.map(page => ({ ...page, slug: slugs.get(page.slug), parent: page.parent ? slugs.get(page.parent) : undefined, system: slug, _status: 'draft', editorialStatus:'draft', editorialNote:null, editorialOwner:null }))
+  result.pages = result.pages.map(page => ({ ...page, slug: slugs.get(page.slug), parent: page.parent ? slugs.get(page.parent) : undefined, system: slug, _status: 'draft', editorialStatus:'draft', editorialNote:null, editorialOwner:null, ...(page.homeTemplate?{homeTemplate:mapHomeTargets(page.homeTemplate,target=>{assert(slugs.has(target),'External home template target');return slugs.get(target)})}:{}) }))
   result.implementations = result.implementations.map(impl => {
     assert(slugs.has(impl.componentPage), 'External implementation page')
     return { ...impl, componentPage: slugs.get(impl.componentPage), _status: 'draft', releaseStatus: 'draft', verification: { ...impl.verification, scope: `Aus der Referenz ${original} übernommen; für ${name.trim()} noch nicht geprüft.\n${impl.verification?.scope ?? ''}` } }
@@ -71,8 +72,9 @@ export async function importTemplate(payload: any, template: Snapshot, apply = f
         mediaIDs.set(media.key,upload.id)
       }
       const pages = new Map<string,any>()
-      for (const { parent, ...page } of template.pages) pages.set(page.slug, await payload.create({ collection: 'pages', data: { ...page, content: page.content?.map((block:any)=>block.blockType==='guideline' && block.image ? {...block,image:mediaIDs.get(block.image)} : block), designSystem: system.id }, draft: true, req }))
+      for (const { parent, homeTemplate, ...page } of template.pages) pages.set(page.slug, await payload.create({ collection: 'pages', data: { ...page, content: page.content?.map((block:any)=>block.blockType==='guideline' && block.image ? {...block,image:mediaIDs.get(block.image)} : block), designSystem: system.id }, draft: true, req }))
       for (const page of template.pages) if (page.parent) await payload.update({ collection: 'pages', id: pages.get(page.slug).id, data: { parent: pages.get(page.parent).id }, draft: true, req })
+      for(const page of template.pages)if(page.homeTemplate)await payload.update({collection:'pages',id:pages.get(page.slug).id,data:{homeTemplate:mapHomeTargets(page.homeTemplate,target=>{assert(pages.has(target),'Missing home template target');return pages.get(target).id})},draft:true,req})
       await payload.update({ collection: 'design-systems', id: system.id, data: { home: pages.get(home).id }, req })
       for (const impl of template.implementations) await payload.create({ collection: 'implementations', data: { ...impl, componentPage: pages.get(impl.componentPage).id }, draft: true, req })
     }

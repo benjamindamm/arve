@@ -1,3 +1,4 @@
+import {mapHomeTargets} from './system-home-template'
 import snapshot from '../../scripts/content/handbook-snapshot.json'
 import type { DesignSystem, Page, Implementation } from '../payload-types'
 import type { DocumentationData } from './documentation-data'
@@ -12,6 +13,7 @@ const pages = snapshot.pages.map(page => ({ ...page, id: ids.get(page.slug), des
     if(!image)throw Error('Snapshot image missing: '+block.image)
     return {...block,image:{id:-1,alt:image.alt,url:'/media/'+encodeURIComponent(image.key)}}
   }),
+  homeTemplate: mapHomeTargets((page as any).homeTemplate,target=>{const id=ids.get(target);if(!id)throw Error('Snapshot home target missing: '+target);return id}),
   parent: 'parent' in page && page.parent ? ids.get(page.parent) : null,
   createdAt: snapshot.capturedAt, updatedAt: snapshot.capturedAt,
 })) as unknown as Page[]

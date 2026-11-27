@@ -1,3 +1,7 @@
+import {restoreDraftEndpoint} from '../access/restore-draft'
+import {implementationAccess} from '../access/permissions'
+import {editorialStates} from '../docs/editorial'
+import {publicationField,capturePublicationIntent,enforcePublication,recordPublicationEvent} from '../access/publication'
 import { ValidationError, type CollectionConfig } from 'payload'
 
 export const platforms = [
@@ -17,8 +21,10 @@ export const Implementations: CollectionConfig = {
   slug: 'implementations',
   labels: { singular: 'Implementierung', plural: 'Implementierungen' },
   admin: { useAsTitle: 'name', defaultColumns: ['name', 'componentPage', 'platform', 'releaseStatus', 'packageVersion', '_status'] },
-  versions: { drafts: true },
-  hooks: { beforeChange: [async ({ data, originalDoc, req }) => {
+  endpoints:[restoreDraftEndpoint('implementations')],
+  access: implementationAccess,
+  versions: { drafts: true, maxPerDoc: 0 },
+  hooks: { beforeOperation:[capturePublicationIntent],afterChange:[recordPublicationEvent],beforeChange: [enforcePublication,async ({ data, originalDoc, req }) => {
     const value = Object.hasOwn(data, 'componentPage') ? data.componentPage : originalDoc?.componentPage
     if (!value && data._status === 'draft') return data
     const id = typeof value === 'object' ? value?.id : value
@@ -32,6 +38,8 @@ export const Implementations: CollectionConfig = {
     return data
   }] },
   fields: [
+    publicationField,
+    {name:'editorialStatus',label:'Redaktioneller Stand',type:'select',defaultValue:'draft',options:editorialStates.map(({value,label})=>({value,label})),admin:{position:'sidebar',description:'Für die Veröffentlichung: Inhalt als Entwurf speichern, als Herausgeber prüfen und „Geprüft“ erneut als Entwurf speichern.'}},
     { name: 'name', type: 'text', label: 'Name', required: true },
     { name: 'componentPage', type: 'relationship', label: 'Komponentenseite', relationTo: 'pages', required: true, index: true,
       filterOptions: { pageType: { equals: 'component' } } },

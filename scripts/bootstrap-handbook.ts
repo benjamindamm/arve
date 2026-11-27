@@ -1,5 +1,6 @@
 /** Public handbook bootstrap. Preview by default; never overwrites differing content. */
 import assert from 'node:assert/strict'
+import {mapHomeTargets} from '../src/docs/system-home-template'
 import pg from 'pg'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
@@ -10,7 +11,7 @@ import config from '../src/payload.config'
 
 import { shadcnReferenceRevision } from '../src/contracts/current-reference'
 export const revision = shadcnReferenceRevision
-const pageFields=['title','system','pageType','template','order','summary','editorialStatus','editorialNote','editorialOwner','component','contract','demo','slug','content','_status','parent']
+const pageFields=['title','system','pageType','template','homeTemplate','order','summary','editorialStatus','editorialNote','editorialOwner','component','contract','demo','slug','content','_status','parent']
 const implementationFields=['name','platform','releaseStatus','packageName','packageVersion','owner','contexts','contract','verification','_status','componentPage']
 export function clean(x:any):any {
  if(Array.isArray(x))return x.map(clean)
@@ -25,7 +26,7 @@ export async function bootstrap(payload:any,snapshot:any,apply=false){
  assert.equal(snapshot.media.length,0,'Media imports require a separately reviewed implementation')
  const slugs=new Set(snapshot.pages.map((p:any)=>p.slug));assert.equal(slugs.size,snapshot.pages.length)
  assert(slugs.has(snapshot.system.home))
- for(const p of snapshot.pages){assert(p._status==='published');assert(!p.parent||slugs.has(p.parent));if(p.contract?.revision)assert.equal(p.contract.revision,revision);for(const b of p.content??[])assert(!(b.blockType==='guideline'&&b.image),'Unsupported media relation')}
+ for(const p of snapshot.pages){assert(p._status==='published');assert(!p.parent||slugs.has(p.parent));mapHomeTargets(p.homeTemplate,target=>{assert(slugs.has(target),'External home template target');return target});if(p.contract?.revision)assert.equal(p.contract.revision,revision);for(const b of p.content??[])assert(!(b.blockType==='guideline'&&b.image),'Unsupported media relation')}
  for(const i of snapshot.implementations){assert(slugs.has(i.componentPage));assert.match(i.contract.revision,/^[a-f0-9]{64}$/)}
  const transactionID=await payload.db.beginTransaction();assert(transactionID,'Transactions required')
  const req={transactionID}
@@ -36,7 +37,7 @@ export async function bootstrap(payload:any,snapshot:any,apply=false){
   const bySlug=new Map<string,any>(all.map((p:any)=>[p.slug,p]));const byID=new Map(all.map((p:any)=>[p.id,p.slug]))
   const conflicts:string[]=[]
   for(const wanted of snapshot.pages){const current=bySlug.get(wanted.slug);if(!current)continue
-   if(!system||current.designSystem!==system.id||!same({...pick(current,pageFields),parent:current.parent?byID.get(current.parent)??'UNRESOLVED':undefined},wanted))conflicts.push('pages/'+wanted.slug)
+   if(!system||current.designSystem!==system.id||!same({...pick(current,pageFields),parent:current.parent?byID.get(current.parent)??'UNRESOLVED':undefined,...(Object.keys(clean(current.homeTemplate??{})).length?{homeTemplate:clean(mapHomeTargets(current.homeTemplate,target=>byID.get(target)??'UNRESOLVED'))}:{})},wanted))conflicts.push('pages/'+wanted.slug)
    const published=await payload.findByID({collection:'pages',id:current.id,depth:0,draft:false,req})
    if(!same(pick(current,pageFields),pick(published,pageFields)))conflicts.push('unpublished changes/'+wanted.slug)
   }
@@ -53,9 +54,10 @@ export async function bootstrap(payload:any,snapshot:any,apply=false){
   if(apply){
    if(!system){const {home,...data}=snapshot.system;system=await payload.create({collection:'design-systems',data,req})}
    // Phase 1: allocate every page identity before resolving parent/home relationships.
-   for(const page of missingPages){const {parent,...data}=page;bySlug.set(page.slug,await payload.create({collection:'pages',data:{...data,editorialStatus:data.editorialStatus??null,designSystem:system.id},draft:false,req}))}
+   for(const page of missingPages){const {parent,homeTemplate,...data}=page;bySlug.set(page.slug,await payload.create({collection:'pages',data:{...data,editorialStatus:data.editorialStatus??null,designSystem:system.id},draft:false,req}))}
    // Phase 2: resolve exclusively through this system's logical slug map.
    for(const page of missingPages)if(page.parent)await payload.update({collection:'pages',id:bySlug.get(page.slug).id,data:{parent:bySlug.get(page.parent).id},draft:false,req})
+   for(const page of missingPages)if(page.homeTemplate)await payload.update({collection:'pages',id:bySlug.get(page.slug).id,data:{homeTemplate:mapHomeTargets(page.homeTemplate,target=>bySlug.get(target).id)},draft:false,req})
    if(result.system==='create')await payload.update({collection:'design-systems',id:system.id,data:{home:bySlug.get(snapshot.system.home).id},req})
    for(const i of missingImpl)await payload.create({collection:'implementations',data:{...i,componentPage:bySlug.get(i.componentPage).id},draft:false,req})
   }

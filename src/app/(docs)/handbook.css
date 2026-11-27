@@ -138,12 +138,13 @@
 
 /* Shared handbook chrome and prose. Specimens retain their own type and width. */
 .handbook-context { margin: 0 0 28px; font-size: 13px; color: var(--muted-foreground); }
-.handbook-context ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; list-style: none; padding: 0; margin: 0; }
-.handbook-context li { display: flex; align-items: center; min-width: 0; }
-.handbook-context li + li::before { content: '/'; padding: 0 10px; color: #a1a1aa; }
-.handbook-context a { text-decoration: none; }
-.handbook-context strong { color: var(--foreground); font-weight: 650; margin-right: 8px; }
-.handbook-context [aria-current] { color: var(--foreground); }
+.handbook-context ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.handbook-context li { display: inline-flex; align-items: center; gap: 8px; min-width: 0; max-width: 100%; line-height: 1.5; }
+.handbook-context-separator { width: 12px; height: 12px; flex-shrink: 0; fill: none; stroke: #a1a1aa; stroke-width: 1.5; }
+.handbook-context a { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+.handbook-context a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.handbook-context a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.handbook-context [aria-current] { color: var(--foreground); overflow-wrap: anywhere; }
 .handbook-nav-title { margin: 0 0 14px 11px; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; color: var(--muted-foreground); }
 .handbook-chapter-button { width: 100%; display: flex; justify-content: space-between; gap: 16px; padding: 12px; background: var(--background); border: 1px solid var(--border); border-radius: 6px; color: var(--foreground); font: inherit; font-size: 14px; text-align: left; cursor: pointer; margin-bottom: 18px; }
 .handbook-chapter-dialog { width: min(620px, calc(100% - 32px)); max-height: calc(100dvh - 40px); margin: auto; padding: 24px; border: 1px solid var(--border); border-radius: 12px; color: var(--foreground); background: var(--background); box-shadow: 0 20px 80px #0003; overscroll-behavior: contain; }
@@ -177,7 +178,7 @@ body:has(.handbook-chapter-dialog[open]) { overflow: hidden; }
 .handbook-preview-hint { font-size: 12px; color: var(--muted-foreground); max-width: 68ch; margin: 12px 0 20px; }
 @media (max-width: 600px) {
  .handbook-context { margin-bottom: 24px; font-size: 12px; }
- .handbook-context ol { gap: 8px 0; }
+ .handbook-context ol { gap: 6px; }
  .handbook-chapter-button { margin-bottom: 0; }
  .handbook-chapter-dialog { padding: 20px; }
  .handbook-dialog-head { align-items: flex-start; }

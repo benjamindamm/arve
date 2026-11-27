@@ -34,7 +34,13 @@
     "prebuild": "npm run build:mcp-apps",
     "prebuild:static": "npm run build:mcp-apps",
     "check:agent-ui": "node --import tsx --test scripts/agent-ui.test.ts",
-    "preview:agent-ui": "npm run build:mcp-apps && node --import tsx scripts/agent-ui-host.ts"
+    "preview:agent-ui": "npm run build:mcp-apps && node --import tsx scripts/agent-ui-host.ts",
+    "db:publishing": "node --env-file-if-exists=.env --import tsx scripts/migrate-publishing.ts",
+    "check:publishing:db": "node --env-file-if-exists=.env --import tsx scripts/publication.integration.ts",
+    "check:publishing:migration": "node --env-file-if-exists=.env --import tsx scripts/publishing-migration.integration.ts",
+    "db:home-template": "node --env-file-if-exists=.env --import tsx scripts/migrate-home-template.ts",
+    "check:home-template": "node --import tsx --test scripts/system-home.test.ts",
+    "check:home-template:db": "node --env-file-if-exists=.env --import tsx scripts/home-template.integration.ts"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",

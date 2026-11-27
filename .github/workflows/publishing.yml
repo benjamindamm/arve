@@ -1,0 +1,41 @@
+name: Check publishing permissions and database upgrade
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publishing:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: arve
+          POSTGRES_PASSWORD: integration-only
+          POSTGRES_DB: arve_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U arve -d arve_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URI: postgres://arve:integration-only@localhost:5432/arve_test
+      PAYLOAD_SECRET: integration-only-not-a-production-secret-123456789
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run check:publishing:db
+      - run: npm run check:publishing:migration
+      - run: npm run check:home-template:db

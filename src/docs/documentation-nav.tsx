@@ -1,6 +1,7 @@
 import {EditorialBadge} from './editorial-page'
 import Link from 'next/link'
 import { HandbookNavigation } from './handbook-navigation'
+import type {Editorial} from './editorial'
 import type { Entry } from './published-documentation'
 
 function containsCurrent(entry: Entry, current?: string): boolean {
@@ -13,10 +14,10 @@ function Branch({ entries, current }: { entries: Entry[]; current?: string }) {
       {entries.filter(entry => !['/systems/shadcn/icons-bewegung', '/systems/shadcn/felder-und-fehlermeldungen', '/systems/shadcn/systemzustaende'].includes(entry.path)).map((entry) => (
         <li key={entry.path}>
           {entry.children?.length ? <details open={containsCurrent(entry, current)} key={current}>
-            <summary>{entry.title}{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}</summary>
+            <summary>{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}{entry.title}</summary>
             <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.title} · Übersicht</Link>
             <Branch entries={entry.children} current={current} />
-          </details> : <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.title}{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}</Link>}
+          </details> : <Link href={entry.path} aria-current={entry.path === current ? 'page' : undefined}>{entry.editorial&&<EditorialBadge compact editorial={entry.editorial}/>}{entry.title}</Link>}
         </li>
       ))}
     </ul>
@@ -27,9 +28,9 @@ export function DocumentationNav({ system, tree, current }: { system: string; tr
   const home = '/systems/' + encodeURIComponent(system)
   const links = <><Link href={home} aria-current={home === current ? 'page' : undefined}>Übersicht</Link>
     <Branch entries={tree} current={current} /></>
-  const chapters: { path: string; title: string; context: string; summary?: string }[] = []
+  const chapters: { path: string; title: string; context: string; summary?: string; editorial?: Editorial }[] = []
   function collect(entries: Entry[], context = 'Handbuch') {
-    entries.forEach(entry => { chapters.push({ path: entry.path, title: entry.title, context, summary: entry.summary }); collect(entry.children ?? [], context === 'Handbuch' ? entry.title : context + ' / ' + entry.title) })
+    entries.forEach(entry => { chapters.push({ path: entry.path, title: entry.title, context, summary: entry.summary, editorial: entry.editorial }); collect(entry.children ?? [], context === 'Handbuch' ? entry.title : context + ' / ' + entry.title) })
   }
   collect(tree)
   return (

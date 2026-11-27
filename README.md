@@ -45,7 +45,7 @@ Beim ersten Start richtet Arve die veröffentlichte shadcn-Referenz automatisch 
 | Inhalte bearbeiten | [/admin](http://127.0.0.1:3010/admin) |
 | Agenten verbinden | `http://127.0.0.1:3010/mcp` |
 
-Zum Bearbeiten beim ersten Besuch im Admin-Bereich ein eigenes Konto anlegen. Unter **Seiten** findet ihr Texte, Inhaltsblöcke und Vorlagen. Unter **Design-Systeme** verwaltet ihr die einzelnen Handbücher.
+Zum Bearbeiten beim ersten Besuch im Admin-Bereich ein eigenes Konto anlegen. Dieses erste Konto wird Administrator und kann weitere Benutzer mit Rechten pro Design-System anlegen. Unter **Seiten** findet ihr Texte, Inhaltsblöcke und Vorlagen. Unter **Design-Systeme** verwaltet ihr die einzelnen Handbücher.
 
 ## Die Referenz als Ausgangspunkt nutzen
 
@@ -103,7 +103,7 @@ Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Über
 
 Das [Arve-Handbuch](http://127.0.0.1:3010/handbuch) dokumentiert Arve selbst mit eigener Navigation ausserhalb der Design-Systeme. Unter **Redaktion und Seitenstatus** lässt sich die farbige Umrandung ausprobieren. Unter **Autoren-Skills** sind die Originaldateien aufklappbar lesbar.
 
-Seiten besitzen einen redaktionellen Stand: **Entwurf**, **Zu klären**, **Im Review** oder **Geprüft**. Er ist unabhängig von Payloads Veröffentlichung. Klärungsnotiz und optionale Zuständigkeit erscheinen im Portal und über MCP; bei „Zu klären“ ist eine Notiz erforderlich. Bestehende Seiten ohne Zuordnung zeigen „Nicht eingeordnet“. Der persönliche Redaktionsmodus blendet die Statusumrandung ein.
+Seiten besitzen einen redaktionellen Stand: **Entwurf**, **Zu klären**, **Im Review** oder **Geprüft**. Er ist unabhängig von Payloads Veröffentlichung. Klärungsnotiz und optionale Zuständigkeit erscheinen im Portal und über MCP; bei „Zu klären“ ist eine Notiz erforderlich. Bestehende Seiten ohne Zuordnung zeigen „Nicht eingeordnet“. Der Seitenstatus steuert automatisch einen farbigen Rahmen um die gesamte Browseransicht. Bei **Geprüft** entfällt er; auch **Nicht eingeordnet** bleibt als offener Stand sichtbar. In der Navigation steht bei offenen Seiten ein Farbpunkt vor dem Titel; der genaue Status ist per Tooltip und für Screenreader zugänglich. Geprüfte Seiten haben dort keinen Indikator. Einen separaten Redaktionsmodus gibt es nicht mehr.
 
 Bei einer bestehenden Datenbank vor dem Start nach diesem Update einmal `npm run db:editorial` ausführen. Das ergänzt ausschliesslich die Statusfelder an Seiten und Versionen; bestehende Inhalte und Prüfstände werden nicht überschrieben. Neue leere Datenbanken erhalten die Felder beim Erstaufbau. Beim Kopieren eines Systems beginnen die redaktionellen Stände als Entwurf, ohne übernommene Klärungsnotizen oder Zuständigkeiten.
 
@@ -114,6 +114,62 @@ Veröffentlichte Inhalte erscheinen im Portal und über MCP. Entwürfe bleiben i
 Unter **Implementierungen** lässt sich dokumentieren, welche Bibliothek eine Komponente für Web, iOS oder Android umsetzt – einschließlich Paketversion, Freigabestatus und Prüfumfang. Eine veröffentlichte Dokumentation bedeutet dabei noch keine technische Freigabe der Implementierung.
 
 [Komponentenvorlage](docs/handbook/component-template/README.md) · [Komponentenkatalog](docs/handbook/component-catalog/README.md)
+
+## Gemeinsame Startseitenvorlage
+
+Alle Design-Systeme verwenden dieselbe Startseitenvorlage: **Seite aufbauen**, **Ablauf gestalten**, **Komponenten auswählen**, anschliessend Grundlagen, Zusammenarbeit und alle Themen. Der Aufbau liegt im Anwendungscode; die Inhalte und Zielseiten lassen sich pro System ändern.
+
+Im CMS die unter **Design-Systeme → Startseite** gewählte Übersichtsseite öffnen. Unter **Systemstartseite · gemeinsame Vorlage** können Titel, Einleitung, Einstiegstexte und Zielseiten angepasst werden. Leere Felder verwenden die allgemeinen Vorgaben; ein optionales Beispiel erscheint erst nach Auswahl einer veröffentlichten Zielseite. Nicht verfügbare Einstiege bleiben erkennbar, ohne ins Leere oder zu einem anderen System zu führen.
+
+Für eine andere Ausarbeitung die Übersichtsseite duplizieren, Texte und Ziele ändern und nach Prüfung veröffentlichen. Anschliessend diese Seite als Startseite des Systems auswählen. Anpassungen werden mit der Seite versioniert und freigegeben. Beim Referenzimport werden Startseitenverknüpfungen auf die kopierten Seiten umgebogen. Weitere Seitentypen verwenden bereits die gemeinsamen Inhaltsvorlagen für Grundlagen, Layouts, Patterns und Komponenten.
+
+Bestehende Installationen vor dem Start aktualisieren; die Vorschau schreibt nichts:
+
+```sh
+npm run db:home-template
+npm run db:home-template -- --apply
+```
+
+Die Erweiterung ergänzt ausschliesslich Felder für Seiten und Versionen. Neue Installationen erhalten sie beim Erstaufbau. `npm run check:home-template` prüft Vorgaben, eigene Ziele und portable Kopien; `npm run check:home-template:db` prüft das Datenbank-Upgrade isoliert.
+
+## Rechte, Versionen und Veröffentlichung
+
+Im CMS unter **Benutzer → Rechte pro Design-System** die Rolle zuweisen:
+
+| Rolle | Rechte |
+| --- | --- |
+| Leser | Veröffentlichte Inhalte lesen |
+| Autor | Entwürfe im eigenen System erstellen, bearbeiten und Versionen lesen |
+| Herausgeber | Zusätzlich freigeben, veröffentlichen, zurückziehen und löschen |
+| Administrator | Alle Systeme und die Benutzerverwaltung |
+
+**Arbeitsweg:** Entwurf speichern → „Im Review“ → Herausgeber prüft und speichert „Geprüft“ als Entwurf → unverändert veröffentlichen. Jede Inhaltsänderung hebt die Freigabe auf. Ein Autor kann eine bestehende Veröffentlichung als Entwurf überarbeiten; öffentlich bleibt die bisherige Fassung sichtbar. Dieselbe Person darf prüfen und veröffentlichen; ein verpflichtendes Vier-Augen-Prinzip besteht nicht.
+
+Seiten und Implementierungen behalten neue gespeicherte Versionen ohne automatische Begrenzung. Wiederherstellungen über das CMS und die REST-API werden immer als Entwurf angelegt und benötigen eine neue Freigabe. Der **Veröffentlichungsverlauf** speichert Person, Aktion, Version und Inhalts-Hash. Seine Einträge sind über CMS und APIs nicht veränderbar. Privilegierter Datenbank- und Serverzugriff bleibt vertrauenswürdig; dies ist keine externe revisionssichere Archivierung. Frühere, bereits bereinigte Versionen sind nicht wiederherstellbar.
+
+Veröffentlichte Inhalte bleiben öffentlich. Systemrechte begrenzen die Redaktion, sie richten keine vertraulichen Mandanten ein. Eine CMS-Freigabe löst keinen GitHub-Pages-Deploy aus; dafür muss der veröffentlichte Snapshot aktualisiert und ausgeliefert werden.
+
+### Bestehende Datenbank aktualisieren
+
+Vorher eine Datenbanksicherung erstellen. Bei älteren Ständen zuerst `npm run db:editorial` ausführen, danach die Erweiterung prüfen:
+
+```sh
+npm run db:publishing
+```
+
+Die Vorschau wird vollständig zurückgerollt. Mit `--apply` die zusätzlichen Rechte-, Freigabe- und Protokollfelder anlegen:
+
+```sh
+npm run db:publishing -- --apply
+```
+
+Bei genau einem bestehenden Benutzer bleibt dieser als Administrator handlungsfähig. Gibt es mehrere Benutzer und noch keinen Administrator, verlangt das Skript ausdrücklich `--administrator=ID`. Bestehende Inhalte, Veröffentlichungen und redaktionelle Stände bleiben erhalten. Bestehende Freigaben bekommen keinen erfundenen historischen Nachweis; bei der nächsten Veröffentlichung muss die Fassung ausdrücklich freigegeben werden. Neue leere Datenbanken werden beim Erststart vollständig eingerichtet. Automatische Schemaänderungen durch Payload sind deaktiviert (`push: false`).
+
+**Für Anwendungsentwickler:** Payloads Local API umgeht standardmässig die Zugriffskontrolle. Bei Aufrufen im Namen eines Benutzers `overrideAccess: false` und dessen authentifizierten Request übergeben. Für Wiederherstellungen `restoreAsDraft` aus `src/access/restore-draft.ts` verwenden; der installierte Local-API-Wrapper reicht die Entwurfsoption nicht weiter. Vertrauenswürdige lokale Bootstrap-/Importskripte sind bewusst davon getrennt und erzeugen keine vorgetäuschten Benutzerfreigaben.
+
+Prüfen mit `npm run check:publishing:db` und `npm run check:publishing:migration`. Beide benötigen PostgreSQL und verwenden jeweils ein isoliertes, anschliessend entferntes Schema. Sie prüfen Systemgrenzen, Rollen, Entwürfe, Freigabe, Wiederherstellung und das Upgrade eines bestehenden Datenbestands. Diese Prüfungen laufen auch im eigenen CI-Workflow.
+
+[Rechte und Freigabe im Arve-Handbuch](http://127.0.0.1:3010/handbuch/rechte-und-freigabe)
 
 ## Mit einem Agenten arbeiten
 

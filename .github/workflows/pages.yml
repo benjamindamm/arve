@@ -24,6 +24,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Check shared system startpage templates
+        run: npm run check:home-template
       - name: Check progressive MCP reads and search
         run: npm run check:mcp:unit
       - uses: actions/configure-pages@v6.0.0

@@ -68,6 +68,7 @@ export interface Config {
   blocks: {};
   collections: {
     users: User;
+    'publication-events': PublicationEvent;
     'design-systems': DesignSystem;
     pages: Page;
     implementations: Implementation;
@@ -80,6 +81,7 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
+    'publication-events': PublicationEventsSelect<false> | PublicationEventsSelect<true>;
     'design-systems': DesignSystemsSelect<false> | DesignSystemsSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     implementations: ImplementationsSelect<false> | ImplementationsSelect<true>;
@@ -129,6 +131,17 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: number;
+  /**
+   * Verwaltet Benutzer und alle Design-Systeme. Nur Administratoren dürfen diese Berechtigung vergeben.
+   */
+  isAdministrator?: boolean | null;
+  memberships?:
+    | {
+        designSystem: number | DesignSystem;
+        role: 'reader' | 'author' | 'publisher';
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
   enableAPIKey?: boolean | null;
@@ -173,9 +186,60 @@ export interface DesignSystem {
  */
 export interface Page {
   id: number;
+  /**
+   * Änderungen zuerst als Entwurf speichern, dann zur Prüfung geben. Ein Herausgeber setzt „Geprüft“ und speichert den Entwurf, bevor er ihn veröffentlicht.
+   */
+  publication?: {
+    contentHash?: string | null;
+    reviewedHash?: string | null;
+    reviewedBy?: string | null;
+    reviewedAt?: string | null;
+    publishedBy?: string | null;
+    publishedAt?: string | null;
+  };
+  /**
+   * Wird verwendet, wenn diese Seite unter Design-Systeme als Startseite gewählt ist. Leere Felder übernehmen Arves Vorgaben. Alle Systeme verwenden denselben Aufbau. Zielseiten müssen zum selben System gehören; Entwürfe werden erst nach ihrer Veröffentlichung verlinkt.
+   */
+  homeTemplate?: {
+    eyebrow?: string | null;
+    heading?: string | null;
+    intro?: string | null;
+    startTitle?: string | null;
+    referenceTitle?: string | null;
+    page?: {
+      title?: string | null;
+      description?: string | null;
+      primary?: (number | null) | Page;
+      secondary?: (number | null) | Page;
+    };
+    flow?: {
+      title?: string | null;
+      description?: string | null;
+      primary?: (number | null) | Page;
+      secondary?: (number | null) | Page;
+    };
+    components?: {
+      title?: string | null;
+      description?: string | null;
+      primary?: (number | null) | Page;
+    };
+    foundations?: {
+      primary?: (number | null) | Page;
+      secondary?: (number | null) | Page;
+    };
+    collaboration?: {
+      primary?: (number | null) | Page;
+      secondary?: (number | null) | Page;
+    };
+    example?: {
+      title?: string | null;
+      description?: string | null;
+      primary?: (number | null) | Page;
+    };
+  };
   title: string;
   /**
-   * Unabhängig von Entwurf/Veröffentlichung. Wird im Portal und über MCP angezeigt.
+   * Wird im Portal und über MCP angezeigt. Nur Herausgeber setzen „Geprüft“: Inhalt zuerst als Entwurf speichern, dann prüfen und erneut speichern.
    */
   editorialStatus?: ('draft' | 'clarify' | 'review' | 'checked') | null;
   /**
@@ -346,6 +410,7 @@ export interface Page {
  */
 export interface Media {
   id: number;
+  designSystem?: (number | null) | DesignSystem;
   alt: string;
   updatedAt: string;
   createdAt: string;
@@ -360,11 +425,46 @@ export interface Media {
   focalY?: number | null;
 }
 /**
+ * Unveränderliche Einträge zu Bearbeitung, Freigabe und Veröffentlichung. Die Version und der Inhalts-Hash kennzeichnen die betroffene Fassung.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publication-events".
+ */
+export interface PublicationEvent {
+  id: number;
+  designSystem: number | DesignSystem;
+  documentType: 'pages' | 'implementations';
+  documentID: number;
+  documentTitle: string;
+  versionID?: number | null;
+  contentHash: string;
+  action: 'created' | 'edited' | 'review_requested' | 'approved' | 'published' | 'unpublished' | 'restored';
+  actorID?: number | null;
+  actor: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "implementations".
  */
 export interface Implementation {
   id: number;
+  /**
+   * Änderungen zuerst als Entwurf speichern, dann zur Prüfung geben. Ein Herausgeber setzt „Geprüft“ und speichert den Entwurf, bevor er ihn veröffentlicht.
+   */
+  publication?: {
+    contentHash?: string | null;
+    reviewedHash?: string | null;
+    reviewedBy?: string | null;
+    reviewedAt?: string | null;
+    publishedBy?: string | null;
+    publishedAt?: string | null;
+  };
+  /**
+   * Für die Veröffentlichung: Inhalt als Entwurf speichern, als Herausgeber prüfen und „Geprüft“ erneut als Entwurf speichern.
+   */
+  editorialStatus?: ('draft' | 'clarify' | 'review' | 'checked') | null;
   name: string;
   componentPage: number | Page;
   platform: 'web' | 'ios' | 'android';
@@ -413,6 +513,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'publication-events';
+        value: number | PublicationEvent;
       } | null)
     | ({
         relationTo: 'design-systems';
@@ -477,6 +581,14 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  isAdministrator?: T;
+  memberships?:
+    | T
+    | {
+        designSystem?: T;
+        role?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   enableAPIKey?: T;
@@ -501,6 +613,23 @@ export interface UsersSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publication-events_select".
+ */
+export interface PublicationEventsSelect<T extends boolean = true> {
+  designSystem?: T;
+  documentType?: T;
+  documentID?: T;
+  documentTitle?: T;
+  versionID?: T;
+  contentHash?: T;
+  action?: T;
+  actorID?: T;
+  actor?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "design-systems_select".
  */
 export interface DesignSystemsSelect<T extends boolean = true> {
@@ -517,6 +646,67 @@ export interface DesignSystemsSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  publication?:
+    | T
+    | {
+        contentHash?: T;
+        reviewedHash?: T;
+        reviewedBy?: T;
+        reviewedAt?: T;
+        publishedBy?: T;
+        publishedAt?: T;
+      };
+  homeTemplate?:
+    | T
+    | {
+        eyebrow?: T;
+        heading?: T;
+        intro?: T;
+        startTitle?: T;
+        referenceTitle?: T;
+        page?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              primary?: T;
+              secondary?: T;
+            };
+        flow?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              primary?: T;
+              secondary?: T;
+            };
+        components?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              primary?: T;
+            };
+        foundations?:
+          | T
+          | {
+              primary?: T;
+              secondary?: T;
+            };
+        collaboration?:
+          | T
+          | {
+              primary?: T;
+              secondary?: T;
+            };
+        example?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              primary?: T;
+            };
+      };
   title?: T;
   editorialStatus?: T;
   editorialNote?: T;
@@ -669,6 +859,17 @@ export interface PagesSelect<T extends boolean = true> {
  * via the `definition` "implementations_select".
  */
 export interface ImplementationsSelect<T extends boolean = true> {
+  publication?:
+    | T
+    | {
+        contentHash?: T;
+        reviewedHash?: T;
+        reviewedBy?: T;
+        reviewedAt?: T;
+        publishedBy?: T;
+        publishedAt?: T;
+      };
+  editorialStatus?: T;
   name?: T;
   componentPage?: T;
   platform?: T;
@@ -699,6 +900,7 @@ export interface ImplementationsSelect<T extends boolean = true> {
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
+  designSystem?: T;
   alt?: T;
   updatedAt?: T;
   createdAt?: T;

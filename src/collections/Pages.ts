@@ -1,3 +1,7 @@
+import {homeTemplateField} from './home-template'
+import {restoreDraftEndpoint} from '../access/restore-draft'
+import {pageAccess} from '../access/permissions'
+import {publicationField,capturePublicationIntent,enforcePublication,recordPublicationEvent} from '../access/publication'
 import type { CollectionConfig, Field } from 'payload'
 import { pageTemplates } from '../docs/page-templates'
 import { componentTemplateHelp } from '../docs/component-standard'
@@ -7,10 +11,15 @@ export const Pages: CollectionConfig = {
   slug: 'pages',
   labels: { singular: 'Seite', plural: 'Seiten' },
   admin: { useAsTitle: 'title', defaultColumns: ['title', 'designSystem', 'editorialStatus', 'pageType', '_status'] },
-  versions: { drafts: true },
+  endpoints:[restoreDraftEndpoint('pages')],
+  access: pageAccess,
+  versions: { drafts: true, maxPerDoc: 0 },
+  hooks: { beforeOperation:[capturePublicationIntent],beforeChange:[enforcePublication],afterChange:[recordPublicationEvent] },
   fields: [
+    publicationField,
+    homeTemplateField,
     { name: 'title', label: 'Titel', type: 'text', required: true },
-    {name:'editorialStatus',label:'Redaktioneller Stand',type:'select',defaultValue:'draft',options:editorialStates.map(({value,label})=>({value,label})),admin:{position:'sidebar',description:'Unabhängig von Entwurf/Veröffentlichung. Wird im Portal und über MCP angezeigt.'}},
+    {name:'editorialStatus',label:'Redaktioneller Stand',type:'select',defaultValue:'draft',options:editorialStates.map(({value,label})=>({value,label})),admin:{position:'sidebar',description:'Wird im Portal und über MCP angezeigt. Nur Herausgeber setzen „Geprüft“: Inhalt zuerst als Entwurf speichern, dann prüfen und erneut speichern.'}},
     {name:'editorialNote',label:'Klärungsbedarf / Prüfumfang',type:'textarea',maxLength:2000,validate:(value:unknown,{siblingData}:any)=>siblingData?.editorialStatus==='clarify'&&!(typeof value==='string'&&value.trim())?'Was ist zu klären? Bitte eine kurze Notiz ergänzen.':true,admin:{position:'sidebar',description:'Bei „Zu klären“ erforderlich. Bei „Geprüft“ den geprüften Umfang beschreiben. Öffentlich sichtbar.'}},
     {name:'editorialOwner',label:'Redaktionell zuständig',type:'text',maxLength:200,admin:{position:'sidebar',description:'Optionales Team oder verantwortliche Rolle. Öffentlich sichtbar.'}},
     { name: 'system', type: 'text', index: true, admin: { hidden: true } },
