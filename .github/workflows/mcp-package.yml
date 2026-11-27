@@ -61,7 +61,7 @@ jobs:
       - name: Publish npm package to GitHub Packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm publish package/*.tgz --registry=https://npm.pkg.github.com --ignore-scripts
+        run: npm publish ./package/*.tgz --registry=https://npm.pkg.github.com --ignore-scripts
       - name: Create GitHub release with installable package
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
