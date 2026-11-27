@@ -1,5 +1,7 @@
 'use client'
 
+import {NativeSelect} from '../native-select'
+
 import { useEffect, useId, useRef, useState } from 'react'
 import { RichText } from '../rich-text'
 import type { Page } from '../../payload-types'
@@ -72,8 +74,8 @@ export default function Patterns({ content, summary }: { content: Page['content'
     <section aria-label="Kandidaten finden" className="pattern-browser">
       <div className="pattern-controls">
         <label htmlFor={`${prefix}-search`}>Pattern suchen<input id={`${prefix}-search`} ref={search} type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Aufgabe, Titel, ID oder Tag"/></label>
-        <label htmlFor={`${prefix}-category`}>Kategorie<select id={`${prefix}-category`} value={category} onChange={e => setCategory(e.target.value)}><option value="">Alle Kategorien</option>{categories.map(v => <option key={v}>{v}</option>)}</select></label>
-        <label htmlFor={`${prefix}-tag`}>Tag<select id={`${prefix}-tag`} value={tag} onChange={e => setTag(e.target.value)}><option value="">Alle Tags</option>{tags.map(v => <option key={v}>{v}</option>)}</select></label>
+        <label htmlFor={`${prefix}-category`}>Kategorie<NativeSelect id={`${prefix}-category`} value={category} onChange={e => setCategory(e.target.value)}><option value="">Alle Kategorien</option>{categories.map(v => <option key={v}>{v}</option>)}</NativeSelect></label>
+        <label htmlFor={`${prefix}-tag`}>Tag<NativeSelect id={`${prefix}-tag`} value={tag} onChange={e => setTag(e.target.value)}><option value="">Alle Tags</option>{tags.map(v => <option key={v}>{v}</option>)}</NativeSelect></label>
       </div>
       <div className="pattern-result-line"><p role="status" aria-atomic="true">{found.length} von {patterns.length} Kandidaten</p>{(query || category || tag) && <button type="button" onClick={reset}>Filter zurücksetzen</button>}</div>
       <div className="pattern-workspace">

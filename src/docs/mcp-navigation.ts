@@ -1,5 +1,6 @@
+import {publicUrl} from './public-url'
 import type { Entry } from './published-documentation'
-import { ReadError, snapshotOf } from './mcp-reads'
+import { ReadError, snapshotOf } from './mcp-model'
 
 /** Branch reads keep navigation separate from page contents. The snapshot covers the entire hierarchy. */
 export function compactTree(system: string, tree: Entry[], requestUrl: string, parentPath?: string, offset = 0, limit = 12, expectedSnapshot?: string) {
@@ -16,7 +17,7 @@ export function compactTree(system: string, tree: Entry[], requestUrl: string, p
   const base = {system, ...(parentPath ? {parentPath} : {}), snapshot, limit}
   const entries = children.slice(offset,offset + limit).map(({children, summary, ...entry}) => ({
     ...entry, ...(summary ? {summary: Array.from(summary).slice(0,240).join(''), summaryComplete: Array.from(summary).length <= 240} : {}),
-    pageUrl: new URL(entry.path,requestUrl).href, childCount: children?.length ?? 0,
+    pageUrl: publicUrl(entry.path,requestUrl), childCount: children?.length ?? 0,
     ...(children?.length ? {expand: {tool: 'list_documentation_tree', arguments: {system, parentPath: entry.path, snapshot, limit}}} : {}),
   }))
   const nextOffset = offset + entries.length < children.length ? offset + entries.length : null

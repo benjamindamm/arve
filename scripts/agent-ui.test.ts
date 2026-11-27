@@ -1,3 +1,4 @@
+import {readFile} from 'node:fs/promises'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {createHash} from 'node:crypto'
@@ -40,7 +41,7 @@ test('authoring files reconstruct exactly; changed hashes, arbitrary paths and u
 
 test('real MCP discovery, tool fallback and self-contained App resource work without a database',async()=>{
  const server=new McpServer({name:'arve-pilot-test',version:'1'})
- registerColorReview(server);registerAuthoringSkills(server)
+ registerColorReview(server,()=>readFile('public/mcp-apps/color-review.html','utf8'));registerAuthoringSkills(server)
  const [clientTransport,serverTransport]=InMemoryTransport.createLinkedPair()
  const client=new Client({name:'text-test-client',version:'1'})
  await server.connect(serverTransport);await client.connect(clientTransport)

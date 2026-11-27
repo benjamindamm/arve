@@ -51,11 +51,6 @@ export const Implementations: CollectionConfig = {
     { name: 'contexts', type: 'select', label: 'Web-Nutzungskontexte', hasMany: true,
       options: [{ value: 'desktop', label: 'Desktop-Web' }, { value: 'mobile', label: 'Mobiles Web' }],
       admin: { condition: (_, siblings) => siblings.platform === 'web' } },
-    { name: 'contract', type: 'group', label: 'Technischer Contract', fields: [
-      { name: 'library', type: 'text', label: 'Bibliothek' },
-      { name: 'component', type: 'text', label: 'Komponenten-ID' },
-      { name: 'revision', type: 'text', label: 'Export-Revision' },
-    ] },
     { name: 'verification', type: 'group', label: 'Prüfstand', fields: [
       { name: 'scope', type: 'textarea', label: 'Geprüfter Umfang und offene Punkte' },
       { name: 'evidence', type: 'text', label: 'Nachweis-Referenz' },

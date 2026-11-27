@@ -33,7 +33,7 @@ Im Repository muss unter Settings → Pages → Source **GitHub Actions** gewäh
 - Vollständige gebundene Contractdateien mit Hashprüfung, Syntaxhervorhebung und Downloads; statische Quellenbilder.
 - SVG-/FIG-Designvorlagen sowie Rechnungsbeispiele mit Filterrückkehr und vorab erzeugten PDFs.
 
-Payload-Admin, REST-API und der serverseitige MCP-Endpunkt werden nicht veröffentlicht. Die allgemeine Beschreibung der Agentenarbeit bleibt sichtbar; die Startseite erklärt, dass diese statische Ausgabe keinen MCP-Endpunkt anbietet. Inhalte ändern sich erst nach erneutem Export und Deployment.
+Payload-Admin, REST-API und der serverseitige MCP-Endpunkt werden nicht veröffentlicht. Die allgemeine Beschreibung der Agentenarbeit bleibt sichtbar; die Startseite verlinkt den lokalen MCP-Zugang für diese statische Ausgabe. Inhalte ändern sich erst nach erneutem Export und Deployment.
 
 ## Umsetzung und Prüfgrenzen
 
@@ -44,3 +44,11 @@ Der Assetexport schreibt nur die gebundenen, SHA-256-geprüften Contractartefakt
 `check:static` prüft alle veröffentlichten Seiten, interne HTML-Verweise einschliesslich Scripts, Stylesheets und Inline-Bildressourcen sowie sämtliche exportierten Ressourcenhashes. Das ersetzt keine vollständige manuelle Einzelprüfung aller Seiten oder eine Barrierefreiheitsprüfung. Die Browserprüfung umfasst Arbeitsweg-Tabs, Komponenten- und Patternsuche, Angular-Button, geladenes SCXML und den Rechnungsablauf mit Filterrückkehr.
 
 Am 21. November 2026 erfolgreich ausgeführt: statischer Build ohne Datenbankzugang; 116 Handbuchseiten mit 69 Komponenten; 198 HTML-Dateien einschliesslich HTML-Contractartefakten; 54.951 interne Dateiverweise; SHA-256 aller 1.664 exportierten Ressourcen. Die normale Payload-Anwendung bestand ebenfalls den Produktionsbuild und die Komponenten-Releaseprüfung. Alle 69 Komponenten wurden weiterhin über den lokalen MCP-Endpunkt geprüft. Browserprüfung in BrowserOS neo bei breiter und schmaler Ansicht; insbesondere Suche, Live-Button, SCXML, Filterrückkehr und der Hinweis zum fehlenden MCP-Endpunkt funktionieren in der statischen Ausgabe. Diese Nachweise beziehen sich auf den lokalen Export vor der Veröffentlichung.
+
+## MCP über den statischen Export
+
+Der Build erzeugt auch `arve-data/current.json` und eine unveränderliche, über SHA256 adressierte Release-Struktur. Das lokale [Arve-MCP-Paket](../../packages/arve-mcp/README.md) liest diese Daten über die konfigurierbare Website-URL. Die statische Website selbst bietet weiterhin keinen `/mcp`-Endpunkt.
+
+HTML und JSON verwenden denselben gespeicherten veröffentlichten Handbuchstand. Datenbankänderungen zuerst mit dem bestehenden Referenzexport übernehmen; ein Push veröffentlicht keine ungespeicherten Datenbankänderungen. Für einen neuen Stand den Agenten neu verbinden. Ein Deployment darf alte Releases entfernen: Bereits verbundene Agenten melden dann für noch nicht geladene Dateien einen Fehler und müssen neu verbinden.
+
+`npm run check:mcp:static` prüft das installierte Paket gegen die veröffentlichte Leseschicht. Der Pages-Workflow führt diesen Vergleich vor der Veröffentlichung aus.

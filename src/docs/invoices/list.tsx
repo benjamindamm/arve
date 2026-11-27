@@ -1,5 +1,7 @@
 'use client'
 
+import {NativeSelect} from '../native-select'
+
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { formatAmount, formatDate, invoicePath, invoices, statuses, type InvoiceStatus } from './data'
@@ -30,10 +32,10 @@ export function InvoiceList({ initialQuery, initialStatus }: { initialQuery: str
     <>
       <div className="invoice-filters">
         <label>Rechnung suchen<input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Nummer oder Beschreibung" /></label>
-        <label>Status<select value={status} onChange={(event) => setStatus(event.target.value as InvoiceStatus | '')}>
+        <label>Status<NativeSelect value={status} onChange={(event) => setStatus(event.target.value as InvoiceStatus | '')}>
           <option value="">Alle</option>
           {Object.entries(statuses).map(([key, label]) => <option value={key} key={key}>{label}</option>)}
-        </select></label>
+        </NativeSelect></label>
         {(query || status) && <button type="button" className="system-button outline" onClick={clear}>Filter zurücksetzen</button>}
       </div>
 
@@ -69,9 +71,9 @@ export function InvoiceList({ initialQuery, initialStatus }: { initialQuery: str
           </div>}
       </div>
       <div className="invoice-scenarios">
-        <label>Beispielzustand<select value={scenario} onChange={(event) => { setLoading(false); setScenario(event.target.value as Scenario) }}>
+        <label>Beispielzustand<NativeSelect value={scenario} onChange={(event) => { setLoading(false); setScenario(event.target.value as Scenario) }}>
           {Object.entries(states).map(([key, label]) => <option value={key} key={key}>{label}</option>)}
-        </select></label>
+        </NativeSelect></label>
         <button type="button" className="system-button outline" onClick={() => setLoading(true)} disabled={loading}>Laden simulieren</button>
       </div>
     </>

@@ -2,31 +2,17 @@ import { createHash } from 'node:crypto'
 import { constants } from 'node:fs'
 import { lstat, open, readdir, realpath } from 'node:fs/promises'
 import path from 'node:path'
-import { shadcnReferenceRevision } from './current-reference'
+import {readRegistry,defaultRegistryFile} from './connector/registry.mjs'
 
 export type LibrarySkillPackage = { library: string; revision: string; packageRoot: string; documentationSystem?: string }
 
-// Explicitly registered portable packages only. No repository fallback or folder discovery.
-const shadcnRevision = '65133e67843c757b78077bdc58bad7719cb3014209e45373d0c66d1964a11f26'
-export const librarySkillPackages: readonly LibrarySkillPackage[] = [{
-  library: 'shadcn', revision: shadcnReferenceRevision, documentationSystem: 'shadcn',
-  packageRoot: path.join(process.cwd(), 'src/contracts/libraries/shadcn', shadcnReferenceRevision, 'package'),
-}, {
-  library: 'shadcn', revision: 'bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91', documentationSystem: 'shadcn',
-  packageRoot: path.join(process.cwd(), 'src/contracts/libraries/shadcn/bde7fffabf50d7983ea8a2bf0bdabdb09dd9a83537825c744af5f309db5edf91/package'),
-}, {
-  library: 'shadcn', revision: shadcnRevision, documentationSystem: 'shadcn',
-  packageRoot: path.join(process.cwd(), 'src/contracts/libraries/shadcn', shadcnRevision, 'package'),
-}]
+// Runtime discovery reads one explicit registry; imports become available without code changes.
+export function registeredSkillPackages():LibrarySkillPackage[]{return readRegistry().exports.filter((e:any)=>e.packageRoot).map((e:any)=>({library:e.library,revision:e.revision,packageRoot:path.resolve(path.dirname(defaultRegistryFile()),e.packageRoot)}))}
+/** Compatibility snapshot for existing callers; runtime operations use registeredSkillPackages(). */
+export const librarySkillPackages:readonly LibrarySkillPackage[]=registeredSkillPackages()
 
-export class LibrarySkillError extends Error {
-  code: string
-  constructor(code: string, message: string) {
-    super(message)
-    this.code = code
-    this.name = 'LibrarySkillError'
-  }
-}
+import {LibrarySkillError} from './skill-error'
+export {LibrarySkillError} from './skill-error'
 const fail = (code: string, message: string): never => { throw new LibrarySkillError(code, message) }
 const hash = (bytes: Buffer | string) => createHash('sha256').update(bytes).digest('hex')
 const validPath = (value: string) => value.length > 0 && !/[\\\0:%?#]/.test(value) &&
@@ -100,13 +86,13 @@ async function readPackage(binding: LibrarySkillPackage) {
   }
 }
 
-export async function listLibrarySkills(library: string, revision?: string, registry = librarySkillPackages) {
+export async function listLibrarySkills(library: string, revision?: string, registry: readonly LibrarySkillPackage[] = registeredSkillPackages()) {
   const packages = await Promise.all(selectPackage(library, revision, registry).map(readPackage))
-  return { library, exports: packages.map(({ binding, skills, componentPages }) => ({ revision: binding.revision, format: 'ui-contracts-export/v1', skills, componentPages })),
+  return { library, exports: packages.map(({ binding, skills, componentPages }) => ({ revision: binding.revision, format: 'ui-contracts-export/v1', skills, componentPages, pageLookup:{tool:'find_contract_pages',arguments:{library,revision:binding.revision}} })),
     usage: { readTool: 'get_library_skill', pin: ['library', 'revision', 'skill'], relativeLinks: 'Resolve relative links against the directory of the current resourcePath using POSIX path normalization, then request the exact discovered resourcePath. Only listed resources are readable.', componentPages: 'Use get_component_page arguments only when an explicit documentation-system binding is listed; otherwise select a published documentation system separately. Check the returned contractReference library and revision: published component pins may differ from this skill export. Definition paths in the index are bindings, not skill resources.' } }
 }
 
-export async function getLibrarySkill(library: string, revision: string, skill: string, resourcePath?: string, registry = librarySkillPackages) {
+export async function getLibrarySkill(library: string, revision: string, skill: string, resourcePath?: string, registry: readonly LibrarySkillPackage[] = registeredSkillPackages()) {
   const [binding] = selectPackage(library, revision, registry)
   if (resourcePath !== undefined && !validPath(resourcePath)) return fail('INVALID_RESOURCE_PATH', 'Use an exact package-relative resourcePath from list_library_skills; traversal and encoded paths are forbidden.')
   const { files, skills } = await readPackage(binding)

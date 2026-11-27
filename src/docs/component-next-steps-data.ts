@@ -39,7 +39,7 @@ export function componentNextSteps(input: ComponentNextStepsInput): ComponentNex
   const onPage = (anchor: string) => sitePath(`${input.pagePath}#${anchor}`)
   const steps: ComponentNextStep[] = []
   const artifacts = contract?.artifacts ?? Object.fromEntries(Object.entries(contract?.files ?? {}).map(([path, file]) => [path, file.sha256]))
-  const designFile = contract?.component === component ? Object.keys(artifacts).find(path => path === `components/${component}/${component}.fig`) : undefined
+  const designFile = contract ? Object.keys(artifacts).find(path => path === `components/${contract.component}/${contract.component}.fig`) : undefined
   if (contract && designFile) steps.push({
     id: 'design', title: 'Mit dem Quellenentwurf gestalten',
     description: 'Den vorhandenen FIG-Quellenentwurf im Designwerkzeug prüfen. Er ist keine freigegebene Figma-Bibliothek.',

@@ -1,0 +1,35 @@
+{
+  "name": "@benjamindamm/arve-mcp",
+  "version": "0.1.0",
+  "description": "Read published Arve design-system handbooks from any static host through MCP",
+  "type": "module",
+  "bin": {
+    "arve-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjamindamm/arve.git",
+    "directory": "packages/arve-mcp"
+  },
+  "homepage": "https://github.com/benjamindamm/arve/tree/main/packages/arve-mcp",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@modelcontextprotocol/ext-apps": "1.7.5",
+    "zod": "4.6.7"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepack": "npm run build"
+  }
+}

@@ -1,0 +1,13 @@
+import Link from 'next/link'
+import {CopyTextButton} from './copy-text-button'
+const configuration=JSON.stringify({mcpServers:{arve:{command:'npx',args:['-y','--package=https://github.com/benjamindamm/arve/releases/download/mcp-v0.1.0/benjamindamm-arve-mcp-0.1.0.tgz','arve-mcp','--base-url','https://example.org/arve/']}}},null,2)
+export function StaticMcpGuide(){return <>
+ <p>Auch eine statische Arve-Website kann einem Agenten ihre Inhalte liefern. Ein kleines MCP-Paket läuft auf dem Rechner des Agenten und liest den veröffentlichten Export.</p>
+ <div className="arve-guide-cards"><section><h2>Website</h2><p>HTML und versionierte JSON-Dateien. Auf GitHub Pages oder eurem eigenen Webserver.</p></section><section><h2>MCP-Paket</h2><p>Verbindet das KI-Werkzeug mit eurer Arve-URL. Auf dem Webserver braucht es kein Node.js.</p></section></div>
+ <h2>In drei Schritten verbinden</h2>
+ <ol><li><strong>Handbuch veröffentlichen.</strong> Der statische Arve-Build erzeugt die Website und den JSON-Export zusammen.</li><li><strong>Paket einrichten.</strong> Auf dem Rechner des Agenten wird Node.js ab Version 22 benötigt.</li><li><strong>Website angeben.</strong> In der MCP-Konfiguration die Beispiel-URL durch eure Arve-Adresse ersetzen – inklusive Unterverzeichnis, ohne <code>/mcp</code>.</li></ol>
+ <details className="guide-more" open><summary>MCP-Konfiguration kopieren</summary><p>Das npm-Paket kommt aus dem GitHub-Release. Eine Anmeldung bei npmjs ist nicht nötig. Die Beispiel-URL durch eure Arve-Adresse ersetzen.</p><div className="guide-command"><pre><code>{configuration}</code></pre><CopyTextButton value={configuration} label="MCP-Konfiguration kopieren"/></div><p><a href="https://github.com/benjamindamm/arve/releases/tag/mcp-v0.1.0">Paket herunterladen →</a></p><p><a href="https://github.com/benjamindamm/arve/tree/main/packages/arve-mcp">Paket, Installation und Veröffentlichung →</a></p></details>
+ <h2>Was bleibt gleich?</h2><p>Der Agent findet Seiten, liest Regeln und lädt benötigte Abschnitte nach. Autoren-Skills und verknüpfte UI Contracts sind ebenfalls erreichbar. Das Paket enthält selbst keine Handbuchdaten und verändert keine Inhalte.</p>
+ <h2>Welchen Stand liest der Agent?</h2><p>Eine Verbindung bleibt bei einer veröffentlichten Exportversion. Nach einer Aktualisierung neu verbinden. Fehlt eine Datei oder stimmt ihre Prüfsumme nicht, meldet der MCP einen Fehler.</p>
+ <p>Eine laufende Arve-Anwendung bietet weiterhin ihren direkten MCP-Endpunkt. Für statische Websites übernimmt das lokale Paket den Zugang.</p><p><Link href="/handbuch/agenten">Mit dem verbundenen Agenten arbeiten →</Link></p>
+ </>}

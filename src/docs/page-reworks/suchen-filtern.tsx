@@ -1,4 +1,6 @@
 'use client'
+
+import {NativeSelect} from '../native-select'
 import { SiteAnchor } from '../site-anchor'
 
 
@@ -42,7 +44,7 @@ export default function SearchFilter({ content }: { content: Page['content'] }) 
         <div className="sf-title"><h3>{e[3]}</h3><SiteAnchor className="sf-create" href="/systems/shadcn/formulare-validierung">{e[11]} <span aria-hidden="true">↗</span></SiteAnchor></div>
         <div className="sf-controls">
           <label htmlFor={`${prefix}-q`}>{e[4]}<input type="search" id={`${prefix}-q`} value={q} aria-describedby={`${prefix}-hint`} onChange={event => { setQ(event.target.value); setSelected(null) }} /></label>
-          <label htmlFor={`${prefix}-status`}>{e[5]}<select id={`${prefix}-status`} value={status} aria-describedby={`${prefix}-hint`} onChange={event => { setStatus(event.target.value); setSelected(null) }}><option value="">{e[6]}</option><option>{e[7]}</option><option>{e[8]}</option></select></label>
+          <label htmlFor={`${prefix}-status`}>{e[5]}<NativeSelect id={`${prefix}-status`} value={status} aria-describedby={`${prefix}-hint`} onChange={event => { setStatus(event.target.value); setSelected(null) }}><option value="">{e[6]}</option><option>{e[7]}</option><option>{e[8]}</option></NativeSelect></label>
           <button type="button" className="sf-reset" onClick={() => { setQ(''); setStatus(''); setSelected(null) }}>{e[10]}</button>
         </div>
         <p className="sf-hint" id={`${prefix}-hint`}>{e[9]}</p>

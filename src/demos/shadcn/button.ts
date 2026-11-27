@@ -1,4 +1,5 @@
 import '@angular/compiler'
+import {selectChevronPath} from '../../docs/select-chevron'
 import { Component, createComponent, signal } from '@angular/core'
 import { BrnButton } from '@spartan-ng/brain/button'
 import { createApplication } from '@angular/platform-browser'
@@ -27,10 +28,10 @@ const ButtonDemoComponent = Component({
     </div>
     <div class="demo-controls">
       <label for="button-variant">Variante</label>
-      <select id="button-variant" [value]="variant()" (change)="selectVariant($event)">
+      <span class="arve-native-select arve-native-select--auto"><select id="button-variant" [value]="variant()" (change)="selectVariant($event)">
         <option value="default">Default</option>
         <option value="outline">Outline</option>
-      </select>
+      </select><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="${selectChevronPath}"/></svg></span>
       <label><input type="checkbox" [checked]="disabled()" (change)="disabled.set(!disabled()); activated.set(false)" /> Deaktiviert</label>
     </div>
   `,

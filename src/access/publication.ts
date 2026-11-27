@@ -3,13 +3,13 @@ import {transactionLock} from './transaction-lock'
 import {createHash} from 'node:crypto'
 import {APIError,type CollectionBeforeOperationHook,type CollectionBeforeChangeHook,type CollectionAfterChangeHook,type Field} from 'payload'
 import {hasSystemRole,componentSystem,relationID,isAdministrator,systemIDs} from './permissions'
-const fields={pages:['title','designSystem','parent','system','slug','pageType','template','order','summary','homeTemplate','editorialNote','editorialOwner','component','contract','demo','content'],implementations:['name','componentPage','platform','releaseStatus','packageName','packageVersion','owner','contexts','contract','verification']}
+const fields={pages:['title','designSystem','parent','system','slug','pageType','template','order','summary','externalLinks','homeTemplate','editorialNote','editorialOwner','component','contract','demo','content'],implementations:['name','componentPage','platform','releaseStatus','packageName','packageVersion','owner','contexts','contract','verification']}
 function canonical(value:any):any{
  if(Array.isArray(value))return value.map(canonical)
  if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().filter(k=>value[k]!=null).map(k=>[k,canonical(value[k])]))
  return value??null
 }
-export function contentHash(collection:'pages'|'implementations',data:any){return createHash('sha256').update(JSON.stringify(canonical(Object.fromEntries(fields[collection].map(k=>[k,['designSystem','parent','componentPage'].includes(k)?relationID(data[k]):k==='homeTemplate'?mapHomeTargets(data[k],relationID):data[k]]))))).digest('hex')}
+export function contentHash(collection:'pages'|'implementations',data:any){return createHash('sha256').update(JSON.stringify(canonical(Object.fromEntries(fields[collection].map(k=>[k,k==='externalLinks'&&!data[k]?.length?undefined:['designSystem','parent','componentPage'].includes(k)?relationID(data[k]):k==='homeTemplate'?mapHomeTargets(data[k],relationID):data[k]]))))).digest('hex')}
 export const publicationField:Field={name:'publication',label:'Freigabe dieser Fassung',type:'group',access:{read:async({req,doc})=>{if(!req.user)return false;if(isAdministrator(req.user))return true;if(!doc)return systemIDs(req.user,'author').length>0;return hasSystemRole(req.user,doc.designSystem??await componentSystem(req,doc.componentPage),'author')}},admin:{position:'sidebar',readOnly:true,description:'Änderungen zuerst als Entwurf speichern, dann zur Prüfung geben. Ein Herausgeber setzt „Geprüft“ und speichert den Entwurf, bevor er ihn veröffentlicht.'},fields:[
  {name:'contentHash',type:'text',label:'Inhalts-Hash'},
  {name:'reviewedHash',type:'text',label:'Freigegebener Inhalts-Hash'},

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { ReactNode, CSSProperties } from 'react'
 import './docs.css'
 import './handbook.css'
+import '../../docs/native-select.css'
 import { sitePath, staticPublication } from '../../docs/site-path'
 import {SiteMenu} from '../../docs/site-menu'
 

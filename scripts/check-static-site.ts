@@ -57,6 +57,23 @@ for(const [name,expected]of Object.entries(publication.assets)) {
   const bytes=await readFile(path.join(root,name))
   assert.equal(createHash('sha256').update(bytes).digest('hex'),expected,name)
 }
+// Verify every machine-readable resource, including shared portal contract downloads.
+const current=JSON.parse(await readFile(path.join(root,'arve-data/current.json'),'utf8'))
+assert.equal(current.format,'arve-static-mcp/v1')
+assert.equal(current.manifest,`releases/${current.release}/manifest.json`)
+const releaseRoot=path.join(root,'arve-data/releases',current.release)
+const manifestBytes=await readFile(path.join(releaseRoot,'manifest.json'))
+assert.equal(createHash('sha256').update(manifestBytes).digest('hex'),current.release)
+const manifest=JSON.parse(manifestBytes.toString('utf8'))
+assert.equal(manifest.format,current.format)
+for(const [name,descriptor]of Object.entries(manifest.files) as [string,{sitePath?:string;sha256:string;bytes:number}][]){
+ const relative=descriptor.sitePath??`arve-data/releases/${current.release}/${name}`
+ assert(!/[\\\0:%?#]/.test(relative)&&relative.split('/').every(part=>part&&part!=='.'&&part!=='..'))
+ const bytes=await readFile(path.join(root,relative))
+ assert.equal(bytes.length,descriptor.bytes,relative)
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),descriptor.sha256,relative)
+}
+assert.equal(publication.machineReadable.release,current.release)
 assert(!(await exists(path.join(root,'admin'))));assert(!(await exists(path.join(root,'mcp'))))
 assert(await exists(path.join(root,'404.html')))
 let skillFiles=0

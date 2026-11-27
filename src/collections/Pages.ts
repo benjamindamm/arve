@@ -1,3 +1,4 @@
+import {externalLinksField} from './external-links'
 import {homeTemplateField} from './home-template'
 import {restoreDraftEndpoint} from '../access/restore-draft'
 import {pageAccess} from '../access/permissions'
@@ -48,12 +49,8 @@ export const Pages: CollectionConfig = {
       })) },
     { name: 'order', type: 'number', label: 'Sortierung', defaultValue: 0 },
     { name: 'summary', type: 'textarea', label: 'Kurzbeschreibung' },
-    { name: 'component', type: 'text', label: 'Komponenten-ID', admin: { condition: (_, siblings) => siblings.pageType === 'component' } },
-    { name: 'contract', type: 'group', label: 'Technischer Contract', admin: { condition: (_, siblings) => siblings.pageType === 'component' }, fields: [
-      { name: 'library', type: 'text', label: 'Bibliothek' },
-      { name: 'component', type: 'text', label: 'Komponenten-ID' },
-      { name: 'revision', type: 'text', label: 'Export-Revision' },
-    ] },
+    externalLinksField,
+    { name: 'component', type: 'text', label: 'Handbuch-Kennung', admin: { condition: (_, siblings) => siblings.pageType === 'component', description:'Kennung für die URL im Handbuch. Darf von der optionalen Contract-Kennung abweichen.' } },
     { name: 'demo', type: 'group', label: 'Live-Beispiel', admin: { condition: (_, siblings) => siblings.pageType === 'component' }, fields: [
       { name: 'key', type: 'select', options: ['spartan-button', 'spartan-input', 'spartan-checkbox', 'spartan-switch'] },
       { name: 'label', type: 'text', label: 'Beschriftung' },

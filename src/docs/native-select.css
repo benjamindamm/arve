@@ -1,0 +1,7 @@
+/* Shared portal control, including the Angular demo. Contract projections keep their own tokens. */
+.arve-native-select{--select-chevron-inset:.75rem;--select-chevron-size:1rem;--select-chevron-gap:.5rem;display:grid;position:relative;inline-size:100%;min-inline-size:0;max-inline-size:100%;vertical-align:middle}
+.arve-native-select--auto{inline-size:auto}
+.arve-native-select:not([data-listbox])>select{appearance:none;-webkit-appearance:none;box-sizing:border-box;inline-size:100%;min-inline-size:0;max-inline-size:100%;padding-inline-end:calc(var(--select-chevron-inset) + var(--select-chevron-size) + var(--select-chevron-gap))}
+.arve-native-select>svg{position:absolute;inset-inline-end:var(--select-chevron-inset);inset-block-start:50%;transform:translateY(-50%);inline-size:var(--select-chevron-size);block-size:var(--select-chevron-size);pointer-events:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.arve-native-select:has(>select:disabled)>svg{opacity:.5}
+@media(forced-colors:active){.arve-native-select:not([data-listbox])>select{appearance:auto;-webkit-appearance:auto;padding-inline-end:var(--select-chevron-inset)}.arve-native-select>svg{display:none}}

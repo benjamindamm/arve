@@ -103,6 +103,10 @@ Die Autoren-Skills liegen im Repository und können direkt gelesen werden. Über
 
 Das [Arve-Handbuch](http://127.0.0.1:3010/handbuch) dokumentiert Arve selbst mit eigener Navigation ausserhalb der Design-Systeme. Unter **Redaktion und Seitenstatus** lässt sich die farbige Umrandung ausprobieren. Unter **Autoren-Skills** sind die Originaldateien aufklappbar lesbar.
 
+Unter **Seiten → Externe Quellen** lassen sich Figma-Dateien, Storybook-Seiten, Repositories und weitere Quellen verlinken. Typ, optionale Beschriftung und URL werden je Seite gepflegt und im Seitenkopf als Link-Badges angezeigt. Die Links gehören zur Seitenversion und erscheinen nach Veröffentlichung auch über MCP und im statischen Export. Bestehende Installationen ergänzen die Tabellen mit `npm run db:external-links -- --apply` (ohne `--apply` nur Vorschau).
+
+Die Admin-Felder sind zentral in `src/collections/Pages.ts` definiert. Die typabhängigen Felder unter **Seitenvorlage** stammen aus `src/docs/page-templates.ts`; der Quellenabschnitt gilt für alle Seitentypen. Payload erzeugt daraus die Bearbeitungsoberfläche.
+
 Seiten besitzen einen redaktionellen Stand: **Entwurf**, **Zu klären**, **Im Review** oder **Geprüft**. Er ist unabhängig von Payloads Veröffentlichung. Klärungsnotiz und optionale Zuständigkeit erscheinen im Portal und über MCP; bei „Zu klären“ ist eine Notiz erforderlich. Bestehende Seiten ohne Zuordnung zeigen „Nicht eingeordnet“. Der Seitenstatus steuert automatisch einen farbigen Rahmen um die gesamte Browseransicht. Bei **Geprüft** entfällt er; auch **Nicht eingeordnet** bleibt als offener Stand sichtbar. In der Navigation steht bei offenen Seiten ein Farbpunkt vor dem Titel; der genaue Status ist per Tooltip und für Screenreader zugänglich. Geprüfte Seiten haben dort keinen Indikator. Einen separaten Redaktionsmodus gibt es nicht mehr.
 
 Bei einer bestehenden Datenbank vor dem Start nach diesem Update einmal `npm run db:editorial` ausführen. Das ergänzt ausschliesslich die Statusfelder an Seiten und Versionen; bestehende Inhalte und Prüfstände werden nicht überschrieben. Neue leere Datenbanken erhalten die Felder beim Erstaufbau. Beim Kopieren eines Systems beginnen die redaktionellen Stände als Entwurf, ohne übernommene Klärungsnotizen oder Zuständigkeiten.
@@ -185,17 +189,26 @@ Portal und MCP lesen denselben veröffentlichten Datenbankstand. Größere Inhal
 
 ## UI Contracts anbinden
 
-UI Contracts ergänzen die redaktionellen Regeln um versionierte Beschreibungen von Komponenten, Gestaltung, Verhalten und Barrierefreiheit. Arve verwendet eigenständig kopierbare Exportpakete einschließlich Quellenbezügen und Skills. Ein laufendes oder lokal danebenliegendes ui-contracts-Repository ist dafür nicht erforderlich.
+UI Contracts ist eine **optionale Erweiterung**. Sie beschreibt Schnittstelle, Gestaltung, Verhalten und Barrierefreiheit von Komponenten in strukturierten Dateien. Durch die Verknüpfung können Teams und Agenten Handbuchregeln und den zugehörigen Contract gemeinsam lesen. Arve funktioniert auch ohne Contracts.
 
-Ein neues Contract-Paket importieren:
+Pakete und Registry bleiben als versionierte Dateien im Arve-Projekt. Die Datenbank speichert ihre Zuordnungen zu Systemen und Seiten; das CMS dient zum Auswählen und Verknüpfen. Das ui-contracts-Repository muss nach dem Import nicht erreichbar sein.
+
+[Kurzanleitung im Arve-Handbuch](http://127.0.0.1:3010/handbuch/ui-contracts)
+
+Ein neues Contract-Paket zuerst prüfen, dann installieren:
 
 ```sh
-node scripts/import-contract-library.mjs /pfad/zum/contract-export --compact
+npm run contracts:import -- /pfad/zum/contract-export
+npm run contracts:import -- /pfad/zum/contract-export --apply
 ```
 
-Der Import prüft die Dateien und ihre Prüfsummen. Neue Revisionen werden anschließend in `src/contracts/catalog.ts` registriert und auf den gewünschten CMS-Seiten verknüpft. Bestehende Seiten behalten ihre bisherige Revision, bis sie ausdrücklich umgestellt werden.
+Der Import prüft Dateien und Prüfsummen und registriert Komponenten, Assets und Skills automatisch. Im CMS unter **Erweiterungen → Contract-Bibliotheken** die Bibliothek einem Design-System bereitstellen. Danach auf einer Komponentenseite unter **UI Contracts · optional** den gewünschten Contract wählen. Die Handbuch-Kennung darf anders lauten als die Contract-Kennung; es gibt keine automatische Namenszuordnung. Bestehende Seiten behalten ihre bisherige Revision.
+
+Bestehende Datenbanken einmal mit `npm run db:contract-bindings` prüfen und mit `npm run db:contract-bindings -- --apply` ergänzen. Dabei werden keine Seiten verändert. [Einrichtung, Zuordnungen und Prüfungen](docs/contracts/connector-usage.md).
 
 [Contract-Stand und Abhängigkeiten](docs/handbook/semantic-shadcn/README.md) · [Skills für die Arbeit mit Contracts](.agents/skills/arve-ui-contracts/SKILL.md)
+
+[Technischer Entwurf für einen UI Contracts Connector](docs/contracts/connector.md): automatische Paketregistrierung, Bibliotheksauswahl im CMS und kontrollierte Updates.
 
 ## Das Handbuch statisch veröffentlichen
 
@@ -207,7 +220,22 @@ npm run check:static
 npm run preview:static
 ```
 
-Die lokale Vorschau läuft unter [localhost:3020/arve](http://127.0.0.1:3020/arve/). Navigation, Suche, Beispiele und Contract-Downloads funktionieren dort ohne laufendes CMS. Zum Bearbeiten und für MCP wird die datenbankgestützte Arve-Anwendung benötigt.
+Die lokale Vorschau läuft unter [localhost:3020/arve](http://127.0.0.1:3020/arve/). Navigation, Suche, Beispiele und Contract-Downloads funktionieren dort ohne laufendes CMS. Zum Bearbeiten wird die datenbankgestützte Arve-Anwendung benötigt. Für MCP kann ein separates lokales Paket die statische Veröffentlichung lesen.
+
+### MCP ohne Anwendungsserver
+
+Der statische Build erzeugt unter `arve-data/` einen versionierten JSON-Export derselben veröffentlichten Inhalte. Das separate [MCP-Paket](packages/arve-mcp/README.md) liest ihn von einer konfigurierbaren Website-URL. Auf dem Webserver braucht es weder Node.js noch eine Datenbank; das Paket läuft lokal beim Agenten.
+
+```sh
+npm run build:mcp
+node packages/arve-mcp/dist/cli.js --base-url https://example.org/arve/
+```
+
+Alternativ die URL über `ARVE_BASE_URL` setzen. Das ist die Website-Adresse inklusive Unterverzeichnis, ohne `/mcp`. In einem MCP-Client den Befehl als lokalen stdio-Server eintragen. Das [Arve-Handbuch erklärt die Einrichtung](https://benjamindamm.github.io/arve/handbuch/statischer-mcp/).
+
+Die [Exportstruktur und Prüfung](docs/mcp/static-export.md) sind separat dokumentiert. Die Werkzeuge bleiben gleich: Seitenbaum, Suche, veröffentlichte Seiten, Komponenten, optionale Contracts und beide Arten von Skills. Eine Sitzung bleibt auf einer Exportversion; nach einem Deployment neu verbinden. Jeder nachgeladene Inhalt wird anhand seines SHA256-Hashes geprüft. Es gibt keine CMS-Schreibrechte.
+
+`npm run check:mcp:static` installiert das gepackte npm-Artefakt isoliert und vergleicht die Abrufe mit dem bisherigen Datenzugang. `npm run pack:mcp` erzeugt das installierbare Paket unter `.runtime/`. Der manuelle Workflow **Release Arve MCP on GitHub** prüft und liefert ebenfalls ein Paketartefakt; eine Veröffentlichung in GitHub Packages mit einem GitHub-Release ist eine separate Auswahl. Die Einrichtung steht in der [Paket-README](packages/arve-mcp/README.md#build-and-release-in-the-arve-repository).
 
 [Inhalte aktualisieren und auf GitHub Pages veröffentlichen](docs/deployment/github-pages.md)
 

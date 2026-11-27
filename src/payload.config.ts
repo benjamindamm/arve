@@ -7,10 +7,12 @@ import { Pages } from './collections/Pages'
 import { Implementations } from './collections/Implementations'
 import { Users } from './collections/Users'
 import { PublicationEvents } from './collections/PublicationEvents'
+import {uiContractsPlugin} from './contracts/payload/plugin'
 import { Media } from './collections/Media'
 
 export default buildConfig({
   admin: { user: 'users' },
+  plugins:[uiContractsPlugin()],
   collections: [
     Users,
     PublicationEvents,

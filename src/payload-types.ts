@@ -73,6 +73,7 @@ export interface Config {
     pages: Page;
     implementations: Implementation;
     media: Media;
+    'contract-bindings': ContractBinding;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +87,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     implementations: ImplementationsSelect<false> | ImplementationsSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    'contract-bindings': ContractBindingsSelect<false> | ContractBindingsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -300,6 +302,23 @@ export interface Page {
   };
   order?: number | null;
   summary?: string | null;
+  /**
+   * Figma, Storybook oder andere Quellen. Erscheinen nach Veröffentlichung als Links im Seitenkopf und über MCP. Es werden keine externen Inhalte importiert.
+   */
+  externalLinks?:
+    | {
+        type: 'figma' | 'storybook' | 'repository' | 'documentation' | 'other';
+        /**
+         * Optional, z. B. „Figma · Mobile“. Ohne Angabe wird der Typ angezeigt.
+         */
+        label?: string | null;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Kennung für die URL im Handbuch. Darf von der optionalen Contract-Kennung abweichen.
+   */
   component?: string | null;
   contract?: {
     library?: string | null;
@@ -487,6 +506,20 @@ export interface Implementation {
   _status?: ('draft' | 'published') | null;
 }
 /**
+ * Optional: Installierte Bibliothek für ein Handbuch bereitstellen. Erst eine ausdrückliche Auswahl auf einer Seite stellt die Verknüpfung her. Änderungen am Standard verändern keine bestehenden Seiten.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contract-bindings".
+ */
+export interface ContractBinding {
+  id: number;
+  designSystem: number | DesignSystem;
+  library: string;
+  defaultRevision: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -533,6 +566,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'contract-bindings';
+        value: number | ContractBinding;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -756,6 +793,14 @@ export interface PagesSelect<T extends boolean = true> {
       };
   order?: T;
   summary?: T;
+  externalLinks?:
+    | T
+    | {
+        type?: T;
+        label?: T;
+        url?: T;
+        id?: T;
+      };
   component?: T;
   contract?:
     | T
@@ -913,6 +958,17 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contract-bindings_select".
+ */
+export interface ContractBindingsSelect<T extends boolean = true> {
+  designSystem?: T;
+  library?: T;
+  defaultRevision?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -1,3 +1,4 @@
+import {externalSourcesOf} from '../../../../../docs/external-sources'
 import {editorialOf} from '../../../../../docs/editorial'
 import {EditorialPage} from '../../../../../docs/editorial-page'
 import {LegacyDocumentationRedirect} from '../../../../../docs/legacy-documentation-redirect'
@@ -95,7 +96,7 @@ export default async function SectionPage({ params }: { params: Promise<{ system
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={path} />
-      <EditorialPage className="article" editorial={editorialOf(page)}>
+      <EditorialPage className="article" externalLinks={externalSourcesOf(page)} editorial={editorialOf(page)}>
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={path} />
         <h1>{page.title}</h1>
         {page.summary && !patternCatalog && <p className="lead">{page.summary}</p>}

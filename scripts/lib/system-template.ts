@@ -1,3 +1,4 @@
+import {bindImportedReferences} from '../../src/contracts/payload/bootstrap-bindings'
 /** Content-only copies: immutable contract references retain their original identity. */
 import assert from 'node:assert/strict'
 import {mapHomeTargets} from '../../src/docs/system-home-template'
@@ -76,6 +77,7 @@ export async function importTemplate(payload: any, template: Snapshot, apply = f
       for (const page of template.pages) if (page.parent) await payload.update({ collection: 'pages', id: pages.get(page.slug).id, data: { parent: pages.get(page.parent).id }, draft: true, req })
       for(const page of template.pages)if(page.homeTemplate)await payload.update({collection:'pages',id:pages.get(page.slug).id,data:{homeTemplate:mapHomeTargets(page.homeTemplate,target=>{assert(pages.has(target),'Missing home template target');return pages.get(target).id})},draft:true,req})
       await payload.update({ collection: 'design-systems', id: system.id, data: { home: pages.get(home).id }, req })
+      await bindImportedReferences(payload,system.id,[...template.pages,...template.implementations].map(item=>item.contract),req)
       for (const impl of template.implementations) await payload.create({ collection: 'implementations', data: { ...impl, componentPage: pages.get(impl.componentPage).id }, draft: true, req })
     }
     if (apply) await payload.db.commitTransaction(tx); else await payload.db.rollbackTransaction(tx)

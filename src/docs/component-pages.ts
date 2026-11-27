@@ -1,3 +1,4 @@
+import {externalSourcesOf} from './external-sources'
 import {editorialOf} from './editorial'
 import { readTemplate } from './page-templates'
 import { documentationData } from './documentation-data'
@@ -23,7 +24,7 @@ export async function getComponentPage(system: string, component: string) {
   const references = frameworkReferences((await readPublishedSection(system, 'frameworks'))?.content)
   const published = await data.pages(designSystem)
   const nextSteps = componentNextSteps({system,component,pagePath:pagePath(system,page),contract,implementations,referenceFrameworks:references,documentation:published.map(entry=>({slug:entry.slug,path:pagePath(system,entry,published),title:entry.title}))})
-  const previewPath = `components/${component}/preview.png`
+  const previewPath = `components/${contract?.component}/preview.png`
   const previewHash = contract?.artifacts?.[previewPath]
 
   return {
@@ -32,6 +33,7 @@ export async function getComponentPage(system: string, component: string) {
     path: pagePath(system, page),
     title: page.title,
     editorial:editorialOf(page),
+    externalLinks:externalSourcesOf(page),
     summary: page.summary,
     updatedAt: page.updatedAt,
     nextSteps,

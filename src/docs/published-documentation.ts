@@ -1,3 +1,4 @@
+import {externalSourcesOf} from './external-sources'
 import {editorialOf,type Editorial} from './editorial'
 import type {Page,DesignSystem} from '../payload-types'
 import { isLayoutRedirect,legacyLayoutSections } from './handbook-paths'
@@ -170,6 +171,7 @@ export async function getDocumentationPage(system: string, section: string, exam
     title: page.title,
     pageType: page.pageType,
     editorial:editorialOf(page),
+    externalLinks:externalSourcesOf(page),
     summary: page.summary,
     updatedAt: page.updatedAt,
     content: publicContent(page.content),

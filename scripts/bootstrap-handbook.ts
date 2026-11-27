@@ -1,3 +1,4 @@
+import {bindImportedReferences} from '../src/contracts/payload/bootstrap-bindings'
 /** Public handbook bootstrap. Preview by default; never overwrites differing content. */
 import assert from 'node:assert/strict'
 import {mapHomeTargets} from '../src/docs/system-home-template'
@@ -59,6 +60,7 @@ export async function bootstrap(payload:any,snapshot:any,apply=false){
    for(const page of missingPages)if(page.parent)await payload.update({collection:'pages',id:bySlug.get(page.slug).id,data:{parent:bySlug.get(page.parent).id},draft:false,req})
    for(const page of missingPages)if(page.homeTemplate)await payload.update({collection:'pages',id:bySlug.get(page.slug).id,data:{homeTemplate:mapHomeTargets(page.homeTemplate,target=>bySlug.get(target).id)},draft:false,req})
    if(result.system==='create')await payload.update({collection:'design-systems',id:system.id,data:{home:bySlug.get(snapshot.system.home).id},req})
+   await bindImportedReferences(payload,system.id,[...snapshot.pages,...snapshot.implementations].map(item=>item.contract),req)
    for(const i of missingImpl)await payload.create({collection:'implementations',data:{...i,componentPage:bySlug.get(i.componentPage).id},draft:false,req})
   }
   if(apply)await payload.db.commitTransaction(transactionID);else await payload.db.rollbackTransaction(transactionID)

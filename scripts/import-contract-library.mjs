@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto'
 import { mkdir, lstat, readFile, readdir, rename, rm, mkdtemp, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+import {registerExport,digest,defaultRegistryFile} from '../src/contracts/connector/registry.mjs'
 import { pathToFileURL } from 'node:url'
 import postcss from 'postcss'
 import valueParser from 'postcss-value-parser'
@@ -57,7 +58,7 @@ async function collect(root, directory = '', files = new Map()) {
   return files
 }
 
-export async function importContractLibrary(bundle, destinationRoot = 'src/contracts/libraries', { compact = false } = {}) {
+export async function importContractLibrary(bundle, destinationRoot = path.join(path.dirname(defaultRegistryFile()),'libraries'), { compact = false, preview = false } = {}) {
   if (!(await lstat(bundle)).isDirectory()) throw new Error('Package root must be a regular directory')
   const files = await collect(path.resolve(bundle))
   const manifest = JSON.parse(files.get('manifest.json')?.toString('utf8') ?? 'null')
@@ -132,12 +133,17 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
   for (const [name, bytes] of files) output.set('package/' + name, bytes)
   output.set('snapshot.json', Buffer.from(JSON.stringify({ library: manifest.library, revision: manifest.revision, format: manifest.format, files: Object.fromEntries(libraryManifest), package: 'package/manifest.json' }, null, 2) + '\n'))
   output.set('contracts.json', Buffer.from(JSON.stringify(contracts, null, 2) + '\n'))
+  if(preview)return {mode:'preview',library:manifest.library,revision:manifest.revision,components:contracts.length,skills:[...files.keys()].filter(name=>/^skills\/[^/]+\/SKILL\.md$/.test(name)),writes:false}
   const parent = path.resolve(destinationRoot, manifest.library)
   const destination = path.join(parent, manifest.revision)
+  const registryFile=path.join(path.dirname(path.resolve(destinationRoot)),'registry.json')
+  const rel=value=>path.relative(path.dirname(registryFile),value).split(path.sep).join('/')
+  const registration={library:manifest.library,revision:manifest.revision,kind:'portable',catalog:rel(path.join(destination,'contracts.json')),catalogSha256:digest(output.get('contracts.json')),artifactRoot:rel(compact?path.join(destination,'package/library'):destination),packageRoot:rel(path.join(destination,'package')),labels:Object.fromEntries(Object.entries(index.components).map(([label,definition])=>[definition.split('/')[1],label]))}
   let existing
   try { existing = await collect(destination) } catch (error) { if (error.code !== 'ENOENT') throw error }
   if (existing) {
     if (existing.size !== output.size || [...output].some(([name, bytes]) => !existing.get(name)?.equals(bytes))) throw new Error('Existing revision differs; refusing overwrite')
+    await registerExport(registration,registryFile)
     return { library: manifest.library, revision: manifest.revision, destination, reused: true }
   }
   await mkdir(parent, { recursive: true })
@@ -146,6 +152,7 @@ export async function importContractLibrary(bundle, destinationRoot = 'src/contr
     for (const [name, bytes] of output) { const target = path.join(staging, name); await mkdir(path.dirname(target), { recursive: true }); await writeFile(target, bytes, { flag: 'wx' }) }
     await rename(staging, destination)
   } finally { await rm(staging, { recursive: true, force: true }) }
+  await registerExport(registration,registryFile)
   return { library: manifest.library, revision: manifest.revision, destination, reused: false }
 }
 

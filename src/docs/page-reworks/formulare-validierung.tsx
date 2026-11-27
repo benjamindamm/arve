@@ -1,4 +1,6 @@
 'use client'
+
+import {NativeSelect} from '../native-select'
 import {useId,useRef,useState,type FormEvent} from 'react'
 import type {Page} from '../../payload-types'
 import {RichText} from '../rich-text'
@@ -44,7 +46,7 @@ export default function FormValidation({content}:{content:Page['content']}){
    <section id={find('goals')&&blockAnchor(find('goals')!)}>{find('goals')&&<RichText data={{...find('goals')!.body,root:{...find('goals')!.body.root,children:find('goals')!.body.root.children.slice(0,3)}}}/>}</section>
    <section className="forms-example" aria-label="Interaktives Formularbeispiel">
     {render('demo')}
-    <div className="forms-controls"><label htmlFor={id+'-response'}>Beispielantwort<span className="forms-select"><select id={id+'-response'} value={response} disabled={result!==null} aria-describedby={result?id+'-choice-help':undefined} onChange={e=>setResponse(e.target.value as Response)}>{(['confirmed','rejected','pending','unknown'] as const).map(r=><option key={r} value={r}>{lines('demo-response-'+r)[0]}</option>)}</select><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m4 6 4 4 4-4"/></svg></span></label><button type="button" onClick={reset}>Beispiel zurücksetzen</button></div>
+    <div className="forms-controls"><label htmlFor={id+'-response'}>Beispielantwort<NativeSelect id={id+'-response'} value={response} disabled={result!==null} aria-describedby={result?id+'-choice-help':undefined} onChange={e=>setResponse(e.target.value as Response)}>{(['confirmed','rejected','pending','unknown'] as const).map(r=><option key={r} value={r}>{lines('demo-response-'+r)[0]}</option>)}</NativeSelect></label><button type="button" onClick={reset}>Beispiel zurücksetzen</button></div>
     {result&&<p className="forms-choice-help" id={id+'-choice-help'}>{lines('demo-choice')[1]}</p>}
     <form className="forms-demo" noValidate onSubmit={submit} aria-label="Kontaktanfrage – lokale Simulation">
      <h3>Kontaktanfrage</h3>

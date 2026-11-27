@@ -40,7 +40,16 @@
     "check:publishing:migration": "node --env-file-if-exists=.env --import tsx scripts/publishing-migration.integration.ts",
     "db:home-template": "node --env-file-if-exists=.env --import tsx scripts/migrate-home-template.ts",
     "check:home-template": "node --import tsx --test scripts/system-home.test.ts",
-    "check:home-template:db": "node --env-file-if-exists=.env --import tsx scripts/home-template.integration.ts"
+    "check:home-template:db": "node --env-file-if-exists=.env --import tsx scripts/home-template.integration.ts",
+    "contracts:import": "node --import tsx scripts/contracts.ts",
+    "db:contract-bindings": "node --env-file-if-exists=.env --import tsx scripts/migrate-contract-bindings.ts",
+    "check:connector": "node --test scripts/import-contract-library.test.mjs scripts/contract-registry.test.mjs && node --import tsx --test scripts/mcp-library-skills.test.ts",
+    "check:connector:db": "node --env-file-if-exists=.env --import tsx scripts/contract-connector.integration.ts",
+    "build:mcp": "node packages/arve-mcp/build.mjs",
+    "pack:mcp": "npm pack ./packages/arve-mcp --pack-destination .runtime",
+    "check:mcp:static": "node --import tsx scripts/static-mcp.integration.ts",
+    "db:external-links": "node --env-file-if-exists=.env --import tsx scripts/migrate-external-links.ts",
+    "check:external-links:db": "node --env-file-if-exists=.env --import tsx scripts/external-links.integration.ts"
   },
   "dependencies": {
     "@angular/cdk": "21.2.14",

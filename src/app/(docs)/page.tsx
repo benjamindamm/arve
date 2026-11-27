@@ -28,7 +28,7 @@ export default async function Home() {
             <div className="platform-map-sources">
               <div><strong>Designwissen</strong><span>Guidelines & Patterns</span></div>
               <span className="platform-map-plus" aria-hidden="true">+</span>
-              <div><strong>UI Contracts</strong><span>Versionierte Vorgaben</span></div>
+              <div><strong><Link href="/handbuch/ui-contracts">UI Contracts</Link></strong><span>Optionale Erweiterung</span></div>
             </div>
             <div className="platform-map-connector" aria-hidden="true">↓</div>
             <div className="platform-map-center"><div className="platform-map-brand"><span aria-hidden="true" className="arve-mark" /><strong>Arve</strong></div><span>Mehrere Systeme. Eigene Handbücher.</span></div>
@@ -51,10 +51,11 @@ export default async function Home() {
             <p>Der Agent verbindet sich über MCP zum Design-System. Er fragt die Bibliothek an Komponenten ab und entscheidet nach festgelegten UX-Regeln deren Einsatz.</p>
             <dl className="platform-responsibilities">
               <div><dt>MCP liefert Wissen.</dt><dd>Direkt aus eurem Design-System.</dd></div>
-              <div><dt>Der Skill führt die Arbeit.</dt><dd>Auswählen, umsetzen, prüfen – mit UI Contracts.</dd></div>
+              <div><dt>Der Skill führt die Arbeit.</dt><dd>Auswählen, umsetzen und prüfen.</dd></div>
               <div><dt>Das Team entscheidet.</dt><dd>Über offene Fragen, Änderungen und Freigaben.</dd></div>
             </dl>
-            {staticPublication ? <p>Diese Veröffentlichung zeigt das Handbuch. Ein MCP-Endpunkt ist hier nicht verfügbar.</p> : <Link className="platform-text-link" href="#systeme">Im Design-System ausprobieren <span aria-hidden="true">↓</span></Link>}
+            {staticPublication ? <p>Auch diese statische Website lässt sich über das lokale MCP-Paket verbinden.</p> : <Link className="platform-text-link" href="#systeme">Im Design-System ausprobieren <span aria-hidden="true">↓</span></Link>}
+            <p><Link className="platform-text-link" href="/handbuch/statischer-mcp">MCP für statische Websites einrichten <span aria-hidden="true">→</span></Link></p>
           </div>
           <figure className="platform-agent-example">
             <figcaption>So kommt Wissen in den Auftrag <span>Beispiel</span></figcaption>
@@ -63,7 +64,7 @@ export default async function Home() {
               <p>Der Agent ruft aus Arve ab <span aria-hidden="true">↓</span></p>
               <dl>
                 <div><dt>Einsatzregeln</dt><dd>Wann der Button passt und wie er beschriftet wird.</dd></div>
-                <div><dt>UI Contract</dt><dd>Schnittstelle, Gestaltung, Verhalten und Barrierefreiheit.</dd></div>
+                <div><dt>UI Contract <span className="platform-optional">optional</span></dt><dd>Schnittstelle, Gestaltung, Verhalten und Barrierefreiheit.</dd></div>
                 <div><dt>Plattformstand</dt><dd>Verfügbare Implementierung, Version und Prüfungen.</dd></div>
               </dl>
             </div>

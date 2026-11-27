@@ -1,6 +1,6 @@
 # MCP gezielt lesen
 
-Der lokale Endpunkt `http://127.0.0.1:3010/mcp` verwendet Streamable HTTP. Alle Tools sind lesend. Die MCP-Projektion ändert weder veröffentlichte CMS-Inhalte noch Contractpakete oder Portalansichten. Die normalen Antworten sind begrenzte Einstiege; eine ausgelassene Regel gilt dadurch nicht als abwesend.
+Der lokale Endpunkt `http://127.0.0.1:3010/mcp` verwendet Streamable HTTP. Für statische Websites bietet das [separate MCP-Paket](../../packages/arve-mcp/README.md) dieselben Werkzeuge über lokalen stdio-Transport. Die Website-URL wird mit `--base-url` gewählt. Alle Tools sind lesend. Die MCP-Projektion ändert weder veröffentlichte CMS-Inhalte noch Contractpakete oder Portalansichten. Die normalen Antworten sind begrenzte Einstiege; eine ausgelassene Regel gilt dadurch nicht als abwesend.
 
 ## Arbeitsablauf
 

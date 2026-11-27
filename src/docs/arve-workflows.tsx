@@ -5,7 +5,7 @@ import { useRef, useState, type KeyboardEvent } from 'react'
 
 const workflows = [
   { id: 'designs', label: 'Aus bestehenden Designs', description: 'Der Agent analysiert vorhandene Entwürfe und erkennt wiederkehrende Komponenten, Layouts und Muster. Daraus schlägt er eine Gliederung und erste Handbuchseiten vor. Das Team entscheidet, welche Muster als gemeinsame Regeln gelten.' },
-  { id: 'gespraech', label: 'Im Gespräch mit dem Agenten', description: 'Das Team beschreibt eine Bedienregel in eigenen Worten: «Beim Speichern soll ein zweiter Klick keine weitere Anfrage auslösen.» Der Agent fragt nach offenen Fällen, etwa was bei einem Fehler passiert. Aus den Antworten formuliert er eine verständliche Richtlinie und einen prüfbaren UI Contract.' },
+  { id: 'gespraech', label: 'Im Gespräch mit dem Agenten', description: 'Das Team beschreibt eine Bedienregel in eigenen Worten: «Beim Speichern soll ein zweiter Klick keine weitere Anfrage auslösen.» Der Agent fragt nach offenen Fällen, etwa was bei einem Fehler passiert. Aus den Antworten formuliert er eine verständliche Richtlinie, bei Bedarf ergänzt durch einen UI Contract.' },
   { id: 'ziele', label: 'Von Zielen zum Aufbau', description: 'Das Team nennt ein Ziel: «Unsere Formulare sollen auf dem Smartphone leichter zu bedienen sein.» Der Agent schlägt passende Layouts, Komponenten und Bedienmuster vor und zeigt, welche Regeln das Handbuch dafür braucht. Das Team wählt aus, was es weiter ausarbeiten will.' },
 ]
 

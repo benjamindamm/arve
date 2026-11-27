@@ -1,0 +1,86 @@
+name: Release Arve MCP on GitHub
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish npm package to GitHub Packages and create a GitHub release
+        type: boolean
+        default: false
+      version:
+        description: Exact package version (required for publication)
+        type: string
+        default: ''
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run check:mcp:unit
+      - run: npm run build:static
+      - run: npm run check:static
+      - run: npm run check:mcp:static
+      - name: Pack checked executable
+        run: npm run pack:mcp
+      - uses: actions/upload-artifact@v6
+        with:
+          name: arve-mcp-package
+          path: .runtime/benjamindamm-arve-mcp-*.tgz
+          if-no-files-found: error
+  publish:
+    if: ${{ inputs.publish && github.ref == 'refs/heads/main' }}
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          registry-url: https://npm.pkg.github.com
+          scope: "@benjamindamm"
+      - uses: actions/download-artifact@v7
+        with:
+          name: arve-mcp-package
+          path: package
+      - name: Verify explicitly requested version
+        env:
+          EXPECTED_VERSION: ${{ inputs.version }}
+        run: |
+          tar -xOf package/*.tgz package/package.json > package-manifest.json
+          node --input-type=module -e "import fs from 'node:fs';const p=JSON.parse(fs.readFileSync('package-manifest.json'));if(!process.env.EXPECTED_VERSION||p.version!==process.env.EXPECTED_VERSION)throw Error('Requested version must match checked artifact');"
+      - name: Publish npm package to GitHub Packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm publish package/*.tgz --registry=https://npm.pkg.github.com --ignore-scripts
+      - name: Create GitHub release with installable package
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          tag="mcp-v$RELEASE_VERSION"
+          cat > release-notes.md <<'NOTES'
+          A local MCP server for published Arve handbooks. Works with a static website, including GitHub Pages. The website needs no Node.js, Payload or database server.
+
+          Download the npm `.tgz` asset below and install it with `npm install -g /path/to/package.tgz`. Then configure your MCP client to run `arve-mcp --base-url https://benjamindamm.github.io/arve/`, or use your own Arve site root.
+
+          The same package is available in GitHub Packages as `@benjamindamm/arve-mcp`. GitHub Packages installation requires authentication; the public release download is an alternative without registry login. Nothing is published on npmjs.com.
+
+          Includes hierarchy, search, published guidance, component contracts, platform evidence and authoring/library skills. Reads are pinned to a verified static export revision. No company or handbook data is bundled in the package.
+          NOTES
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release already exists; refusing to overwrite it." >&2
+            exit 1
+          fi
+          gh release create "$tag" package/*.tgz --target "$RELEASE_COMMIT" --title "Arve MCP $RELEASE_VERSION" --notes-file release-notes.md --latest
+

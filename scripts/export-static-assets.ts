@@ -2,6 +2,7 @@ import { readFile, mkdir, writeFile, copyFile } from 'node:fs/promises'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
 import snapshot from './content/handbook-snapshot.json'
+import {exportMcpData} from './export-mcp-data'
 import resources from '../docs/handbook/design-resources/manifest.json'
 import { getContract, contractArtifactPath } from '../src/contracts/catalog'
 import { GET as invoicePdf } from '../src/app/(docs)/systems/shadcn/beispiele/rechnungen/[id]/pdf/route'
@@ -39,5 +40,6 @@ for(const invoice of invoices) {
   await emit(`examples/invoices/${invoice.id}.pdf`,new Uint8Array(await response.arrayBuffer()))
 }
 await copyFile('scripts/content/handbook-snapshot.json',path.join(output,'handbook-snapshot.json'))
-await writeFile(path.join(output,'publication.json'),JSON.stringify({format:1,kind:'static-handbook',capturedAt:snapshot.capturedAt,pages:snapshot.pages.length,components:snapshot.pages.filter(p=>p.component).length,mcp:false,admin:false,assets:Object.fromEntries(hashes)},null,2)+'\n')
+const machine=await exportMcpData(output,emit)
+await writeFile(path.join(output,'publication.json'),JSON.stringify({format:1,kind:'static-handbook',capturedAt:snapshot.capturedAt,pages:snapshot.pages.length,components:snapshot.pages.filter(p=>p.component).length,mcp:false,machineReadable:machine,admin:false,assets:Object.fromEntries(hashes)},null,2)+'\n')
 console.log(JSON.stringify({status:'PASS',files:hashes.size,pages:snapshot.pages.length,output}))

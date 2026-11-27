@@ -50,7 +50,7 @@ export default async function ComponentPage({ params }: {
   return (
     <main id="inhalt" className="shell docs-layout" data-system-theme={designSystem.theme}>
       <DocumentationNav system={system} tree={documentation.tree} current={page.path} />
-      <EditorialPage className="article component-documentation" editorial={page.editorial}>
+      <EditorialPage className="article component-documentation" externalLinks={page.externalLinks} editorial={page.editorial}>
         <ComponentHashLinks pagePath={page.path}/>
         <HandbookContext system={system} name={designSystem.name} tree={documentation.tree} current={page.path} />
         <h1>{page.title}</h1>

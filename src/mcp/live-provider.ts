@@ -1,0 +1,10 @@
+import {readFile} from 'node:fs/promises'
+import {findContractPages} from '../contracts/connector/documentation-mappings'
+import {getLibrarySkill,listLibrarySkills} from '../contracts/library-skills'
+import {compactLibrarySkills} from '../contracts/mcp-library-skills'
+import {getComponentPage} from '../docs/component-pages'
+import {listSystems} from '../docs/systems'
+import {documentationTree,getDocumentationPage,searchDocumentationDetailed} from '../docs/published-documentation'
+import {componentFile} from '../docs/mcp-reads'
+import {authoringSkills} from '../docs/authoring-skills'
+export const liveProvider={findContractPages,getLibrarySkill,listLibrarySkills,compactLibrarySkills,getComponentPage,listSystems,documentationTree,getDocumentationPage,searchDocumentationDetailed,componentFile,authoringSkills,colorReviewHtml:()=>readFile('public/mcp-apps/color-review.html','utf8')}
