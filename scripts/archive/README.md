@@ -1,6 +1,6 @@
 # Historische Skripte
 
-Diese acht Skripte dokumentieren frühere Arbeitsschritte an der shadcn-Referenz. Sie gehören nicht zur Installation oder zum aktuellen Veröffentlichungsweg.
+Diese zwölf Skripte dokumentieren frühere Arbeitsschritte an der shadcn-Referenz. Sie gehören nicht zur Installation oder zum aktuellen Veröffentlichungsweg.
 
 Die Originaldateien sind unverändert als `.ts.txt` abgelegt. So bleiben sie lesbar, werden aber weder als TypeScript kompiliert noch versehentlich als normale Skripte gestartet. Relative Importe und Dateipfade beziehen sich weiterhin auf ihren damaligen Ort unter `scripts/`.
 
@@ -14,6 +14,10 @@ Die Originaldateien sind unverändert als `.ts.txt` abgelegt. So bleiben sie les
 | [publish-shadcn-reference-pages.ts.txt](shadcn/publish-shadcn-reference-pages.ts.txt) | Veröffentlicht vier fest ausgewählte Referenzseiten nach damaligen Inhaltsannahmen. |
 | [organize-layouts.ts.txt](shadcn/organize-layouts.ts.txt) | Einmalige Anlage und Sortierung früherer Layout- und Seitentypseiten. |
 | [publish-content-layouts.ts.txt](shadcn/publish-content-layouts.ts.txt) | Einmalige Veröffentlichung der Inhaltslayouts. |
+| [seed-spartan-implementation.ts.txt](shadcn/seed-spartan-implementation.ts.txt) | Früher Seed für den Spartan-Button: veröffentlicht einen Preview-Datensatz mit dem jeweiligen Seiten-Contract und einem festen Prüfungstext. Keine erneute Prüfung; heutige Implementierungspins kommen aus dem [Snapshot](../content/handbook-snapshot.json). |
+| [check-reference-publication.ts.txt](shadcn/check-reference-publication.ts.txt) | Früher Vergleich von vier Seiten mit MCP, einschliesslich der inzwischen ersetzten Detailseite. Erstellt und löscht Testmedien. Der damalige Nachweis bleibt im [lokalen Prüfbericht](../../docs/handbook/local-review.md) erhalten. |
+| [apply-pilot-clarifications.ts.txt](shadcn/apply-pilot-clarifications.ts.txt) | Historische Pilot-Klarstellungen mit festen Seiten- und Inhaltsannahmen. Die zugehörige [Baseline](../content/pilot-clarifications-baseline.json) und der [Pilot-Inhalt](../content/pilot-release.ts) bleiben unverändert erhalten. |
+| [migrate-design-systems.ts.txt](shadcn/migrate-design-systems.ts.txt) | Frühe Umstellung vom Feld `system` auf die Beziehung `designSystem`; konnte eine veröffentlichte Übersicht anlegen. Kein Vorschau-Modus. Für historische Datenbanken nur im damaligen Kontext einordnen. |
 
 Nicht auf einer aktuellen Datenbank ausführen oder als Ausgangspunkt für ein neues System verwenden. Ein historischer Ablauf müsste zuerst mit dem zugehörigen Git-Stand und einer isolierten Datenbank rekonstruiert werden.
 

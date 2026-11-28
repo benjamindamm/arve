@@ -54,6 +54,6 @@ Die Medien-Leseberechtigung ist umgesetzt: Anonym sind nur Bilder lesbar, die ei
 
 Alle vier Seiten und ihre PNGs laden im Portal ohne Anmeldung. Bei 390 px Ansichtsbreite ist nach Behebung der Mindestbreite des Artikelbereichs kein horizontaler Seitenüberlauf vorhanden. Die Detailgrafik wurde eingebettet per Screenshot geprüft; alle vier Bilddateien waren zuvor visuell geprüft. Ein Link öffnet jeweils die Originalgrösse. Layoutbeispiele tragen im Seitenbaum den Zusatz «Beispiel», damit sie von der neuen redaktionellen Detailseite unterscheidbar sind.
 
-`scripts/check-reference-publication.ts` vergleicht Inhalt, Vorlagenfelder und Änderungszeit aller vier MCP-Antworten mit der veröffentlichten Datenbankfassung. Der Vergleich war erfolgreich; die Detailseite ist im MCP-Seitenbaum enthalten. Die Typprüfung besteht ebenfalls.
+Das damals verwendete Skript [`check-reference-publication.ts` (heute archiviert)](../../scripts/archive/shadcn/check-reference-publication.ts.txt) vergleicht Inhalt, Vorlagenfelder und Änderungszeit aller vier MCP-Antworten mit der veröffentlichten Datenbankfassung. Der Vergleich war erfolgreich; die Detailseite ist im MCP-Seitenbaum enthalten. Die Typprüfung besteht ebenfalls.
 
 Die frühere Einschränkung zur öffentlichen Bildauslieferung ist damit behoben. Die offenen fachlichen und plattformspezifischen Prüfungen aus der Abweichungstabelle bleiben bestehen.
